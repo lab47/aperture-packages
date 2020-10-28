@@ -1,0 +1,21 @@
+pkg(
+  name: "openssl",
+  version: "1.1.1g",
+  input: file("https://www.openssl.org/source/openssl-1.1.1g.tar.gz"),
+
+  def install(ctx) {
+    configure_args = [
+        "--prefix="+ctx.prefix,
+        "--openssldir="+ctx.prefix+"/etc/openssl",
+        "no-ssl3",
+        "no-ssl3-method",
+        "no-zlib",
+    ]
+    arch_args = ["darwin64-x86_64-cc", "enable-ec_nistp_64_gcc_128"]
+
+    ctx.system("perl", "./Configure", *(configure_args + arch_args))
+    ctx.system("make")
+    ctx.system("make", "test")
+    ctx.system("make", "install", "MANDIR="+ctx.prefix+"/man", "MANSUFFIX=ssl")
+  }
+)

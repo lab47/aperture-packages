@@ -1,0 +1,14 @@
+
+pkg(
+  name: "ruby-build",
+  version: "20201005",
+  input: inputs(
+    source: file("https://github.com/rbenv/ruby-build/archive/v20201005.tar.gz"),
+  ),
+
+  def install(ctx) {
+    ctx.set_env("PREFIX", ctx.prefix)
+    ctx.system("./install.sh")
+    ctx.system(ctx.prefix + "/bin/ruby-build", "--definitions")
+  }
+)

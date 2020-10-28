@@ -1,0 +1,14 @@
+import autoconf, automake, libtool
+
+pkg(
+  name: "libyaml",
+  version: "0.2.4",
+  input: file("https://github.com/yaml/libyaml/archive/0.2.4.tar.gz"),
+  dependencies: [autoconf, automake, libtool]
+
+  def install(ctx) {
+    ctx.system("./bootstrap")
+    ctx.system("./configure", "--disable-dependency-tracking", "--prefix="+ctx.prefix)
+    ctx.system("make", "install")
+  }
+)

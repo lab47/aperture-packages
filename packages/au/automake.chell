@@ -1,0 +1,14 @@
+import autoconf
+
+pkg(
+  name: "automake"
+  version: "1.16.2"
+  input: file("https://ftp.gnu.org/gnu/automake/automake-1.16.2.tar.xz"),
+  dependencies: [autoconf]
+
+  def install(ctx) {
+    ctx.set_env("PERL", "/usr/bin/perl")
+    ctx.system("./configure", "--prefix="+ctx.prefix)
+    ctx.system("make", "install")
+  }
+)

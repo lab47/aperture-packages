@@ -1,0 +1,26 @@
+import go
+
+def build_modules(name, location) {
+  pkg(
+    name: name,
+    dependencies: [go],
+    input: file(location),
+
+    def install(ctx) {
+      $ go mod download
+      $ go build -o ${ctx.prefix}/bin/${name}
+    }
+  )
+}
+
+def build_module(name, path, version) {
+  pkg(
+    name: name,
+    verison: version,
+    dependencies: [go],
+
+    def install(ctx) {
+      $ GOBIN=${ctx.prefix}/bin GO11MODULES=on go get ${path}@${version}
+    }
+  )
+}

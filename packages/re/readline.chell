@@ -1,0 +1,18 @@
+pkg(
+  name: "readline",
+  version: "8.0.4",
+  input: file("https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz"),
+
+  def install(ctx) {
+    ctx.system("./configure", "--prefix="+ctx.prefix)
+    # There is no termcap.pc in the base system, so we have to comment out
+    # the corresponding Requires.private line.
+    # Otherwise, pkg-config will consider the readline module unusable.
+    ctx.inreplace_re("readline.pc", "/^(Requires.private: .*)$/", "# \\$1")
+    ctx.system("make", "install")
+  }
+
+  def hook(ctx) {
+    ctx.append_env("PKG_CONFIG_PATH", ctx.prefix+"/lib/pkgconfig")
+  }
+)

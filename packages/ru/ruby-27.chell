@@ -1,0 +1,3 @@
+import "ruby-build" as rb
+
+rb.ruby_build("2.7.2")

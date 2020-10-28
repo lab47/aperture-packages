@@ -1,0 +1,38 @@
+
+version = "1.15.2"
+
+pkg(
+  name: "go",
+  version: version,
+  input: inputs(
+    source: file("https://dl.google.com/go/go"+version+".src.tar.gz"),
+    gobootstrap: file(
+        darwin: "https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz",
+        linux: "https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz"
+    ),
+  )
+
+  def install(ctx) {
+    libexec = ctx.prefix+"/libexec"
+    bin = ctx.prefix+"/bin"
+
+    ctx.set_env("GOROOT_BOOTSTRAP", ctx.build+"/gobootstrap/go")
+    ctx.set_env("GOROOT_FINAL", libexec)
+    ctx.set_env("GOOS", "darwin")
+    ctx.set_env("GOCACHE", ctx.build+"/cache")
+
+    ctx.system("./make.bash", "--no-clean", dir: "source/go/src")
+
+    ctx.rm_rf("pkg/obj")
+    ctx.rm_rf("gobootstrap")
+
+    ctx.install_files(target: libexec, pattern: "source/go/*")
+    ctx.install_files(target: bin, pattern: libexec+"/bin/go*", symlink: True)
+
+    ctx.system(bin+"/go", "install", "-race", "std")
+
+    ctx.prepend_env("PATH", bin)
+    ctx.set_env("GOPATH", ctx.build)
+  }
+
+)

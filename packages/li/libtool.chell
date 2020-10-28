@@ -1,0 +1,16 @@
+pkg(
+  name: "libtool",
+  version: "2.4.6",
+  input: file("https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz"),
+
+  def install(ctx) {
+    # prevent libtool from hardcoding sed path from superenv
+    ctx.set_env("SED", "sed")
+    ctx.system("./configure", "--disable-dependency-tracking", "--prefix="+ctx.prefix, "--program-prefix=g", "--enable-ltdl-install")
+    ctx.system("make", "install")
+  }
+
+  def hook(ctx) {
+    ctx.append_env("ACLOCAL_PATH", ctx.prefix+"/share/aclocal")
+  }
+)

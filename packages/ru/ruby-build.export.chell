@@ -1,0 +1,21 @@
+import "ruby-build" as rb, openssl, readline, libyaml, "pkg-config" as pc
+
+def ruby_build(version) {
+  pkg(
+    name: "ruby",
+    version: version,
+    dependencies: [rb, openssl, readline, libyaml, pc],
+
+    def install(ctx) {
+      configOpts = [
+        "--with-openssl-dir="+openssl.prefix,
+        "--with-readline-dir="+readline.prefix,
+        "--with-libyaml-dir="+libyaml.prefix,
+      ]
+
+      ctx.set_env("RUBY_BUILD_ROOT", rb.prefix)
+      ctx.set_env("RUBY_CONFIGURE_OPTS", " ".join(configOpts))
+      ctx.system("ruby-build", version, ctx.prefix)
+    }
+  )
+}
