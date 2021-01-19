@@ -1,0 +1,23 @@
+import autoconf, automake, libtool, "pkg-config" as pc, openssl
+
+pkg(
+  name: "libevent"
+  version: "2.1.11"
+  input: file(
+    path: "https://github.com/libevent/libevent/archive/release-2.1.11-stable.tar.gz",
+    sum: ("sha256", "229393ab2bf0dc94694f21836846b424f3532585bac3468738b7bf752c03901e"),
+  )
+  dependencies: [autoconf, automake, libtool, pc, openssl]
+
+  def install(ctx) {
+    ctx.system("./autogen.sh")
+    ctx.system("./configure", 
+      "--disable-dependency-tracking",
+      "--disable-debug-mode",
+      "--prefix="+ctx.prefix,
+      "--with-openssl="+openssl.prefix,
+    )
+    ctx.system("make")
+    ctx.system("make", "install")
+  }
+)

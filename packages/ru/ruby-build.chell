@@ -3,7 +3,10 @@ pkg(
   name: "ruby-build",
   version: "20201005",
   input: inputs(
-    source: file("https://github.com/rbenv/ruby-build/archive/v20201005.tar.gz"),
+    source: file(
+      path: "https://github.com/rbenv/ruby-build/archive/v20201005.tar.gz",
+      sum: ("etag", "3d56d8110ad4615754e7a50f158f54b13a9918534baed37f91fa35b5c0c8950b"),
+    ),
   ),
 
   def install(ctx) {

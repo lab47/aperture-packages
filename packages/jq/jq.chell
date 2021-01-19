@@ -1,0 +1,24 @@
+import oniguruma
+
+pkg(
+  name: "jq"
+  version: "1.6"
+  input: file(
+    path: "https://github.com/stedolan/jq/releases/download/jq-1.6/jq-1.6.tar.gz",
+    sum: ("sha256", "5de8c8e29aaa3fb9cc6b47bb27299f271354ebb72514e3accadc7d38b5bbaa72"),
+  )
+  dependencies: [oniguruma]
+
+  def install(ctx) {
+    ctx.system(
+      "./configure",
+      "--disable-dependency-tracking",
+      "--disable-silent-rules",
+      "--disable-maintainer-mode",
+      "--prefix="+ctx.prefix,
+      "--with-onigurama="+oniguruma.prefix,
+      "CFLAGS=-Wno-deprecated-declarations -Wno-implicit-function-declaration")
+
+    ctx.system("make", "install")
+  }
+)

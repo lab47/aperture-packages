@@ -1,7 +1,10 @@
 pkg(
   name: "libtool",
   version: "2.4.6",
-  input: file("https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz"),
+  input: file(
+    path: "https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz",
+    sum: ("etag", "ed918-50f31e0c310b8"),
+  )
 
   def install(ctx) {
     # prevent libtool from hardcoding sed path from superenv

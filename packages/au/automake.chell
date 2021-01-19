@@ -3,7 +3,11 @@ import autoconf
 pkg(
   name: "automake"
   version: "1.16.2"
-  input: file("https://ftp.gnu.org/gnu/automake/automake-1.16.2.tar.xz"),
+  input: file(
+    path: "https://ftp.gnu.org/gnu/automake/automake-1.16.2.tar.xz",
+    sum: ("etag", "1796b8-5a1651a1af7a2"),
+  )
+
   dependencies: [autoconf]
 
   def install(ctx) {

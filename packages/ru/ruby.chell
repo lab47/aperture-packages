@@ -1,0 +1,7 @@
+import "ruby-build" as rb
+
+default_version = "2.7.2"
+
+version = args.get("version", default_version)
+
+rb.ruby_build(version)

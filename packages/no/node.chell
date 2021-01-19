@@ -1,0 +1,25 @@
+import "pkg-config" as pc, python, icu4c, openssl, zlib, libuv
+
+pkg(
+  name: "node"
+  version: "14.15.4"
+  input: file(
+    path: "https://nodejs.org/dist/v14.15.4/node-v14.15.4.tar.gz",
+    sum: ("etag", "5ff31f7b-3c36c37"),
+  )
+
+  dependencies: [pc, python, icu4c, openssl, zlib, libuv]
+
+  def install(ctx) {
+    ctx.set_env("PYTHON", join(python.prefix, "bin", "python3"))
+
+    ctx.system("./configure",
+      "--prefix="+ctx.prefix,
+      "--without-dtrace",
+      "--with-intl=system-icu",
+      "--shared-openssl"
+    )
+    ctx.system("make", "-j4")
+    ctx.system("make", "install")
+  }
+)

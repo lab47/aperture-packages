@@ -2,7 +2,10 @@
 pkg(
   name: "autoconf",
   version: "2.69",
-  input: file("https://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz"),
+  input: file(
+    path: "https://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz",
+    sum: ("etag", "1d692c-4be784eedf4ad"),
+  )
 
   def install(ctx) {
     # force autoreconf to look for and use our glibtoolize

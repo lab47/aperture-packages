@@ -1,0 +1,24 @@
+pkg(
+  name: "cmake"
+  version: "3.17.2"
+  input: file(
+    path: "https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz",
+    sum: ("sha256", "fc77324c4f820a09052a7785549b8035ff8d3461ded5bbd80d252ae7d1cd3aa5"),
+  )
+
+  def install(ctx) {
+    ctx.system("./bootstrap",
+      "--prefix="+ctx.prefix,
+      "--no-system-libs",
+      "--datadir=/share/cmake",
+      "--docdir=/share/doc/cmake",
+      "--mandir=/share/man",
+      "--system-zlib",
+      "--system-bzip2",
+      "--system-curl",
+    )
+
+    ctx.system("make")
+    ctx.system("make", "install")
+  }
+)

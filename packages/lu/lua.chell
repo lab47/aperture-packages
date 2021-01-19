@@ -1,0 +1,15 @@
+pkg(
+  name: "lua"
+  version: "5.4.2"
+  input: file(
+    path: "https://www.lua.org/ftp/lua-5.4.2.tar.gz",
+    sum: ("etag", "5faea952=564c0"),
+  )
+
+  def install(ctx) {
+    ctx.inreplace("src/Makefile", "@LUA_PREFIX@", ctx.prefix)
+    ctx.inreplace("src/luaconf.h", "/usr/local", ctx.prefix)
+    ctx.system("make", "macosx", "INSTALL_TOP="+ctx.prefix)
+    ctx.system("make", "install", "INSTALL_TOP="+ctx.prefix)
+  }
+)

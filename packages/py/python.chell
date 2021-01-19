@@ -1,0 +1,23 @@
+import "pkg-config" as pc
+import openssl, readline, gettext, gdbm, xz, ncurses, bzip2, zlib
+
+pkg(
+  name: "python"
+  version: "3.8.2"
+  input: file(
+    path: "https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tar.xz",
+    sum: ("sha256", "2646e7dc233362f59714c6193017bb2d6f7b38d6ab4a0cb5fbac5c36c4d845df"),
+  )
+  dependencies: [pc, openssl, readline, gettext, xz, ncurses, gdbm, bzip2, zlib]
+
+  def install(ctx) {
+    ctx.system("./configure",
+      "--prefix="+ctx.prefix,
+      "--enable-ipv6",
+      "--without-ensurepip",
+      "--with-openssl="+openssl.prefix,
+    )
+
+    ctx.system("make", "install")
+  }
+)

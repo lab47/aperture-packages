@@ -1,7 +1,10 @@
 pkg(
   name: "pkg-config",
   version: "0.29.2",
-  input: file("https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz"),
+  input: file(
+    path: "https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz",
+    sum: ("etag", "1ec63e-54b2c92e9e6c0"),
+  )
 
   def install(ctx) {
     ctx.system("./configure", "--disable-debug",

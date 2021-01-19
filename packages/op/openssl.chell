@@ -1,21 +1,32 @@
 pkg(
   name: "openssl",
   version: "1.1.1g",
-  input: file("https://www.openssl.org/source/openssl-1.1.1g.tar.gz"),
+  input: inputs(
+    source: file(
+      path: "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+      sum: ("etag", "958f1e-5a3cc9eccf339"),
+    ),
+    certs: file(path: "./cert.pem", into: "cert.pem"),
+  )
 
   def install(ctx) {
+
     configure_args = [
         "--prefix="+ctx.prefix,
-        "--openssldir="+ctx.prefix+"/etc/openssl",
+        "--openssldir="+ctx.prefix+"/etc/ssl",
         "no-ssl3",
         "no-ssl3-method",
         "no-zlib",
     ]
     arch_args = ["darwin64-x86_64-cc", "enable-ec_nistp_64_gcc_128"]
 
-    ctx.system("perl", "./Configure", *(configure_args + arch_args))
-    ctx.system("make")
-    ctx.system("make", "test")
-    ctx.system("make", "install", "MANDIR="+ctx.prefix+"/man", "MANSUFFIX=ssl")
+    ctx.install_files(target: "etc/ssl/cert.pem", pattern: "cert.pem")
+
+    tgt = "source/openssl-1.1.1g"
+
+    ctx.system("perl", "./Configure", *(configure_args + arch_args), dir: tgt)
+    ctx.system("make", dir: tgt)
+    ctx.system("make", "test", dir: tgt)
+    ctx.system("make", "install", "MANDIR="+ctx.prefix+"/man", "MANSUFFIX=ssl", dir: tgt)
   }
 )
