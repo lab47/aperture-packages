@@ -1,9 +1,11 @@
+import fetch
+
 pkg(
   name: "openssl",
   version: "1.1.1g",
   input: inputs(
-    source: file(
-      path: "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+    source: fetch.archive(
+      url: "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
       sum: ("etag", "958f1e-5a3cc9eccf339"),
     ),
     certs: file(path: "./cert.pem", into: "cert.pem"),

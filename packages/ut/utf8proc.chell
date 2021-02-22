@@ -1,8 +1,10 @@
+import fetch
+
 pkg(
   name: "utf8proc"
   version: "2.5.0"
-  input: file(
-    path: "https://github.com/JuliaStrings/utf8proc/archive/v2.5.0.tar.gz",
+  input: fetch.archive(
+    url: "https://github.com/JuliaStrings/utf8proc/archive/v2.5.0.tar.gz",
     sum: ("sha256", "d4e8dfc898cfd062493cb7f42d95d70ccdd3a4cd4d90bec0c71b47cca688f1be"),
   )
 

@@ -1,10 +1,10 @@
-import "pkg-config" as pc, python, icu4c, openssl, zlib, libuv
+import fetch, "pkg-config" as pc, python, icu4c, openssl, zlib, libuv
 
 pkg(
   name: "node"
   version: "14.15.4"
-  input: file(
-    path: "https://nodejs.org/dist/v14.15.4/node-v14.15.4.tar.gz",
+  input: fetch.archive(
+    url: "https://nodejs.org/dist/v14.15.4/node-v14.15.4.tar.gz",
     sum: ("etag", "5ff31f7b-3c36c37"),
   )
 

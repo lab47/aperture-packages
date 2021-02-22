@@ -1,15 +1,30 @@
+import fetch
 
 version = "1.15.2"
+
+bootstrap = None
+
+if True {
+  bootstrap = fetch.archive(
+    url: "https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz",
+    sum: ("etag", "c328b91e29deebc8edc76a955b1e3a59"),
+  )
+} else {
+  bootstrap = fetch.archive(
+    url: "https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz",
+    sum: ("etag", "1504d5efe8e90dd0fde11521ed951081"),
+  )
+}
 
 pkg(
   name: "go",
   version: version,
   input: inputs(
-    source: file("https://dl.google.com/go/go"+version+".src.tar.gz"),
-    gobootstrap: file(
-        darwin: "https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz",
-        linux: "https://storage.googleapis.com/golang/go1.7.linux-amd64.tar.gz"
+    source: fetch.archive(
+      url: "https://dl.google.com/go/go"+version+".src.tar.gz",
+      sum: ("etag", "6f147c"),
     ),
+    gobootstrap: bootstrap,
   )
 
   def install(ctx) {

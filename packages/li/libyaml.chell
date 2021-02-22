@@ -1,10 +1,10 @@
-import autoconf, automake, libtool
+import fetch, autoconf, automake, libtool
 
 pkg(
   name: "libyaml",
   version: "0.2.4",
-  input: file(
-    path: "https://github.com/yaml/libyaml/archive/0.2.4.tar.gz",
+  input: fetch.archive(
+    url: "https://github.com/yaml/libyaml/archive/0.2.4.tar.gz",
     sum: ("etag", "febc615aff6646886aad688e881c342de87139e24172ac01a58fa1d3f194527f"),
   )
 

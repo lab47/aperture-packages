@@ -1,0 +1,61 @@
+def url(url, sum, path=None) {
+  if not path {
+    path = basename(url)
+  }
+
+  return fetch(
+    hash: sum,
+    type: "url",
+    def fetch(ctx) {
+      ctx.download(
+        url: url,
+        path: join(ctx.prefix, path),
+        sum: sum,
+      )
+    }
+  )
+}
+
+def archive(url, sum, path=None) {
+  if not path {
+    path = basename(url)
+  }
+
+  return fetch(
+    hash: sum,
+    type: "archive",
+    def fetch(ctx) {
+      ctx.download(
+        url: url,
+        path: path,
+        sum: sum,
+      )
+
+      ctx.unpack(
+        path: path,
+        output: ctx.prefix,
+      )
+    }
+  )
+}
+
+def github(org, repo, rev) {
+  return fetch(
+    hash: rev,
+    type: "github",
+    def fetch(ctx) {
+      path = rev+".tar.gz"
+      url = fmt("https://github/%s/%s/archive/%s", org, repo, path)
+
+      ctx.download(
+        url: url,
+        path: join(ctx.prefix, path),
+      )
+
+      ctx.unpack(
+        path: join(ctx.prefix, path),
+        output: join(ctx.prefix, repo),
+      )
+    }
+  )
+}

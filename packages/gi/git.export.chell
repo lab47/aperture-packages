@@ -1,0 +1,12 @@
+import git
+
+def clone(url, rev) {
+  return fetcher(
+    hash: rev,
+    dependencies: [git],
+
+    def fetch(ctx) {
+      ctx.system("git", "clone", url, ctx.prefix)
+    }
+  )
+}

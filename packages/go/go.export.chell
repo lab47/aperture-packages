@@ -1,19 +1,27 @@
 import go
 
-def build_modules(name, location) {
+def build_module(path, version, name=None, location=None) {
+  if not name {
+    name = basename(path)
+  }
+
   pkg(
     name: name,
+    version: version,
     dependencies: [go],
-    input: file(location),
 
     def install(ctx) {
-      $ go mod download
-      $ go build -o ${ctx.prefix}/bin/${name}
+      ctx.set_env("GOPATH", join(ctx.build, "gopath"))
+      ctx.set_env("GOCACHE", join(ctx.build, "gocache"))
+      ctx.set_env("GOBIN", join(ctx.prefix, "bin"))
+      ctx.set_env("GO111MODULE", "on")
+
+      ctx.system("go", "get", path+"@"+version)
     }
   )
 }
 
-def build_module(name, path, version) {
+def get_module(name, path, version) {
   pkg(
     name: name,
     verison: version,
@@ -21,6 +29,24 @@ def build_module(name, path, version) {
 
     def install(ctx) {
       $ GOBIN=${ctx.prefix}/bin GO11MODULES=on go get ${path}@${version}
+    }
+  )
+}
+
+def fetch_module(name, version) {
+  fetch(
+    hash: version,
+    type: "gomod",
+    dependencies: [go],
+    
+    def fetch(ctx) {
+      ctx.set_env("GOPATH", join(ctx.prefix, "gopath"))
+      ctx.set_env("GOCACHE", join(ctx.prefix, "gocache"))
+
+      ctx.mkdir(join(ctx.prefix, "gopath"))
+      ctx.mkdir(join(ctx.prefix, "gocache"))
+
+      ctx.system("go", "mod", "download", name + "@" + version)
     }
   )
 }

@@ -1,8 +1,10 @@
+import fetch
+
 pkg(
   name: "lua"
   version: "5.4.2"
-  input: file(
-    path: "https://www.lua.org/ftp/lua-5.4.2.tar.gz",
+  input: fetch.archive(
+    url: "https://www.lua.org/ftp/lua-5.4.2.tar.gz",
     sum: ("etag", "5faea952=564c0"),
   )
 

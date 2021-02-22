@@ -1,8 +1,10 @@
+import fetch
+
 pkg(
   name: "readline",
   version: "8.0.4",
-  input: file(
-    path: "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+  input: fetch.archive(
+    url: "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
     sum: ("etag", "2d68c1-57eded510fd71"),
   )
 

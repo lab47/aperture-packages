@@ -1,10 +1,10 @@
-import autoconf, automake, libtool, "pkg-config" as pc
+import fetch, autoconf, automake, libtool, "pkg-config" as pc
 
 pkg(
   name: "libuv"
   version: "1.37.0"
-  input: file(
-    path: "https://github.com/libuv/libuv/archive/v1.37.0.tar.gz",
+  input: fetch.archive(
+    url: "https://github.com/libuv/libuv/archive/v1.37.0.tar.gz",
     sum: ("sha256", "7afa3c8a326b3eed02a9addb584ae7e995ae4d30516cad5e1e4af911931162a6"),
   )
   dependencies: [automake, autoconf, libtool, pc]
