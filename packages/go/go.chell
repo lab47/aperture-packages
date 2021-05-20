@@ -1,13 +1,14 @@
 import fetch
 
-version = "1.15.2"
+version = "1.16.3"
+sha256 = "b298d29de9236ca47a023e382313bcc2d2eed31dfa706b60a04103ce83a71a25"
 
 bootstrap = None
 
 if True {
   bootstrap = fetch.archive(
-    url: "https://storage.googleapis.com/golang/go1.7.darwin-amd64.tar.gz",
-    sum: ("etag", "c328b91e29deebc8edc76a955b1e3a59"),
+    url: "https://storage.googleapis.com/golang/go1.16.darwin-amd64.tar.gz",
+    sum: ("sha256", "6000a9522975d116bf76044967d7e69e04e982e9625330d9a539a8b45395f9a8"),
   )
 } else {
   bootstrap = fetch.archive(
@@ -22,7 +23,7 @@ pkg(
   input: inputs(
     source: fetch.archive(
       url: "https://dl.google.com/go/go"+version+".src.tar.gz",
-      sum: ("etag", "6f147c"),
+      sum: ("sha256", sha256),
     ),
     gobootstrap: bootstrap,
   )
@@ -49,5 +50,4 @@ pkg(
     ctx.prepend_env("PATH", bin)
     ctx.set_env("GOPATH", ctx.build)
   }
-
 )

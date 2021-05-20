@@ -1,0 +1,23 @@
+import fetch, python
+
+pkg(
+  name: "protobuf"
+  version: "3.15.8"
+  input: fetch.archive(
+    url: "https://github.com/protocolbuffers/protobuf/releases/download/v3.15.8/protobuf-all-3.15.8.tar.gz"
+    sum: ("sha256", "2b737d6d120418c443c561cf4032c0141f9626f68f532b5d2c27ee8a191c996e"),
+  )
+
+  def install(ctx) {
+    ctx.system("./configure",
+      "--prefix="+ctx.prefix,
+      "--disable-debug",
+      "--disable-dependency-tracking",
+      "--with-zlib",
+    )
+
+    ctx.system("make")
+    ctx.system("make", "check")
+    ctx.system("make", "install")
+  }
+)

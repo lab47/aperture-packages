@@ -1,8 +1,10 @@
+import fetch
+
 pkg(
   name: "libtool",
   version: "2.4.6",
-  input: file(
-    path: "https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz",
+  input: fetch.archive(
+    url: "https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz",
     sum: ("etag", "ed918-50f31e0c310b8"),
   )
 
