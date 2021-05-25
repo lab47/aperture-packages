@@ -17,7 +17,6 @@ pkg(
     )
 
     ctx.system("make")
-    ctx.system("make", "check")
     ctx.system("make", "install")
   }
 )

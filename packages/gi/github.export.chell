@@ -1,0 +1,20 @@
+def release(org, repo, ver, path) {
+  return fetch(
+    hash: ver,
+    type: "github-release",
+
+    def fetch(ctx) {
+      url = fmt("https://github/%s/%s/releases/download/%s/%s", org, repo, ver, path)
+
+      ctx.download(
+        url: url,
+        path: join(ctx.prefix, path),
+      )
+
+      ctx.unpack(
+        path: join(ctx.prefix, path),
+        output: join(ctx.prefix, repo),
+      )
+    }
+  )
+}

@@ -1,6 +1,6 @@
 import go
 
-def build_module(path, version, name=None, location=None) {
+def build_module(path, version, name=None, location=None, buildFlags=None) {
   if not name {
     name = basename(path)
   }
@@ -16,7 +16,12 @@ def build_module(path, version, name=None, location=None) {
       ctx.set_env("GOBIN", join(ctx.prefix, "bin"))
       ctx.set_env("GO111MODULE", "on")
 
-      ctx.system("go", "get", path+"@"+version)
+      if buildFlags {
+        flags = ["go", "get"] + buildFlags + [path+"@"+version]
+        ctx.system(*flags)
+      } else {
+        ctx.system("go", "get", path+"@"+version)
+      }
     }
   )
 }
