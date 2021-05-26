@@ -13,9 +13,10 @@ def ruby_build(version) {
         "--with-libyaml-dir="+libyaml.prefix,
       ]
 
+      ctx.set_env("RUBY_CFLAGS", "-DUSE_FFI_CLOSURE_ALLOC")
       ctx.set_env("RUBY_BUILD_ROOT", rb.prefix)
       ctx.set_env("RUBY_CONFIGURE_OPTS", " ".join(configOpts))
-      ctx.system("ruby-build", version, ctx.prefix)
+      ctx.system("ruby-build", "-v", version, ctx.prefix)
     }
   )
 }

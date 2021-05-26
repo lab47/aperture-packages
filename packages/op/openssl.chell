@@ -5,8 +5,8 @@ pkg(
   version: "1.1.1g",
   input: inputs(
     source: fetch.archive(
-      url: "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
-      sum: ("etag", "958f1e-5a3cc9eccf339"),
+      url: "https://www.openssl.org/source/openssl-1.1.1k.tar.gz",
+      sum: ("sha256", "892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5"),
     ),
     certs: file(path: "./cert.pem", into: "cert.pem"),
   )
@@ -20,13 +20,13 @@ pkg(
         "no-ssl3-method",
         "no-zlib",
     ]
-    arch_args = ["darwin64-x86_64-cc", "enable-ec_nistp_64_gcc_128"]
+    arch_args = ["enable-ec_nistp_64_gcc_128"]
 
     ctx.install_files(target: "etc/ssl/cert.pem", pattern: "cert.pem")
 
-    tgt = "source/openssl-1.1.1g"
+    tgt = "source/openssl-1.1.1k"
 
-    ctx.system("perl", "./Configure", *(configure_args + arch_args), dir: tgt)
+    ctx.system("perl", "./config", *(configure_args + arch_args), dir: tgt)
     ctx.system("make", dir: tgt)
     ctx.system("make", "test", dir: tgt)
     ctx.system("make", "install", "MANDIR="+ctx.prefix+"/man", "MANSUFFIX=ssl", dir: tgt)
