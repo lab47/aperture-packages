@@ -11,6 +11,7 @@ def ruby_build(version) {
         "--with-openssl-dir="+openssl.prefix,
         "--with-readline-dir="+readline.prefix,
         "--with-libyaml-dir="+libyaml.prefix,
+        "--without-gmp",
       ]
 
       ctx.set_env("RUBY_CFLAGS", "-DUSE_FFI_CLOSURE_ALLOC")
