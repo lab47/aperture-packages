@@ -1,0 +1,21 @@
+import fetch, cmake
+
+pkg(
+  name: "ninja"
+  version: "1.10.2"
+  input: fetch.archive(
+    url: "https://github.com/ninja-build/ninja/archive/refs/tags/v1.10.2.tar.gz",
+    sum: ("sha256", "ce35865411f0490368a8fc383f29071de6690cbadc27704734978221f25e2bed"),
+  )
+  dependencies: [cmake]
+
+  def install(ctx) {
+    ctx.system("cmake -Bbuild-cmake -H.")
+    ctx.system("cmake --build build-cmake")
+
+    ctx.install_files(
+      pattern: "./build-cmake/ninja",
+      target:  join(ctx.prefix, "bin", "ninja"),
+    )
+  }
+)
