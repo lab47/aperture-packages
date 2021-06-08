@@ -1,0 +1,28 @@
+import fetch, "ruby-26" as ruby
+
+pkg(
+  name: "homebrew-install"
+  version: "20210607"
+  input: fetch.archive(
+    url: "https://github.com/lab47/aperture-homebrew/archive/refs/tags/v20210607.tar.gz",
+    sum: ("sha256", "eb2391c5423d87aa3014f882a4eaa17e9990a1d5deae530c49ab10ec2553a1f6")
+  )
+  dependencies: [ruby]
+
+  def install(ctx) {
+    ctx.install_files(
+      pattern: "bin",
+      target:  join(ctx.prefix, "bin"),
+    )
+
+    ctx.install_files(
+      pattern: "lib",
+      target:  join(ctx.prefix, "lib"),
+    )
+
+    ctx.set_shebang(
+      path: join(ctx.prefix, "bin", "homebrew-install"),
+      shebang: fmt("#!%s\n", join(ruby.prefix, "bin", "ruby")),
+    )
+  }
+)
