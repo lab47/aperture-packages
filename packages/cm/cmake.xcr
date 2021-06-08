@@ -2,10 +2,10 @@ import fetch
 
 pkg(
   name: "cmake"
-  version: "3.17.2"
+  version: "3.20.1"
   input: fetch.archive(
-    url: "https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz",
-    sum: ("sha256", "fc77324c4f820a09052a7785549b8035ff8d3461ded5bbd80d252ae7d1cd3aa5"),
+    url: "https://github.com/Kitware/CMake/releases/download/v3.20.1/cmake-3.20.1.tar.gz",
+    sum: ("sha256", "3f1808b9b00281df06c91dd7a021d7f52f724101000da7985a401678dfe035b0"),
   )
 
   def install(ctx) {

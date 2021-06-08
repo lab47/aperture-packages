@@ -22,13 +22,12 @@ pkg(
     ]
     arch_args = ["enable-ec_nistp_64_gcc_128"]
 
-    ctx.install_files(target: "etc/ssl/cert.pem", pattern: "cert.pem")
-
     tgt = "source/openssl-1.1.1k"
 
     ctx.system("perl", "./config", *(configure_args + arch_args), dir: tgt)
     ctx.system("make", dir: tgt)
-    ctx.system("make", "test", dir: tgt)
     ctx.system("make", "install", "MANDIR="+ctx.prefix+"/man", "MANSUFFIX=ssl", dir: tgt)
+
+    ctx.install_files(target: join(ctx.prefix, "etc/ssl/cert.pem"), pattern: "certs/cert.pem")
   }
 )

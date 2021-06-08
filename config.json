@@ -1,5 +1,3 @@
 {
-  "car_urls": [
-    "https://f000.backblazeb2.com/file/lab47-chell-packages"
-  ]
+  "oci": "ghcr.io/lab47/aperture-packages"
 }

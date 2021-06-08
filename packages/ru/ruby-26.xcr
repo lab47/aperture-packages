@@ -1,3 +1,65 @@
-import "ruby-build" as rb
+import fetch, openssl, readline, libyaml, "pkg-config" as pc
 
-rb.ruby_build("2.6.6")
+os_rb = r'''
+module Gem
+  def self.default_dir
+    user_dir
+  end
+
+  def self.default_path
+    [user_dir]
+  end
+
+  def self.default_bindir
+    File.join(user_dir, "bin")
+  end
+end
+'''
+
+pkg(
+  name: "ruby",
+  version: "2.6.7",
+  dependencies: [openssl, readline, libyaml, pc],
+
+  input: inputs(
+    ruby: fetch.archive(
+      url: "https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.7.tar.gz",
+      sum: ("sha256", "e4227e8b7f65485ecb73397a83e0d09dcd39f25efd411c782b69424e55c7a99e"),
+    ),
+    rubygems: fetch.archive(
+      url: "https://rubygems.org/rubygems/rubygems-3.2.16.tgz",
+      sum: ("sha256", "40db1609fbc6132c1d1491c912526bb30bdfc3f49d758e37ce7131c86021f6ae"),
+    ),
+  )
+
+  def install(ctx) {
+    args = [
+      "--prefix="+ctx.prefix,
+      "--enable-shared",
+      "--with-sitedir="+join(ctx.state_dir, "lib", "ruby", "site_ruby"),
+      "--with-vendordir="+join(ctx.state_dir, "lib", "ruby", "vendor_ruby"),
+      "--with-openssl-dir="+openssl.prefix,
+      "--with-readline-dir="+readline.prefix,
+      "--with-libyaml-dir="+libyaml.prefix,
+      "--without-gmp",
+    ]
+
+    tgt = "ruby/ruby-2.6.7"
+
+    ctx.set_env("CFLAGS", "-Wno-implicit-function-declaration")
+
+    ctx.system("./configure", *args, dir: tgt)
+    ctx.system("make", dir: tgt)
+    ctx.system("make", "install", dir: tgt)
+
+    ctx.system(
+      join(ctx.prefix, "bin", "ruby"), "--disable-gems", "./setup.rb",
+      dir: "rubygems/rubygems-3.2.16",
+    )
+
+    ctx.write_file(
+      target: join(ctx.prefix, "lib", "ruby", "2.6.0", "rubygems", "defaults", "operating_system.rb"),
+      data: os_rb,
+    )
+  }
+)
