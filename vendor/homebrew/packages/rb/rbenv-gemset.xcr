@@ -1,0 +1,39 @@
+formula = r"""
+class RbenvGemset < Formula
+  desc "Adds basic gemset support to rbenv"
+  homepage "https://github.com/jf/rbenv-gemset"
+  url "https://github.com/jf/rbenv-gemset/archive/v0.5.9.tar.gz"
+  sha256 "856aa45ce1e9ac56d476667e2ca58f5f312600879fec4243073edc88a41954da"
+  license :public_domain
+  revision 1
+  head "https://github.com/jf/rbenv-gemset.git"
+
+  bottle :unneeded
+
+  depends_on "rbenv"
+
+  def install
+    prefix.install Dir["*"]
+  end
+
+  test do
+    assert_match "gemset.bash", shell_output("rbenv hooks exec")
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "rbenv" as i0
+
+pkg(
+  name: "rbenv-gemset",
+  version: "0.5.9",
+  dependencies: [hi, i0],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "rbenv-gemset.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./rbenv-gemset.rb")
+  }
+)

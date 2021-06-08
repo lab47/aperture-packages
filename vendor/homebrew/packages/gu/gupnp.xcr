@@ -1,0 +1,93 @@
+formula = r"""
+class Gupnp < Formula
+  include Language::Python::Shebang
+
+  desc "Framework for creating UPnP devices and control points"
+  homepage "https://wiki.gnome.org/Projects/GUPnP"
+  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.6.tar.xz"
+  sha256 "00b20f1e478a72deac92c34723693a2ac55789ed1e4bb4eed99eb4d62092aafd"
+  license "LGPL-2.0-or-later"
+
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "a038e42c79ea3c83c1e4490ed9cd1d5c1a8a432ef7a209ad184be22c7c4ca464"
+    sha256 cellar: :any, big_sur:       "4ef33bf7fad586b473257332ea570ad89930030a3ba21e3f6fb0cd1bb5645e1d"
+    sha256 cellar: :any, catalina:      "67f05d8099650442d73a256991109f45c7c9f4f342d5351be4682da39233e704"
+    sha256 cellar: :any, mojave:        "9ae23797186a16d35ec22742167433d9f94a0b8342026b01a4c53333967bfba5"
+  end
+
+  depends_on "docbook-xsl" => :build
+  depends_on "gobject-introspection" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "gssdp"
+  depends_on "libsoup"
+  depends_on "python@3.9"
+
+  def install
+    mkdir "build" do
+      ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+
+      system "meson", *std_meson_args, ".."
+      system "ninja"
+      system "ninja", "install"
+      bin.find { |f| rewrite_shebang detected_python_shebang, f }
+    end
+  end
+
+  test do
+    system bin/"gupnp-binding-tool-1.2", "--help"
+    (testpath/"test.c").write <<~EOS
+      #include <libgupnp/gupnp-control-point.h>
+
+      static GMainLoop *main_loop;
+
+      int main (int argc, char **argv)
+      {
+        GUPnPContext *context;
+        GUPnPControlPoint *cp;
+
+        context = gupnp_context_new (NULL, 0, NULL);
+        cp = gupnp_control_point_new
+          (context, "urn:schemas-upnp-org:service:WANIPConnection:1");
+
+        main_loop = g_main_loop_new (NULL, FALSE);
+        g_main_loop_unref (main_loop);
+        g_object_unref (cp);
+        g_object_unref (context);
+
+        return 0;
+      }
+    EOS
+    system ENV.cc, "-I#{include}/gupnp-1.2", "-L#{lib}", "-lgupnp-1.2",
+           "-I#{Formula["gssdp"].opt_include}/gssdp-1.2",
+           "-L#{Formula["gssdp"].opt_lib}", "-lgssdp-1.2",
+           "-I#{Formula["glib"].opt_include}/glib-2.0",
+           "-I#{Formula["glib"].opt_lib}/glib-2.0/include",
+           "-L#{Formula["glib"].opt_lib}",
+           "-lglib-2.0", "-lgobject-2.0",
+           "-I#{Formula["libsoup"].opt_include}/libsoup-2.4",
+           "-I#{MacOS.sdk_path}/usr/include/libxml2",
+           testpath/"test.c", "-o", testpath/"test"
+    system "./test"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "bison" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "docbook" as i9, "docbook-xsl" as i10, "fontconfig" as i11, "freetype" as i12, "fribidi" as i13, "gd" as i14, "gdbm" as i15, "gdk-pixbuf" as i16, "gettext" as i17, "glib" as i18, "glib-networking" as i19, "gmp" as i20, "gnu-sed" as i21, "gnutls" as i22, "gobject-introspection" as i23, "graphite2" as i24, "graphviz" as i25, "gsettings-desktop-schemas" as i26, "gssdp" as i27, "gts" as i28, "guile" as i29, "harfbuzz" as i30, "icu4c" as i31, "jasper" as i32, "jemalloc" as i33, "jpeg" as i34, "libatomic_ops" as i35, "libev" as i36, "libevent" as i37, "libffi" as i38, "libidn2" as i39, "libpng" as i40, "libpsl" as i41, "libpthread-stubs" as i42, "librsvg" as i43, "libsoup" as i44, "libssh2" as i45, "libtasn1" as i46, "libtiff" as i47, "libtool" as i48, "libunistring" as i49, "libx11" as i50, "libxau" as i51, "libxcb" as i52, "libxdmcp" as i53, "libxext" as i54, "libxrender" as i55, "lz4" as i56, "lzo" as i57, "m4" as i58, "meson" as i59, "mpdecimal" as i60, "netpbm" as i61, "nettle" as i62, "nghttp2" as i63, "ninja" as i64, "openjdk" as i65, "openssl@1.1" as i66, "p11-kit" as i67, "pango" as i68, "pcre" as i69, "pixman" as i70, "pkg-config" as i71, "python@3.9" as i72, "readline" as i73, "rust" as i74, "scons" as i75, "sphinx-doc" as i76, "sqlite" as i77, "subversion" as i78, "swig" as i79, "unbound" as i80, "utf8proc" as i81, "util-macros" as i82, "vala" as i83, "webp" as i84, "xcb-proto" as i85, "xorgproto" as i86, "xtrans" as i87, "xz" as i88
+
+pkg(
+  name: "gupnp",
+  version: "1.2.6",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "gupnp.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./gupnp.rb")
+  }
+)

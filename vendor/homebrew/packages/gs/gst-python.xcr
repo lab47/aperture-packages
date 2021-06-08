@@ -1,0 +1,65 @@
+formula = r"""
+class GstPython < Formula
+  desc "Python overrides for gobject-introspection-based pygst bindings"
+  homepage "https://gstreamer.freedesktop.org/modules/gst-python.html"
+  url "https://gstreamer.freedesktop.org/src/gst-python/gst-python-1.18.4.tar.xz"
+  sha256 "cb68e08a7e825e08b83a12a22dcd6e4f1b328a7b02a7ac84f42f68f4ddc7098e"
+  license "LGPL-2.1-or-later"
+
+  livecheck do
+    url "https://gstreamer.freedesktop.org/src/gst-python/"
+    regex(/href=.*?gst-python[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
+  end
+
+  bottle do
+    sha256 big_sur:  "c5461f496775e0d65ed07bb217d1f12eb68ba633ea9c688add6297fab942fdd6"
+    sha256 catalina: "7de5518b76bea95a7769f1230db57fa03d389483f7800e060db7f2553ac0f856"
+    sha256 mojave:   "c155c0ff5e23c12f99746fd05058bfc5d01f4b3af9f2abf641035f7564efef1d"
+  end
+
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "gst-plugins-base"
+  depends_on "pygobject3"
+  depends_on "python@3.9"
+
+  # See https://gitlab.freedesktop.org/gstreamer/gst-python/-/merge_requests/41
+  patch do
+    url "https://gitlab.freedesktop.org/gstreamer/gst-python/-/commit/3e752ede7ed6261681ef3831bc3dbb594f189e76.diff"
+    sha256 "d6522bb29f1894d3d426ee6c262a18669b0759bd084a6d2a2ea1ba0612a80068"
+  end
+
+  def install
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
+  end
+
+  test do
+    system Formula["python@3.9"].opt_bin/"python3", "-c", <<~EOS
+      import gi
+      gi.require_version('Gst', '1.0')
+      from gi.repository import Gst
+      print (Gst.Fraction(num=3, denom=5))
+    EOS
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "bison" as i0, "cairo" as i1, "cmake" as i2, "fontconfig" as i3, "freetype" as i4, "fribidi" as i5, "gdbm" as i6, "gettext" as i7, "glib" as i8, "gobject-introspection" as i9, "graphene" as i10, "graphite2" as i11, "gst-plugins-base" as i12, "gstreamer" as i13, "harfbuzz" as i14, "icu4c" as i15, "libffi" as i16, "libogg" as i17, "libpng" as i18, "libpthread-stubs" as i19, "libtool" as i20, "libvorbis" as i21, "libx11" as i22, "libxau" as i23, "libxcb" as i24, "libxdmcp" as i25, "libxext" as i26, "libxrender" as i27, "lzo" as i28, "m4" as i29, "meson" as i30, "mpdecimal" as i31, "ninja" as i32, "openssl@1.1" as i33, "opus" as i34, "orc" as i35, "pango" as i36, "pcre" as i37, "pixman" as i38, "pkg-config" as i39, "py3cairo" as i40, "pygobject3" as i41, "python@3.9" as i42, "readline" as i43, "sphinx-doc" as i44, "sqlite" as i45, "theora" as i46, "util-macros" as i47, "xcb-proto" as i48, "xorgproto" as i49, "xtrans" as i50, "xz" as i51
+
+pkg(
+  name: "gst-python",
+  version: "1.18.4",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "gst-python.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./gst-python.rb")
+  }
+)

@@ -1,0 +1,67 @@
+formula = r"""
+class Mat2 < Formula
+  desc "Metadata anonymization toolkit"
+  homepage "https://0xacab.org/jvoisin/mat2"
+  url "https://0xacab.org/jvoisin/mat2/-/archive/0.12.1/mat2-0.12.1.tar.gz"
+  sha256 "5f1cf47c61cc137b5a3d0520c4d4db27706b045f2425ee3837148b2397a26e65"
+  license "LGPL-3.0-or-later"
+
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "2cf257a8aaf56858e195df29823cb3fdef6b25deb2c7df0a19d17e02044bfc05"
+    sha256 cellar: :any_skip_relocation, catalina: "6134535ba8f2fd9b654df05cb0398eb167140ff636e8988228791102227695c0"
+    sha256 cellar: :any_skip_relocation, mojave:   "130e341149d1005c85efc2b5421b133f8897b98913b27186ef1360c3de138726"
+  end
+
+  depends_on "exiftool"
+  depends_on "ffmpeg"
+  depends_on "gdk-pixbuf"
+  depends_on "librsvg"
+  depends_on "poppler"
+  depends_on "py3cairo"
+  depends_on "pygobject3"
+  depends_on "python@3.9"
+
+  resource "mutagen" do
+    url "https://files.pythonhosted.org/packages/f3/d9/2232a4cb9a98e2d2501f7e58d193bc49c956ef23756d7423ba1bd87e386d/mutagen-1.45.1.tar.gz"
+    sha256 "6397602efb3c2d7baebd2166ed85731ae1c1d475abca22090b7141ff5034b3e1"
+  end
+
+  def install
+    version = Language::Python.major_minor_version Formula["python@3.9"].bin/"python3"
+    pygobject3 = Formula["pygobject3"]
+    ENV["PYTHONPATH"] = lib/"python#{version}/site-packages"
+    ENV.append_path "PYTHONPATH", pygobject3.opt_lib+"python#{version}/site-packages"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{version}/site-packages"
+
+    resources.each do |r|
+      r.stage do
+        system Formula["python@3.9"].bin/"python3", *Language::Python.setup_install_args(libexec/"vendor")
+      end
+    end
+
+    system Formula["python@3.9"].bin/"python3", *Language::Python.setup_install_args(prefix)
+
+    bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
+  end
+
+  test do
+    system "#{bin}/mat2", "-l"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "bison" as i7, "boost" as i8, "c-ares" as i9, "cairo" as i10, "cargo-c" as i11, "cmake" as i12, "dav1d" as i13, "docbook" as i14, "docbook-xsl" as i15, "doxygen" as i16, "exiftool" as i17, "ffmpeg" as i18, "flac" as i19, "fontconfig" as i20, "freetype" as i21, "frei0r" as i22, "fribidi" as i23, "gdbm" as i24, "gdk-pixbuf" as i25, "gettext" as i26, "giflib" as i27, "glib" as i28, "gmp" as i29, "gnu-getopt" as i30, "gnu-sed" as i31, "gnutls" as i32, "gobject-introspection" as i33, "graphite2" as i34, "guile" as i35, "harfbuzz" as i36, "icu4c" as i37, "jemalloc" as i38, "jpeg" as i39, "lame" as i40, "leptonica" as i41, "libass" as i42, "libatomic_ops" as i43, "libbluray" as i44, "libev" as i45, "libevent" as i46, "libffi" as i47, "libgit2" as i48, "libidn2" as i49, "libogg" as i50, "libpng" as i51, "libpthread-stubs" as i52, "librsvg" as i53, "libsamplerate" as i54, "libsndfile" as i55, "libsodium" as i56, "libsoxr" as i57, "libssh2" as i58, "libtasn1" as i59, "libtiff" as i60, "libtool" as i61, "libunistring" as i62, "libvidstab" as i63, "libvorbis" as i64, "libvpx" as i65, "libx11" as i66, "libxau" as i67, "libxcb" as i68, "libxdmcp" as i69, "libxext" as i70, "libxrender" as i71, "little-cms2" as i72, "lzo" as i73, "m4" as i74, "meson" as i75, "mpdecimal" as i76, "nasm" as i77, "nettle" as i78, "nghttp2" as i79, "ninja" as i80, "nspr" as i81, "nss" as i82, "opencore-amr" as i83, "openjpeg" as i84, "openssl@1.1" as i85, "opus" as i86, "p11-kit" as i87, "pango" as i88, "pcre" as i89, "pixman" as i90, "pkg-config" as i91, "poppler" as i92, "py3cairo" as i93, "pygobject3" as i94, "python@3.9" as i95, "qt@5" as i96, "rav1e" as i97, "readline" as i98, "rubberband" as i99, "rust" as i100, "sdl2" as i101, "snappy" as i102, "source-highlight" as i103, "speex" as i104, "sphinx-doc" as i105, "sqlite" as i106, "srt" as i107, "tesseract" as i108, "theora" as i109, "unbound" as i110, "util-macros" as i111, "webp" as i112, "x264" as i113, "x265" as i114, "xcb-proto" as i115, "xmlto" as i116, "xorgproto" as i117, "xtrans" as i118, "xvid" as i119, "xz" as i120, "yasm" as i121, "zeromq" as i122, "zimg" as i123
+
+pkg(
+  name: "mat2",
+  version: "0.12.1",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "mat2.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./mat2.rb")
+  }
+)

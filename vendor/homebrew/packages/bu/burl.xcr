@@ -1,0 +1,32 @@
+formula = r"""
+class Burl < Formula
+  desc "Shell script wrapper that offers helpful shortcuts for curl(1)"
+  homepage "https://github.com/tj/burl"
+  url "https://github.com/tj/burl/archive/1.0.1.tar.gz"
+  sha256 "634949b7859ddf7c75a89123608998f8dac8ced8c601fa2c2717569caeaa54e5"
+
+  bottle :unneeded
+
+  def install
+    bin.install "bin/burl"
+  end
+
+  test do
+    system "#{bin}/burl", "-I", "github.com"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "burl",
+  version: "1.0.1",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "burl.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./burl.rb")
+  }
+)

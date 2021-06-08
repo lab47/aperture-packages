@@ -1,0 +1,103 @@
+formula = r"""
+class Openimageio < Formula
+  desc "Library for reading, processing and writing images"
+  homepage "https://openimageio.org/"
+  url "https://github.com/OpenImageIO/oiio/archive/Release-2.2.15.0.tar.gz"
+  sha256 "5861e2533d7c8f7ca61631abe99e3882f94502617a7ff3ad654f8ea48e0fbd16"
+  license "BSD-3-Clause"
+  head "https://github.com/OpenImageIO/oiio.git"
+
+  livecheck do
+    url :stable
+    strategy :github_latest
+    regex(%r{href=.*?/tag/(?:Release[._-])?v?(\d+(?:\.\d+)+)["' >]}i)
+  end
+
+  bottle do
+    sha256 cellar: :any, big_sur:  "b693110c296435405b50537061bf9b8ca21e4693ea27121519ba89b2fcb62c1a"
+    sha256 cellar: :any, catalina: "d1153da148ac890bdf42ab17bd41c76563a867f8686fe548e1fde28b897a77cc"
+    sha256 cellar: :any, mojave:   "784d117c38635f58d1072262f21c510ca19614e4caa52d440bc6110a9152b17a"
+  end
+
+  depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "boost"
+  depends_on "boost-python3"
+  depends_on "ffmpeg"
+  depends_on "freetype"
+  depends_on "giflib"
+  depends_on "imath"
+  depends_on "jpeg"
+  depends_on "libheif"
+  depends_on "libpng"
+  depends_on "libraw"
+  depends_on "libtiff"
+  depends_on "opencolorio"
+  depends_on "openexr"
+  depends_on "pybind11"
+  depends_on "python@3.9"
+  depends_on "webp"
+
+  def install
+    args = std_cmake_args + %w[
+      -DCCACHE_FOUND=
+      -DEMBEDPLUGINS=ON
+      -DUSE_FIELD3D=OFF
+      -DUSE_JPEGTURBO=OFF
+      -DUSE_NUKE=OFF
+      -DUSE_OPENCV=OFF
+      -DUSE_OPENGL=OFF
+      -DUSE_OPENJPEG=OFF
+      -DUSE_PTEX=OFF
+      -DUSE_QT=OFF
+    ]
+
+    # CMake picks up the system's python dylib, even if we have a brewed one.
+    py3ver = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    py3prefix = Formula["python@3.9"].opt_frameworks/"Python.framework/Versions/#{py3ver}"
+    on_linux do
+      py3prefix = Formula["python@3.9"].opt_prefix
+    end
+
+    ENV["PYTHONPATH"] = lib/"python#{py3ver}/site-packages"
+
+    args << "-DPYTHON_EXECUTABLE=#{py3prefix}/bin/python3"
+    args << "-DPYTHON_LIBRARY=#{py3prefix}/lib/#{shared_library("libpython#{py3ver}")}"
+    args << "-DPYTHON_INCLUDE_DIR=#{py3prefix}/include/python#{py3ver}"
+
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make", "install"
+    end
+  end
+
+  test do
+    test_image = test_fixtures("test.jpg")
+    assert_match "#{test_image} :    1 x    1, 3 channel, uint8 jpeg",
+                 shell_output("#{bin}/oiiotool --info #{test_image} 2>&1")
+
+    output = <<~EOS
+      from __future__ import print_function
+      import OpenImageIO
+      print(OpenImageIO.VERSION_STRING)
+    EOS
+    assert_match version.major_minor_patch.to_s, pipe_output(Formula["python@3.9"].opt_bin/"python3", output, 0)
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "bison" as i7, "boost" as i8, "boost-python3" as i9, "c-ares" as i10, "cairo" as i11, "cargo-c" as i12, "cmake" as i13, "cython" as i14, "dav1d" as i15, "docbook" as i16, "docbook-xsl" as i17, "doxygen" as i18, "ffmpeg" as i19, "flac" as i20, "fontconfig" as i21, "freetype" as i22, "frei0r" as i23, "fribidi" as i24, "gcc" as i25, "gdbm" as i26, "gettext" as i27, "giflib" as i28, "glib" as i29, "gmp" as i30, "gnu-getopt" as i31, "gnu-sed" as i32, "gnutls" as i33, "gobject-introspection" as i34, "graphite2" as i35, "guile" as i36, "harfbuzz" as i37, "icu4c" as i38, "imath" as i39, "intltool" as i40, "isl" as i41, "itstool" as i42, "jasper" as i43, "jemalloc" as i44, "jpeg" as i45, "lame" as i46, "leptonica" as i47, "libass" as i48, "libatomic_ops" as i49, "libbluray" as i50, "libde265" as i51, "libev" as i52, "libevent" as i53, "libffi" as i54, "libgit2" as i55, "libheif" as i56, "libidn2" as i57, "libmpc" as i58, "libogg" as i59, "libomp" as i60, "libpng" as i61, "libpthread-stubs" as i62, "libraw" as i63, "libsamplerate" as i64, "libsndfile" as i65, "libsodium" as i66, "libsoxr" as i67, "libssh2" as i68, "libtasn1" as i69, "libtiff" as i70, "libtool" as i71, "libunistring" as i72, "libvidstab" as i73, "libvorbis" as i74, "libvpx" as i75, "libx11" as i76, "libxau" as i77, "libxcb" as i78, "libxdmcp" as i79, "libxext" as i80, "libxml2" as i81, "libxrender" as i82, "little-cms2" as i83, "lzo" as i84, "m4" as i85, "meson" as i86, "mpdecimal" as i87, "mpfr" as i88, "nasm" as i89, "nettle" as i90, "nghttp2" as i91, "ninja" as i92, "numpy" as i93, "openblas" as i94, "opencolorio" as i95, "opencore-amr" as i96, "openexr" as i97, "openjpeg" as i98, "openssl@1.1" as i99, "opus" as i100, "p11-kit" as i101, "pcre" as i102, "pixman" as i103, "pkg-config" as i104, "pybind11" as i105, "python@3.9" as i106, "rav1e" as i107, "readline" as i108, "rubberband" as i109, "rust" as i110, "sdl2" as i111, "shared-mime-info" as i112, "snappy" as i113, "source-highlight" as i114, "speex" as i115, "sphinx-doc" as i116, "sqlite" as i117, "srt" as i118, "tesseract" as i119, "theora" as i120, "unbound" as i121, "util-macros" as i122, "webp" as i123, "x264" as i124, "x265" as i125, "xcb-proto" as i126, "xmlto" as i127, "xorgproto" as i128, "xtrans" as i129, "xvid" as i130, "xz" as i131, "yasm" as i132, "zeromq" as i133, "zimg" as i134, "zstd" as i135
+
+pkg(
+  name: "openimageio",
+  version: "2.2.15.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131, i132, i133, i134, i135],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "openimageio.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./openimageio.rb")
+  }
+)

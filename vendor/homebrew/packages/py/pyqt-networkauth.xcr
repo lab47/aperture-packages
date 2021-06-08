@@ -1,0 +1,56 @@
+formula = r"""
+class PyqtNetworkauth < Formula
+  desc "Python bindings for The Qt Company’s Qt Network Authorization library"
+  homepage "https://www.riverbankcomputing.com/software/pyqtnetworkauth"
+  url "https://files.pythonhosted.org/packages/92/3d/3088bcf0bcba3b586c401dad60f7706224966e8861653088e5786115f66c/PyQt6_NetworkAuth-6.1.0.tar.gz"
+  sha256 "11af1bb27a6b3686db8770cd9c089be408d4db93115ca77600e6c6415e3d318c"
+  license "GPL-3.0-only"
+
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "0d988ef8d9814b9c2b3ec956b9826eec3ed2cf4928374d99fb8b5fee9023a2fc"
+    sha256 cellar: :any, big_sur:       "73396cbd45e61c6792ec73ffac9a8fb53b5917f008368a655b0b407ebca8447b"
+    sha256 cellar: :any, catalina:      "de12b27c4e572f42701bae3f6914dd9175cb72bdbf96a1d79b555ad8440356d1"
+    sha256 cellar: :any, mojave:        "21d8a3a2fe01a7442ae08adbbe6cc4e8cc396d7402a22932f3e751cda60926eb"
+  end
+
+  keg_only "pyqt now contains all submodules"
+  disable! date: "2021-06-16", because: "pyqt now contains all submodules"
+
+  depends_on "pyqt-builder" => :build
+  depends_on "sip" => :build
+
+  depends_on "pyqt"
+  depends_on "python@3.9"
+  depends_on "qt"
+
+  def install
+    pyqt = Formula["pyqt"]
+    site_packages = Language::Python.site_packages("python3")
+
+    inreplace "pyproject.toml", "[tool.sip.project]",
+      "[tool.sip.project]\nsip-include-dirs = [\"#{pyqt.prefix/site_packages}/PyQt#{version.major}/bindings\"]\n"
+    system "sip-install", "--target-dir", prefix/site_packages
+  end
+
+  test do
+    pyqt = Formula["pyqt"]
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import PyQt#{pyqt.version.major}.QtNetworkAuth"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "asciidoctor" as i0, "assimp" as i1, "brotli" as i2, "cmake" as i3, "dbus" as i4, "docbook" as i5, "docbook-xsl" as i6, "double-conversion" as i7, "freetype" as i8, "gdbm" as i9, "gettext" as i10, "glib" as i11, "gnu-getopt" as i12, "icu4c" as i13, "jasper" as i14, "jpeg" as i15, "libb2" as i16, "libffi" as i17, "libpng" as i18, "libproxy" as i19, "libtiff" as i20, "meson" as i21, "mpdecimal" as i22, "ninja" as i23, "openssl@1.1" as i24, "pcre" as i25, "pcre2" as i26, "pkg-config" as i27, "pyqt" as i28, "pyqt-builder" as i29, "python@3.9" as i30, "qt" as i31, "readline" as i32, "sip" as i33, "sphinx-doc" as i34, "sqlite" as i35, "webp" as i36, "xmlto" as i37, "xz" as i38, "zstd" as i39
+
+pkg(
+  name: "pyqt-networkauth",
+  version: "6.1.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "pyqt-networkauth.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./pyqt-networkauth.rb")
+  }
+)

@@ -1,0 +1,40 @@
+formula = r"""
+class Jbake < Formula
+  desc "Java based static site/blog generator"
+  homepage "https://jbake.org/"
+  url "https://github.com/jbake-org/jbake/releases/download/v2.6.7/jbake-2.6.7-bin.zip"
+  sha256 "8d9c2b70fbf26415c5b3e530088b8b7fd1d236d3ce2c98a9c03fff4734bced39"
+  license "MIT"
+
+  bottle :unneeded
+
+  depends_on "openjdk"
+
+  def install
+    rm_f Dir["bin/*.bat"]
+    libexec.install Dir["*"]
+    bin.install libexec/"bin/jbake"
+    bin.env_script_all_files libexec/"bin", JAVA_HOME: Formula["openjdk"].opt_prefix
+  end
+
+  test do
+    assert_match "Usage: jbake", shell_output("#{bin}/jbake")
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "openjdk" as i0
+
+pkg(
+  name: "jbake",
+  version: "2.6.7",
+  dependencies: [hi, i0],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "jbake.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./jbake.rb")
+  }
+)

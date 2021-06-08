@@ -1,0 +1,93 @@
+formula = r"""
+class EasyTag < Formula
+  desc "Application for viewing and editing audio file tags"
+  homepage "https://projects.gnome.org/easytag"
+  url "https://download.gnome.org/sources/easytag/2.4/easytag-2.4.3.tar.xz"
+  sha256 "fc51ee92a705e3c5979dff1655f7496effb68b98f1ada0547e8cbbc033b67dd5"
+  revision 5
+
+  bottle do
+    sha256 arm64_big_sur: "d710681540b59898e8eb6560a5970ba0862d726f47b4ea2f2deda97d199ca619"
+    sha256 big_sur:       "0f5db8b133620eeea75819572f9bb644ad42c0608ca72a1e0972fa87e791eab8"
+    sha256 catalina:      "cf6e6683991f2aaf8072b3ff0ab1c645ecf189ca009787ed179022d65d8111e4"
+    sha256 mojave:        "bc97c0feed958d5af987bf691e669e4e358d06f072568e5c68eb746a852a7bdb"
+    sha256 high_sierra:   "7e95b30ce2c317eb3ced35ae007d3396e4f3e0dfada0a88914695341ecd03c83"
+  end
+
+  depends_on "intltool" => :build
+  depends_on "itstool" => :build
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on "adwaita-icon-theme"
+  depends_on "flac"
+  depends_on "gtk+3"
+  depends_on "hicolor-icon-theme"
+  depends_on "id3lib"
+  depends_on "libid3tag"
+  depends_on "libogg"
+  depends_on "libvorbis"
+  depends_on "speex"
+  depends_on "taglib"
+  depends_on "wavpack"
+
+  # disable gtk-update-icon-cache
+  patch :DATA
+
+  def install
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.append_path "PYTHONPATH", "#{Formula["libxml2"].opt_lib}/python#{xy}/site-packages"
+
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          "--disable-schemas-compile"
+    system "make"
+    ENV.deparallelize # make install fails in parallel
+    system "make", "install"
+  end
+
+  def post_install
+    system "#{Formula["glib"].opt_bin}/glib-compile-schemas", "#{HOMEBREW_PREFIX}/share/glib-2.0/schemas"
+    system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", "#{HOMEBREW_PREFIX}/share/icons/hicolor"
+  end
+
+  test do
+    system "#{bin}/easytag", "--version"
+  end
+end
+
+__END__
+diff --git a/Makefile.in b/Makefile.in
+index 9dbde5f..4ffe52e 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -3960,8 +3960,6 @@ data/org.gnome.EasyTAG.gschema.valid: data/.dstamp
+ @ENABLE_MAN_TRUE@		--path $(builddir)/doc --output $(builddir)/doc/ \
+ @ENABLE_MAN_TRUE@		http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl $<
+
+-install-data-hook: install-update-icon-cache
+-uninstall-hook: uninstall-update-icon-cache
+
+ install-update-icon-cache:
+	$(AM_V_at)$(POST_INSTALL)
+
+"""
+
+import "homebrew-install" as hi
+
+import "adwaita-icon-theme" as i0, "atk" as i1, "autoconf" as i2, "automake" as i3, "bison" as i4, "cairo" as i5, "cmake" as i6, "docbook" as i7, "docbook-xsl" as i8, "flac" as i9, "fontconfig" as i10, "freetype" as i11, "fribidi" as i12, "gdbm" as i13, "gdk-pixbuf" as i14, "gettext" as i15, "glib" as i16, "gobject-introspection" as i17, "graphite2" as i18, "gsettings-desktop-schemas" as i19, "gtk+3" as i20, "harfbuzz" as i21, "hicolor-icon-theme" as i22, "icu4c" as i23, "id3lib" as i24, "intltool" as i25, "itstool" as i26, "jpeg" as i27, "libepoxy" as i28, "libffi" as i29, "libid3tag" as i30, "libogg" as i31, "libpng" as i32, "libpthread-stubs" as i33, "librsvg" as i34, "libssh2" as i35, "libtiff" as i36, "libtool" as i37, "libvorbis" as i38, "libx11" as i39, "libxau" as i40, "libxcb" as i41, "libxdmcp" as i42, "libxext" as i43, "libxml2" as i44, "libxrender" as i45, "lzo" as i46, "m4" as i47, "meson" as i48, "mpdecimal" as i49, "ninja" as i50, "openssl@1.1" as i51, "pango" as i52, "pcre" as i53, "pixman" as i54, "pkg-config" as i55, "python@3.9" as i56, "readline" as i57, "rust" as i58, "speex" as i59, "sphinx-doc" as i60, "sqlite" as i61, "taglib" as i62, "util-macros" as i63, "wavpack" as i64, "xcb-proto" as i65, "xorgproto" as i66, "xtrans" as i67, "xz" as i68
+
+pkg(
+  name: "easy-tag",
+  version: "2.4.3",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "easy-tag.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./easy-tag.rb")
+  }
+
+  def post_install(ctx) {
+    ctx.write_file(join(ctx.build, "easy-tag.rb"), formula)
+    ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./easy-tag.rb")
+  }
+)

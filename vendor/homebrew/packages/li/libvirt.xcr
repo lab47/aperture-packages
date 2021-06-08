@@ -1,0 +1,123 @@
+formula = r"""
+class Libvirt < Formula
+  desc "C virtualization API"
+  homepage "https://www.libvirt.org"
+  url "https://libvirt.org/sources/libvirt-7.4.0.tar.xz"
+  sha256 "b366d73dee6ce77a226bedef592e0620ceb8e22e5998f60768017f79fc4ead26"
+  license all_of: ["LGPL-2.1-or-later", "GPL-2.0-or-later"]
+
+  livecheck do
+    url "https://libvirt.org/sources/"
+    regex(/href=.*?libvirt[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
+  bottle do
+    sha256 arm64_big_sur: "91d530ec362950d767cf657b73e6a67227b84053a5e1f482aae5fe034e618445"
+    sha256 big_sur:       "e95e6bab1c0fb49ea9d1cdbe7a96dcdedda2c1b576d1014a5340133e8d7e1d99"
+    sha256 catalina:      "27d65b0d11f2443dae3bd1a45378ee642dd2639a874fa18c590b9c0270d7ab84"
+    sha256 mojave:        "ccddb16e18d914a1c66af8ee4baedcdab15e47fb323f54a82cd84a829238f030"
+  end
+
+  head do
+    url "https://github.com/libvirt/libvirt.git"
+  end
+  depends_on "docutils" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "perl" => :build
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "gnu-sed"
+  depends_on "gnutls"
+  depends_on "grep"
+  depends_on "libgcrypt"
+  depends_on "libiscsi"
+  depends_on "libssh2"
+  depends_on "yajl"
+
+  uses_from_macos "curl"
+  uses_from_macos "libxslt"
+
+  on_macos do
+    depends_on "rpcgen" => :build
+  end
+
+  on_linux do
+    depends_on "libtirpc"
+  end
+
+  def install
+    mkdir "build" do
+      args = %W[
+        --localstatedir=#{var}
+        --mandir=#{man}
+        --sysconfdir=#{etc}
+        -Ddriver_esx=enabled
+        -Ddriver_qemu=enabled
+        -Dinit_script=none
+      ]
+      system "meson", *std_meson_args, *args, ".."
+      system "meson", "compile"
+      system "meson", "install"
+    end
+  end
+
+  plist_options manual: "libvirtd"
+
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+        <dict>
+          <key>EnvironmentVariables</key>
+          <dict>
+            <key>PATH</key>
+            <string>#{HOMEBREW_PREFIX}/bin</string>
+          </dict>
+          <key>Label</key>
+          <string>#{plist_name}</string>
+          <key>ProgramArguments</key>
+          <array>
+            <string>#{sbin}/libvirtd</string>
+            <string>-f</string>
+            <string>#{etc}/libvirt/libvirtd.conf</string>
+          </array>
+          <key>KeepAlive</key>
+          <true/>
+          <key>RunAtLoad</key>
+          <true/>
+        </dict>
+      </plist>
+    EOS
+  end
+
+  test do
+    if build.head?
+      output = shell_output("#{bin}/virsh -V")
+      assert_match "Compiled with support for:", output
+    else
+      output = shell_output("#{bin}/virsh -v")
+      assert_match version.to_s, output
+    end
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "c-ares" as i4, "cmake" as i5, "cunit" as i6, "docutils" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gmp" as i11, "gnu-sed" as i12, "gnutls" as i13, "grep" as i14, "guile" as i15, "jemalloc" as i16, "libatomic_ops" as i17, "libev" as i18, "libevent" as i19, "libffi" as i20, "libgcrypt" as i21, "libgpg-error" as i22, "libidn2" as i23, "libiscsi" as i24, "libssh2" as i25, "libtasn1" as i26, "libtool" as i27, "libunistring" as i28, "m4" as i29, "meson" as i30, "mpdecimal" as i31, "nettle" as i32, "nghttp2" as i33, "ninja" as i34, "openssl@1.1" as i35, "p11-kit" as i36, "pcre" as i37, "perl" as i38, "pkg-config" as i39, "python@3.9" as i40, "readline" as i41, "rpcgen" as i42, "sphinx-doc" as i43, "sqlite" as i44, "unbound" as i45, "xz" as i46, "yajl" as i47
+
+pkg(
+  name: "libvirt",
+  version: "7.4.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "libvirt.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./libvirt.rb")
+  }
+)

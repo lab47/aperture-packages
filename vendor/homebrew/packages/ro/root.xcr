@@ -1,0 +1,182 @@
+formula = r"""
+class Root < Formula
+  desc "Object oriented framework for large scale data analysis"
+  homepage "https://root.cern.ch/"
+  url "https://root.cern.ch/download/root_v6.22.08.source.tar.gz"
+  sha256 "6f061ff6ef8f5ec218a12c4c9ea92665eea116b16e1cd4df4f96f00c078a2f6f"
+  license "LGPL-2.1-or-later"
+  revision 2
+  head "https://github.com/root-project/root.git"
+
+  livecheck do
+    url "https://root.cern.ch/download/"
+    regex(/href=.*?root[._-]v?(\d+(?:\.\d*[02468])+)\.source\.t/i)
+  end
+
+  bottle do
+    sha256 arm64_big_sur: "17c9442b2c82a2ba1ce3978a7be33d928ed11696874dd9a7593514d79bedcbf8"
+    sha256 big_sur:       "002227927383e2b3361ca8a26b85949f9eaafff657d61cf4bc7aed70dff71e4c"
+    sha256 catalina:      "24d53591f952dfdee8d31fd57a468a008fc512cdb3e823ea8b89da01e8c77c17"
+    sha256 mojave:        "47f7f1c5c2a3215dfbb127cb96b831e73f22a34a708418b5ebe2575d239f4032"
+  end
+
+  depends_on "cmake" => :build
+  depends_on "ninja" => :build
+  depends_on "cfitsio"
+  depends_on "davix"
+  depends_on "fftw"
+  depends_on "gcc" # for gfortran
+  depends_on "gl2ps"
+  depends_on "graphviz"
+  depends_on "gsl"
+  depends_on "lz4"
+  depends_on "numpy" # for tmva
+  depends_on "openssl@1.1"
+  depends_on "pcre"
+  depends_on "python@3.9"
+  depends_on "tbb"
+  depends_on "xrootd"
+  depends_on "xz" # for LZMA
+  depends_on "zstd"
+
+  uses_from_macos "libxml2"
+
+  conflicts_with "glew", because: "root ships its own copy of glew"
+
+  skip_clean "bin"
+
+  # Can be removed post 6.22.08
+  patch do
+    url "https://github.com/root-project/root/commit/d113c9fcf7e1d88c573717c676aa4b97f1db2ea2.patch?full_index=1"
+    sha256 "6d0fd5ccd92fbb27a949ea40ed4fd60a5e112a418d124ca99f05f70c9df31cda"
+  end
+
+  def install
+    # Work around "error: no member named 'signbit' in the global namespace"
+    ENV.delete("SDKROOT") if DevelopmentTools.clang_build_version >= 900
+
+    # Freetype/afterimage/gl2ps/lz4 are vendored in the tarball, so are fine.
+    # However, this is still permitting the build process to make remote
+    # connections. As a hack, since upstream support it, we inreplace
+    # this file to "encourage" the connection over HTTPS rather than HTTP.
+    inreplace "cmake/modules/SearchInstalledSoftware.cmake",
+              "http://lcgpackages",
+              "https://lcgpackages"
+
+    args = std_cmake_args + %W[
+      -DCLING_CXX_PATH=clang++
+      -DCMAKE_INSTALL_ELISPDIR=#{elisp}
+      -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+      -Dbuiltin_cfitsio=OFF
+      -Dbuiltin_freetype=ON
+      -Dbuiltin_glew=ON
+      -Ddavix=ON
+      -Dfftw3=ON
+      -Dfitsio=ON
+      -Dfortran=ON
+      -Dgdml=ON
+      -Dgnuinstall=ON
+      -Dimt=ON
+      -Dmathmore=ON
+      -Dminuit2=ON
+      -Dmysql=OFF
+      -Dpgsql=OFF
+      -Dpyroot=ON
+      -Droofit=ON
+      -Dssl=ON
+      -Dtmva=ON
+      -Dxrootd=ON
+      -GNinja
+    ]
+
+    cxx_version = (MacOS.version < :mojave) ? 14 : 17
+    args << "-DCMAKE_CXX_STANDARD=#{cxx_version}"
+
+    # Homebrew now sets CMAKE_INSTALL_LIBDIR to /lib, which is incorrect
+    # for ROOT with gnuinstall, so we set it back here.
+    args << "-DCMAKE_INSTALL_LIBDIR=lib/root"
+
+    # Workaround the shim directory being embedded into the output
+    inreplace "build/unix/compiledata.sh", "`type -path $CXX`", ENV.cxx
+
+    mkdir "builddir" do
+      system "cmake", "..", *args
+
+      system "ninja", "install"
+
+      chmod 0755, Dir[bin/"*.*sh"]
+
+      version = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+      pth_contents = "import site; site.addsitedir('#{lib}/root')\n"
+      (prefix/"lib/python#{version}/site-packages/homebrew-root.pth").write pth_contents
+    end
+  end
+
+  def caveats
+    <<~EOS
+      As of ROOT 6.22, you should not need the thisroot scripts; but if you
+      depend on the custom variables set by them, you can still run them:
+
+      For bash users:
+        . #{HOMEBREW_PREFIX}/bin/thisroot.sh
+      For zsh users:
+        pushd #{HOMEBREW_PREFIX} >/dev/null; . bin/thisroot.sh; popd >/dev/null
+      For csh/tcsh users:
+        source #{HOMEBREW_PREFIX}/bin/thisroot.csh
+      For fish users:
+        . #{HOMEBREW_PREFIX}/bin/thisroot.fish
+    EOS
+  end
+
+  test do
+    (testpath/"test.C").write <<~EOS
+      #include <iostream>
+      void test() {
+        std::cout << "Hello, world!" << std::endl;
+      }
+    EOS
+
+    # Test ROOT command line mode
+    system "#{bin}/root", "-b", "-l", "-q", "-e", "gSystem->LoadAllLibraries(); 0"
+
+    # Test ROOT executable
+    assert_equal "\nProcessing test.C...\nHello, world!\n",
+                 shell_output("root -l -b -n -q test.C")
+
+    # Test linking
+    (testpath/"test.cpp").write <<~EOS
+      #include <iostream>
+      #include <TString.h>
+      int main() {
+        std::cout << TString("Hello, world!") << std::endl;
+        return 0;
+      }
+    EOS
+    (testpath/"test_compile.bash").write <<~EOS
+      $(root-config --cxx) $(root-config --cflags) $(root-config --libs) $(root-config --ldflags) test.cpp
+      ./a.out
+    EOS
+    assert_equal "Hello, world!\n",
+                 shell_output("/bin/bash test_compile.bash")
+
+    # Test Python module
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import ROOT; ROOT.gSystem.LoadAllLibraries()"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bison" as i4, "cairo" as i5, "cfitsio" as i6, "cmake" as i7, "cython" as i8, "davix" as i9, "doxygen" as i10, "fftw" as i11, "fontconfig" as i12, "freetype" as i13, "fribidi" as i14, "gcc" as i15, "gd" as i16, "gdbm" as i17, "gdk-pixbuf" as i18, "gettext" as i19, "gl2ps" as i20, "glib" as i21, "gmp" as i22, "gobject-introspection" as i23, "graphite2" as i24, "graphviz" as i25, "gsl" as i26, "gts" as i27, "harfbuzz" as i28, "hwloc" as i29, "icu4c" as i30, "isl" as i31, "jasper" as i32, "jpeg" as i33, "libevent" as i34, "libffi" as i35, "libmpc" as i36, "libpng" as i37, "libpthread-stubs" as i38, "librsvg" as i39, "libssh2" as i40, "libtiff" as i41, "libtool" as i42, "libx11" as i43, "libxau" as i44, "libxcb" as i45, "libxdmcp" as i46, "libxext" as i47, "libxrender" as i48, "lz4" as i49, "lzo" as i50, "m4" as i51, "meson" as i52, "mpdecimal" as i53, "mpfr" as i54, "netpbm" as i55, "ninja" as i56, "numpy" as i57, "open-mpi" as i58, "openblas" as i59, "openjdk" as i60, "openssl@1.1" as i61, "pango" as i62, "pcre" as i63, "pixman" as i64, "pkg-config" as i65, "python@3.9" as i66, "readline" as i67, "rust" as i68, "scons" as i69, "sphinx-doc" as i70, "sqlite" as i71, "subversion" as i72, "swig" as i73, "tbb" as i74, "utf8proc" as i75, "util-macros" as i76, "webp" as i77, "xcb-proto" as i78, "xorgproto" as i79, "xrootd" as i80, "xtrans" as i81, "xz" as i82, "zstd" as i83
+
+pkg(
+  name: "root",
+  version: "6.22.08",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "root.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./root.rb")
+  }
+)

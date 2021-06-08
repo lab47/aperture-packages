@@ -1,0 +1,96 @@
+formula = r"""
+class Simgrid < Formula
+  include Language::Python::Shebang
+
+  desc "Studies behavior of large-scale distributed systems"
+  homepage "https://simgrid.org/"
+  url "https://framagit.org/simgrid/simgrid/uploads/b95690ca814bc12e905115e51e45112d/simgrid-3.27.tar.gz"
+  sha256 "51aeb9de0434066e5fec40e785f5ea9fa934afe7f6bfb4aa627246e765f1d6d7"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?simgrid[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
+  bottle do
+    sha256 arm64_big_sur: "dbab289fbc454217f97b144d32d441b78fd349da13defaaf504d7f54c663f510"
+    sha256 big_sur:       "49e55f07772e9f9658a37ea9b6a81165b0b21848c9fde408a7ffaec0c1d99a1c"
+    sha256 catalina:      "42ffd1847e81c70671ca4d27e9068366231b3205b329a02d5f1e0a517bcf945d"
+    sha256 mojave:        "d94db131d78f63ff9494f528ca5ae2dff0ad0c9fbc080378080e826dfe368da5"
+  end
+
+  depends_on "cmake" => :build
+  depends_on "doxygen" => :build
+  depends_on "boost"
+  depends_on "graphviz"
+  depends_on "pcre"
+  depends_on "python@3.9"
+
+  def install
+    # Avoid superenv shim references
+    inreplace "src/smpi/smpicc.in", "@CMAKE_C_COMPILER@", "/usr/bin/clang"
+    inreplace "src/smpi/smpicxx.in", "@CMAKE_CXX_COMPILER@", "/usr/bin/clang++"
+
+    # FindPythonInterp is broken in CMake 3.19+
+    # REMOVE ME AT VERSION BUMP (after 3.25)
+    # https://framagit.org/simgrid/simgrid/-/issues/59
+    # https://framagit.org/simgrid/simgrid/-/commit/3a987e0a881dc1a0bb5a6203814f7960a5f4b07e
+    inreplace "CMakeLists.txt", "include(FindPythonInterp)", ""
+    python = Formula["python@3.9"]
+    python_version = python.version
+    # We removed CMake's ability to find Python, so we have to point to it ourselves
+    args = %W[
+      -DPYTHONINTERP_FOUND=TRUE
+      -DPYTHON_EXECUTABLE=#{python.opt_bin}/python3
+      -DPYTHON_VERSION_STRING=#{python_version}
+      -DPYTHON_VERSION_MAJOR=#{python_version.major}
+      -DPYTHON_VERSION_MINOR=#{python_version.minor}
+      -DPYTHON_VERSION_PATCH=#{python_version.patch}
+    ]
+    # End of local workaround, remove the above at version bump
+
+    system "cmake", ".",
+                    "-Denable_debug=on",
+                    "-Denable_compile_optimizations=off",
+                    "-Denable_fortran=off",
+                    *std_cmake_args,
+                    *args # Part of workaround, remove at version bump
+    system "make", "install"
+
+    bin.find { |f| rewrite_shebang detected_python_shebang, f }
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      #include <stdlib.h>
+      #include <simgrid/engine.h>
+
+      int main(int argc, char* argv[]) {
+        printf("%f", simgrid_get_clock());
+        return 0;
+      }
+    EOS
+
+    system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lsimgrid",
+                   "-o", "test"
+    system "./test"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bison" as i4, "boost" as i5, "cairo" as i6, "cmake" as i7, "doxygen" as i8, "fontconfig" as i9, "freetype" as i10, "fribidi" as i11, "gd" as i12, "gdbm" as i13, "gdk-pixbuf" as i14, "gettext" as i15, "glib" as i16, "gobject-introspection" as i17, "graphite2" as i18, "graphviz" as i19, "gts" as i20, "harfbuzz" as i21, "icu4c" as i22, "jasper" as i23, "jpeg" as i24, "libffi" as i25, "libpng" as i26, "libpthread-stubs" as i27, "librsvg" as i28, "libssh2" as i29, "libtiff" as i30, "libtool" as i31, "libx11" as i32, "libxau" as i33, "libxcb" as i34, "libxdmcp" as i35, "libxext" as i36, "libxrender" as i37, "lz4" as i38, "lzo" as i39, "m4" as i40, "meson" as i41, "mpdecimal" as i42, "netpbm" as i43, "ninja" as i44, "openjdk" as i45, "openssl@1.1" as i46, "pango" as i47, "pcre" as i48, "pixman" as i49, "pkg-config" as i50, "python@3.9" as i51, "readline" as i52, "rust" as i53, "scons" as i54, "sphinx-doc" as i55, "sqlite" as i56, "subversion" as i57, "swig" as i58, "utf8proc" as i59, "util-macros" as i60, "webp" as i61, "xcb-proto" as i62, "xorgproto" as i63, "xtrans" as i64, "xz" as i65
+
+pkg(
+  name: "simgrid",
+  version: "3.27",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "simgrid.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./simgrid.rb")
+  }
+)

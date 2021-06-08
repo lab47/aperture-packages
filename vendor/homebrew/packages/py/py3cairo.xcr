@@ -1,0 +1,46 @@
+formula = r"""
+class Py3cairo < Formula
+  desc "Python 3 bindings for the Cairo graphics library"
+  homepage "https://cairographics.org/pycairo/"
+  url "https://github.com/pygobject/pycairo/releases/download/v1.20.0/pycairo-1.20.0.tar.gz"
+  sha256 "5695a10cb7f9ae0d01f665b56602a845b0a8cb17e2123bfece10c2e58552468c"
+  license any_of: ["LGPL-2.1-only", "MPL-1.1"]
+  revision 1
+
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "7ae376cf57b7dbe9725a196c440739c6b26d53c73ceedc181914f34a862b976c"
+    sha256 cellar: :any, big_sur:       "049d508d2797fd41cc9a0cf8cf8319bb667716ea378d5f60a98972e0ef2c6f05"
+    sha256 cellar: :any, catalina:      "00bfdfca9a8665250cfc9d4f8c8eb96c0b4fd89676be20ed93b7846878c1b129"
+    sha256 cellar: :any, mojave:        "f36dfa15e2516165595fb12892f8ed3490cb1be28c5e51212746c54de7ac0223"
+    sha256 cellar: :any, high_sierra:   "0b82f9de10293fd7eb028ccb5d61dff9dd6b934376c9badde21a516b8fabcc24"
+  end
+
+  depends_on "pkg-config" => :build
+  depends_on "cairo"
+  depends_on "python@3.9"
+
+  def install
+    system Formula["python@3.9"].bin/"python3", *Language::Python.setup_install_args(prefix)
+  end
+
+  test do
+    system Formula["python@3.9"].bin/"python3", "-c", "import cairo; print(cairo.version)"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "cairo" as i0, "fontconfig" as i1, "freetype" as i2, "gdbm" as i3, "gettext" as i4, "glib" as i5, "libffi" as i6, "libpng" as i7, "libpthread-stubs" as i8, "libx11" as i9, "libxau" as i10, "libxcb" as i11, "libxdmcp" as i12, "libxext" as i13, "libxrender" as i14, "lzo" as i15, "meson" as i16, "mpdecimal" as i17, "ninja" as i18, "openssl@1.1" as i19, "pcre" as i20, "pixman" as i21, "pkg-config" as i22, "python@3.9" as i23, "readline" as i24, "sqlite" as i25, "util-macros" as i26, "xcb-proto" as i27, "xorgproto" as i28, "xtrans" as i29, "xz" as i30
+
+pkg(
+  name: "py3cairo",
+  version: "1.20.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "py3cairo.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./py3cairo.rb")
+  }
+)

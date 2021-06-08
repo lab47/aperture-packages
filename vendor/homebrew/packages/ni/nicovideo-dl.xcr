@@ -1,0 +1,41 @@
+formula = r"""
+class NicovideoDl < Formula
+  include Language::Python::Shebang
+
+  desc "Command-line program to download videos from www.nicovideo.jp"
+  homepage "https://osdn.net/projects/nicovideo-dl/"
+  # Canonical: https://osdn.net/dl/nicovideo-dl/nicovideo-dl-0.0.20190126.tar.gz
+  url "https://dotsrc.dl.osdn.net/osdn/nicovideo-dl/70568/nicovideo-dl-0.0.20190126.tar.gz"
+  sha256 "886980d154953bc5ff5d44758f352ce34d814566a83ceb0b412b8d2d51f52197"
+  revision 2
+
+  bottle :unneeded
+
+  depends_on "python@3.9"
+
+  def install
+    rewrite_shebang detected_python_shebang, "nicovideo-dl"
+    bin.install "nicovideo-dl"
+  end
+
+  test do
+    system "#{bin}/nicovideo-dl", "-v"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.9" as i4, "readline" as i5, "sqlite" as i6, "xz" as i7
+
+pkg(
+  name: "nicovideo-dl",
+  version: "0.0.20190126",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "nicovideo-dl.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./nicovideo-dl.rb")
+  }
+)

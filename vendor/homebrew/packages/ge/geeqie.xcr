@@ -1,0 +1,70 @@
+formula = r"""
+class Geeqie < Formula
+  desc "Lightweight Gtk+ based image viewer"
+  homepage "http://www.geeqie.org/"
+  url "http://www.geeqie.org/geeqie-1.6.tar.xz"
+  sha256 "48f8a4474454d182353100e43878754b76227f3b8f30cfc258afc9d90a4e1920"
+  license "GPL-2.0"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?geeqie[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
+  bottle do
+    sha256 big_sur:  "2aa83988145308caaa7bdd49b0fabfff7e2b7805c988f4cb5a782696355d53e7"
+    sha256 catalina: "6cd0177bb8e510ce20c440f21491e390e0f4339cb0461bc24fa2e0cadda17a99"
+    sha256 mojave:   "de5e6de4c8b6098193cff623e96f0fbbd9204705bff0accfc1c354cfd8cc95e5"
+  end
+
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "intltool" => :build
+  depends_on "pkg-config" => :build
+  depends_on "adwaita-icon-theme"
+  depends_on "atk"
+  depends_on "cairo"
+  depends_on "exiv2"
+  depends_on "gdk-pixbuf"
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "gtk+3"
+  depends_on "imagemagick"
+  depends_on "jpeg"
+  depends_on "libtiff"
+  depends_on "libx11"
+  depends_on "little-cms2"
+  depends_on "pango"
+
+  def install
+    ENV["NOCONFIGURE"] = "yes"
+    system "./autogen.sh" # Seems to struggle to find GTK headers without this
+    system "./configure", "--disable-dependency-tracking",
+                          "--prefix=#{prefix}",
+                          "--disable-glibtest",
+                          "--disable-gtktest",
+                          "--enable-gtk3"
+    system "make", "install"
+  end
+
+  test do
+    system "#{bin}/geeqie", "--version"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "autoconf" as i0, "automake" as i1, "intltool" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "atk" as i5, "cairo" as i6, "exiv2" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gtk+3" as i11, "imagemagick" as i12, "jpeg" as i13, "libtiff" as i14, "libx11" as i15, "little-cms2" as i16, "pango" as i17
+
+pkg(
+  name: "geeqie",
+  version: "1.6",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "geeqie.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./geeqie.rb")
+  }
+)

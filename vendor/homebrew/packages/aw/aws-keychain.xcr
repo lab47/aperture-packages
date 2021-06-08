@@ -1,0 +1,37 @@
+formula = r"""
+class AwsKeychain < Formula
+  desc "Uses macOS keychain for storage of AWS credentials"
+  homepage "https://github.com/pda/aws-keychain"
+  url "https://github.com/pda/aws-keychain/archive/v3.0.0.tar.gz"
+  sha256 "3c9882d3b516b629303ca9a045fc50f6eb75fda25cd2452f10c47eda205e051f"
+  license "MIT"
+
+  bottle :unneeded
+
+  depends_on :macos
+
+  def install
+    bin.install "aws-keychain"
+  end
+
+  test do
+    # It is not possible to create a new keychain without triggering a prompt.
+    assert_match "Store multiple AWS IAM access keys",
+      shell_output("#{bin}/aws-keychain --help", 1)
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "aws-keychain",
+  version: "3.0.0",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "aws-keychain.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./aws-keychain.rb")
+  }
+)

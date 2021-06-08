@@ -1,0 +1,86 @@
+formula = r"""
+class Mpv < Formula
+  desc "Media player based on MPlayer and mplayer2"
+  homepage "https://mpv.io"
+  url "https://github.com/mpv-player/mpv/archive/v0.33.1.tar.gz"
+  sha256 "100a116b9f23bdcda3a596e9f26be3a69f166a4f1d00910d1789b6571c46f3a9"
+  license :cannot_represent
+  head "https://github.com/mpv-player/mpv.git"
+
+  bottle do
+    sha256 arm64_big_sur: "dd487a80e5586c93ccde6942170d026e9eba5b403d95e409ad55282cea818790"
+    sha256 big_sur:       "76b0fc9d207aee16f65b8b1782bc35dec5a870952ebba6ae7a74e6ede9bdd34a"
+    sha256 catalina:      "8ab98fffc330dea03f2732fa17c7f53753601c49c3f9dec2a7d727bdc901c484"
+    sha256 mojave:        "87df95e8f4f723a5b6fe163d5ac740fef9f5ffa9c318c82c9a6b0844aa7203b9"
+  end
+
+  depends_on "docutils" => :build
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on xcode: :build
+
+  depends_on "ffmpeg"
+  depends_on "jpeg"
+  depends_on "libarchive"
+  depends_on "libass"
+  depends_on "little-cms2"
+  depends_on "luajit-openresty"
+  depends_on "mujs"
+  depends_on "uchardet"
+  depends_on "vapoursynth"
+  depends_on "youtube-dl"
+
+  def install
+    # LANG is unset by default on macOS and causes issues when calling getlocale
+    # or getdefaultlocale in docutils. Force the default c/posix locale since
+    # that's good enough for building the manpage.
+    ENV["LC_ALL"] = "C"
+
+    # libarchive is keg-only
+    ENV.prepend_path "PKG_CONFIG_PATH", Formula["libarchive"].opt_lib/"pkgconfig"
+    # luajit-openresty is keg-only
+    ENV.prepend_path "PKG_CONFIG_PATH", Formula["luajit-openresty"].opt_lib/"pkgconfig"
+
+    args = %W[
+      --prefix=#{prefix}
+      --enable-html-build
+      --enable-javascript
+      --enable-libmpv-shared
+      --enable-lua
+      --enable-libarchive
+      --enable-uchardet
+      --confdir=#{etc}/mpv
+      --datadir=#{pkgshare}
+      --mandir=#{man}
+      --docdir=#{doc}
+      --zshdir=#{zsh_completion}
+      --lua=luajit
+    ]
+
+    system Formula["python@3.9"].opt_bin/"python3", "bootstrap.py"
+    system Formula["python@3.9"].opt_bin/"python3", "waf", "configure", *args
+    system Formula["python@3.9"].opt_bin/"python3", "waf", "install"
+  end
+
+  test do
+    system bin/"mpv", "--ao=null", test_fixtures("test.wav")
+    assert_match "vapoursynth", shell_output(bin/"mpv --vf=help")
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "bison" as i7, "boost" as i8, "c-ares" as i9, "cairo" as i10, "cargo-c" as i11, "cmake" as i12, "cython" as i13, "dav1d" as i14, "docbook" as i15, "docbook-xsl" as i16, "docutils" as i17, "doxygen" as i18, "ffmpeg" as i19, "flac" as i20, "fontconfig" as i21, "freetype" as i22, "frei0r" as i23, "fribidi" as i24, "gdbm" as i25, "gettext" as i26, "giflib" as i27, "glib" as i28, "gmp" as i29, "gnu-getopt" as i30, "gnu-sed" as i31, "gnutls" as i32, "gobject-introspection" as i33, "graphite2" as i34, "guile" as i35, "harfbuzz" as i36, "icu4c" as i37, "jemalloc" as i38, "jpeg" as i39, "lame" as i40, "leptonica" as i41, "libarchive" as i42, "libass" as i43, "libatomic_ops" as i44, "libb2" as i45, "libbluray" as i46, "libev" as i47, "libevent" as i48, "libffi" as i49, "libgit2" as i50, "libidn2" as i51, "libogg" as i52, "libpng" as i53, "libpthread-stubs" as i54, "libsamplerate" as i55, "libsndfile" as i56, "libsodium" as i57, "libsoxr" as i58, "libssh2" as i59, "libtasn1" as i60, "libtiff" as i61, "libtool" as i62, "libunistring" as i63, "libvidstab" as i64, "libvorbis" as i65, "libvpx" as i66, "libx11" as i67, "libxau" as i68, "libxcb" as i69, "libxdmcp" as i70, "libxext" as i71, "libxrender" as i72, "little-cms2" as i73, "luajit-openresty" as i74, "lz4" as i75, "lzo" as i76, "m4" as i77, "meson" as i78, "mpdecimal" as i79, "mujs" as i80, "nasm" as i81, "nettle" as i82, "nghttp2" as i83, "ninja" as i84, "opencore-amr" as i85, "openjpeg" as i86, "openssl@1.1" as i87, "opus" as i88, "p11-kit" as i89, "pcre" as i90, "pixman" as i91, "pkg-config" as i92, "python@3.9" as i93, "rav1e" as i94, "readline" as i95, "rubberband" as i96, "rust" as i97, "sdl2" as i98, "snappy" as i99, "source-highlight" as i100, "speex" as i101, "sphinx-doc" as i102, "sqlite" as i103, "srt" as i104, "tesseract" as i105, "theora" as i106, "uchardet" as i107, "unbound" as i108, "util-macros" as i109, "vapoursynth" as i110, "webp" as i111, "x264" as i112, "x265" as i113, "xcb-proto" as i114, "xmlto" as i115, "xorgproto" as i116, "xtrans" as i117, "xvid" as i118, "xz" as i119, "yasm" as i120, "youtube-dl" as i121, "zeromq" as i122, "zimg" as i123, "zstd" as i124
+
+pkg(
+  name: "mpv",
+  version: "0.33.1",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "mpv.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./mpv.rb")
+  }
+)

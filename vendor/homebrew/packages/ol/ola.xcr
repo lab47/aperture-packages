@@ -1,0 +1,75 @@
+formula = r"""
+class Ola < Formula
+  desc "Open Lighting Architecture for lighting control information"
+  homepage "https://www.openlighting.org/ola/"
+  url "https://github.com/OpenLightingProject/ola/releases/download/0.10.8/ola-0.10.8.tar.gz"
+  sha256 "102aa3114562a2a71dbf7f77d2a0fb9fc47acc35d6248a70b6e831365ca71b13"
+  license "GPL-2.0"
+  revision 2
+  head "https://github.com/OpenLightingProject/ola.git"
+
+  bottle do
+    sha256 big_sur:  "6c53064698383dd904dab9489cd0a5fe7f0c623f9f469f3580913bf6c16ed463"
+    sha256 catalina: "152adf6422b17ae113df546083721c71a87553116505317bb6e85a6a12b4f441"
+    sha256 mojave:   "421497863cb85eb279283b991e14cb8460f5a4e0dde04642476e3c35d968eb6d"
+  end
+
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
+  depends_on "liblo"
+  depends_on "libmicrohttpd"
+  depends_on "libusb"
+  depends_on "numpy"
+  depends_on "protobuf"
+  depends_on "python@3.9"
+
+  # remove in version 0.10.9
+  patch do
+    url "https://raw.githubusercontent.com/Homebrew/formula-patches/add0354bf13253a4cc89e151438a630314df0efa/ola/protobuf3.diff"
+    sha256 "e06ffef1610c3b09807212d113138dae8bdc7fc8400843c25c396fa486594ebf"
+  end
+
+  def install
+    xy = Language::Python.major_minor_version Formula["python@3.9"].bin/"python3"
+    protobuf_pth = Formula["protobuf@3.6"].opt_lib/"python#{xy}/site-packages/homebrew-protobuf.pth"
+    (buildpath/".brew_home/Library/Python/#{xy}/lib/python/site-packages").install_symlink protobuf_pth
+
+    args = %W[
+      --disable-fatal-warnings
+      --disable-dependency-tracking
+      --disable-silent-rules
+      --prefix=#{prefix}
+      --disable-unittests
+      --enable-python-libs
+      --enable-rdm-tests
+    ]
+
+    ENV["PYTHON"] = Formula["python@3.9"].bin/"python3"
+    system "autoreconf", "-fvi"
+    system "./configure", *args
+    system "make", "install"
+  end
+
+  test do
+    system bin/"ola_plugin_info"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "cython" as i5, "gcc" as i6, "gdbm" as i7, "gettext" as i8, "gmp" as i9, "gnu-sed" as i10, "gnutls" as i11, "guile" as i12, "isl" as i13, "jemalloc" as i14, "libatomic_ops" as i15, "libev" as i16, "libevent" as i17, "libffi" as i18, "libidn2" as i19, "liblo" as i20, "libmicrohttpd" as i21, "libmpc" as i22, "libtasn1" as i23, "libtool" as i24, "libunistring" as i25, "libusb" as i26, "m4" as i27, "mpdecimal" as i28, "mpfr" as i29, "nettle" as i30, "nghttp2" as i31, "ninja" as i32, "numpy" as i33, "openblas" as i34, "openssl@1.1" as i35, "p11-kit" as i36, "pkg-config" as i37, "protobuf" as i38, "python@3.7" as i39, "python@3.8" as i40, "python@3.9" as i41, "readline" as i42, "six" as i43, "sphinx-doc" as i44, "sqlite" as i45, "tcl-tk" as i46, "unbound" as i47, "xz" as i48, "zstd" as i49
+
+pkg(
+  name: "ola",
+  version: "0.10.8",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "ola.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./ola.rb")
+  }
+)

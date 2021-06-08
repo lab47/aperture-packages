@@ -1,0 +1,37 @@
+formula = r"""
+class Brag < Formula
+  desc "Download and assemble multipart binaries from newsgroups"
+  homepage "https://brag.sourceforge.io/"
+  url "https://downloads.sourceforge.net/project/brag/brag/1.4.3/brag-1.4.3.tar.gz"
+  sha256 "f2c8110c38805c31ad181f4737c26e766dc8ecfa2bce158197b985be892cece6"
+
+  bottle :unneeded
+
+  depends_on "uudeview"
+
+  def install
+    bin.install "brag"
+    man1.install "brag.1"
+  end
+
+  test do
+    system "#{bin}/brag", "-s", "nntp.perl.org", "-L"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "uudeview" as i0
+
+pkg(
+  name: "brag",
+  version: "1.4.3",
+  dependencies: [hi, i0],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "brag.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./brag.rb")
+  }
+)

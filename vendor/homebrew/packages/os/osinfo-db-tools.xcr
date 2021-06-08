@@ -1,0 +1,70 @@
+formula = r"""
+class OsinfoDbTools < Formula
+  desc "Tools for managing the libosinfo database files"
+  homepage "https://libosinfo.org/"
+  url "https://releases.pagure.org/libosinfo/osinfo-db-tools-1.9.0.tar.xz"
+  sha256 "255f1c878bacec70c3020ff5a9cb0f6bd861ca0009f24608df5ef6f62d5243c0"
+  license "GPL-2.0-or-later"
+
+  livecheck do
+    url "https://releases.pagure.org/libosinfo/?C=M&O=D"
+    regex(/href=.*?osinfo-db-tools[._-]v?(\d+(?:\.\d+)+)\.t/i)
+  end
+
+  bottle do
+    sha256 arm64_big_sur: "800f45e86f13d9b276e419c7df616033ede3dd8f4a3956c698fe0f09be436035"
+    sha256 big_sur:       "460a75b81da6d76332f29596cecc9bcf543262e8d5848c7fb1bf627b5c5645ad"
+    sha256 catalina:      "8a572a5e4559404c4ee8b293d934286a155debc374c6e9acbb19decf480e7d5e"
+    sha256 mojave:        "784931937986f8132ca5f742ce7d966fe08eb11742d1bbf48d5253ecbcff3bfb"
+  end
+
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "json-glib"
+  depends_on "libarchive"
+  depends_on "libsoup"
+  depends_on "python@3.9"
+
+  uses_from_macos "pod2man" => :build
+  uses_from_macos "libxml2"
+
+  def install
+    mkdir "build" do
+      system "meson", *std_meson_args, ".."
+      system "ninja", "install", "-v"
+    end
+  end
+
+  def post_install
+    share.install_symlink HOMEBREW_PREFIX/"share/osinfo"
+  end
+
+  test do
+    assert_equal "#{share}/osinfo", shell_output("#{bin}/osinfo-db-path --system").strip
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "bison" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "fontconfig" as i9, "freetype" as i10, "fribidi" as i11, "gd" as i12, "gdbm" as i13, "gdk-pixbuf" as i14, "gettext" as i15, "glib" as i16, "glib-networking" as i17, "gmp" as i18, "gnu-sed" as i19, "gnutls" as i20, "gobject-introspection" as i21, "graphite2" as i22, "graphviz" as i23, "gsettings-desktop-schemas" as i24, "gts" as i25, "guile" as i26, "harfbuzz" as i27, "icu4c" as i28, "jasper" as i29, "jemalloc" as i30, "jpeg" as i31, "json-glib" as i32, "libarchive" as i33, "libatomic_ops" as i34, "libb2" as i35, "libev" as i36, "libevent" as i37, "libffi" as i38, "libidn2" as i39, "libpng" as i40, "libpsl" as i41, "libpthread-stubs" as i42, "librsvg" as i43, "libsoup" as i44, "libssh2" as i45, "libtasn1" as i46, "libtiff" as i47, "libtool" as i48, "libunistring" as i49, "libx11" as i50, "libxau" as i51, "libxcb" as i52, "libxdmcp" as i53, "libxext" as i54, "libxrender" as i55, "lz4" as i56, "lzo" as i57, "m4" as i58, "meson" as i59, "mpdecimal" as i60, "netpbm" as i61, "nettle" as i62, "nghttp2" as i63, "ninja" as i64, "openjdk" as i65, "openssl@1.1" as i66, "p11-kit" as i67, "pango" as i68, "pcre" as i69, "pixman" as i70, "pkg-config" as i71, "python@3.9" as i72, "readline" as i73, "rust" as i74, "scons" as i75, "sphinx-doc" as i76, "sqlite" as i77, "subversion" as i78, "swig" as i79, "unbound" as i80, "utf8proc" as i81, "util-macros" as i82, "vala" as i83, "webp" as i84, "xcb-proto" as i85, "xorgproto" as i86, "xtrans" as i87, "xz" as i88, "zstd" as i89
+
+pkg(
+  name: "osinfo-db-tools",
+  version: "1.9.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "osinfo-db-tools.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./osinfo-db-tools.rb")
+  }
+
+  def post_install(ctx) {
+    ctx.write_file(join(ctx.build, "osinfo-db-tools.rb"), formula)
+    ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./osinfo-db-tools.rb")
+  }
+)

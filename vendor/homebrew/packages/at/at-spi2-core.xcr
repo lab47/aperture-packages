@@ -1,0 +1,88 @@
+formula = r"""
+class AtSpi2Core < Formula
+  desc "Protocol definitions and daemon for D-Bus at-spi"
+  homepage "https://www.freedesktop.org/wiki/Accessibility/AT-SPI2"
+  url "https://download.gnome.org/sources/at-spi2-core/2.36/at-spi2-core-2.36.1.tar.xz"
+  sha256 "97417b909dbbf000e7b21062a13b2f1fd52a336f5a53925bb26d27b65ace6c54"
+  license "LGPL-2.1-or-later"
+  revision 3
+
+  depends_on "gobject-introspection" => :build
+  depends_on "intltool" => :build
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on "dbus"
+  depends_on "gettext"
+  depends_on "glib"
+  depends_on "libx11"
+  depends_on "libxtst"
+  depends_on :linux
+  depends_on "xorgproto"
+
+  def install
+    ENV.refurbish_args
+
+    mkdir "build" do
+      system "meson", "--prefix=#{prefix}", "--libdir=#{lib}", ".."
+      system "ninja"
+      system "ninja", "install"
+    end
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      /*
+       * List the applications registered on at-spi.
+       */
+
+      #include <atspi/atspi.h>
+      #include <stdlib.h>
+      #include <unistd.h>
+      #include <string.h>
+
+
+      int main(int argc, gchar **argv)
+      {
+        gint i;
+        AtspiAccessible *desktop = NULL;
+        AtspiAccessible *app = NULL;
+
+        atspi_init ();
+
+        desktop = atspi_get_desktop (0);
+        for (i = 0; i < atspi_accessible_get_child_count (desktop, NULL); i++) {
+          app = atspi_accessible_get_child_at_index (desktop, i, NULL);
+
+          g_print ("(Index, application, application_child_count)=(%d,%s,%d)\\n",
+                   i, atspi_accessible_get_name (app, NULL), atspi_accessible_get_child_count (app, NULL));
+          g_object_unref (app);
+        }
+
+        return 1;
+      }
+    EOS
+
+    pkg_config_cflags = shell_output("pkg-config --cflags --libs atspi-2").chomp.split
+    system ENV.cc, "test.c", *pkg_config_cflags, "-lgobject-2.0", "-o", "test"
+    assert_match "AT-SPI", shell_output("#{testpath}/test 2>&1", 133)
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "asciidoctor" as i0, "bison" as i1, "cairo" as i2, "dbus" as i3, "docbook" as i4, "docbook-xsl" as i5, "fontconfig" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gnu-getopt" as i11, "gobject-introspection" as i12, "intltool" as i13, "libffi" as i14, "libpng" as i15, "libpthread-stubs" as i16, "libx11" as i17, "libxau" as i18, "libxcb" as i19, "libxdmcp" as i20, "libxext" as i21, "libxfixes" as i22, "libxi" as i23, "libxrender" as i24, "libxtst" as i25, "lzo" as i26, "meson" as i27, "mpdecimal" as i28, "ninja" as i29, "openssl@1.1" as i30, "pcre" as i31, "pixman" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "sqlite" as i36, "util-macros" as i37, "xcb-proto" as i38, "xmlto" as i39, "xorgproto" as i40, "xtrans" as i41, "xz" as i42
+
+pkg(
+  name: "at-spi2-core",
+  version: "2.36.1",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "at-spi2-core.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./at-spi2-core.rb")
+  }
+)

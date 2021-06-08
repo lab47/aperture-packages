@@ -1,0 +1,64 @@
+formula = r"""
+class Pyqt3d < Formula
+  desc "Python bindings for The Qt Company’s Qt 3D framework"
+  homepage "https://www.riverbankcomputing.com/software/pyqt3d/"
+  url "https://files.pythonhosted.org/packages/f7/06/6a2d193f36d2f115fcfaac6375f05737270bc8c133cd259a7a3431c38152/PyQt6_3D-6.1.0.tar.gz"
+  sha256 "8f04ffa5d8ba983434b0b12a63d06e8efab671a0b2002cee761bbd0ef443513c"
+  license "GPL-3.0-only"
+
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "1ebc992cfbe773992ac78168d35a613188f2ef568e692d73a64b92f4fe783966"
+    sha256 cellar: :any, big_sur:       "dbedfd03a8d1726ef7cd83d4e99134c5b4557b83f49da2fb6079c8375a2b636c"
+    sha256 cellar: :any, catalina:      "b20343bc989fa856da1d932f69d81b4d20b3260340b43d6bc7a8ef6d7b6be44d"
+    sha256 cellar: :any, mojave:        "5d341e8e1b620672694be46288700363c543324cbc93d1f7fa4cc13b66d17874"
+  end
+
+  keg_only "pyqt now contains all submodules"
+  disable! date: "2021-06-16", because: "pyqt now contains all submodules"
+
+  depends_on "pyqt-builder" => :build
+  depends_on "sip" => :build
+
+  depends_on "pyqt"
+  depends_on "python@3.9"
+  depends_on "qt"
+
+  def install
+    pyqt = Formula["pyqt"]
+    site_packages = Language::Python.site_packages("python3")
+
+    inreplace "pyproject.toml", "[tool.sip.project]",
+      "[tool.sip.project]\nsip-include-dirs = [\"#{pyqt.prefix/site_packages}/PyQt#{version.major}/bindings\"]\n"
+    system "sip-install", "--target-dir", prefix/site_packages
+  end
+
+  test do
+    pyqt = Formula["pyqt"]
+    python = Formula["python@3.9"]
+    %w[
+      Animation
+      Core
+      Extras
+      Input
+      Logic
+      Render
+    ].each { |mod| system python.bin/"python3", "-c", "import PyQt#{pyqt.version.major}.Qt3D#{mod}" }
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "asciidoctor" as i0, "assimp" as i1, "brotli" as i2, "cmake" as i3, "dbus" as i4, "docbook" as i5, "docbook-xsl" as i6, "double-conversion" as i7, "freetype" as i8, "gdbm" as i9, "gettext" as i10, "glib" as i11, "gnu-getopt" as i12, "icu4c" as i13, "jasper" as i14, "jpeg" as i15, "libb2" as i16, "libffi" as i17, "libpng" as i18, "libproxy" as i19, "libtiff" as i20, "meson" as i21, "mpdecimal" as i22, "ninja" as i23, "openssl@1.1" as i24, "pcre" as i25, "pcre2" as i26, "pkg-config" as i27, "pyqt" as i28, "pyqt-builder" as i29, "python@3.9" as i30, "qt" as i31, "readline" as i32, "sip" as i33, "sphinx-doc" as i34, "sqlite" as i35, "webp" as i36, "xmlto" as i37, "xz" as i38, "zstd" as i39
+
+pkg(
+  name: "pyqt-3d",
+  version: "6.1.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "pyqt-3d.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./pyqt-3d.rb")
+  }
+)

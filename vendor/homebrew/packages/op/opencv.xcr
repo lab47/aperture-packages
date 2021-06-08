@@ -1,0 +1,149 @@
+formula = r"""
+class Opencv < Formula
+  desc "Open source computer vision library"
+  homepage "https://opencv.org/"
+  url "https://github.com/opencv/opencv/archive/4.5.2.tar.gz"
+  sha256 "ae258ed50aa039279c3d36afdea5c6ecf762515836b27871a8957c610d0424f8"
+  license "Apache-2.0"
+  revision 4
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
+  bottle do
+    sha256 arm64_big_sur: "375216102e8da54922e8b35b171a8a30bc7155a9742ad06f7f8db8d23711fc96"
+    sha256 big_sur:       "7efb86f073ed566a8262ec56e3df18bbe2d2bc71b7ce862500df4a3c1df7d740"
+    sha256 catalina:      "e79665c5b126fa3369b6fa23e30d93d248c19bd575f17ddad91afb4910e43204"
+    sha256 mojave:        "e373ed402a772cf7e02d21c9fdc57f211968e6894438e49d114f1cbac0cf7b5a"
+  end
+
+  depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "ceres-solver"
+  depends_on "eigen"
+  depends_on "ffmpeg"
+  depends_on "glog"
+  depends_on "harfbuzz"
+  depends_on "jpeg"
+  depends_on "libpng"
+  depends_on "libtiff"
+  depends_on "numpy"
+  depends_on "openblas"
+  depends_on "openexr"
+  depends_on "protobuf"
+  depends_on "python@3.9"
+  depends_on "tbb"
+  depends_on "vtk"
+  depends_on "webp"
+
+  resource "contrib" do
+    url "https://github.com/opencv/opencv_contrib/archive/4.5.2.tar.gz"
+    sha256 "9f52fd3114ac464cb4c9a2a6a485c729a223afb57b9c24848484e55cef0b5c2a"
+  end
+
+  def install
+    ENV.cxx11
+
+    resource("contrib").stage buildpath/"opencv_contrib"
+
+    # Avoid Accelerate.framework
+    ENV["OpenBLAS_HOME"] = Formula["openblas"].opt_prefix
+
+    # Reset PYTHONPATH, workaround for https://github.com/Homebrew/homebrew-science/pull/4885
+    ENV.delete("PYTHONPATH")
+
+    args = std_cmake_args + %W[
+      -DCMAKE_OSX_DEPLOYMENT_TARGET=
+      -DBUILD_JASPER=OFF
+      -DBUILD_JPEG=OFF
+      -DBUILD_OPENEXR=OFF
+      -DBUILD_PERF_TESTS=OFF
+      -DBUILD_PNG=OFF
+      -DBUILD_PROTOBUF=OFF
+      -DBUILD_TESTS=OFF
+      -DBUILD_TIFF=OFF
+      -DBUILD_WEBP=OFF
+      -DBUILD_ZLIB=OFF
+      -DBUILD_opencv_hdf=OFF
+      -DBUILD_opencv_java=OFF
+      -DBUILD_opencv_text=ON
+      -DOPENCV_ENABLE_NONFREE=ON
+      -DOPENCV_EXTRA_MODULES_PATH=#{buildpath}/opencv_contrib/modules
+      -DOPENCV_GENERATE_PKGCONFIG=ON
+      -DPROTOBUF_UPDATE_FILES=ON
+      -DWITH_1394=OFF
+      -DWITH_CUDA=OFF
+      -DWITH_EIGEN=ON
+      -DWITH_FFMPEG=ON
+      -DWITH_GPHOTO2=OFF
+      -DWITH_GSTREAMER=OFF
+      -DWITH_JASPER=OFF
+      -DWITH_OPENEXR=ON
+      -DWITH_OPENGL=OFF
+      -DWITH_QT=OFF
+      -DWITH_TBB=ON
+      -DWITH_VTK=ON
+      -DBUILD_opencv_python2=OFF
+      -DBUILD_opencv_python3=ON
+      -DPYTHON3_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+    ]
+
+    if Hardware::CPU.intel?
+      args << "-DENABLE_AVX=OFF" << "-DENABLE_AVX2=OFF"
+      args << "-DENABLE_SSE41=OFF" << "-DENABLE_SSE42=OFF" unless MacOS.version.requires_sse42?
+    end
+
+    mkdir "build" do
+      os = "mac"
+      on_linux do
+        os = "linux"
+      end
+      system "cmake", "..", *args
+      inreplace "modules/core/version_string.inc", "#{HOMEBREW_SHIMS_PATH}/#{os}/super/", ""
+      system "make"
+      system "make", "install"
+      system "make", "clean"
+      system "cmake", "..", "-DBUILD_SHARED_LIBS=OFF", *args
+      inreplace "modules/core/version_string.inc", "#{HOMEBREW_SHIMS_PATH}/#{os}/super/", ""
+      system "make"
+      lib.install Dir["lib/*.a"]
+      lib.install Dir["3rdparty/**/*.a"]
+    end
+  end
+
+  test do
+    (testpath/"test.cpp").write <<~EOS
+      #include <opencv2/opencv.hpp>
+      #include <iostream>
+      int main() {
+        std::cout << CV_VERSION << std::endl;
+        return 0;
+      }
+    EOS
+    system ENV.cxx, "-std=c++11", "test.cpp", "-I#{include}/opencv4",
+                    "-o", "test"
+    assert_equal `./test`.strip, version.to_s
+
+    output = shell_output(Formula["python@3.9"].opt_bin/"python3 -c 'import cv2; print(cv2.__version__)'")
+    assert_equal version.to_s, output.chomp
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "bison" as i7, "boost" as i8, "c-ares" as i9, "cairo" as i10, "cargo-c" as i11, "ceres-solver" as i12, "cmake" as i13, "cython" as i14, "dav1d" as i15, "docbook" as i16, "docbook-xsl" as i17, "double-conversion" as i18, "doxygen" as i19, "eigen" as i20, "ffmpeg" as i21, "flac" as i22, "fontconfig" as i23, "freetype" as i24, "frei0r" as i25, "fribidi" as i26, "gcc" as i27, "gdbm" as i28, "gettext" as i29, "gflags" as i30, "giflib" as i31, "gl2ps" as i32, "glew" as i33, "glib" as i34, "glog" as i35, "gmp" as i36, "gnu-getopt" as i37, "gnu-sed" as i38, "gnutls" as i39, "gobject-introspection" as i40, "graphite2" as i41, "guile" as i42, "harfbuzz" as i43, "hdf5" as i44, "icu4c" as i45, "imath" as i46, "isl" as i47, "jemalloc" as i48, "jpeg" as i49, "jsoncpp" as i50, "lame" as i51, "leptonica" as i52, "libass" as i53, "libatomic_ops" as i54, "libbluray" as i55, "libev" as i56, "libevent" as i57, "libffi" as i58, "libgit2" as i59, "libidn2" as i60, "libmpc" as i61, "libogg" as i62, "libpng" as i63, "libpthread-stubs" as i64, "libsamplerate" as i65, "libsndfile" as i66, "libsodium" as i67, "libsoxr" as i68, "libssh2" as i69, "libtasn1" as i70, "libtiff" as i71, "libtool" as i72, "libunistring" as i73, "libvidstab" as i74, "libvorbis" as i75, "libvpx" as i76, "libx11" as i77, "libxau" as i78, "libxcb" as i79, "libxdmcp" as i80, "libxext" as i81, "libxrender" as i82, "little-cms2" as i83, "lz4" as i84, "lzo" as i85, "m4" as i86, "meson" as i87, "metis" as i88, "mpdecimal" as i89, "mpfr" as i90, "nasm" as i91, "netcdf" as i92, "nettle" as i93, "nghttp2" as i94, "ninja" as i95, "numpy" as i96, "openblas" as i97, "opencore-amr" as i98, "openexr" as i99, "openjpeg" as i100, "openssl@1.1" as i101, "opus" as i102, "p11-kit" as i103, "pcre" as i104, "pixman" as i105, "pkg-config" as i106, "protobuf" as i107, "pugixml" as i108, "pyqt-builder" as i109, "pyqt@5" as i110, "python@3.7" as i111, "python@3.8" as i112, "python@3.9" as i113, "qt@5" as i114, "rav1e" as i115, "readline" as i116, "rubberband" as i117, "rust" as i118, "sdl2" as i119, "sip" as i120, "six" as i121, "snappy" as i122, "source-highlight" as i123, "speex" as i124, "sphinx-doc" as i125, "sqlite" as i126, "srt" as i127, "suite-sparse" as i128, "swig" as i129, "szip" as i130, "tbb" as i131, "tcl-tk" as i132, "tesseract" as i133, "theora" as i134, "unbound" as i135, "utf8cpp" as i136, "util-macros" as i137, "vtk" as i138, "webp" as i139, "x264" as i140, "x265" as i141, "xcb-proto" as i142, "xmlto" as i143, "xorgproto" as i144, "xtrans" as i145, "xvid" as i146, "xz" as i147, "yasm" as i148, "zeromq" as i149, "zimg" as i150, "zstd" as i151
+
+pkg(
+  name: "opencv",
+  version: "4.5.2",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131, i132, i133, i134, i135, i136, i137, i138, i139, i140, i141, i142, i143, i144, i145, i146, i147, i148, i149, i150, i151],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "opencv.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./opencv.rb")
+  }
+)

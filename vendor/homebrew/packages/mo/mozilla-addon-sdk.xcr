@@ -1,0 +1,32 @@
+formula = r"""
+class MozillaAddonSdk < Formula
+  desc "Create Firefox add-ons using JS, HTML, and CSS"
+  homepage "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons"
+  url "https://archive.mozilla.org/pub/mozilla.org/labs/jetpack/addon-sdk-1.17.zip"
+  sha256 "16e29d92214a556c8422db156b541fb8c47addfcb3cd879e0a4ca879d6a31f65"
+  license "MPL-2.0"
+
+  bottle :unneeded
+
+  disable! date: "2021-03-24", because: :unsupported
+
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/cfx"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "mozilla-addon-sdk",
+  version: "1.17",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "mozilla-addon-sdk.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./mozilla-addon-sdk.rb")
+  }
+)

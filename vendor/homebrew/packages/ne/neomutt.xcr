@@ -1,0 +1,68 @@
+formula = r"""
+class Neomutt < Formula
+  desc "E-mail reader with support for Notmuch, NNTP and much more"
+  homepage "https://neomutt.org/"
+  url "https://github.com/neomutt/neomutt/archive/20210205.tar.gz"
+  sha256 "77e177780fc2d8abb475d9cac4342c7e61d53c243f6ce2f9bc86d819fc962cdb"
+  license "GPL-2.0-or-later"
+  revision 1
+  head "https://github.com/neomutt/neomutt.git"
+
+  bottle do
+    sha256 arm64_big_sur: "54f1a6052e8e08f98680c8daad63835220a228db45e9009d67b99c3476f7f19c"
+    sha256 big_sur:       "197b3a28aab58386b0b63b3228f55abf9627556cf442a2f780702f56baa9361c"
+    sha256 catalina:      "42e30c8b2f846f0e99864dad93adf4e7b697b1364263bc71cd60b32f023efaac"
+    sha256 mojave:        "8677ab0e377d6bc4526b8d93d71629f84b52e14b4cdb4620753eef5cac0bc6cd"
+  end
+
+  depends_on "docbook-xsl" => :build
+  depends_on "gettext"
+  depends_on "gpgme"
+  depends_on "libidn"
+  depends_on "lmdb"
+  depends_on "lua"
+  depends_on "notmuch"
+  depends_on "openssl@1.1"
+  depends_on "tokyo-cabinet"
+
+  uses_from_macos "zlib"
+
+  def install
+    ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
+    system "./configure", "--prefix=#{prefix}",
+                          "--enable-gpgme",
+                          "--with-gpgme=#{Formula["gpgme"].opt_prefix}",
+                          "--gss",
+                          "--lmdb",
+                          "--notmuch",
+                          "--sasl",
+                          "--tokyocabinet",
+                          "--with-ssl=#{Formula["openssl@1.1"].opt_prefix}",
+                          "--with-ui=ncurses",
+                          "--lua",
+                          "--with-lua=#{Formula["lua"].prefix}"
+    system "make", "install"
+  end
+
+  test do
+    output = shell_output("#{bin}/neomutt -F /dev/null -Q debug_level")
+    assert_equal "set debug_level = 0", output.chomp
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8
+
+pkg(
+  name: "neomutt",
+  version: "20210205",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "neomutt.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./neomutt.rb")
+  }
+)

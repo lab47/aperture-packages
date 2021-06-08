@@ -1,0 +1,52 @@
+formula = r"""
+class Mkvtomp4 < Formula
+  include Language::Python::Virtualenv
+
+  desc "Convert mkv files to mp4"
+  homepage "https://github.com/gavinbeatty/mkvtomp4/"
+  url "https://files.pythonhosted.org/packages/89/27/7367092f0d5530207e049afc76b167998dca2478a5c004018cf07e8a5653/mkvtomp4-2.0.tar.gz"
+  sha256 "8514aa744963ea682e6a5c4b3cfab14c03346bfc78194c3cdc8b3a6317902f12"
+  license "MIT"
+  revision 2
+  head "https://github.com/gavinbeatty/mkvtomp4.git"
+
+  bottle do
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "76e2587009f31923054390bd434b37f0fbf898088a79832b00a5ea6331066ae6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "7122210c51f74465371eb6a92b3d1dd80a27f68f08335dce119b3aeffb9c00cc"
+    sha256 cellar: :any_skip_relocation, catalina:      "a4c3cdb9f62d23b6f66827f9fa646c377d60f9d0e5b3dad81eb6c5a67d2798ac"
+    sha256 cellar: :any_skip_relocation, mojave:        "d7ba96f07d2a82d2c5e2d5cce1b80836abdebe0a990f238c763c06aec305ad0a"
+  end
+
+  depends_on "ffmpeg"
+  depends_on "gpac"
+  depends_on "mkvtoolnix"
+  depends_on "python@3.9"
+
+  def install
+    virtualenv_install_with_resources
+    bin.install_symlink bin/"mkvtomp4.py" => "mkvtomp4"
+    prefix.install libexec/"share"
+  end
+
+  test do
+    system "#{bin}/mkvtomp4", "--help"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "bison" as i7, "boost" as i8, "c-ares" as i9, "cairo" as i10, "cargo-c" as i11, "cmake" as i12, "dav1d" as i13, "docbook" as i14, "docbook-xsl" as i15, "doxygen" as i16, "ffmpeg" as i17, "flac" as i18, "fmt" as i19, "fontconfig" as i20, "freetype" as i21, "frei0r" as i22, "fribidi" as i23, "gdbm" as i24, "gettext" as i25, "giflib" as i26, "glib" as i27, "gmp" as i28, "gnu-getopt" as i29, "gnu-sed" as i30, "gnutls" as i31, "gobject-introspection" as i32, "gpac" as i33, "graphite2" as i34, "guile" as i35, "harfbuzz" as i36, "icu4c" as i37, "jemalloc" as i38, "jpeg" as i39, "lame" as i40, "leptonica" as i41, "libass" as i42, "libatomic_ops" as i43, "libbluray" as i44, "libebml" as i45, "libev" as i46, "libevent" as i47, "libffi" as i48, "libgit2" as i49, "libidn2" as i50, "libmagic" as i51, "libmatroska" as i52, "libogg" as i53, "libpng" as i54, "libpthread-stubs" as i55, "libsamplerate" as i56, "libsndfile" as i57, "libsodium" as i58, "libsoxr" as i59, "libssh2" as i60, "libtasn1" as i61, "libtiff" as i62, "libtool" as i63, "libunistring" as i64, "libvidstab" as i65, "libvorbis" as i66, "libvpx" as i67, "libx11" as i68, "libxau" as i69, "libxcb" as i70, "libxdmcp" as i71, "libxext" as i72, "libxrender" as i73, "little-cms2" as i74, "lzo" as i75, "m4" as i76, "meson" as i77, "mkvtoolnix" as i78, "mpdecimal" as i79, "nasm" as i80, "nettle" as i81, "nghttp2" as i82, "ninja" as i83, "nlohmann-json" as i84, "opencore-amr" as i85, "openjpeg" as i86, "openssl@1.1" as i87, "opus" as i88, "p11-kit" as i89, "pcre" as i90, "pcre2" as i91, "pixman" as i92, "pkg-config" as i93, "pugixml" as i94, "python@3.9" as i95, "rav1e" as i96, "readline" as i97, "rubberband" as i98, "rust" as i99, "sdl2" as i100, "snappy" as i101, "source-highlight" as i102, "speex" as i103, "sphinx-doc" as i104, "sqlite" as i105, "srt" as i106, "tesseract" as i107, "theora" as i108, "unbound" as i109, "utf8cpp" as i110, "util-macros" as i111, "webp" as i112, "x264" as i113, "x265" as i114, "xcb-proto" as i115, "xmlto" as i116, "xorgproto" as i117, "xtrans" as i118, "xvid" as i119, "xz" as i120, "yasm" as i121, "zeromq" as i122, "zimg" as i123
+
+pkg(
+  name: "mkvtomp4",
+  version: "2.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "mkvtomp4.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./mkvtomp4.rb")
+  }
+)

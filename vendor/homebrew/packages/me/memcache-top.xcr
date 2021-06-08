@@ -1,0 +1,28 @@
+formula = r"""
+class MemcacheTop < Formula
+  desc "Grab real-time stats from memcache"
+  homepage "https://code.google.com/archive/p/memcache-top/"
+  url "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/memcache-top/memcache-top-v0.6"
+  sha256 "d5f896a9e46a92988b782e340416312cc480261ce8a5818db45ccd0da8a0f22a"
+
+  bottle :unneeded
+
+  def install
+    bin.install "memcache-top-v#{version}" => "memcache-top"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "memcache-top",
+  version: "0.6",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "memcache-top.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./memcache-top.rb")
+  }
+)

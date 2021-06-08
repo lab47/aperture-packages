@@ -1,0 +1,97 @@
+formula = r"""
+class Libpeas < Formula
+  desc "GObject plugin library"
+  homepage "https://developer.gnome.org/libpeas/stable/"
+  url "https://download.gnome.org/sources/libpeas/1.30/libpeas-1.30.0.tar.xz"
+  sha256 "0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3"
+  license "LGPL-2.1-or-later"
+
+  bottle do
+    sha256 arm64_big_sur: "826333c759333b483af3466322a0c7f21cb723674f4a71e118ca8ad78ade4a70"
+    sha256 big_sur:       "204fd26d92f3a9585d6823fff5df8a8108a0ed904c80a845e0bfd5173152c934"
+    sha256 catalina:      "cddddc6a29c533bbff776cb2635a4494f3d7024f0c4aeb80e4e378427f790100"
+    sha256 mojave:        "1df3679b835916a8c135edbbfa246e27cfdeac82717250505363f117130f9832"
+  end
+
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+  depends_on "vala" => :build
+  depends_on "glib"
+  depends_on "gobject-introspection"
+  depends_on "gtk+3"
+  depends_on "pygobject3"
+  depends_on "python@3.9"
+
+  def install
+    args = std_meson_args + %w[
+      -Dpython3=true
+      -Dintrospection=true
+      -Dvapi=true
+      -Dwidgetry=true
+      -Ddemos=false
+    ]
+
+    mkdir "build" do
+      system "meson", *args, ".."
+      system "ninja", "-v"
+      system "ninja", "install", "-v"
+    end
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <libpeas/peas.h>
+
+      int main(int argc, char *argv[]) {
+        PeasObjectModule *mod = peas_object_module_new("test", "test", FALSE);
+        return 0;
+      }
+    EOS
+    gettext = Formula["gettext"]
+    glib = Formula["glib"]
+    gobject_introspection = Formula["gobject-introspection"]
+    libffi = Formula["libffi"]
+    flags = %W[
+      -I#{gettext.opt_include}
+      -I#{glib.opt_include}/glib-2.0
+      -I#{glib.opt_lib}/glib-2.0/include
+      -I#{gobject_introspection.opt_include}/gobject-introspection-1.0
+      -I#{include}/libpeas-1.0
+      -I#{libffi.opt_lib}/libffi-3.0.13/include
+      -D_REENTRANT
+      -L#{gettext.opt_lib}
+      -L#{glib.opt_lib}
+      -L#{gobject_introspection.opt_lib}
+      -L#{lib}
+      -lgio-2.0
+      -lgirepository-1.0
+      -lglib-2.0
+      -lgmodule-2.0
+      -lgobject-2.0
+      -lpeas-1.0
+    ]
+    on_macos do
+      flags << "-lintl"
+    end
+    system ENV.cc, "test.c", "-o", "test", *flags
+    system "./test"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "apr" as i0, "apr-util" as i1, "atk" as i2, "autoconf" as i3, "automake" as i4, "bison" as i5, "cairo" as i6, "cmake" as i7, "docbook" as i8, "docbook-xsl" as i9, "fontconfig" as i10, "freetype" as i11, "fribidi" as i12, "gd" as i13, "gdbm" as i14, "gdk-pixbuf" as i15, "gettext" as i16, "glib" as i17, "gobject-introspection" as i18, "graphite2" as i19, "graphviz" as i20, "gsettings-desktop-schemas" as i21, "gtk+3" as i22, "gts" as i23, "harfbuzz" as i24, "hicolor-icon-theme" as i25, "icu4c" as i26, "jasper" as i27, "jpeg" as i28, "libepoxy" as i29, "libffi" as i30, "libpng" as i31, "libpthread-stubs" as i32, "librsvg" as i33, "libssh2" as i34, "libtiff" as i35, "libtool" as i36, "libx11" as i37, "libxau" as i38, "libxcb" as i39, "libxdmcp" as i40, "libxext" as i41, "libxrender" as i42, "lz4" as i43, "lzo" as i44, "m4" as i45, "meson" as i46, "mpdecimal" as i47, "netpbm" as i48, "ninja" as i49, "openjdk" as i50, "openssl@1.1" as i51, "pango" as i52, "pcre" as i53, "pixman" as i54, "pkg-config" as i55, "py3cairo" as i56, "pygobject3" as i57, "python@3.9" as i58, "readline" as i59, "rust" as i60, "scons" as i61, "sphinx-doc" as i62, "sqlite" as i63, "subversion" as i64, "swig" as i65, "utf8proc" as i66, "util-macros" as i67, "vala" as i68, "webp" as i69, "xcb-proto" as i70, "xorgproto" as i71, "xtrans" as i72, "xz" as i73
+
+pkg(
+  name: "libpeas",
+  version: "1.30.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "libpeas.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./libpeas.rb")
+  }
+)

@@ -1,0 +1,79 @@
+formula = r"""
+class CrosstoolNg < Formula
+  desc "Tool for building toolchains"
+  homepage "https://crosstool-ng.github.io/"
+  url "http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.24.0.tar.xz"
+  sha256 "804ced838ea7fe3fac1e82f0061269de940c82b05d0de672e7d424af98f22d2d"
+  license "GPL-2.0-only"
+  revision 2
+  head "https://github.com/crosstool-ng/crosstool-ng.git"
+
+  bottle do
+    sha256 cellar: :any, arm64_big_sur: "6b511659323ff03bd405c20e8591cacb55dbb081fe8f2416666228d9ed4cf1a8"
+    sha256 cellar: :any, big_sur:       "179cfc5008cbff1c21aba36ba14a9fb76e927035bf2554cdd0761382d70e58ca"
+    sha256 cellar: :any, catalina:      "77abb4c65e4eeabbc3300464367462c9342b6b4a6aa2342d6f92c6a682f91dd9"
+    sha256 cellar: :any, mojave:        "897d58874abdcf5dd4b7e606e8996f16255a996f53df29ff9dfcc2774ca5ef22"
+  end
+
+  depends_on "help2man" => :build
+  depends_on "autoconf"
+  depends_on "automake"
+  depends_on "bash"
+  depends_on "binutils"
+  depends_on "bison"
+  depends_on "coreutils"
+  depends_on "flex"
+  depends_on "gawk"
+  depends_on "gettext"
+  depends_on "gnu-sed"
+  depends_on "grep"
+  depends_on "libtool"
+  depends_on "lzip"
+  depends_on "m4"
+  depends_on "make"
+  depends_on "ncurses"
+  depends_on "python@3.9"
+  depends_on "xz"
+
+  uses_from_macos "flex" => :build
+  uses_from_macos "gperf" => :build
+  uses_from_macos "texinfo" => :build
+  uses_from_macos "unzip" => :build
+
+  def install
+    system "./bootstrap" if build.head?
+
+    ENV["BISON"] = "#{Formula["bison"].opt_bin}/bison"
+    ENV["M4"] = "#{Formula["m4"].opt_bin}/m4"
+    ENV["MAKE"] = "#{Formula["make"].opt_bin}/gmake"
+    ENV["PYTHON"] = "#{Formula["python@3.9"].opt_bin}/python3"
+    ENV.append "LDFLAGS", "-lintl"
+
+    system "./configure", "--prefix=#{prefix}"
+
+    # Must be done in two steps
+    system "make"
+    system "make", "install"
+  end
+
+  test do
+    assert_match "This is crosstool-NG", shell_output("make -rf #{bin}/ct-ng version")
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "autoconf" as i0, "automake" as i1, "bash" as i2, "binutils" as i3, "bison" as i4, "coreutils" as i5, "flex" as i6, "gawk" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "grep" as i12, "help2man" as i13, "libtool" as i14, "lzip" as i15, "m4" as i16, "make" as i17, "mpdecimal" as i18, "mpfr" as i19, "ncurses" as i20, "openssl@1.1" as i21, "pcre" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sqlite" as i26, "xz" as i27
+
+pkg(
+  name: "crosstool-ng",
+  version: "1.24.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "crosstool-ng.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./crosstool-ng.rb")
+  }
+)

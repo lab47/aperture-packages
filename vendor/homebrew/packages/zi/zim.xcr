@@ -1,0 +1,79 @@
+formula = r"""
+class Zim < Formula
+  desc "Graphical text editor used to maintain a collection of wiki pages"
+  homepage "https://zim-wiki.org/"
+  url "https://github.com/zim-desktop-wiki/zim-desktop-wiki/archive/0.73.5.tar.gz"
+  sha256 "9f983fac9655a61bfe1fa6f9e8cfa59bef099dadfdc4c003913999b184ed1342"
+  license "GPL-2.0-or-later"
+  head "https://github.com/zim-desktop-wiki/zim-desktop-wiki.git"
+
+  bottle do
+    sha256 cellar: :any_skip_relocation, big_sur:  "befd17918f9285f17cc1e82bfe237b1391ef131abbf00b0b18af5f419c0e3a20"
+    sha256 cellar: :any_skip_relocation, catalina: "66126af64df13f28313e8e14bfa9b98ffc406242a555c7296b4e4934e644b182"
+    sha256 cellar: :any_skip_relocation, mojave:   "085e240e21156a4f469eccc2eab3899c148be8243e045379c0ad5eb5fa6dfb36"
+  end
+
+  depends_on "pkg-config" => :build
+  depends_on "adwaita-icon-theme"
+  depends_on "graphviz"
+  depends_on "gtk+3"
+  depends_on "gtksourceview3"
+  depends_on "pygobject3"
+  depends_on "python@3.9"
+
+  resource "pyxdg" do
+    url "https://files.pythonhosted.org/packages/6f/2e/2251b5ae2f003d865beef79c8fcd517e907ed6a69f58c32403cec3eba9b2/pyxdg-0.27.tar.gz"
+    sha256 "80bd93aae5ed82435f20462ea0208fb198d8eec262e831ee06ce9ddb6b91c5a5"
+  end
+
+  def install
+    python_version = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{python_version}/site-packages"
+    resource("pyxdg").stage do
+      system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(libexec/"vendor")
+    end
+    ENV["XDG_DATA_DIRS"] = libexec/"share"
+    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{python_version}/site-packages"
+    system Formula["python@3.9"].opt_bin/"python3", "./setup.py", "install", "--prefix=#{libexec}"
+    bin.install Dir[libexec/"bin/*"]
+    bin.env_script_all_files libexec/"bin",
+      PYTHONPATH:    ENV["PYTHONPATH"],
+      XDG_DATA_DIRS: ["#{HOMEBREW_PREFIX}/share", libexec/"share"].join(":")
+    pkgshare.install "zim"
+  end
+
+  test do
+    ENV["LC_ALL"] = "en_US.UTF-8"
+    ENV["LANG"] = "en_US.UTF-8"
+
+    mkdir_p %w[Notes/Homebrew HTML]
+    # Equivalent of (except doesn't require user interaction):
+    # zim --plugin quicknote --notebook ./Notes --page Homebrew --basename Homebrew
+    #     --text "[[https://brew.sh|Homebrew]]"
+    File.write(
+      "Notes/Homebrew/Homebrew.txt",
+      "Content-Type: text/x-zim-wiki\nWiki-Format: zim 0.4\n" \
+      "Creation-Date: 2020-03-02T07:17:51+02:00\n\n[[https://brew.sh|Homebrew]]",
+    )
+    system "#{bin}/zim", "--index", "./Notes"
+    system "#{bin}/zim", "--export", "-r", "-o", "HTML", "./Notes"
+    system "grep", '<a href="https://brew.sh".*Homebrew</a>', "HTML/Homebrew/Homebrew.html"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "atk" as i3, "autoconf" as i4, "automake" as i5, "bison" as i6, "cairo" as i7, "cmake" as i8, "docbook" as i9, "docbook-xsl" as i10, "fontconfig" as i11, "freetype" as i12, "fribidi" as i13, "gd" as i14, "gdbm" as i15, "gdk-pixbuf" as i16, "gettext" as i17, "glib" as i18, "gobject-introspection" as i19, "graphite2" as i20, "graphviz" as i21, "gsettings-desktop-schemas" as i22, "gtk+3" as i23, "gtksourceview3" as i24, "gts" as i25, "harfbuzz" as i26, "hicolor-icon-theme" as i27, "icu4c" as i28, "intltool" as i29, "jasper" as i30, "jpeg" as i31, "libepoxy" as i32, "libffi" as i33, "libpng" as i34, "libpthread-stubs" as i35, "librsvg" as i36, "libssh2" as i37, "libtiff" as i38, "libtool" as i39, "libx11" as i40, "libxau" as i41, "libxcb" as i42, "libxdmcp" as i43, "libxext" as i44, "libxrender" as i45, "lz4" as i46, "lzo" as i47, "m4" as i48, "meson" as i49, "mpdecimal" as i50, "netpbm" as i51, "ninja" as i52, "openjdk" as i53, "openssl@1.1" as i54, "pango" as i55, "pcre" as i56, "pixman" as i57, "pkg-config" as i58, "py3cairo" as i59, "pygobject3" as i60, "python@3.9" as i61, "readline" as i62, "rust" as i63, "scons" as i64, "sphinx-doc" as i65, "sqlite" as i66, "subversion" as i67, "swig" as i68, "utf8proc" as i69, "util-macros" as i70, "vala" as i71, "webp" as i72, "xcb-proto" as i73, "xorgproto" as i74, "xtrans" as i75, "xz" as i76
+
+pkg(
+  name: "zim",
+  version: "0.73.5",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "zim.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./zim.rb")
+  }
+)

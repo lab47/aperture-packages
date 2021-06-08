@@ -1,0 +1,82 @@
+formula = r"""
+class Anjuta < Formula
+  desc "GNOME Integrated Development Environment"
+  homepage "http://anjuta.org"
+  url "https://download.gnome.org/sources/anjuta/3.34/anjuta-3.34.0.tar.xz"
+  sha256 "42a93130ed3ee02d064a7094e94e1ffae2032b3f35a87bf441e37fc3bb3a148f"
+  revision 4
+
+  bottle do
+    sha256 arm64_big_sur: "185ac50d99816b00213f7e3a6430c06dcef89408d92b0b8285772789ed600dde"
+    sha256 big_sur:       "cb89537f1f0f79d74b348604fdf02a0d8c7e48a8b9211aade1a18e2d4eb1d70b"
+    sha256 catalina:      "2b2f88450c12c599e2c730bafabd678006b75ab74eee017743ba9a34338e1f3c"
+    sha256 mojave:        "1c63382333afdfbcb3cc0c9b2c75f2dff445bbdc749464252067ab707dab7e85"
+  end
+
+  depends_on "intltool" => :build
+  depends_on "itstool" => :build
+  depends_on "pkg-config" => :build
+  depends_on "adwaita-icon-theme"
+  depends_on "autogen"
+  depends_on "gdl"
+  depends_on "gnome-themes-standard"
+  depends_on "gnutls"
+  depends_on "gtksourceview3"
+  depends_on "hicolor-icon-theme"
+  depends_on "libgda"
+  depends_on "libxml2"
+  depends_on "python@3.9"
+  depends_on "shared-mime-info"
+  depends_on "vala"
+  depends_on "vte3"
+
+  def install
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}",
+                          "--disable-schemas-compile"
+
+    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
+    ENV.append_path "PYTHONPATH", "#{Formula["libxml2"].opt_lib}/python#{xy}/site-packages"
+    system "make", "install"
+  end
+
+  def post_install
+    hshare = HOMEBREW_PREFIX/"share"
+
+    system "#{Formula["glib"].opt_bin}/glib-compile-schemas", hshare/"glib-2.0/schemas"
+    system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", hshare/"icons/hicolor"
+    # HighContrast is provided by gnome-themes-standard
+    if File.file?("#{hshare}/icons/HighContrast/.icon-theme.cache")
+      system "#{Formula["gtk+3"].opt_bin}/gtk3-update-icon-cache", "-f", "-t", hshare/"icons/HighContrast"
+    end
+    system "#{Formula["shared-mime-info"].opt_bin}/update-mime-database", hshare/"mime"
+  end
+
+  test do
+    system "#{bin}/anjuta", "--version"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "asciidoctor" as i3, "atk" as i4, "autoconf" as i5, "autogen" as i6, "automake" as i7, "bdw-gc" as i8, "bison" as i9, "c-ares" as i10, "cairo" as i11, "cmake" as i12, "coreutils" as i13, "docbook" as i14, "docbook-xsl" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gdl" as i22, "gettext" as i23, "glib" as i24, "gmp" as i25, "gnome-themes-standard" as i26, "gnu-getopt" as i27, "gnu-sed" as i28, "gnutls" as i29, "gobject-introspection" as i30, "graphite2" as i31, "graphviz" as i32, "gsettings-desktop-schemas" as i33, "gtk+" as i34, "gtk+3" as i35, "gtksourceview3" as i36, "gts" as i37, "guile" as i38, "guile@2" as i39, "harfbuzz" as i40, "hicolor-icon-theme" as i41, "icu4c" as i42, "intltool" as i43, "itstool" as i44, "jasper" as i45, "jemalloc" as i46, "jpeg" as i47, "libatomic_ops" as i48, "libepoxy" as i49, "libev" as i50, "libevent" as i51, "libffi" as i52, "libgcrypt" as i53, "libgda" as i54, "libgee" as i55, "libgpg-error" as i56, "libidn2" as i57, "libpng" as i58, "libpthread-stubs" as i59, "librsvg" as i60, "libssh2" as i61, "libtasn1" as i62, "libtiff" as i63, "libtool" as i64, "libunistring" as i65, "libx11" as i66, "libxau" as i67, "libxcb" as i68, "libxdmcp" as i69, "libxext" as i70, "libxml2" as i71, "libxrender" as i72, "lz4" as i73, "lzo" as i74, "m4" as i75, "meson" as i76, "mpdecimal" as i77, "netpbm" as i78, "nettle" as i79, "nghttp2" as i80, "ninja" as i81, "openjdk" as i82, "openssl@1.1" as i83, "p11-kit" as i84, "pango" as i85, "pcre" as i86, "pcre2" as i87, "pixman" as i88, "pkg-config" as i89, "python@3.9" as i90, "readline" as i91, "rust" as i92, "scons" as i93, "shared-mime-info" as i94, "sphinx-doc" as i95, "sqlite" as i96, "subversion" as i97, "swig" as i98, "unbound" as i99, "utf8proc" as i100, "util-macros" as i101, "vala" as i102, "vte3" as i103, "webp" as i104, "xcb-proto" as i105, "xmlto" as i106, "xorgproto" as i107, "xtrans" as i108, "xz" as i109
+
+pkg(
+  name: "anjuta",
+  version: "3.34.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "anjuta.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./anjuta.rb")
+  }
+
+  def post_install(ctx) {
+    ctx.write_file(join(ctx.build, "anjuta.rb"), formula)
+    ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./anjuta.rb")
+  }
+)

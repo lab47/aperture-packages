@@ -1,0 +1,32 @@
+formula = r"""
+class Webkit2png < Formula
+  desc "Create screenshots of webpages from the terminal"
+  homepage "https://www.paulhammond.org/webkit2png/"
+  url "https://github.com/paulhammond/webkit2png/archive/v0.7.tar.gz"
+  sha256 "9b810edb6f54cc23ba86b0212f203e6c3bbafc3cbdb62b9c33887548c91015bf"
+
+  bottle :unneeded
+
+  def install
+    bin.install "webkit2png"
+  end
+
+  test do
+    system "#{bin}/webkit2png", "--version"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "webkit2png",
+  version: "0.7",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "webkit2png.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./webkit2png.rb")
+  }
+)

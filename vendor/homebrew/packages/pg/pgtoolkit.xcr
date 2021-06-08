@@ -1,0 +1,36 @@
+formula = r"""
+class Pgtoolkit < Formula
+  desc "Tools for PostgreSQL maintenance"
+  homepage "https://github.com/grayhemp/pgtoolkit"
+  url "https://github.com/grayhemp/pgtoolkit/archive/v1.0.2.tar.gz"
+  sha256 "d86f34c579a4c921b77f313d4c7efbf4b12695df89e6b68def92ffa0332a7351"
+  license "PostgreSQL"
+
+  bottle :unneeded
+
+  def install
+    bin.install "fatpack/pgcompact"
+    doc.install %w[CHANGES.md LICENSE.md README.md TODO.md]
+  end
+
+  test do
+    output = IO.popen("#{bin}/pgcompact --help")
+    matches = output.readlines.select { |line| line.include?("pgcompact - PostgreSQL bloat reducing tool") }
+    !matches.empty?
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "pgtoolkit",
+  version: "1.0.2",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "pgtoolkit.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./pgtoolkit.rb")
+  }
+)

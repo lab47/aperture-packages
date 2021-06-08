@@ -1,0 +1,42 @@
+formula = r"""
+class Fpp < Formula
+  desc "CLI program that accepts piped input and presents files for selection"
+  homepage "https://facebook.github.io/PathPicker/"
+  url "https://github.com/facebook/PathPicker/releases/download/0.9.2/fpp.0.9.2.tar.gz"
+  sha256 "f2b233b1e18bdafb1cd1728305e926aabe217406e65091f1e58589e6157e1952"
+  license "MIT"
+  revision 2
+  head "https://github.com/facebook/pathpicker.git"
+
+  bottle :unneeded
+
+  depends_on "python@3.9"
+
+  def install
+    # we need to copy the bash file and source python files
+    libexec.install Dir["*"]
+    # and then symlink the bash file
+    bin.install_symlink libexec/"fpp"
+  end
+
+  test do
+    system bin/"fpp", "--help"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.9" as i4, "readline" as i5, "sqlite" as i6, "xz" as i7
+
+pkg(
+  name: "fpp",
+  version: "0.9.2",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "fpp.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./fpp.rb")
+  }
+)

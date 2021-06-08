@@ -1,0 +1,72 @@
+formula = r"""
+class Profanity < Formula
+  desc "Console based XMPP client"
+  homepage "https://profanity-im.github.io"
+  url "https://profanity-im.github.io/profanity-0.10.0.tar.gz"
+  sha256 "4a05e32590f9ec38430e33735bd02cfa199b257922b4116613f23912ca39ff8c"
+  license "GPL-3.0-or-later"
+
+  bottle do
+    rebuild 1
+    sha256 big_sur:  "c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42"
+    sha256 catalina: "aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397"
+    sha256 mojave:   "c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb"
+  end
+
+  head do
+    url "https://github.com/profanity-im/profanity.git"
+
+    depends_on "autoconf" => :build
+    depends_on "autoconf-archive" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
+  end
+
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on "glib"
+  depends_on "gnutls"
+  depends_on "gpgme"
+  depends_on "libotr"
+  depends_on "libsignal-protocol-c"
+  depends_on "libstrophe"
+  depends_on "openssl@1.1"
+  depends_on "readline"
+
+  uses_from_macos "curl"
+
+  on_macos do
+    depends_on "terminal-notifier"
+  end
+
+  def install
+    ENV.prepend_path "PATH", Formula["python@3.9"].opt_libexec/"bin"
+
+    system "./bootstrap.sh" if build.head?
+    system "./configure", "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
+    system "make", "install"
+  end
+
+  test do
+    system "#{bin}/profanity", "-v"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "check" as i4, "cmake" as i5, "gdbm" as i6, "gettext" as i7, "glib" as i8, "gmp" as i9, "gnu-sed" as i10, "gnupg" as i11, "gnutls" as i12, "gpgme" as i13, "guile" as i14, "jemalloc" as i15, "libassuan" as i16, "libatomic_ops" as i17, "libev" as i18, "libevent" as i19, "libffi" as i20, "libgcrypt" as i21, "libgpg-error" as i22, "libidn2" as i23, "libksba" as i24, "libotr" as i25, "libsignal-protocol-c" as i26, "libstrophe" as i27, "libtasn1" as i28, "libtool" as i29, "libunistring" as i30, "libusb" as i31, "m4" as i32, "meson" as i33, "mpdecimal" as i34, "nettle" as i35, "nghttp2" as i36, "ninja" as i37, "npth" as i38, "openssl@1.1" as i39, "p11-kit" as i40, "pcre" as i41, "pinentry" as i42, "pkg-config" as i43, "python@3.9" as i44, "readline" as i45, "sphinx-doc" as i46, "sqlite" as i47, "swig" as i48, "terminal-notifier" as i49, "unbound" as i50, "xz" as i51
+
+pkg(
+  name: "profanity",
+  version: "0.10.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "profanity.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./profanity.rb")
+  }
+)

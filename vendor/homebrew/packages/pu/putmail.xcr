@@ -1,0 +1,31 @@
+formula = r"""
+class Putmail < Formula
+  desc "MTA or SMTP client designed to replace the sendmail command"
+  homepage "https://putmail.sourceforge.io"
+  url "https://downloads.sourceforge.net/project/putmail/putmail.py/1.4/putmail.py-1.4.tar.bz2"
+  sha256 "1f4e6f33496100ad89b8f029621fb78ab2f80258994c7cd8687fd46730df45be"
+
+  bottle :unneeded
+
+  def install
+    bin.install "putmail.py"
+    man1.install "man/man1/putmail.py.1"
+    bin.install_symlink "putmail.py" => "putmail"
+    man1.install_symlink "putmail.py.1" => "putmail.1"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+pkg(
+  name: "putmail",
+  version: "1.4",
+  dependencies: [hi],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "putmail.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./putmail.rb")
+  }
+)

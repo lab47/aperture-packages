@@ -1,0 +1,62 @@
+formula = r"""
+class OpenBabel < Formula
+  desc "Chemical toolbox"
+  homepage "https://openbabel.org"
+  url "https://github.com/openbabel/openbabel/archive/openbabel-3-1-1.tar.gz"
+  version "3.1.1"
+  sha256 "c97023ac6300d26176c97d4ef39957f06e68848d64f1a04b0b284ccff2744f02"
+  license "GPL-2.0"
+  revision 1
+  head "https://github.com/openbabel/openbabel.git"
+
+  bottle do
+    sha256 arm64_big_sur: "990abdbe32d92c4d6e7a17f1d5a2c1c4cd979f4daba30a8eba4a9e20a3e0d099"
+    sha256 big_sur:       "f741147b739d71d7bfb79e80ad89ad49f05a6922a36c6f663690c1a5f65cdcdb"
+    sha256 catalina:      "770cdafc4dfdd0c216ca9308d5b5ae6b9b00be8d30b387dd2e86cbff82db5acd"
+    sha256 mojave:        "6c44b3e574a786396b8099192e5154f1d751ee413ec265c99f8046fc5167876a"
+    sha256 high_sierra:   "49d5dc2fc8c9a857bf08e6e6711fbaf48d8a0165c328cc400e904aa5a37080a4"
+  end
+
+  depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
+  depends_on "rapidjson" => :build
+  depends_on "swig" => :build
+  depends_on "cairo"
+  depends_on "eigen"
+  depends_on "python@3.9"
+
+  def install
+    args = std_cmake_args + %W[
+      -DRUN_SWIG=ON
+      -DPYTHON_BINDINGS=ON
+      -DPYTHON_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+    ]
+
+    mkdir "build" do
+      system "cmake", "..", *args
+      system "make"
+      system "make", "install"
+    end
+  end
+
+  test do
+    system "#{bin}/obabel", "-:'C1=CC=CC=C1Br'", "-omol"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "bison" as i0, "cairo" as i1, "cmake" as i2, "doxygen" as i3, "eigen" as i4, "fontconfig" as i5, "freetype" as i6, "gdbm" as i7, "gettext" as i8, "glib" as i9, "libffi" as i10, "libpng" as i11, "libpthread-stubs" as i12, "libx11" as i13, "libxau" as i14, "libxcb" as i15, "libxdmcp" as i16, "libxext" as i17, "libxrender" as i18, "lzo" as i19, "meson" as i20, "mpdecimal" as i21, "ninja" as i22, "openssl@1.1" as i23, "pcre" as i24, "pixman" as i25, "pkg-config" as i26, "python@3.9" as i27, "rapidjson" as i28, "readline" as i29, "sphinx-doc" as i30, "sqlite" as i31, "swig" as i32, "util-macros" as i33, "xcb-proto" as i34, "xorgproto" as i35, "xtrans" as i36, "xz" as i37
+
+pkg(
+  name: "open-babel",
+  version: "3.1.1",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "open-babel.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./open-babel.rb")
+  }
+)
