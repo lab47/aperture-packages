@@ -4,8 +4,8 @@ pkg(
   name: "homebrew-install"
   version: "20210607"
   input: fetch.archive(
-    url: "https://github.com/lab47/aperture-homebrew/archive/refs/tags/v20210607.tar.gz",
-    sum: ("sha256", "eb2391c5423d87aa3014f882a4eaa17e9990a1d5deae530c49ab10ec2553a1f6")
+    url: "https://github.com/lab47/aperture-homebrew/archive/refs/tags/v20210610.tar.gz",
+    sum: ("sha256", "beb3a41ca46161855150d7a0626348d4645482b84e8faf1ed57cf8a1c1796c76")
   )
   dependencies: [ruby]
 
@@ -16,8 +16,8 @@ pkg(
     )
 
     ctx.install_files(
-      pattern: "lib",
-      target:  join(ctx.prefix, "lib"),
+      pattern: "share",
+      target:  join(ctx.prefix, "share"),
     )
 
     ctx.set_shebang(
