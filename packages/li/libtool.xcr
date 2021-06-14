@@ -11,8 +11,20 @@ pkg(
   def install(ctx) {
     # prevent libtool from hardcoding sed path from superenv
     ctx.set_env("SED", "sed")
-    ctx.system("./configure", "--disable-dependency-tracking", "--prefix="+ctx.prefix, "--program-prefix=g", "--enable-ltdl-install")
+    ctx.system("./configure", "--disable-dependency-tracking", "--prefix="+ctx.prefix, "--enable-ltdl-install")
     ctx.system("make", "install")
+
+    ctx.install_files(
+      pattern: join(ctx.prefix, "bin", "libtool")
+      target: join(ctx.prefix, "bin", "glibtool")
+      symlink: True,
+    )
+
+    ctx.install_files(
+      pattern: join(ctx.prefix, "bin", "libtoolize")
+      target: join(ctx.prefix, "bin", "glibtoolize")
+      symlink: True,
+    )
   }
 
   def hook(ctx) {
