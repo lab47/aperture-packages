@@ -2,7 +2,7 @@ import fetch, "ruby-26" as ruby
 
 pkg(
   name: "homebrew-install"
-  version: "20210607"
+  version: "20210613"
   input: fetch.archive(
     url: "https://github.com/lab47/aperture-homebrew/archive/refs/tags/v20210613.tar.gz",
     sum: ("sha256", "6d873f81d753f5fae0f39cdaf0ca49663c1eac13c1be1231d1f287772264e471")
