@@ -34,7 +34,7 @@ pkg(
 
     ctx.set_env("GOROOT_BOOTSTRAP", ctx.build+"/gobootstrap/go")
     ctx.set_env("GOROOT_FINAL", libexec)
-    ctx.set_env("GOOS", "darwin")
+    ctx.set_env("GOOS", platform.os)
     ctx.set_env("GOCACHE", ctx.build+"/cache")
 
     ctx.system("./make.bash", "--no-clean", dir: "source/go/src")
