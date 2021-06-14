@@ -67,11 +67,11 @@ class Unzip < Formula
       LOC=-DLARGE_FILE_SUPPORT
       D_USE_BZ2=-DUSE_BZIP2
       L_BZ2=-lbz2
-      LFLAGS1=$LDFLAGS
+      LFLAGS1=$(LDFLAGS)
       macosx
     ]
     on_macos do
-      args << "LFLAGS1=$LDFLAGS -liconv"
+      args << "LFLAGS1=$(LDFLAGS) -liconv"
     end
     system "make", "-f", "unix/Makefile", *args
     system "make", "prefix=#{prefix}", "MANDIR=#{man1}", "install"
