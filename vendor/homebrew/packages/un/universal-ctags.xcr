@@ -2,9 +2,9 @@ formula = r"""
 class UniversalCtags < Formula
   desc "Maintained ctags implementation"
   homepage "https://github.com/universal-ctags/ctags"
-  url "https://github.com/universal-ctags/ctags/archive/refs/tags/p5.9.20210523.0.tar.gz"
-  version "p5.9.20210523.0"
-  sha256 "00e5493454c7c013b996a24019b8f8cbd75968e1993fb56f7e2737b7309cc684"
+  url "https://github.com/universal-ctags/ctags/archive/refs/tags/p5.9.20210613.0.tar.gz"
+  version "p5.9.20210613.0"
+  sha256 "74c9e515f0cb71d92b4422392effba21794b11fc34f0971aa4dc44e9a86708f4"
   license "GPL-2.0-only"
   head "https://github.com/universal-ctags/ctags.git"
 
@@ -14,10 +14,11 @@ class UniversalCtags < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "48182f751f5f6efaa9516d4ed948e59b440b4e7fb0ad7b3ed654cbb7e2f4f44b"
-    sha256 cellar: :any, big_sur:       "40e0a5ebd29473d1233c7e147e85ef84a01af9019c773816adb55a4fed9fd9d1"
-    sha256 cellar: :any, catalina:      "a650abfb9ef8f9e33785c24a9230006db034b14e1dd4a4499a3a4ab56545534c"
-    sha256 cellar: :any, mojave:        "867f69719f9325ce53746f57cca64cb6ea063001abcf53261d5591d848c308c6"
+    sha256 cellar: :any,                 arm64_big_sur: "92d4d99f7a290710eed8b4daf9026f9b0334ecf3e11950b33f05badd976ff32c"
+    sha256 cellar: :any,                 big_sur:       "6878ce348f6416c549935681c1eceeac81d5e0953bdacabed8119677e58e3cb7"
+    sha256 cellar: :any,                 catalina:      "9998b6ac03c9f591ced2c87ce488edb2796c67c00a7cd22516b993df7ae793c4"
+    sha256 cellar: :any,                 mojave:        "d90f3b42e74eab21847cf460060f337aa98e0f8eed03469da8c12e92150f2c71"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "33e45090b85ea3a4cd38f75bf68a32a1ed8ffb7dcb8b38d25737efbd3fcddcd3"
   end
 
   depends_on "autoconf" => :build
@@ -67,7 +68,7 @@ import "autoconf" as i0, "automake" as i1, "docutils" as i2, "pkg-config" as i3,
 
 pkg(
   name: "universal-ctags",
-  version: "p5.9.20210523.0",
+  version: "p5.9.20210613.0",
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

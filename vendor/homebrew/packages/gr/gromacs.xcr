@@ -16,11 +16,13 @@ class Gromacs < Formula
     sha256 big_sur:       "48af6ab3affcfc57a701744ea904c8f942f2ab34554ba6aeeee6ab87c1197a90"
     sha256 catalina:      "517993a760552b80638aa56b057a5128cf6536d6ee25a469ea4dd7613c701d62"
     sha256 mojave:        "a4ad5635279fe7f15a7c9809f4d9ddd1bb2cf9e8836329f1baa8021bbe0e8065"
+    sha256 x86_64_linux:  "19dcbb6d40d38e4a4317004c48387ec48b33b70513593d51c67c9d402f7b1783"
   end
 
   depends_on "cmake" => :build
   depends_on "fftw"
-  depends_on "gcc" # for OpenMP
+  depends_on "gcc"
+  depends_on "gsl" # for OpenMP
   depends_on "openblas"
 
   fails_with :clang
@@ -89,12 +91,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "fftw" as i1, "gcc" as i2, "openblas" as i3
+import "cmake" as i0, "fftw" as i1, "gcc" as i2, "gsl" as i3, "openblas" as i4
 
 pkg(
   name: "gromacs",
   version: "2021.2",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gromacs.rb"), formula)

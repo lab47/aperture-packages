@@ -14,10 +14,11 @@ class Ledger < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "98a7a5651f041ffe2d668b43cc89e3bda66f2adf5ba544d0a8cb3f86569605c8"
-    sha256 cellar: :any, big_sur:       "c46124378d3e8dd05f8f5e560828de661eae53acd39adb29cc70688b96e1244e"
-    sha256 cellar: :any, catalina:      "8c83cc769a1331bf408af4670a47f4c95a4a173b66a9614bf4c29a57b33bf0d3"
-    sha256 cellar: :any, mojave:        "761506a14de02edb89e9d77465728504596bb53e140720609fed02035b46434a"
+    sha256 cellar: :any,                 arm64_big_sur: "98a7a5651f041ffe2d668b43cc89e3bda66f2adf5ba544d0a8cb3f86569605c8"
+    sha256 cellar: :any,                 big_sur:       "c46124378d3e8dd05f8f5e560828de661eae53acd39adb29cc70688b96e1244e"
+    sha256 cellar: :any,                 catalina:      "8c83cc769a1331bf408af4670a47f4c95a4a173b66a9614bf4c29a57b33bf0d3"
+    sha256 cellar: :any,                 mojave:        "761506a14de02edb89e9d77465728504596bb53e140720609fed02035b46434a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "a31453d0898b9116c7541e94be2271e49e30984ad563289d80bf114e6819450d"
   end
 
   depends_on "cmake" => :build
@@ -126,7 +127,7 @@ index 15431cf..c12f1c9 100644
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "gmp" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "icu4c" as i21, "jasper" as i22, "jbig2dec" as i23, "jpeg" as i24, "krb5" as i25, "libffi" as i26, "libiconv" as i27, "libidn" as i28, "libpng" as i29, "libtiff" as i30, "libtool" as i31, "libxml2" as i32, "libyaml" as i33, "little-cms2" as i34, "lz4" as i35, "m4" as i36, "mpdecimal" as i37, "mpfr" as i38, "ncurses" as i39, "netpbm" as i40, "openjdk" as i41, "openjpeg" as i42, "openssl@1.1" as i43, "pcre" as i44, "perl" as i45, "pkg-config" as i46, "psutils" as i47, "python@3.9" as i48, "readline" as i49, "ruby" as i50, "scons" as i51, "sphinx-doc" as i52, "sqlite" as i53, "subversion" as i54, "swig" as i55, "uchardet" as i56, "unzip" as i57, "utf8proc" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "gmp" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "icu4c" as i21, "jasper" as i22, "jbig2dec" as i23, "jpeg" as i24, "krb5" as i25, "libffi" as i26, "libidn" as i27, "libpng" as i28, "libtiff" as i29, "libtool" as i30, "libxml2" as i31, "libyaml" as i32, "little-cms2" as i33, "lz4" as i34, "m4" as i35, "mpdecimal" as i36, "mpfr" as i37, "ncurses" as i38, "netpbm" as i39, "openjdk" as i40, "openjpeg" as i41, "openssl@1.1" as i42, "pcre" as i43, "perl" as i44, "pkg-config" as i45, "psutils" as i46, "python@3.9" as i47, "readline" as i48, "ruby" as i49, "scons" as i50, "sphinx-doc" as i51, "sqlite" as i52, "subversion" as i53, "swig" as i54, "texinfo" as i55, "uchardet" as i56, "unzip" as i57, "utf8proc" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
 
 pkg(
   name: "ledger",

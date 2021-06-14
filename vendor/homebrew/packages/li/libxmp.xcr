@@ -14,6 +14,7 @@ class Libxmp < Formula
     sha256 cellar: :any, sierra:        "019ff8e51453bf527ba6ec46fd289acc5396208e230445afb0332a18752d72e2"
     sha256 cellar: :any, el_capitan:    "8da81ed699c312c831be38295df20218663fef23aec1cab91afa7e425baaa4ab"
     sha256 cellar: :any, yosemite:      "dd80b8a6786f265488503234bb7aecffa15ab0a5c099677fd0989fd3329709d2"
+    sha256 cellar: :any, x86_64_linux:  "000485628d649584912f7aec7f8eb536a0f764a4045380830e42837b146b5176"
   end
 
   head do

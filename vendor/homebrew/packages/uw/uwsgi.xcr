@@ -22,6 +22,7 @@ class Uwsgi < Formula
     sha256 big_sur:       "3ff3a21eaf20a4132dc2b2da9405129a9aae59584c422b57cfa6f6cdfa29937c"
     sha256 catalina:      "339d8ce59b4cd8657a62b322b26e89649847d32c4c8a1ff149e2e16dd4cc4ff2"
     sha256 mojave:        "f885fbd73900a196ff2438bc5c14771b0bc8c9cad0a7f59c1cbb39f484205ed5"
+    sha256 x86_64_linux:  "1c56d5a0de95b97143e9caa37b528a0affffa75ddc1eea40f0e3220c854e9bc5"
   end
 
   depends_on "pkg-config" => :build
@@ -42,7 +43,7 @@ class Uwsgi < Formula
   def install
     # Fix file not found errors for /usr/lib/system/libsystem_symptoms.dylib and
     # /usr/lib/system/libsystem_darwin.dylib on 10.11 and 10.12, respectively
-    ENV["SDKROOT"] = MacOS.sdk_path if MacOS.version <= :sierra
+    ENV["SDKROOT"] = MacOS.sdk_path if OS.mac? && MacOS.version <= :sierra
 
     openssl = Formula["openssl@1.1"]
     ENV.prepend "CFLAGS", "-I#{openssl.opt_include}"
@@ -61,7 +62,7 @@ class Uwsgi < Formula
 
     system "python3", "uwsgiconfig.py", "--verbose", "--build", "brew"
 
-    plugins = %w[airbrake alarm_curl alarm_speech asyncio cache
+    plugins = %w[airbrake alarm_curl asyncio cache
                  carbon cgi cheaper_backlog2 cheaper_busyness
                  corerouter curl_cron cplusplus dumbloop dummy
                  echo emperor_amqp fastrouter forkptyrouter gevent
@@ -77,6 +78,7 @@ class Uwsgi < Formula
                  transformation_chunked transformation_gzip
                  transformation_offload transformation_tofile
                  transformation_toupper ugreen webdav zergpool]
+    plugins << "alarm_speech" if OS.mac?
 
     (libexec/"uwsgi").mkpath
     plugins.each do |plugin|
@@ -151,12 +153,12 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "brotli" as i2, "bzip2" as i3, "c-ares" as i4, "cmake" as i5, "curl" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libmetalink" as i15, "libssh2" as i16, "libunistring" as i17, "libxml2" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "nghttp2" as i22, "ninja" as i23, "openldap" as i24, "openssl@1.1" as i25, "pcre" as i26, "perl" as i27, "pkg-config" as i28, "python@3.9" as i29, "readline" as i30, "rtmpdump" as i31, "sphinx-doc" as i32, "sqlite" as i33, "unzip" as i34, "xz" as i35, "yajl" as i36, "zip" as i37, "zlib" as i38, "zstd" as i39
+import "berkeley-db" as i0, "bison" as i1, "brotli" as i2, "bzip2" as i3, "c-ares" as i4, "cmake" as i5, "curl" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pcre" as i25, "perl" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "rtmpdump" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "yajl" as i35, "zip" as i36, "zlib" as i37, "zstd" as i38
 
 pkg(
   name: "uwsgi",
   version: "2.0.19.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "uwsgi.rb"), formula)

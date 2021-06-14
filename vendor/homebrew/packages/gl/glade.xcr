@@ -5,6 +5,7 @@ class Glade < Formula
   url "https://download.gnome.org/sources/glade/3.38/glade-3.38.2.tar.xz"
   sha256 "98fc87647d88505c97dd2f30f2db2d3e9527515b3af11694787d62a8d28fbab7"
   license "LGPL-2.1-or-later"
+  revision 1 unless OS.mac?
 
   bottle do
     sha256 arm64_big_sur: "2a55e22c571d0d158c1b66bf18c35c44aeaed0694d139f13c48f5a6642b4785b"
@@ -16,6 +17,7 @@ class Glade < Formula
   depends_on "docbook-xsl" => :build
   depends_on "gobject-introspection" => :build
   depends_on "itstool" => :build
+  depends_on "libxslt" => :build
   depends_on "meson" => :build
   depends_on "ninja" => :build
   depends_on "pkg-config" => :build
@@ -128,12 +130,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "adwaita-icon-theme" as i6, "gettext" as i7, "gtk+3" as i8, "hicolor-icon-theme" as i9, "libxml2" as i10, "gtk-mac-integration" as i11
+import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "libxslt" as i3, "meson" as i4, "ninja" as i5, "pkg-config" as i6, "adwaita-icon-theme" as i7, "gettext" as i8, "gtk+3" as i9, "hicolor-icon-theme" as i10, "libxml2" as i11, "gtk-mac-integration" as i12
 
 pkg(
   name: "glade",
   version: "3.38.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glade.rb"), formula)

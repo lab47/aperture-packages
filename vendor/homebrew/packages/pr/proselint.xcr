@@ -7,7 +7,7 @@ class Proselint < Formula
   url "https://files.pythonhosted.org/packages/42/ff/8e7ad0108b8faffdf2ec7d170b4a8a3c9bc91f5077debf5381ef14702588/proselint-0.10.2.tar.gz"
   sha256 "3a87eb393056d1bc77d898e4bcf8998f50e9ad84f7b9ff7cf2720509ac8ef904"
   license "BSD-3-Clause"
-  revision 4
+  revision OS.mac? ? 4 : 5
   head "https://github.com/amperser/proselint.git"
 
   bottle do
@@ -16,6 +16,7 @@ class Proselint < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "2f0a8c853ee9b4c7fb31f867d6371a36147772510a1af3431ccdcc272fbaac24"
     sha256 cellar: :any_skip_relocation, mojave:        "d410f307de6c9f59b5964b141e52d33318a0de5e871c5b8ed7663a5fbff2f279"
     sha256 cellar: :any_skip_relocation, high_sierra:   "787e948c2466df6ec0b3f8933702badc907bc08e34ca8b357c1568ad134dbd29"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "89da639a64b115397caa5776d0a092ec485f983fa33a16ea868f0926237d722a"
   end
 
   depends_on "python@3.9"

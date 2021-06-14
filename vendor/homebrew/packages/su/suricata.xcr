@@ -1,13 +1,13 @@
 formula = r"""
 class Suricata < Formula
   desc "Network IDS, IPS, and security monitoring engine"
-  homepage "https://suricata-ids.org/"
+  homepage "https://suricata.io"
   url "https://www.openinfosecfoundation.org/download/suricata-6.0.2.tar.gz"
   sha256 "5e4647a07cb31b5d6d0049972a45375c137de908a964a44e2d6d231fa3ad4b52"
   license "GPL-2.0-only"
 
   livecheck do
-    url "https://suricata-ids.org/download/"
+    url "https://suricata.io/download/"
     regex(/href=.*?suricata[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
@@ -16,6 +16,7 @@ class Suricata < Formula
     sha256 big_sur:       "5751c86e66e385b9922f3e4eb0761df733ab00d1603c62e4534786e53e266634"
     sha256 catalina:      "5fdfcd49565c97630df59a4c02f2f5c93ee0a65265d04024f2db9d265539c164"
     sha256 mojave:        "a4c47459e160033762a12c8d613b70c3028e089e6e12db4cf3b03a10008b88f2"
+    sha256 x86_64_linux:  "455777d6ad6cc49441f22414450fc13745946581a1bafb60643047a76c7b7643"
   end
 
   depends_on "pkg-config" => :build
@@ -102,12 +103,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "gdbm" as i12, "gettext" as i13, "help2man" as i14, "jansson" as i15, "jemalloc" as i16, "krb5" as i17, "libev" as i18, "libffi" as i19, "libidn2" as i20, "libmagic" as i21, "libmetalink" as i22, "libnet" as i23, "libpcap" as i24, "libssh2" as i25, "libtool" as i26, "libunistring" as i27, "libxml2" as i28, "libyaml" as i29, "lz4" as i30, "m4" as i31, "mpdecimal" as i32, "ncurses" as i33, "nghttp2" as i34, "ninja" as i35, "nspr" as i36, "nss" as i37, "openldap" as i38, "openssl@1.1" as i39, "pcre" as i40, "perl" as i41, "pkg-config" as i42, "python@3.9" as i43, "readline" as i44, "rtmpdump" as i45, "rust" as i46, "sphinx-doc" as i47, "sqlite" as i48, "unzip" as i49, "xz" as i50, "zip" as i51, "zlib" as i52, "zstd" as i53
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "gdbm" as i12, "gettext" as i13, "help2man" as i14, "jansson" as i15, "jemalloc" as i16, "krb5" as i17, "libev" as i18, "libffi" as i19, "libidn2" as i20, "libmagic" as i21, "libnet" as i22, "libpcap" as i23, "libssh2" as i24, "libtool" as i25, "libunistring" as i26, "libxml2" as i27, "libyaml" as i28, "lz4" as i29, "m4" as i30, "mpdecimal" as i31, "ncurses" as i32, "nghttp2" as i33, "ninja" as i34, "nspr" as i35, "nss" as i36, "openldap" as i37, "openssl@1.1" as i38, "pcre" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "rtmpdump" as i44, "rust" as i45, "sphinx-doc" as i46, "sqlite" as i47, "unzip" as i48, "xz" as i49, "zip" as i50, "zlib" as i51, "zstd" as i52
 
 pkg(
   name: "suricata",
   version: "6.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "suricata.rb"), formula)

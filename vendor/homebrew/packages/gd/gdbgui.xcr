@@ -9,9 +9,10 @@ class Gdbgui < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "01ab2720fb16cd45b07f7f64cacc395122ed74002914a7e49501a86676ccd12f"
-    sha256 cellar: :any_skip_relocation, catalina: "083fcf08771cf6fffe1a2dd0a11ab0aaa2b430dee8f89a38bc67abbc4ee92b40"
-    sha256 cellar: :any_skip_relocation, mojave:   "2e142057b5aac7280b532045372a1c3f86d9af8e18aa3f9461be23ac6a2afef9"
+    sha256 cellar: :any_skip_relocation, big_sur:      "01ab2720fb16cd45b07f7f64cacc395122ed74002914a7e49501a86676ccd12f"
+    sha256 cellar: :any_skip_relocation, catalina:     "083fcf08771cf6fffe1a2dd0a11ab0aaa2b430dee8f89a38bc67abbc4ee92b40"
+    sha256 cellar: :any_skip_relocation, mojave:       "2e142057b5aac7280b532045372a1c3f86d9af8e18aa3f9461be23ac6a2afef9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "751dc2d4314770d0399238f71dba1d04b2d838446c0d79b5aae3aeaf42947916"
   end
 
   depends_on "gdb"
@@ -141,12 +142,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdb" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
+import "berkeley-db" as i0, "bzip2" as i1, "expat" as i2, "gdb" as i3, "gdbm" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "perl" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "texinfo" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "gdbgui",
   version: "0.14.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdbgui.rb"), formula)

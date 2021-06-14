@@ -11,6 +11,10 @@ class Valgrind < Formula
     regex(/href=.*?valgrind[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 x86_64_linux: "3a80d5b00b1154e358fb0784295c9c0b4879ae59725ff5738827f2711f9bc3a3"
+  end
+
   head do
     url "https://sourceware.org/git/valgrind.git"
 
@@ -30,7 +34,6 @@ class Valgrind < Formula
     ]
 
     system "./autogen.sh" if build.head?
-
     system "./configure", *args
     system "make"
     system "make", "install"

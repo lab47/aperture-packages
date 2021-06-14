@@ -7,10 +7,6 @@ class GruntCompletion < Formula
   license "MIT"
   head "https://github.com/gruntjs/grunt-cli.git"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "3d2fd1dd2be3cbc084c78eb81679d279e05b83db13604eebc7670467a04b1da1"
-  end
-
   def install
     bash_completion.install "completion/bash" => "grunt"
     zsh_completion.install "completion/zsh" => "_grunt"

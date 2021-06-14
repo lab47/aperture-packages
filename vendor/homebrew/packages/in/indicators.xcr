@@ -7,10 +7,6 @@ class Indicators < Formula
   license "MIT"
   head "https://github.com/p-ranav/indicators.git"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "60d4242ee3f9af21462bd6416eb0250a24109ef6a15e55904cedccd9a1dff42e"
-  end
-
   depends_on "cmake" => :build
 
   def install

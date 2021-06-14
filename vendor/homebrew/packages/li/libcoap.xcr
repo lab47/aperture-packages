@@ -12,6 +12,7 @@ class Libcoap < Formula
     sha256 cellar: :any, catalina:      "344f2a098d9f1767d50135fbf4ae3bdf893a079ebf8a54f248811673fa437e39"
     sha256 cellar: :any, mojave:        "012f1efcb1655479c531df4db98eb481d83971751edffb99b4ca8c50592cd27c"
     sha256 cellar: :any, high_sierra:   "a68df19a4ca87c677173c14b534848592bb35e46a715ca066bcd114f8c735236"
+    sha256 cellar: :any, x86_64_linux:  "c2f79a6135c82ee4d4a3438308dd0283ef945cc84349a7e40178757231ec6cc6"
   end
 
   depends_on "autoconf" => :build

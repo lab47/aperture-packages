@@ -32,10 +32,19 @@ class Mariadb < Formula
     depends_on "linux-pam"
   end
 
+  unless OS.mac?
+    depends_on "gcc@7" => :build
+    depends_on "libcsv"
+  end
+
   conflicts_with "mysql", "percona-server",
     because: "mariadb, mysql, and percona install the same binaries"
   conflicts_with "mytop", because: "both install `mytop` binaries"
   conflicts_with "mariadb-connector-c", because: "both install `mariadb_config`"
+
+  fails_with gcc: "4"
+  fails_with gcc: "5"
+  fails_with gcc: "6"
 
   def install
     # Set basedir and ldata so that mysql_install_db can find the server
@@ -66,6 +75,14 @@ class Mariadb < Formula
       -DINSTALL_SYSCONFDIR=#{etc}
       -DCOMPILATION_COMMENT=Homebrew
     ]
+
+    on_linux do
+      args << "-DWITH_NUMA=OFF"
+      args << "-DPLUGIN_ROCKSDB=NO"
+      args << "-DPLUGIN_MROONGA=NO"
+      args << "-DENABLE_DTRACE=NO"
+      args << "-DCONNECT_WITH_JDBC=OFF"
+    end
 
     # disable TokuDB, which is currently not supported on macOS
     args << "-DPLUGIN_TOKUDB=NO"

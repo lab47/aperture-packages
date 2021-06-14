@@ -10,7 +10,7 @@ class SshCopyId < Formula
   head "https://github.com/openssh/openssh-portable.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "0a70abbf0873a98e1f1653781006036f67a2cdf6a2d372e7de2865a50d2ba2cd"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f7eabbbc20c02c577d18d2524f935dfdcb8c77916f926842f0cfa8d6640ee912"
   end
 
   keg_only :provided_by_macos

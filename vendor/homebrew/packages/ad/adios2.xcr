@@ -13,6 +13,7 @@ class Adios2 < Formula
     sha256 big_sur:       "7d1abe16be0173d2c1e645c51641b59fea8983c140c5caef132016d4e1416568"
     sha256 catalina:      "6826ba1d0cf70bd775a97a152fa2423b0091dfb196500d5a1eef0884f6e9d2f8"
     sha256 mojave:        "ec0da5f5869f0473b3c7b906cb4ea86d7673f4ff3bb479d6cf88621beb990507"
+    sha256 x86_64_linux:  "00f1b30a74e7e8e0472392f3ac5d6323a1b3e708a9bce4ce87534a344f5d8a6e"
   end
 
   depends_on "cmake" => :build
@@ -25,13 +26,14 @@ class Adios2 < Formula
   depends_on "open-mpi"
   depends_on "python@3.9"
   depends_on "zeromq"
+
   uses_from_macos "bzip2"
 
   def install
     # fix `include/adios2/common/ADIOSConfig.h` file audit failure
     inreplace "source/adios2/common/ADIOSConfig.h.in" do |s|
-      s.gsub! ": @CMAKE_C_COMPILER@", ": /usr/bin/clang"
-      s.gsub! ": @CMAKE_CXX_COMPILER@", ": /usr/bin/clang++"
+      s.gsub! ": @CMAKE_C_COMPILER@", ": #{ENV.cc}"
+      s.gsub! ": @CMAKE_CXX_COMPILER@", ": #{ENV.cxx}"
     end
 
     args = std_cmake_args + %W[
@@ -54,6 +56,7 @@ class Adios2 < Formula
       -DCMAKE_DISABLE_FIND_PACKAGE_LibFFI=TRUE
       -DCMAKE_DISABLE_FIND_PACKAGE_NVSTREAM=TRUE
       -DPython_EXECUTABLE=#{Formula["python@3.9"].opt_bin}/python3
+      -DCMAKE_INSTALL_PYTHONDIR=#{prefix/Language::Python.site_packages("python3")}
       -DADIOS2_BUILD_TESTING=OFF
       -DADIOS2_BUILD_EXAMPLES=OFF
     ]

@@ -55,7 +55,12 @@ class Memcached < Formula
 
   test do
     pidfile = testpath/"memcached.pid"
-    system bin/"memcached", "--listen=localhost:#{free_port}", "--daemon", "--pidfile=#{pidfile}"
+    # Assumes port 11211 is not already taken
+    if !OS.mac? && ENV["HOMEBREW_GITHUB_ACTIONS"]
+      system bin/"memcached", "-u", ENV["USER"], "--listen=localhost:#{free_port}", "--daemon", "--pidfile=#{pidfile}"
+    else
+      system bin/"memcached", "--listen=localhost:#{free_port}", "--daemon", "--pidfile=#{pidfile}"
+    end
     sleep 1
     assert_predicate pidfile, :exist?, "Failed to start memcached daemon"
     pid = (testpath/"memcached.pid").read.chomp.to_i

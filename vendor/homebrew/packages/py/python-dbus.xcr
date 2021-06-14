@@ -1,0 +1,48 @@
+formula = r"""
+class PythonDbus < Formula
+  desc "Python bindings for libdbus"
+  homepage "https://dbus.freedesktop.org/doc/dbus-python/"
+  url "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.2.14.tar.gz"
+  sha256 "b10206ba3dd641e4e46411ab91471c88e0eec1749860e4285193ee68df84ac31"
+  revision 1
+
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "248dae77030f91f860eaf269bf7d1705a682a7717d84b4dc1a035e1be5d219e8"
+  end
+
+  depends_on "pkg-config" => :build
+  depends_on "dbus"
+  depends_on "dbus-glib"
+  depends_on :linux
+  depends_on "python@3.9"
+
+  def install
+    ENV["PYTHON"] = Formula["python@3.9"].opt_bin/"python3"
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
+                          "--disable-silent-rules",
+                          "--prefix=#{prefix}"
+    system "make", "install"
+  end
+
+  test do
+    system Formula["python@3.9"].opt_bin/"python3", "-c", "import dbus"
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bzip2" as i4, "dbus" as i5, "dbus-glib" as i6, "docbook" as i7, "docbook-xsl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gnu-getopt" as i13, "libffi" as i14, "libgcrypt" as i15, "libgpg-error" as i16, "libtool" as i17, "libxml2" as i18, "libxslt" as i19, "m4" as i20, "meson" as i21, "mpdecimal" as i22, "ncurses" as i23, "ninja" as i24, "openssl@1.1" as i25, "pcre" as i26, "perl" as i27, "pkg-config" as i28, "python@3.9" as i29, "readline" as i30, "sqlite" as i31, "unzip" as i32, "xmlto" as i33, "xz" as i34, "zip" as i35, "zlib" as i36
+
+pkg(
+  name: "python-dbus",
+  version: "1.2.14",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "python-dbus.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./python-dbus.rb")
+  }
+)

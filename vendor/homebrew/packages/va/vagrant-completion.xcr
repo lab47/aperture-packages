@@ -7,10 +7,6 @@ class VagrantCompletion < Formula
   license "MIT"
   head "https://github.com/hashicorp/vagrant.git"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "325bfccadee57150fad636b0ed58536dc47659556fbf34c9ca8ac88dde686e7d"
-  end
-
   def install
     bash_completion.install "contrib/bash/completion.sh" => "vagrant"
     zsh_completion.install "contrib/zsh/_vagrant"

@@ -65,6 +65,16 @@ class Gdal < Formula
   conflicts_with "cpl", because: "both install cpl_error.h"
 
   def install
+    # Fixes: error: inlining failed in call to always_inline __m128i _mm_shuffle_epi8
+    ENV.append_to_cflags "-msse4.1" if ENV["HOMEBREW_GITHUB_ACTIONS"]
+
+    unless OS.mac?
+      # The python build needs libgdal.so, which is located in .libs
+      ENV.append "LDFLAGS", "-L#{buildpath}/.libs"
+      # The python build needs gnm headers, which are located in the gnm folder
+      ENV.append "CFLAGS", "-I#{buildpath}/gnm"
+    end
+
     args = [
       # Base configuration
       "--prefix=#{prefix}",
@@ -72,7 +82,6 @@ class Gdal < Formula
       "--disable-debug",
       "--with-libtool",
       "--with-local=#{prefix}",
-      "--with-opencl",
       "--with-threads",
 
       # GDAL native backends
@@ -118,7 +127,6 @@ class Gdal < Formula
       "--without-mysql",
       "--without-perl",
       "--without-python",
-
       # Unsupported backends are either proprietary or have no compatible version
       # in Homebrew. Podofo is disabled because Poppler provides the same
       # functionality and then some.
@@ -179,12 +187,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cfitsio" as i8, "cmake" as i9, "curl" as i10, "cython" as i11, "doxygen" as i12, "epsilon" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "freexl" as i18, "gcc" as i19, "gdbm" as i20, "geos" as i21, "gettext" as i22, "giflib" as i23, "glib" as i24, "gmp" as i25, "gobject-introspection" as i26, "gperf" as i27, "hdf5" as i28, "help2man" as i29, "isl" as i30, "jemalloc" as i31, "jpeg" as i32, "json-c" as i33, "krb5" as i34, "libdap" as i35, "libev" as i36, "libffi" as i37, "libgeotiff" as i38, "libidn2" as i39, "libmetalink" as i40, "libmpc" as i41, "libpng" as i42, "libpq" as i43, "libpthread-stubs" as i44, "librttopo" as i45, "libspatialite" as i46, "libssh2" as i47, "libtiff" as i48, "libtool" as i49, "libunistring" as i50, "libx11" as i51, "libxau" as i52, "libxcb" as i53, "libxdmcp" as i54, "libxext" as i55, "libxml2" as i56, "libxrender" as i57, "libyaml" as i58, "little-cms2" as i59, "lzo" as i60, "m4" as i61, "meson" as i62, "minizip" as i63, "mpdecimal" as i64, "mpfr" as i65, "ncurses" as i66, "netcdf" as i67, "nghttp2" as i68, "ninja" as i69, "nspr" as i70, "nss" as i71, "numpy" as i72, "openblas" as i73, "openjpeg" as i74, "openldap" as i75, "openssl@1.1" as i76, "pcre" as i77, "perl" as i78, "pixman" as i79, "pkg-config" as i80, "poppler" as i81, "popt" as i82, "proj@7" as i83, "python@3.9" as i84, "qt@5" as i85, "readline" as i86, "rtmpdump" as i87, "ruby" as i88, "sphinx-doc" as i89, "sqlite" as i90, "swig" as i91, "szip" as i92, "unixodbc" as i93, "unzip" as i94, "util-macros" as i95, "webp" as i96, "xcb-proto" as i97, "xerces-c" as i98, "xorgproto" as i99, "xtrans" as i100, "xz" as i101, "zip" as i102, "zlib" as i103, "zstd" as i104
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cfitsio" as i8, "cmake" as i9, "curl" as i10, "cython" as i11, "doxygen" as i12, "epsilon" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "freexl" as i18, "gcc" as i19, "gdbm" as i20, "geos" as i21, "gettext" as i22, "giflib" as i23, "glib" as i24, "gmp" as i25, "gobject-introspection" as i26, "gperf" as i27, "hdf5" as i28, "help2man" as i29, "isl" as i30, "jemalloc" as i31, "jpeg" as i32, "json-c" as i33, "krb5" as i34, "libdap" as i35, "libev" as i36, "libffi" as i37, "libgeotiff" as i38, "libidn2" as i39, "libmpc" as i40, "libpng" as i41, "libpq" as i42, "libpthread-stubs" as i43, "librttopo" as i44, "libspatialite" as i45, "libssh2" as i46, "libtiff" as i47, "libtool" as i48, "libunistring" as i49, "libx11" as i50, "libxau" as i51, "libxcb" as i52, "libxdmcp" as i53, "libxext" as i54, "libxml2" as i55, "libxrender" as i56, "libyaml" as i57, "little-cms2" as i58, "lzo" as i59, "m4" as i60, "meson" as i61, "minizip" as i62, "mpdecimal" as i63, "mpfr" as i64, "ncurses" as i65, "netcdf" as i66, "nghttp2" as i67, "ninja" as i68, "nspr" as i69, "nss" as i70, "numpy" as i71, "openblas" as i72, "openjpeg" as i73, "openldap" as i74, "openssl@1.1" as i75, "pcre" as i76, "perl" as i77, "pixman" as i78, "pkg-config" as i79, "poppler" as i80, "popt" as i81, "proj@7" as i82, "python@3.9" as i83, "qt@5" as i84, "readline" as i85, "rtmpdump" as i86, "ruby" as i87, "sphinx-doc" as i88, "sqlite" as i89, "swig" as i90, "szip" as i91, "unixodbc" as i92, "unzip" as i93, "util-macros" as i94, "webp" as i95, "xcb-proto" as i96, "xerces-c" as i97, "xorgproto" as i98, "xtrans" as i99, "xz" as i100, "zip" as i101, "zlib" as i102, "zstd" as i103
 
 pkg(
   name: "gdal",
   version: "3.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdal.rb"), formula)

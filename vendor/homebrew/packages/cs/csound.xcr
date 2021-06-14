@@ -3,10 +3,9 @@ class Csound < Formula
   desc "Sound and music computing system"
   homepage "https://csound.com"
   url "https://github.com/csound/csound.git",
-      tag:      "6.15.0",
-      revision: "18c2c7897425f462b9a7743cee157cb410c88198"
+      tag:      "6.16.0",
+      revision: "692f18d90774157b3d8a2276d68fbaefb25dfb08"
   license "LGPL-2.1-or-later"
-  revision 4
   head "https://github.com/csound/csound.git", branch: "develop"
 
   livecheck do
@@ -15,26 +14,23 @@ class Csound < Formula
   end
 
   bottle do
-    sha256 big_sur:  "cd7229bcb6dd8b392641af2cf3590a75b98c1f37d6b48c46cdcb06b5508b10f6"
-    sha256 catalina: "0376c79adfaa8db7ea5ae58ae1b7a46c03bf1243fa04ec944f8b8699d57872be"
-    sha256 mojave:   "f2fcfd3dcb10ac3e02920f006b4c09e39365ea4da09c7322b825a766c0e5ec8a"
+    sha256 big_sur:  "03edf78cc35902c0a7fbf4bba475fb83c579e23d818ceb00b545c761fbf1710f"
+    sha256 catalina: "6940b984abbd25baa26a504a6b7d50734ab7d4890157c5e2a3697e178a0bf238"
+    sha256 mojave:   "d25bcc2c82b42e3a6b53042bd19f521a544b33a1395fd59a92ca365136d76ca4"
   end
 
   depends_on "asio" => :build
   depends_on "cmake" => :build
   depends_on "eigen" => :build
   depends_on "swig" => :build
-  depends_on "faust"
   depends_on "fltk"
   depends_on "fluid-synth"
   depends_on "gettext"
   depends_on "hdf5"
   depends_on "jack"
   depends_on "liblo"
-  depends_on "libpng"
   depends_on "libsamplerate"
   depends_on "libsndfile"
-  depends_on :macos # Due to Python 2
   depends_on "numpy"
   depends_on "openjdk"
   depends_on "portaudio"
@@ -50,11 +46,6 @@ class Csound < Formula
   conflicts_with "libextractor", because: "both install `extract` binaries"
   conflicts_with "pkcrack", because: "both install `extract` binaries"
 
-  resource "ableton-link" do
-    url "https://github.com/Ableton/link/archive/Link-3.0.3.tar.gz"
-    sha256 "195b46f7a33bb88800de19bb08065ec0235e5a920d203a4b2c644c18fbcaff11"
-  end
-
   resource "getfem" do
     url "https://download.savannah.gnu.org/releases/getfem/stable/getfem-5.4.1.tar.gz"
     sha256 "6b58cc960634d0ecf17679ba12f8e8cfe4e36b25a5fa821925d55c42ff38a64e"
@@ -63,16 +54,12 @@ class Csound < Formula
   def install
     ENV["JAVA_HOME"] = Formula["openjdk"].libexec/"openjdk.jdk/Contents/Home"
 
-    resource("ableton-link").stage { cp_r "include/ableton", buildpath }
     resource("getfem").stage { cp_r "src/gmm", buildpath }
 
     args = std_cmake_args + %W[
-      -DABLETON_LINK_HOME=#{buildpath}/ableton
-      -DBUILD_ABLETON_LINK_OPCODES=ON
       -DBUILD_JAVA_INTERFACE=ON
       -DBUILD_LINEAR_ALGEBRA_OPCODES=ON
       -DBUILD_LUA_INTERFACE=OFF
-      -DBUILD_PYTHON_INTERFACE=OFF
       -DBUILD_WEBSOCKET_OPCODE=OFF
       -DCMAKE_INSTALL_RPATH=#{frameworks}
       -DCS_FRAMEWORK_DEST=#{frameworks}
@@ -111,14 +98,9 @@ class Csound < Formula
   test do
     (testpath/"test.orc").write <<~EOS
       0dbfs = 1
-      gi_peer link_create
-      gi_programHandle faustcompile "process = _;", "--vectorize --loop-variant 1"
       FLrun
       gi_fluidEngineNumber fluidEngine
-      gi_image imagecreate 1, 1
       gi_realVector la_i_vr_create 1
-      pyinit
-      pyruni "print('hello, world')"
       instr 1
           a_, a_, a_ chuap 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
           a_signal STKPlucked 440, 1
@@ -138,7 +120,6 @@ class Csound < Formula
     ENV["SADIR"] = frameworks/"CsoundLib64.framework/Versions/Current/samples"
 
     output = shell_output "#{bin}/csound test.orc test.sco 2>&1"
-    assert_match(/^hello, world$/, output)
     assert_match(/^rtaudio:/, output)
     assert_match(/^rtmidi:/, output)
 
@@ -175,12 +156,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "faust" as i4, "fltk" as i5, "fluid-synth" as i6, "gettext" as i7, "hdf5" as i8, "jack" as i9, "liblo" as i10, "libpng" as i11, "libsamplerate" as i12, "libsndfile" as i13, "numpy" as i14, "openjdk" as i15, "portaudio" as i16, "portmidi" as i17, "stk" as i18, "wiiuse" as i19, "bison" as i20, "flex" as i21, "curl" as i22, "zlib" as i23
+import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "fltk" as i4, "fluid-synth" as i5, "gettext" as i6, "hdf5" as i7, "jack" as i8, "liblo" as i9, "libsamplerate" as i10, "libsndfile" as i11, "numpy" as i12, "openjdk" as i13, "portaudio" as i14, "portmidi" as i15, "stk" as i16, "wiiuse" as i17, "bison" as i18, "flex" as i19, "curl" as i20, "zlib" as i21
 
 pkg(
   name: "csound",
-  version: "6.15.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  version: "6.16.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "csound.rb"), formula)

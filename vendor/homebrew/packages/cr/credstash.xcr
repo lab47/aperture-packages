@@ -7,14 +7,15 @@ class Credstash < Formula
   url "https://files.pythonhosted.org/packages/b4/89/f929fda5fec87046873be2420a4c0cb40a82ab5e30c6d9cb22ddec41450b/credstash-1.17.1.tar.gz"
   sha256 "6c04e8734ef556ab459018da142dd0b244093ef176b3be5583e582e9a797a120"
   license "Apache-2.0"
-  revision 3
+  revision OS.mac? ? 3 : 5
   head "https://github.com/fugue/credstash.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "7e4514215fac5cf99ec2ba21cc03b842b8bd3d2e8a8524652ef81a5e166bef72"
-    sha256 cellar: :any, big_sur:       "27bc34fa6578e146ca526ff681155adc84b2828e125945c8e50b72c5777cc6d0"
-    sha256 cellar: :any, catalina:      "c2ff23a42764f182a5e9095e7f0f7481c0340bc9880378981a34d11ecd719c36"
-    sha256 cellar: :any, mojave:        "affbd6157312a59711b4b8d853a68885979c8bb230dd46bb983e1c3228d15f78"
+    sha256 cellar: :any,                 arm64_big_sur: "7e4514215fac5cf99ec2ba21cc03b842b8bd3d2e8a8524652ef81a5e166bef72"
+    sha256 cellar: :any,                 big_sur:       "27bc34fa6578e146ca526ff681155adc84b2828e125945c8e50b72c5777cc6d0"
+    sha256 cellar: :any,                 catalina:      "c2ff23a42764f182a5e9095e7f0f7481c0340bc9880378981a34d11ecd719c36"
+    sha256 cellar: :any,                 mojave:        "affbd6157312a59711b4b8d853a68885979c8bb230dd46bb983e1c3228d15f78"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8b5b5f61f704e94cd520eef4f50d45cb9f45c38939c13ccfd901263c4237369f"
   end
 
   depends_on "rust" => :build
@@ -93,12 +94,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libmetalink" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "rtmpdump" as i28, "rust" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "rtmpdump" as i27, "rust" as i28, "sphinx-doc" as i29, "sqlite" as i30, "unzip" as i31, "xz" as i32, "zip" as i33, "zlib" as i34, "zstd" as i35
 
 pkg(
   name: "credstash",
   version: "1.17.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "credstash.rb"), formula)

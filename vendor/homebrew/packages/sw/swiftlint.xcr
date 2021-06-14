@@ -15,6 +15,7 @@ class Swiftlint < Formula
   end
 
   depends_on xcode: ["11.4", :build]
+  depends_on :macos
   depends_on xcode: "8.0"
 
   def install

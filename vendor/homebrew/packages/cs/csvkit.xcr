@@ -7,7 +7,7 @@ class Csvkit < Formula
   url "https://files.pythonhosted.org/packages/95/c9/8dd118c0ea0114125a8bf50d552626b95f6478bcf29a252296e93d778855/csvkit-1.0.5.tar.gz"
   sha256 "7bd390f4d300e45dc9ed67a32af762a916bae7d9a85087a10fd4f64ce65fd5b9"
   license "MIT"
-  revision 2
+  revision OS.mac? ? 2 : 3
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "8812320438211d768b409cf59c399ca917f753154bc296d0d85101676296477e"
@@ -15,6 +15,7 @@ class Csvkit < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "28ca16e9f55957f60f3232bf41438cbda76377ef9d8a9e0777e62b4a4a098112"
     sha256 cellar: :any_skip_relocation, mojave:        "1dfc57c5959b07aa05e887cf092d86ac9313c9c6483887769813160486752987"
     sha256 cellar: :any_skip_relocation, high_sierra:   "bfd1c74b64412f63e290d9a4146ee3131eb71fc3acb354484e2e4520e293180b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "811c3348dba118ff9861b66a869b2c8d45369255a054df9990b06bd23e4279ae"
   end
 
   depends_on "python@3.9"

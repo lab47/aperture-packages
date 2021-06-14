@@ -7,7 +7,7 @@ class AdrTools < Formula
   license "CC-BY-4.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "d485a50e9f6fb41e81d634818d96a37836816ac09d4dcd436a5ac5e43da98131"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "cd9f8e39616798db8ae97d74123fc7f4179f84b8954c232da4b2ecbb6516c8a1"
   end
 
   def install

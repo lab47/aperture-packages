@@ -2,9 +2,8 @@ formula = r"""
 class Consul < Formula
   desc "Tool for service discovery, monitoring and configuration"
   homepage "https://www.consul.io"
-  url "https://github.com/hashicorp/consul.git",
-      tag:      "v1.9.5",
-      revision: "3c1c22679e9ca097211b3b6602da2e95a5d4401b"
+  url "https://github.com/hashicorp/consul/archive/refs/tags/v1.9.6.tar.gz"
+  sha256 "6e3c59057d43e9c614cde19499ef70d49e93f1978eb918022721abee7bc19ed8"
   license "MPL-2.0"
   head "https://github.com/hashicorp/consul.git"
 
@@ -14,36 +13,18 @@ class Consul < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, big_sur:  "043b458e21eae9cdfc7876df78cf7902629d63b17a2d3b95705e3e3181b7f1e7"
-    sha256 cellar: :any_skip_relocation, catalina: "233b60bc1fd40524e011cf99b0b41ebc3e924b6d0ea46866760eca6c7702f256"
-    sha256 cellar: :any_skip_relocation, mojave:   "db6e019e1ec3ba55f5ba82482d61870e35c016c9172d41ed540e8c946d43f6d1"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "93d26413de8d34ef62d48c26001e3cc9877ec53f08b32751d13f1f7d64bdd84f"
+    sha256 cellar: :any_skip_relocation, big_sur:       "4363d22cedf3fd80695c920272f6162efb8115cd991206193d12dcbda4bbe3a1"
+    sha256 cellar: :any_skip_relocation, catalina:      "b09c0cc0d6eadccb2fd92ed30a81319cef6ec2c8e7e83b86de1d0db74c12f032"
+    sha256 cellar: :any_skip_relocation, mojave:        "cc9eff66d8f762f3d774aeff553aa5a9e33d054a11ab0a02cfde8d0c7ef61749"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "e4425f2acb53b717e946aa2f256cfce60cd7cff5967b096b21306599aca00c85"
   end
 
   depends_on "go" => :build
-  depends_on "gox" => :build
-
-  uses_from_macos "zip" => :build
 
   def install
-    # Specificy the OS, else all platforms will be built
-    on_macos do
-      ENV["XC_OS"] = "darwin"
-    end
-    on_linux do
-      ENV["XC_OS"] = "linux"
-    end
-    ENV["XC_ARCH"] = "amd64"
-    ENV["GOPATH"] = buildpath
-    contents = Dir["{*,.git,.gitignore}"]
-    (buildpath/"src/github.com/hashicorp/consul").install contents
-
-    (buildpath/"bin").mkpath
-
-    cd "src/github.com/hashicorp/consul" do
-      system "make"
-      bin.install "bin/consul"
-      prefix.install_metafiles
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w")
   end
 
   plist_options manual: "consul agent -dev -bind 127.0.0.1"
@@ -114,12 +95,12 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0, "gox" as i1, "zip" as i2
+import "go" as i0
 
 pkg(
   name: "consul",
-  version: "1.9.5",
-  dependencies: [hi, i0, i1, i2],
+  version: "1.9.6",
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "consul.rb"), formula)

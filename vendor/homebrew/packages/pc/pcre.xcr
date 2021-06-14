@@ -18,6 +18,7 @@ class Pcre < Formula
     sha256 cellar: :any, catalina:      "f8ac266e04f984fa55091a43f0fdc39a40d57c2489d289a186c88ccedaba7eeb"
     sha256 cellar: :any, mojave:        "ed9b483538da7bc6559d2e63dd36659736fab9510681661d970d707a18731de4"
     sha256 cellar: :any, high_sierra:   "aeea1351e1439847d00c3cee54bd28639493e686f809568cf42fea7bb28da2a5"
+    sha256 cellar: :any, x86_64_linux:  "e09f36059975d108b0e42fa9d69b9ed25bc81bc25371dcee58134ad7416a6a61"
   end
 
   head do

@@ -2,12 +2,14 @@ formula = r"""
 class Spaceship < Formula
   desc "Zsh prompt for Astronauts"
   homepage "https://denysdovhan.com/spaceship-prompt"
-  url "https://github.com/denysdovhan/spaceship-prompt/archive/v3.11.2.tar.gz"
-  sha256 "8a4ed8fd84378a3f6566355a06eb877cd217afc48be69dee08041fd5e46b8e2d"
+  url "https://github.com/denysdovhan/spaceship-prompt/archive/v3.12.4.tar.gz"
+  sha256 "399f828842b6c2ada6a078b46750bfbbcd4158400731db2c1511814ed6a9beb3"
   license "MIT"
   head "https://github.com/denysdovhan/spaceship-prompt.git"
 
-  bottle :unneeded
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9e571d7006d3dcd476affa403bbf2c861a96aea015714ee9e010027f2b050dab"
+  end
 
   depends_on "zsh" => :test
 
@@ -29,7 +31,7 @@ import "homebrew-install" as hi
 
 pkg(
   name: "spaceship",
-  version: "3.11.2",
+  version: "3.12.4",
   dependencies: [hi],
 
   def install(ctx) {

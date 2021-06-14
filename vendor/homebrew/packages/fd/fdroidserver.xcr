@@ -9,10 +9,11 @@ class Fdroidserver < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ab60544b3cad381e7a238b21a894f8f7071a5f7472a143887cea59e2394f15f8"
-    sha256 cellar: :any, big_sur:       "5a8587dca17252d8606cfe95576d42a472abaa6dccd63a05a17111f4087d7062"
-    sha256 cellar: :any, catalina:      "3c811ae6452e2a3414253697d6485106852ea58dfb98835ec3d8ca98aead0c0b"
-    sha256 cellar: :any, mojave:        "34d6924287d6d4bf4cfd02d348c9e6005245e0bf1033c214c5bcac592d91ad84"
+    sha256 cellar: :any,                 arm64_big_sur: "ab60544b3cad381e7a238b21a894f8f7071a5f7472a143887cea59e2394f15f8"
+    sha256 cellar: :any,                 big_sur:       "5a8587dca17252d8606cfe95576d42a472abaa6dccd63a05a17111f4087d7062"
+    sha256 cellar: :any,                 catalina:      "3c811ae6452e2a3414253697d6485106852ea58dfb98835ec3d8ca98aead0c0b"
+    sha256 cellar: :any,                 mojave:        "34d6924287d6d4bf4cfd02d348c9e6005245e0bf1033c214c5bcac592d91ad84"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8f387d99e49b6a9db4564d77f618e624ead31e8d6d5e45a6b66396a514af4210"
   end
 
   depends_on "pkg-config" => :build
@@ -31,6 +32,13 @@ class Fdroidserver < Formula
   uses_from_macos "libxslt"
   uses_from_macos "zlib"
 
+  on_macos do
+    resource "appnope" do
+      url "https://files.pythonhosted.org/packages/e9/bc/2d2c567fe5ac1924f35df879dbf529dd7e7cabd94745dc9d89024a934e76/appnope-0.1.2.tar.gz"
+      sha256 "dd83cd4b5b460958838f6eb3000c660b1f9caf2a5b1de4264e941512f603258a"
+    end
+  end
+
   resource "androguard" do
     url "https://files.pythonhosted.org/packages/83/78/0f44e8f0fd10493b3118d79d60599c93e5a2cd378d83054014600a620cba/androguard-3.3.5.tar.gz"
     sha256 "f0655ca3a5add74c550951e79bd0bebbd1c5b239178393d30d8db0bd3202cda2"
@@ -39,11 +47,6 @@ class Fdroidserver < Formula
   resource "apache-libcloud" do
     url "https://files.pythonhosted.org/packages/39/e0/64f54da78a1856713810e7b5f540fec53582ca91afaab0568ed44527d4fe/apache-libcloud-3.3.1.tar.gz"
     sha256 "d7450453eaf5904eb4fb4f74cf9f37dc83721a719bce34f5abb336b1a1ab974d"
-  end
-
-  resource "appnope" do
-    url "https://files.pythonhosted.org/packages/e9/bc/2d2c567fe5ac1924f35df879dbf529dd7e7cabd94745dc9d89024a934e76/appnope-0.1.2.tar.gz"
-    sha256 "dd83cd4b5b460958838f6eb3000c660b1f9caf2a5b1de4264e941512f603258a"
   end
 
   resource "args" do
@@ -337,11 +340,17 @@ class Fdroidserver < Formula
 
     resource("Pillow").stage do
       inreplace "setup.py" do |s|
-        sdkprefix = MacOS.sdk_path_if_needed ? MacOS.sdk_path : ""
         s.gsub! "openjpeg.h", "probably_not_a_header_called_this_eh.h"
         s.gsub! "xcb.h", "probably_not_a_header_called_this_eh.h"
-        s.gsub! "ZLIB_ROOT = None",
-                "ZLIB_ROOT = ('#{sdkprefix}/usr/lib', '#{sdkprefix}/usr/include')"
+        on_macos do
+          sdkprefix = MacOS.sdk_path_if_needed ? MacOS.sdk_path : ""
+          s.gsub! "ZLIB_ROOT = None",
+                  "ZLIB_ROOT = ('#{sdkprefix}/usr/lib', '#{sdkprefix}/usr/include')"
+        end
+        on_linux do
+          zlib = Formula["zlib"].opt_prefix
+          s.gsub! "ZLIB_ROOT = None", "ZLIB_ROOT = ('#{zlib}/lib', '#{zlib}/include')"
+        end
         s.gsub! "JPEG_ROOT = None",
                 "JPEG_ROOT = ('#{Formula["jpeg"].opt_prefix}/lib', '#{Formula["jpeg"].opt_prefix}/include')"
         s.gsub! "FREETYPE_ROOT = None",
@@ -425,12 +434,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "cython" as i9, "expat" as i10, "freetype" as i11, "gcc" as i12, "gdbm" as i13, "gettext" as i14, "gmp" as i15, "isl" as i16, "jemalloc" as i17, "jpeg" as i18, "krb5" as i19, "libev" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libmetalink" as i25, "libmpc" as i26, "libpng" as i27, "libssh2" as i28, "libtiff" as i29, "libtool" as i30, "libunistring" as i31, "libxml2" as i32, "libxslt" as i33, "m4" as i34, "mpdecimal" as i35, "mpfr" as i36, "ncurses" as i37, "nghttp2" as i38, "ninja" as i39, "numpy" as i40, "openblas" as i41, "openldap" as i42, "openssl@1.1" as i43, "perl" as i44, "pkg-config" as i45, "python@3.7" as i46, "python@3.8" as i47, "python@3.9" as i48, "readline" as i49, "rtmpdump" as i50, "rust" as i51, "s3cmd" as i52, "six" as i53, "sphinx-doc" as i54, "sqlite" as i55, "tcl-tk" as i56, "unzip" as i57, "webp" as i58, "xz" as i59, "zip" as i60, "zlib" as i61, "zstd" as i62
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "cython" as i9, "expat" as i10, "freetype" as i11, "gcc" as i12, "gdbm" as i13, "gettext" as i14, "gmp" as i15, "isl" as i16, "jemalloc" as i17, "jpeg" as i18, "krb5" as i19, "libev" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libmpc" as i25, "libpng" as i26, "libssh2" as i27, "libtiff" as i28, "libtool" as i29, "libunistring" as i30, "libxml2" as i31, "libxslt" as i32, "m4" as i33, "mpdecimal" as i34, "mpfr" as i35, "ncurses" as i36, "nghttp2" as i37, "ninja" as i38, "numpy" as i39, "openblas" as i40, "openldap" as i41, "openssl@1.1" as i42, "perl" as i43, "pkg-config" as i44, "python@3.7" as i45, "python@3.8" as i46, "python@3.9" as i47, "readline" as i48, "rtmpdump" as i49, "rust" as i50, "s3cmd" as i51, "six" as i52, "sphinx-doc" as i53, "sqlite" as i54, "tcl-tk" as i55, "unzip" as i56, "webp" as i57, "xz" as i58, "zip" as i59, "zlib" as i60, "zstd" as i61
 
 pkg(
   name: "fdroidserver",
   version: "2.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fdroidserver.rb"), formula)

@@ -7,19 +7,21 @@ class CharmTools < Formula
   url "https://files.pythonhosted.org/packages/24/05/211a1656f72908afa84635c9a0b73aebf4edfcc1a3c5c0d71ec96bf20068/charm-tools-2.8.3.tar.gz"
   sha256 "ff03c7fd61ce1355f02845c9631ecd01828dfabc29a94566d74f2b35e6d3ea68"
   license "GPL-3.0-only"
+  revision 1
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b14eda65739706c3b18061b9ea08ce963f0d43d5c64829a0baeb42c95cf566f2"
-    sha256 cellar: :any, big_sur:       "b174a401458fb0574b263bd51ee4f055f0595a0a380d28ddebb6de0e201a8702"
-    sha256 cellar: :any, catalina:      "ec4c42bd27b33958b2fe10a0dc000147a099a72dde3a313e77d88640ca1b1a32"
-    sha256 cellar: :any, mojave:        "95ca45689f0233c756a6979e5e19404d14d705a2fd69b74c6b1cda6d3fe157c4"
+    sha256 cellar: :any,                 arm64_big_sur: "fa2b66df536d7dfcbc8a1c4bd39041d9ac81e020f73df6b35d4f2b11ddcd36bf"
+    sha256 cellar: :any,                 big_sur:       "52fb27e5b556bda249207b1454ea7f6675436bff7f8d2e8317b60be8923f6f05"
+    sha256 cellar: :any,                 catalina:      "c26679e35ae3c0bb6df73caa21f05a58b35980fc38015747f2b5975c19f7d9fc"
+    sha256 cellar: :any,                 mojave:        "6553133ded25bc0e4b5db4b94724414591ddf6d7d64eeaf90b21de3b2047d22d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "075025f5eb778e5fd24372ac1f1eecb7c215a2ec0ddf1db4901aa0a84257e693"
   end
 
   depends_on "rust" => :build
   depends_on "charm"
   depends_on "libyaml"
   depends_on "openssl@1.1"
-  depends_on "python@3.8"
+  depends_on "python@3.9"
 
   uses_from_macos "libffi"
 
@@ -301,12 +303,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "charm" as i1, "libyaml" as i2, "openssl@1.1" as i3, "python@3.8" as i4, "libffi" as i5
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "charm" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "go" as i13, "jemalloc" as i14, "krb5" as i15, "libev" as i16, "libffi" as i17, "libidn2" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "libyaml" as i23, "m4" as i24, "mpdecimal" as i25, "ncurses" as i26, "nghttp2" as i27, "ninja" as i28, "openldap" as i29, "openssl@1.1" as i30, "perl" as i31, "pkg-config" as i32, "python@3.9" as i33, "readline" as i34, "rtmpdump" as i35, "rust" as i36, "sphinx-doc" as i37, "sqlite" as i38, "unzip" as i39, "xz" as i40, "zip" as i41, "zlib" as i42, "zstd" as i43
 
 pkg(
   name: "charm-tools",
   version: "2.8.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "charm-tools.rb"), formula)

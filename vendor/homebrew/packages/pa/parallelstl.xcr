@@ -8,10 +8,6 @@ class Parallelstl < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   revision 1
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "3467deb5b4e2b46b8ecdaa4930c6e01ae4f432b01648e04912ff2bd8d9737e4b"
-  end
-
   depends_on "cmake" => :build
   depends_on "tbb@2020"
 

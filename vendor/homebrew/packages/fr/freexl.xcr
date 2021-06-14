@@ -16,6 +16,7 @@ class Freexl < Formula
     sha256 cellar: :any, catalina:      "4bac859e3460476137f1596a36015e9c0d3e1d2b46a9aa47171cabf7af5f5d71"
     sha256 cellar: :any, mojave:        "68d9f5926df0ca43cfda25423a405b837de81575eec025944f6ec67611422742"
     sha256 cellar: :any, high_sierra:   "959ce4d49a7419b01acf9e66c9d0f77a213c067f723b87d08ac6aaa21d054fe9"
+    sha256 cellar: :any, x86_64_linux:  "54cc925c2d21793f5e39435d1153ac763b82a1969394eaf7a7ca35a78cb098a0"
   end
 
   depends_on "doxygen" => :build
@@ -42,7 +43,11 @@ class Freexl < Formula
           return 0;
       }
     EOS
-    system ENV.cc, "-L#{lib}", "-lfreexl", "test.c", "-o", "test"
+    if ENV.cc == "clang"
+      system ENV.cc, "-L#{lib}", "-lfreexl", "test.c", "-o", "test"
+    else
+      system ENV.cc, "test.c", "-L#{lib}", "-lfreexl", "-o", "test"
+    end
     assert_equal version.to_s, shell_output("./test")
   end
 end

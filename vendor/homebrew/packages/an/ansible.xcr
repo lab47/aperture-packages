@@ -10,10 +10,11 @@ class Ansible < Formula
   head "https://github.com/ansible/ansible.git", branch: "devel"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "f3d02ebdc94766be98d831e81a1f8ad78511dd6586a15ef8d0623aeba8cbdc45"
-    sha256 cellar: :any, big_sur:       "333512070bfe45820482f51ffe3242fee0b82aa8bc4717230fc671466d82bf3b"
-    sha256 cellar: :any, catalina:      "b83d560e9bc4d348148de28aa849fec23979e5cea7d8f03974c3949858d23b81"
-    sha256 cellar: :any, mojave:        "f4fa25b71e80ba57757393e3667cc51308faf3cc55828431050414812a9c779c"
+    sha256 cellar: :any,                 arm64_big_sur: "f3d02ebdc94766be98d831e81a1f8ad78511dd6586a15ef8d0623aeba8cbdc45"
+    sha256 cellar: :any,                 big_sur:       "333512070bfe45820482f51ffe3242fee0b82aa8bc4717230fc671466d82bf3b"
+    sha256 cellar: :any,                 catalina:      "b83d560e9bc4d348148de28aa849fec23979e5cea7d8f03974c3949858d23b81"
+    sha256 cellar: :any,                 mojave:        "f4fa25b71e80ba57757393e3667cc51308faf3cc55828431050414812a9c779c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "30549a0690638c1a64b16bce609c18db8b6cf1d01c8e3ff6c0f5853bffd572aa"
   end
 
   depends_on "pkg-config" => :build
@@ -650,12 +651,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libgcrypt" as i16, "libgpg-error" as i17, "libidn2" as i18, "libmetalink" as i19, "libssh2" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "libxslt" as i24, "libyaml" as i25, "m4" as i26, "mpdecimal" as i27, "ncurses" as i28, "nghttp2" as i29, "ninja" as i30, "openldap" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "rtmpdump" as i37, "rust" as i38, "sphinx-doc" as i39, "sqlite" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44, "zstd" as i45
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libgcrypt" as i16, "libgpg-error" as i17, "libidn2" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "libxslt" as i23, "libyaml" as i24, "m4" as i25, "mpdecimal" as i26, "ncurses" as i27, "nghttp2" as i28, "ninja" as i29, "openldap" as i30, "openssl@1.1" as i31, "perl" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "rtmpdump" as i36, "rust" as i37, "sphinx-doc" as i38, "sqlite" as i39, "unzip" as i40, "xz" as i41, "zip" as i42, "zlib" as i43, "zstd" as i44
 
 pkg(
   name: "ansible",
   version: "4.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible.rb"), formula)

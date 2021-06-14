@@ -7,7 +7,7 @@ class Desk < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "b2da60c73f101b56b6a5ac51ed46427c68cf0194d7229755b4b25a215b1f0c1a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "584bb3f6a1891f3f2d3dca6c96df0643bf22be40544907c4338baaf07902821c"
   end
 
   def install

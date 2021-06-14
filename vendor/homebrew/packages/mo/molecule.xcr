@@ -4,15 +4,16 @@ class Molecule < Formula
 
   desc "Automated testing for Ansible roles"
   homepage "https://molecule.readthedocs.io"
-  url "https://files.pythonhosted.org/packages/56/87/f35c28aabe1e4a7d6e234b49ced74b5aa73b3de1b78224743132ddbbdb92/molecule-3.3.3.tar.gz"
-  sha256 "cb413639f19a3f805bc8ebcbba51e254381a15128ce5a5322e6733de26602b2d"
+  url "https://files.pythonhosted.org/packages/ba/e3/d46af4bc3ef85ccebe4f573b4f2c5429ef2b24fdb57f071bf7187dfefe04/molecule-3.3.4.tar.gz"
+  sha256 "5794d0b39e695c4544c714ac90ab90901f22d8c9f623c2fee665b8b2dc2ce6cc"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "c97baece25ac52250e9571c99f527d389217ec9a697f4a40fcd391718db6e23c"
-    sha256 cellar: :any, big_sur:       "e09202808414b7aa79e20cb806aff220b559a34dd286ab5d812c436c069b7cc2"
-    sha256 cellar: :any, catalina:      "50852a71b651e6dcf4f3b27a2542db405693aae22e5883ed5363194b5b570ea3"
-    sha256 cellar: :any, mojave:        "67562d1a22ef2b83c356192395c6e0f89ad2209d3571893651ba3f709c72b075"
+    sha256 cellar: :any,                 arm64_big_sur: "c105d19533a2d86d905b055cfa8ca1d23a28ab663fafe0d2ccbee57f3f21c52b"
+    sha256 cellar: :any,                 big_sur:       "3f57acb83ba22d358afebf9c737112bc50ecca2e590805fdb7833982b103eeeb"
+    sha256 cellar: :any,                 catalina:      "149f16037510bf1e2c2c7094750c6880308e7ce41ec9ab5ae8560c54f9ea2ee1"
+    sha256 cellar: :any,                 mojave:        "e9a863066e28643df1351de7006a5f03bc1d349c246d0e8e724ccd4742182d63"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "6f9a120a8f29fe646ffd9518515607b614a423696141085fdf67b4a772eb4246"
   end
 
   depends_on "rust" => :build
@@ -38,8 +39,8 @@ class Molecule < Formula
   end
 
   resource "ansible-lint" do
-    url "https://files.pythonhosted.org/packages/97/24/11394bf9ba617dd64f6b4042a4e5d49a219e52ec1dc7eb3f891da2a35a0f/ansible-lint-5.0.11.tar.gz"
-    sha256 "c41f398c5a3faaab0481ec988ed42221d9f2de48da1acb06f261546349a870c0"
+    url "https://files.pythonhosted.org/packages/f5/e9/b359bd8b6581734f958a2704d1e8201647fdc99b5ae87fabf97874d91a34/ansible-lint-5.0.12.tar.gz"
+    sha256 "f2b0b74bd05cf55f0bb45304767e1862ed62c05def06e1f03aa2c2d39c67907c"
   end
 
   resource "arrow" do
@@ -233,8 +234,8 @@ class Molecule < Formula
   end
 
   resource "subprocess-tee" do
-    url "https://files.pythonhosted.org/packages/79/2a/cc70df8ca362c39fe5ad84e9cd175f886bf65a68a697778e8a9935770e45/subprocess-tee-0.3.1.tar.gz"
-    sha256 "518b59a4cd51573749c8f063a675ff9b4ee3370742ee1d7078c2a8b73bad2567"
+    url "https://files.pythonhosted.org/packages/3d/a6/3cb11b15c3f5abc8f5159272a4db0f60492570e9b4eefbad3d36876ea40a/subprocess-tee-0.3.2.tar.gz"
+    sha256 "62de360f2014dff831ac6dfb4fedca9c0c0d83bf20c2ac58dac894ca2afa6005"
   end
 
   resource "tenacity" do
@@ -284,12 +285,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ansible" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libmetalink" as i20, "libssh2" as i21, "libtool" as i22, "libunistring" as i23, "libxml2" as i24, "libxslt" as i25, "libyaml" as i26, "m4" as i27, "mpdecimal" as i28, "ncurses" as i29, "nghttp2" as i30, "ninja" as i31, "openldap" as i32, "openssl@1.1" as i33, "perl" as i34, "pkg-config" as i35, "python@3.9" as i36, "readline" as i37, "rtmpdump" as i38, "rust" as i39, "sphinx-doc" as i40, "sqlite" as i41, "unzip" as i42, "xz" as i43, "zip" as i44, "zlib" as i45, "zstd" as i46
+import "ansible" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libssh2" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "libxslt" as i24, "libyaml" as i25, "m4" as i26, "mpdecimal" as i27, "ncurses" as i28, "nghttp2" as i29, "ninja" as i30, "openldap" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "rtmpdump" as i37, "rust" as i38, "sphinx-doc" as i39, "sqlite" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44, "zstd" as i45
 
 pkg(
   name: "molecule",
-  version: "3.3.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
+  version: "3.3.4",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "molecule.rb"), formula)

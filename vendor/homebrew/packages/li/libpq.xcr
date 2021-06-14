@@ -16,6 +16,7 @@ class Libpq < Formula
     sha256 big_sur:       "151bc976994fc3373e6bfd47fcacd20b66724066148d6e6774e84608af2e8e51"
     sha256 catalina:      "a3674fbd50ef933e866f0e28e971c03812f07be661cc50d07a033981e76d87a3"
     sha256 mojave:        "e16bc609f7001cf004ac76600c58e6d6b4ca321ff106da06e52cf20e66357c5e"
+    sha256 x86_64_linux:  "016d9496b2ba87b92d3f4537fcf0c0667f913e7d5a141459bd5bc8d436663fa2"
   end
 
   keg_only "conflicts with postgres formula"
@@ -23,8 +24,9 @@ class Libpq < Formula
   # GSSAPI provided by Kerberos.framework crashes when forked.
   # See https://github.com/Homebrew/homebrew-core/issues/47494.
   depends_on "krb5"
-
   depends_on "openssl@1.1"
+
+  uses_from_macos "zlib"
 
   on_linux do
     depends_on "readline"
@@ -79,6 +81,7 @@ class Libpq < Formula
         }
     EOS
     system ENV.cc, "libpq.c", "-L#{lib}", "-I#{include}", "-lpq", "-o", "libpqtest"
+    ENV.prepend_path "LD_LIBRARY_PATH", lib unless OS.mac?
     assert_equal "Connection to database attempted and failed", shell_output("./libpqtest")
   end
 end
@@ -87,12 +90,12 @@ end
 
 import "homebrew-install" as hi
 
-import "krb5" as i0, "openssl@1.1" as i1
+import "krb5" as i0, "openssl@1.1" as i1, "zlib" as i2
 
 pkg(
   name: "libpq",
   version: "13.3",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpq.rb"), formula)

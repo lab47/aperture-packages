@@ -7,10 +7,6 @@ class ZshCompletions < Formula
   license "MIT-Modern-Variant"
   head "https://github.com/zsh-users/zsh-completions.git"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "2579cab8a4d96ce2a7d179bf36fb2898d4f3611823c6392f5eac2014ff4d7d1f"
-  end
-
   def install
     inreplace "src/_ghc", "/usr/local", HOMEBREW_PREFIX
     zsh_completion.install Dir["src/*"]

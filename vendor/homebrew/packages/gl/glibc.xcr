@@ -90,6 +90,10 @@ class Glibc < Formula
     skip "glibc is pinned to the version present in Homebrew CI"
   end
 
+  bottle do
+    sha256 x86_64_linux: "654794e9e18c2401f1101a3fcf0a85eda448b4b969e9a99782a3f4f4659feda4"
+  end
+
   depends_on "binutils" => :build
   depends_on GawkRequirement => :build
   depends_on "linux-headers" => :build
@@ -104,7 +108,7 @@ class Glibc < Formula
 
   def install
     # Fix Error: `loc1@GLIBC_2.2.5' can't be versioned to common symbol 'loc1'
-    # See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=
+    # See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=869717
     # Fixed in glibc 2.24
     inreplace "misc/regexp.c", /^(char \*loc[12s]);$/, "\\1 __attribute__ ((nocommon));"
 
@@ -124,6 +128,7 @@ class Glibc < Formula
         "--disable-silent-rules",
         "--prefix=#{prefix}",
         "--enable-obsolete-rpc",
+        "--without-selinux",
         "--without-selinux",
         "--with-binutils=#{Formula["binutils"].bin}",
         "--with-headers=#{Formula["linux-headers"].include}",

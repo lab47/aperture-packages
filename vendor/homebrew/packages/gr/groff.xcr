@@ -13,16 +13,23 @@ class Groff < Formula
     sha256 big_sur:       "1e46ef402875ec8cc1bc1fc05b748607822ed6c2a58508dc83d3f0c8cf7f5c4e"
     sha256 catalina:      "623edd28279abd071901f92502fd3a388aaf4357113f26b37ee715a9d11d05ab"
     sha256 mojave:        "4fed5ee8032eb7957bd964b0eb873f8954a4d427f0c602284992daca52e7cb6d"
+    sha256 x86_64_linux:  "a4f66aad6f49b4e5f562e79837c4f7a189e908e074f18d8fdcad6df48bba98ac"
   end
 
   depends_on "pkg-config" => :build
+  depends_on "texinfo" => :build
+  depends_on "texinfo" => :build
   depends_on "ghostscript"
   depends_on "netpbm"
   depends_on "psutils"
   depends_on "uchardet"
 
-  uses_from_macos "libiconv"
+  uses_from_macos "bison" => :build # for yacc
   uses_from_macos "perl"
+
+  on_linux do
+    depends_on "glib"
+  end
 
   # See https://savannah.gnu.org/bugs/index.php?59276
   # Fixed in 1.23.0
@@ -47,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "ghostscript" as i1, "netpbm" as i2, "psutils" as i3, "uchardet" as i4, "libiconv" as i5, "perl" as i6
+import "pkg-config" as i0, "texinfo" as i1, "texinfo" as i2, "ghostscript" as i3, "netpbm" as i4, "psutils" as i5, "uchardet" as i6, "bison" as i7, "perl" as i8
 
 pkg(
   name: "groff",
   version: "1.22.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "groff.rb"), formula)

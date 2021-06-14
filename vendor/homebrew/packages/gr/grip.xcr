@@ -7,7 +7,7 @@ class Grip < Formula
   url "https://files.pythonhosted.org/packages/3c/ea/2a475ed37e1b6476182e71223c98667f51704bdbc919608372b203c7ea04/grip-4.5.2.tar.gz"
   sha256 "048b7e5c738ed80bee345bd10840f27eb31687eb67132b40f2473dc1cf67aa0f"
   license "MIT"
-  revision 3
+  revision OS.mac? ? 3 : 4
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "4dad17672896ca2ca357ba82c4779b9def18535b3a14ba460724d3a764329b13"
@@ -15,6 +15,7 @@ class Grip < Formula
     sha256 cellar: :any_skip_relocation, catalina:      "373f8ccd90c2cb8d753f1ceab1b50ff568be4a782761402e0db137dfd5a946f3"
     sha256 cellar: :any_skip_relocation, mojave:        "d8aa30db0652b18890baa83a7ae4c529a346f068e799ddadada6dae8771c46fc"
     sha256 cellar: :any_skip_relocation, high_sierra:   "3c5e3c5e4e928803ec821c7624014bf3740566dd2741a02cfdac541d4162860a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "f6a38db6f7c72276c49f6e47b801bb838467aac9d408cb9a27857b9300fa5a88"
   end
 
   depends_on "python@3.9"

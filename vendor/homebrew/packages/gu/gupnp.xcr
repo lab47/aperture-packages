@@ -4,15 +4,16 @@ class Gupnp < Formula
 
   desc "Framework for creating UPnP devices and control points"
   homepage "https://wiki.gnome.org/Projects/GUPnP"
-  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.6.tar.xz"
-  sha256 "00b20f1e478a72deac92c34723693a2ac55789ed1e4bb4eed99eb4d62092aafd"
+  url "https://download.gnome.org/sources/gupnp/1.2/gupnp-1.2.7.tar.xz"
+  sha256 "8441276f1afd0176e6f595026a3a507eed1809abfa04026bad3f21622b3523ec"
   license "LGPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "a038e42c79ea3c83c1e4490ed9cd1d5c1a8a432ef7a209ad184be22c7c4ca464"
-    sha256 cellar: :any, big_sur:       "4ef33bf7fad586b473257332ea570ad89930030a3ba21e3f6fb0cd1bb5645e1d"
-    sha256 cellar: :any, catalina:      "67f05d8099650442d73a256991109f45c7c9f4f342d5351be4682da39233e704"
-    sha256 cellar: :any, mojave:        "9ae23797186a16d35ec22742167433d9f94a0b8342026b01a4c53333967bfba5"
+    sha256 cellar: :any, arm64_big_sur: "d9eb370676152358aab46a6eb4a2113c35393da0532e8777758fe86c58cfe68d"
+    sha256 cellar: :any, big_sur:       "2e6e2cf75b268a9b15ba5ab0218feb821b8fcfd3484b0392d1a61fbfb7b4024f"
+    sha256 cellar: :any, catalina:      "ad1eb9712b22a8cf129e2b1e655da5024904fbb4d9d05ac4642a74a169437e44"
+    sha256 cellar: :any, mojave:        "7a4029599f45eba6591d4dc62cfb4327e38ad97cd95f846ebc603b217d0e8939"
+    sha256               x86_64_linux:  "512d9187f456dad0cbf8121c386d9b48df7c51108634767a63d6a54a3b3e6d93"
   end
 
   depends_on "docbook-xsl" => :build
@@ -61,7 +62,11 @@ class Gupnp < Formula
         return 0;
       }
     EOS
-    system ENV.cc, "-I#{include}/gupnp-1.2", "-L#{lib}", "-lgupnp-1.2",
+
+    libxml2 = "-I#{MacOS.sdk_path}/usr/include/libxml2"
+    libxml2 = "-I#{Formula["libxml2"].include}/libxml2" unless OS.mac?
+
+    system ENV.cc, testpath/"test.c", "-I#{include}/gupnp-1.2", "-L#{lib}", "-lgupnp-1.2",
            "-I#{Formula["gssdp"].opt_include}/gssdp-1.2",
            "-L#{Formula["gssdp"].opt_lib}", "-lgssdp-1.2",
            "-I#{Formula["glib"].opt_include}/glib-2.0",
@@ -69,8 +74,7 @@ class Gupnp < Formula
            "-L#{Formula["glib"].opt_lib}",
            "-lglib-2.0", "-lgobject-2.0",
            "-I#{Formula["libsoup"].opt_include}/libsoup-2.4",
-           "-I#{MacOS.sdk_path}/usr/include/libxml2",
-           testpath/"test.c", "-o", testpath/"test"
+           libxml2, "-o", testpath/"test"
     system "./test"
   end
 end
@@ -79,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "berkeley-db" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "docbook" as i13, "docbook-xsl" as i14, "expat" as i15, "flex" as i16, "fontconfig" as i17, "freetype" as i18, "fribidi" as i19, "gd" as i20, "gdbm" as i21, "gdk-pixbuf" as i22, "gettext" as i23, "glib" as i24, "glib-networking" as i25, "gmp" as i26, "gnu-sed" as i27, "gnutls" as i28, "gobject-introspection" as i29, "gperf" as i30, "graphite2" as i31, "graphviz" as i32, "gsettings-desktop-schemas" as i33, "gssdp" as i34, "gts" as i35, "guile" as i36, "harfbuzz" as i37, "help2man" as i38, "icu4c" as i39, "jasper" as i40, "jemalloc" as i41, "jpeg" as i42, "krb5" as i43, "libatomic_ops" as i44, "libev" as i45, "libevent" as i46, "libffi" as i47, "libidn2" as i48, "libmetalink" as i49, "libpng" as i50, "libpsl" as i51, "libpthread-stubs" as i52, "librsvg" as i53, "libsoup" as i54, "libssh2" as i55, "libtasn1" as i56, "libtiff" as i57, "libtool" as i58, "libunistring" as i59, "libx11" as i60, "libxau" as i61, "libxcb" as i62, "libxdmcp" as i63, "libxext" as i64, "libxml2" as i65, "libxrender" as i66, "libyaml" as i67, "lz4" as i68, "lzo" as i69, "m4" as i70, "meson" as i71, "mpdecimal" as i72, "ncurses" as i73, "netpbm" as i74, "nettle" as i75, "nghttp2" as i76, "ninja" as i77, "openjdk" as i78, "openldap" as i79, "openssl@1.1" as i80, "p11-kit" as i81, "pango" as i82, "pcre" as i83, "perl" as i84, "pixman" as i85, "pkg-config" as i86, "python@3.9" as i87, "readline" as i88, "rtmpdump" as i89, "ruby" as i90, "rust" as i91, "scons" as i92, "sphinx-doc" as i93, "sqlite" as i94, "subversion" as i95, "swig" as i96, "unbound" as i97, "unzip" as i98, "utf8proc" as i99, "util-macros" as i100, "vala" as i101, "webp" as i102, "xcb-proto" as i103, "xorgproto" as i104, "xtrans" as i105, "xz" as i106, "zip" as i107, "zlib" as i108, "zstd" as i109
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "berkeley-db" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "docbook" as i13, "docbook-xsl" as i14, "doxygen" as i15, "expat" as i16, "flex" as i17, "fontconfig" as i18, "freetype" as i19, "fribidi" as i20, "gd" as i21, "gdbm" as i22, "gdk-pixbuf" as i23, "gettext" as i24, "ghostscript" as i25, "glib" as i26, "glib-networking" as i27, "gmp" as i28, "gnu-sed" as i29, "gnutls" as i30, "gobject-introspection" as i31, "gperf" as i32, "graphite2" as i33, "graphviz" as i34, "groff" as i35, "gsettings-desktop-schemas" as i36, "gssdp" as i37, "gts" as i38, "guile" as i39, "harfbuzz" as i40, "help2man" as i41, "icu4c" as i42, "jasper" as i43, "jbig2dec" as i44, "jemalloc" as i45, "jpeg" as i46, "krb5" as i47, "libatomic_ops" as i48, "libev" as i49, "libevent" as i50, "libffi" as i51, "libidn" as i52, "libidn2" as i53, "libpng" as i54, "libpsl" as i55, "libpthread-stubs" as i56, "librsvg" as i57, "libsoup" as i58, "libssh2" as i59, "libtasn1" as i60, "libtiff" as i61, "libtool" as i62, "libunistring" as i63, "libx11" as i64, "libxau" as i65, "libxcb" as i66, "libxdmcp" as i67, "libxext" as i68, "libxml2" as i69, "libxrender" as i70, "libyaml" as i71, "little-cms2" as i72, "lz4" as i73, "lzo" as i74, "m4" as i75, "meson" as i76, "mpdecimal" as i77, "ncurses" as i78, "netpbm" as i79, "nettle" as i80, "nghttp2" as i81, "ninja" as i82, "openjdk" as i83, "openjpeg" as i84, "openldap" as i85, "openssl@1.1" as i86, "p11-kit" as i87, "pango" as i88, "pcre" as i89, "perl" as i90, "pixman" as i91, "pkg-config" as i92, "psutils" as i93, "python@3.9" as i94, "readline" as i95, "rtmpdump" as i96, "ruby" as i97, "rust" as i98, "scons" as i99, "sphinx-doc" as i100, "sqlite" as i101, "subversion" as i102, "swig" as i103, "texinfo" as i104, "uchardet" as i105, "unbound" as i106, "unzip" as i107, "utf8proc" as i108, "util-macros" as i109, "vala" as i110, "webp" as i111, "xcb-proto" as i112, "xorgproto" as i113, "xtrans" as i114, "xz" as i115, "zip" as i116, "zlib" as i117, "zstd" as i118
 
 pkg(
   name: "gupnp",
-  version: "1.2.6",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109],
+  version: "1.2.7",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gupnp.rb"), formula)

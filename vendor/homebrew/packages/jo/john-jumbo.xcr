@@ -26,6 +26,8 @@ class JohnJumbo < Formula
   depends_on "gmp"
   depends_on "openssl@1.1"
 
+  uses_from_macos "zlib"
+
   conflicts_with "john", because: "both install the same binaries"
 
   # https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/doc/INSTALL#L133-L143
@@ -106,12 +108,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gmp" as i1, "openssl@1.1" as i2
+import "pkg-config" as i0, "gmp" as i1, "openssl@1.1" as i2, "zlib" as i3
 
 pkg(
   name: "john-jumbo",
   version: "1.9.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "john-jumbo.rb"), formula)

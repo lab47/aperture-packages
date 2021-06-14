@@ -13,6 +13,7 @@ class Reposurgeon < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "5217ed6bdd4c3d325136b99e8ae2dfa29fe4ef51db98c6ef137437a4bf950512"
     sha256 cellar: :any_skip_relocation, catalina:      "7ca53ec30c1131eadd40988a29c021c00205d88bf93dcf5d21f836414909cfc0"
     sha256 cellar: :any_skip_relocation, mojave:        "ebab05fa08478c10feff4cf4e8a8b69e1e02293444eeb6d07cc37980933877ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "44de95556ff8278f8d61b73eff740b783d62cb484eded7e848b55b0b3d882c2a"
   end
 
   depends_on "asciidoctor" => :build
@@ -35,8 +36,14 @@ class Reposurgeon < Formula
     system "git", "init"
     system "git", "commit", "--allow-empty", "--message", "brewing"
 
-    assert_match "brewing",
-      shell_output("script -q /dev/null #{bin}/reposurgeon read list")
+    on_macos do
+      assert_match "brewing",
+        shell_output("script -q /dev/null #{bin}/reposurgeon read list")
+    end
+    on_linux do
+      assert_match "brewing",
+        shell_output("script -q /dev/null -c \"#{bin}/reposurgeon read list\"")
+    end
   end
 end
 

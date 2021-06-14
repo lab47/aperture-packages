@@ -9,10 +9,8 @@ class Duplicity < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "ef70b5e8533352041e04bd58efc18a0aed666a3d948bd9b5b2c1657b1bdc399a"
-    sha256 cellar: :any, big_sur:       "71a76c1232f57037b85a2229c3b3f8e25ffdf4d3f669d2b4e3a7a42760d1759a"
-    sha256 cellar: :any, catalina:      "a14741b9caee921aaa52154ca4a5cfdbba395e3e63c8f58df84a3bcedc2e85df"
-    sha256 cellar: :any, mojave:        "cafdfc7246a75b8401d335b0b6863383c0a936576a4e42fa6004db1b7e2a2587"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "31c94d556412a53ac4eb1eb74cfd14a69661aee307f72a744ead91284cec649b"
   end
 
   depends_on "rust" => :build # for cryptography
@@ -594,12 +592,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gnu-sed" as i14, "gnupg" as i15, "gnutls" as i16, "gperf" as i17, "guile" as i18, "jemalloc" as i19, "krb5" as i20, "libassuan" as i21, "libatomic_ops" as i22, "libev" as i23, "libevent" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libidn2" as i28, "libksba" as i29, "libmetalink" as i30, "librsync" as i31, "libssh2" as i32, "libtasn1" as i33, "libtool" as i34, "libunistring" as i35, "libusb" as i36, "libxml2" as i37, "libxslt" as i38, "libyaml" as i39, "m4" as i40, "mpdecimal" as i41, "ncurses" as i42, "nettle" as i43, "nghttp2" as i44, "ninja" as i45, "npth" as i46, "openldap" as i47, "openssl@1.1" as i48, "p11-kit" as i49, "perl" as i50, "pinentry" as i51, "pkg-config" as i52, "popt" as i53, "python@3.7" as i54, "python@3.8" as i55, "python@3.9" as i56, "readline" as i57, "rtmpdump" as i58, "rust" as i59, "six" as i60, "sphinx-doc" as i61, "sqlite" as i62, "tcl-tk" as i63, "unbound" as i64, "unzip" as i65, "xz" as i66, "zip" as i67, "zlib" as i68, "zstd" as i69
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gnu-sed" as i14, "gnupg" as i15, "gnutls" as i16, "gperf" as i17, "guile" as i18, "jemalloc" as i19, "krb5" as i20, "libassuan" as i21, "libatomic_ops" as i22, "libev" as i23, "libevent" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libidn2" as i28, "libksba" as i29, "librsync" as i30, "libssh2" as i31, "libtasn1" as i32, "libtool" as i33, "libunistring" as i34, "libusb" as i35, "libxml2" as i36, "libxslt" as i37, "libyaml" as i38, "m4" as i39, "mpdecimal" as i40, "ncurses" as i41, "nettle" as i42, "nghttp2" as i43, "ninja" as i44, "npth" as i45, "openldap" as i46, "openssl@1.1" as i47, "p11-kit" as i48, "perl" as i49, "pinentry" as i50, "pkg-config" as i51, "popt" as i52, "python@3.7" as i53, "python@3.8" as i54, "python@3.9" as i55, "readline" as i56, "rtmpdump" as i57, "rust" as i58, "six" as i59, "sphinx-doc" as i60, "sqlite" as i61, "tcl-tk" as i62, "unbound" as i63, "unzip" as i64, "xz" as i65, "zip" as i66, "zlib" as i67, "zstd" as i68
 
 pkg(
   name: "duplicity",
   version: "0.8.19",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "duplicity.rb"), formula)

@@ -121,10 +121,10 @@ class Dnsviz < Formula
       				PGJqJru7+7aaRr1PP+ne7Wer+gE= )
     EOS
     (testpath/"example.com.zone-delegation").write <<~EOS
-      example.com.	IN	NS	ns1.example.com.
-      ns1.example.com.	IN	A	127.0.0.1
-      example.com.		IN DS 34983 10 1 EC358CFAAEC12266EF5ACFC1FEAF2CAFF083C418
-      example.com.		IN DS 34983 10 2 608D3B089D79D554A1947BD10BEC0A5B1BDBE67B4E60E34B1432ED00 33F24B49
+      example.com.  IN  NS  ns1.example.com.
+      ns1.example.com.  IN  A  127.0.0.1
+      example.com.    IN DS 34983 10 1 EC358CFAAEC12266EF5ACFC1FEAF2CAFF083C418
+      example.com.    IN DS 34983 10 2 608D3B089D79D554A1947BD10BEC0A5B1BDBE67B4E60E34B1432ED00 33F24B49
     EOS
     system "#{bin}/dnsviz", "probe", "-d", "0", "-A",
       "-x", "example.com:example.com.zone.signed",
@@ -142,12 +142,12 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bind" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "expat" as i13, "flex" as i14, "fontconfig" as i15, "freetype" as i16, "fribidi" as i17, "gd" as i18, "gdbm" as i19, "gdk-pixbuf" as i20, "gettext" as i21, "glib" as i22, "gobject-introspection" as i23, "gperf" as i24, "graphite2" as i25, "graphviz" as i26, "gts" as i27, "harfbuzz" as i28, "help2man" as i29, "icu4c" as i30, "jasper" as i31, "jemalloc" as i32, "jpeg" as i33, "json-c" as i34, "krb5" as i35, "libev" as i36, "libffi" as i37, "libidn2" as i38, "libmetalink" as i39, "libpng" as i40, "libpthread-stubs" as i41, "librsvg" as i42, "libssh2" as i43, "libtiff" as i44, "libtool" as i45, "libunistring" as i46, "libuv" as i47, "libx11" as i48, "libxau" as i49, "libxcb" as i50, "libxdmcp" as i51, "libxext" as i52, "libxml2" as i53, "libxrender" as i54, "libyaml" as i55, "lz4" as i56, "lzo" as i57, "m4" as i58, "meson" as i59, "mpdecimal" as i60, "ncurses" as i61, "netpbm" as i62, "nghttp2" as i63, "ninja" as i64, "openjdk" as i65, "openldap" as i66, "openssl@1.1" as i67, "pango" as i68, "pcre" as i69, "perl" as i70, "pixman" as i71, "pkg-config" as i72, "python@3.9" as i73, "readline" as i74, "rtmpdump" as i75, "ruby" as i76, "rust" as i77, "scons" as i78, "sphinx-doc" as i79, "sqlite" as i80, "subversion" as i81, "swig" as i82, "unzip" as i83, "utf8proc" as i84, "util-macros" as i85, "webp" as i86, "xcb-proto" as i87, "xorgproto" as i88, "xtrans" as i89, "xz" as i90, "zip" as i91, "zlib" as i92, "zstd" as i93
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bind" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "doxygen" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "gobject-introspection" as i25, "gperf" as i26, "graphite2" as i27, "graphviz" as i28, "groff" as i29, "gts" as i30, "harfbuzz" as i31, "help2man" as i32, "icu4c" as i33, "jasper" as i34, "jbig2dec" as i35, "jemalloc" as i36, "jpeg" as i37, "json-c" as i38, "krb5" as i39, "libev" as i40, "libffi" as i41, "libidn" as i42, "libidn2" as i43, "libpng" as i44, "libpthread-stubs" as i45, "librsvg" as i46, "libssh2" as i47, "libtiff" as i48, "libtool" as i49, "libunistring" as i50, "libuv" as i51, "libx11" as i52, "libxau" as i53, "libxcb" as i54, "libxdmcp" as i55, "libxext" as i56, "libxml2" as i57, "libxrender" as i58, "libyaml" as i59, "little-cms2" as i60, "lz4" as i61, "lzo" as i62, "m4" as i63, "meson" as i64, "mpdecimal" as i65, "ncurses" as i66, "netpbm" as i67, "nghttp2" as i68, "ninja" as i69, "openjdk" as i70, "openjpeg" as i71, "openldap" as i72, "openssl@1.1" as i73, "pango" as i74, "pcre" as i75, "perl" as i76, "pixman" as i77, "pkg-config" as i78, "psutils" as i79, "python@3.9" as i80, "readline" as i81, "rtmpdump" as i82, "ruby" as i83, "rust" as i84, "scons" as i85, "sphinx-doc" as i86, "sqlite" as i87, "subversion" as i88, "swig" as i89, "texinfo" as i90, "uchardet" as i91, "unzip" as i92, "utf8proc" as i93, "util-macros" as i94, "webp" as i95, "xcb-proto" as i96, "xorgproto" as i97, "xtrans" as i98, "xz" as i99, "zip" as i100, "zlib" as i101, "zstd" as i102
 
 pkg(
   name: "dnsviz",
   version: "0.9.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dnsviz.rb"), formula)

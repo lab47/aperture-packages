@@ -21,11 +21,19 @@ class Kcov < Formula
     sha256 cellar: :any_skip_relocation, big_sur:       "e8181653c02129bd63fd438d3e5965cd25d5408ebe7c6699da2ab86b9a9f4340"
     sha256 cellar: :any_skip_relocation, catalina:      "becb863fd482145cd67dab0b25df128b5deba598fa89a217cd6ff63ba79edbc5"
     sha256 cellar: :any_skip_relocation, mojave:        "dd72670ef6f9abd9b44bf70b8fcb64faffe1ba4edfd4704c70de395d3594dc89"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "8452e7326527b2654933233b57ab3105e1b63806d6f31be929494697fbb73012"
   end
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "python@3.9" => :build
+
+  uses_from_macos "curl"
+  uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "elfutils"
+  end
 
   def install
     mkdir "build" do
@@ -49,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sphinx-doc" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "rtmpdump" as i27, "sphinx-doc" as i28, "sqlite" as i29, "unzip" as i30, "xz" as i31, "zip" as i32, "zlib" as i33, "zstd" as i34
 
 pkg(
   name: "kcov",
   version: "38",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kcov.rb"), formula)

@@ -19,6 +19,8 @@ class Sleepwatcher < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "0cecea617ee9334f717a2e2e0424b944dedcc7cd403776c1cf6ff67352b96f4c"
   end
 
+  depends_on :macos
+
   def install
     # Adjust Makefile to build native binary only
     inreplace "sources/Makefile" do |s|

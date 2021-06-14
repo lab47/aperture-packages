@@ -9,10 +9,11 @@ class Jrnl < Formula
   license "GPL-3.0-only"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9"
-    sha256 cellar: :any, big_sur:       "75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3"
-    sha256 cellar: :any, catalina:      "1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152"
-    sha256 cellar: :any, mojave:        "64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0"
+    sha256 cellar: :any,                 arm64_big_sur: "8e35532250e8864b1b81559f6e675b794ffb20a301f6874dd8cc469df2b12de9"
+    sha256 cellar: :any,                 big_sur:       "75de14f6e281c827e06e3317a68c06fa680b1fff15d7ad63c9f4a991b1ac48e3"
+    sha256 cellar: :any,                 catalina:      "1819fb9d1ac45a4ac4ea688ab7269f89e66c7f505ece4dedcaaa64c268cbc152"
+    sha256 cellar: :any,                 mojave:        "64ff4066d306e04755e8f1fafbbc8806f42a10d63ca31d23d88f4123299f61b0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "25c8893038073b05f908f94bdc92c68d08382793525b9be729eacbcefeae0ada"
   end
 
   depends_on "rust" => :build
@@ -136,7 +137,7 @@ class Jrnl < Formula
 
   test do
     (testpath/"tests.sh").write <<~EOS
-      #!/usr/bin/expect -f
+      #{OS.mac? ? "#!/usr/bin/expect -f" : "#!/usr/bin/env expect"}
 
       set timeout 3
       match_max 100000
@@ -203,12 +204,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "expect" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libidn2" as i17, "libmetalink" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "m4" as i23, "mpdecimal" as i24, "ncurses" as i25, "nghttp2" as i26, "ninja" as i27, "openldap" as i28, "openssl@1.1" as i29, "perl" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "rtmpdump" as i34, "rust" as i35, "sphinx-doc" as i36, "sqlite" as i37, "tcl-tk" as i38, "unzip" as i39, "xz" as i40, "zip" as i41, "zlib" as i42, "zstd" as i43
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "expect" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libidn2" as i17, "libssh2" as i18, "libtool" as i19, "libunistring" as i20, "libxml2" as i21, "m4" as i22, "mpdecimal" as i23, "ncurses" as i24, "nghttp2" as i25, "ninja" as i26, "openldap" as i27, "openssl@1.1" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "rtmpdump" as i33, "rust" as i34, "sphinx-doc" as i35, "sqlite" as i36, "tcl-tk" as i37, "unzip" as i38, "xz" as i39, "zip" as i40, "zlib" as i41, "zstd" as i42
 
 pkg(
   name: "jrnl",
   version: "2.8.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jrnl.rb"), formula)

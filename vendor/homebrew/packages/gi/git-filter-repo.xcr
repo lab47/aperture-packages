@@ -4,20 +4,16 @@ class GitFilterRepo < Formula
 
   desc "Quickly rewrite git repository history"
   homepage "https://github.com/newren/git-filter-repo"
-  url "https://github.com/newren/git-filter-repo/releases/download/v2.29.0/git-filter-repo-2.29.0.tar.xz"
-  sha256 "eb269f6e9b91fcacf676f7d5b8174d962dab5facce2022cc59cb672cd33cd602"
+  url "https://github.com/newren/git-filter-repo/releases/download/v2.32.0/git-filter-repo-2.32.0.tar.xz"
+  sha256 "0b3b454b278a33d06671fd1e4ab2c71f7bc719ea5df165cfbdc000093faf169b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, all: "86d0107f7525ab77d8f2cc128fb5975684459f425b8bd6d3dd5b121acd266e07"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ceecf90b3bef4645e16ad2b509fb7a7e7724ec59b9da12e0305e95c6d8389a4c"
   end
 
-  # ignore git dependency audit:
-  #  * Don't use git as a dependency (it's always available)
-  # But we require Git 2.22.0+
-  # https://github.com/Homebrew/homebrew-core/pull/46550#issuecomment-563229479
-  depends_on "git"
   depends_on "python@3.9"
+  uses_from_macos "git", since: :catalina # git 2.22.0+ is required
 
   def install
     rewrite_shebang detected_python_shebang, "git-filter-repo"
@@ -48,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "git" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libmetalink" as i15, "libssh2" as i16, "libunistring" as i17, "libxml2" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "nghttp2" as i22, "ninja" as i23, "openldap" as i24, "openssl@1.1" as i25, "pcre2" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "rtmpdump" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36, "zstd" as i37
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "git" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pcre2" as i25, "pkg-config" as i26, "python@3.9" as i27, "readline" as i28, "rtmpdump" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
 
 pkg(
   name: "git-filter-repo",
-  version: "2.29.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
+  version: "2.32.0",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-filter-repo.rb"), formula)

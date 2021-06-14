@@ -19,11 +19,15 @@ class Sonarqube < Formula
 
   def install
     # Delete native bin directories for other systems
-    rm_rf Dir["bin/{linux,windows}-*"]
+    rm_rf "bin/linux-x86-32"
+    rm_rf "bin/linux-x86-64" if OS.mac?
+    rm_rf "bin/macosx-universal-32"
+    rm_rf "bin/macosx-universal-64" unless OS.mac?
+    rm_rf Dir["bin/windows-*"]
 
     libexec.install Dir["*"]
 
-    (bin/"sonar").write_env_script libexec/"bin/macosx-universal-64/sonar.sh",
+    (bin/"sonar").write_env_script libexec/"bin/#{OS.mac? ? "macosx-universal-64" : "linux-x86-64"}/sonar.sh",
       Language::Java.overridable_java_home_env("11")
   end
 

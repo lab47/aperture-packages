@@ -12,10 +12,12 @@ class Curl < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2316dfc6029283ebecf305d4dec3f768300b5073e0829a73c68d1fe05ab416ba"
-    sha256 cellar: :any, big_sur:       "45a306b83e606386e74797c4e1ed94437c1941c050e564a98eaf53fdb85ae69c"
-    sha256 cellar: :any, catalina:      "57e21718ba4438ece25a46bd5322b48ec277c224683758910bcfa5d348c5750a"
-    sha256 cellar: :any, mojave:        "0b735c1d95f0519efa80d375a8f4b39162250a13d2ce592209889ecc7820aca7"
+    rebuild 1
+    sha256 cellar: :any,                 arm64_big_sur: "36940ec937de41aefd30d264885e909ac4621f89af69e708ff28e0e6e80b18d4"
+    sha256 cellar: :any,                 big_sur:       "2fea808dd9f8dc2a9bac45870be0a14f2f81243652d2e46d319e36e865543367"
+    sha256 cellar: :any,                 catalina:      "4a549f63ab3fa72db7efa9d2a9a9f886fa093546b93b548346216feb878f5268"
+    sha256 cellar: :any,                 mojave:        "9313777bd2c21e174542c9dd66ee80eb6f4d8f63dae96b5ba4202b957f404b8a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fed3d3b7164cae5fcc4a2c805099b156532296453bfaa676548b3ef1433e3794"
   end
 
   head do
@@ -31,7 +33,6 @@ class Curl < Formula
   depends_on "pkg-config" => :build
   depends_on "brotli"
   depends_on "libidn2"
-  depends_on "libmetalink"
   depends_on "libssh2"
   depends_on "nghttp2"
   depends_on "openldap"
@@ -56,9 +57,7 @@ class Curl < Formula
       --with-ca-fallback
       --with-secure-transport
       --with-default-ssl-backend=openssl
-      --with-gssapi
       --with-libidn2
-      --with-libmetalink
       --with-librtmp
       --with-libssh2
       --without-libpsl
@@ -95,12 +94,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "brotli" as i1, "libidn2" as i2, "libmetalink" as i3, "libssh2" as i4, "nghttp2" as i5, "openldap" as i6, "openssl@1.1" as i7, "rtmpdump" as i8, "zstd" as i9, "krb5" as i10, "zlib" as i11
+import "pkg-config" as i0, "brotli" as i1, "libidn2" as i2, "libssh2" as i3, "nghttp2" as i4, "openldap" as i5, "openssl@1.1" as i6, "rtmpdump" as i7, "zstd" as i8, "krb5" as i9, "zlib" as i10
 
 pkg(
   name: "curl",
   version: "7.77.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "curl.rb"), formula)

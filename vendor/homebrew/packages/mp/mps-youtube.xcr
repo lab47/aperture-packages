@@ -7,13 +7,14 @@ class MpsYoutube < Formula
   url "https://files.pythonhosted.org/packages/b1/8e/5156416119545e3f5ba16ec0fdbb2c7d0b57fad9e19ee8554856cd4a41ad/mps-youtube-0.2.8.tar.gz"
   sha256 "59ce3944626fbd1a041e1e1b15714bbd138ebc71ceb89e32ea9470d8152af083"
   license "GPL-3.0-or-later"
-  revision 11
+  revision OS.mac? ? 11 : 12
 
   bottle do
     rebuild 2
-    sha256 cellar: :any_skip_relocation, big_sur:  "2dd08756b9e62a90560e745bc04c143746d814083d4718e8b54907f7afd13403"
-    sha256 cellar: :any_skip_relocation, catalina: "4e9a341a4d730d6b3ded045d3db8fc3bed53c181c380cb412c8ca87af512cb49"
-    sha256 cellar: :any_skip_relocation, mojave:   "7447cf6a16ec67bcfd0c11ede83ff5c2b91f4c8aebb12cd125f3c242473933e0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "2dd08756b9e62a90560e745bc04c143746d814083d4718e8b54907f7afd13403"
+    sha256 cellar: :any_skip_relocation, catalina:     "4e9a341a4d730d6b3ded045d3db8fc3bed53c181c380cb412c8ca87af512cb49"
+    sha256 cellar: :any_skip_relocation, mojave:       "7447cf6a16ec67bcfd0c11ede83ff5c2b91f4c8aebb12cd125f3c242473933e0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a7d23f3e8cba72c049bd00776dee02891f62864dddded95817fd7df53841065c"
   end
 
   depends_on "mplayer"

@@ -10,10 +10,11 @@ class ConjureUp < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "3e516b5c4a0d71ed5d32332fc12703605654c93127e45c8754455e84b4cab93e"
-    sha256 cellar: :any, big_sur:       "869c705b0f4392a57afd2ba7e4f7b5260640b5130c47dbb3aeb77bc142296d6c"
-    sha256 cellar: :any, catalina:      "2112383857f9f865eff1a9528dd6ab2ace8a7b34be1d4ed3ac4fe80b014f9241"
-    sha256 cellar: :any, mojave:        "b36c8bb8462705691744403cdcf6b2da77e7d1391249dba3857297cc950e6b97"
+    sha256 cellar: :any,                 arm64_big_sur: "3e516b5c4a0d71ed5d32332fc12703605654c93127e45c8754455e84b4cab93e"
+    sha256 cellar: :any,                 big_sur:       "869c705b0f4392a57afd2ba7e4f7b5260640b5130c47dbb3aeb77bc142296d6c"
+    sha256 cellar: :any,                 catalina:      "2112383857f9f865eff1a9528dd6ab2ace8a7b34be1d4ed3ac4fe80b014f9241"
+    sha256 cellar: :any,                 mojave:        "b36c8bb8462705691744403cdcf6b2da77e7d1391249dba3857297cc950e6b97"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "1c8b1066e586f75f8072cd08e8e172317c6518cb6c8a7f723a5051f602d05692"
   end
 
   deprecate! date: "2021-04-15", because: :repo_archived
@@ -295,7 +296,7 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "awscli" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "go" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "jasper" as i21, "jbig2dec" as i22, "jpeg" as i23, "jq" as i24, "juju" as i25, "juju-wait" as i26, "krb5" as i27, "libffi" as i28, "libiconv" as i29, "libidn" as i30, "libpng" as i31, "libtiff" as i32, "libtool" as i33, "libxml2" as i34, "libyaml" as i35, "little-cms2" as i36, "lz4" as i37, "m4" as i38, "mpdecimal" as i39, "ncurses" as i40, "netpbm" as i41, "oniguruma" as i42, "openjdk" as i43, "openjpeg" as i44, "openssl@1.1" as i45, "pcre" as i46, "perl" as i47, "pkg-config" as i48, "psutils" as i49, "pwgen" as i50, "python@3.9" as i51, "readline" as i52, "redis" as i53, "ruby" as i54, "scons" as i55, "sphinx-doc" as i56, "sqlite" as i57, "subversion" as i58, "swig" as i59, "uchardet" as i60, "unzip" as i61, "utf8proc" as i62, "xz" as i63, "zip" as i64, "zlib" as i65
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "awscli" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "go" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "jasper" as i21, "jbig2dec" as i22, "jpeg" as i23, "jq" as i24, "juju" as i25, "juju-wait" as i26, "krb5" as i27, "libffi" as i28, "libidn" as i29, "libpng" as i30, "libtiff" as i31, "libtool" as i32, "libxml2" as i33, "libyaml" as i34, "little-cms2" as i35, "lz4" as i36, "m4" as i37, "mpdecimal" as i38, "ncurses" as i39, "netpbm" as i40, "oniguruma" as i41, "openjdk" as i42, "openjpeg" as i43, "openssl@1.1" as i44, "pcre" as i45, "perl" as i46, "pkg-config" as i47, "psutils" as i48, "pwgen" as i49, "python@3.9" as i50, "readline" as i51, "redis" as i52, "ruby" as i53, "scons" as i54, "sphinx-doc" as i55, "sqlite" as i56, "subversion" as i57, "swig" as i58, "texinfo" as i59, "uchardet" as i60, "unzip" as i61, "utf8proc" as i62, "xz" as i63, "zip" as i64, "zlib" as i65
 
 pkg(
   name: "conjure-up",

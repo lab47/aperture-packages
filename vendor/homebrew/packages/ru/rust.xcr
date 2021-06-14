@@ -16,10 +16,11 @@ class Rust < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "47225bcea0cee3fdde165f92e8db8e3862a2ea2be584714ffbc7223cc553696d"
-    sha256 cellar: :any, big_sur:       "d5d58fa69604a8fa9118677f51c84fc34c2f0da80361b32cc00c80f864087609"
-    sha256 cellar: :any, catalina:      "68f71286e9087960f23f172072edbee80db7d0e566eeb05cdc456a9862778b18"
-    sha256 cellar: :any, mojave:        "17e87ad3d2be474d472243c08868ee9e36df5cb1688255d4a11337399aec132d"
+    sha256 cellar: :any,                 arm64_big_sur: "47225bcea0cee3fdde165f92e8db8e3862a2ea2be584714ffbc7223cc553696d"
+    sha256 cellar: :any,                 big_sur:       "d5d58fa69604a8fa9118677f51c84fc34c2f0da80361b32cc00c80f864087609"
+    sha256 cellar: :any,                 catalina:      "68f71286e9087960f23f172072edbee80db7d0e566eeb05cdc456a9862778b18"
+    sha256 cellar: :any,                 mojave:        "17e87ad3d2be474d472243c08868ee9e36df5cb1688255d4a11337399aec132d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "fff677b4e77a5882cea81859ec30b06a53417ac3cf58246d5629074fc432861c"
   end
 
   head do
@@ -39,6 +40,10 @@ class Rust < Formula
 
   uses_from_macos "curl"
   uses_from_macos "zlib"
+
+  on_linux do
+    depends_on "binutils"
+  end
 
   resource "cargobootstrap" do
     on_macos do
@@ -90,6 +95,7 @@ class Rust < Formula
     resource("cargo").stage do
       ENV["RUSTC"] = bin/"rustc"
       args = %W[--root #{prefix} --path . --features curl-sys/force-system-lib-on-osx]
+      args -= %w[--features curl-sys/force-system-lib-on-osx] unless OS.mac?
       system "cargo", "install", *args
       man1.install Dir["src/etc/man/*.1"]
       bash_completion.install "src/etc/cargo.bashcomp.sh"
@@ -128,12 +134,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libmetalink" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "rtmpdump" as i28, "sphinx-doc" as i29, "sqlite" as i30, "unzip" as i31, "xz" as i32, "zip" as i33, "zlib" as i34, "zstd" as i35
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "rtmpdump" as i27, "sphinx-doc" as i28, "sqlite" as i29, "unzip" as i30, "xz" as i31, "zip" as i32, "zlib" as i33, "zstd" as i34
 
 pkg(
   name: "rust",
   version: "1.52.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rust.rb"), formula)

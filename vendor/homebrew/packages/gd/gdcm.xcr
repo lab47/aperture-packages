@@ -17,6 +17,7 @@ class Gdcm < Formula
     sha256 big_sur:       "7bff75beab06c8250e57f71edc9db13deee5e8436b6601f04a5488bb2e1d4f5d"
     sha256 catalina:      "48c5d04a2a95db995522d31e5efffd9a9dcf97afb4896d64610a2347431a3481"
     sha256 mojave:        "6837489e4b3a300a96e15506c6e2bb092bda59f4b1e8d96448ecd923c9568317"
+    sha256 x86_64_linux:  "c84c6067eeead2436fbb777628b603ced3aaa20cc3fa237e0cf18dde92b62d87"
   end
 
   depends_on "cmake" => :build
@@ -95,7 +96,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "doxygen" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gcc" as i15, "gdbm" as i16, "gettext" as i17, "gmp" as i18, "gperf" as i19, "hdf5" as i20, "help2man" as i21, "icu4c" as i22, "isl" as i23, "jemalloc" as i24, "jpeg" as i25, "krb5" as i26, "libev" as i27, "libffi" as i28, "libidn2" as i29, "libmetalink" as i30, "libmpc" as i31, "libpng" as i32, "libssh2" as i33, "libtiff" as i34, "libtool" as i35, "libunistring" as i36, "libxml2" as i37, "libyaml" as i38, "little-cms2" as i39, "m4" as i40, "mpdecimal" as i41, "mpfr" as i42, "ncurses" as i43, "netcdf" as i44, "nghttp2" as i45, "ninja" as i46, "openjpeg" as i47, "openldap" as i48, "openssl@1.1" as i49, "pcre" as i50, "perl" as i51, "pkg-config" as i52, "pyqt-builder" as i53, "pyqt@5" as i54, "python@3.9" as i55, "qt@5" as i56, "readline" as i57, "rtmpdump" as i58, "ruby" as i59, "sip" as i60, "sphinx-doc" as i61, "sqlite" as i62, "swig" as i63, "szip" as i64, "unzip" as i65, "vtk@8.2" as i66, "xz" as i67, "zip" as i68, "zlib" as i69, "zstd" as i70
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "doxygen" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gcc" as i15, "gdbm" as i16, "gettext" as i17, "gmp" as i18, "gperf" as i19, "hdf5" as i20, "help2man" as i21, "icu4c" as i22, "isl" as i23, "jemalloc" as i24, "jpeg" as i25, "krb5" as i26, "libev" as i27, "libffi" as i28, "libidn2" as i29, "libmpc" as i30, "libpng" as i31, "libssh2" as i32, "libtiff" as i33, "libtool" as i34, "libunistring" as i35, "libxml2" as i36, "libyaml" as i37, "little-cms2" as i38, "m4" as i39, "mpdecimal" as i40, "mpfr" as i41, "ncurses" as i42, "netcdf" as i43, "nghttp2" as i44, "ninja" as i45, "openjpeg" as i46, "openldap" as i47, "openssl@1.1" as i48, "pcre" as i49, "perl" as i50, "pkg-config" as i51, "pyqt-builder" as i52, "pyqt@5" as i53, "python@3.9" as i54, "qt@5" as i55, "readline" as i56, "rtmpdump" as i57, "ruby" as i58, "sip" as i59, "sphinx-doc" as i60, "sqlite" as i61, "swig" as i62, "szip" as i63, "tcl-tk" as i64, "unzip" as i65, "vtk@8.2" as i66, "xz" as i67, "zip" as i68, "zlib" as i69, "zstd" as i70
 
 pkg(
   name: "gdcm",

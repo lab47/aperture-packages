@@ -12,10 +12,6 @@ class Sbt < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "50364b69d068eb212ace88d85062007ebfbb8abba6b5af0d73023bde17d634ff"
-  end
-
   depends_on arch: :x86_64
   depends_on "openjdk"
 

@@ -5,6 +5,7 @@ class Notmuch < Formula
   url "https://notmuchmail.org/releases/notmuch-0.32.1.tar.xz"
   sha256 "a747ca4e8cc919d91feda6cadb97e63b72ff79119491989bbcea79ad47680615"
   license "GPL-3.0-or-later"
+  revision 1
   head "https://git.notmuchmail.org/git/notmuch", using: :git
 
   livecheck do
@@ -13,13 +14,15 @@ class Notmuch < Formula
   end
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "0eb2700e35e3687842e99f38f8c197565ee9b6b139944525d5a6297f580cbaaf"
-    sha256 cellar: :any, big_sur:       "e9abbef70a364c7d6f0a70365c71bf0f9681a2691ad4062d5c323d139ab5dd9f"
-    sha256 cellar: :any, catalina:      "582b27d35ec3dcf8924b1a8bac9c56dc97ca93410a1b9ed23ecb65b8e2f942b9"
-    sha256 cellar: :any, mojave:        "0f89750eb2ab0fd7361470777f0eea4196852f68cbae1e78d2e2b493ab682545"
+    sha256 cellar: :any,                 arm64_big_sur: "25e42a13769182c88367bd2940d6522210e5a82eee4f02a5173851de6ce918d5"
+    sha256 cellar: :any,                 big_sur:       "287a0e2f7e7dd492135626de4fbea9324893bd647bf2d8fc50e691da2be437eb"
+    sha256 cellar: :any,                 catalina:      "8001f0c34b748c8ee7dbd92d73b093f3aa31fc0b25160bb1e4315c65f236ecb8"
+    sha256 cellar: :any,                 mojave:        "6d3dd1031db525fb1623e61a12ca49bb948449b1fe4ba08b9461fa73f32ad594"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "69f9ce4c600e71a9c83d9074941452887ba4404a2f31a3f8fff3657247b890ae"
   end
 
   depends_on "doxygen" => :build
+  depends_on "emacs" => :build
   depends_on "libgpg-error" => :build
   depends_on "pkg-config" => :build
   depends_on "sphinx-doc" => :build
@@ -53,6 +56,7 @@ class Notmuch < Formula
     system "./configure", *args
     system "make", "V=1", "install"
 
+    elisp.install Dir["emacs/*.el"]
     bash_completion.install "completion/notmuch-completion.bash"
 
     (prefix/"vim/plugin").install "vim/notmuch.vim"
@@ -89,12 +93,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "glib" as i16, "gmime" as i17, "gmp" as i18, "gnu-sed" as i19, "gnupg" as i20, "gnutls" as i21, "gobject-introspection" as i22, "gperf" as i23, "gpgme" as i24, "guile" as i25, "help2man" as i26, "jemalloc" as i27, "libassuan" as i28, "libatomic_ops" as i29, "libev" as i30, "libevent" as i31, "libffi" as i32, "libgcrypt" as i33, "libgpg-error" as i34, "libidn2" as i35, "libksba" as i36, "libpng" as i37, "libpthread-stubs" as i38, "libtasn1" as i39, "libtool" as i40, "libunistring" as i41, "libusb" as i42, "libx11" as i43, "libxau" as i44, "libxcb" as i45, "libxdmcp" as i46, "libxext" as i47, "libxml2" as i48, "libxrender" as i49, "libyaml" as i50, "lzo" as i51, "m4" as i52, "meson" as i53, "mpdecimal" as i54, "ncurses" as i55, "nettle" as i56, "nghttp2" as i57, "ninja" as i58, "npth" as i59, "openssl@1.1" as i60, "p11-kit" as i61, "pcre" as i62, "perl" as i63, "pinentry" as i64, "pixman" as i65, "pkg-config" as i66, "python@3.9" as i67, "readline" as i68, "ruby" as i69, "sphinx-doc" as i70, "sqlite" as i71, "swig" as i72, "talloc" as i73, "unbound" as i74, "unzip" as i75, "util-macros" as i76, "xapian" as i77, "xcb-proto" as i78, "xorgproto" as i79, "xtrans" as i80, "xz" as i81, "zip" as i82, "zlib" as i83
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "doxygen" as i9, "emacs" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gdbm" as i15, "gettext" as i16, "glib" as i17, "gmime" as i18, "gmp" as i19, "gnu-sed" as i20, "gnupg" as i21, "gnutls" as i22, "gobject-introspection" as i23, "gperf" as i24, "gpgme" as i25, "guile" as i26, "help2man" as i27, "jansson" as i28, "jemalloc" as i29, "libassuan" as i30, "libatomic_ops" as i31, "libev" as i32, "libevent" as i33, "libffi" as i34, "libgcrypt" as i35, "libgpg-error" as i36, "libidn2" as i37, "libksba" as i38, "libpng" as i39, "libpthread-stubs" as i40, "libtasn1" as i41, "libtool" as i42, "libunistring" as i43, "libusb" as i44, "libx11" as i45, "libxau" as i46, "libxcb" as i47, "libxdmcp" as i48, "libxext" as i49, "libxml2" as i50, "libxrender" as i51, "libyaml" as i52, "lzo" as i53, "m4" as i54, "meson" as i55, "mpdecimal" as i56, "ncurses" as i57, "nettle" as i58, "nghttp2" as i59, "ninja" as i60, "npth" as i61, "openssl@1.1" as i62, "p11-kit" as i63, "pcre" as i64, "perl" as i65, "pinentry" as i66, "pixman" as i67, "pkg-config" as i68, "python@3.9" as i69, "readline" as i70, "ruby" as i71, "sphinx-doc" as i72, "sqlite" as i73, "swig" as i74, "talloc" as i75, "unbound" as i76, "unzip" as i77, "util-macros" as i78, "xapian" as i79, "xcb-proto" as i80, "xorgproto" as i81, "xtrans" as i82, "xz" as i83, "zip" as i84, "zlib" as i85
 
 pkg(
   name: "notmuch",
   version: "0.32.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "notmuch.rb"), formula)

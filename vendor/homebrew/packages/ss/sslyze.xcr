@@ -17,9 +17,10 @@ class Sslyze < Formula
   end
 
   bottle do
-    sha256 cellar: :any, big_sur:  "bb90747b0ca6204eec778c0f6206e84c9082ead3d3cb57290b5868b42d49decd"
-    sha256 cellar: :any, catalina: "1ba1833fc32bf1779e2d1ae530305a7e4091385f4ce7cee14da61d2590d61229"
-    sha256 cellar: :any, mojave:   "517ddb6ff0b4e752fd16fba00fd98690ae18bb886b57e5cbf777299712379f21"
+    sha256 cellar: :any,                 big_sur:      "bb90747b0ca6204eec778c0f6206e84c9082ead3d3cb57290b5868b42d49decd"
+    sha256 cellar: :any,                 catalina:     "1ba1833fc32bf1779e2d1ae530305a7e4091385f4ce7cee14da61d2590d61229"
+    sha256 cellar: :any,                 mojave:       "517ddb6ff0b4e752fd16fba00fd98690ae18bb886b57e5cbf777299712379f21"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ba15cd2c6bd79218990cc6fbea28377a4e6db500e32ee68bb3ce7b14b23108c4"
   end
 
   head do
@@ -87,12 +88,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libmetalink" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pipenv" as i25, "pkg-config" as i26, "python@3.9" as i27, "readline" as i28, "rtmpdump" as i29, "rust" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36, "zstd" as i37
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pipenv" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "rtmpdump" as i28, "rust" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
 
 pkg(
   name: "sslyze",
   version: "4.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sslyze.rb"), formula)

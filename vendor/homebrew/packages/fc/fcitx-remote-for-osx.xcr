@@ -16,6 +16,8 @@ class FcitxRemoteForOsx < Formula
     sha256 cellar: :any_skip_relocation, sierra:        "16efcc3f2a5ac6fd63bfea3d85286fac823cc7b21520d85f46d0b3c066668671"
   end
 
+  depends_on :macos
+
   def install
     system "./build.py", "build", "general"
     bin.install "fcitx-remote-general"

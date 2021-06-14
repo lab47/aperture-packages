@@ -10,10 +10,11 @@ class Ykman < Formula
   head "https://github.com/Yubico/yubikey-manager.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "e8f7b0f43cddea4340ef004a655b9266c54fc7de654da661e9fa021339c72089"
-    sha256 cellar: :any, big_sur:       "c1b30a71bba7dcd8c5fc71e35ef011b4665586de129762a72afe00a551f0672b"
-    sha256 cellar: :any, catalina:      "46aca102b3c8cdad01b5366849893f8476f78c37bef9853b8f22d4e2eda50b88"
-    sha256 cellar: :any, mojave:        "66b2cfd1a7c3fc74f75d450eb114e128f8fe2c9c2721d905e74ada4515f0599f"
+    sha256 cellar: :any,                 arm64_big_sur: "e8f7b0f43cddea4340ef004a655b9266c54fc7de654da661e9fa021339c72089"
+    sha256 cellar: :any,                 big_sur:       "c1b30a71bba7dcd8c5fc71e35ef011b4665586de129762a72afe00a551f0672b"
+    sha256 cellar: :any,                 catalina:      "46aca102b3c8cdad01b5366849893f8476f78c37bef9853b8f22d4e2eda50b88"
+    sha256 cellar: :any,                 mojave:        "66b2cfd1a7c3fc74f75d450eb114e128f8fe2c9c2721d905e74ada4515f0599f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "3059c9e790dfc969421f0eb81c6f9b3a9c7bb8cc5a4c55c28f8ff87ac4f26cdd"
   end
 
   depends_on "rust" => :build
@@ -85,12 +86,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libmetalink" as i17, "libssh2" as i18, "libtool" as i19, "libunistring" as i20, "libxml2" as i21, "libyaml" as i22, "m4" as i23, "mpdecimal" as i24, "ncurses" as i25, "nghttp2" as i26, "ninja" as i27, "openldap" as i28, "openssl@1.1" as i29, "pcre" as i30, "perl" as i31, "pkg-config" as i32, "python@3.9" as i33, "readline" as i34, "rtmpdump" as i35, "ruby" as i36, "rust" as i37, "sphinx-doc" as i38, "sqlite" as i39, "swig" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44, "zstd" as i45
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libssh2" as i17, "libtool" as i18, "libunistring" as i19, "libxml2" as i20, "libyaml" as i21, "m4" as i22, "mpdecimal" as i23, "ncurses" as i24, "nghttp2" as i25, "ninja" as i26, "openldap" as i27, "openssl@1.1" as i28, "pcre" as i29, "perl" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "rtmpdump" as i34, "ruby" as i35, "rust" as i36, "sphinx-doc" as i37, "sqlite" as i38, "swig" as i39, "unzip" as i40, "xz" as i41, "zip" as i42, "zlib" as i43, "zstd" as i44
 
 pkg(
   name: "ykman",
   version: "4.0.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ykman.rb"), formula)

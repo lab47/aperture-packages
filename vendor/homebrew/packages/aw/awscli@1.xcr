@@ -5,8 +5,8 @@ class AwscliAT1 < Formula
   desc "Official Amazon AWS command-line interface"
   homepage "https://aws.amazon.com/cli/"
   # awscli should only be updated every 10 releases on multiples of 10
-  url "https://github.com/aws/aws-cli/archive/1.19.80.tar.gz"
-  sha256 "3ffaafa08de6547ae7e4f40f84d4410dcc21fd4daf44541bb1250df4fbd323b7"
+  url "https://github.com/aws/aws-cli/archive/1.19.90.tar.gz"
+  sha256 "041a0c58dc8065284d9400c2e1f4e68440df5e1628436deb7a935b455a9a4a05"
   license "Apache-2.0"
 
   livecheck do
@@ -15,10 +15,11 @@ class AwscliAT1 < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7a3da0e61d45dd2e5cf1923b1cc50f76273e72793f0314055eb5e3a21ea4bd3"
-    sha256 cellar: :any_skip_relocation, big_sur:       "537925f61c9d268ad43558567b838d3086168e3b48d4622732749b9739df502b"
-    sha256 cellar: :any_skip_relocation, catalina:      "5a0dccc3beb5b7bc50bd4dbae0391f6b66681e2121e76ef62fe9d0938771bcf0"
-    sha256 cellar: :any_skip_relocation, mojave:        "41b7ce527cf7f465ba0074bcd22000a3d1fcd3550beef012f7a981e579848672"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "72c45fc7e2f69c1c3cc7981df7957bd0dc9e8b1bfd0cf38d1c6128ce181254d7"
+    sha256 cellar: :any_skip_relocation, big_sur:       "12ee40b046c8f257eba6759e40ff7b7eda0848f97d1ec35280c53243c1313b83"
+    sha256 cellar: :any_skip_relocation, catalina:      "d432d1e2e07f21a4fbf6fc5b6ae4e8b4abffb93bd99abb75472b12bfb9137644"
+    sha256 cellar: :any_skip_relocation, mojave:        "76422b9dc324e6c6bb6915c4adc415dea9cdff0ff98f459c37fd0e180742d5e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "dbbaf285ec27cfdee3a797e691a86542fe899875e97d8147b22e9507c7e99258"
   end
 
   keg_only :versioned_formula
@@ -66,11 +67,11 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "bzip2" as i6, "cmake" as i7, "doxygen" as i8, "expat" as i9, "flex" as i10, "fontconfig" as i11, "freetype" as i12, "gdbm" as i13, "gettext" as i14, "ghostscript" as i15, "gperf" as i16, "groff" as i17, "help2man" as i18, "jasper" as i19, "jbig2dec" as i20, "jpeg" as i21, "krb5" as i22, "libffi" as i23, "libiconv" as i24, "libidn" as i25, "libpng" as i26, "libtiff" as i27, "libtool" as i28, "libxml2" as i29, "libyaml" as i30, "little-cms2" as i31, "lz4" as i32, "m4" as i33, "mpdecimal" as i34, "ncurses" as i35, "netpbm" as i36, "openjdk" as i37, "openjpeg" as i38, "openssl@1.1" as i39, "pcre" as i40, "perl" as i41, "pkg-config" as i42, "psutils" as i43, "python@3.9" as i44, "readline" as i45, "ruby" as i46, "scons" as i47, "sphinx-doc" as i48, "sqlite" as i49, "subversion" as i50, "swig" as i51, "uchardet" as i52, "unzip" as i53, "utf8proc" as i54, "xz" as i55, "zip" as i56, "zlib" as i57
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "bzip2" as i6, "cmake" as i7, "doxygen" as i8, "expat" as i9, "flex" as i10, "fontconfig" as i11, "freetype" as i12, "gdbm" as i13, "gettext" as i14, "ghostscript" as i15, "gperf" as i16, "groff" as i17, "help2man" as i18, "jasper" as i19, "jbig2dec" as i20, "jpeg" as i21, "krb5" as i22, "libffi" as i23, "libidn" as i24, "libpng" as i25, "libtiff" as i26, "libtool" as i27, "libxml2" as i28, "libyaml" as i29, "little-cms2" as i30, "lz4" as i31, "m4" as i32, "mpdecimal" as i33, "ncurses" as i34, "netpbm" as i35, "openjdk" as i36, "openjpeg" as i37, "openssl@1.1" as i38, "pcre" as i39, "perl" as i40, "pkg-config" as i41, "psutils" as i42, "python@3.9" as i43, "readline" as i44, "ruby" as i45, "scons" as i46, "sphinx-doc" as i47, "sqlite" as i48, "subversion" as i49, "swig" as i50, "texinfo" as i51, "uchardet" as i52, "unzip" as i53, "utf8proc" as i54, "xz" as i55, "zip" as i56, "zlib" as i57
 
 pkg(
   name: "awscli@1",
-  version: "1.19.80",
+  version: "1.19.90",
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57],
 
   def install(ctx) {

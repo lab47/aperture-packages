@@ -8,9 +8,10 @@ class Profanity < Formula
 
   bottle do
     rebuild 1
-    sha256 big_sur:  "c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42"
-    sha256 catalina: "aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397"
-    sha256 mojave:   "c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb"
+    sha256 big_sur:      "c997a1e4dd8e64b5cef0a457b734831f84741b45d8d630aa81a89f231499bd42"
+    sha256 catalina:     "aea5848ba083a0cabee58d7c8bf09220c193287d144321374207cd913d88d397"
+    sha256 mojave:       "c146f06dbe713c3e762e0c4ec9ca3c056b6fdb71d641e8905ce9a76ef90ce1eb"
+    sha256 x86_64_linux: "04fbe2b80e80f84d48665207ee6bf21156e81ea3dc67ccb8719944c7db1c0ea4"
   end
 
   head do
@@ -58,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "check" as i8, "cmake" as i9, "curl" as i10, "expat" as i11, "gdbm" as i12, "gettext" as i13, "glib" as i14, "gmp" as i15, "gnu-sed" as i16, "gnupg" as i17, "gnutls" as i18, "gperf" as i19, "gpgme" as i20, "guile" as i21, "jemalloc" as i22, "krb5" as i23, "libassuan" as i24, "libatomic_ops" as i25, "libev" as i26, "libevent" as i27, "libffi" as i28, "libgcrypt" as i29, "libgpg-error" as i30, "libidn2" as i31, "libksba" as i32, "libmetalink" as i33, "libotr" as i34, "libsignal-protocol-c" as i35, "libssh2" as i36, "libstrophe" as i37, "libtasn1" as i38, "libtool" as i39, "libunistring" as i40, "libusb" as i41, "libxml2" as i42, "libyaml" as i43, "m4" as i44, "meson" as i45, "mpdecimal" as i46, "ncurses" as i47, "nettle" as i48, "nghttp2" as i49, "ninja" as i50, "npth" as i51, "openldap" as i52, "openssl@1.1" as i53, "p11-kit" as i54, "pcre" as i55, "perl" as i56, "pinentry" as i57, "pkg-config" as i58, "python@3.9" as i59, "readline" as i60, "rtmpdump" as i61, "ruby" as i62, "sphinx-doc" as i63, "sqlite" as i64, "swig" as i65, "terminal-notifier" as i66, "unbound" as i67, "unzip" as i68, "xz" as i69, "zip" as i70, "zlib" as i71, "zstd" as i72
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "check" as i8, "cmake" as i9, "curl" as i10, "expat" as i11, "gdbm" as i12, "gettext" as i13, "glib" as i14, "gmp" as i15, "gnu-sed" as i16, "gnupg" as i17, "gnutls" as i18, "gperf" as i19, "gpgme" as i20, "guile" as i21, "jemalloc" as i22, "krb5" as i23, "libassuan" as i24, "libatomic_ops" as i25, "libev" as i26, "libevent" as i27, "libffi" as i28, "libgcrypt" as i29, "libgpg-error" as i30, "libidn2" as i31, "libksba" as i32, "libotr" as i33, "libsignal-protocol-c" as i34, "libssh2" as i35, "libstrophe" as i36, "libtasn1" as i37, "libtool" as i38, "libunistring" as i39, "libusb" as i40, "libxml2" as i41, "libyaml" as i42, "m4" as i43, "meson" as i44, "mpdecimal" as i45, "ncurses" as i46, "nettle" as i47, "nghttp2" as i48, "ninja" as i49, "npth" as i50, "openldap" as i51, "openssl@1.1" as i52, "p11-kit" as i53, "pcre" as i54, "perl" as i55, "pinentry" as i56, "pkg-config" as i57, "python@3.9" as i58, "readline" as i59, "rtmpdump" as i60, "ruby" as i61, "sphinx-doc" as i62, "sqlite" as i63, "swig" as i64, "terminal-notifier" as i65, "unbound" as i66, "unzip" as i67, "xz" as i68, "zip" as i69, "zlib" as i70, "zstd" as i71
 
 pkg(
   name: "profanity",
   version: "0.10.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "profanity.rb"), formula)

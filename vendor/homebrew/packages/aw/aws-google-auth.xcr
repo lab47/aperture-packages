@@ -11,10 +11,11 @@ class AwsGoogleAuth < Formula
   head "https://github.com/cevoaustralia/aws-google-auth.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "b3505a5a5991890399602c8ad46b27c28bac5f3a53ac44592c467cd39d43581e"
-    sha256 cellar: :any, big_sur:       "3589bde7757ffc1a99c89e23f2262f15cf91a7238c8caef1a41bd4d0e3b80f9a"
-    sha256 cellar: :any, catalina:      "ced4f01986457520cccd65f0aa77a3e229798dab20f8488ca96b92d1187d494f"
-    sha256 cellar: :any, mojave:        "b089e1e1e63eabe258206f60a958b25f935e2c24751d63d581526e972de5f16a"
+    sha256 cellar: :any,                 arm64_big_sur: "b3505a5a5991890399602c8ad46b27c28bac5f3a53ac44592c467cd39d43581e"
+    sha256 cellar: :any,                 big_sur:       "3589bde7757ffc1a99c89e23f2262f15cf91a7238c8caef1a41bd4d0e3b80f9a"
+    sha256 cellar: :any,                 catalina:      "ced4f01986457520cccd65f0aa77a3e229798dab20f8488ca96b92d1187d494f"
+    sha256 cellar: :any,                 mojave:        "b089e1e1e63eabe258206f60a958b25f935e2c24751d63d581526e972de5f16a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4f659b49fc5f00206f2c9a81f38b0a44a7e5dcdfd4b52919cd7f87b6d35ebc3f"
   end
 
   depends_on "rust" => :build
@@ -190,6 +191,7 @@ class AwsGoogleAuth < Formula
 
     resource("Pillow").stage do
       inreplace "setup.py" do |s|
+        free_pre = Formula["freetype"].opt_prefix
         s.gsub! "openjpeg.h",
           "probably_not_a_header_called_this_eh.h"
         on_macos do
@@ -201,9 +203,9 @@ class AwsGoogleAuth < Formula
                   "ZLIB_ROOT = ('#{Formula["zlib"].opt_prefix}/lib', '#{Formula["zlib"].opt_prefix}/include')"
         end
         s.gsub! "JPEG_ROOT = None",
-          "JPEG_ROOT = ('#{Formula["jpeg"].opt_prefix}/lib', '#{Formula["jpeg"].opt_prefix}/include')"
+                "JPEG_ROOT = ('#{Formula["jpeg"].opt_prefix}/lib', '#{Formula["jpeg"].opt_prefix}/include')"
         s.gsub! "FREETYPE_ROOT = None",
-          "FREETYPE_ROOT = ('#{Formula["freetype"].opt_prefix}/lib', '#{Formula["freetype"].opt_prefix}/include')"
+                "FREETYPE_ROOT = ('#{free_pre}/lib', '#{free_pre}/include')"
       end
 
       venv.pip_install Pathname.pwd
@@ -230,12 +232,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "freetype" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "jpeg" as i14, "krb5" as i15, "libev" as i16, "libffi" as i17, "libgcrypt" as i18, "libgpg-error" as i19, "libidn2" as i20, "libmetalink" as i21, "libpng" as i22, "libssh2" as i23, "libtool" as i24, "libunistring" as i25, "libxml2" as i26, "libxslt" as i27, "m4" as i28, "mpdecimal" as i29, "ncurses" as i30, "nghttp2" as i31, "ninja" as i32, "openldap" as i33, "openssl@1.1" as i34, "perl" as i35, "pkg-config" as i36, "python-tabulate" as i37, "python@3.9" as i38, "readline" as i39, "rtmpdump" as i40, "rust" as i41, "sphinx-doc" as i42, "sqlite" as i43, "tcl-tk" as i44, "unzip" as i45, "xz" as i46, "zip" as i47, "zlib" as i48, "zstd" as i49
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "freetype" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "jpeg" as i14, "krb5" as i15, "libev" as i16, "libffi" as i17, "libgcrypt" as i18, "libgpg-error" as i19, "libidn2" as i20, "libpng" as i21, "libssh2" as i22, "libtool" as i23, "libunistring" as i24, "libxml2" as i25, "libxslt" as i26, "m4" as i27, "mpdecimal" as i28, "ncurses" as i29, "nghttp2" as i30, "ninja" as i31, "openldap" as i32, "openssl@1.1" as i33, "perl" as i34, "pkg-config" as i35, "python-tabulate" as i36, "python@3.9" as i37, "readline" as i38, "rtmpdump" as i39, "rust" as i40, "sphinx-doc" as i41, "sqlite" as i42, "tcl-tk" as i43, "unzip" as i44, "xz" as i45, "zip" as i46, "zlib" as i47, "zstd" as i48
 
 pkg(
   name: "aws-google-auth",
   version: "0.0.37",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aws-google-auth.rb"), formula)

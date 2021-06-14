@@ -11,10 +11,6 @@ class Mx < Formula
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all: "89837ac3444a291c6ffb8cf795941146d5e3c0c2b0555eefe37e56781331105d"
-  end
-
   depends_on "openjdk" => :test
   depends_on arch: :x86_64
   depends_on "python@3.9"

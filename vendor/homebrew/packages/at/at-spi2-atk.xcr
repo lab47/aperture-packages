@@ -1,0 +1,109 @@
+formula = r"""
+class AtSpi2Atk < Formula
+  desc "Accessibility Toolkit GTK+ module"
+  homepage "https://www.freedesktop.org/wiki/Accessibility/AT-SPI2"
+  url "https://download.gnome.org/sources/at-spi2-atk/2.34/at-spi2-atk-2.34.2.tar.xz"
+  sha256 "901323cee0eef05c01ec4dee06c701aeeca81a314a7d60216fa363005e27f4f0"
+  license "LGPL-2.1-or-later"
+
+  bottle do
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "dfd83f6ff7daa444a32de826f09c86d976e84958aa93c8e615ecbcff41e30207"
+  end
+
+  depends_on "meson" => :build
+  depends_on "ninja" => :build
+  depends_on "pkg-config" => :build
+  depends_on "python@3.9" => :build
+  depends_on "at-spi2-core"
+  depends_on "atk"
+  depends_on "libxml2"
+  depends_on :linux
+
+  def install
+    ENV.refurbish_args
+
+    mkdir "build" do
+      system "meson", "--prefix=#{prefix}", "--libdir=#{lib}", ".."
+      system "ninja"
+      system "ninja", "install"
+    end
+  end
+
+  test do
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      #include <string.h>
+      #include <stdlib.h>
+      #include <glib.h>
+      #include <atk/atk.h>
+      #include <atk-bridge.h>
+
+      static AtkObject *root_accessible;
+      static GMainLoop *mainloop;
+      static gchar *tdata_path = NULL;
+
+      AtkObject * test_get_root (void) {
+        return root_accessible;
+      }
+
+      static AtkObject * get_root (void) {
+        return test_get_root ();
+      }
+
+      const gchar * get_toolkit_name (void) {
+        return strdup ("atspitesting-toolkit");
+      }
+
+      static void setup_atk_util (void) {
+        AtkUtilClass *klass;
+
+        klass = g_type_class_ref (ATK_TYPE_UTIL);
+        klass->get_root = get_root;
+        klass->get_toolkit_name = get_toolkit_name;
+        g_type_class_unref (klass);
+      }
+
+      static GOptionEntry optentries[] = {
+        {"test-data-file", 0, 0, G_OPTION_ARG_STRING, &tdata_path, "Path to file of test data", NULL},
+        {NULL}
+      };
+
+      int main (int argc, char *argv[]) {
+        GOptionContext *opt;
+        GError *err = NULL;
+        opt = g_option_context_new (NULL);
+        g_option_context_add_main_entries (opt, optentries, NULL);
+        g_option_context_set_ignore_unknown_options (opt, TRUE);
+
+        if (!g_option_context_parse (opt, &argc, &argv, &err))
+          g_error("Option parsing failed: %s", err->message);
+
+        setup_atk_util ();
+        atk_bridge_adaptor_init (NULL, NULL);
+
+        return 0;
+      }
+    EOS
+
+    pkg_config_cflags = shell_output("pkg-config --cflags --libs atk-bridge-2.0 glib-2.0 atk").chomp.split
+    system ENV.cc, "test.c", *pkg_config_cflags, "-o", "test"
+    assert_match "atk_bridge_adaptor_init", shell_output("#{testpath}/test 2>&1")
+  end
+end
+
+"""
+
+import "homebrew-install" as hi
+
+import "asciidoctor" as i0, "at-spi2-core" as i1, "atk" as i2, "autoconf" as i3, "automake" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cairo" as i8, "dbus" as i9, "docbook" as i10, "docbook-xsl" as i11, "expat" as i12, "flex" as i13, "fontconfig" as i14, "freetype" as i15, "gdbm" as i16, "gettext" as i17, "glib" as i18, "gnu-getopt" as i19, "gobject-introspection" as i20, "gperf" as i21, "help2man" as i22, "intltool" as i23, "libffi" as i24, "libgcrypt" as i25, "libgpg-error" as i26, "libpng" as i27, "libpthread-stubs" as i28, "libtool" as i29, "libx11" as i30, "libxau" as i31, "libxcb" as i32, "libxdmcp" as i33, "libxext" as i34, "libxfixes" as i35, "libxi" as i36, "libxml2" as i37, "libxrender" as i38, "libxslt" as i39, "libxtst" as i40, "lzo" as i41, "m4" as i42, "meson" as i43, "mpdecimal" as i44, "ncurses" as i45, "ninja" as i46, "openssl@1.1" as i47, "pcre" as i48, "perl" as i49, "pixman" as i50, "pkg-config" as i51, "python@3.9" as i52, "readline" as i53, "sqlite" as i54, "unzip" as i55, "util-macros" as i56, "xcb-proto" as i57, "xmlto" as i58, "xorgproto" as i59, "xtrans" as i60, "xz" as i61, "zip" as i62, "zlib" as i63
+
+pkg(
+  name: "at-spi2-atk",
+  version: "2.34.2",
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63],
+
+  def install(ctx) {
+    ctx.write_file(join(ctx.build, "at-spi2-atk.rb"), formula)
+    ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./at-spi2-atk.rb")
+  }
+)

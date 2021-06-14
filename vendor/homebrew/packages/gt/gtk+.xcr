@@ -19,6 +19,7 @@ class Gtkx < Formula
     sha256 big_sur:       "8ead5b96878ad431ac3e23dc3bd20bb4eac509c63c231e594986a0fa331e157f"
     sha256 catalina:      "3900f64476d7988670b5d0c855f072fba0af2b1bb323acf4f126f70c95a38616"
     sha256 mojave:        "10d1f2a81a115b9cf1e8c76fbd6cdc58f5b4593eb7f9e15cbe0127e14221dd06"
+    sha256 x86_64_linux:  "7a6506474b1d9921a0dd5b548d6efc3ae58f2f40c283eb3c023af6adbe156a0b"
   end
 
   head do
@@ -36,6 +37,16 @@ class Gtkx < Formula
   depends_on "gdk-pixbuf"
   depends_on "hicolor-icon-theme"
   depends_on "pango"
+
+  unless OS.mac?
+    depends_on "cairo"
+    depends_on "libxinerama"
+    depends_on "libxcomposite"
+    depends_on "libxcursor"
+    depends_on "libxdamage"
+    depends_on "libxfixes"
+    depends_on "libxrandr"
+  end
 
   # Patch to allow Eiffel Studio to run in Cocoa / non-X11 mode, as well as Freeciv's freeciv-gtk2 client
   # See:
@@ -55,8 +66,11 @@ class Gtkx < Formula
             "--enable-static",
             "--disable-glibtest",
             "--enable-introspection=yes",
-            "--with-gdktarget=quartz",
+            "--with-gdktarget=#{OS.mac? ? "quartz" : "x11"}",
             "--disable-visibility"]
+
+    # temporarily disable cups until linuxbrew/homebrew-core#495 is merged
+    args << "--disable-cups" unless OS.mac?
 
     if build.head?
       inreplace "autogen.sh", "libtoolize", "glibtoolize"
@@ -89,7 +103,9 @@ class Gtkx < Formula
     libpng = Formula["libpng"]
     pango = Formula["pango"]
     pixman = Formula["pixman"]
-    flags = %W[
+    backend = OS.mac? ? "quartz" : "x11"
+    flags = (ENV.cflags || "").split + (ENV.cppflags || "").split + (ENV.ldflags || "").split
+    flags += %W[
       -I#{atk.opt_include}/atk-1.0
       -I#{cairo.opt_include}/cairo
       -I#{fontconfig.opt_include}
@@ -114,12 +130,12 @@ class Gtkx < Formula
       -L#{pango.opt_lib}
       -latk-1.0
       -lcairo
-      -lgdk-quartz-2.0
+      -lgdk-#{backend}-2.0
       -lgdk_pixbuf-2.0
       -lgio-2.0
       -lglib-2.0
       -lgobject-2.0
-      -lgtk-quartz-2.0
+      -lgtk-#{backend}-2.0
       -lpango-1.0
       -lpangocairo-1.0
     ]
