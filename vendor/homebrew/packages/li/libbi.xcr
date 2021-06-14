@@ -150,12 +150,12 @@ end
 
 import "homebrew-install" as hi
 
-import "automake" as i0, "boost" as i1, "gsl" as i2, "netcdf" as i3, "qrupdate" as i4
+import "automake" as i0, "boost" as i1, "gsl" as i2, "netcdf" as i3, "qrupdate" as i4, "perl" as i5
 
 pkg(
   name: "libbi",
   version: "1.4.5",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libbi.rb"), formula)

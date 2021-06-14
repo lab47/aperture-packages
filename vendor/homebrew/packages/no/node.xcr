@@ -147,12 +147,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "brotli" as i2, "c-ares" as i3, "cmake" as i4, "gdbm" as i5, "icu4c" as i6, "jemalloc" as i7, "libev" as i8, "libtool" as i9, "libuv" as i10, "m4" as i11, "mpdecimal" as i12, "nghttp2" as i13, "ninja" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "xz" as i21
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "brotli" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "icu4c" as i9, "jemalloc" as i10, "libev" as i11, "libffi" as i12, "libtool" as i13, "libuv" as i14, "libxml2" as i15, "m4" as i16, "mpdecimal" as i17, "ncurses" as i18, "nghttp2" as i19, "ninja" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sphinx-doc" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
 
 pkg(
   name: "node",
   version: "16.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "node.rb"), formula)

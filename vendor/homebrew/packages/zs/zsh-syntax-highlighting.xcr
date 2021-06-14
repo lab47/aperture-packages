@@ -44,10 +44,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zsh" as i0
+
 pkg(
   name: "zsh-syntax-highlighting",
   version: "0.7.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zsh-syntax-highlighting.rb"), formula)

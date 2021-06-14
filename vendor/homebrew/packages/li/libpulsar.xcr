@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "openssl@1.1" as i3, "protobuf" as i4, "snappy" as i5, "zstd" as i6
+import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "openssl@1.1" as i3, "protobuf" as i4, "snappy" as i5, "zstd" as i6, "curl" as i7
 
 pkg(
   name: "libpulsar",
   version: "2.7.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpulsar.rb"), formula)

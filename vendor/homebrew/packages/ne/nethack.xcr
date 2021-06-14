@@ -90,10 +90,12 @@ end
 
 import "homebrew-install" as hi
 
+import "bison" as i0, "flex" as i1, "ncurses" as i2
+
 pkg(
   name: "nethack",
   version: "3.6.6",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nethack.rb"), formula)

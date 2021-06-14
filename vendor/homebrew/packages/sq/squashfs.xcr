@@ -90,12 +90,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3
+import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3, "zlib" as i4
 
 pkg(
   name: "squashfs",
   version: "4.4",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "squashfs.rb"), formula)

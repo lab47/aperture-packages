@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "docbook-xsl" as i2, "libtool" as i3, "pkg-config" as i4, "openssl@1.1" as i5
+import "autoconf" as i0, "automake" as i1, "docbook-xsl" as i2, "libtool" as i3, "pkg-config" as i4, "openssl@1.1" as i5, "pcsc-lite" as i6
 
 pkg(
   name: "opensc",
   version: "0.21.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opensc.rb"), formula)

@@ -118,12 +118,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ocaml" as i1, "opam" as i2, "pkg-config" as i3, "mbedtls" as i4, "neko" as i5, "pcre" as i6
+import "cmake" as i0, "ocaml" as i1, "opam" as i2, "pkg-config" as i3, "mbedtls" as i4, "neko" as i5, "pcre" as i6, "m4" as i7, "perl" as i8, "unzip" as i9
 
 pkg(
   name: "haxe",
   version: "4.2.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "haxe.rb"), formula)

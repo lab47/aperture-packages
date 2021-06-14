@@ -86,12 +86,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "boost" as i1, "lua" as i2, "openssl@1.1" as i3, "sqlite" as i4
+import "pkg-config" as i0, "boost" as i1, "lua" as i2, "openssl@1.1" as i3, "sqlite" as i4, "curl" as i5
 
 pkg(
   name: "pdns",
   version: "4.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdns.rb"), formula)

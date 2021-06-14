@@ -98,12 +98,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libtool" as i1, "sdl2" as i2
+import "pkg-config" as i0, "libtool" as i1, "sdl2" as i2, "ncurses" as i3
 
 pkg(
   name: "bochs",
   version: "2.6.11",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bochs.rb"), formula)

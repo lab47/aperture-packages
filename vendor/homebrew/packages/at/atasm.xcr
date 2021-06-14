@@ -38,10 +38,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "atasm",
   version: "1.07d",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "atasm.rb"), formula)

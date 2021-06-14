@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "jansson" as i3, "openssl@1.1" as i4
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "jansson" as i3, "openssl@1.1" as i4, "zlib" as i5
 
 pkg(
   name: "jose",
   version: "11",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jose.rb"), formula)

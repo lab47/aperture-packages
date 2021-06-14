@@ -83,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libomp" as i0
+import "libomp" as i0, "ncurses" as i1
 
 pkg(
   name: "speech-tools",
   version: "2.5.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "speech-tools.rb"), formula)

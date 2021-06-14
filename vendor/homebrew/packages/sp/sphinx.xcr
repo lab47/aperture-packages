@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "mysql@5.7" as i0, "openssl@1.1" as i1
+import "mysql@5.7" as i0, "openssl@1.1" as i1, "zlib" as i2
 
 pkg(
   name: "sphinx",
   version: "2.2.11",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sphinx.rb"), formula)

@@ -32,10 +32,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ruby" as i0
+
 pkg(
   name: "sourcery",
   version: "1.4.2",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sourcery.rb"), formula)

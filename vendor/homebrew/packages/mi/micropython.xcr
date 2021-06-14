@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "libffi" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "pkg-config" as i4, "python@3.9" as i5, "readline" as i6, "sqlite" as i7, "xz" as i8
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
 
 pkg(
   name: "micropython",
   version: "1.15",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "micropython.rb"), formula)

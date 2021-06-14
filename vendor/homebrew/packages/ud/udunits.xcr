@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "bison" as i1, "texinfo" as i2, "expat" as i3, "flex" as i4
 
 pkg(
   name: "udunits",
   version: "2.2.27.6",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "udunits.rb"), formula)

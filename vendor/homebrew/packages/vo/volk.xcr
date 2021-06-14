@@ -62,12 +62,12 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "gdbm" as i2, "icu4c" as i3, "meson" as i4, "mpdecimal" as i5, "ninja" as i6, "openssl@1.1" as i7, "orc" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sphinx-doc" as i12, "sqlite" as i13, "xz" as i14
+import "boost" as i0, "bzip2" as i1, "cmake" as i2, "expat" as i3, "gdbm" as i4, "icu4c" as i5, "libffi" as i6, "meson" as i7, "mpdecimal" as i8, "ncurses" as i9, "ninja" as i10, "openssl@1.1" as i11, "orc" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sphinx-doc" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
 
 pkg(
   name: "volk",
   version: "2.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "volk.rb"), formula)

@@ -91,10 +91,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0, "zlib" as i1
+
 pkg(
   name: "lcov",
   version: "1.15",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lcov.rb"), formula)

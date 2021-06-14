@@ -37,10 +37,12 @@ end
 
 import "homebrew-install" as hi
 
+import "m4" as i0
+
 pkg(
   name: "adns",
   version: "1.6.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "adns.rb"), formula)

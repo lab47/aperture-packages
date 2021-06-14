@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "rust" as i1, "libffi" as i2
+import "coreutils" as i0, "rust" as i1, "libffi" as i2, "ruby" as i3
 
 pkg(
   name: "inko",
   version: "0.9.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "inko.rb"), formula)

@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "argtable" as i1, "hiredis" as i2, "jsoncpp" as i3, "libmicrohttpd" as i4
+import "cmake" as i0, "argtable" as i1, "hiredis" as i2, "jsoncpp" as i3, "libmicrohttpd" as i4, "curl" as i5
 
 pkg(
   name: "libjson-rpc-cpp",
   version: "1.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libjson-rpc-cpp.rb"), formula)

@@ -181,12 +181,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+import "openssl@1.1" as i0, "zlib" as i1
 
 pkg(
   name: "tcl-tk",
   version: "8.6.11",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tcl-tk.rb"), formula)

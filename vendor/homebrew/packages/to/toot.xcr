@@ -78,12 +78,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.9" as i4, "readline" as i5, "sqlite" as i6, "xz" as i7
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
 
 pkg(
   name: "toot",
   version: "0.27.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "toot.rb"), formula)

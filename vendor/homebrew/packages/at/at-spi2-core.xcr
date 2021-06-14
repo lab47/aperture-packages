@@ -74,12 +74,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "bison" as i1, "cairo" as i2, "dbus" as i3, "docbook" as i4, "docbook-xsl" as i5, "fontconfig" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gnu-getopt" as i11, "gobject-introspection" as i12, "intltool" as i13, "libffi" as i14, "libpng" as i15, "libpthread-stubs" as i16, "libx11" as i17, "libxau" as i18, "libxcb" as i19, "libxdmcp" as i20, "libxext" as i21, "libxfixes" as i22, "libxi" as i23, "libxrender" as i24, "libxtst" as i25, "lzo" as i26, "meson" as i27, "mpdecimal" as i28, "ninja" as i29, "openssl@1.1" as i30, "pcre" as i31, "pixman" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "sqlite" as i36, "util-macros" as i37, "xcb-proto" as i38, "xmlto" as i39, "xorgproto" as i40, "xtrans" as i41, "xz" as i42
+import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "cairo" as i6, "dbus" as i7, "docbook" as i8, "docbook-xsl" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "glib" as i16, "gnu-getopt" as i17, "gobject-introspection" as i18, "gperf" as i19, "help2man" as i20, "intltool" as i21, "libffi" as i22, "libgcrypt" as i23, "libgpg-error" as i24, "libpng" as i25, "libpthread-stubs" as i26, "libtool" as i27, "libx11" as i28, "libxau" as i29, "libxcb" as i30, "libxdmcp" as i31, "libxext" as i32, "libxfixes" as i33, "libxi" as i34, "libxml2" as i35, "libxrender" as i36, "libxslt" as i37, "libxtst" as i38, "lzo" as i39, "m4" as i40, "meson" as i41, "mpdecimal" as i42, "ncurses" as i43, "ninja" as i44, "openssl@1.1" as i45, "pcre" as i46, "perl" as i47, "pixman" as i48, "pkg-config" as i49, "python@3.9" as i50, "readline" as i51, "sqlite" as i52, "unzip" as i53, "util-macros" as i54, "xcb-proto" as i55, "xmlto" as i56, "xorgproto" as i57, "xtrans" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
 
 pkg(
   name: "at-spi2-core",
   version: "2.36.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "at-spi2-core.rb"), formula)

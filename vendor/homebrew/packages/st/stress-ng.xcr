@@ -38,10 +38,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "stress-ng",
   version: "0.12.08",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stress-ng.rb"), formula)

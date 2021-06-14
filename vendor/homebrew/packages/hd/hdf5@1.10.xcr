@@ -102,12 +102,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gcc" as i3, "szip" as i4
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gcc" as i3, "szip" as i4, "zlib" as i5
 
 pkg(
   name: "hdf5@1.10",
   version: "1.10.7",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hdf5@1.10.rb"), formula)

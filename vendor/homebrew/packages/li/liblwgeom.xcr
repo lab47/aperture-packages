@@ -83,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gpp" as i2, "libtool" as i3, "pkg-config" as i4, "geos" as i5, "json-c" as i6, "proj" as i7
+import "autoconf" as i0, "automake" as i1, "gpp" as i2, "libtool" as i3, "pkg-config" as i4, "geos" as i5, "json-c" as i6, "proj" as i7, "libxml2" as i8
 
 pkg(
   name: "liblwgeom",
   version: "2.5.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "liblwgeom.rb"), formula)

@@ -94,12 +94,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook" as i0
+import "docbook" as i0, "libxslt" as i1, "perl" as i2
 
 pkg(
   name: "docbook2x",
   version: "0.8.8",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "docbook2x.rb"), formula)

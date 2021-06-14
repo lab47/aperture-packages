@@ -68,12 +68,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "jpeg" as i2, "libusb" as i3, "libx11" as i4, "libxcursor" as i5, "libxext" as i6, "libxfixes" as i7, "libxi" as i8, "libxinerama" as i9, "libxrandr" as i10, "libxrender" as i11, "libxv" as i12, "openssl@1.1" as i13
+import "cmake" as i0, "pkg-config" as i1, "jpeg" as i2, "libusb" as i3, "libx11" as i4, "libxcursor" as i5, "libxext" as i6, "libxfixes" as i7, "libxi" as i8, "libxinerama" as i9, "libxrandr" as i10, "libxrender" as i11, "libxv" as i12, "openssl@1.1" as i13, "cups" as i14
 
 pkg(
   name: "freerdp",
   version: "2.3.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freerdp.rb"), formula)

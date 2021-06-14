@@ -195,12 +195,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "libssh2" as i4, "libtool" as i5, "libyaml" as i6, "m4" as i7, "mpdecimal" as i8, "ninja" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "sphinx-doc" as i15, "sqlite" as i16, "xz" as i17
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libmetalink" as i17, "libssh2" as i18, "libtool" as i19, "libunistring" as i20, "libxml2" as i21, "libyaml" as i22, "m4" as i23, "mpdecimal" as i24, "ncurses" as i25, "nghttp2" as i26, "ninja" as i27, "openldap" as i28, "openssl@1.1" as i29, "perl" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "rtmpdump" as i34, "rust" as i35, "sphinx-doc" as i36, "sqlite" as i37, "unzip" as i38, "xz" as i39, "zip" as i40, "zlib" as i41, "zstd" as i42
 
 pkg(
   name: "termius",
   version: "1.2.15",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "termius.rb"), formula)

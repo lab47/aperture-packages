@@ -160,12 +160,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "gperftools" as i2, "llvm" as i3, "llvm@11" as i4, "mpdecimal" as i5, "openssl@1.1" as i6, "pcre" as i7, "pkg-config" as i8, "python-tabulate" as i9, "python@3.9" as i10, "readline" as i11, "sphinx-doc" as i12, "sqlite" as i13, "swig" as i14, "wllvm" as i15, "xz" as i16, "z3" as i17
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "gperftools" as i7, "libedit" as i8, "libffi" as i9, "libtool" as i10, "libxml2" as i11, "libyaml" as i12, "llvm" as i13, "llvm@11" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "pcre" as i19, "perl" as i20, "pkg-config" as i21, "python-tabulate" as i22, "python@3.9" as i23, "readline" as i24, "ruby" as i25, "sphinx-doc" as i26, "sqlite" as i27, "swig" as i28, "unzip" as i29, "wllvm" as i30, "xz" as i31, "z3" as i32, "zip" as i33, "zlib" as i34
 
 pkg(
   name: "klee",
   version: "2.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "klee.rb"), formula)

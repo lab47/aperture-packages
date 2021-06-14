@@ -295,12 +295,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "awscli" as i2, "cmake" as i3, "gdbm" as i4, "go" as i5, "jq" as i6, "juju" as i7, "juju-wait" as i8, "libtool" as i9, "libyaml" as i10, "m4" as i11, "mpdecimal" as i12, "oniguruma" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "pwgen" as i16, "python@3.9" as i17, "readline" as i18, "redis" as i19, "sphinx-doc" as i20, "sqlite" as i21, "xz" as i22
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "awscli" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "go" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "jasper" as i21, "jbig2dec" as i22, "jpeg" as i23, "jq" as i24, "juju" as i25, "juju-wait" as i26, "krb5" as i27, "libffi" as i28, "libiconv" as i29, "libidn" as i30, "libpng" as i31, "libtiff" as i32, "libtool" as i33, "libxml2" as i34, "libyaml" as i35, "little-cms2" as i36, "lz4" as i37, "m4" as i38, "mpdecimal" as i39, "ncurses" as i40, "netpbm" as i41, "oniguruma" as i42, "openjdk" as i43, "openjpeg" as i44, "openssl@1.1" as i45, "pcre" as i46, "perl" as i47, "pkg-config" as i48, "psutils" as i49, "pwgen" as i50, "python@3.9" as i51, "readline" as i52, "redis" as i53, "ruby" as i54, "scons" as i55, "sphinx-doc" as i56, "sqlite" as i57, "subversion" as i58, "swig" as i59, "uchardet" as i60, "unzip" as i61, "utf8proc" as i62, "xz" as i63, "zip" as i64, "zlib" as i65
 
 pkg(
   name: "conjure-up",
   version: "2.6.14",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "conjure-up.rb"), formula)

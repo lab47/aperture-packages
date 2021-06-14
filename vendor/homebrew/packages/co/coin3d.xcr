@@ -98,12 +98,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "boost" as i1, "cmake" as i2, "doxygen" as i3, "gdbm" as i4, "icu4c" as i5, "llvm" as i6, "mpdecimal" as i7, "ninja" as i8, "openssl@1.1" as i9, "pcre" as i10, "pkg-config" as i11, "pyside@2" as i12, "python@3.9" as i13, "qt@5" as i14, "readline" as i15, "sphinx-doc" as i16, "sqlite" as i17, "swig" as i18, "xz" as i19
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "bzip2" as i5, "cmake" as i6, "doxygen" as i7, "expat" as i8, "flex" as i9, "gdbm" as i10, "gettext" as i11, "gperf" as i12, "help2man" as i13, "icu4c" as i14, "libedit" as i15, "libffi" as i16, "libtool" as i17, "libxml2" as i18, "libyaml" as i19, "llvm" as i20, "m4" as i21, "mpdecimal" as i22, "ncurses" as i23, "ninja" as i24, "openssl@1.1" as i25, "pcre" as i26, "perl" as i27, "pkg-config" as i28, "pyside@2" as i29, "python@3.9" as i30, "qt@5" as i31, "readline" as i32, "ruby" as i33, "sphinx-doc" as i34, "sqlite" as i35, "swig" as i36, "unzip" as i37, "xz" as i38, "zip" as i39, "zlib" as i40
 
 pkg(
   name: "coin3d",
   version: "4.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coin3d.rb"), formula)

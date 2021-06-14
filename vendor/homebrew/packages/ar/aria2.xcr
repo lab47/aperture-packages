@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libssh2" as i1
+import "pkg-config" as i0, "libssh2" as i1, "libxml2" as i2, "zlib" as i3
 
 pkg(
   name: "aria2",
   version: "1.35.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aria2.rb"), formula)

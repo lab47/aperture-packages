@@ -29,10 +29,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ruby" as i0
+
 pkg(
   name: "schema-evolution-manager",
   version: "0.9.45",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "schema-evolution-manager.rb"), formula)

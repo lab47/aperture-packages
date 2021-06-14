@@ -77,12 +77,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gettext" as i0
+import "gettext" as i0, "texinfo" as i1
 
 pkg(
   name: "gnu-indent",
   version: "2.2.12",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnu-indent.rb"), formula)

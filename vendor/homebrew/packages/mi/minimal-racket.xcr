@@ -103,12 +103,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+import "openssl@1.1" as i0, "libffi" as i1
 
 pkg(
   name: "minimal-racket",
   version: "8.1",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "minimal-racket.rb"), formula)

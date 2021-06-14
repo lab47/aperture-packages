@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "pkg-config" as i1, "guile@2" as i2
+import "coreutils" as i0, "pkg-config" as i1, "guile@2" as i2, "libxml2" as i3
 
 pkg(
   name: "autogen",
   version: "5.18.16",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "autogen.rb"), formula)

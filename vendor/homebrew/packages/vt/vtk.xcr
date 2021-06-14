@@ -144,12 +144,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "boost" as i2, "cmake" as i3, "double-conversion" as i4, "eigen" as i5, "fontconfig" as i6, "freetype" as i7, "gcc" as i8, "gdbm" as i9, "gl2ps" as i10, "glew" as i11, "gmp" as i12, "hdf5" as i13, "icu4c" as i14, "isl" as i15, "jpeg" as i16, "jsoncpp" as i17, "libmpc" as i18, "libogg" as i19, "libpng" as i20, "libtiff" as i21, "libtool" as i22, "libvorbis" as i23, "lz4" as i24, "m4" as i25, "meson" as i26, "mpdecimal" as i27, "mpfr" as i28, "netcdf" as i29, "ninja" as i30, "openssl@1.1" as i31, "pkg-config" as i32, "pugixml" as i33, "pyqt-builder" as i34, "pyqt@5" as i35, "python@3.9" as i36, "qt@5" as i37, "readline" as i38, "sip" as i39, "sphinx-doc" as i40, "sqlite" as i41, "szip" as i42, "theora" as i43, "utf8cpp" as i44, "xz" as i45, "zstd" as i46
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "double-conversion" as i10, "eigen" as i11, "expat" as i12, "flex" as i13, "fontconfig" as i14, "freetype" as i15, "gcc" as i16, "gdbm" as i17, "gettext" as i18, "gl2ps" as i19, "glew" as i20, "gmp" as i21, "gperf" as i22, "hdf5" as i23, "help2man" as i24, "icu4c" as i25, "isl" as i26, "jemalloc" as i27, "jpeg" as i28, "jsoncpp" as i29, "krb5" as i30, "libev" as i31, "libffi" as i32, "libidn2" as i33, "libmetalink" as i34, "libmpc" as i35, "libogg" as i36, "libpng" as i37, "libssh2" as i38, "libtiff" as i39, "libtool" as i40, "libunistring" as i41, "libvorbis" as i42, "libxml2" as i43, "lz4" as i44, "m4" as i45, "meson" as i46, "mpdecimal" as i47, "mpfr" as i48, "ncurses" as i49, "netcdf" as i50, "nghttp2" as i51, "ninja" as i52, "openldap" as i53, "openssl@1.1" as i54, "perl" as i55, "pkg-config" as i56, "pugixml" as i57, "pyqt-builder" as i58, "pyqt@5" as i59, "python@3.9" as i60, "qt@5" as i61, "readline" as i62, "rtmpdump" as i63, "sip" as i64, "sphinx-doc" as i65, "sqlite" as i66, "szip" as i67, "tcl-tk" as i68, "theora" as i69, "unzip" as i70, "utf8cpp" as i71, "xz" as i72, "zip" as i73, "zlib" as i74, "zstd" as i75
 
 pkg(
   name: "vtk",
   version: "9.0.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vtk.rb"), formula)

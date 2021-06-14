@@ -110,12 +110,12 @@ index da4f4f93..6c95bcde 100644
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "pcre" as i4, "pkg-config" as i5, "python@3.9" as i6, "readline" as i7, "sphinx-doc" as i8, "sqlite" as i9, "swig" as i10, "xz" as i11
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "libffi" as i7, "libtool" as i8, "libyaml" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "pcre" as i14, "perl" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "ruby" as i19, "sphinx-doc" as i20, "sqlite" as i21, "swig" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
 
 pkg(
   name: "tbb",
   version: "2021.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tbb.rb"), formula)

@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.9" as i4, "readline" as i5, "sqlite" as i6, "xz" as i7
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "expect" as i5, "gdbm" as i6, "libffi" as i7, "libtool" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "perl" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sqlite" as i17, "tcl-tk" as i18, "unzip" as i19, "xz" as i20, "zip" as i21, "zlib" as i22
 
 pkg(
   name: "percol",
   version: "0.2.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "percol.rb"), formula)

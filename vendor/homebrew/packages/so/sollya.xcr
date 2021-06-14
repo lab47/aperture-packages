@@ -63,12 +63,12 @@ end
 
 import "homebrew-install" as hi
 
-import "automake" as i0, "fplll" as i1, "gmp" as i2, "mpfi" as i3, "mpfr" as i4
+import "automake" as i0, "fplll" as i1, "gmp" as i2, "mpfi" as i3, "mpfr" as i4, "libxml2" as i5
 
 pkg(
   name: "sollya",
   version: "7.0",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sollya.rb"), formula)

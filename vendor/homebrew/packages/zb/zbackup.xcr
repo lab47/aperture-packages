@@ -65,12 +65,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "lzo" as i1, "openssl@1.1" as i2, "protobuf" as i3, "xz" as i4
+import "cmake" as i0, "lzo" as i1, "openssl@1.1" as i2, "protobuf" as i3, "xz" as i4, "zlib" as i5
 
 pkg(
   name: "zbackup",
   version: "1.4.4",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zbackup.rb"), formula)

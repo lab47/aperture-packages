@@ -64,12 +64,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cmake" as i1, "flex" as i2, "pkg-config" as i3
+import "bison" as i0, "cmake" as i1, "flex" as i2, "pkg-config" as i3, "zlib" as i4
 
 pkg(
   name: "ibex",
   version: "2.8.9",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ibex.rb"), formula)

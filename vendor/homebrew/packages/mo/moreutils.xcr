@@ -72,12 +72,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0
+import "docbook-xsl" as i0, "libxml2" as i1, "libxslt" as i2, "perl" as i3
 
 pkg(
   name: "moreutils",
   version: "0.65",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "moreutils.rb"), formula)

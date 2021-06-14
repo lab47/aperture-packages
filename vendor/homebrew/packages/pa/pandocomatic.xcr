@@ -42,12 +42,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pandoc" as i0
+import "pandoc" as i0, "ruby" as i1
 
 pkg(
   name: "pandocomatic",
   version: "0.2.7.5",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pandocomatic.rb"), formula)

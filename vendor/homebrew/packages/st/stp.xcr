@@ -86,12 +86,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "boost" as i1, "cmake" as i2, "cryptominisat" as i3, "flex" as i4, "gdbm" as i5, "gettext" as i6, "help2man" as i7, "icu4c" as i8, "minisat" as i9, "mpdecimal" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sphinx-doc" as i15, "sqlite" as i16, "xz" as i17
+import "berkeley-db" as i0, "bison" as i1, "boost" as i2, "bzip2" as i3, "cmake" as i4, "cryptominisat" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "icu4c" as i11, "libffi" as i12, "libxml2" as i13, "m4" as i14, "minisat" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "stp",
   version: "2.3.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stp.rb"), formula)

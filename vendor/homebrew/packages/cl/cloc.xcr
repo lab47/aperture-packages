@@ -101,10 +101,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0
+
 pkg(
   name: "cloc",
   version: "1.90",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cloc.rb"), formula)

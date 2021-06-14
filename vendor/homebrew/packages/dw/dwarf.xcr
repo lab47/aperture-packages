@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "flex" as i0, "readline" as i1
+import "flex" as i0, "readline" as i1, "bison" as i2
 
 pkg(
   name: "dwarf",
   version: "0.4.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dwarf.rb"), formula)

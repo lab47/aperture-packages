@@ -97,12 +97,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fmt" as i4, "gettext" as i5, "libebml" as i6, "libmagic" as i7, "libmatroska" as i8, "libogg" as i9, "libvorbis" as i10, "nlohmann-json" as i11, "pcre2" as i12, "pugixml" as i13, "utf8cpp" as i14
+import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fmt" as i4, "gettext" as i5, "libebml" as i6, "libmagic" as i7, "libmatroska" as i8, "libogg" as i9, "libvorbis" as i10, "nlohmann-json" as i11, "pcre2" as i12, "pugixml" as i13, "utf8cpp" as i14, "libxslt" as i15, "ruby" as i16
 
 pkg(
   name: "mkvtoolnix",
   version: "57.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mkvtoolnix.rb"), formula)

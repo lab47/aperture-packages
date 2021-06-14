@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "cython" as i5, "gcc" as i6, "gdbm" as i7, "gettext" as i8, "gmp" as i9, "gnu-sed" as i10, "gnutls" as i11, "guile" as i12, "isl" as i13, "jemalloc" as i14, "libatomic_ops" as i15, "libev" as i16, "libevent" as i17, "libffi" as i18, "libidn2" as i19, "liblo" as i20, "libmicrohttpd" as i21, "libmpc" as i22, "libtasn1" as i23, "libtool" as i24, "libunistring" as i25, "libusb" as i26, "m4" as i27, "mpdecimal" as i28, "mpfr" as i29, "nettle" as i30, "nghttp2" as i31, "ninja" as i32, "numpy" as i33, "openblas" as i34, "openssl@1.1" as i35, "p11-kit" as i36, "pkg-config" as i37, "protobuf" as i38, "python@3.7" as i39, "python@3.8" as i40, "python@3.9" as i41, "readline" as i42, "six" as i43, "sphinx-doc" as i44, "sqlite" as i45, "tcl-tk" as i46, "unbound" as i47, "xz" as i48, "zstd" as i49
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "cython" as i7, "expat" as i8, "gcc" as i9, "gdbm" as i10, "gettext" as i11, "gmp" as i12, "gnu-sed" as i13, "gnutls" as i14, "gperf" as i15, "guile" as i16, "isl" as i17, "jemalloc" as i18, "libatomic_ops" as i19, "libev" as i20, "libevent" as i21, "libffi" as i22, "libidn2" as i23, "liblo" as i24, "libmicrohttpd" as i25, "libmpc" as i26, "libtasn1" as i27, "libtool" as i28, "libunistring" as i29, "libusb" as i30, "libxml2" as i31, "m4" as i32, "mpdecimal" as i33, "mpfr" as i34, "ncurses" as i35, "nettle" as i36, "nghttp2" as i37, "ninja" as i38, "numpy" as i39, "openblas" as i40, "openssl@1.1" as i41, "p11-kit" as i42, "perl" as i43, "pkg-config" as i44, "protobuf" as i45, "python@3.7" as i46, "python@3.8" as i47, "python@3.9" as i48, "readline" as i49, "six" as i50, "sphinx-doc" as i51, "sqlite" as i52, "tcl-tk" as i53, "unbound" as i54, "unzip" as i55, "xz" as i56, "zip" as i57, "zlib" as i58, "zstd" as i59
 
 pkg(
   name: "ola",
   version: "0.10.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ola.rb"), formula)

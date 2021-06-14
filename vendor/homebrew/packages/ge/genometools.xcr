@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "cmake" as i2, "fontconfig" as i3, "freetype" as i4, "fribidi" as i5, "gdbm" as i6, "gettext" as i7, "glib" as i8, "gobject-introspection" as i9, "graphite2" as i10, "harfbuzz" as i11, "icu4c" as i12, "libffi" as i13, "libpng" as i14, "libpthread-stubs" as i15, "libx11" as i16, "libxau" as i17, "libxcb" as i18, "libxdmcp" as i19, "libxext" as i20, "libxrender" as i21, "lzo" as i22, "meson" as i23, "mpdecimal" as i24, "ninja" as i25, "openssl@1.1" as i26, "pango" as i27, "pcre" as i28, "pixman" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "sphinx-doc" as i33, "sqlite" as i34, "util-macros" as i35, "xcb-proto" as i36, "xorgproto" as i37, "xtrans" as i38, "xz" as i39
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "cmake" as i4, "expat" as i5, "flex" as i6, "fontconfig" as i7, "freetype" as i8, "fribidi" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gobject-introspection" as i13, "gperf" as i14, "graphite2" as i15, "harfbuzz" as i16, "help2man" as i17, "icu4c" as i18, "libffi" as i19, "libpng" as i20, "libpthread-stubs" as i21, "libx11" as i22, "libxau" as i23, "libxcb" as i24, "libxdmcp" as i25, "libxext" as i26, "libxml2" as i27, "libxrender" as i28, "lzo" as i29, "m4" as i30, "meson" as i31, "mpdecimal" as i32, "ncurses" as i33, "ninja" as i34, "openssl@1.1" as i35, "pango" as i36, "pcre" as i37, "perl" as i38, "pixman" as i39, "pkg-config" as i40, "python@3.9" as i41, "readline" as i42, "sphinx-doc" as i43, "sqlite" as i44, "unzip" as i45, "util-macros" as i46, "xcb-proto" as i47, "xorgproto" as i48, "xtrans" as i49, "xz" as i50, "zip" as i51, "zlib" as i52
 
 pkg(
   name: "genometools",
   version: "1.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "genometools.rb"), formula)

@@ -650,12 +650,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "libssh2" as i4, "libtool" as i5, "libyaml" as i6, "m4" as i7, "mpdecimal" as i8, "ninja" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "sphinx-doc" as i15, "sqlite" as i16, "xz" as i17
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libgcrypt" as i16, "libgpg-error" as i17, "libidn2" as i18, "libmetalink" as i19, "libssh2" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "libxslt" as i24, "libyaml" as i25, "m4" as i26, "mpdecimal" as i27, "ncurses" as i28, "nghttp2" as i29, "ninja" as i30, "openldap" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "rtmpdump" as i37, "rust" as i38, "sphinx-doc" as i39, "sqlite" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44, "zstd" as i45
 
 pkg(
   name: "ansible",
   version: "4.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible.rb"), formula)

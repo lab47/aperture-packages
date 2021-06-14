@@ -54,12 +54,12 @@ index ea21fa6..b50bb34 100644
 
 import "homebrew-install" as hi
 
-import "popt" as i0
+import "popt" as i0, "ncurses" as i1
 
 pkg(
   name: "gptfdisk",
   version: "1.0.7",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gptfdisk.rb"), formula)

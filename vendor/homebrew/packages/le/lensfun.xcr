@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "gettext" as i2, "glib" as i3, "libffi" as i4, "libpng" as i5, "meson" as i6, "mpdecimal" as i7, "ninja" as i8, "openssl@1.1" as i9, "pcre" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sphinx-doc" as i14, "sqlite" as i15, "xz" as i16
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "gettext" as i4, "glib" as i5, "libffi" as i6, "libpng" as i7, "libxml2" as i8, "meson" as i9, "mpdecimal" as i10, "ncurses" as i11, "ninja" as i12, "openssl@1.1" as i13, "pcre" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sphinx-doc" as i18, "sqlite" as i19, "unzip" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
 
 pkg(
   name: "lensfun",
   version: "0.3.95",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lensfun.rb"), formula)

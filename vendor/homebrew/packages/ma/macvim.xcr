@@ -86,12 +86,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cscope" as i2, "gdbm" as i3, "gettext" as i4, "libtool" as i5, "libyaml" as i6, "lua" as i7, "m4" as i8, "mpdecimal" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "ruby" as i14, "sqlite" as i15, "xz" as i16
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cscope" as i4, "expat" as i5, "gdbm" as i6, "gettext" as i7, "libffi" as i8, "libtool" as i9, "libxml2" as i10, "libyaml" as i11, "lua" as i12, "m4" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "perl" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "ruby" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
 
 pkg(
   name: "macvim",
   version: "8.2-171",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "macvim.rb"), formula)

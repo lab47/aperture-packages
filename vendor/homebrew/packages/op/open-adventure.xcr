@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "autoconf" as i1, "boost" as i2, "docbook" as i3, "docbook-xsl" as i4, "gdbm" as i5, "icu4c" as i6, "m4" as i7, "mpdecimal" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "source-highlight" as i13, "sqlite" as i14, "xz" as i15
+import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "boost" as i4, "bzip2" as i5, "docbook" as i6, "docbook-xsl" as i7, "expat" as i8, "gdbm" as i9, "icu4c" as i10, "libedit" as i11, "libffi" as i12, "libgcrypt" as i13, "libgpg-error" as i14, "libtool" as i15, "libxml2" as i16, "libxslt" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "source-highlight" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
 
 pkg(
   name: "open-adventure",
   version: "1.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-adventure.rb"), formula)

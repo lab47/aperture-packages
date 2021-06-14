@@ -35,10 +35,12 @@ end
 
 import "homebrew-install" as hi
 
+import "xz" as i0, "zlib" as i1
+
 pkg(
   name: "libunwind",
   version: "1.5.0",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libunwind.rb"), formula)

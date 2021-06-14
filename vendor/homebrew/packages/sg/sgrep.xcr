@@ -33,10 +33,12 @@ end
 
 import "homebrew-install" as hi
 
+import "m4" as i0
+
 pkg(
   name: "sgrep",
   version: "1.94a",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sgrep.rb"), formula)

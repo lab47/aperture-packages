@@ -49,10 +49,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "sword",
   version: "1.9.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sword.rb"), formula)

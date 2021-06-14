@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lua" as i0, "ninja" as i1, "pkg-config" as i2, "ncurses" as i3
+import "lua" as i0, "ninja" as i1, "pkg-config" as i2, "ncurses" as i3, "zlib" as i4
 
 pkg(
   name: "wordgrinder",
   version: "0.8",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wordgrinder.rb"), formula)

@@ -71,12 +71,12 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "glm" as i1, "mdds" as i2, "pkg-config" as i3, "librevenge" as i4
+import "boost" as i0, "glm" as i1, "mdds" as i2, "pkg-config" as i3, "librevenge" as i4, "libxml2" as i5
 
 pkg(
   name: "libetonyek",
   version: "0.1.10",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libetonyek.rb"), formula)

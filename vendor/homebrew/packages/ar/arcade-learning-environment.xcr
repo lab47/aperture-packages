@@ -46,12 +46,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gcc" as i2, "gdbm" as i3, "gmp" as i4, "isl" as i5, "libmpc" as i6, "mpdecimal" as i7, "mpfr" as i8, "numpy" as i9, "openblas" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sdl" as i15, "sphinx-doc" as i16, "sqlite" as i17, "xz" as i18, "zstd" as i19
+import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "gcc" as i4, "gdbm" as i5, "gmp" as i6, "isl" as i7, "libffi" as i8, "libmpc" as i9, "m4" as i10, "mpdecimal" as i11, "mpfr" as i12, "ncurses" as i13, "numpy" as i14, "openblas" as i15, "openssl@1.1" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "sdl" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26, "zstd" as i27
 
 pkg(
   name: "arcade-learning-environment",
   version: "0.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arcade-learning-environment.rb"), formula)

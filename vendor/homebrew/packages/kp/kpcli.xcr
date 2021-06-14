@@ -134,12 +134,12 @@ end
 
 import "homebrew-install" as hi
 
-import "readline" as i0
+import "readline" as i0, "perl" as i1
 
 pkg(
   name: "kpcli",
   version: "3.6",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kpcli.rb"), formula)

@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "readline" as i0
+import "readline" as i0, "tcl-tk" as i1
 
 pkg(
   name: "x3270",
   version: "4.0ga14",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "x3270.rb"), formula)

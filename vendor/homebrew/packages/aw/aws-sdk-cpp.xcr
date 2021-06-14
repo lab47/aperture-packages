@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "curl" as i1
 
 pkg(
   name: "aws-sdk-cpp",
   version: "1.9.30",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aws-sdk-cpp.rb"), formula)

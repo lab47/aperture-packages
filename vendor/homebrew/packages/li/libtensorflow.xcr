@@ -144,12 +144,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "bazel" as i1, "cmake" as i2, "cython" as i3, "gcc" as i4, "gdbm" as i5, "gmp" as i6, "isl" as i7, "libmpc" as i8, "m4" as i9, "mpdecimal" as i10, "mpfr" as i11, "numpy" as i12, "openblas" as i13, "openjdk@11" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "xz" as i21, "zstd" as i22
+import "autoconf" as i0, "bazel" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "m4" as i13, "mpdecimal" as i14, "mpfr" as i15, "ncurses" as i16, "numpy" as i17, "openblas" as i18, "openjdk@11" as i19, "openssl@1.1" as i20, "perl" as i21, "pkg-config" as i22, "python@3.9" as i23, "readline" as i24, "sphinx-doc" as i25, "sqlite" as i26, "unzip" as i27, "xz" as i28, "zip" as i29, "zlib" as i30, "zstd" as i31
 
 pkg(
   name: "libtensorflow",
   version: "2.5.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtensorflow.rb"), formula)

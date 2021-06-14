@@ -70,12 +70,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "c-ares" as i1, "jemalloc" as i2, "libev" as i3, "openssl@1.1" as i4
+import "pkg-config" as i0, "c-ares" as i1, "jemalloc" as i2, "libev" as i3, "openssl@1.1" as i4, "libxml2" as i5, "zlib" as i6
 
 pkg(
   name: "nghttp2",
   version: "1.43.0",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nghttp2.rb"), formula)

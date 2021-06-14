@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "ghostscript" as i1, "netpbm" as i2, "psutils" as i3, "uchardet" as i4
+import "pkg-config" as i0, "ghostscript" as i1, "netpbm" as i2, "psutils" as i3, "uchardet" as i4, "libiconv" as i5, "perl" as i6
 
 pkg(
   name: "groff",
   version: "1.22.4",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "groff.rb"), formula)

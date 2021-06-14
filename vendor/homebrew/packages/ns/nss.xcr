@@ -117,12 +117,12 @@ end
 
 import "homebrew-install" as hi
 
-import "nspr" as i0
+import "nspr" as i0, "sqlite" as i1, "zlib" as i2
 
 pkg(
   name: "nss",
   version: "3.66",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nss.rb"), formula)

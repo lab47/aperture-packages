@@ -43,12 +43,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libtool" as i0
+import "libtool" as i0, "perl" as i1, "zlib" as i2
 
 pkg(
   name: "libgetdata",
   version: "0.10.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libgetdata.rb"), formula)

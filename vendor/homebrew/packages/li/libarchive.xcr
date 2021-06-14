@@ -65,12 +65,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3
+import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "expat" as i5, "zlib" as i6
 
 pkg(
   name: "libarchive",
   version: "3.5.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libarchive.rb"), formula)

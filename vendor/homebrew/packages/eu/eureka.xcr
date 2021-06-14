@@ -43,12 +43,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "openssl@1.1" as i1
+import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2
 
 pkg(
   name: "eureka",
   version: "1.8.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "eureka.rb"), formula)

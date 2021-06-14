@@ -85,12 +85,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fizz" as i3, "fmt" as i4, "folly" as i5, "gflags" as i6, "glog" as i7, "libevent" as i8, "libsodium" as i9, "lz4" as i10, "openssl@1.1" as i11, "snappy" as i12, "zstd" as i13
+import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fizz" as i3, "fmt" as i4, "folly" as i5, "gflags" as i6, "glog" as i7, "libevent" as i8, "libsodium" as i9, "lz4" as i10, "openssl@1.1" as i11, "snappy" as i12, "zstd" as i13, "bzip2" as i14, "zlib" as i15
 
 pkg(
   name: "wangle",
   version: "2021.05.31.00",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wangle.rb"), formula)

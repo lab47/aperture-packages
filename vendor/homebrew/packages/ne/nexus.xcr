@@ -87,12 +87,12 @@ end
 
 import "homebrew-install" as hi
 
-import "maven" as i0, "openjdk@8" as i1
+import "maven" as i0, "openjdk@8" as i1, "unzip" as i2
 
 pkg(
   name: "nexus",
   version: "3.30.1-01",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nexus.rb"), formula)

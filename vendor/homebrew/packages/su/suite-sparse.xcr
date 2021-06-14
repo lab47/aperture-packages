@@ -64,12 +64,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "metis" as i1, "openblas" as i2, "tbb" as i3
+import "cmake" as i0, "metis" as i1, "openblas" as i2, "tbb" as i3, "m4" as i4
 
 pkg(
   name: "suite-sparse",
   version: "5.10.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "suite-sparse.rb"), formula)

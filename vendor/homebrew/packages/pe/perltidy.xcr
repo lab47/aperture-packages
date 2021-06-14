@@ -52,10 +52,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0
+
 pkg(
   name: "perltidy",
   version: "20210402",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "perltidy.rb"), formula)

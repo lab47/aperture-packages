@@ -115,12 +115,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "gettext" as i1, "libffi" as i2, "meson" as i3, "mpdecimal" as i4, "ninja" as i5, "openssl@1.1" as i6, "pcre" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "xz" as i12
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gettext" as i3, "libffi" as i4, "libxml2" as i5, "meson" as i6, "mpdecimal" as i7, "ncurses" as i8, "ninja" as i9, "openssl@1.1" as i10, "pcre" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "glib",
   version: "2.68.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glib.rb"), formula)

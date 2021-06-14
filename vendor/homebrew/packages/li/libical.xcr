@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "glib" as i2, "icu4c" as i3
+import "cmake" as i0, "pkg-config" as i1, "glib" as i2, "icu4c" as i3, "libxml2" as i4
 
 pkg(
   name: "libical",
   version: "3.0.10",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libical.rb"), formula)

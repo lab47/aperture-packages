@@ -60,10 +60,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "libmagic",
   version: "5.40",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libmagic.rb"), formula)

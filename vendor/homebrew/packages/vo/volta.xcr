@@ -49,12 +49,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0
+import "rust" as i0, "openssl@1.1" as i1
 
 pkg(
   name: "volta",
   version: "1.0.4",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "volta.rb"), formula)

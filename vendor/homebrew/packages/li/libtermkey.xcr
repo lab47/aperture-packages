@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libtool" as i0, "pkg-config" as i1, "unibilium" as i2
+import "libtool" as i0, "pkg-config" as i1, "unibilium" as i2, "ncurses" as i3
 
 pkg(
   name: "libtermkey",
   version: "0.22",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtermkey.rb"), formula)

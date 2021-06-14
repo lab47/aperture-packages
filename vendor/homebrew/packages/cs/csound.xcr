@@ -175,12 +175,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "faust" as i4, "fltk" as i5, "fluid-synth" as i6, "gettext" as i7, "hdf5" as i8, "jack" as i9, "liblo" as i10, "libpng" as i11, "libsamplerate" as i12, "libsndfile" as i13, "numpy" as i14, "openjdk" as i15, "portaudio" as i16, "portmidi" as i17, "stk" as i18, "wiiuse" as i19
+import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "faust" as i4, "fltk" as i5, "fluid-synth" as i6, "gettext" as i7, "hdf5" as i8, "jack" as i9, "liblo" as i10, "libpng" as i11, "libsamplerate" as i12, "libsndfile" as i13, "numpy" as i14, "openjdk" as i15, "portaudio" as i16, "portmidi" as i17, "stk" as i18, "wiiuse" as i19, "bison" as i20, "flex" as i21, "curl" as i22, "zlib" as i23
 
 pkg(
   name: "csound",
   version: "6.15.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "csound.rb"), formula)

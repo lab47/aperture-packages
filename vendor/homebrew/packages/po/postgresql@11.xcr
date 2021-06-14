@@ -154,12 +154,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3
+import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3, "krb5" as i4, "libxml2" as i5, "libxslt" as i6, "openldap" as i7, "perl" as i8
 
 pkg(
   name: "postgresql@11",
   version: "11.12",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "postgresql@11.rb"), formula)

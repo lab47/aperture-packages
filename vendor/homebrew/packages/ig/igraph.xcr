@@ -76,12 +76,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "arpack" as i1, "glpk" as i2, "gmp" as i3, "openblas" as i4, "suite-sparse" as i5
+import "cmake" as i0, "arpack" as i1, "glpk" as i2, "gmp" as i3, "openblas" as i4, "suite-sparse" as i5, "libxml2" as i6
 
 pkg(
   name: "igraph",
   version: "0.9.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "igraph.rb"), formula)

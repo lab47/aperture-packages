@@ -77,12 +77,12 @@ index f254290..43fefb8 100644
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "bzip2" as i1, "zlib" as i2
 
 pkg(
   name: "stormlib",
   version: "9.23",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stormlib.rb"), formula)

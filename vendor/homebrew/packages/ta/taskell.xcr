@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2
+import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2, "ncurses" as i3, "zlib" as i4
 
 pkg(
   name: "taskell",
   version: "1.11.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "taskell.rb"), formula)

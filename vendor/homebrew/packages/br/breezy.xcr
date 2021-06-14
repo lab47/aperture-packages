@@ -83,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cython" as i0, "gdbm" as i1, "gettext" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pkg-config" as i5, "python@3.9" as i6, "readline" as i7, "sqlite" as i8, "xz" as i9
+import "bzip2" as i0, "cython" as i1, "expat" as i2, "gdbm" as i3, "gettext" as i4, "libffi" as i5, "libxml2" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "breezy",
   version: "3.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "breezy.rb"), formula)

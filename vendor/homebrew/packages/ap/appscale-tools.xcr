@@ -360,12 +360,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libyaml" as i0, "openssl@1.1" as i1
+import "libyaml" as i0, "openssl@1.1" as i1, "libffi" as i2, "ssh-copy-id" as i3
 
 pkg(
   name: "appscale-tools",
   version: "3.5.3",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "appscale-tools.rb"), formula)

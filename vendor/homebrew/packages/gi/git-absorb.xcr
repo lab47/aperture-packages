@@ -49,12 +49,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0
+import "rust" as i0, "zlib" as i1
 
 pkg(
   name: "git-absorb",
   version: "0.6.6",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-absorb.rb"), formula)

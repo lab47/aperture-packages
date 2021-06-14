@@ -58,12 +58,12 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "openssl@1.1" as i1
+import "apr" as i0, "openssl@1.1" as i1, "expat" as i2, "sqlite" as i3
 
 pkg(
   name: "apr-util",
   version: "1.6.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apr-util.rb"), formula)

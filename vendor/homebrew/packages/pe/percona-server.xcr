@@ -214,12 +214,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "openssl@1.1" as i1, "protobuf" as i2
+import "cmake" as i0, "openssl@1.1" as i1, "protobuf" as i2, "curl" as i3
 
 pkg(
   name: "percona-server",
   version: "8.0.22-13",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "percona-server.rb"), formula)

@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "doxygen" as i1, "openssl@1.1" as i2
+import "cmake" as i0, "doxygen" as i1, "openssl@1.1" as i2, "libxml2" as i3
 
 pkg(
   name: "davix",
   version: "0.7.6",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "davix.rb"), formula)

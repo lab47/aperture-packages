@@ -35,10 +35,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "fio",
   version: "3.27",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fio.rb"), formula)

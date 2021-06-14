@@ -46,10 +46,12 @@ end
 
 import "homebrew-install" as hi
 
+import "zlib" as i0
+
 pkg(
   name: "libxlsxwriter",
   version: "1.0.6",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxlsxwriter.rb"), formula)

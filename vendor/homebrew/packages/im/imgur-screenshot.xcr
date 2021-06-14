@@ -31,12 +31,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bash" as i0, "jq" as i1, "terminal-notifier" as i2
+import "bash" as i0, "jq" as i1, "terminal-notifier" as i2, "curl" as i3
 
 pkg(
   name: "imgur-screenshot",
   version: "2.0.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "imgur-screenshot.rb"), formula)

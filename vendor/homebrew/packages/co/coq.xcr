@@ -70,12 +70,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ocaml-findlib" as i0, "ocaml" as i1, "ocaml-zarith" as i2
+import "ocaml-findlib" as i0, "ocaml" as i1, "ocaml-zarith" as i2, "m4" as i3, "unzip" as i4
 
 pkg(
   name: "coq",
   version: "8.13.2",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coq.rb"), formula)

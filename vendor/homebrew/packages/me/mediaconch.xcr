@@ -71,12 +71,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "jansson" as i1, "libevent" as i2, "sqlite" as i3
+import "pkg-config" as i0, "jansson" as i1, "libevent" as i2, "sqlite" as i3, "curl" as i4, "libxslt" as i5
 
 pkg(
   name: "mediaconch",
   version: "18.03.2",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mediaconch.rb"), formula)

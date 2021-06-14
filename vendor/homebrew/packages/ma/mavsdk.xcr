@@ -136,12 +136,12 @@ end
 
 import "homebrew-install" as hi
 
-import "abseil" as i0, "autoconf" as i1, "automake" as i2, "brotli" as i3, "c-ares" as i4, "cmake" as i5, "curl" as i6, "gdbm" as i7, "gettext" as i8, "grpc" as i9, "jemalloc" as i10, "jsoncpp" as i11, "libev" as i12, "libidn2" as i13, "libmetalink" as i14, "libssh2" as i15, "libtool" as i16, "libunistring" as i17, "m4" as i18, "meson" as i19, "mpdecimal" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pkg-config" as i25, "protobuf" as i26, "python@3.7" as i27, "python@3.8" as i28, "python@3.9" as i29, "re2" as i30, "readline" as i31, "rtmpdump" as i32, "six" as i33, "sphinx-doc" as i34, "sqlite" as i35, "tcl-tk" as i36, "tinyxml2" as i37, "xz" as i38, "zstd" as i39
+import "abseil" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "grpc" as i13, "jemalloc" as i14, "jsoncpp" as i15, "krb5" as i16, "libev" as i17, "libffi" as i18, "libidn2" as i19, "libmetalink" as i20, "libssh2" as i21, "libtool" as i22, "libunistring" as i23, "libxml2" as i24, "m4" as i25, "meson" as i26, "mpdecimal" as i27, "ncurses" as i28, "nghttp2" as i29, "ninja" as i30, "openldap" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "protobuf" as i35, "python@3.7" as i36, "python@3.8" as i37, "python@3.9" as i38, "re2" as i39, "readline" as i40, "rtmpdump" as i41, "six" as i42, "sphinx-doc" as i43, "sqlite" as i44, "tcl-tk" as i45, "tinyxml2" as i46, "unzip" as i47, "xz" as i48, "zip" as i49, "zlib" as i50, "zstd" as i51
 
 pkg(
   name: "mavsdk",
   version: "0.40.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mavsdk.rb"), formula)

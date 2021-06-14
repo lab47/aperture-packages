@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "gettext" as i1, "help2man" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pkg-config" as i5, "python@3.9" as i6, "readline" as i7, "sqlite" as i8, "xz" as i9
+import "berkeley-db" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gettext" as i4, "help2man" as i5, "libffi" as i6, "libxml2" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "perl" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "liblouis",
   version: "3.17.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "liblouis.rb"), formula)

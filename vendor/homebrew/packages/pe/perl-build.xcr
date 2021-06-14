@@ -136,10 +136,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0
+
 pkg(
   name: "perl-build",
   version: "1.32",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "perl-build.rb"), formula)

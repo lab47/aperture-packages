@@ -73,12 +73,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gmp" as i0
+import "gmp" as i0, "m4" as i1
 
 pkg(
   name: "nettle",
   version: "3.7.2",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nettle.rb"), formula)

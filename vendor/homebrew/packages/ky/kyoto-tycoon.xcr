@@ -67,12 +67,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lua" as i0, "pkg-config" as i1, "kyoto-cabinet" as i2
+import "lua" as i0, "pkg-config" as i1, "kyoto-cabinet" as i2, "zlib" as i3
 
 pkg(
   name: "kyoto-tycoon",
   version: "0.9.56",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kyoto-tycoon.rb"), formula)

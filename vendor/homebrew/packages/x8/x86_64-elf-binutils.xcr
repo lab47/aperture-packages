@@ -45,10 +45,12 @@ end
 
 import "homebrew-install" as hi
 
+import "texinfo" as i0
+
 pkg(
   name: "x86_64-elf-binutils",
   version: "2.36.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "x86_64-elf-binutils.rb"), formula)

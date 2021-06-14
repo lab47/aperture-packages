@@ -116,12 +116,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ansible" as i0, "autoconf" as i1, "automake" as i2, "cmake" as i3, "gdbm" as i4, "libssh2" as i5, "libtool" as i6, "libyaml" as i7, "m4" as i8, "mpdecimal" as i9, "ninja" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "rust" as i15, "sphinx-doc" as i16, "sqlite" as i17, "xz" as i18
+import "ansible" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libmetalink" as i20, "libssh2" as i21, "libtool" as i22, "libunistring" as i23, "libxml2" as i24, "libxslt" as i25, "libyaml" as i26, "m4" as i27, "mpdecimal" as i28, "ncurses" as i29, "nghttp2" as i30, "ninja" as i31, "openldap" as i32, "openssl@1.1" as i33, "perl" as i34, "pkg-config" as i35, "python@3.9" as i36, "readline" as i37, "rtmpdump" as i38, "rust" as i39, "sphinx-doc" as i40, "sqlite" as i41, "unzip" as i42, "xz" as i43, "zip" as i44, "zlib" as i45, "zstd" as i46
 
 pkg(
   name: "ansible-lint",
   version: "5.0.11",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible-lint.rb"), formula)

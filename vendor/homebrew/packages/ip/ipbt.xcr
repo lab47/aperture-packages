@@ -36,10 +36,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ncurses" as i0
+
 pkg(
   name: "ipbt",
   version: "20210215",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ipbt.rb"), formula)

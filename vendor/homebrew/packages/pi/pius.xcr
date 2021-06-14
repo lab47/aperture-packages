@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "gdbm" as i5, "gettext" as i6, "gmp" as i7, "gnu-sed" as i8, "gnupg" as i9, "gnutls" as i10, "guile" as i11, "jemalloc" as i12, "libassuan" as i13, "libatomic_ops" as i14, "libev" as i15, "libevent" as i16, "libffi" as i17, "libgcrypt" as i18, "libgpg-error" as i19, "libidn2" as i20, "libksba" as i21, "libtasn1" as i22, "libtool" as i23, "libunistring" as i24, "libusb" as i25, "m4" as i26, "mpdecimal" as i27, "nettle" as i28, "nghttp2" as i29, "ninja" as i30, "npth" as i31, "openssl@1.1" as i32, "p11-kit" as i33, "pinentry" as i34, "pkg-config" as i35, "python@3.9" as i36, "readline" as i37, "sphinx-doc" as i38, "sqlite" as i39, "unbound" as i40, "xz" as i41
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "gnupg" as i12, "gnutls" as i13, "gperf" as i14, "guile" as i15, "jemalloc" as i16, "libassuan" as i17, "libatomic_ops" as i18, "libev" as i19, "libevent" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libksba" as i25, "libtasn1" as i26, "libtool" as i27, "libunistring" as i28, "libusb" as i29, "libxml2" as i30, "m4" as i31, "mpdecimal" as i32, "ncurses" as i33, "nettle" as i34, "nghttp2" as i35, "ninja" as i36, "npth" as i37, "openssl@1.1" as i38, "p11-kit" as i39, "perl" as i40, "pinentry" as i41, "pkg-config" as i42, "python@3.9" as i43, "readline" as i44, "sphinx-doc" as i45, "sqlite" as i46, "unbound" as i47, "unzip" as i48, "xz" as i49, "zip" as i50, "zlib" as i51
 
 pkg(
   name: "pius",
   version: "3.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pius.rb"), formula)

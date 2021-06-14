@@ -107,12 +107,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "extra-cmake-modules" as i3, "gettext" as i4, "ki18n" as i5, "karchive" as i6
+import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "extra-cmake-modules" as i3, "gettext" as i4, "ki18n" as i5, "karchive" as i6, "libxml2" as i7, "libxslt" as i8, "perl" as i9
 
 pkg(
   name: "kdoctools",
   version: "5.82.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kdoctools.rb"), formula)

@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "jpeg" as i2, "libao" as i3, "libmodplug" as i4, "libpng" as i5, "libsamplerate" as i6, "libsndfile" as i7, "libvorbis" as i8, "sdl2" as i9, "sdl2_mixer" as i10
+import "pkg-config" as i0, "freetype" as i1, "jpeg" as i2, "libao" as i3, "libmodplug" as i4, "libpng" as i5, "libsamplerate" as i6, "libsndfile" as i7, "libvorbis" as i8, "sdl2" as i9, "sdl2_mixer" as i10, "ncurses" as i11, "zlib" as i12
 
 pkg(
   name: "frotz",
   version: "2.53",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "frotz.rb"), formula)

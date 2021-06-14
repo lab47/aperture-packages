@@ -42,12 +42,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "libgit2" as i1, "libssh2" as i2, "openssl@1.1" as i3
+import "rust" as i0, "libgit2" as i1, "libssh2" as i2, "openssl@1.1" as i3, "zlib" as i4
 
 pkg(
   name: "cargo-c",
   version: "0.8.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cargo-c.rb"), formula)

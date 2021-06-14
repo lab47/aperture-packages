@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gd" as i0, "jpeg" as i1, "libpng" as i2
+import "gd" as i0, "jpeg" as i1, "libpng" as i2, "zlib" as i3
 
 pkg(
   name: "analog",
   version: "6.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "analog.rb"), formula)

@@ -67,10 +67,12 @@ end
 
 import "homebrew-install" as hi
 
+import "m4" as i0
+
 pkg(
   name: "bison@2.7",
   version: "2.7.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bison@2.7.rb"), formula)

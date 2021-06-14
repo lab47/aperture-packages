@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "gdbm" as i1, "gzip" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pkg-config" as i5, "python@3.9" as i6, "readline" as i7, "sqlite" as i8, "xz" as i9
+import "berkeley-db" as i0, "bzip2" as i1, "coreutils" as i2, "expat" as i3, "gdbm" as i4, "gperf" as i5, "gzip" as i6, "libffi" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "perl" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "texinfo" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "ponysay",
   version: "3.0.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ponysay.rb"), formula)

@@ -187,12 +187,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "gdbm" as i1, "ghc" as i2, "git-annex" as i3, "gsasl" as i4, "libgcrypt" as i5, "libgpg-error" as i6, "libmagic" as i7, "libquvi" as i8, "lua@5.1" as i9, "mpdecimal" as i10, "openssl@1.1" as i11, "p7zip" as i12, "pkg-config" as i13, "python@3.9" as i14, "quvi" as i15, "readline" as i16, "sphinx-doc" as i17, "sqlite" as i18, "xz" as i19
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cabal-install" as i4, "cmake" as i5, "curl" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "ghc" as i10, "git-annex" as i11, "gsasl" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libmagic" as i20, "libmetalink" as i21, "libquvi" as i22, "libssh2" as i23, "libunistring" as i24, "libxml2" as i25, "lua@5.1" as i26, "m4" as i27, "mpdecimal" as i28, "ncurses" as i29, "nghttp2" as i30, "ninja" as i31, "openldap" as i32, "openssl@1.1" as i33, "p7zip" as i34, "pkg-config" as i35, "python@3.9" as i36, "quvi" as i37, "readline" as i38, "rtmpdump" as i39, "sphinx-doc" as i40, "sqlite" as i41, "unzip" as i42, "xz" as i43, "zip" as i44, "zlib" as i45, "zstd" as i46
 
 pkg(
   name: "datalad",
   version: "0.14.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "datalad.rb"), formula)

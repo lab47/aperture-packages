@@ -81,12 +81,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-turbo" as i4, "libpng" as i5, "libvorbis" as i6, "mad" as i7, "sdl2" as i8
+import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-turbo" as i4, "libpng" as i5, "libvorbis" as i6, "mad" as i7, "sdl2" as i8, "ncurses" as i9, "zlib" as i10
 
 pkg(
   name: "ocp",
   version: "0.2.90",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ocp.rb"), formula)

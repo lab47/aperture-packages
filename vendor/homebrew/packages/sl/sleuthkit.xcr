@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ant" as i0, "afflib" as i1, "libewf" as i2, "libpq" as i3, "openjdk" as i4
+import "ant" as i0, "afflib" as i1, "libewf" as i2, "libpq" as i3, "openjdk" as i4, "sqlite" as i5
 
 pkg(
   name: "sleuthkit",
   version: "4.10.2",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sleuthkit.rb"), formula)

@@ -71,12 +71,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "caf" as i1, "cmake" as i2, "gdbm" as i3, "geoip" as i4, "libmaxminddb" as i5, "mpdecimal" as i6, "openssl@1.1" as i7, "pcre" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sphinx-doc" as i12, "sqlite" as i13, "swig" as i14, "xz" as i15
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "caf" as i5, "cmake" as i6, "expat" as i7, "flex" as i8, "gdbm" as i9, "geoip" as i10, "gettext" as i11, "help2man" as i12, "libffi" as i13, "libmaxminddb" as i14, "libpcap" as i15, "libtool" as i16, "libxml2" as i17, "libyaml" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "openssl@1.1" as i22, "pcre" as i23, "perl" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "ruby" as i28, "sphinx-doc" as i29, "sqlite" as i30, "swig" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35
 
 pkg(
   name: "zeek",
   version: "4.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zeek.rb"), formula)

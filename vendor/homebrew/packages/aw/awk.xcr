@@ -41,10 +41,12 @@ end
 
 import "homebrew-install" as hi
 
+import "bison" as i0
+
 pkg(
   name: "awk",
   version: "20180827",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "awk.rb"), formula)

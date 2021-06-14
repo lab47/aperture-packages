@@ -121,12 +121,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "pcre" as i4, "pkg-config" as i5, "python@3.9" as i6, "readline" as i7, "sphinx-doc" as i8, "sqlite" as i9, "xz" as i10
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libxml2" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pcre" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "cppcheck",
   version: "2.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cppcheck.rb"), formula)

@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8
+import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8, "zlib" as i9
 
 pkg(
   name: "neomutt",
   version: "20210205",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neomutt.rb"), formula)

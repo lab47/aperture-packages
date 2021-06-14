@@ -79,12 +79,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "berkeley-db" as i1, "flex" as i2, "lmdb" as i3, "openldap" as i4, "openssl@1.1" as i5
+import "bison" as i0, "berkeley-db" as i1, "flex" as i2, "lmdb" as i3, "openldap" as i4, "openssl@1.1" as i5, "perl" as i6
 
 pkg(
   name: "heimdal",
   version: "7.7.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "heimdal.rb"), formula)

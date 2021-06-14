@@ -43,12 +43,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "flac" as i3, "fluid-synth" as i4, "gdbm" as i5, "gettext" as i6, "glib" as i7, "libffi" as i8, "liblo" as i9, "libmagic" as i10, "libogg" as i11, "libsndfile" as i12, "libtool" as i13, "libvorbis" as i14, "m4" as i15, "meson" as i16, "mpdecimal" as i17, "ninja" as i18, "openssl@1.1" as i19, "opus" as i20, "pcre" as i21, "pkg-config" as i22, "portaudio" as i23, "pyqt-builder" as i24, "pyqt@5" as i25, "python@3.9" as i26, "qt@5" as i27, "readline" as i28, "sip" as i29, "sphinx-doc" as i30, "sqlite" as i31, "xz" as i32
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flac" as i7, "flex" as i8, "fluid-synth" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gperf" as i13, "help2man" as i14, "libffi" as i15, "liblo" as i16, "libmagic" as i17, "libogg" as i18, "libsndfile" as i19, "libtool" as i20, "libvorbis" as i21, "libxml2" as i22, "m4" as i23, "meson" as i24, "mpdecimal" as i25, "ncurses" as i26, "ninja" as i27, "openssl@1.1" as i28, "opus" as i29, "pcre" as i30, "perl" as i31, "pkg-config" as i32, "portaudio" as i33, "pyqt-builder" as i34, "pyqt@5" as i35, "python@3.9" as i36, "qt@5" as i37, "readline" as i38, "sip" as i39, "sphinx-doc" as i40, "sqlite" as i41, "unzip" as i42, "xz" as i43, "zip" as i44, "zlib" as i45
 
 pkg(
   name: "carla",
   version: "2.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "carla.rb"), formula)

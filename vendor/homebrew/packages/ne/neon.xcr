@@ -65,12 +65,12 @@ index d7702d2..5c3b5a3 100755
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "openssl@1.1" as i1
+import "pkg-config" as i0, "openssl@1.1" as i1, "libxml2" as i2
 
 pkg(
   name: "neon",
   version: "0.31.2",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neon.rb"), formula)

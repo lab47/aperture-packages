@@ -115,12 +115,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "gettext" as i1
+import "asciidoctor" as i0, "gettext" as i1, "ncurses" as i2, "zlib" as i3
 
 pkg(
   name: "util-linux",
   version: "2.37",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "util-linux.rb"), formula)

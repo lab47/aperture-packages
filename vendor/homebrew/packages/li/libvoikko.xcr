@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "foma" as i3, "gdbm" as i4, "hfstospell" as i5, "icu4c" as i6, "libarchive" as i7, "libb2" as i8, "libtool" as i9, "lz4" as i10, "m4" as i11, "mpdecimal" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sphinx-doc" as i17, "sqlite" as i18, "xz" as i19, "zstd" as i20
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "foma" as i6, "gdbm" as i7, "hfstospell" as i8, "icu4c" as i9, "libarchive" as i10, "libb2" as i11, "libffi" as i12, "libtool" as i13, "lz4" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28, "zstd" as i29
 
 pkg(
   name: "libvoikko",
   version: "4.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libvoikko.rb"), formula)

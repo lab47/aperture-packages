@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "jpeg" as i2, "libtiff" as i3, "little-cms2" as i4, "mpdecimal" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sphinx-doc" as i10, "sqlite" as i11, "xz" as i12
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libtiff" as i6, "little-cms2" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sphinx-doc" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "opencolorio",
   version: "2.0.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opencolorio.rb"), formula)

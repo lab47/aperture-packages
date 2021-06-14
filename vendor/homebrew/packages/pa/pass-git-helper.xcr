@@ -63,12 +63,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "bdw-gc" as i3, "c-ares" as i4, "cmake" as i5, "gdbm" as i6, "gettext" as i7, "gmp" as i8, "gnu-getopt" as i9, "gnu-sed" as i10, "gnupg" as i11, "gnutls" as i12, "guile" as i13, "jemalloc" as i14, "libassuan" as i15, "libatomic_ops" as i16, "libev" as i17, "libevent" as i18, "libffi" as i19, "libgcrypt" as i20, "libgpg-error" as i21, "libidn2" as i22, "libksba" as i23, "libpng" as i24, "libtasn1" as i25, "libtool" as i26, "libunistring" as i27, "libusb" as i28, "m4" as i29, "mpdecimal" as i30, "nettle" as i31, "nghttp2" as i32, "ninja" as i33, "npth" as i34, "openssl@1.1" as i35, "p11-kit" as i36, "pass" as i37, "pinentry" as i38, "pkg-config" as i39, "python@3.9" as i40, "qrencode" as i41, "readline" as i42, "sphinx-doc" as i43, "sqlite" as i44, "tree" as i45, "unbound" as i46, "xz" as i47
+import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "bdw-gc" as i3, "berkeley-db" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "expat" as i8, "gdbm" as i9, "gettext" as i10, "gmp" as i11, "gnu-getopt" as i12, "gnu-sed" as i13, "gnupg" as i14, "gnutls" as i15, "gperf" as i16, "guile" as i17, "jemalloc" as i18, "libassuan" as i19, "libatomic_ops" as i20, "libev" as i21, "libevent" as i22, "libffi" as i23, "libgcrypt" as i24, "libgpg-error" as i25, "libidn2" as i26, "libksba" as i27, "libpng" as i28, "libtasn1" as i29, "libtool" as i30, "libunistring" as i31, "libusb" as i32, "libxml2" as i33, "m4" as i34, "mpdecimal" as i35, "ncurses" as i36, "nettle" as i37, "nghttp2" as i38, "ninja" as i39, "npth" as i40, "openssl@1.1" as i41, "p11-kit" as i42, "pass" as i43, "perl" as i44, "pinentry" as i45, "pkg-config" as i46, "python@3.9" as i47, "qrencode" as i48, "readline" as i49, "sphinx-doc" as i50, "sqlite" as i51, "tree" as i52, "unbound" as i53, "unzip" as i54, "xz" as i55, "zip" as i56, "zlib" as i57
 
 pkg(
   name: "pass-git-helper",
   version: "1.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pass-git-helper.rb"), formula)

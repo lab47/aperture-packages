@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "libpng" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pkg-config" as i5, "portaudio" as i6, "python@3.9" as i7, "readline" as i8, "sdl2" as i9, "sphinx-doc" as i10, "sqlite" as i11, "xz" as i12
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libpng" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "portaudio" as i10, "python@3.9" as i11, "readline" as i12, "sdl2" as i13, "sphinx-doc" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "hatari",
   version: "2.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hatari.rb"), formula)

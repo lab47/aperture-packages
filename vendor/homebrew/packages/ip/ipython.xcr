@@ -185,12 +185,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "boost" as i3, "docbook" as i4, "docbook-xsl" as i5, "gdbm" as i6, "gnu-getopt" as i7, "icu4c" as i8, "libsodium" as i9, "m4" as i10, "mpdecimal" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "source-highlight" as i16, "sqlite" as i17, "xmlto" as i18, "xz" as i19, "zeromq" as i20
+import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "boost" as i5, "bzip2" as i6, "docbook" as i7, "docbook-xsl" as i8, "expat" as i9, "gdbm" as i10, "gnu-getopt" as i11, "icu4c" as i12, "libffi" as i13, "libgcrypt" as i14, "libgpg-error" as i15, "libsodium" as i16, "libtool" as i17, "libxml2" as i18, "libxslt" as i19, "m4" as i20, "mpdecimal" as i21, "ncurses" as i22, "openssl@1.1" as i23, "perl" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "source-highlight" as i28, "sqlite" as i29, "unzip" as i30, "xmlto" as i31, "xz" as i32, "zeromq" as i33, "zip" as i34, "zlib" as i35
 
 pkg(
   name: "ipython",
   version: "7.24.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ipython.rb"), formula)

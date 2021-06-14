@@ -69,12 +69,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "cython" as i3, "fftw" as i4, "gcc" as i5, "gdbm" as i6, "gmp" as i7, "hackrf" as i8, "hwloc" as i9, "isl" as i10, "libevent" as i11, "libmpc" as i12, "libtool" as i13, "libusb" as i14, "m4" as i15, "mpdecimal" as i16, "mpfr" as i17, "numpy" as i18, "open-mpi" as i19, "openblas" as i20, "openssl@1.1" as i21, "pkg-config" as i22, "pyqt-builder" as i23, "pyqt@5" as i24, "python@3.9" as i25, "qt@5" as i26, "readline" as i27, "sip" as i28, "sphinx-doc" as i29, "sqlite" as i30, "xz" as i31, "zstd" as i32
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "cython" as i6, "expat" as i7, "fftw" as i8, "flex" as i9, "gcc" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gperf" as i14, "hackrf" as i15, "help2man" as i16, "hwloc" as i17, "isl" as i18, "libevent" as i19, "libffi" as i20, "libmpc" as i21, "libtool" as i22, "libusb" as i23, "libxml2" as i24, "m4" as i25, "mpdecimal" as i26, "mpfr" as i27, "ncurses" as i28, "numpy" as i29, "open-mpi" as i30, "openblas" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "pyqt-builder" as i35, "pyqt@5" as i36, "python@3.9" as i37, "qt@5" as i38, "readline" as i39, "sip" as i40, "sphinx-doc" as i41, "sqlite" as i42, "unzip" as i43, "xz" as i44, "zip" as i45, "zlib" as i46, "zstd" as i47
 
 pkg(
   name: "urh",
   version: "2.9.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "urh.rb"), formula)

@@ -119,12 +119,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "libssh2" as i2, "mpdecimal" as i3, "ninja" as i4, "openssl@1.1" as i5, "pkg-config" as i6, "python-tabulate" as i7, "python@3.9" as i8, "readline" as i9, "rust" as i10, "sphinx-doc" as i11, "sqlite" as i12, "xz" as i13
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libmetalink" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pkg-config" as i25, "python-tabulate" as i26, "python@3.9" as i27, "readline" as i28, "rtmpdump" as i29, "rust" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36, "zstd" as i37
 
 pkg(
   name: "mycli",
   version: "1.24.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mycli.rb"), formula)

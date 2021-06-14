@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gettext" as i0, "glib" as i1, "graphviz" as i2, "pkg-config" as i3
+import "gettext" as i0, "glib" as i1, "graphviz" as i2, "pkg-config" as i3, "bison" as i4, "flex" as i5
 
 pkg(
   name: "vala",
   version: "0.52.3",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vala.rb"), formula)

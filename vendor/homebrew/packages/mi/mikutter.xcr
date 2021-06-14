@@ -271,12 +271,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" as i3, "terminal-notifier" as i4
+import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" as i3, "xz" as i4, "terminal-notifier" as i5
 
 pkg(
   name: "mikutter",
   version: "4.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mikutter.rb"), formula)

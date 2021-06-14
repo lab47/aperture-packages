@@ -60,12 +60,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "boost" as i2, "cmake" as i3, "double-conversion" as i4, "fmt" as i5, "folly" as i6, "gdbm" as i7, "gflags" as i8, "glog" as i9, "googletest" as i10, "icu4c" as i11, "libevent" as i12, "libssh2" as i13, "libtool" as i14, "lz4" as i15, "m4" as i16, "mpdecimal" as i17, "ninja" as i18, "openssl@1.1" as i19, "pcre" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "rust" as i24, "snappy" as i25, "sphinx-doc" as i26, "sqlite" as i27, "xz" as i28, "zstd" as i29
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "double-conversion" as i10, "expat" as i11, "fmt" as i12, "folly" as i13, "gdbm" as i14, "gettext" as i15, "gflags" as i16, "glog" as i17, "googletest" as i18, "icu4c" as i19, "jemalloc" as i20, "krb5" as i21, "libev" as i22, "libevent" as i23, "libffi" as i24, "libidn2" as i25, "libmetalink" as i26, "libssh2" as i27, "libtool" as i28, "libunistring" as i29, "libxml2" as i30, "lz4" as i31, "m4" as i32, "mpdecimal" as i33, "ncurses" as i34, "nghttp2" as i35, "ninja" as i36, "openldap" as i37, "openssl@1.1" as i38, "pcre" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "rtmpdump" as i44, "rust" as i45, "snappy" as i46, "sphinx-doc" as i47, "sqlite" as i48, "unzip" as i49, "xz" as i50, "zip" as i51, "zlib" as i52, "zstd" as i53
 
 pkg(
   name: "watchman",
   version: "2021.05.31.00",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "watchman.rb"), formula)

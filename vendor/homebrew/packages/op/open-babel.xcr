@@ -48,12 +48,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "cmake" as i2, "doxygen" as i3, "eigen" as i4, "fontconfig" as i5, "freetype" as i6, "gdbm" as i7, "gettext" as i8, "glib" as i9, "libffi" as i10, "libpng" as i11, "libpthread-stubs" as i12, "libx11" as i13, "libxau" as i14, "libxcb" as i15, "libxdmcp" as i16, "libxext" as i17, "libxrender" as i18, "lzo" as i19, "meson" as i20, "mpdecimal" as i21, "ninja" as i22, "openssl@1.1" as i23, "pcre" as i24, "pixman" as i25, "pkg-config" as i26, "python@3.9" as i27, "rapidjson" as i28, "readline" as i29, "sphinx-doc" as i30, "sqlite" as i31, "swig" as i32, "util-macros" as i33, "xcb-proto" as i34, "xorgproto" as i35, "xtrans" as i36, "xz" as i37
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cairo" as i5, "cmake" as i6, "doxygen" as i7, "eigen" as i8, "expat" as i9, "flex" as i10, "fontconfig" as i11, "freetype" as i12, "gdbm" as i13, "gettext" as i14, "glib" as i15, "gperf" as i16, "help2man" as i17, "libffi" as i18, "libpng" as i19, "libpthread-stubs" as i20, "libtool" as i21, "libx11" as i22, "libxau" as i23, "libxcb" as i24, "libxdmcp" as i25, "libxext" as i26, "libxml2" as i27, "libxrender" as i28, "libyaml" as i29, "lzo" as i30, "m4" as i31, "meson" as i32, "mpdecimal" as i33, "ncurses" as i34, "ninja" as i35, "openssl@1.1" as i36, "pcre" as i37, "perl" as i38, "pixman" as i39, "pkg-config" as i40, "python@3.9" as i41, "rapidjson" as i42, "readline" as i43, "ruby" as i44, "sphinx-doc" as i45, "sqlite" as i46, "swig" as i47, "unzip" as i48, "util-macros" as i49, "xcb-proto" as i50, "xorgproto" as i51, "xtrans" as i52, "xz" as i53, "zip" as i54, "zlib" as i55
 
 pkg(
   name: "open-babel",
   version: "3.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-babel.rb"), formula)

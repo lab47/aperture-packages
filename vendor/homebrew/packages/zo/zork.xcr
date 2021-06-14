@@ -38,10 +38,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ncurses" as i0
+
 pkg(
   name: "zork",
   version: "1.0.3",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zork.rb"), formula)

@@ -64,12 +64,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "check" as i4, "openssl@1.1" as i5
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "check" as i4, "openssl@1.1" as i5, "expat" as i6, "libxml2" as i7
 
 pkg(
   name: "libstrophe",
   version: "0.10.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libstrophe.rb"), formula)

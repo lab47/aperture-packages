@@ -151,12 +151,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "freetype" as i5, "gdbm" as i6, "gettext" as i7, "gmp" as i8, "gnu-sed" as i9, "gnupg" as i10, "gnutls" as i11, "guile" as i12, "jemalloc" as i13, "jpeg" as i14, "libassuan" as i15, "libatomic_ops" as i16, "libev" as i17, "libevent" as i18, "libffi" as i19, "libgcrypt" as i20, "libgpg-error" as i21, "libidn2" as i22, "libksba" as i23, "libpng" as i24, "libtasn1" as i25, "libtool" as i26, "libunistring" as i27, "libusb" as i28, "libyaml" as i29, "m4" as i30, "mpdecimal" as i31, "nettle" as i32, "nghttp2" as i33, "ninja" as i34, "npth" as i35, "openssl@1.1" as i36, "p11-kit" as i37, "pinentry" as i38, "pkg-config" as i39, "python@3.9" as i40, "readline" as i41, "sphinx-doc" as i42, "sqlite" as i43, "tcl-tk" as i44, "unbound" as i45, "xz" as i46
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "freetype" as i8, "gdbm" as i9, "gettext" as i10, "gmp" as i11, "gnu-sed" as i12, "gnupg" as i13, "gnutls" as i14, "gperf" as i15, "guile" as i16, "jemalloc" as i17, "jpeg" as i18, "libassuan" as i19, "libatomic_ops" as i20, "libev" as i21, "libevent" as i22, "libffi" as i23, "libgcrypt" as i24, "libgpg-error" as i25, "libidn2" as i26, "libksba" as i27, "libpng" as i28, "libtasn1" as i29, "libtool" as i30, "libunistring" as i31, "libusb" as i32, "libxml2" as i33, "libyaml" as i34, "m4" as i35, "mpdecimal" as i36, "ncurses" as i37, "nettle" as i38, "nghttp2" as i39, "ninja" as i40, "npth" as i41, "openssl@1.1" as i42, "p11-kit" as i43, "perl" as i44, "pinentry" as i45, "pkg-config" as i46, "python@3.9" as i47, "readline" as i48, "sphinx-doc" as i49, "sqlite" as i50, "tcl-tk" as i51, "unbound" as i52, "unzip" as i53, "xz" as i54, "zip" as i55, "zlib" as i56
 
 pkg(
   name: "weboob",
   version: "2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "weboob.rb"), formula)

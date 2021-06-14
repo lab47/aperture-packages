@@ -56,12 +56,12 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "pkg-config" as i1, "cdb" as i2, "fstrm" as i3, "h2o" as i4, "libsodium" as i5, "luajit" as i6, "openssl@1.1" as i7, "protobuf" as i8, "re2" as i9
+import "boost" as i0, "pkg-config" as i1, "cdb" as i2, "fstrm" as i3, "h2o" as i4, "libsodium" as i5, "luajit" as i6, "openssl@1.1" as i7, "protobuf" as i8, "re2" as i9, "libedit" as i10
 
 pkg(
   name: "dnsdist",
   version: "1.6.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dnsdist.rb"), formula)

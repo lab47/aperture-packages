@@ -136,12 +136,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+import "openssl@1.1" as i0, "m4" as i1, "texinfo" as i2, "ncurses" as i3
 
 pkg(
   name: "mit-scheme",
   version: "11.2",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mit-scheme.rb"), formula)

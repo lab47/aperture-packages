@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pandoc" as i3, "pkg-config" as i4, "libpq" as i5, "libpqxx" as i6, "libsodium" as i7
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pandoc" as i3, "pkg-config" as i4, "libpq" as i5, "libpqxx" as i6, "libsodium" as i7, "bison" as i8, "flex" as i9
 
 pkg(
   name: "stellar-core",
   version: "17.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stellar-core.rb"), formula)

@@ -115,10 +115,12 @@ end
 
 import "homebrew-install" as hi
 
+import "gperf" as i0
+
 pkg(
   name: "coreutils",
   version: "8.32",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coreutils.rb"), formula)

@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gcc" as i2, "gdbm" as i3, "gmp" as i4, "isl" as i5, "libmpc" as i6, "mpdecimal" as i7, "mpfr" as i8, "openblas" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sphinx-doc" as i14, "sqlite" as i15, "xz" as i16, "zstd" as i17
+import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "gcc" as i4, "gdbm" as i5, "gmp" as i6, "isl" as i7, "libffi" as i8, "libmpc" as i9, "m4" as i10, "mpdecimal" as i11, "mpfr" as i12, "ncurses" as i13, "openblas" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24, "zstd" as i25
 
 pkg(
   name: "numpy",
   version: "1.20.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "numpy.rb"), formula)

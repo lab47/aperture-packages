@@ -109,12 +109,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "c-ares" as i4, "cmake" as i5, "cunit" as i6, "docutils" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gmp" as i11, "gnu-sed" as i12, "gnutls" as i13, "grep" as i14, "guile" as i15, "jemalloc" as i16, "libatomic_ops" as i17, "libev" as i18, "libevent" as i19, "libffi" as i20, "libgcrypt" as i21, "libgpg-error" as i22, "libidn2" as i23, "libiscsi" as i24, "libssh2" as i25, "libtasn1" as i26, "libtool" as i27, "libunistring" as i28, "m4" as i29, "meson" as i30, "mpdecimal" as i31, "nettle" as i32, "nghttp2" as i33, "ninja" as i34, "openssl@1.1" as i35, "p11-kit" as i36, "pcre" as i37, "perl" as i38, "pkg-config" as i39, "python@3.9" as i40, "readline" as i41, "rpcgen" as i42, "sphinx-doc" as i43, "sqlite" as i44, "unbound" as i45, "xz" as i46, "yajl" as i47
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "cunit" as i9, "curl" as i10, "docutils" as i11, "expat" as i12, "gdbm" as i13, "gettext" as i14, "glib" as i15, "gmp" as i16, "gnu-sed" as i17, "gnutls" as i18, "gperf" as i19, "grep" as i20, "guile" as i21, "jemalloc" as i22, "krb5" as i23, "libatomic_ops" as i24, "libev" as i25, "libevent" as i26, "libffi" as i27, "libgcrypt" as i28, "libgpg-error" as i29, "libidn2" as i30, "libiscsi" as i31, "libmetalink" as i32, "libssh2" as i33, "libtasn1" as i34, "libtool" as i35, "libunistring" as i36, "libxml2" as i37, "libxslt" as i38, "m4" as i39, "meson" as i40, "mpdecimal" as i41, "ncurses" as i42, "nettle" as i43, "nghttp2" as i44, "ninja" as i45, "openldap" as i46, "openssl@1.1" as i47, "p11-kit" as i48, "pcre" as i49, "perl" as i50, "pkg-config" as i51, "python@3.9" as i52, "readline" as i53, "rpcgen" as i54, "rtmpdump" as i55, "sphinx-doc" as i56, "sqlite" as i57, "unbound" as i58, "unzip" as i59, "xz" as i60, "yajl" as i61, "zip" as i62, "zlib" as i63, "zstd" as i64
 
 pkg(
   name: "libvirt",
   version: "7.4.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libvirt.rb"), formula)

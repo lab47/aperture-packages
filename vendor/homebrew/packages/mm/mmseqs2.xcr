@@ -77,12 +77,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libomp" as i1, "wget" as i2
+import "cmake" as i0, "libomp" as i1, "wget" as i2, "bzip2" as i3, "zlib" as i4
 
 pkg(
   name: "mmseqs2",
   version: "13-45111",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mmseqs2.rb"), formula)

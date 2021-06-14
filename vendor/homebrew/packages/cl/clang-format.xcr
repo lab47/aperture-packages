@@ -74,12 +74,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1
+import "cmake" as i0, "ninja" as i1, "libxml2" as i2, "ncurses" as i3, "zlib" as i4
 
 pkg(
   name: "clang-format",
   version: "12.0.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clang-format.rb"), formula)

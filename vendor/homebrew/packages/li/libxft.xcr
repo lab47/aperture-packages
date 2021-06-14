@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fontconfig" as i1, "libxrender" as i2
+import "pkg-config" as i0, "fontconfig" as i1, "libxrender" as i2, "bzip2" as i3, "zlib" as i4
 
 pkg(
   name: "libxft",
   version: "2.3.3",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxft.rb"), formula)

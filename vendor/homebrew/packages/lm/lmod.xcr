@@ -81,12 +81,12 @@ end
 
 import "homebrew-install" as hi
 
-import "luarocks" as i0, "pkg-config" as i1, "lua" as i2
+import "luarocks" as i0, "pkg-config" as i1, "lua" as i2, "tcl-tk" as i3
 
 pkg(
   name: "lmod",
   version: "8.5.2",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lmod.rb"), formula)

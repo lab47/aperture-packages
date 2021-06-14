@@ -34,12 +34,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1
+import "cabal-install" as i0, "ghc" as i1, "ncurses" as i2, "zlib" as i3
 
 pkg(
   name: "dhall",
   version: "1.38.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dhall.rb"), formula)

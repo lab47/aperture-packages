@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "serd" as i1
+import "pkg-config" as i0, "serd" as i1, "zlib" as i2
 
 pkg(
   name: "hdt",
   version: "1.3.3",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hdt.rb"), formula)

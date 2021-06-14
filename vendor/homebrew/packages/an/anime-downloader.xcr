@@ -111,12 +111,12 @@ end
 
 import "homebrew-install" as hi
 
-import "aria2" as i0, "autoconf" as i1, "automake" as i2, "brotli" as i3, "c-ares" as i4, "cmake" as i5, "gdbm" as i6, "icu4c" as i7, "jemalloc" as i8, "libev" as i9, "libssh2" as i10, "libtool" as i11, "libuv" as i12, "m4" as i13, "mpdecimal" as i14, "nghttp2" as i15, "ninja" as i16, "node" as i17, "openssl@1.1" as i18, "pkg-config" as i19, "python-tabulate" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "xz" as i25
+import "aria2" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "expat" as i8, "gdbm" as i9, "icu4c" as i10, "jemalloc" as i11, "libev" as i12, "libffi" as i13, "libssh2" as i14, "libtool" as i15, "libuv" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "node" as i23, "openssl@1.1" as i24, "perl" as i25, "pkg-config" as i26, "python-tabulate" as i27, "python@3.9" as i28, "readline" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35
 
 pkg(
   name: "anime-downloader",
   version: "5.0.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "anime-downloader.rb"), formula)

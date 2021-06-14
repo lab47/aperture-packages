@@ -137,12 +137,12 @@ end
 
 import "homebrew-install" as hi
 
-import "expat" as i0, "gdbm" as i1, "gettext" as i2, "libpthread-stubs" as i3, "libx11" as i4, "libxau" as i5, "libxcb" as i6, "libxdamage" as i7, "libxdmcp" as i8, "libxext" as i9, "libxfixes" as i10, "meson" as i11, "mpdecimal" as i12, "ninja" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "util-macros" as i19, "xcb-proto" as i20, "xorgproto" as i21, "xtrans" as i22, "xz" as i23
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "libedit" as i11, "libffi" as i12, "libpthread-stubs" as i13, "libtool" as i14, "libx11" as i15, "libxau" as i16, "libxcb" as i17, "libxdamage" as i18, "libxdmcp" as i19, "libxext" as i20, "libxfixes" as i21, "libxml2" as i22, "libyaml" as i23, "llvm" as i24, "m4" as i25, "meson" as i26, "mpdecimal" as i27, "ncurses" as i28, "ninja" as i29, "openssl@1.1" as i30, "pcre" as i31, "perl" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "ruby" as i36, "sphinx-doc" as i37, "sqlite" as i38, "swig" as i39, "unzip" as i40, "util-macros" as i41, "xcb-proto" as i42, "xorgproto" as i43, "xtrans" as i44, "xz" as i45, "zip" as i46, "zlib" as i47
 
 pkg(
   name: "mesa",
   version: "21.1.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mesa.rb"), formula)

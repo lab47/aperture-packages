@@ -85,12 +85,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "boost" as i4, "c-blosc" as i5, "cmake" as i6, "cython" as i7, "docbook" as i8, "docbook-xsl" as i9, "gcc" as i10, "gdbm" as i11, "gmp" as i12, "gnu-getopt" as i13, "hwloc" as i14, "icu4c" as i15, "isl" as i16, "libevent" as i17, "libfabric" as i18, "libmpc" as i19, "libpng" as i20, "libsodium" as i21, "libtool" as i22, "m4" as i23, "mpdecimal" as i24, "mpfr" as i25, "mpi4py" as i26, "numpy" as i27, "open-mpi" as i28, "openblas" as i29, "openssl@1.1" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "source-highlight" as i34, "sphinx-doc" as i35, "sqlite" as i36, "xmlto" as i37, "xz" as i38, "zeromq" as i39, "zstd" as i40
+import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "boost" as i5, "bzip2" as i6, "c-blosc" as i7, "cmake" as i8, "cython" as i9, "docbook" as i10, "docbook-xsl" as i11, "expat" as i12, "gcc" as i13, "gdbm" as i14, "gmp" as i15, "gnu-getopt" as i16, "hwloc" as i17, "icu4c" as i18, "isl" as i19, "libevent" as i20, "libfabric" as i21, "libffi" as i22, "libgcrypt" as i23, "libgpg-error" as i24, "libmpc" as i25, "libpng" as i26, "libsodium" as i27, "libtool" as i28, "libxml2" as i29, "libxslt" as i30, "m4" as i31, "mpdecimal" as i32, "mpfr" as i33, "mpi4py" as i34, "ncurses" as i35, "numpy" as i36, "open-mpi" as i37, "openblas" as i38, "openssl@1.1" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "source-highlight" as i44, "sphinx-doc" as i45, "sqlite" as i46, "unzip" as i47, "xmlto" as i48, "xz" as i49, "zeromq" as i50, "zip" as i51, "zlib" as i52, "zstd" as i53
 
 pkg(
   name: "adios2",
   version: "2.7.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "adios2.rb"), formula)

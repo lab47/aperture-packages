@@ -58,12 +58,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2
+import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "libxml2" as i3
 
 pkg(
   name: "libbluray",
   version: "1.3.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libbluray.rb"), formula)

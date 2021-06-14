@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0
+import "rust" as i0, "ncurses" as i1
 
 pkg(
   name: "asuka",
   version: "0.8.1",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "asuka.rb"), formula)

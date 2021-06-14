@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "docbook" as i1, "docbook-xsl" as i2, "gdbm" as i3, "gnu-getopt" as i4, "mpdecimal" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "xmlto" as i11, "xz" as i12
+import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bzip2" as i4, "docbook" as i5, "docbook-xsl" as i6, "expat" as i7, "gdbm" as i8, "gnu-getopt" as i9, "libffi" as i10, "libgcrypt" as i11, "libgpg-error" as i12, "libtool" as i13, "libxml2" as i14, "libxslt" as i15, "m4" as i16, "mpdecimal" as i17, "ncurses" as i18, "openssl@1.1" as i19, "perl" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sqlite" as i24, "unzip" as i25, "xmlto" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
 
 pkg(
   name: "deheader",
   version: "1.7",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "deheader.rb"), formula)

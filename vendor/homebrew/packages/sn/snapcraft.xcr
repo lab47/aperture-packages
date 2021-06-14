@@ -276,12 +276,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "go" as i4, "libsodium" as i5, "libtool" as i6, "libyaml" as i7, "lxc" as i8, "lz4" as i9, "lzo" as i10, "m4" as i11, "mpdecimal" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "snap" as i17, "sphinx-doc" as i18, "sqlite" as i19, "squashfs" as i20, "xdelta" as i21, "xz" as i22, "zstd" as i23
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "go" as i7, "libffi" as i8, "libsodium" as i9, "libtool" as i10, "libyaml" as i11, "lxc" as i12, "lz4" as i13, "lzo" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "snap" as i23, "sphinx-doc" as i24, "sqlite" as i25, "squashfs" as i26, "unzip" as i27, "xdelta" as i28, "xz" as i29, "zip" as i30, "zlib" as i31, "zstd" as i32
 
 pkg(
   name: "snapcraft",
   version: "4.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snapcraft.rb"), formula)

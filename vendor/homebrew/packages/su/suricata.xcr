@@ -102,12 +102,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bison" as i2, "cmake" as i3, "doxygen" as i4, "gdbm" as i5, "jansson" as i6, "libmagic" as i7, "libnet" as i8, "libssh2" as i9, "libtool" as i10, "libyaml" as i11, "lz4" as i12, "m4" as i13, "mpdecimal" as i14, "ninja" as i15, "nspr" as i16, "nss" as i17, "openssl@1.1" as i18, "pcre" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "rust" as i23, "sphinx-doc" as i24, "sqlite" as i25, "xz" as i26
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "gdbm" as i12, "gettext" as i13, "help2man" as i14, "jansson" as i15, "jemalloc" as i16, "krb5" as i17, "libev" as i18, "libffi" as i19, "libidn2" as i20, "libmagic" as i21, "libmetalink" as i22, "libnet" as i23, "libpcap" as i24, "libssh2" as i25, "libtool" as i26, "libunistring" as i27, "libxml2" as i28, "libyaml" as i29, "lz4" as i30, "m4" as i31, "mpdecimal" as i32, "ncurses" as i33, "nghttp2" as i34, "ninja" as i35, "nspr" as i36, "nss" as i37, "openldap" as i38, "openssl@1.1" as i39, "pcre" as i40, "perl" as i41, "pkg-config" as i42, "python@3.9" as i43, "readline" as i44, "rtmpdump" as i45, "rust" as i46, "sphinx-doc" as i47, "sqlite" as i48, "unzip" as i49, "xz" as i50, "zip" as i51, "zlib" as i52, "zstd" as i53
 
 pkg(
   name: "suricata",
   version: "6.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "suricata.rb"), formula)

@@ -172,12 +172,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "openssl@1.1" as i1
+import "cmake" as i0, "openssl@1.1" as i1, "libedit" as i2
 
 pkg(
   name: "mysql@5.6",
   version: "5.6.51",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mysql@5.6.rb"), formula)

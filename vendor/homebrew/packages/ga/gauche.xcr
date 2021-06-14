@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "mbedtls" as i0
+import "mbedtls" as i0, "zlib" as i1
 
 pkg(
   name: "gauche",
   version: "0.9.10",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gauche.rb"), formula)

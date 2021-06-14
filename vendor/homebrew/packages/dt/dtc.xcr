@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+import "pkg-config" as i0, "bison" as i1, "flex" as i2
 
 pkg(
   name: "dtc",
   version: "1.6.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dtc.rb"), formula)

@@ -62,12 +62,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "cmake" as i1, "gdbm" as i2, "gettext" as i3, "glib" as i4, "libffi" as i5, "lua" as i6, "m4" as i7, "meson" as i8, "mpdecimal" as i9, "ninja" as i10, "openjdk" as i11, "openssl@1.1" as i12, "pcre" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sphinx-doc" as i17, "sqlite" as i18, "xz" as i19
+import "autoconf" as i0, "berkeley-db" as i1, "bzip2" as i2, "cmake" as i3, "expat" as i4, "gdbm" as i5, "gettext" as i6, "glib" as i7, "libffi" as i8, "libxml2" as i9, "lua" as i10, "m4" as i11, "meson" as i12, "mpdecimal" as i13, "ncurses" as i14, "ninja" as i15, "openjdk" as i16, "openssl@1.1" as i17, "pcre" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "lcm",
   version: "1.4.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lcm.rb"), formula)

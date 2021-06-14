@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pandoc" as i1, "pkg-config" as i2, "bdw-gc" as i3, "gnu-sed" as i4, "json-c" as i5, "pcre" as i6, "peg" as i7
+import "cmake" as i0, "pandoc" as i1, "pkg-config" as i2, "bdw-gc" as i3, "gnu-sed" as i4, "json-c" as i5, "pcre" as i6, "peg" as i7, "libffi" as i8
 
 pkg(
   name: "ngs",
   version: "0.2.11",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ngs.rb"), formula)

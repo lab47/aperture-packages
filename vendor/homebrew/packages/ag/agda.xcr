@@ -162,12 +162,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "emacs" as i1, "ghc" as i2
+import "cabal-install" as i0, "emacs" as i1, "ghc" as i2, "zlib" as i3
 
 pkg(
   name: "agda",
   version: "2.6.1.3",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "agda.rb"), formula)

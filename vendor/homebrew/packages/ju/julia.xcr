@@ -164,12 +164,12 @@ end
 
 import "homebrew-install" as hi
 
-import "brotli" as i0, "c-ares" as i1, "cmake" as i2, "curl" as i3, "gcc" as i4, "gdbm" as i5, "gettext" as i6, "gmp" as i7, "isl" as i8, "jemalloc" as i9, "libev" as i10, "libgit2" as i11, "libidn2" as i12, "libmetalink" as i13, "libmpc" as i14, "libssh2" as i15, "libunistring" as i16, "llvm" as i17, "mbedtls" as i18, "metis" as i19, "mpdecimal" as i20, "mpfr" as i21, "nghttp2" as i22, "ninja" as i23, "openblas" as i24, "openldap" as i25, "openlibm" as i26, "openssl@1.1" as i27, "p7zip" as i28, "pcre" as i29, "pcre2" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "rtmpdump" as i34, "sphinx-doc" as i35, "sqlite" as i36, "suite-sparse" as i37, "swig" as i38, "tbb" as i39, "utf8proc" as i40, "xz" as i41, "zstd" as i42
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gcc" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "isl" as i14, "jemalloc" as i15, "krb5" as i16, "libedit" as i17, "libev" as i18, "libffi" as i19, "libgit2" as i20, "libidn2" as i21, "libmetalink" as i22, "libmpc" as i23, "libssh2" as i24, "libtool" as i25, "libunistring" as i26, "libxml2" as i27, "libyaml" as i28, "llvm" as i29, "m4" as i30, "mbedtls" as i31, "metis" as i32, "mpdecimal" as i33, "mpfr" as i34, "ncurses" as i35, "nghttp2" as i36, "ninja" as i37, "openblas" as i38, "openldap" as i39, "openlibm" as i40, "openssl@1.1" as i41, "p7zip" as i42, "pcre" as i43, "pcre2" as i44, "perl" as i45, "pkg-config" as i46, "python@3.9" as i47, "readline" as i48, "rtmpdump" as i49, "ruby" as i50, "sphinx-doc" as i51, "sqlite" as i52, "suite-sparse" as i53, "swig" as i54, "tbb" as i55, "unzip" as i56, "utf8proc" as i57, "xz" as i58, "zip" as i59, "zlib" as i60, "zstd" as i61
 
 pkg(
   name: "julia",
   version: "1.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "julia.rb"), formula)

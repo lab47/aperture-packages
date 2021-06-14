@@ -38,12 +38,12 @@ end
 
 import "homebrew-install" as hi
 
-import "advancecomp" as i0, "autoconf" as i1, "automake" as i2, "gdbm" as i3, "jpeg" as i4, "jpegoptim" as i5, "libpng" as i6, "libtool" as i7, "m4" as i8, "mpdecimal" as i9, "openssl@1.1" as i10, "optipng" as i11, "pkg-config" as i12, "pngcrush" as i13, "pyqt-builder" as i14, "pyqt@5" as i15, "python@3.9" as i16, "qt@5" as i17, "readline" as i18, "sip" as i19, "sqlite" as i20, "xz" as i21
+import "advancecomp" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "gperf" as i10, "help2man" as i11, "jpeg" as i12, "jpegoptim" as i13, "libffi" as i14, "libpng" as i15, "libtool" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "openssl@1.1" as i21, "optipng" as i22, "perl" as i23, "pkg-config" as i24, "pngcrush" as i25, "pyqt-builder" as i26, "pyqt@5" as i27, "python@3.9" as i28, "qt@5" as i29, "readline" as i30, "sip" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36
 
 pkg(
   name: "trimage",
   version: "1.0.6",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "trimage.rb"), formula)

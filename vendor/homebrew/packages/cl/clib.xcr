@@ -35,10 +35,12 @@ end
 
 import "homebrew-install" as hi
 
+import "curl" as i0
+
 pkg(
   name: "clib",
   version: "2.7.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clib.rb"), formula)

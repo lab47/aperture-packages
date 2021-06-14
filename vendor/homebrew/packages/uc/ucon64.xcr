@@ -68,10 +68,12 @@ end
 
 import "homebrew-install" as hi
 
+import "unzip" as i0, "zlib" as i1
+
 pkg(
   name: "ucon64",
   version: "2.2.1",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ucon64.rb"), formula)

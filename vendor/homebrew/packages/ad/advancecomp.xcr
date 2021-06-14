@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "bzip2" as i3, "zlib" as i4
 
 pkg(
   name: "advancecomp",
   version: "2.1",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "advancecomp.rb"), formula)

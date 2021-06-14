@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "cmake" as i2, "fontconfig" as i3, "freetype" as i4, "fribidi" as i5, "gdbm" as i6, "gettext" as i7, "glib" as i8, "gobject-introspection" as i9, "graphene" as i10, "graphite2" as i11, "gst-plugins-base" as i12, "gstreamer" as i13, "harfbuzz" as i14, "icu4c" as i15, "libffi" as i16, "libogg" as i17, "libpng" as i18, "libpthread-stubs" as i19, "libtool" as i20, "libvorbis" as i21, "libx11" as i22, "libxau" as i23, "libxcb" as i24, "libxdmcp" as i25, "libxext" as i26, "libxrender" as i27, "lzo" as i28, "m4" as i29, "meson" as i30, "mpdecimal" as i31, "ninja" as i32, "openssl@1.1" as i33, "opus" as i34, "orc" as i35, "pango" as i36, "pcre" as i37, "pixman" as i38, "pkg-config" as i39, "py3cairo" as i40, "pygobject3" as i41, "python@3.9" as i42, "readline" as i43, "sphinx-doc" as i44, "sqlite" as i45, "theora" as i46, "util-macros" as i47, "xcb-proto" as i48, "xorgproto" as i49, "xtrans" as i50, "xz" as i51
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "cmake" as i4, "expat" as i5, "flex" as i6, "fontconfig" as i7, "freetype" as i8, "fribidi" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gobject-introspection" as i13, "gperf" as i14, "graphene" as i15, "graphite2" as i16, "gst-plugins-base" as i17, "gstreamer" as i18, "harfbuzz" as i19, "help2man" as i20, "icu4c" as i21, "libffi" as i22, "libogg" as i23, "libpng" as i24, "libpthread-stubs" as i25, "libtool" as i26, "libvorbis" as i27, "libx11" as i28, "libxau" as i29, "libxcb" as i30, "libxdmcp" as i31, "libxext" as i32, "libxml2" as i33, "libxrender" as i34, "lzo" as i35, "m4" as i36, "meson" as i37, "mpdecimal" as i38, "ncurses" as i39, "ninja" as i40, "openssl@1.1" as i41, "opus" as i42, "orc" as i43, "pango" as i44, "pcre" as i45, "perl" as i46, "pixman" as i47, "pkg-config" as i48, "py3cairo" as i49, "pygobject3" as i50, "python@3.9" as i51, "readline" as i52, "sphinx-doc" as i53, "sqlite" as i54, "theora" as i55, "unzip" as i56, "util-macros" as i57, "xcb-proto" as i58, "xorgproto" as i59, "xtrans" as i60, "xz" as i61, "zip" as i62, "zlib" as i63
 
 pkg(
   name: "gst-python",
   version: "1.18.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-python.rb"), formula)

@@ -78,12 +78,12 @@ end
 
 import "homebrew-install" as hi
 
-import "llvm" as i0, "ninja" as i1, "rust" as i2
+import "llvm" as i0, "ninja" as i1, "rust" as i2, "xz" as i3
 
 pkg(
   name: "deno",
   version: "1.10.3",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "deno.rb"), formula)

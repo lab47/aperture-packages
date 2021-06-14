@@ -46,10 +46,12 @@ end
 
 import "homebrew-install" as hi
 
+import "texinfo" as i0
+
 pkg(
   name: "arm-linux-gnueabihf-binutils",
   version: "2.36.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arm-linux-gnueabihf-binutils.rb"), formula)

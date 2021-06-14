@@ -69,12 +69,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bash" as i0, "coreutils" as i1, "go" as i2
+import "bash" as i0, "coreutils" as i1, "go" as i2, "rsync" as i3
 
 pkg(
   name: "kubernetes-cli",
   version: "1.21.1",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kubernetes-cli.rb"), formula)

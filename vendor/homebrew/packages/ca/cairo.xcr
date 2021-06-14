@@ -113,12 +113,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "glib" as i3, "libpng" as i4, "libx11" as i5, "libxcb" as i6, "libxext" as i7, "libxrender" as i8, "lzo" as i9, "pixman" as i10
+import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "glib" as i3, "libpng" as i4, "libx11" as i5, "libxcb" as i6, "libxext" as i7, "libxrender" as i8, "lzo" as i9, "pixman" as i10, "zlib" as i11
 
 pkg(
   name: "cairo",
   version: "1.16.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cairo.rb"), formula)

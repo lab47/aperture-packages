@@ -33,10 +33,12 @@ end
 
 import "homebrew-install" as hi
 
+import "unzip" as i0
+
 pkg(
   name: "tfenv",
   version: "2.2.2",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tfenv.rb"), formula)

@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ocaml" as i0, "opam" as i1
+import "ocaml" as i0, "opam" as i1, "m4" as i2, "rsync" as i3, "unzip" as i4
 
 pkg(
   name: "flow",
   version: "0.152.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flow.rb"), formula)

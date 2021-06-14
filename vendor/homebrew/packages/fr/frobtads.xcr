@@ -32,10 +32,12 @@ end
 
 import "homebrew-install" as hi
 
+import "curl" as i0
+
 pkg(
   name: "frobtads",
   version: "1.2.4",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "frobtads.rb"), formula)

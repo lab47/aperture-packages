@@ -71,12 +71,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "ncurses" as i1
 
 pkg(
   name: "spigot",
   version: "20210527",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "spigot.rb"), formula)

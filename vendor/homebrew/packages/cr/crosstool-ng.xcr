@@ -65,12 +65,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bash" as i2, "binutils" as i3, "bison" as i4, "coreutils" as i5, "flex" as i6, "gawk" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "grep" as i12, "help2man" as i13, "libtool" as i14, "lzip" as i15, "m4" as i16, "make" as i17, "mpdecimal" as i18, "mpfr" as i19, "ncurses" as i20, "openssl@1.1" as i21, "pcre" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sqlite" as i26, "xz" as i27
+import "autoconf" as i0, "automake" as i1, "bash" as i2, "berkeley-db" as i3, "binutils" as i4, "bison" as i5, "bzip2" as i6, "coreutils" as i7, "expat" as i8, "flex" as i9, "gawk" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gnu-sed" as i14, "gperf" as i15, "grep" as i16, "help2man" as i17, "libffi" as i18, "libtool" as i19, "libxml2" as i20, "lzip" as i21, "m4" as i22, "make" as i23, "mpdecimal" as i24, "mpfr" as i25, "ncurses" as i26, "openssl@1.1" as i27, "pcre" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "sqlite" as i33, "texinfo" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38
 
 pkg(
   name: "crosstool-ng",
   version: "1.24.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "crosstool-ng.rb"), formula)

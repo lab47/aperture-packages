@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pcre" as i3, "pkg-config" as i4, "python@3.9" as i5, "readline" as i6, "sqlite" as i7, "swig" as i8, "xz" as i9
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libmetalink" as i17, "libssh2" as i18, "libtool" as i19, "libunistring" as i20, "libxml2" as i21, "libyaml" as i22, "m4" as i23, "mpdecimal" as i24, "ncurses" as i25, "nghttp2" as i26, "ninja" as i27, "openldap" as i28, "openssl@1.1" as i29, "pcre" as i30, "perl" as i31, "pkg-config" as i32, "python@3.9" as i33, "readline" as i34, "rtmpdump" as i35, "ruby" as i36, "sphinx-doc" as i37, "sqlite" as i38, "swig" as i39, "unzip" as i40, "xz" as i41, "zip" as i42, "zlib" as i43, "zstd" as i44
 
 pkg(
   name: "osc",
   version: "0.173.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osc.rb"), formula)

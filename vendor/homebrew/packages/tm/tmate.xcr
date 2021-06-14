@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libevent" as i4, "libssh" as i5, "msgpack" as i6
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libevent" as i4, "libssh" as i5, "msgpack" as i6, "ncurses" as i7
 
 pkg(
   name: "tmate",
   version: "2.4.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tmate.rb"), formula)

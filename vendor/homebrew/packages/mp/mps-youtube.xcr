@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "fontconfig" as i0, "freetype" as i1, "gdbm" as i2, "giflib" as i3, "imlib2" as i4, "jpeg" as i5, "libcaca" as i6, "libpng" as i7, "libpthread-stubs" as i8, "libtiff" as i9, "libx11" as i10, "libxau" as i11, "libxcb" as i12, "libxdmcp" as i13, "libxext" as i14, "mpdecimal" as i15, "mplayer" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sqlite" as i21, "util-macros" as i22, "xcb-proto" as i23, "xorgproto" as i24, "xtrans" as i25, "xz" as i26, "yasm" as i27
+import "bzip2" as i0, "expat" as i1, "fontconfig" as i2, "freetype" as i3, "gdbm" as i4, "giflib" as i5, "gperf" as i6, "imlib2" as i7, "jpeg" as i8, "libcaca" as i9, "libffi" as i10, "libpng" as i11, "libpthread-stubs" as i12, "libtiff" as i13, "libx11" as i14, "libxau" as i15, "libxcb" as i16, "libxdmcp" as i17, "libxext" as i18, "mpdecimal" as i19, "mplayer" as i20, "ncurses" as i21, "openssl@1.1" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sqlite" as i26, "unzip" as i27, "util-macros" as i28, "xcb-proto" as i29, "xorgproto" as i30, "xtrans" as i31, "xz" as i32, "yasm" as i33, "zip" as i34, "zlib" as i35
 
 pkg(
   name: "mps-youtube",
   version: "0.2.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mps-youtube.rb"), formula)

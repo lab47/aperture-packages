@@ -64,12 +64,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.9" as i4, "readline" as i5, "sqlite" as i6, "xz" as i7
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libgcrypt" as i7, "libgpg-error" as i8, "libtool" as i9, "libxml2" as i10, "libxslt" as i11, "m4" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "perl" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "sqlite" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
 
 pkg(
   name: "gcovr",
   version: "4.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gcovr.rb"), formula)

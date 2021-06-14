@@ -163,10 +163,12 @@ index 2e7a412..d0c4898 100644
 
 import "homebrew-install" as hi
 
+import "unzip" as i0
+
 pkg(
   name: "lua@5.3",
   version: "5.3.6",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lua@5.3.rb"), formula)

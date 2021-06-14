@@ -119,12 +119,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "libpthread-stubs" as i1, "libxau" as i2, "libxdmcp" as i3, "mpdecimal" as i4, "openssl@1.1" as i5, "pkg-config" as i6, "python@3.9" as i7, "readline" as i8, "sqlite" as i9, "util-macros" as i10, "xcb-proto" as i11, "xorgproto" as i12, "xz" as i13
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libpthread-stubs" as i4, "libxau" as i5, "libxdmcp" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "util-macros" as i15, "xcb-proto" as i16, "xorgproto" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "libxcb",
   version: "1.14",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxcb.rb"), formula)

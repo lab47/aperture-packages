@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "librsync" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pkg-config" as i5, "popt" as i6, "python@3.9" as i7, "readline" as i8, "sphinx-doc" as i9, "sqlite" as i10, "xz" as i11
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "librsync" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "popt" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "rdiff-backup",
   version: "2.0.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rdiff-backup.rb"), formula)

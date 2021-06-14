@@ -30,12 +30,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lzip" as i0
+import "lzip" as i0, "ncurses" as i1
 
 pkg(
   name: "moe",
   version: "1.11",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "moe.rb"), formula)

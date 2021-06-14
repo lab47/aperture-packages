@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "freetype" as i3, "giflib" as i4, "libpng" as i5, "perl" as i6
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "freetype" as i3, "giflib" as i4, "libpng" as i5, "perl" as i6, "bison" as i7, "flex" as i8
 
 pkg(
   name: "libming",
   version: "0.4.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libming.rb"), formula)

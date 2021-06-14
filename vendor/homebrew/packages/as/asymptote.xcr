@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "glm" as i0, "fftw" as i1, "ghostscript" as i2, "gsl" as i3, "readline" as i4
+import "glm" as i0, "fftw" as i1, "ghostscript" as i2, "gsl" as i3, "readline" as i4, "ncurses" as i5
 
 pkg(
   name: "asymptote",
   version: "2.70",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "asymptote.rb"), formula)

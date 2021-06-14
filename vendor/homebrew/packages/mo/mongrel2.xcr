@@ -56,12 +56,12 @@ end
 
 import "homebrew-install" as hi
 
-import "zeromq" as i0
+import "zeromq" as i0, "sqlite" as i1
 
 pkg(
   name: "mongrel2",
   version: "1.11.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mongrel2.rb"), formula)

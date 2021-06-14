@@ -146,12 +146,12 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0, "node" as i1, "yarn" as i2
+import "go" as i0, "node" as i1, "yarn" as i2, "zlib" as i3
 
 pkg(
   name: "grafana",
   version: "7.5.7",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "grafana.rb"), formula)

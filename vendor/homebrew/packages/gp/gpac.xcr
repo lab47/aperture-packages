@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "openssl@1.1" as i1
+import "pkg-config" as i0, "openssl@1.1" as i1, "zlib" as i2
 
 pkg(
   name: "gpac",
   version: "1.0.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpac.rb"), formula)

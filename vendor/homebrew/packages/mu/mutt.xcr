@@ -102,12 +102,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gpgme" as i2, "openssl@1.1" as i3, "tokyo-cabinet" as i4
+import "autoconf" as i0, "automake" as i1, "gpgme" as i2, "openssl@1.1" as i3, "tokyo-cabinet" as i4, "bzip2" as i5, "krb5" as i6, "ncurses" as i7, "zlib" as i8
 
 pkg(
   name: "mutt",
   version: "2.0.7",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mutt.rb"), formula)

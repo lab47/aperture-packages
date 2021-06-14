@@ -52,12 +52,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "libfixbuf" as i2, "yaf" as i3
+import "pkg-config" as i0, "glib" as i1, "libfixbuf" as i2, "yaf" as i3, "libpcap" as i4
 
 pkg(
   name: "silk",
   version: "3.19.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "silk.rb"), formula)

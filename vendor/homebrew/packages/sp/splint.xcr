@@ -75,10 +75,12 @@ index ebe214a..4ba81d5 100644
 
 import "homebrew-install" as hi
 
+import "flex" as i0
+
 pkg(
   name: "splint",
   version: "3.1.2",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "splint.rb"), formula)

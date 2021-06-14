@@ -87,12 +87,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "llvm" as i2, "mpdecimal" as i3, "ninja" as i4, "openssl@1.1" as i5, "pcre" as i6, "pkg-config" as i7, "python@3.9" as i8, "qt@5" as i9, "readline" as i10, "sphinx-doc" as i11, "sqlite" as i12, "swig" as i13, "xz" as i14
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "gperf" as i10, "help2man" as i11, "libedit" as i12, "libffi" as i13, "libtool" as i14, "libxml2" as i15, "libyaml" as i16, "llvm" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "ninja" as i21, "openssl@1.1" as i22, "pcre" as i23, "perl" as i24, "pkg-config" as i25, "python@3.9" as i26, "qt@5" as i27, "readline" as i28, "ruby" as i29, "sphinx-doc" as i30, "sqlite" as i31, "swig" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36
 
 pkg(
   name: "pyside@2",
   version: "5.15.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pyside@2.rb"), formula)

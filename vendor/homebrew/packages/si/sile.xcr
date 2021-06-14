@@ -193,12 +193,12 @@ end
 
 import "homebrew-install" as hi
 
-import "luarocks" as i0, "pkg-config" as i1, "fontconfig" as i2, "harfbuzz" as i3, "icu4c" as i4, "libpng" as i5, "lua" as i6, "openssl@1.1" as i7
+import "luarocks" as i0, "pkg-config" as i1, "fontconfig" as i2, "harfbuzz" as i3, "icu4c" as i4, "libpng" as i5, "lua" as i6, "openssl@1.1" as i7, "expat" as i8, "zlib" as i9
 
 pkg(
   name: "sile",
   version: "0.10.15",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sile.rb"), formula)

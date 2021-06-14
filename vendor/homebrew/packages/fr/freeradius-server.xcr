@@ -62,12 +62,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "talloc" as i1
+import "openssl@1.1" as i0, "talloc" as i1, "perl" as i2, "sqlite" as i3
 
 pkg(
   name: "freeradius-server",
   version: "3.0.22",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freeradius-server.rb"), formula)

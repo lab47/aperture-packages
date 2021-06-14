@@ -37,10 +37,12 @@ end
 
 import "homebrew-install" as hi
 
+import "m4" as i0
+
 pkg(
   name: "autoconf@2.13",
   version: "2.13",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "autoconf@2.13.rb"), formula)

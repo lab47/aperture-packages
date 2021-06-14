@@ -67,12 +67,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libtiff" as i1
+import "pkg-config" as i0, "libtiff" as i1, "curl" as i2, "sqlite" as i3
 
 pkg(
   name: "proj",
   version: "8.0.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "proj.rb"), formula)

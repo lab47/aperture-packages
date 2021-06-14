@@ -113,10 +113,12 @@ end
 
 import "homebrew-install" as hi
 
+import "libxml2" as i0, "libxslt" as i1
+
 pkg(
   name: "offlineimap",
   version: "7.3.3",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "offlineimap.rb"), formula)

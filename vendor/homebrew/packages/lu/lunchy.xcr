@@ -66,10 +66,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ruby" as i0
+
 pkg(
   name: "lunchy",
   version: "0.10.4",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lunchy.rb"), formula)

@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "gdbm" as i5, "gettext" as i6, "gmp" as i7, "gnu-sed" as i8, "gnutls" as i9, "guile" as i10, "jemalloc" as i11, "libatomic_ops" as i12, "libev" as i13, "libevent" as i14, "libffi" as i15, "libidn2" as i16, "libtasn1" as i17, "libtool" as i18, "libunistring" as i19, "m4" as i20, "mpdecimal" as i21, "nettle" as i22, "nghttp2" as i23, "ninja" as i24, "openssl@1.1" as i25, "p11-kit" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "sphinx-doc" as i30, "sqlite" as i31, "task" as i32, "unbound" as i33, "xz" as i34
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "gnutls" as i12, "gperf" as i13, "guile" as i14, "jemalloc" as i15, "libatomic_ops" as i16, "libev" as i17, "libevent" as i18, "libffi" as i19, "libidn2" as i20, "libtasn1" as i21, "libtool" as i22, "libunistring" as i23, "libxml2" as i24, "m4" as i25, "mpdecimal" as i26, "ncurses" as i27, "nettle" as i28, "nghttp2" as i29, "ninja" as i30, "openssl@1.1" as i31, "p11-kit" as i32, "perl" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "sphinx-doc" as i37, "sqlite" as i38, "task" as i39, "unbound" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44
 
 pkg(
   name: "vit",
   version: "2.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vit.rb"), formula)

@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "flac" as i1, "gdbm" as i2, "jpeg" as i3, "libmodplug" as i4, "libogg" as i5, "libpng" as i6, "libtiff" as i7, "libvorbis" as i8, "mpdecimal" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "protobuf" as i12, "python@3.7" as i13, "python@3.8" as i14, "python@3.9" as i15, "readline" as i16, "sdl2" as i17, "sdl2_image" as i18, "sdl2_mixer" as i19, "six" as i20, "sphinx-doc" as i21, "sqlite" as i22, "tcl-tk" as i23, "webp" as i24, "xz" as i25
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "flac" as i3, "gdbm" as i4, "jpeg" as i5, "libffi" as i6, "libmodplug" as i7, "libogg" as i8, "libpng" as i9, "libtiff" as i10, "libvorbis" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "protobuf" as i16, "python@3.7" as i17, "python@3.8" as i18, "python@3.9" as i19, "readline" as i20, "sdl2" as i21, "sdl2_image" as i22, "sdl2_mixer" as i23, "six" as i24, "sphinx-doc" as i25, "sqlite" as i26, "tcl-tk" as i27, "unzip" as i28, "webp" as i29, "xz" as i30, "zip" as i31, "zlib" as i32
 
 pkg(
   name: "cdogs-sdl",
   version: "0.12.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cdogs-sdl.rb"), formula)

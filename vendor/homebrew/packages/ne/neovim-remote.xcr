@@ -72,12 +72,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "gettext" as i4, "libtermkey" as i5, "libtool" as i6, "libuv" as i7, "libvterm" as i8, "lua" as i9, "lua@5.1" as i10, "lua@5.3" as i11, "luajit" as i12, "luajit-openresty" as i13, "luarocks" as i14, "luv" as i15, "m4" as i16, "mpdecimal" as i17, "msgpack" as i18, "neovim" as i19, "openssl@1.1" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sphinx-doc" as i24, "sqlite" as i25, "unibilium" as i26, "xz" as i27
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "gettext" as i7, "gperf" as i8, "libffi" as i9, "libtermkey" as i10, "libtool" as i11, "libuv" as i12, "libvterm" as i13, "libxml2" as i14, "lua" as i15, "lua@5.1" as i16, "lua@5.3" as i17, "luajit" as i18, "luajit-openresty" as i19, "luarocks" as i20, "luv" as i21, "m4" as i22, "mpdecimal" as i23, "msgpack" as i24, "ncurses" as i25, "neovim" as i26, "openssl@1.1" as i27, "perl" as i28, "pkg-config" as i29, "python@3.9" as i30, "readline" as i31, "sphinx-doc" as i32, "sqlite" as i33, "unibilium" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38
 
 pkg(
   name: "neovim-remote",
   version: "2.4.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neovim-remote.rb"), formula)

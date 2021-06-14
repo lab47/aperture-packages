@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "docbook-xsl" as i3, "libtool" as i4, "pkg-config" as i5, "bash" as i6, "fakeroot" as i7, "gettext" as i8, "libarchive" as i9, "openssl@1.1" as i10
+import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "docbook-xsl" as i3, "libtool" as i4, "pkg-config" as i5, "bash" as i6, "fakeroot" as i7, "gettext" as i8, "libarchive" as i9, "openssl@1.1" as i10, "m4" as i11, "libxslt" as i12
 
 pkg(
   name: "makepkg",
   version: "5.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "makepkg.rb"), formula)

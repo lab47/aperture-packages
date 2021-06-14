@@ -77,12 +77,12 @@ end
 
 import "homebrew-install" as hi
 
-import "docbook" as i0, "docbook-xsl" as i1, "gdbm" as i2, "libxml2" as i3, "meson" as i4, "mpdecimal" as i5, "ninja" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "xz" as i12
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "docbook" as i4, "docbook-xsl" as i5, "expat" as i6, "gdbm" as i7, "libffi" as i8, "libgcrypt" as i9, "libgpg-error" as i10, "libtool" as i11, "libxml2" as i12, "libxslt" as i13, "m4" as i14, "meson" as i15, "mpdecimal" as i16, "ncurses" as i17, "ninja" as i18, "openssl@1.1" as i19, "perl" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "gtk-doc",
   version: "1.33.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gtk-doc.rb"), formula)

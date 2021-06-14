@@ -197,12 +197,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gettext" as i0, "pcre2" as i1
+import "gettext" as i0, "pcre2" as i1, "curl" as i2, "expat" as i3, "openssl@1.1" as i4, "zlib" as i5
 
 pkg(
   name: "git",
   version: "2.31.1",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git.rb"), formula)

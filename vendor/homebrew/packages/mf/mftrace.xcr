@@ -46,12 +46,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "cmake" as i2, "fontconfig" as i3, "fontforge" as i4, "freetype" as i5, "fribidi" as i6, "gdbm" as i7, "gettext" as i8, "giflib" as i9, "glib" as i10, "gobject-introspection" as i11, "graphite2" as i12, "harfbuzz" as i13, "icu4c" as i14, "jpeg" as i15, "libffi" as i16, "libpng" as i17, "libpthread-stubs" as i18, "libspiro" as i19, "libtiff" as i20, "libtool" as i21, "libuninameslist" as i22, "libx11" as i23, "libxau" as i24, "libxcb" as i25, "libxdmcp" as i26, "libxext" as i27, "libxrender" as i28, "lzo" as i29, "m4" as i30, "meson" as i31, "mpdecimal" as i32, "ninja" as i33, "openssl@1.1" as i34, "pango" as i35, "pcre" as i36, "pixman" as i37, "pkg-config" as i38, "potrace" as i39, "python@3.9" as i40, "readline" as i41, "sphinx-doc" as i42, "sqlite" as i43, "t1utils" as i44, "util-macros" as i45, "xcb-proto" as i46, "xorgproto" as i47, "xtrans" as i48, "xz" as i49
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "cmake" as i4, "expat" as i5, "flex" as i6, "fontconfig" as i7, "fontforge" as i8, "freetype" as i9, "fribidi" as i10, "gdbm" as i11, "gettext" as i12, "giflib" as i13, "glib" as i14, "gobject-introspection" as i15, "gperf" as i16, "graphite2" as i17, "harfbuzz" as i18, "help2man" as i19, "icu4c" as i20, "jpeg" as i21, "libffi" as i22, "libpng" as i23, "libpthread-stubs" as i24, "libspiro" as i25, "libtiff" as i26, "libtool" as i27, "libuninameslist" as i28, "libx11" as i29, "libxau" as i30, "libxcb" as i31, "libxdmcp" as i32, "libxext" as i33, "libxml2" as i34, "libxrender" as i35, "lzo" as i36, "m4" as i37, "meson" as i38, "mpdecimal" as i39, "ncurses" as i40, "ninja" as i41, "openssl@1.1" as i42, "pango" as i43, "pcre" as i44, "perl" as i45, "pixman" as i46, "pkg-config" as i47, "potrace" as i48, "python@3.9" as i49, "readline" as i50, "sphinx-doc" as i51, "sqlite" as i52, "t1utils" as i53, "unzip" as i54, "util-macros" as i55, "xcb-proto" as i56, "xorgproto" as i57, "xtrans" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
 
 pkg(
   name: "mftrace",
   version: "1.2.20",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mftrace.rb"), formula)

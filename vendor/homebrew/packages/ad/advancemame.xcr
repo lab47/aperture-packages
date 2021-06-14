@@ -43,12 +43,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "sdl" as i2
+import "pkg-config" as i0, "freetype" as i1, "sdl" as i2, "expat" as i3, "ncurses" as i4
 
 pkg(
   name: "advancemame",
   version: "3.9",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "advancemame.rb"), formula)

@@ -49,12 +49,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libnet" as i0, "openssl@1.1" as i1, "pcre" as i2
+import "libnet" as i0, "openssl@1.1" as i1, "pcre" as i2, "ncurses" as i3
 
 pkg(
   name: "tiny-fugue",
   version: "5.0b8",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tiny-fugue.rb"), formula)

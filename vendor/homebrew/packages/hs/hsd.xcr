@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "c-ares" as i2, "cmake" as i3, "gdbm" as i4, "icu4c" as i5, "jemalloc" as i6, "libev" as i7, "libevent" as i8, "libtool" as i9, "m4" as i10, "mpdecimal" as i11, "nghttp2" as i12, "ninja" as i13, "node@10" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "unbound" as i21, "xz" as i22
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "c-ares" as i4, "cmake" as i5, "expat" as i6, "gdbm" as i7, "icu4c" as i8, "jemalloc" as i9, "libev" as i10, "libevent" as i11, "libffi" as i12, "libtool" as i13, "libxml2" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "nghttp2" as i18, "ninja" as i19, "node@10" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sphinx-doc" as i26, "sqlite" as i27, "unbound" as i28, "unzip" as i29, "xz" as i30, "zip" as i31, "zlib" as i32
 
 pkg(
   name: "hsd",
   version: "2.4.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hsd.rb"), formula)

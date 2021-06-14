@@ -141,12 +141,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "gettext" as i4, "json-c" as i5, "libidn2" as i6, "libtool" as i7, "libunistring" as i8, "libuv" as i9, "m4" as i10, "mpdecimal" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sphinx-doc" as i16, "sqlite" as i17, "xz" as i18
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "gettext" as i7, "json-c" as i8, "libffi" as i9, "libidn2" as i10, "libtool" as i11, "libunistring" as i12, "libuv" as i13, "libxml2" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "bind",
   version: "9.16.16",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bind.rb"), formula)

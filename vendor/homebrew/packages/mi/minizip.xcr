@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "zlib" as i3
 
 pkg(
   name: "minizip",
   version: "1.2.11",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "minizip.rb"), formula)

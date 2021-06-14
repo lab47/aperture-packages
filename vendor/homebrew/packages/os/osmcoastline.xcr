@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libosmium" as i1, "gdal" as i2, "geos" as i3, "libspatialite" as i4
+import "cmake" as i0, "libosmium" as i1, "gdal" as i2, "geos" as i3, "libspatialite" as i4, "sqlite" as i5, "zlib" as i6
 
 pkg(
   name: "osmcoastline",
   version: "2.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osmcoastline.rb"), formula)

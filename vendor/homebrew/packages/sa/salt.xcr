@@ -281,12 +281,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "boost" as i4, "cmake" as i5, "docbook" as i6, "docbook-xsl" as i7, "gdbm" as i8, "gnu-getopt" as i9, "icu4c" as i10, "libgit2" as i11, "libsodium" as i12, "libssh2" as i13, "libtool" as i14, "libyaml" as i15, "m4" as i16, "mpdecimal" as i17, "openssl@1.1" as i18, "pcre" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "source-highlight" as i23, "sphinx-doc" as i24, "sqlite" as i25, "swig" as i26, "xmlto" as i27, "xz" as i28, "zeromq" as i29
+import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "boost" as i5, "bzip2" as i6, "cmake" as i7, "docbook" as i8, "docbook-xsl" as i9, "expat" as i10, "gdbm" as i11, "gnu-getopt" as i12, "icu4c" as i13, "libffi" as i14, "libgcrypt" as i15, "libgit2" as i16, "libgpg-error" as i17, "libsodium" as i18, "libssh2" as i19, "libtool" as i20, "libxml2" as i21, "libxslt" as i22, "libyaml" as i23, "m4" as i24, "mpdecimal" as i25, "ncurses" as i26, "openssl@1.1" as i27, "pcre" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "ruby" as i33, "source-highlight" as i34, "sphinx-doc" as i35, "sqlite" as i36, "swig" as i37, "unzip" as i38, "xmlto" as i39, "xz" as i40, "zeromq" as i41, "zip" as i42, "zlib" as i43
 
 pkg(
   name: "salt",
   version: "3003",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "salt.rb"), formula)

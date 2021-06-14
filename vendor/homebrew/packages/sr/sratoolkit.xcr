@@ -85,12 +85,12 @@ end
 
 import "homebrew-install" as hi
 
-import "hdf5" as i0, "libmagic" as i1
+import "hdf5" as i0, "libmagic" as i1, "libxml2" as i2, "perl" as i3
 
 pkg(
   name: "sratoolkit",
   version: "2.11.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sratoolkit.rb"), formula)

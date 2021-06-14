@@ -77,12 +77,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lz4" as i0, "openssl@1.1" as i1, "popt" as i2, "xxhash" as i3, "zstd" as i4
+import "lz4" as i0, "openssl@1.1" as i1, "popt" as i2, "xxhash" as i3, "zstd" as i4, "zlib" as i5
 
 pkg(
   name: "rsync",
   version: "3.2.3",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rsync.rb"), formula)

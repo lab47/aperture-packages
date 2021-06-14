@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+import "pkg-config" as i0, "curl" as i1, "zlib" as i2
 
 pkg(
   name: "media-info",
   version: "21.03",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "media-info.rb"), formula)

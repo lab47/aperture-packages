@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "help2man" as i0, "pkg-config" as i1, "bdw-gc" as i2, "glib" as i3, "libgee" as i4
+import "help2man" as i0, "pkg-config" as i1, "bdw-gc" as i2, "glib" as i3, "libgee" as i4, "ncurses" as i5
 
 pkg(
   name: "zile",
   version: "2.6.2",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zile.rb"), formula)

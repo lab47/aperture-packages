@@ -37,12 +37,12 @@ end
 
 import "homebrew-install" as hi
 
-import "htslib" as i0
+import "htslib" as i0, "ncurses" as i1
 
 pkg(
   name: "samtools",
   version: "1.12",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "samtools.rb"), formula)

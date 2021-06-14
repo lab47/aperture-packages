@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "docbook" as i1, "docbook-xsl" as i2, "gdbm" as i3, "gnu-getopt" as i4, "krb5" as i5, "libpq" as i6, "mpdecimal" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "xmlto" as i13, "xz" as i14
+import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "docbook" as i6, "docbook-xsl" as i7, "expat" as i8, "gdbm" as i9, "gnu-getopt" as i10, "krb5" as i11, "libffi" as i12, "libgcrypt" as i13, "libgpg-error" as i14, "libpq" as i15, "libtool" as i16, "libxml2" as i17, "libxslt" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "openssl@1.1" as i22, "perl" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "sqlite" as i27, "unzip" as i28, "xmlto" as i29, "xz" as i30, "zip" as i31, "zlib" as i32
 
 pkg(
   name: "libpqxx@6",
   version: "6.4.7",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpqxx@6.rb"), formula)

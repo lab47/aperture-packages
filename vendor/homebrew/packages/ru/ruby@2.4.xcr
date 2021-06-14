@@ -173,12 +173,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libyaml" as i1, "openssl@1.1" as i2, "readline" as i3
+import "pkg-config" as i0, "libyaml" as i1, "openssl@1.1" as i2, "readline" as i3, "zlib" as i4
 
 pkg(
   name: "ruby@2.4",
   version: "2.4.10",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ruby@2.4.rb"), formula)

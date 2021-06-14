@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ocaml" as i0, "gpatch" as i1
+import "ocaml" as i0, "gpatch" as i1, "unzip" as i2
 
 pkg(
   name: "opam",
   version: "2.0.8",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opam.rb"), formula)

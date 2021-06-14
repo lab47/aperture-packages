@@ -101,10 +101,12 @@ end
 
 import "homebrew-install" as hi
 
+import "unzip" as i0
+
 pkg(
   name: "lua",
   version: "5.4.3",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lua.rb"), formula)

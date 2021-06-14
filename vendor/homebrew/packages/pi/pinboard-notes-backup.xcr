@@ -36,12 +36,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc@8.6" as i1
+import "cabal-install" as i0, "ghc@8.6" as i1, "zlib" as i2
 
 pkg(
   name: "pinboard-notes-backup",
   version: "1.0.5.3",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pinboard-notes-backup.rb"), formula)

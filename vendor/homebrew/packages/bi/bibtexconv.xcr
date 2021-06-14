@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "openssl@1.1" as i1
+import "cmake" as i0, "openssl@1.1" as i1, "bison" as i2, "flex" as i3, "curl" as i4
 
 pkg(
   name: "bibtexconv",
   version: "1.2.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bibtexconv.rb"), formula)

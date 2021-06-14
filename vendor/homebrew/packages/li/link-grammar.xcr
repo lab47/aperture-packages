@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ant" as i0, "autoconf" as i1, "autoconf-archive" as i2, "automake" as i3, "gdbm" as i4, "libtool" as i5, "m4" as i6, "mpdecimal" as i7, "openjdk" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "xz" as i14
+import "ant" as i0, "autoconf" as i1, "autoconf-archive" as i2, "automake" as i3, "berkeley-db" as i4, "bzip2" as i5, "expat" as i6, "gdbm" as i7, "libffi" as i8, "libtool" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openjdk" as i13, "openssl@1.1" as i14, "perl" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sqlite" as i19, "unzip" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
 
 pkg(
   name: "link-grammar",
   version: "5.9.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "link-grammar.rb"), formula)

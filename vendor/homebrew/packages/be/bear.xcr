@@ -81,12 +81,12 @@ end
 
 import "homebrew-install" as hi
 
-import "abseil" as i0, "autoconf" as i1, "automake" as i2, "c-ares" as i3, "cmake" as i4, "fmt" as i5, "gdbm" as i6, "grpc" as i7, "libtool" as i8, "m4" as i9, "mpdecimal" as i10, "ninja" as i11, "nlohmann-json" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "protobuf" as i15, "python@3.7" as i16, "python@3.8" as i17, "python@3.9" as i18, "re2" as i19, "readline" as i20, "six" as i21, "spdlog" as i22, "sphinx-doc" as i23, "sqlite" as i24, "tcl-tk" as i25, "xz" as i26
+import "abseil" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "fmt" as i8, "gdbm" as i9, "grpc" as i10, "libedit" as i11, "libffi" as i12, "libtool" as i13, "libxml2" as i14, "libyaml" as i15, "llvm" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "ninja" as i20, "nlohmann-json" as i21, "openssl@1.1" as i22, "pcre" as i23, "perl" as i24, "pkg-config" as i25, "protobuf" as i26, "python@3.7" as i27, "python@3.8" as i28, "python@3.9" as i29, "re2" as i30, "readline" as i31, "ruby" as i32, "six" as i33, "spdlog" as i34, "sphinx-doc" as i35, "sqlite" as i36, "swig" as i37, "tcl-tk" as i38, "unzip" as i39, "xz" as i40, "zip" as i41, "zlib" as i42
 
 pkg(
   name: "bear",
   version: "3.0.12",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bear.rb"), formula)

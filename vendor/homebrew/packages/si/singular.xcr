@@ -53,12 +53,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "gmp" as i1, "mpdecimal" as i2, "mpfr" as i3, "ntl" as i4, "openssl@1.1" as i5, "pkg-config" as i6, "python@3.9" as i7, "readline" as i8, "sqlite" as i9, "xz" as i10
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gmp" as i3, "libffi" as i4, "m4" as i5, "mpdecimal" as i6, "mpfr" as i7, "ncurses" as i8, "ntl" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "singular",
   version: "4.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "singular.rb"), formula)

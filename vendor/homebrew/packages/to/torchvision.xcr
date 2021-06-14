@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "eigen" as i3, "gdbm" as i4, "jpeg" as i5, "libomp" as i6, "libpng" as i7, "libtool" as i8, "libtorch" as i9, "libyaml" as i10, "m4" as i11, "mpdecimal" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "protobuf" as i15, "pybind11" as i16, "python@3.7" as i17, "python@3.8" as i18, "python@3.9" as i19, "readline" as i20, "six" as i21, "sphinx-doc" as i22, "sqlite" as i23, "tcl-tk" as i24, "xz" as i25
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "eigen" as i5, "expat" as i6, "gdbm" as i7, "jpeg" as i8, "libffi" as i9, "libomp" as i10, "libpng" as i11, "libtool" as i12, "libtorch" as i13, "libyaml" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "protobuf" as i21, "pybind11" as i22, "python@3.7" as i23, "python@3.8" as i24, "python@3.9" as i25, "readline" as i26, "six" as i27, "sphinx-doc" as i28, "sqlite" as i29, "tcl-tk" as i30, "unzip" as i31, "xz" as i32, "zip" as i33, "zlib" as i34
 
 pkg(
   name: "torchvision",
   version: "0.9.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "torchvision.rb"), formula)

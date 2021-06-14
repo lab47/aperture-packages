@@ -90,12 +90,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "freetype" as i2, "gcc" as i3, "gdbm" as i4, "gmp" as i5, "isl" as i6, "libmpc" as i7, "libpng" as i8, "mpdecimal" as i9, "mpfr" as i10, "numpy" as i11, "openblas" as i12, "openssl@1.1" as i13, "p7zip" as i14, "pcre" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "ssdeep" as i21, "swig" as i22, "xz" as i23, "zstd" as i24
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "freetype" as i7, "gcc" as i8, "gdbm" as i9, "gmp" as i10, "isl" as i11, "libffi" as i12, "libmpc" as i13, "libpng" as i14, "libtool" as i15, "libyaml" as i16, "m4" as i17, "mpdecimal" as i18, "mpfr" as i19, "ncurses" as i20, "numpy" as i21, "openblas" as i22, "openssl@1.1" as i23, "p7zip" as i24, "pcre" as i25, "perl" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "ruby" as i30, "sphinx-doc" as i31, "sqlite" as i32, "ssdeep" as i33, "swig" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38, "zstd" as i39
 
 pkg(
   name: "binwalk",
   version: "2.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "binwalk.rb"), formula)

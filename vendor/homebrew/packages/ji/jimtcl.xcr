@@ -48,12 +48,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "readline" as i1
+import "openssl@1.1" as i0, "readline" as i1, "sqlite" as i2, "zlib" as i3
 
 pkg(
   name: "jimtcl",
   version: "0.80",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jimtcl.rb"), formula)

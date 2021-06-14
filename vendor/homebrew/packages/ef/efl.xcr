@@ -89,12 +89,12 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "bullet" as i3, "dbus" as i4, "fontconfig" as i5, "freetype" as i6, "fribidi" as i7, "gettext" as i8, "giflib" as i9, "glib" as i10, "gst-plugins-good" as i11, "gstreamer" as i12, "jpeg" as i13, "libpng" as i14, "libraw" as i15, "librsvg" as i16, "libsndfile" as i17, "libspectre" as i18, "libtiff" as i19, "luajit" as i20, "lz4" as i21, "openssl@1.1" as i22, "poppler" as i23, "pulseaudio" as i24, "shared-mime-info" as i25
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "bullet" as i3, "dbus" as i4, "fontconfig" as i5, "freetype" as i6, "fribidi" as i7, "gettext" as i8, "giflib" as i9, "glib" as i10, "gst-plugins-good" as i11, "gstreamer" as i12, "jpeg" as i13, "libpng" as i14, "libraw" as i15, "librsvg" as i16, "libsndfile" as i17, "libspectre" as i18, "libtiff" as i19, "luajit" as i20, "lz4" as i21, "openssl@1.1" as i22, "poppler" as i23, "pulseaudio" as i24, "shared-mime-info" as i25, "zlib" as i26
 
 pkg(
   name: "efl",
   version: "1.25.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "efl.rb"), formula)

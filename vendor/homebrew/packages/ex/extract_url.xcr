@@ -97,10 +97,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0
+
 pkg(
   name: "extract_url",
   version: "1.6.2",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "extract_url.rb"), formula)

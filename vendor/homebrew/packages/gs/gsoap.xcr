@@ -42,12 +42,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "openssl@1.1" as i1
+import "autoconf" as i0, "openssl@1.1" as i1, "bison" as i2, "flex" as i3, "zlib" as i4
 
 pkg(
   name: "gsoap",
   version: "2.8.114",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gsoap.rb"), formula)

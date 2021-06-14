@@ -256,12 +256,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gcc" as i2, "gdbm" as i3, "gmp" as i4, "isl" as i5, "libmpc" as i6, "libssh2" as i7, "mpdecimal" as i8, "mpfr" as i9, "ninja" as i10, "numpy" as i11, "openblas" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "rust" as i17, "sphinx-doc" as i18, "sqlite" as i19, "xz" as i20, "zstd" as i21
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "cython" as i9, "expat" as i10, "gcc" as i11, "gdbm" as i12, "gettext" as i13, "gmp" as i14, "isl" as i15, "jemalloc" as i16, "krb5" as i17, "libev" as i18, "libffi" as i19, "libgcrypt" as i20, "libgpg-error" as i21, "libidn2" as i22, "libmetalink" as i23, "libmpc" as i24, "libssh2" as i25, "libtool" as i26, "libunistring" as i27, "libxml2" as i28, "libxslt" as i29, "m4" as i30, "mpdecimal" as i31, "mpfr" as i32, "ncurses" as i33, "nghttp2" as i34, "ninja" as i35, "numpy" as i36, "openblas" as i37, "openldap" as i38, "openssl@1.1" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "rtmpdump" as i44, "rust" as i45, "sphinx-doc" as i46, "sqlite" as i47, "unzip" as i48, "xz" as i49, "zip" as i50, "zlib" as i51, "zstd" as i52
 
 pkg(
   name: "bzt",
   version: "1.15.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bzt.rb"), formula)

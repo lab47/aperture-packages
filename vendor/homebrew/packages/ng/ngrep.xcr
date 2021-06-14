@@ -55,10 +55,12 @@ end
 
 import "homebrew-install" as hi
 
+import "libpcap" as i0
+
 pkg(
   name: "ngrep",
   version: "1.47",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ngrep.rb"), formula)

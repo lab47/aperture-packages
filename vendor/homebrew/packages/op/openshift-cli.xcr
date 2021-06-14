@@ -66,12 +66,12 @@ end
 
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3
+import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3, "krb5" as i4
 
 pkg(
   name: "openshift-cli",
   version: "4.6.0",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openshift-cli.rb"), formula)

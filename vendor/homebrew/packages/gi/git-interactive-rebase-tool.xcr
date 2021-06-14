@@ -58,12 +58,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0
+import "rust" as i0, "zlib" as i1
 
 pkg(
   name: "git-interactive-rebase-tool",
   version: "2.1.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-interactive-rebase-tool.rb"), formula)

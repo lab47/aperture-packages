@@ -126,12 +126,12 @@ index 15431cf..c12f1c9 100644
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "gdbm" as i2, "gmp" as i3, "icu4c" as i4, "mpdecimal" as i5, "mpfr" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sphinx-doc" as i11, "sqlite" as i12, "xz" as i13
+import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "gmp" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "icu4c" as i21, "jasper" as i22, "jbig2dec" as i23, "jpeg" as i24, "krb5" as i25, "libffi" as i26, "libiconv" as i27, "libidn" as i28, "libpng" as i29, "libtiff" as i30, "libtool" as i31, "libxml2" as i32, "libyaml" as i33, "little-cms2" as i34, "lz4" as i35, "m4" as i36, "mpdecimal" as i37, "mpfr" as i38, "ncurses" as i39, "netpbm" as i40, "openjdk" as i41, "openjpeg" as i42, "openssl@1.1" as i43, "pcre" as i44, "perl" as i45, "pkg-config" as i46, "psutils" as i47, "python@3.9" as i48, "readline" as i49, "ruby" as i50, "scons" as i51, "sphinx-doc" as i52, "sqlite" as i53, "subversion" as i54, "swig" as i55, "uchardet" as i56, "unzip" as i57, "utf8proc" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
 
 pkg(
   name: "ledger",
   version: "3.2.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ledger.rb"), formula)

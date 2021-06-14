@@ -70,12 +70,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gcc" as i2, "gdbm" as i3, "gmp" as i4, "isl" as i5, "libmpc" as i6, "mpdecimal" as i7, "mpfr" as i8, "numpy" as i9, "openblas" as i10, "openssl@1.1" as i11, "pcre" as i12, "pkg-config" as i13, "pybind11" as i14, "python@3.9" as i15, "readline" as i16, "sphinx-doc" as i17, "sqlite" as i18, "swig" as i19, "xz" as i20, "zstd" as i21
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "libtool" as i13, "libyaml" as i14, "m4" as i15, "mpdecimal" as i16, "mpfr" as i17, "ncurses" as i18, "numpy" as i19, "openblas" as i20, "openssl@1.1" as i21, "pcre" as i22, "perl" as i23, "pkg-config" as i24, "pybind11" as i25, "python@3.9" as i26, "readline" as i27, "ruby" as i28, "sphinx-doc" as i29, "sqlite" as i30, "swig" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
 
 pkg(
   name: "scipy",
   version: "1.6.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "scipy.rb"), formula)

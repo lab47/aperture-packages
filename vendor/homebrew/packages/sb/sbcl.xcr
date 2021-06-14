@@ -68,12 +68,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ecl" as i0
+import "ecl" as i0, "zlib" as i1
 
 pkg(
   name: "sbcl",
   version: "2.1.5",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sbcl.rb"), formula)

@@ -80,12 +80,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gcc" as i3, "gdbm" as i4, "gmp" as i5, "hwloc" as i6, "isl" as i7, "libevent" as i8, "libmpc" as i9, "libtool" as i10, "m4" as i11, "mpdecimal" as i12, "mpfr" as i13, "open-mpi" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "xz" as i21, "zstd" as i22
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gcc" as i6, "gdbm" as i7, "gmp" as i8, "hwloc" as i9, "isl" as i10, "libevent" as i11, "libffi" as i12, "libmpc" as i13, "libtool" as i14, "libxml2" as i15, "m4" as i16, "mpdecimal" as i17, "mpfr" as i18, "ncurses" as i19, "open-mpi" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sphinx-doc" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31, "zstd" as i32
 
 pkg(
   name: "otf2",
   version: "2.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "otf2.rb"), formula)

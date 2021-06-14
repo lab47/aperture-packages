@@ -135,10 +135,12 @@ end
 
 import "homebrew-install" as hi
 
+import "unzip" as i0, "xz" as i1
+
 pkg(
   name: "dmd",
   version: "2.096.1",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dmd.rb"), formula)

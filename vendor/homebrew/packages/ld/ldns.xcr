@@ -87,12 +87,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pcre" as i3, "pkg-config" as i4, "python@3.9" as i5, "readline" as i6, "sqlite" as i7, "swig" as i8, "xz" as i9
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libtool" as i7, "libyaml" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pcre" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "ruby" as i18, "sqlite" as i19, "swig" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
 
 pkg(
   name: "ldns",
   version: "1.7.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ldns.rb"), formula)

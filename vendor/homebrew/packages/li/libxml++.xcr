@@ -85,12 +85,12 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm@2.66" as i3
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm@2.66" as i3, "libxml2" as i4
 
 pkg(
   name: "libxml++",
   version: "2.42.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxml++.rb"), formula)

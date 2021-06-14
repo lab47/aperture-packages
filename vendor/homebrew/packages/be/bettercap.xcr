@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0, "pkg-config" as i1, "libusb" as i2
+import "go" as i0, "pkg-config" as i1, "libusb" as i2, "libpcap" as i3
 
 pkg(
   name: "bettercap",
   version: "2.31.1",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bettercap.rb"), formula)

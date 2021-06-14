@@ -35,10 +35,12 @@ end
 
 import "homebrew-install" as hi
 
+import "sqlite" as i0, "zlib" as i1
+
 pkg(
   name: "tippecanoe",
   version: "1.36.0",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tippecanoe.rb"), formula)

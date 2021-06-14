@@ -150,12 +150,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "coreutils" as i1, "gdbm" as i2, "gmp" as i3, "jemalloc" as i4, "lean" as i5, "mpdecimal" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.7" as i9, "python@3.8" as i10, "python@3.9" as i11, "readline" as i12, "six" as i13, "sphinx-doc" as i14, "sqlite" as i15, "tcl-tk" as i16, "xz" as i17
+import "bzip2" as i0, "cmake" as i1, "coreutils" as i2, "expat" as i3, "gdbm" as i4, "gmp" as i5, "gperf" as i6, "jemalloc" as i7, "lean" as i8, "libffi" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.7" as i15, "python@3.8" as i16, "python@3.9" as i17, "readline" as i18, "six" as i19, "sphinx-doc" as i20, "sqlite" as i21, "tcl-tk" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
 
 pkg(
   name: "mathlibtools",
   version: "1.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mathlibtools.rb"), formula)

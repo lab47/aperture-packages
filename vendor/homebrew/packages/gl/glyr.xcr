@@ -39,12 +39,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3
+import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3, "curl" as i4
 
 pkg(
   name: "glyr",
   version: "1.0.10",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glyr.rb"), formula)

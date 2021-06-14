@@ -110,12 +110,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gnutls" as i1, "jansson" as i2
+import "pkg-config" as i0, "gnutls" as i1, "jansson" as i2, "libxml2" as i3, "ncurses" as i4
 
 pkg(
   name: "emacs",
   version: "27.2",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "emacs.rb"), formula)

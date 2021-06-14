@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "boost" as i1, "cmake" as i2, "doxygen" as i3, "gdbm" as i4, "icu4c" as i5, "libusb" as i6, "mpdecimal" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sphinx-doc" as i12, "sqlite" as i13, "xz" as i14
+import "berkeley-db" as i0, "bison" as i1, "boost" as i2, "bzip2" as i3, "cmake" as i4, "doxygen" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "icu4c" as i11, "libffi" as i12, "libusb" as i13, "libxml2" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "uhd",
   version: "4.0.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "uhd.rb"), formula)

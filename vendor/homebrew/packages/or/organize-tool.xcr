@@ -126,12 +126,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cmake" as i1, "doxygen" as i2, "freetype" as i3, "gdbm" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "little-cms2" as i8, "mpdecimal" as i9, "openjpeg" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sphinx-doc" as i15, "sqlite" as i16, "xz" as i17
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "flex" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "jpeg" as i11, "libffi" as i12, "libpng" as i13, "libtiff" as i14, "libxml2" as i15, "little-cms2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "openjpeg" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sphinx-doc" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
 
 pkg(
   name: "organize-tool",
   version: "1.10.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "organize-tool.rb"), formula)

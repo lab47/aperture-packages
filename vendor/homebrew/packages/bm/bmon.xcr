@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "confuse" as i1
+import "pkg-config" as i0, "confuse" as i1, "ncurses" as i2
 
 pkg(
   name: "bmon",
   version: "4.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bmon.rb"), formula)

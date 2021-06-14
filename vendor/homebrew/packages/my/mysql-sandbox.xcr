@@ -44,10 +44,12 @@ end
 
 import "homebrew-install" as hi
 
+import "perl" as i0
+
 pkg(
   name: "mysql-sandbox",
   version: "3.2.17",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mysql-sandbox.rb"), formula)

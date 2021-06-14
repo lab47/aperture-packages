@@ -39,12 +39,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "mpdecimal" as i1, "openssl@1.1" as i2, "pkg-config" as i3, "python@3.7" as i4, "python@3.8" as i5, "python@3.9" as i6, "readline" as i7, "sqlite" as i8, "tcl-tk" as i9, "xz" as i10
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.7" as i8, "python@3.8" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "tcl-tk" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "six",
   version: "1.16.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "six.rb"), formula)

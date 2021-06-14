@@ -43,10 +43,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ncurses" as i0
+
 pkg(
   name: "tcsh",
   version: "6.22.04",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tcsh.rb"), formula)

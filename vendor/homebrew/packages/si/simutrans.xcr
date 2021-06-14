@@ -76,12 +76,12 @@ end
 
 import "homebrew-install" as hi
 
-import "subversion" as i0, "autoconf" as i1, "automake" as i2, "pkg-config" as i3, "freetype" as i4, "libpng" as i5, "sdl2" as i6
+import "subversion" as i0, "autoconf" as i1, "automake" as i2, "pkg-config" as i3, "freetype" as i4, "libpng" as i5, "sdl2" as i6, "curl" as i7, "unzip" as i8
 
 pkg(
   name: "simutrans",
   version: "122.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "simutrans.rb"), formula)

@@ -49,12 +49,12 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "libpq" as i1, "mysql-client" as i2
+import "rust" as i0, "libpq" as i1, "mysql-client" as i2, "sqlite" as i3
 
 pkg(
   name: "diesel",
   version: "1.4.6",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "diesel.rb"), formula)

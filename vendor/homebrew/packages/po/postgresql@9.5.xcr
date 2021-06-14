@@ -161,12 +161,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "readline" as i1
+import "openssl@1.1" as i0, "readline" as i1, "krb5" as i2, "libxslt" as i3, "openldap" as i4, "perl" as i5
 
 pkg(
   name: "postgresql@9.5",
   version: "9.5.25",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "postgresql@9.5.rb"), formula)

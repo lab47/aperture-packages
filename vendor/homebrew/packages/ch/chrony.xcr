@@ -39,12 +39,12 @@ end
 
 import "homebrew-install" as hi
 
-import "nettle" as i0
+import "nettle" as i0, "libedit" as i1
 
 pkg(
   name: "chrony",
   version: "4.1",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "chrony.rb"), formula)

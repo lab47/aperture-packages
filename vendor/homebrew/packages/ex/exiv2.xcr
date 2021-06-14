@@ -62,12 +62,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gettext" as i1, "libssh" as i2
+import "cmake" as i0, "gettext" as i1, "libssh" as i2, "curl" as i3, "expat" as i4, "zlib" as i5
 
 pkg(
   name: "exiv2",
   version: "0.27.3",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "exiv2.rb"), formula)

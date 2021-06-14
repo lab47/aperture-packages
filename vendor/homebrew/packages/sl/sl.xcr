@@ -35,10 +35,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ncurses" as i0
+
 pkg(
   name: "sl",
   version: "5.02",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sl.rb"), formula)

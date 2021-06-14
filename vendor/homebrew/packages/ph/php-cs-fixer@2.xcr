@@ -34,10 +34,12 @@ end
 
 import "homebrew-install" as hi
 
+import "php" as i0
+
 pkg(
   name: "php-cs-fixer@2",
   version: "2.19.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "php-cs-fixer@2.rb"), formula)

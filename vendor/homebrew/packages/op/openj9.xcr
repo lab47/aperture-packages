@@ -133,12 +133,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "bash" as i1, "cmake" as i2, "nasm" as i3, "ninja" as i4, "pkg-config" as i5, "fontconfig" as i6, "giflib" as i7, "harfbuzz" as i8, "jpeg" as i9, "libpng" as i10, "little-cms2" as i11
+import "autoconf" as i0, "bash" as i1, "cmake" as i2, "nasm" as i3, "ninja" as i4, "pkg-config" as i5, "fontconfig" as i6, "giflib" as i7, "harfbuzz" as i8, "jpeg" as i9, "libpng" as i10, "little-cms2" as i11, "cups" as i12, "libffi" as i13, "zlib" as i14
 
 pkg(
   name: "openj9",
   version: "0.26.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openj9.rb"), formula)

@@ -58,12 +58,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gdbm" as i3, "libtool" as i4, "m4" as i5, "meson" as i6, "mpdecimal" as i7, "nasm" as i8, "ninja" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sphinx-doc" as i14, "sqlite" as i15, "xz" as i16, "yasm" as i17
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "libffi" as i7, "libtool" as i8, "libxml2" as i9, "m4" as i10, "meson" as i11, "mpdecimal" as i12, "nasm" as i13, "ncurses" as i14, "ninja" as i15, "openssl@1.1" as i16, "perl" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "yasm" as i25, "zip" as i26, "zlib" as i27
 
 pkg(
   name: "handbrake",
   version: "1.3.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "handbrake.rb"), formula)

@@ -46,12 +46,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gcc" as i2, "gdbm" as i3, "gmp" as i4, "isl" as i5, "libmpc" as i6, "libtool" as i7, "m4" as i8, "mpdecimal" as i9, "mpfr" as i10, "numpy" as i11, "openblas" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sphinx-doc" as i17, "sqlite" as i18, "xz" as i19, "zstd" as i20
+import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "gcc" as i4, "gdbm" as i5, "gmp" as i6, "isl" as i7, "libffi" as i8, "libmpc" as i9, "libtool" as i10, "m4" as i11, "mpdecimal" as i12, "mpfr" as i13, "ncurses" as i14, "numpy" as i15, "openblas" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26, "zstd" as i27
 
 pkg(
   name: "aubio",
   version: "0.4.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aubio.rb"), formula)

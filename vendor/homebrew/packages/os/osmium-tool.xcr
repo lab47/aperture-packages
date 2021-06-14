@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libosmium" as i1, "boost" as i2
+import "cmake" as i0, "libosmium" as i1, "boost" as i2, "expat" as i3
 
 pkg(
   name: "osmium-tool",
   version: "1.13.1",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osmium-tool.rb"), formula)

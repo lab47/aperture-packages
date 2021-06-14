@@ -92,12 +92,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "groff" as i1, "libpipeline" as i2
+import "pkg-config" as i0, "groff" as i1, "libpipeline" as i2, "zlib" as i3
 
 pkg(
   name: "man-db",
   version: "2.9.4",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "man-db.rb"), formula)

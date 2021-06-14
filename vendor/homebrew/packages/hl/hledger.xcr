@@ -74,12 +74,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ghc" as i0, "haskell-stack" as i1
+import "ghc" as i0, "haskell-stack" as i1, "ncurses" as i2, "zlib" as i3
 
 pkg(
   name: "hledger",
   version: "1.21",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hledger.rb"), formula)

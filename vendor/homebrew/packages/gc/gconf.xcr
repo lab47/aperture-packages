@@ -45,12 +45,12 @@ end
 
 import "homebrew-install" as hi
 
-import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "dbus-glib" as i3, "gettext" as i4, "glib" as i5, "orbit" as i6
+import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "dbus-glib" as i3, "gettext" as i4, "glib" as i5, "orbit" as i6, "libxml2" as i7
 
 pkg(
   name: "gconf",
   version: "3.2.6",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gconf.rb"), formula)

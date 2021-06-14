@@ -39,10 +39,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ncurses" as i0
+
 pkg(
   name: "ncdu",
   version: "1.15.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncdu.rb"), formula)

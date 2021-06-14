@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3
+import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3, "libxml2" as i4
 
 pkg(
   name: "ezstream",
   version: "1.0.2",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ezstream.rb"), formula)

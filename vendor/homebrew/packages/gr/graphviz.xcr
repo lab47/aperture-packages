@@ -76,12 +76,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bison" as i2, "pkg-config" as i3, "gd" as i4, "gts" as i5, "libpng" as i6, "librsvg" as i7, "libtool" as i8, "pango" as i9
+import "autoconf" as i0, "automake" as i1, "bison" as i2, "pkg-config" as i3, "gd" as i4, "gts" as i5, "libpng" as i6, "librsvg" as i7, "libtool" as i8, "pango" as i9, "flex" as i10
 
 pkg(
   name: "graphviz",
   version: "2.47.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "graphviz.rb"), formula)

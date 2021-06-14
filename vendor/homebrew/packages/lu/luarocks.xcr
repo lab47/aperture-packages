@@ -92,12 +92,12 @@ end
 
 import "homebrew-install" as hi
 
-import "lua" as i0
+import "lua" as i0, "unzip" as i1
 
 pkg(
   name: "luarocks",
   version: "3.7.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "luarocks.rb"), formula)

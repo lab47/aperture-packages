@@ -69,12 +69,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "gdbm" as i5, "gettext" as i6, "glib" as i7, "gmp" as i8, "gnu-sed" as i9, "gnutls" as i10, "guile" as i11, "jemalloc" as i12, "libatomic_ops" as i13, "libev" as i14, "libevent" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libtasn1" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "libxmlsec1" as i24, "m4" as i25, "meson" as i26, "mpdecimal" as i27, "nettle" as i28, "nghttp2" as i29, "ninja" as i30, "openssl@1.1" as i31, "p11-kit" as i32, "pcre" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "sphinx-doc" as i37, "sqlite" as i38, "unbound" as i39, "xz" as i40
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gmp" as i11, "gnu-sed" as i12, "gnutls" as i13, "gperf" as i14, "guile" as i15, "jemalloc" as i16, "libatomic_ops" as i17, "libev" as i18, "libevent" as i19, "libffi" as i20, "libgcrypt" as i21, "libgpg-error" as i22, "libidn2" as i23, "libtasn1" as i24, "libtool" as i25, "libunistring" as i26, "libxml2" as i27, "libxmlsec1" as i28, "m4" as i29, "meson" as i30, "mpdecimal" as i31, "ncurses" as i32, "nettle" as i33, "nghttp2" as i34, "ninja" as i35, "openssl@1.1" as i36, "p11-kit" as i37, "pcre" as i38, "perl" as i39, "pkg-config" as i40, "python@3.9" as i41, "readline" as i42, "sphinx-doc" as i43, "sqlite" as i44, "unbound" as i45, "unzip" as i46, "xz" as i47, "zip" as i48, "zlib" as i49
 
 pkg(
   name: "lasso",
   version: "2.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lasso.rb"), formula)

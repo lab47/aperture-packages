@@ -107,10 +107,12 @@ end
 
 import "homebrew-install" as hi
 
+import "bzip2" as i0
+
 pkg(
   name: "unzip",
   version: "6.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "unzip.rb"), formula)

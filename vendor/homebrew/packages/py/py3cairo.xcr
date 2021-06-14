@@ -32,12 +32,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cairo" as i0, "fontconfig" as i1, "freetype" as i2, "gdbm" as i3, "gettext" as i4, "glib" as i5, "libffi" as i6, "libpng" as i7, "libpthread-stubs" as i8, "libx11" as i9, "libxau" as i10, "libxcb" as i11, "libxdmcp" as i12, "libxext" as i13, "libxrender" as i14, "lzo" as i15, "meson" as i16, "mpdecimal" as i17, "ninja" as i18, "openssl@1.1" as i19, "pcre" as i20, "pixman" as i21, "pkg-config" as i22, "python@3.9" as i23, "readline" as i24, "sqlite" as i25, "util-macros" as i26, "xcb-proto" as i27, "xorgproto" as i28, "xtrans" as i29, "xz" as i30
+import "bzip2" as i0, "cairo" as i1, "expat" as i2, "fontconfig" as i3, "freetype" as i4, "gdbm" as i5, "gettext" as i6, "glib" as i7, "gperf" as i8, "libffi" as i9, "libpng" as i10, "libpthread-stubs" as i11, "libx11" as i12, "libxau" as i13, "libxcb" as i14, "libxdmcp" as i15, "libxext" as i16, "libxml2" as i17, "libxrender" as i18, "lzo" as i19, "meson" as i20, "mpdecimal" as i21, "ncurses" as i22, "ninja" as i23, "openssl@1.1" as i24, "pcre" as i25, "pixman" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "sqlite" as i30, "unzip" as i31, "util-macros" as i32, "xcb-proto" as i33, "xorgproto" as i34, "xtrans" as i35, "xz" as i36, "zip" as i37, "zlib" as i38
 
 pkg(
   name: "py3cairo",
   version: "1.20.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "py3cairo.rb"), formula)

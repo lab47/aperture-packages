@@ -192,12 +192,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "groonga" as i2, "openssl@1.1" as i3
+import "cmake" as i0, "pkg-config" as i1, "groonga" as i2, "openssl@1.1" as i3, "bison" as i4, "bzip2" as i5, "ncurses" as i6, "zlib" as i7
 
 pkg(
   name: "mariadb",
   version: "10.5.9",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mariadb.rb"), formula)

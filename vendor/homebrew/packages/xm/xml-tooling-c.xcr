@@ -43,12 +43,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "boost" as i1, "log4shib" as i2, "openssl@1.1" as i3, "xerces-c" as i4, "xml-security-c" as i5
+import "pkg-config" as i0, "boost" as i1, "log4shib" as i2, "openssl@1.1" as i3, "xerces-c" as i4, "xml-security-c" as i5, "curl" as i6
 
 pkg(
   name: "xml-tooling-c",
   version: "3.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xml-tooling-c.rb"), formula)

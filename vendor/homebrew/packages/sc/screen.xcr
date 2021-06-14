@@ -66,12 +66,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1
+import "autoconf" as i0, "automake" as i1, "ncurses" as i2
 
 pkg(
   name: "screen",
   version: "4.8.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "screen.rb"), formula)

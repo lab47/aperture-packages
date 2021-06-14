@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "docbook-xsl" as i1
+import "asciidoc" as i0, "docbook-xsl" as i1, "libxml2" as i2, "libxslt" as i3
 
 pkg(
   name: "cvs-fast-export",
   version: "1.57",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cvs-fast-export.rb"), formula)

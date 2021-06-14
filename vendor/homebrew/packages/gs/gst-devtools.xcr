@@ -51,12 +51,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "cmake" as i2, "fontconfig" as i3, "freetype" as i4, "fribidi" as i5, "gdbm" as i6, "gettext" as i7, "glib" as i8, "gobject-introspection" as i9, "graphene" as i10, "graphite2" as i11, "gst-plugins-base" as i12, "gstreamer" as i13, "harfbuzz" as i14, "icu4c" as i15, "json-glib" as i16, "libffi" as i17, "libogg" as i18, "libpng" as i19, "libpthread-stubs" as i20, "libtool" as i21, "libvorbis" as i22, "libx11" as i23, "libxau" as i24, "libxcb" as i25, "libxdmcp" as i26, "libxext" as i27, "libxrender" as i28, "lzo" as i29, "m4" as i30, "meson" as i31, "mpdecimal" as i32, "ninja" as i33, "openssl@1.1" as i34, "opus" as i35, "orc" as i36, "pango" as i37, "pcre" as i38, "pixman" as i39, "pkg-config" as i40, "python@3.9" as i41, "readline" as i42, "sphinx-doc" as i43, "sqlite" as i44, "theora" as i45, "util-macros" as i46, "xcb-proto" as i47, "xorgproto" as i48, "xtrans" as i49, "xz" as i50
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "cmake" as i4, "expat" as i5, "flex" as i6, "fontconfig" as i7, "freetype" as i8, "fribidi" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gobject-introspection" as i13, "gperf" as i14, "graphene" as i15, "graphite2" as i16, "gst-plugins-base" as i17, "gstreamer" as i18, "harfbuzz" as i19, "help2man" as i20, "icu4c" as i21, "json-glib" as i22, "libffi" as i23, "libogg" as i24, "libpng" as i25, "libpthread-stubs" as i26, "libtool" as i27, "libvorbis" as i28, "libx11" as i29, "libxau" as i30, "libxcb" as i31, "libxdmcp" as i32, "libxext" as i33, "libxml2" as i34, "libxrender" as i35, "lzo" as i36, "m4" as i37, "meson" as i38, "mpdecimal" as i39, "ncurses" as i40, "ninja" as i41, "openssl@1.1" as i42, "opus" as i43, "orc" as i44, "pango" as i45, "pcre" as i46, "perl" as i47, "pixman" as i48, "pkg-config" as i49, "python@3.9" as i50, "readline" as i51, "sphinx-doc" as i52, "sqlite" as i53, "theora" as i54, "unzip" as i55, "util-macros" as i56, "xcb-proto" as i57, "xorgproto" as i58, "xtrans" as i59, "xz" as i60, "zip" as i61, "zlib" as i62
 
 pkg(
   name: "gst-devtools",
   version: "1.18.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-devtools.rb"), formula)

@@ -54,12 +54,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config" as i3, "fltk" as i4, "libarchive" as i5, "sdl2" as i6
+import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config" as i3, "fltk" as i4, "libarchive" as i5, "sdl2" as i6, "zlib" as i7
 
 pkg(
   name: "nestopia-ue",
   version: "1.51.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nestopia-ue.rb"), formula)

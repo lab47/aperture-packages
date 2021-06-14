@@ -58,12 +58,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cmake" as i1, "doxygen" as i2, "gdbm" as i3, "lua" as i4, "mpdecimal" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sphinx-doc" as i10, "sqlite" as i11, "xz" as i12
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "flex" as i6, "gdbm" as i7, "gettext" as i8, "help2man" as i9, "libffi" as i10, "libxml2" as i11, "lua" as i12, "m4" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "perl" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
 
 pkg(
   name: "clingo",
   version: "5.5.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clingo.rb"), formula)

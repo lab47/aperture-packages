@@ -145,10 +145,12 @@ diff -Nur boost_1_60_0/boost/graph/adjacency_matrix.hpp boost_1_60_0-patched/boo
 
 import "homebrew-install" as hi
 
+import "bzip2" as i0, "zlib" as i1
+
 pkg(
   name: "boost@1.60",
   version: "1.60.0",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "boost@1.60.rb"), formula)

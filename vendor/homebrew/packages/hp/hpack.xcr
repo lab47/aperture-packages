@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1
+import "cabal-install" as i0, "ghc" as i1, "zlib" as i2
 
 pkg(
   name: "hpack",
   version: "0.34.4",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hpack.rb"), formula)

@@ -94,12 +94,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "eigen" as i3, "gdbm" as i4, "libomp" as i5, "libtool" as i6, "libyaml" as i7, "m4" as i8, "mpdecimal" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "protobuf" as i12, "pybind11" as i13, "python@3.7" as i14, "python@3.8" as i15, "python@3.9" as i16, "readline" as i17, "six" as i18, "sphinx-doc" as i19, "sqlite" as i20, "tcl-tk" as i21, "xz" as i22
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "eigen" as i5, "expat" as i6, "gdbm" as i7, "libffi" as i8, "libomp" as i9, "libtool" as i10, "libyaml" as i11, "m4" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "perl" as i16, "pkg-config" as i17, "protobuf" as i18, "pybind11" as i19, "python@3.7" as i20, "python@3.8" as i21, "python@3.9" as i22, "readline" as i23, "six" as i24, "sphinx-doc" as i25, "sqlite" as i26, "tcl-tk" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
 
 pkg(
   name: "libtorch",
   version: "1.8.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtorch.rb"), formula)

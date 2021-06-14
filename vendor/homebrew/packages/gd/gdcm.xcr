@@ -95,12 +95,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bison" as i2, "boost" as i3, "cmake" as i4, "doxygen" as i5, "fontconfig" as i6, "freetype" as i7, "gcc" as i8, "gdbm" as i9, "gmp" as i10, "hdf5" as i11, "icu4c" as i12, "isl" as i13, "jpeg" as i14, "libmpc" as i15, "libpng" as i16, "libtiff" as i17, "libtool" as i18, "little-cms2" as i19, "m4" as i20, "mpdecimal" as i21, "mpfr" as i22, "netcdf" as i23, "ninja" as i24, "openjpeg" as i25, "openssl@1.1" as i26, "pcre" as i27, "pkg-config" as i28, "pyqt-builder" as i29, "pyqt@5" as i30, "python@3.9" as i31, "qt@5" as i32, "readline" as i33, "sip" as i34, "sphinx-doc" as i35, "sqlite" as i36, "swig" as i37, "szip" as i38, "vtk@8.2" as i39, "xz" as i40, "zstd" as i41
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "doxygen" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gcc" as i15, "gdbm" as i16, "gettext" as i17, "gmp" as i18, "gperf" as i19, "hdf5" as i20, "help2man" as i21, "icu4c" as i22, "isl" as i23, "jemalloc" as i24, "jpeg" as i25, "krb5" as i26, "libev" as i27, "libffi" as i28, "libidn2" as i29, "libmetalink" as i30, "libmpc" as i31, "libpng" as i32, "libssh2" as i33, "libtiff" as i34, "libtool" as i35, "libunistring" as i36, "libxml2" as i37, "libyaml" as i38, "little-cms2" as i39, "m4" as i40, "mpdecimal" as i41, "mpfr" as i42, "ncurses" as i43, "netcdf" as i44, "nghttp2" as i45, "ninja" as i46, "openjpeg" as i47, "openldap" as i48, "openssl@1.1" as i49, "pcre" as i50, "perl" as i51, "pkg-config" as i52, "pyqt-builder" as i53, "pyqt@5" as i54, "python@3.9" as i55, "qt@5" as i56, "readline" as i57, "rtmpdump" as i58, "ruby" as i59, "sip" as i60, "sphinx-doc" as i61, "sqlite" as i62, "swig" as i63, "szip" as i64, "unzip" as i65, "vtk@8.2" as i66, "xz" as i67, "zip" as i68, "zlib" as i69, "zstd" as i70
 
 pkg(
   name: "gdcm",
   version: "3.0.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdcm.rb"), formula)

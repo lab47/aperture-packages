@@ -144,12 +144,12 @@ end
 
 import "homebrew-install" as hi
 
-import "nginx" as i0, "openssl@1.1" as i1, "pcre" as i2
+import "nginx" as i0, "openssl@1.1" as i1, "pcre" as i2, "ruby" as i3
 
 pkg(
   name: "passenger",
   version: "6.0.9",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "passenger.rb"), formula)

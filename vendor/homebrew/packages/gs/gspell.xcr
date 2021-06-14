@@ -153,12 +153,12 @@ index 076a9fd..6c67184 100644
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pkg-config" as i4, "enchant" as i5, "gtk+3" as i6, "iso-codes" as i7, "vala" as i8, "gtk-mac-integration" as i9
+import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pkg-config" as i4, "enchant" as i5, "gtk+3" as i6, "iso-codes" as i7, "vala" as i8, "libffi" as i9, "gtk-mac-integration" as i10
 
 pkg(
   name: "gspell",
   version: "1.8.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gspell.rb"), formula)

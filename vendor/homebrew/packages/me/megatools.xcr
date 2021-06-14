@@ -48,12 +48,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "pkg-config" as i1, "glib" as i2, "glib-networking" as i3, "openssl@1.1" as i4
+import "asciidoc" as i0, "pkg-config" as i1, "glib" as i2, "glib-networking" as i3, "openssl@1.1" as i4, "curl" as i5
 
 pkg(
   name: "megatools",
   version: "1.10.3",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "megatools.rb"), formula)

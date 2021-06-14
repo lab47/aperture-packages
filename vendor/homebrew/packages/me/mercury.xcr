@@ -62,12 +62,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+import "openjdk" as i0, "flex" as i1
 
 pkg(
   name: "mercury",
   version: "20.06.1",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mercury.rb"), formula)

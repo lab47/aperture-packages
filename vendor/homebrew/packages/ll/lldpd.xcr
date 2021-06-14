@@ -75,12 +75,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libevent" as i1, "readline" as i2
+import "pkg-config" as i0, "libevent" as i1, "readline" as i2, "libxml2" as i3
 
 pkg(
   name: "lldpd",
   version: "1.0.11",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lldpd.rb"), formula)

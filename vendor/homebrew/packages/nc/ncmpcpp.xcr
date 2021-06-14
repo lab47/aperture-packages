@@ -69,12 +69,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "boost" as i1, "fftw" as i2, "libmpdclient" as i3, "ncurses" as i4, "readline" as i5, "taglib" as i6
+import "pkg-config" as i0, "boost" as i1, "fftw" as i2, "libmpdclient" as i3, "ncurses" as i4, "readline" as i5, "taglib" as i6, "curl" as i7
 
 pkg(
   name: "ncmpcpp",
   version: "0.9.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncmpcpp.rb"), formula)

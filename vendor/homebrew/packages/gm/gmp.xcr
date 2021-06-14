@@ -74,10 +74,12 @@ end
 
 import "homebrew-install" as hi
 
+import "m4" as i0
+
 pkg(
   name: "gmp",
   version: "6.2.1",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gmp.rb"), formula)

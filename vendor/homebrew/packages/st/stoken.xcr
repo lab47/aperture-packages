@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "nettle" as i1
+import "pkg-config" as i0, "nettle" as i1, "libxml2" as i2
 
 pkg(
   name: "stoken",
   version: "0.92",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stoken.rb"), formula)

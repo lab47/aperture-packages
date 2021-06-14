@@ -26,10 +26,12 @@ end
 
 import "homebrew-install" as hi
 
+import "curl" as i0
+
 pkg(
   name: "hblock",
   version: "3.2.2",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hblock.rb"), formula)

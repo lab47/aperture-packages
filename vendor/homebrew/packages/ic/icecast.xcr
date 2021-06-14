@@ -64,12 +64,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libvorbis" as i1, "openssl@1.1" as i2
+import "pkg-config" as i0, "libvorbis" as i1, "openssl@1.1" as i2, "curl" as i3, "libxslt" as i4
 
 pkg(
   name: "icecast",
   version: "2.4.4",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "icecast.rb"), formula)

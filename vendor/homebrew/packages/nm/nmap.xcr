@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+import "openssl@1.1" as i0, "bison" as i1, "flex" as i2, "zlib" as i3
 
 pkg(
   name: "nmap",
   version: "7.91",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nmap.rb"), formula)

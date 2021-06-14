@@ -98,12 +98,12 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "boost" as i3, "cmake" as i4, "condure" as i5, "docbook" as i6, "docbook-xsl" as i7, "gdbm" as i8, "gnu-getopt" as i9, "icu4c" as i10, "libsodium" as i11, "libssh2" as i12, "m4" as i13, "mongrel2" as i14, "mpdecimal" as i15, "ninja" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "python@3.9" as i19, "qt@5" as i20, "readline" as i21, "rust" as i22, "source-highlight" as i23, "sphinx-doc" as i24, "sqlite" as i25, "xmlto" as i26, "xz" as i27, "zeromq" as i28, "zurl" as i29
+import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cmake" as i10, "condure" as i11, "curl" as i12, "docbook" as i13, "docbook-xsl" as i14, "expat" as i15, "flex" as i16, "gdbm" as i17, "gettext" as i18, "gnu-getopt" as i19, "gperf" as i20, "help2man" as i21, "icu4c" as i22, "jemalloc" as i23, "krb5" as i24, "libev" as i25, "libffi" as i26, "libgcrypt" as i27, "libgpg-error" as i28, "libidn2" as i29, "libmetalink" as i30, "libsodium" as i31, "libssh2" as i32, "libtool" as i33, "libunistring" as i34, "libxml2" as i35, "libxslt" as i36, "m4" as i37, "mongrel2" as i38, "mpdecimal" as i39, "ncurses" as i40, "nghttp2" as i41, "ninja" as i42, "openldap" as i43, "openssl@1.1" as i44, "perl" as i45, "pkg-config" as i46, "python@3.9" as i47, "qt@5" as i48, "readline" as i49, "rtmpdump" as i50, "rust" as i51, "source-highlight" as i52, "sphinx-doc" as i53, "sqlite" as i54, "unzip" as i55, "xmlto" as i56, "xz" as i57, "zeromq" as i58, "zip" as i59, "zlib" as i60, "zstd" as i61, "zurl" as i62
 
 pkg(
   name: "pushpin",
   version: "1.32.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pushpin.rb"), formula)

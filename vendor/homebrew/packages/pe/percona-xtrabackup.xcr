@@ -132,12 +132,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "sphinx-doc" as i1, "libev" as i2, "libgcrypt" as i3, "mysql-client" as i4, "openssl@1.1" as i5, "protobuf" as i6
+import "cmake" as i0, "sphinx-doc" as i1, "libev" as i2, "libgcrypt" as i3, "mysql-client" as i4, "openssl@1.1" as i5, "protobuf" as i6, "perl" as i7
 
 pkg(
   name: "percona-xtrabackup",
   version: "8.0.23-16",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "percona-xtrabackup.rb"), formula)

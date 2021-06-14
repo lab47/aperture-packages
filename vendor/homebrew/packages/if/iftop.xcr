@@ -60,10 +60,12 @@ end
 
 import "homebrew-install" as hi
 
+import "libpcap" as i0, "ncurses" as i1
+
 pkg(
   name: "iftop",
   version: "1.0pre4",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "iftop.rb"), formula)

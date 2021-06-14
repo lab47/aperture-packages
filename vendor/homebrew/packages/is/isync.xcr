@@ -83,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "openssl@1.1" as i3
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "openssl@1.1" as i3, "zlib" as i4
 
 pkg(
   name: "isync",
   version: "1.4.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "isync.rb"), formula)

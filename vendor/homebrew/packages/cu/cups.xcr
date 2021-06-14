@@ -50,10 +50,12 @@ end
 
 import "homebrew-install" as hi
 
+import "krb5" as i0, "zlib" as i1
+
 pkg(
   name: "cups",
   version: "2.3.3op2",
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cups.rb"), formula)

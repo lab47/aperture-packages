@@ -73,12 +73,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libgcrypt" as i1, "libgpg-error" as i2, "pcre" as i3
+import "pkg-config" as i0, "libgcrypt" as i1, "libgpg-error" as i2, "pcre" as i3, "bison" as i4, "flex" as i5, "curl" as i6
 
 pkg(
   name: "aide",
   version: "0.17.3",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aide.rb"), formula)

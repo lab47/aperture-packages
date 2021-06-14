@@ -89,12 +89,12 @@ end
 
 import "homebrew-install" as hi
 
-import "subversion" as i0, "jasper" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4
+import "subversion" as i0, "jasper" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "flex" as i5, "libxml2" as i6, "zlib" as i7
 
 pkg(
   name: "netpbm",
   version: "10.86.22",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "netpbm.rb"), formula)

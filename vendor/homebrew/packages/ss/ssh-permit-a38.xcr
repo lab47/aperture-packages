@@ -41,12 +41,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "rust" as i1, "openssl@1.1" as i2
+import "cmake" as i0, "rust" as i1, "openssl@1.1" as i2, "zlib" as i3
 
 pkg(
   name: "ssh-permit-a38",
   version: "0.2.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ssh-permit-a38.rb"), formula)

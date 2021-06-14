@@ -38,10 +38,12 @@ end
 
 import "homebrew-install" as hi
 
+import "ruby" as i0
+
 pkg(
   name: "rubyfmt",
   version: "0.2.0",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rubyfmt.rb"), formula)

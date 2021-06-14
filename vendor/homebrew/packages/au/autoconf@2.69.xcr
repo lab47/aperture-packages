@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "m4" as i0
+import "m4" as i0, "perl" as i1
 
 pkg(
   name: "autoconf@2.69",
   version: "2.69",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "autoconf@2.69.rb"), formula)

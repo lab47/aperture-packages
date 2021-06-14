@@ -96,12 +96,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "cairo" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "glib" as i7, "jpeg" as i8, "libpng" as i9, "libtiff" as i10, "little-cms2" as i11, "nss" as i12, "openjpeg" as i13, "qt@5" as i14
+import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "cairo" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "glib" as i7, "jpeg" as i8, "libpng" as i9, "libtiff" as i10, "little-cms2" as i11, "nss" as i12, "openjpeg" as i13, "qt@5" as i14, "gperf" as i15, "curl" as i16
 
 pkg(
   name: "poppler",
   version: "21.06.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "poppler.rb"), formula)

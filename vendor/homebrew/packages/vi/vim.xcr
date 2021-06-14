@@ -83,12 +83,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "gdbm" as i3, "gettext" as i4, "libtool" as i5, "libyaml" as i6, "lua" as i7, "m4" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "perl" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "ruby" as i16, "sqlite" as i17, "xz" as i18
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "gettext" as i6, "libffi" as i7, "libtool" as i8, "libxml2" as i9, "libyaml" as i10, "lua" as i11, "m4" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "perl" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "ruby" as i20, "sqlite" as i21, "unzip" as i22, "xz" as i23, "zip" as i24, "zlib" as i25
 
 pkg(
   name: "vim",
   version: "8.2.2925",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vim.rb"), formula)

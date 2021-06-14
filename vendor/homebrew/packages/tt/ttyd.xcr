@@ -40,12 +40,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "json-c" as i1, "libevent" as i2, "libuv" as i3, "libwebsockets" as i4, "openssl@1.1" as i5
+import "cmake" as i0, "json-c" as i1, "libevent" as i2, "libuv" as i3, "libwebsockets" as i4, "openssl@1.1" as i5, "vim" as i6
 
 pkg(
   name: "ttyd",
   version: "1.6.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ttyd.rb"), formula)

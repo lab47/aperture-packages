@@ -37,12 +37,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+import "pkg-config" as i0, "ncurses" as i1
 
 pkg(
   name: "tty-clock",
   version: "2.3",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tty-clock.rb"), formula)

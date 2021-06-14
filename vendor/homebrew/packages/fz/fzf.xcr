@@ -49,12 +49,12 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0
+import "go" as i0, "ncurses" as i1
 
 pkg(
   name: "fzf",
   version: "0.27.2",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fzf.rb"), formula)

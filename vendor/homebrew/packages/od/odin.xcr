@@ -129,12 +129,12 @@ index 13d9e53..6dbe658 100644
 
 import "homebrew-install" as hi
 
-import "llvm@11" as i0
+import "llvm@11" as i0, "libiconv" as i1
 
 pkg(
   name: "odin",
   version: "0.13.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "odin.rb"), formula)

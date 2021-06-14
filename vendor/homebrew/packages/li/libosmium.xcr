@@ -72,12 +72,12 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1
+import "boost" as i0, "cmake" as i1, "expat" as i2
 
 pkg(
   name: "libosmium",
   version: "2.17.0",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libosmium.rb"), formula)

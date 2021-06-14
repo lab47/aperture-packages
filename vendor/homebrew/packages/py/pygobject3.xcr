@@ -50,12 +50,12 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "cairo" as i1, "fontconfig" as i2, "freetype" as i3, "gdbm" as i4, "gettext" as i5, "glib" as i6, "gobject-introspection" as i7, "libffi" as i8, "libpng" as i9, "libpthread-stubs" as i10, "libx11" as i11, "libxau" as i12, "libxcb" as i13, "libxdmcp" as i14, "libxext" as i15, "libxrender" as i16, "lzo" as i17, "meson" as i18, "mpdecimal" as i19, "ninja" as i20, "openssl@1.1" as i21, "pcre" as i22, "pixman" as i23, "pkg-config" as i24, "py3cairo" as i25, "python@3.9" as i26, "readline" as i27, "sqlite" as i28, "util-macros" as i29, "xcb-proto" as i30, "xorgproto" as i31, "xtrans" as i32, "xz" as i33
+import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "expat" as i4, "flex" as i5, "fontconfig" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gobject-introspection" as i11, "gperf" as i12, "help2man" as i13, "libffi" as i14, "libpng" as i15, "libpthread-stubs" as i16, "libx11" as i17, "libxau" as i18, "libxcb" as i19, "libxdmcp" as i20, "libxext" as i21, "libxml2" as i22, "libxrender" as i23, "lzo" as i24, "m4" as i25, "meson" as i26, "mpdecimal" as i27, "ncurses" as i28, "ninja" as i29, "openssl@1.1" as i30, "pcre" as i31, "perl" as i32, "pixman" as i33, "pkg-config" as i34, "py3cairo" as i35, "python@3.9" as i36, "readline" as i37, "sqlite" as i38, "unzip" as i39, "util-macros" as i40, "xcb-proto" as i41, "xorgproto" as i42, "xtrans" as i43, "xz" as i44, "zip" as i45, "zlib" as i46
 
 pkg(
   name: "pygobject3",
   version: "3.40.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pygobject3.rb"), formula)

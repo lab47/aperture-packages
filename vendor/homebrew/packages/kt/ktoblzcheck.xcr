@@ -39,12 +39,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "pkg-config" as i4, "python@3.9" as i5, "readline" as i6, "sphinx-doc" as i7, "sqlite" as i8, "xz" as i9
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sphinx-doc" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "ktoblzcheck",
   version: "1.53",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ktoblzcheck.rb"), formula)

@@ -55,12 +55,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libice" as i4, "libpng" as i5, "libsm" as i6, "libx11" as i7, "libxext" as i8, "libxft" as i9, "libxmu" as i10, "libxp" as i11, "libxt" as i12, "xbitmaps" as i13
+import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libice" as i4, "libpng" as i5, "libsm" as i6, "libx11" as i7, "libxext" as i8, "libxft" as i9, "libxmu" as i10, "libxp" as i11, "libxt" as i12, "xbitmaps" as i13, "flex" as i14
 
 pkg(
   name: "openmotif",
   version: "2.3.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openmotif.rb"), formula)

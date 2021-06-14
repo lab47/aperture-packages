@@ -44,12 +44,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "libextractor" as i4, "libgcrypt" as i5, "libidn2" as i6, "libmicrohttpd" as i7, "libmpc" as i8, "libsodium" as i9, "libunistring" as i10, "unbound" as i11
+import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "libextractor" as i4, "libgcrypt" as i5, "libidn2" as i6, "libmicrohttpd" as i7, "libmpc" as i8, "libsodium" as i9, "libunistring" as i10, "unbound" as i11, "curl" as i12
 
 pkg(
   name: "gnunet",
   version: "0.14.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnunet.rb"), formula)

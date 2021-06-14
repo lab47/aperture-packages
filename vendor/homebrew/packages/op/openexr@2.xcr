@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "ilmbase" as i2
+import "cmake" as i0, "pkg-config" as i1, "ilmbase" as i2, "zlib" as i3
 
 pkg(
   name: "openexr@2",
   version: "2.5.5",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openexr@2.rb"), formula)

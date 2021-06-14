@@ -203,12 +203,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4
+import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4, "zlib" as i5
 
 pkg(
   name: "gcc",
   version: "11.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gcc.rb"), formula)

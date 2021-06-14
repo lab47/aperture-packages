@@ -48,12 +48,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "c-ares" as i3, "cmake" as i4, "gdbm" as i5, "gettext" as i6, "gmp" as i7, "gnu-sed" as i8, "gnupg" as i9, "gnutls" as i10, "guile" as i11, "jemalloc" as i12, "libassuan" as i13, "libatomic_ops" as i14, "libev" as i15, "libevent" as i16, "libffi" as i17, "libgcrypt" as i18, "libgpg-error" as i19, "libidn2" as i20, "libksba" as i21, "libtasn1" as i22, "libtool" as i23, "libunistring" as i24, "libusb" as i25, "m4" as i26, "mpdecimal" as i27, "nettle" as i28, "nghttp2" as i29, "ninja" as i30, "npth" as i31, "openssl@1.1" as i32, "p11-kit" as i33, "pcre" as i34, "pinentry" as i35, "pkg-config" as i36, "python@3.9" as i37, "readline" as i38, "sphinx-doc" as i39, "sqlite" as i40, "swig" as i41, "unbound" as i42, "xz" as i43
+import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "gnupg" as i12, "gnutls" as i13, "gperf" as i14, "guile" as i15, "jemalloc" as i16, "libassuan" as i17, "libatomic_ops" as i18, "libev" as i19, "libevent" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libksba" as i25, "libtasn1" as i26, "libtool" as i27, "libunistring" as i28, "libusb" as i29, "libxml2" as i30, "libyaml" as i31, "m4" as i32, "mpdecimal" as i33, "ncurses" as i34, "nettle" as i35, "nghttp2" as i36, "ninja" as i37, "npth" as i38, "openssl@1.1" as i39, "p11-kit" as i40, "pcre" as i41, "perl" as i42, "pinentry" as i43, "pkg-config" as i44, "python@3.9" as i45, "readline" as i46, "ruby" as i47, "sphinx-doc" as i48, "sqlite" as i49, "swig" as i50, "unbound" as i51, "unzip" as i52, "xz" as i53, "zip" as i54, "zlib" as i55
 
 pkg(
   name: "gpgme",
   version: "1.15.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpgme.rb"), formula)

@@ -98,12 +98,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "freetype" as i2, "gcc" as i3, "gdbm" as i4, "gmp" as i5, "isl" as i6, "jpeg" as i7, "libmpc" as i8, "libpng" as i9, "libtiff" as i10, "mpdecimal" as i11, "mpfr" as i12, "numpy" as i13, "openblas" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sphinx-doc" as i19, "sqlite" as i20, "tcl-tk" as i21, "xz" as i22, "zstd" as i23
+import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "freetype" as i4, "gcc" as i5, "gdbm" as i6, "gmp" as i7, "isl" as i8, "jpeg" as i9, "libffi" as i10, "libmpc" as i11, "libpng" as i12, "libtiff" as i13, "m4" as i14, "mpdecimal" as i15, "mpfr" as i16, "ncurses" as i17, "numpy" as i18, "openblas" as i19, "openssl@1.1" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sphinx-doc" as i24, "sqlite" as i25, "tcl-tk" as i26, "unzip" as i27, "xz" as i28, "zip" as i29, "zlib" as i30, "zstd" as i31
 
 pkg(
   name: "wxpython",
   version: "4.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wxpython.rb"), formula)

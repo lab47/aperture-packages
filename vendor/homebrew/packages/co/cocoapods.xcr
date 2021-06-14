@@ -42,12 +42,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+import "pkg-config" as i0, "libffi" as i1, "ruby" as i2
 
 pkg(
   name: "cocoapods",
   version: "1.10.1",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cocoapods.rb"), formula)

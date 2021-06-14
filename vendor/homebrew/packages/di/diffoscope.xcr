@@ -61,12 +61,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gdbm" as i1, "libarchive" as i2, "libb2" as i3, "libmagic" as i4, "lz4" as i5, "mpdecimal" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sphinx-doc" as i11, "sqlite" as i12, "xz" as i13, "zstd" as i14
+import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libarchive" as i4, "libb2" as i5, "libffi" as i6, "libmagic" as i7, "lz4" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sphinx-doc" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20, "zstd" as i21
 
 pkg(
   name: "diffoscope",
   version: "176",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "diffoscope.rb"), formula)

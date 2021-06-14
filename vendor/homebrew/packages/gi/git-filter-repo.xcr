@@ -48,12 +48,12 @@ end
 
 import "homebrew-install" as hi
 
-import "gdbm" as i0, "gettext" as i1, "git" as i2, "mpdecimal" as i3, "openssl@1.1" as i4, "pcre2" as i5, "pkg-config" as i6, "python@3.9" as i7, "readline" as i8, "sqlite" as i9, "xz" as i10
+import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "git" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libmetalink" as i15, "libssh2" as i16, "libunistring" as i17, "libxml2" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "nghttp2" as i22, "ninja" as i23, "openldap" as i24, "openssl@1.1" as i25, "pcre2" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "rtmpdump" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36, "zstd" as i37
 
 pkg(
   name: "git-filter-repo",
   version: "2.29.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-filter-repo.rb"), formula)

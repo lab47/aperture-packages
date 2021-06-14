@@ -47,12 +47,12 @@ end
 
 import "homebrew-install" as hi
 
-import "libpng" as i0, "sdl2" as i1
+import "libpng" as i0, "sdl2" as i1, "zlib" as i2
 
 pkg(
   name: "stella",
   version: "6.5.3",
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stella.rb"), formula)

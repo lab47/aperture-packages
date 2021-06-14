@@ -79,12 +79,12 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cython" as i2, "gdbm" as i3, "libtool" as i4, "m4" as i5, "mpdecimal" as i6, "nasm" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "xz" as i13, "zimg" as i14
+import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cython" as i4, "expat" as i5, "gdbm" as i6, "libffi" as i7, "libtool" as i8, "m4" as i9, "mpdecimal" as i10, "nasm" as i11, "ncurses" as i12, "openssl@1.1" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "unzip" as i19, "xz" as i20, "zimg" as i21, "zip" as i22, "zlib" as i23
 
 pkg(
   name: "vapoursynth",
   version: "53",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vapoursynth.rb"), formula)

@@ -46,12 +46,12 @@ end
 
 import "homebrew-install" as hi
 
-import "ghc" as i0
+import "ghc" as i0, "zlib" as i1
 
 pkg(
   name: "cabal-install",
   version: "3.4.0.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cabal-install.rb"), formula)

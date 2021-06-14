@@ -57,12 +57,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "rust" as i1, "sphinx-doc" as i2, "libsodium" as i3
+import "pkg-config" as i0, "rust" as i1, "sphinx-doc" as i2, "libsodium" as i3, "sqlite" as i4
 
 pkg(
   name: "sn0int",
   version: "0.21.1",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sn0int.rb"), formula)

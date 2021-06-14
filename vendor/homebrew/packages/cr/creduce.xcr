@@ -115,12 +115,12 @@ end
 
 import "homebrew-install" as hi
 
-import "astyle" as i0, "delta" as i1, "llvm@9" as i2
+import "astyle" as i0, "delta" as i1, "llvm@9" as i2, "perl" as i3
 
 pkg(
   name: "creduce",
   version: "2.10.0",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "creduce.rb"), formula)

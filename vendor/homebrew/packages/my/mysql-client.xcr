@@ -65,12 +65,12 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libevent" as i1, "openssl@1.1" as i2, "zstd" as i3
+import "cmake" as i0, "libevent" as i1, "openssl@1.1" as i2, "zstd" as i3, "libedit" as i4, "zlib" as i5
 
 pkg(
   name: "mysql-client",
   version: "8.0.25",
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mysql-client.rb"), formula)

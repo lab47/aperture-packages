@@ -81,12 +81,12 @@ end
 
 import "homebrew-install" as hi
 
-import "abseil" as i0, "autoconf" as i1, "automake" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "c-ares" as i6, "cmake" as i7, "cython" as i8, "doxygen" as i9, "gcc" as i10, "gdbm" as i11, "gflags" as i12, "glog" as i13, "gmp" as i14, "grpc" as i15, "icu4c" as i16, "isl" as i17, "libmpc" as i18, "libtool" as i19, "llvm" as i20, "lz4" as i21, "m4" as i22, "mpdecimal" as i23, "mpfr" as i24, "ninja" as i25, "numpy" as i26, "openblas" as i27, "openssl@1.1" as i28, "pcre" as i29, "pkg-config" as i30, "protobuf" as i31, "python@3.7" as i32, "python@3.8" as i33, "python@3.9" as i34, "rapidjson" as i35, "re2" as i36, "readline" as i37, "six" as i38, "snappy" as i39, "sphinx-doc" as i40, "sqlite" as i41, "swig" as i42, "tcl-tk" as i43, "thrift" as i44, "xz" as i45, "zstd" as i46
+import "abseil" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "boost" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cmake" as i9, "cython" as i10, "doxygen" as i11, "expat" as i12, "flex" as i13, "gcc" as i14, "gdbm" as i15, "gettext" as i16, "gflags" as i17, "glog" as i18, "gmp" as i19, "grpc" as i20, "help2man" as i21, "icu4c" as i22, "isl" as i23, "libedit" as i24, "libffi" as i25, "libmpc" as i26, "libtool" as i27, "libxml2" as i28, "libyaml" as i29, "llvm" as i30, "lz4" as i31, "m4" as i32, "mpdecimal" as i33, "mpfr" as i34, "ncurses" as i35, "ninja" as i36, "numpy" as i37, "openblas" as i38, "openssl@1.1" as i39, "pcre" as i40, "perl" as i41, "pkg-config" as i42, "protobuf" as i43, "python@3.7" as i44, "python@3.8" as i45, "python@3.9" as i46, "rapidjson" as i47, "re2" as i48, "readline" as i49, "ruby" as i50, "six" as i51, "snappy" as i52, "sphinx-doc" as i53, "sqlite" as i54, "swig" as i55, "tcl-tk" as i56, "thrift" as i57, "unzip" as i58, "xz" as i59, "zip" as i60, "zlib" as i61, "zstd" as i62
 
 pkg(
   name: "apache-arrow",
   version: "4.0.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apache-arrow.rb"), formula)

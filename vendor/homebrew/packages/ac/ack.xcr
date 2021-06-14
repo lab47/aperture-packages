@@ -59,12 +59,12 @@ end
 
 import "homebrew-install" as hi
 
-import "pod2man" as i0
+import "pod2man" as i0, "perl" as i1
 
 pkg(
   name: "ack",
   version: "3.5.0",
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ack.rb"), formula)

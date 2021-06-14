@@ -78,12 +78,12 @@ __END__
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "bison" as i3, "flex" as i4, "libpcap" as i5
 
 pkg(
   name: "daq",
   version: "2.0.7",
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "daq.rb"), formula)

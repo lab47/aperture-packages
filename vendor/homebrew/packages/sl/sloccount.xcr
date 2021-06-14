@@ -57,10 +57,12 @@ index ad2de47..ff854e0 100755
 
 import "homebrew-install" as hi
 
+import "flex" as i0
+
 pkg(
   name: "sloccount",
   version: "2.26",
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sloccount.rb"), formula)
