@@ -65,7 +65,13 @@ class Lua < Formula
     # We ship our own pkg-config file as Lua no longer provide them upstream.
     arch = OS.mac? ? "macosx" : "linux"
     system "make", arch, "INSTALL_TOP=#{prefix}"
-    system "make", "install", "INSTALL_TOP=#{prefix}", ("INSTALL_MAN=#{man1}" unless OS.mac?)
+
+    if OS.mac?
+      system "make", "install", "INSTALL_TOP=#{prefix}", "INSTALL_MAN=#{man1}"
+    else
+      system "make", "install", "INSTALL_TOP=#{prefix}"
+    end
+
     (lib/"pkgconfig/lua.pc").write pc_file
 
     # Fix some software potentially hunting for different pc names.
