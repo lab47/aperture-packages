@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chmlib",
   version: "0.40",
+  description: "Library for dealing with Microsoft ITSS/CHM files",
+  url: "http://www.jedrea.com/chmlib/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

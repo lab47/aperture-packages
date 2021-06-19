@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "flex" as i3, "texin
 pkg(
   name: "libconfig",
   version: "1.7.2",
+  description: "Configuration file processing library",
+  url: "https://hyperrealm.github.io/libconfig/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

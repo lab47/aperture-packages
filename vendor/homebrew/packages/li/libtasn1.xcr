@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libtasn1",
   version: "4.17.0",
+  description: "ASN.1 structure parser library",
+  url: "https://www.gnu.org/software/libtasn1/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

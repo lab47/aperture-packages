@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libyubikey" as i1, "ykclient" as i2, "ykpers" as i3
 pkg(
   name: "pam_yubico",
   version: "2.27",
+  description: "Yubico pluggable authentication module",
+  url: "https://developers.yubico.com/yubico-pam/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

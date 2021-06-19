@@ -76,6 +76,12 @@ import "pkg-config" as i0, "openblas" as i1
 pkg(
   name: "coinutils",
   version: "2.11.4",
+  description: "COIN-OR utilities",
+  url: "https://github.com/coin-or/CoinUtils",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

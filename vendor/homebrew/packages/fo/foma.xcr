@@ -61,6 +61,12 @@ import "zlib" as i0
 pkg(
   name: "foma",
   version: "0.9.18",
+  description: "Finite-state compiler and C library",
+  url: "https://code.google.com/p/foma/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

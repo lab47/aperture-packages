@@ -42,6 +42,12 @@ import "cmake" as i0, "boost" as i1, "xz" as i2
 pkg(
   name: "innoextract",
   version: "1.9",
+  description: "Tool to unpack installers created by Inno Setup",
+  url: "https://constexpr.org/innoextract/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

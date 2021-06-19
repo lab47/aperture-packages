@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "leaps",
   version: "0.9.1",
+  description: "Collaborative web-based text editing service written in Golang",
+  url: "https://github.com/jeffail/leaps",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

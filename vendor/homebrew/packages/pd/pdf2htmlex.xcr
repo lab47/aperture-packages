@@ -121,6 +121,12 @@ import "autoconf" as i0, "automake" as i1, "cmake" as i2, "pkg-config" as i3, "c
 pkg(
   name: "pdf2htmlex",
   version: "0.14.6",
+  description: "PDF to HTML converter",
+  url: "https://coolwanglu.github.io/pdf2htmlEX/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

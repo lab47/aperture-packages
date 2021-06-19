@@ -56,6 +56,12 @@ import "cabal-install" as i0, "pkg-config" as i1, "ghc@8.8" as i2, "libffi" as i
 pkg(
   name: "idris",
   version: "1.3.3",
+  description: "Pure functional programming language with dependent types",
+  url: "https://www.idris-lang.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

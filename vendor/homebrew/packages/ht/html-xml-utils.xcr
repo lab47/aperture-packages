@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "html-xml-utils",
   version: "8.0",
+  description: "Tools for manipulating HTML and XML files",
+  url: "https://www.w3.org/Tools/HTML-XML-utils/",
+  metadata: %{
+    "license": "W3C",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

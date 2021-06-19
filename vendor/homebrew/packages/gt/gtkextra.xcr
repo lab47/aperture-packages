@@ -108,6 +108,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "gtkextra",
   version: "3.3.4",
+  description: "Widgets for creating GUIs for GTK+",
+  url: "https://gtkextra.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

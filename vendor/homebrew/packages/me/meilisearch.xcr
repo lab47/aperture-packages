@@ -71,6 +71,12 @@ import "rust" as i0
 pkg(
   name: "meilisearch",
   version: "0.20.0",
+  description: "Ultra relevant, instant and typo-tolerant full-text search API",
+  url: "https://docs.meilisearch.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

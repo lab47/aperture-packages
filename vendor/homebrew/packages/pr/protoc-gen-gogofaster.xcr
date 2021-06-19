@@ -48,6 +48,12 @@ import "go" as i0, "protobuf" as i1
 pkg(
   name: "protoc-gen-gogofaster",
   version: "1.3.2",
+  description: "Protocol Buffers for Go with Gadgets",
+  url: "https://github.com/gogo/protobuf",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

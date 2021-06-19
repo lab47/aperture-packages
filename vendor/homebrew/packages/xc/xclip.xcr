@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "libx11" as i2, "libxmu" as i3
 pkg(
   name: "xclip",
   version: "0.13",
+  description: "Access X11 clipboards from the command-line",
+  url: "https://github.com/astrand/xclip",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

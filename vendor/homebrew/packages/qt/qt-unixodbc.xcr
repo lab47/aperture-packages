@@ -99,6 +99,12 @@ import "cmake" as i0, "qt" as i1, "unixodbc" as i2
 pkg(
   name: "qt-unixodbc",
   version: "6.1.0",
+  description: "Qt SQL Database Driver",
+  url: "https://www.qt.io/",
+  metadata: %{
+    "license": "GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "libmikmod" as i0
 pkg(
   name: "mikmod",
   version: "3.2.8",
+  description: "Portable tracked music player",
+  url: "https://mikmod.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

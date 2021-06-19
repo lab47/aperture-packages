@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "paperkey",
   version: "1.6",
+  description: "Extract just secret information out of OpenPGP secret keys",
+  url: "https://www.jabberwocky.com/software/paperkey/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

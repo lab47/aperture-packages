@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpack",
   version: "1.6",
+  description: "MIME mail packing and unpacking",
+  url: "https://web.archive.org/web/20190220145801/ftp.andrew.cmu.edu/pub/mpack/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

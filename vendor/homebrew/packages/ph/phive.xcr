@@ -28,6 +28,12 @@ import "php" as i0
 pkg(
   name: "phive",
   version: "0.14.5",
+  description: "Phar Installation and Verification Environment (PHIVE)",
+  url: "https://phar.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

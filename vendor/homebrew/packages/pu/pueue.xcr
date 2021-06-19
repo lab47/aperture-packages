@@ -94,6 +94,12 @@ import "rust" as i0
 pkg(
   name: "pueue",
   version: "0.12.2",
+  description: "Command-line tool for managing long-running shell commands",
+  url: "https://github.com/Nukesor/pueue",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

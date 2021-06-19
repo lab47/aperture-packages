@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cabextract",
   version: "1.9.1",
+  description: "Extract files from Microsoft cabinet files",
+  url: "https://www.cabextract.org.uk/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

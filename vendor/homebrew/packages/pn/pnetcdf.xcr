@@ -90,6 +90,12 @@ import "gcc" as i0, "open-mpi" as i1
 pkg(
   name: "pnetcdf",
   version: "1.12.2",
+  description: "Parallel netCDF library for scientific data using the OpenMPI library",
+  url: "https://parallel-netcdf.github.io/index.html",
+  metadata: %{
+    "license": "NetCDF",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "cmake" as i0
 pkg(
   name: "parallel-hashmap",
   version: "1.33",
+  description: "Family of header-only, fast, memory-friendly C++ hashmap and btree containers",
+  url: "https://greg7mdp.github.io/parallel-hashmap/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

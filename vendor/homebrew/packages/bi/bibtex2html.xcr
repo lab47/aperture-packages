@@ -65,6 +65,12 @@ import "ocaml" as i0
 pkg(
   name: "bibtex2html",
   version: "1.99",
+  description: "BibTeX to HTML converter",
+  url: "https://www.lri.fr/~filliatr/bibtex2html/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

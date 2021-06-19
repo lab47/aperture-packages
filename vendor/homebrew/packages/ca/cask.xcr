@@ -41,6 +41,12 @@ import "coreutils" as i0, "emacs" as i1
 pkg(
   name: "cask",
   version: "0.8.7",
+  description: "Emacs dependency management",
+  url: "https://cask.readthedocs.io/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

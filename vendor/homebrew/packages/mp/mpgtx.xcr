@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpgtx",
   version: "1.3.1",
+  description: "Toolbox to manipulate MPEG files",
+  url: "https://mpgtx.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

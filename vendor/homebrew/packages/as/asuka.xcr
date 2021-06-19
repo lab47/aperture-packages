@@ -60,6 +60,12 @@ import "rust" as i0, "ncurses" as i1
 pkg(
   name: "asuka",
   version: "0.8.1",
+  description: "Gemini Project client written in Rust with NCurses",
+  url: "https://sr.ht/~julienxx/Asuka/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

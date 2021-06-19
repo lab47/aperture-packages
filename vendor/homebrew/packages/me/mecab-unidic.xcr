@@ -56,6 +56,12 @@ import "mecab" as i0
 pkg(
   name: "mecab-unidic",
   version: "2.1.2",
+  description: "Morphological analyzer for MeCab",
+  url: "https://osdn.net/projects/unidic/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

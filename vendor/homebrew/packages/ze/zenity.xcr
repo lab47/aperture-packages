@@ -45,6 +45,12 @@ import "itstool" as i0, "pkg-config" as i1, "gtk+3" as i2
 pkg(
   name: "zenity",
   version: "3.32.0",
+  description: "GTK+ dialog boxes for the command-line",
+  url: "https://wiki.gnome.org/Projects/Zenity",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

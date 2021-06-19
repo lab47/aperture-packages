@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "gx",
   version: "0.14.3",
+  description: "Language-agnostic, universal package manager",
+  url: "https://github.com/whyrusleeping/gx",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

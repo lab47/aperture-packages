@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "cointop",
   version: "1.6.5",
+  description: "Interactive terminal based UI application for tracking cryptocurrencies",
+  url: "https://cointop.sh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

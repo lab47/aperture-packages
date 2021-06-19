@@ -63,6 +63,12 @@ import "cmake" as i0, "qt@5" as i1
 pkg(
   name: "quazip",
   version: "1.1",
+  description: "C++ wrapper over Gilles Vollant's ZIP/UNZIP package",
+  url: "https://github.com/stachenov/quazip/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

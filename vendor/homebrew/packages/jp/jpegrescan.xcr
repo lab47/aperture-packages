@@ -29,6 +29,12 @@ import "jpeg" as i0
 pkg(
   name: "jpegrescan",
   version: "1.1.0",
+  description: "Losslessly shrink any JPEG file",
+  url: "https://github.com/kud/jpegrescan",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

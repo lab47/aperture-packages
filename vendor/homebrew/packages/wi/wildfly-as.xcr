@@ -108,6 +108,12 @@ import "openjdk" as i0
 pkg(
   name: "wildfly-as",
   version: "23.0.2",
+  description: "Managed application runtime for building applications",
+  url: "https://www.wildfly.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

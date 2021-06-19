@@ -43,6 +43,12 @@ import "pkg-config" as i0, "log4shib" as i1, "openssl@1.1" as i2, "xerces-c" as 
 pkg(
   name: "opensaml",
   version: "3.2.0",
+  description: "Library for Security Assertion Markup Language",
+  url: "https://wiki.shibboleth.net/confluence/display/OpenSAML/Home",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

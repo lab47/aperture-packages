@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "lxc",
   version: "4.15",
+  description: "CLI client for interacting with LXD",
+  url: "https://linuxcontainers.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

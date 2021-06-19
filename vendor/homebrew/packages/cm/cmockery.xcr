@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cmockery",
   version: "0.1.2",
+  description: "Unit testing and mocking library for C",
+  url: "https://github.com/google/cmockery",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

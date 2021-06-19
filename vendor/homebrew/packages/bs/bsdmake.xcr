@@ -93,6 +93,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bsdmake",
   version: "24",
+  description: "BSD version of the Make build tool",
+  url: "https://opensource.apple.com/",
+  metadata: %{
+    "license": "BSD-2-Clause and BSD-3-Clause and BSD-4-Clause-UC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

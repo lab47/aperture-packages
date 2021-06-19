@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docker-machine-nfs",
   version: "0.5.4",
+  description: "Activates NFS on docker-machine",
+  url: "https://github.com/adlogix/docker-machine-nfs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

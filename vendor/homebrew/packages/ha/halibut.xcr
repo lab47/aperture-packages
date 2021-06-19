@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "halibut",
   version: "1.2",
+  description: "Yet another free document preparation system",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/halibut/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

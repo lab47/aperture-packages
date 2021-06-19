@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "yh",
   version: "0.4.0",
+  description: "YAML syntax highlighter to bring colours where only jq could",
+  url: "https://github.com/andreazorzetto/yh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

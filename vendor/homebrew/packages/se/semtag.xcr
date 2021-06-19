@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "semtag",
   version: "0.1.1",
+  description: "Semantic tagging script for git",
+  url: "https://github.com/pnikosis/semtag",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

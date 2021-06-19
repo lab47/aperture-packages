@@ -51,6 +51,12 @@ import "pkg-config" as i0, "freetype" as i1, "libdvdread" as i2, "libpng" as i3
 pkg(
   name: "dvdauthor",
   version: "0.7.2",
+  description: "DVD-authoring toolset",
+  url: "https://dvdauthor.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

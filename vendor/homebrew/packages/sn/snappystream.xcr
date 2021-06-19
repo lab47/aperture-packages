@@ -61,6 +61,12 @@ import "cmake" as i0, "snappy" as i1
 pkg(
   name: "snappystream",
   version: "1.0.0",
+  description: "C++ snappy stream realization (compatible with snappy)",
+  url: "https://github.com/hoxnox/snappystream",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

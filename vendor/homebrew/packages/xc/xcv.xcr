@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcv",
   version: "1.0.1",
+  description: "Cut, copy and paste files with Bash",
+  url: "https://github.com/busterc/xcv",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

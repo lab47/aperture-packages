@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fdk-aac",
   version: "2.0.2",
+  description: "Standalone library of the Fraunhofer FDK AAC code from Android",
+  url: "https://sourceforge.net/projects/opencore-amr/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

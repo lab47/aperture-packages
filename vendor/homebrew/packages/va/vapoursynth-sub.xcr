@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "nasm" as i3, "pkg-c
 pkg(
   name: "vapoursynth-sub",
   version: "53",
+  description: "VapourSynth filters - Subtitling filter",
+  url: "http://www.vapoursynth.com",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

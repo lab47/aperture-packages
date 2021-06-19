@@ -50,6 +50,12 @@ import "libusb-compat" as i0
 pkg(
   name: "libftdi0",
   version: "0.20",
+  description: "Library to talk to FTDI chips",
+  url: "https://www.intra2net.com/en/developer/libftdi",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

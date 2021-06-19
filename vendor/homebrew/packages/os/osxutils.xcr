@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "osxutils",
   version: "1.9.0",
+  description: "Collection of macOS command-line utilities",
+  url: "https://github.com/specious/osxutils",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

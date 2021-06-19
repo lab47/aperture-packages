@@ -69,6 +69,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "monit",
   version: "5.28.0",
+  description: "Manage and monitor processes, files, directories, and devices",
+  url: "https://mmonit.com/monit/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

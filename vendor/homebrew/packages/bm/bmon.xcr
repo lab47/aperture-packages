@@ -52,6 +52,12 @@ import "pkg-config" as i0, "confuse" as i1, "ncurses" as i2
 pkg(
   name: "bmon",
   version: "4.0",
+  description: "Interface bandwidth monitor",
+  url: "https://github.com/tgraf/bmon",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

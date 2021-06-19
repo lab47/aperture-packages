@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ioping",
   version: "1.2",
+  description: "Tool to monitor I/O latency in real time",
+  url: "https://github.com/koct9i/ioping",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

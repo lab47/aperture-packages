@@ -66,6 +66,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libuv",
   version: "1.41.0",
+  description: "Multi-platform support library with a focus on asynchronous I/O",
+  url: "https://libuv.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

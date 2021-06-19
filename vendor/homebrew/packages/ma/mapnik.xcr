@@ -104,6 +104,12 @@ import "pkg-config" as i0, "boost" as i1, "cairo" as i2, "freetype" as i3, "gdal
 pkg(
   name: "mapnik",
   version: "3.1.0",
+  description: "Toolkit for developing mapping applications",
+  url: "https://mapnik.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

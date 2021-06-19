@@ -40,6 +40,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libiodbc",
   version: "3.52.15",
+  description: "Database connectivity layer based on ODBC. (alternative to unixodbc)",
+  url: "http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/",
+  metadata: %{
+    "license": "BSD-3-Clause or LGPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

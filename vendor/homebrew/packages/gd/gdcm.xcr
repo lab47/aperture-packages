@@ -96,12 +96,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "doxygen" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gcc" as i15, "gdbm" as i16, "gettext" as i17, "gmp" as i18, "gperf" as i19, "hdf5" as i20, "help2man" as i21, "icu4c" as i22, "isl" as i23, "jemalloc" as i24, "jpeg" as i25, "krb5" as i26, "libev" as i27, "libffi" as i28, "libidn2" as i29, "libmpc" as i30, "libpng" as i31, "libssh2" as i32, "libtiff" as i33, "libtool" as i34, "libunistring" as i35, "libxml2" as i36, "libyaml" as i37, "little-cms2" as i38, "m4" as i39, "mpdecimal" as i40, "mpfr" as i41, "ncurses" as i42, "netcdf" as i43, "nghttp2" as i44, "ninja" as i45, "openjpeg" as i46, "openldap" as i47, "openssl@1.1" as i48, "pcre" as i49, "perl" as i50, "pkg-config" as i51, "pyqt-builder" as i52, "pyqt@5" as i53, "python@3.9" as i54, "qt@5" as i55, "readline" as i56, "rtmpdump" as i57, "ruby" as i58, "sip" as i59, "sphinx-doc" as i60, "sqlite" as i61, "swig" as i62, "szip" as i63, "tcl-tk" as i64, "unzip" as i65, "vtk@8.2" as i66, "xz" as i67, "zip" as i68, "zlib" as i69, "zstd" as i70
+import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "swig" as i3, "openjpeg" as i4, "openssl@1.1" as i5, "python@3.9" as i6, "vtk@8.2" as i7, "expat" as i8, "zlib" as i9
 
 pkg(
   name: "gdcm",
   version: "3.0.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70],
+  description: "Grassroots DICOM library and utilities for medical files",
+  url: "https://sourceforge.net/projects/gdcm/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdcm.rb"), formula)

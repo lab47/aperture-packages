@@ -53,6 +53,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxcb" as i2, "libxext" as i3, "lib
 pkg(
   name: "xdpyinfo",
   version: "1.3.2",
+  description: "X.Org: Utility for displaying information about an X server",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

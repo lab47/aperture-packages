@@ -36,6 +36,12 @@ import "openjdk@11" as i0
 pkg(
   name: "ktlint",
   version: "0.41.0",
+  description: "Anti-bikeshedding Kotlin linter with built-in formatter",
+  url: "https://ktlint.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

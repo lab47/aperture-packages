@@ -80,6 +80,12 @@ import "homebrew-install" as hi
 pkg(
   name: "plod",
   version: "1.9",
+  description: "Keep an online journal of what you're working on",
+  url: "http://www.deer-run.com/~hal/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

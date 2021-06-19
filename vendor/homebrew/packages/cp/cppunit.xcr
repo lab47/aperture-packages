@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cppunit",
   version: "1.15.1",
+  description: "Unit testing framework for C++",
+  url: "https://wiki.freedesktop.org/www/Software/cppunit/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

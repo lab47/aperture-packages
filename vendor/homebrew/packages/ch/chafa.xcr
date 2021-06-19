@@ -46,6 +46,12 @@ import "pkg-config" as i0, "glib" as i1, "imagemagick" as i2
 pkg(
   name: "chafa",
   version: "1.6.1",
+  description: "Versatile and fast Unicode/ASCII/ANSI graphics renderer",
+  url: "https://hpjansson.org/chafa/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "ncurses" as i0
 pkg(
   name: "ttyplot",
   version: "1.4",
+  description: "Realtime plotting utility for terminal with data input from stdin",
+  url: "https://github.com/tenox7/ttyplot",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "openjdk@11" as i0
 pkg(
   name: "grails",
   version: "4.0.10",
+  description: "Web application framework for the Groovy language",
+  url: "https://grails.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "excel-compare",
   version: "0.6.1",
+  description: "Command-line tool (and API) for diffing Excel Workbooks",
+  url: "https://github.com/na-ka-na/ExcelCompare",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -111,6 +111,12 @@ import "bazaar" as i0, "go" as i1, "mercurial" as i2
 pkg(
   name: "cayley",
   version: "0.7.7",
+  description: "Graph database inspired by Freebase and Knowledge Graph",
+  url: "https://github.com/cayleygraph/cayley",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

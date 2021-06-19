@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pgbadger",
   version: "11.5",
+  description: "Log analyzer for PostgreSQL",
+  url: "https://pgbadger.darold.net/",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

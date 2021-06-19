@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dwatch",
   version: "0.1.1",
+  description: "Watch programs and perform actions based on a configuration file",
+  url: "https://siag.nu/dwatch/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

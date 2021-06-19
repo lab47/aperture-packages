@@ -48,6 +48,12 @@ import "libpq" as i0, "ncurses" as i1, "readline" as i2
 pkg(
   name: "pspg",
   version: "5.0.3",
+  description: "Unix pager optimized for psql",
+  url: "https://github.com/okbob/pspg",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

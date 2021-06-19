@@ -52,6 +52,12 @@ import "jpeg" as i0, "libpng" as i1
 pkg(
   name: "webp",
   version: "1.2.0",
+  description: "Image format providing lossless and lossy compression for web images",
+  url: "https://developers.google.com/speed/webp/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

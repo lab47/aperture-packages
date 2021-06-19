@@ -60,6 +60,12 @@ import "cmake" as i0
 pkg(
   name: "libcerf",
   version: "1.15",
+  description: "Numeric library for complex error functions",
+  url: "https://jugit.fz-juelich.de/mlz/libcerf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "html2text",
   version: "2.0.0",
+  description: "Advanced HTML-to-text converter",
+  url: "http://www.mbayer.de/html2text/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

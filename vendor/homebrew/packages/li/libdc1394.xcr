@@ -58,6 +58,12 @@ import "sdl" as i0
 pkg(
   name: "libdc1394",
   version: "2.2.6",
+  description: "Provides API for IEEE 1394 cameras",
+  url: "https://damien.douxchamps.net/ieee1394/libdc1394/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

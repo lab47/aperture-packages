@@ -35,6 +35,12 @@ import "nasm" as i0, "rust" as i1
 pkg(
   name: "dssim",
   version: "3.1.0",
+  description: "RGBA Structural Similarity Rust implementation",
+  url: "https://github.com/kornelski/dssim",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

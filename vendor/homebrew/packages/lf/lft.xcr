@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lft",
   version: "3.91",
+  description: "Layer Four Traceroute (LFT), an advanced traceroute tool",
+  url: "https://pwhois.org/lft/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

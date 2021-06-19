@@ -52,6 +52,12 @@ import "go" as i0, "rust" as i1
 pkg(
   name: "flux",
   version: "0.117.3",
+  description: "Lightweight scripting language for querying databases",
+  url: "https://www.influxdata.com/products/flux/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

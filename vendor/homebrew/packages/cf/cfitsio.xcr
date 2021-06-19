@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cfitsio",
   version: "3.490",
+  description: "C access to FITS data files with optional Fortran wrappers",
+  url: "https://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

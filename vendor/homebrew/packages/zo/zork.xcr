@@ -44,6 +44,12 @@ import "ncurses" as i0
 pkg(
   name: "zork",
   version: "1.0.3",
+  description: "Dungeon modified from FORTRAN to C",
+  url: "https://github.com/devshane/zork",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

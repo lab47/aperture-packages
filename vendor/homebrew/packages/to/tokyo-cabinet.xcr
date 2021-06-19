@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tokyo-cabinet",
   version: "1.4.48",
+  description: "Lightweight database library",
+  url: "https://fallabs.com/tokyocabinet/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

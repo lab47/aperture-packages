@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xxhash",
   version: "0.8.0",
+  description: "Extremely fast non-cryptographic hash algorithm",
+  url: "https://github.com/Cyan4973/xxHash",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

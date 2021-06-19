@@ -40,6 +40,12 @@ import "cmake" as i0, "libusb" as i1
 pkg(
   name: "libfreenect",
   version: "0.6.2",
+  description: "Drivers and libraries for the Xbox Kinect device",
+  url: "https://openkinect.org/",
+  metadata: %{
+    "license": "Apache-2.0 or GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

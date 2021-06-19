@@ -103,12 +103,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "gdbm" as i12, "gettext" as i13, "help2man" as i14, "jansson" as i15, "jemalloc" as i16, "krb5" as i17, "libev" as i18, "libffi" as i19, "libidn2" as i20, "libmagic" as i21, "libnet" as i22, "libpcap" as i23, "libssh2" as i24, "libtool" as i25, "libunistring" as i26, "libxml2" as i27, "libyaml" as i28, "lz4" as i29, "m4" as i30, "mpdecimal" as i31, "ncurses" as i32, "nghttp2" as i33, "ninja" as i34, "nspr" as i35, "nss" as i36, "openldap" as i37, "openssl@1.1" as i38, "pcre" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "rtmpdump" as i44, "rust" as i45, "sphinx-doc" as i46, "sqlite" as i47, "unzip" as i48, "xz" as i49, "zip" as i50, "zlib" as i51, "zstd" as i52
+import "pkg-config" as i0, "rust" as i1, "jansson" as i2, "libmagic" as i3, "libnet" as i4, "libyaml" as i5, "lz4" as i6, "nspr" as i7, "nss" as i8, "pcre" as i9, "python@3.9" as i10, "libpcap" as i11
 
 pkg(
   name: "suricata",
   version: "6.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52],
+  description: "Network IDS, IPS, and security monitoring engine",
+  url: "https://suricata.io",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "suricata.rb"), formula)

@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "giflossy",
   version: "1.91",
+  description: "Lossy LZW compression, reduces GIF file sizes by 30-50%",
+  url: "https://pornel.net/lossygif",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

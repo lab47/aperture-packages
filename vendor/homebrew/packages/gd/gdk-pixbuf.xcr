@@ -127,6 +127,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gdk-pixbuf",
   version: "2.42.6",
+  description: "Toolkit for image loading and pixel buffer manipulation",
+  url: "https://gtk.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

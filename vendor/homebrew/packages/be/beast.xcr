@@ -61,6 +61,12 @@ import "ant" as i0, "beagle" as i1, "openjdk@11" as i2
 pkg(
   name: "beast",
   version: "1.10.4",
+  description: "Bayesian Evolutionary Analysis Sampling Trees",
+  url: "https://beast.community/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

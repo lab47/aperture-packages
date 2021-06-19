@@ -70,6 +70,12 @@ import "go" as i0, "pkg-config" as i1, "vips" as i2
 pkg(
   name: "imgproxy",
   version: "2.16.3",
+  description: "Fast and secure server for resizing and converting remote images",
+  url: "https://imgproxy.net",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

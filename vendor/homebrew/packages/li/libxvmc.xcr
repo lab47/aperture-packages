@@ -60,6 +60,12 @@ import "pkg-config" as i0, "util-macros" as i1, "xorgproto" as i2, "libx11" as i
 pkg(
   name: "libxvmc",
   version: "1.0.12",
+  description: "X.Org: X-Video Motion Compensation API",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

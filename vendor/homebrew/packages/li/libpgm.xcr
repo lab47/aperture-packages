@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libpgm",
   version: "5.2.122",
+  description: "Implements the PGM reliable multicast protocol",
+  url: "https://code.google.com/archive/p/openpgm/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

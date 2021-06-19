@@ -52,6 +52,12 @@ import "pkg-config" as i0, "argon2" as i1, "gnutls" as i2, "libpq" as i3, "mysql
 pkg(
   name: "inspircd",
   version: "3.10.0",
+  description: "Modular C++ Internet Relay Chat daemon",
+  url: "https://www.inspircd.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

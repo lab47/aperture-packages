@@ -58,6 +58,12 @@ import "fig2dev" as i0, "ghostscript" as i1, "jpeg" as i2, "libpng" as i3, "libt
 pkg(
   name: "xfig",
   version: "3.2.8a",
+  description: "Facility for interactive generation of figures",
+  url: "https://mcj.sourceforge.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

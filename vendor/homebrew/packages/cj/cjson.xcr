@@ -56,6 +56,12 @@ import "cmake" as i0
 pkg(
   name: "cjson",
   version: "1.7.14",
+  description: "Ultralightweight JSON parser in ANSI C",
+  url: "https://github.com/DaveGamble/cJSON",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

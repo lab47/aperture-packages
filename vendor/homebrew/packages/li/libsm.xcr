@@ -57,6 +57,12 @@ import "pkg-config" as i0, "xtrans" as i1, "libice" as i2
 pkg(
   name: "libsm",
   version: "1.2.3",
+  description: "X.Org: X Session Management Library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -79,6 +79,12 @@ import "rust" as i0
 pkg(
   name: "click",
   version: "0.5.3",
+  description: "Command-line interactive controller for Kubernetes",
+  url: "https://github.com/databricks/click",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

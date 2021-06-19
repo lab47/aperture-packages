@@ -119,6 +119,12 @@ import "pkg-config" as i0, "gettext" as i1
 pkg(
   name: "ntfs-3g",
   version: "2017.3.23",
+  description: "Read-write NTFS driver for FUSE",
+  url: "https://www.tuxera.com/community/open-source-ntfs-3g/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "glow",
   version: "1.4.1",
+  description: "Render markdown on the CLI",
+  url: "https://github.com/charmbracelet/glow",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

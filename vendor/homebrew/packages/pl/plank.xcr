@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "plank",
   version: "1.6",
+  description: "Framework for generating immutable model objects",
+  url: "https://pinterest.github.io/plank/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rkhunter",
   version: "1.4.6",
+  description: "Rootkit hunter",
+  url: "https://rkhunter.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

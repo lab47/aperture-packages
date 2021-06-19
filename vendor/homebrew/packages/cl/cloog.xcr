@@ -80,6 +80,12 @@ import "pkg-config" as i0, "gmp" as i1
 pkg(
   name: "cloog",
   version: "0.18.4",
+  description: "Generate code for scanning Z-polyhedra",
+  url: "http://www.bastoul.net/cloog/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

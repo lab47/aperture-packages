@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vcsh",
   version: "1.20190621",
+  description: "Config manager based on git",
+  url: "https://github.com/RichiH/vcsh",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

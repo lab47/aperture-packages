@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "smimesign",
   version: "0.1.0",
+  description: "S/MIME signing utility for use with Git",
+  url: "https://github.com/github/smimesign",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

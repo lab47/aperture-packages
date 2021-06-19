@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "brew-cask-completion",
   version: "2.1",
+  description: "Fish completion for brew-cask",
+  url: "https://github.com/xyb/homebrew-cask-completion",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

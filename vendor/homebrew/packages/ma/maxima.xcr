@@ -56,6 +56,12 @@ import "gawk" as i0, "gnu-sed" as i1, "perl" as i2, "texinfo" as i3, "gettext" a
 pkg(
   name: "maxima",
   version: "5.45.0",
+  description: "Computer algebra system",
+  url: "https://maxima.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

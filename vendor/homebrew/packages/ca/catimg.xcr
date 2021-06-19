@@ -37,6 +37,12 @@ import "cmake" as i0
 pkg(
   name: "catimg",
   version: "2.7.0",
+  description: "Insanely fast image printing in your terminal",
+  url: "https://github.com/posva/catimg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

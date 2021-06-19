@@ -52,6 +52,12 @@ import "pkg-config" as i0, "libusb" as i1
 pkg(
   name: "ems-flasher",
   version: "0.03",
+  description: "Software for flashing the EMS Gameboy USB cart",
+  url: "https://lacklustre.net/projects/ems-flasher/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

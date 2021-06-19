@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "regina-rexx",
   version: "3.9.3",
+  description: "Interpreter for Rexx",
+  url: "https://regina-rexx.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

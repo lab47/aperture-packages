@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "bitcoin",
   version: "0.21.1",
+  description: "Decentralized, peer to peer payment network",
+  url: "https://bitcoin.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

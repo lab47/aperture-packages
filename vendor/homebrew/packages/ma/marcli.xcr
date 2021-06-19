@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "marcli",
   version: "1.0.1",
+  description: "Parse MARC (ISO 2709) files",
+  url: "https://github.com/hectorcorrea/marcli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

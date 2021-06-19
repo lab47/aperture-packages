@@ -109,6 +109,12 @@ import "openssl@1.1" as i0, "libffi" as i1
 pkg(
   name: "minimal-racket",
   version: "8.1",
+  description: "Modern programming language in the Lisp/Scheme family",
+  url: "https://racket-lang.org/",
+  metadata: %{
+    "license": "MIT or Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

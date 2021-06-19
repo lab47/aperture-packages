@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "gh",
   version: "1.11.0",
+  description: "GitHub command-line tool",
+  url: "https://github.com/cli/cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

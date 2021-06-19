@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1, "ncurses" as i2, "openssl@1.1" as i3
 pkg(
   name: "sngrep",
   version: "1.4.9",
+  description: "Command-line tool for displaying SIP calls message flows",
+  url: "https://github.com/irontec/sngrep",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

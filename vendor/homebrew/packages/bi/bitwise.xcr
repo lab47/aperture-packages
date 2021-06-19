@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "readline" as i2
 pkg(
   name: "bitwise",
   version: "0.42",
+  description: "Terminal based bit manipulator in ncurses",
+  url: "https://github.com/mellowcandle/bitwise",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "pkg-config" as i0, "libgcrypt" as i1
 pkg(
   name: "clamz",
   version: "0.5",
+  description: "Download MP3 files from Amazon's music store",
+  url: "https://code.google.com/archive/p/clamz/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

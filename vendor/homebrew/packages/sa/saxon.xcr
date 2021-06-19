@@ -55,6 +55,12 @@ import "openjdk" as i0
 pkg(
   name: "saxon",
   version: "10.5",
+  description: "XSLT and XQuery processor",
+  url: "https://saxon.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

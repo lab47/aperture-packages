@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "metashell",
   version: "4.0.0",
+  description: "Metaprogramming shell for C++ templates",
+  url: "http://metashell.org",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

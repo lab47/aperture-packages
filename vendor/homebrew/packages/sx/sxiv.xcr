@@ -43,6 +43,12 @@ import "giflib" as i0, "imlib2" as i1, "libexif" as i2, "libx11" as i3, "libxft"
 pkg(
   name: "sxiv",
   version: "26",
+  description: "Simple X Image Viewer",
+  url: "https://github.com/muennich/sxiv",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

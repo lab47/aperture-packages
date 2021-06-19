@@ -75,6 +75,12 @@ import "automake" as i0, "libelf" as i1, "libftdi0" as i2, "libhid" as i3, "libu
 pkg(
   name: "avrdude",
   version: "6.3",
+  description: "Atmel AVR MCU programmer",
+  url: "https://savannah.nongnu.org/projects/avrdude/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

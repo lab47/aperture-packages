@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "ios-webkit-debug-proxy",
   version: "1.8.8",
+  description: "DevTools proxy for iOS devices",
+  url: "https://github.com/google/ios-webkit-debug-proxy",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

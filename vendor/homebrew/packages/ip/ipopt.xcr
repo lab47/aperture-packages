@@ -105,6 +105,12 @@ import "openjdk" as i0, "pkg-config" as i1, "ampl-mp" as i2, "gcc" as i3, "openb
 pkg(
   name: "ipopt",
   version: "3.13.4",
+  description: "Interior point optimizer",
+  url: "https://coin-or.github.io/Ipopt/",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

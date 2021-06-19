@@ -68,6 +68,12 @@ import "readline" as i0
 pkg(
   name: "gnu-units",
   version: "2.21",
+  description: "GNU unit conversion tool",
+  url: "https://www.gnu.org/software/units/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

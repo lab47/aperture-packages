@@ -45,6 +45,12 @@ import "openjdk" as i0
 pkg(
   name: "vnu",
   version: "20.6.30",
+  description: "Nu Markup Checker: command-line and server HTML validator",
+  url: "https://validator.github.io/validator/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

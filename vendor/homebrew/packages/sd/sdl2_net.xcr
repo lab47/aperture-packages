@@ -60,6 +60,12 @@ import "pkg-config" as i0, "sdl2" as i1
 pkg(
   name: "sdl2_net",
   version: "2.0.1",
+  description: "Small sample cross-platform networking library",
+  url: "https://www.libsdl.org/projects/SDL_net/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

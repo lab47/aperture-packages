@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "envconsul",
   version: "0.11.0",
+  description: "Launch process with environment variables from Consul and Vault",
+  url: "https://github.com/hashicorp/envconsul",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

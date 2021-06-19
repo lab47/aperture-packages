@@ -55,6 +55,12 @@ import "cmake" as i0, "ffmpeg" as i1, "jansson" as i2, "libao" as i3, "libvorbis
 pkg(
   name: "vgmstream",
   version: "r1050-3448-g77cc431b",
+  description: "Library for playing streamed audio formats from video games",
+  url: "https://hcs64.com/vgmstream.html",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

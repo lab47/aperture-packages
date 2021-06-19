@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pwgen",
   version: "2.08",
+  description: "Password generator",
+  url: "https://pwgen.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

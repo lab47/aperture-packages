@@ -51,6 +51,12 @@ import "gettext" as i0
 pkg(
   name: "texi2html",
   version: "5.0",
+  description: "Convert TeXinfo files to HTML",
+  url: "https://www.nongnu.org/texi2html/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2
 pkg(
   name: "cdargs",
   version: "2.1",
+  description: "Directory bookmarking system - Enhanced cd utilities",
+  url: "https://github.com/cbxbiker61/cdargs",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

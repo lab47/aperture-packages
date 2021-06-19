@@ -97,6 +97,12 @@ import "go" as i0
 pkg(
   name: "clash",
   version: "1.6.0",
+  description: "Rule-based tunnel in Go",
+  url: "https://github.com/Dreamacro/clash",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

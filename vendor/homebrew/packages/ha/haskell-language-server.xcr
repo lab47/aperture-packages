@@ -90,6 +90,12 @@ import "cabal-install" as i0, "ghc" as i1, "ghc@8.6" as i2, "ghc@8.8" as i3
 pkg(
   name: "haskell-language-server",
   version: "1.1.0",
+  description: "Integration point for ghcide and haskell-ide-engine. One IDE to rule them all",
+  url: "https://github.com/haskell/haskell-language-server",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "maven-completion",
   version: "20200420",
+  description: "Bash completion for Maven",
+  url: "https://github.com/juven/maven-bash-completion",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

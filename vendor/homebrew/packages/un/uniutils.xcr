@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "uniutils",
   version: "2.27",
+  description: "Manipulate and analyze Unicode text",
+  url: "https://billposer.org/Software/unidesc.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

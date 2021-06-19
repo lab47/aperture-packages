@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "okteto",
   version: "1.12.15",
+  description: "Build better apps by developing and testing code directly in Kubernetes",
+  url: "https://okteto.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

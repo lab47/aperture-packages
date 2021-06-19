@@ -125,6 +125,12 @@ import "bmake" as i0, "mk-configure" as i1
 pkg(
   name: "libmaa",
   version: "1.4.7",
+  description: "Low-level data structures including hash tables, sets, lists",
+  url: "http://www.dict.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

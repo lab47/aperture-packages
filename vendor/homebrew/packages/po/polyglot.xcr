@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "polyglot",
   version: "2.0.4",
+  description: "Protocol adapter to run UCI engines under XBoard",
+  url: "https://www.chessprogramming.org/PolyGlot",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "fontconfig" as i0, "freetype" as i1, "libice" as i2, "libx11" as i3, "li
 pkg(
   name: "xterm",
   version: "368",
+  description: "Terminal emulator for the X Window System",
+  url: "https://invisible-island.net/xterm/",
+  metadata: %{
+    "license": "X11",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

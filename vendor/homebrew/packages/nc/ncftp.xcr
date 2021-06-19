@@ -50,6 +50,12 @@ import "ncurses" as i0
 pkg(
   name: "ncftp",
   version: "3.2.6",
+  description: "FTP client with an advanced user interface",
+  url: "https://www.ncftp.com/",
+  metadata: %{
+    "license": "ClArtistic",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

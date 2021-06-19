@@ -94,6 +94,12 @@ import "ruby" as i0, "tmux" as i1
 pkg(
   name: "tmuxinator",
   version: "3.0.0",
+  description: "Manage complex tmux sessions easily",
+  url: "https://github.com/tmuxinator/tmuxinator",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

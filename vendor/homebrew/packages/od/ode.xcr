@@ -61,6 +61,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "ode",
   version: "0.16.2",
+  description: "Simulating articulated rigid body dynamics",
+  url: "https://www.ode.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

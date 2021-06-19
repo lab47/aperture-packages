@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libresample",
   version: "0.1.3",
+  description: "Audio resampling C library",
+  url: "https://ccrma.stanford.edu/~jos/resample/Available_Software.html",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

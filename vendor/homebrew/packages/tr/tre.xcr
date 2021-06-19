@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tre",
   version: "0.8.0",
+  description: "Lightweight, POSIX-compliant regular expression (regex) library",
+  url: "https://laurikari.net/tre/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -71,6 +71,12 @@ import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "exp
 pkg(
   name: "libarchive",
   version: "3.5.1",
+  description: "Multi-format archive and compression library",
+  url: "https://www.libarchive.org",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

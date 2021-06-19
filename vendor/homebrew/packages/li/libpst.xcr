@@ -50,6 +50,12 @@ import "pkg-config" as i0, "boost" as i1, "gettext" as i2, "libgsf" as i3
 pkg(
   name: "libpst",
   version: "0.6.76",
+  description: "Utilities for the PST file format",
+  url: "https://www.five-ten-sg.com/libpst/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

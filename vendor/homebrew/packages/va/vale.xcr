@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "vale",
   version: "2.10.3",
+  description: "Syntax-aware linter for prose",
+  url: "https://errata-ai.github.io/vale/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

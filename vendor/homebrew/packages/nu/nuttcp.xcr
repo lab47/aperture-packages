@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nuttcp",
   version: "8.2.2",
+  description: "Network performance measurement tool",
+  url: "https://www.nuttcp.net/nuttcp/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mmsrip",
   version: "0.7.0",
+  description: "Client for the MMS:// protocol",
+  url: "https://nbenoit.tuxfamily.org/index.php?page=MMSRIP",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

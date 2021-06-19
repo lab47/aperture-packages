@@ -56,6 +56,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "ircii",
   version: "20210314",
+  description: "IRC and ICB client",
+  url: "http://www.eterna.com.au/ircii/",
+  metadata: %{
+    "license": "BSD-3-Clause and BSD-2-Clause and GPL-2.0-or-later and MIT and Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

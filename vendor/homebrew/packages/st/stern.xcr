@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "stern",
   version: "1.18.0",
+  description: "Tail multiple Kubernetes pods & their containers",
+  url: "https://github.com/stern/stern",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

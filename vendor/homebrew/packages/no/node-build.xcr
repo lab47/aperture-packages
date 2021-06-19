@@ -39,6 +39,12 @@ import "autoconf" as i0, "openssl@1.1" as i1, "pkg-config" as i2
 pkg(
   name: "node-build",
   version: "4.9.42",
+  description: "Install NodeJS versions",
+  url: "https://github.com/nodenv/node-build",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

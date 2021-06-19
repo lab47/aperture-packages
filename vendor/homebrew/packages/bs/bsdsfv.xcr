@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bsdsfv",
   version: "1.18",
+  description: "SFV utility tools",
+  url: "https://bsdsfv.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

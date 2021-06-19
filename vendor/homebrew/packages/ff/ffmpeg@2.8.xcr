@@ -124,6 +124,12 @@ import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "fontconfig" as i3, 
 pkg(
   name: "ffmpeg@2.8",
   version: "2.8.17",
+  description: "Play, record, convert, and stream audio and video",
+  url: "https://ffmpeg.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {

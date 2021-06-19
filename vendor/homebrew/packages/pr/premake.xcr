@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "premake",
   version: "4.4-beta5",
+  description: "Write once, build anywhere Lua-based build system",
+  url: "https://premake.github.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

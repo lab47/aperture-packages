@@ -73,6 +73,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "id3lib",
   version: "3.8.3",
+  description: "ID3 tag manipulation",
+  url: "https://id3lib.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

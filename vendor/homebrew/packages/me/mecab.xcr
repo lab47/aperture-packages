@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mecab",
   version: "0.996",
+  description: "Yet another part-of-speech and morphological analyzer",
+  url: "https://taku910.github.io/mecab/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

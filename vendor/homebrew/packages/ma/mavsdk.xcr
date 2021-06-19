@@ -136,12 +136,18 @@ end
 
 import "homebrew-install" as hi
 
-import "abseil" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "grpc" as i13, "jemalloc" as i14, "jsoncpp" as i15, "krb5" as i16, "libev" as i17, "libffi" as i18, "libidn2" as i19, "libssh2" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "m4" as i24, "meson" as i25, "mpdecimal" as i26, "ncurses" as i27, "nghttp2" as i28, "ninja" as i29, "openldap" as i30, "openssl@1.1" as i31, "perl" as i32, "pkg-config" as i33, "protobuf" as i34, "python@3.7" as i35, "python@3.8" as i36, "python@3.9" as i37, "re2" as i38, "readline" as i39, "rtmpdump" as i40, "six" as i41, "sphinx-doc" as i42, "sqlite" as i43, "tcl-tk" as i44, "tinyxml2" as i45, "unzip" as i46, "xz" as i47, "zip" as i48, "zlib" as i49, "zstd" as i50
+import "abseil" as i0, "bzip2" as i1, "c-ares" as i2, "cmake" as i3, "curl" as i4, "expat" as i5, "gdbm" as i6, "grpc" as i7, "jsoncpp" as i8, "libffi" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "protobuf" as i14, "python@3.9" as i15, "re2" as i16, "readline" as i17, "six" as i18, "sqlite" as i19, "tinyxml2" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
 
 pkg(
   name: "mavsdk",
   version: "0.40.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50],
+  description: "API and library for MAVLink compatible systems written in C++17",
+  url: "https://mavsdk.mavlink.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mavsdk.rb"), formula)

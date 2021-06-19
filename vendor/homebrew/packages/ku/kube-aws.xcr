@@ -55,6 +55,12 @@ import "go" as i0, "packr" as i1
 pkg(
   name: "kube-aws",
   version: "0.16.4",
+  description: "Command-line tool to declaratively manage Kubernetes clusters on AWS",
+  url: "https://kubernetes-retired.github.io/kube-aws/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

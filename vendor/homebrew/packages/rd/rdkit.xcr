@@ -100,12 +100,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "boost-python3" as i5, "bzip2" as i6, "cairo" as i7, "cmake" as i8, "cython" as i9, "eigen" as i10, "expat" as i11, "fontconfig" as i12, "freetype" as i13, "gcc" as i14, "gdbm" as i15, "gettext" as i16, "glib" as i17, "gmp" as i18, "gperf" as i19, "icu4c" as i20, "isl" as i21, "krb5" as i22, "libffi" as i23, "libgcrypt" as i24, "libgpg-error" as i25, "libmpc" as i26, "libpng" as i27, "libpthread-stubs" as i28, "libtool" as i29, "libx11" as i30, "libxau" as i31, "libxcb" as i32, "libxdmcp" as i33, "libxext" as i34, "libxml2" as i35, "libxrender" as i36, "libxslt" as i37, "libyaml" as i38, "lzo" as i39, "m4" as i40, "meson" as i41, "mpdecimal" as i42, "mpfr" as i43, "ncurses" as i44, "ninja" as i45, "numpy" as i46, "openblas" as i47, "openldap" as i48, "openssl@1.1" as i49, "pcre" as i50, "perl" as i51, "pixman" as i52, "pkg-config" as i53, "postgresql" as i54, "py3cairo" as i55, "python@3.9" as i56, "readline" as i57, "ruby" as i58, "sphinx-doc" as i59, "sqlite" as i60, "swig" as i61, "unzip" as i62, "util-macros" as i63, "xcb-proto" as i64, "xorgproto" as i65, "xtrans" as i66, "xz" as i67, "zip" as i68, "zlib" as i69, "zstd" as i70
+import "cmake" as i0, "swig" as i1, "boost" as i2, "boost-python3" as i3, "eigen" as i4, "freetype" as i5, "numpy" as i6, "postgresql" as i7, "py3cairo" as i8, "python@3.9" as i9
 
 pkg(
   name: "rdkit",
   version: "2021.03.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70],
+  description: "Open-source chemoinformatics library",
+  url: "https://rdkit.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rdkit.rb"), formula)

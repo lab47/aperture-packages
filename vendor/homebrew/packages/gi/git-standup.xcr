@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-standup",
   version: "2.3.2",
+  description: "Git extension to generate reports for standup meetings",
+  url: "https://github.com/kamranahmedse/git-standup",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "detach",
   version: "0.2.3",
+  description: "Execute given command in detached process",
+  url: "http://inglorion.net/software/detach/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -33,6 +33,12 @@ import "cmake" as i0
 pkg(
   name: "libstxxl",
   version: "1.4.1",
+  description: "C++ implementation of STL for extra large data sets",
+  url: "https://stxxl.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

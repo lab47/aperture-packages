@@ -45,6 +45,12 @@ import "nettle" as i0, "libedit" as i1
 pkg(
   name: "chrony",
   version: "4.1",
+  description: "Versatile implementation of the Network Time Protocol (NTP)",
+  url: "https://chrony.tuxfamily.org",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zdelta",
   version: "2.1",
+  description: "Lossless delta compression library",
+  url: "https://web.archive.org/web/20150804051750/cis.poly.edu/zdelta/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "cmake" as i0, "cairo" as i1, "glfw" as i2, "libtiff" as i3, "qhull" as i
 pkg(
   name: "libgr",
   version: "0.57.3",
+  description: "GR framework: a graphics library for visualisation applications",
+  url: "https://gr-framework.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

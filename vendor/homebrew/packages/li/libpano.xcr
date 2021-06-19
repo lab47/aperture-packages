@@ -39,6 +39,12 @@ import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
 pkg(
   name: "libpano",
   version: "13-2.9.20",
+  description: "Build panoramic images from a set of overlapping images",
+  url: "https://panotools.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

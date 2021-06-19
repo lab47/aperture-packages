@@ -51,6 +51,12 @@ import "go" as i0
 pkg(
   name: "hcloud",
   version: "1.23.0",
+  description: "Command-line interface for Hetzner Cloud",
+  url: "https://github.com/hetznercloud/cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

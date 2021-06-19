@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "c2048",
   version: "0+20150805",
+  description: "Console version of 2048",
+  url: "https://github.com/mevdschee/2048.c",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "cmake" as i0, "rust" as i1
 pkg(
   name: "mdcat",
   version: "0.22.4",
+  description: "Show markdown documents on text terminals",
+  url: "https://github.com/lunaryorn/mdcat",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

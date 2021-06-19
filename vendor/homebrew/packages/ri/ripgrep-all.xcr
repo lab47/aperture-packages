@@ -42,6 +42,12 @@ import "rust" as i0, "ripgrep" as i1
 pkg(
   name: "ripgrep-all",
   version: "0.9.6",
+  description: "Wrapper around ripgrep that adds multiple rich file types",
+  url: "https://github.com/phiresky/ripgrep-all",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "bsdmake" as i0
 pkg(
   name: "icbirc",
   version: "2.1",
+  description: "Proxy IRC client and ICB server",
+  url: "https://www.benzedrine.ch/icbirc.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

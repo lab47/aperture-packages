@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "fork-cleaner",
   version: "2.0.3",
+  description: "Cleans up old and inactive forks on your GitHub account",
+  url: "https://github.com/caarlos0/fork-cleaner",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

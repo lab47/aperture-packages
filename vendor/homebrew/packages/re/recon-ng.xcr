@@ -209,12 +209,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libgcrypt" as i7, "libgpg-error" as i8, "libtool" as i9, "libxml2" as i10, "libxslt" as i11, "libyaml" as i12, "m4" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "perl" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sqlite" as i21, "unzip" as i22, "xz" as i23, "zip" as i24, "zlib" as i25
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libxml2" as i4, "libxslt" as i5, "libyaml" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "recon-ng",
   version: "5.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  description: "Web Reconnaissance Framework",
+  url: "https://github.com/lanmaster53/recon-ng",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "recon-ng.rb"), formula)

@@ -60,6 +60,12 @@ import "go" as i0
 pkg(
   name: "sqlc",
   version: "1.8.0",
+  description: "Generate type safe Go from SQL",
+  url: "https://sqlc.dev/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

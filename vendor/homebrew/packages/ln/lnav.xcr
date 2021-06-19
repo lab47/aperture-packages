@@ -58,6 +58,12 @@ import "pcre" as i0, "readline" as i1, "sqlite" as i2
 pkg(
   name: "lnav",
   version: "0.9.0",
+  description: "Curses-based tool for viewing and analyzing log files",
+  url: "https://lnav.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

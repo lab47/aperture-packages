@@ -45,6 +45,12 @@ import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3, "curl" 
 pkg(
   name: "glyr",
   version: "1.0.10",
+  description: "Music related metadata search engine with command-line interface and C API",
+  url: "https://github.com/sahib/glyr",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

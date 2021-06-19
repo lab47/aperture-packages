@@ -126,6 +126,12 @@ import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "bdw-gc" as i3, "mbedtl
 pkg(
   name: "neko",
   version: "2.3.0",
+  description: "High-level, dynamically typed programming language",
+  url: "https://nekovm.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

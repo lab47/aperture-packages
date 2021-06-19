@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "netlify-cli",
   version: "3.37.16",
+  description: "Netlify command-line tool",
+  url: "https://www.netlify.com/docs/cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

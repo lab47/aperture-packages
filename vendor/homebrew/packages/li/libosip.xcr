@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libosip",
   version: "5.2.1",
+  description: "Implementation of the eXosip2 stack",
+  url: "https://www.gnu.org/software/osip/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

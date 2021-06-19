@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "browser",
   version: "7",
+  description: "Pipe HTML to a browser",
+  url: "https://gist.github.com/318247/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "easy-rsa",
   version: "3.0.8",
+  description: "CLI utility to build and manage a PKI CA",
+  url: "https://github.com/OpenVPN/easy-rsa",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

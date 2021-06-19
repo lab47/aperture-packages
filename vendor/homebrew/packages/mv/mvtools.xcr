@@ -59,6 +59,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "nasm" as i3, "pkg-c
 pkg(
   name: "mvtools",
   version: "23",
+  description: "Filters for motion estimation and compensation",
+  url: "https://github.com/dubhater/vapoursynth-mvtools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

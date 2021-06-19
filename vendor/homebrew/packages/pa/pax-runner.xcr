@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pax-runner",
   version: "1.8.6",
+  description: "Tool to provision OSGi bundles",
+  url: "https://ops4j1.jira.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

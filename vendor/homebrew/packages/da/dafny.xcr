@@ -76,6 +76,12 @@ import "gradle" as i0, "nuget" as i1, "dotnet" as i2, "openjdk@11" as i3
 pkg(
   name: "dafny",
   version: "3.1.0",
+  description: "Verification-aware programming language",
+  url: "https://github.com/dafny-lang/dafny/blob/master/README.md",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

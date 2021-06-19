@@ -75,6 +75,12 @@ import "go" as i0
 pkg(
   name: "termshare",
   version: "0.2.0",
+  description: "Interactive or view-only terminal sharing via client or web",
+  url: "https://github.com/progrium/termshare",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "virustotal-cli",
   version: "0.9.7",
+  description: "Command-line interface for VirusTotal",
+  url: "https://github.com/VirusTotal/vt-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

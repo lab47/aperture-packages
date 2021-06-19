@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scrub",
   version: "2.6.1",
+  description: "Writes patterns on magnetic media to thwart data recovery",
+  url: "https://code.google.com/archive/p/diskscrub/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

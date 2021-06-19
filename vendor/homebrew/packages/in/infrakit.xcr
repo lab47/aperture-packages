@@ -47,6 +47,12 @@ import "go" as i0, "libvirt" as i1
 pkg(
   name: "infrakit",
   version: "0.5",
+  description: "Toolkit for creating and managing declarative infrastructure",
+  url: "https://github.com/docker/deploykit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

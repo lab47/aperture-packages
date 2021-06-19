@@ -41,6 +41,12 @@ import "curl" as i0
 pkg(
   name: "clib",
   version: "2.7.0",
+  description: "Package manager for C programming",
+  url: "https://github.com/clibs/clib",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

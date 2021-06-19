@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libtorrent-raste
 pkg(
   name: "btfs",
   version: "2.22",
+  description: "BitTorrent filesystem based on FUSE",
+  url: "https://github.com/johang/btfs",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

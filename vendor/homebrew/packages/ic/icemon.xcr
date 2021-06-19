@@ -52,6 +52,12 @@ import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "icecream" as i3, 
 pkg(
   name: "icemon",
   version: "3.3",
+  description: "Icecream GUI Monitor",
+  url: "https://github.com/icecc/icemon",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

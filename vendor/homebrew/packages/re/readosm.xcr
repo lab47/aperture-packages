@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "readosm",
   version: "1.1.0a",
+  description: "Extract valid data from an Open Street Map input file",
+  url: "https://www.gaia-gis.it/fossil/readosm/index",
+  metadata: %{
+    "license": "MPL-1.1 or GPL-2.0-or-later or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -70,6 +70,12 @@ import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "freetype" as i3, "glew
 pkg(
   name: "supertux",
   version: "0.6.2",
+  description: "Classic 2D jump'n run sidescroller game",
+  url: "https://www.supertux.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "gettext" as i0, "texinfo" as i1, "ncurses" as i2
 pkg(
   name: "wdiff",
   version: "1.2.2",
+  description: "Display word differences between text files",
+  url: "https://www.gnu.org/software/wdiff/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

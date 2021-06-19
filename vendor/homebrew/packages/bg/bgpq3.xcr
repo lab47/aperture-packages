@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bgpq3",
   version: "0.1.35",
+  description: "BGP filtering automation for Cisco, Juniper, BIRD and OpenBGPD routers",
+  url: "http://snar.spb.ru/prog/bgpq3/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

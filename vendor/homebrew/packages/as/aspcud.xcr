@@ -51,6 +51,12 @@ import "boost" as i0, "cmake" as i1, "re2c" as i2, "clingo" as i3
 pkg(
   name: "aspcud",
   version: "1.9.5",
+  description: "Package dependency solver",
+  url: "https://potassco.org/aspcud/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

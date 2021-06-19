@@ -54,6 +54,12 @@ import "pkg-config" as i0, "scons" as i1, "ffmpeg" as i2, "libkate" as i3, "libo
 pkg(
   name: "ffmpeg2theora",
   version: "0.30",
+  description: "Convert video files to Ogg Theora format",
+  url: "https://v2v.cc/~j/ffmpeg2theora/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

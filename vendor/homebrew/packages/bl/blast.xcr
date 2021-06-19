@@ -78,6 +78,12 @@ import "lmdb" as i0, "bzip2" as i1, "zlib" as i2
 pkg(
   name: "blast",
   version: "2.11.0",
+  description: "Basic Local Alignment Search Tool",
+  url: "https://blast.ncbi.nlm.nih.gov/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

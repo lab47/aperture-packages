@@ -53,6 +53,12 @@ import "libogg" as i0, "libvorbis" as i1
 pkg(
   name: "ogmtools",
   version: "1.5",
+  description: "OGG media streams manipulation tools",
+  url: "https://www.bunkus.org/videotools/ogmtools/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

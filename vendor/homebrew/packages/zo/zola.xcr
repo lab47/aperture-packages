@@ -62,6 +62,12 @@ import "cmake" as i0, "rust" as i1
 pkg(
   name: "zola",
   version: "0.13.0",
+  description: "Fast static site generator in a single binary with everything built-in",
+  url: "https://www.getzola.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "cmake" as i0
 pkg(
   name: "json-c",
   version: "0.15",
+  description: "JSON parser for C",
+  url: "https://github.com/json-c/json-c/wiki",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

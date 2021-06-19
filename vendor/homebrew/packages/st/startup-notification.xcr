@@ -41,6 +41,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxcb" as i2, "xcb-util" as i3
 pkg(
   name: "startup-notification",
   version: "0.12",
+  description: "Reference implementation of startup notification protocol",
+  url: "https://www.freedesktop.org/wiki/Software/startup-notification/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

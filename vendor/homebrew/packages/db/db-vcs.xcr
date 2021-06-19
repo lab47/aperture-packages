@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "db-vcs",
   version: "1.1",
+  description: "Version control for MySQL databases",
+  url: "https://github.com/infostreams/db",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

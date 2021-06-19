@@ -57,6 +57,12 @@ import "libident" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "ngircd",
   version: "26.1",
+  description: "Lightweight Internet Relay Chat server",
+  url: "https://ngircd.barton.de/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

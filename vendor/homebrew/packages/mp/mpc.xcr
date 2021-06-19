@@ -49,6 +49,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "libmpdclient" as i3
 pkg(
   name: "mpc",
   version: "0.33",
+  description: "Command-line music player client for mpd",
+  url: "https://www.musicpd.org/clients/mpc/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

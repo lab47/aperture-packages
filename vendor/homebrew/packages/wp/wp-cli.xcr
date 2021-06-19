@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wp-cli",
   version: "2.5.0",
+  description: "Command-line interface for WordPress",
+  url: "https://wp-cli.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

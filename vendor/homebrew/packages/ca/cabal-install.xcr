@@ -76,6 +76,12 @@ import "ghc" as i0, "zlib" as i1
 pkg(
   name: "cabal-install",
   version: "3.4.0.0",
+  description: "Command-line interface for Cabal and Hackage",
+  url: "https://www.haskell.org/cabal/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "cc65" as i0, "pkg-config" as i1, "libusb-compat" as i2
 pkg(
   name: "opencbm",
   version: "0.4.99.103",
+  description: "Provides access to various floppy drive formats",
+  url: "https://spiro.trikaliotis.net/opencbm",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

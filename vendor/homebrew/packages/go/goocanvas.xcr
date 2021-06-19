@@ -41,6 +41,12 @@ import "gobject-introspection" as i0, "pkg-config" as i1, "cairo" as i2, "glib" 
 pkg(
   name: "goocanvas",
   version: "2.0.4",
+  description: "Canvas widget for GTK+ using the Cairo 2D library for drawing",
+  url: "https://wiki.gnome.org/Projects/GooCanvas",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

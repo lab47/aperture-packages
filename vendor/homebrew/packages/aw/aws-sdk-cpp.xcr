@@ -56,6 +56,12 @@ import "cmake" as i0, "curl" as i1
 pkg(
   name: "aws-sdk-cpp",
   version: "1.9.40",
+  description: "AWS SDK for C++",
+  url: "https://github.com/aws/aws-sdk-cpp",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

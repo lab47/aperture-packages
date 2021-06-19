@@ -592,12 +592,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gnu-sed" as i14, "gnupg" as i15, "gnutls" as i16, "gperf" as i17, "guile" as i18, "jemalloc" as i19, "krb5" as i20, "libassuan" as i21, "libatomic_ops" as i22, "libev" as i23, "libevent" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libidn2" as i28, "libksba" as i29, "librsync" as i30, "libssh2" as i31, "libtasn1" as i32, "libtool" as i33, "libunistring" as i34, "libusb" as i35, "libxml2" as i36, "libxslt" as i37, "libyaml" as i38, "m4" as i39, "mpdecimal" as i40, "ncurses" as i41, "nettle" as i42, "nghttp2" as i43, "ninja" as i44, "npth" as i45, "openldap" as i46, "openssl@1.1" as i47, "p11-kit" as i48, "perl" as i49, "pinentry" as i50, "pkg-config" as i51, "popt" as i52, "python@3.7" as i53, "python@3.8" as i54, "python@3.9" as i55, "readline" as i56, "rtmpdump" as i57, "rust" as i58, "six" as i59, "sphinx-doc" as i60, "sqlite" as i61, "tcl-tk" as i62, "unbound" as i63, "unzip" as i64, "xz" as i65, "zip" as i66, "zlib" as i67, "zstd" as i68
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gnupg" as i3, "libffi" as i4, "librsync" as i5, "libxslt" as i6, "libyaml" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "six" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "duplicity",
   version: "0.8.19",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68],
+  description: "Bandwidth-efficient encrypted backup",
+  url: "https://launchpad.net/duplicity",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "duplicity.rb"), formula)

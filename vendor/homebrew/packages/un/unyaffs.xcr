@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "unyaffs",
   version: "0.9.7",
+  description: "Extract files from a YAFFS2 filesystem image",
+  url: "https://www.b-ehlers.de/projects/unyaffs.html",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

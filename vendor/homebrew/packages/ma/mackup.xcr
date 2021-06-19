@@ -47,6 +47,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "mackup",
   version: "0.8.32",
+  description: "Keep your Mac's application settings in sync",
+  url: "https://github.com/lra/mackup",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

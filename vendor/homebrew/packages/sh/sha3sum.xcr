@@ -36,6 +36,12 @@ import "libkeccak" as i0
 pkg(
   name: "sha3sum",
   version: "1.2.1",
+  description: "Keccak, SHA-3, SHAKE, and RawSHAKE checksum utilities",
+  url: "https://github.com/maandree/sha3sum",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

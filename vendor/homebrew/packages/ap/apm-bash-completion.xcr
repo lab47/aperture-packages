@@ -22,6 +22,12 @@ import "homebrew-install" as hi
 pkg(
   name: "apm-bash-completion",
   version: "1.0.0",
+  description: "Completion for Atom Package Manager",
+  url: "https://github.com/vigo/apm-bash-completion",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

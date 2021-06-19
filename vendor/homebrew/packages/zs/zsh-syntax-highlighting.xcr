@@ -50,6 +50,12 @@ import "zsh" as i0
 pkg(
   name: "zsh-syntax-highlighting",
   version: "0.7.1",
+  description: "Fish shell like syntax highlighting for zsh",
+  url: "https://github.com/zsh-users/zsh-syntax-highlighting",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

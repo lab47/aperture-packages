@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "clusterctl",
   version: "0.3.19",
+  description: "Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle",
+  url: "https://cluster-api.sigs.k8s.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

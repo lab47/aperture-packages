@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cityhash",
   version: "1.1.1",
+  description: "Hash functions for strings",
+  url: "https://github.com/google/cityhash",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

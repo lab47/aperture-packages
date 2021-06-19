@@ -30,6 +30,12 @@ import "openjdk@8" as i0
 pkg(
   name: "jvmtop",
   version: "0.8.0",
+  description: "Console application for monitoring all running JVMs on a machine",
+  url: "https://github.com/patric-r/jvmtop",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

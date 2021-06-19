@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bam",
   version: "0.5.1",
+  description: "Build system that uses Lua to describe the build process",
+  url: "https://matricks.github.io/bam/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

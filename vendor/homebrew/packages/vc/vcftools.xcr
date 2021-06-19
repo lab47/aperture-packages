@@ -49,6 +49,12 @@ import "pkg-config" as i0, "htslib" as i1
 pkg(
   name: "vcftools",
   version: "0.1.16",
+  description: "Tools for working with VCF files",
+  url: "https://vcftools.github.io/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

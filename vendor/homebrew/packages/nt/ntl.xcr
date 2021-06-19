@@ -67,6 +67,12 @@ import "gmp" as i0
 pkg(
   name: "ntl",
   version: "11.4.4",
+  description: "C++ number theory library",
+  url: "https://libntl.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

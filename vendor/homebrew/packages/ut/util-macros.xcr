@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "util-macros",
   version: "1.19.3",
+  description: "X.Org: Set of autoconf macros used to build other xorg packages",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

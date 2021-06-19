@@ -101,6 +101,12 @@ import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "cairo"
 pkg(
   name: "poppler",
   version: "21.06.1",
+  description: "PDF rendering library (based on the xpdf-3.0 code base)",
+  url: "https://poppler.freedesktop.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

@@ -72,6 +72,12 @@ import "cmake" as i0
 pkg(
   name: "indicators",
   version: "2.2",
+  description: "Activity indicators for modern C++",
+  url: "https://github.com/p-ranav/indicators",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

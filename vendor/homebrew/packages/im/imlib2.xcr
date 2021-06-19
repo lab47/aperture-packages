@@ -50,6 +50,12 @@ import "pkg-config" as i0, "freetype" as i1, "giflib" as i2, "jpeg" as i3, "libp
 pkg(
   name: "imlib2",
   version: "1.7.1",
+  description: "Image loading and rendering library",
+  url: "https://sourceforge.net/projects/enlightenment/",
+  metadata: %{
+    "license": "Imlib2",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

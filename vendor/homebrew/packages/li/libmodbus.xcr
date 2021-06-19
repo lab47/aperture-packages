@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmodbus",
   version: "3.1.6",
+  description: "Portable modbus library",
+  url: "https://libmodbus.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

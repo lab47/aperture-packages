@@ -37,6 +37,12 @@ import "ruby" as i0
 pkg(
   name: "sourcery",
   version: "1.4.2",
+  description: "Meta-programming for Swift, stop writing boilerplate code",
+  url: "https://github.com/krzysztofzablocki/Sourcery",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

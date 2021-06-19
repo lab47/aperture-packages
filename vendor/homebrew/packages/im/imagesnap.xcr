@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "imagesnap",
   version: "0.2.12",
+  description: "Tool to capture still images from an iSight or other video source",
+  url: "https://github.com/rharder/imagesnap",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

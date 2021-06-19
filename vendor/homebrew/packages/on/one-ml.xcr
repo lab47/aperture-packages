@@ -46,6 +46,12 @@ import "ocaml" as i0
 pkg(
   name: "one-ml",
   version: "0.1",
+  description: "Reboot of ML, unifying its core and (now first-class) module layers",
+  url: "https://www.mpi-sws.org/~rossberg/1ml/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

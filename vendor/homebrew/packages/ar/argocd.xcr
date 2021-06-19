@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "argocd",
   version: "2.0.3",
+  description: "GitOps Continuous Delivery for Kubernetes",
+  url: "https://argoproj.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

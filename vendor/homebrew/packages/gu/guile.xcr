@@ -113,6 +113,12 @@ import "gnu-sed" as i0, "bdw-gc" as i1, "gmp" as i2, "libffi" as i3, "libtool" a
 pkg(
   name: "guile",
   version: "3.0.7",
+  description: "GNU Ubiquitous Intelligent Language for Extensions",
+  url: "https://www.gnu.org/software/guile/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

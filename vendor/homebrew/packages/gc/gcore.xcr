@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gcore",
   version: "1.3",
+  description: "Produce a snapshot (core dump) of a running process",
+  url: "https://web.archive.org/web/20200103164014/https://osxbook.com/book/bonus/chapter8/core/",
+  metadata: %{
+    "license": "APSL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

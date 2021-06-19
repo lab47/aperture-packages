@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "sound-touch",
   version: "2.2",
+  description: "Audio processing library",
+  url: "https://www.surina.net/soundtouch/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

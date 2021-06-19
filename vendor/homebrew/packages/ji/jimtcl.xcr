@@ -54,6 +54,12 @@ import "openssl@1.1" as i0, "readline" as i1, "sqlite" as i2, "zlib" as i3
 pkg(
   name: "jimtcl",
   version: "0.80",
+  description: "Small footprint implementation of Tcl",
+  url: "http://jim.tcl.tk/index.html",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

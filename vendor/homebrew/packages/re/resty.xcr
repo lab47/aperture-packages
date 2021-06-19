@@ -78,6 +78,12 @@ import "perl" as i0
 pkg(
   name: "resty",
   version: "3.0",
+  description: "Command-line REST client that can be used in pipelines",
+  url: "https://github.com/micha/resty",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "naga",
   version: "1.0",
+  description: "Terminal implementation of the Snake game",
+  url: "https://github.com/anayjoshi/naga/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

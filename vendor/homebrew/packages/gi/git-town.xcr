@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "git-town",
   version: "7.5.0",
+  description: "High-level command-line interface for Git",
+  url: "https://www.git-town.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

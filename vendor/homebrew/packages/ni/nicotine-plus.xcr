@@ -41,12 +41,18 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "atk" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "docbook" as i12, "docbook-xsl" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gdbm" as i19, "gdk-pixbuf" as i20, "gettext" as i21, "glib" as i22, "gobject-introspection" as i23, "gperf" as i24, "graphite2" as i25, "gsettings-desktop-schemas" as i26, "gtk+3" as i27, "harfbuzz" as i28, "help2man" as i29, "hicolor-icon-theme" as i30, "icu4c" as i31, "intltool" as i32, "jemalloc" as i33, "jpeg" as i34, "krb5" as i35, "libepoxy" as i36, "libev" as i37, "libffi" as i38, "libgcrypt" as i39, "libgpg-error" as i40, "libidn2" as i41, "libpng" as i42, "libpthread-stubs" as i43, "librsvg" as i44, "libssh2" as i45, "libtiff" as i46, "libtool" as i47, "libunistring" as i48, "libx11" as i49, "libxau" as i50, "libxcb" as i51, "libxdmcp" as i52, "libxext" as i53, "libxml2" as i54, "libxrender" as i55, "libxslt" as i56, "lzo" as i57, "m4" as i58, "meson" as i59, "mpdecimal" as i60, "ncurses" as i61, "nghttp2" as i62, "ninja" as i63, "openldap" as i64, "openssl@1.1" as i65, "pango" as i66, "pcre" as i67, "perl" as i68, "pixman" as i69, "pkg-config" as i70, "py3cairo" as i71, "pygobject3" as i72, "python@3.9" as i73, "readline" as i74, "rtmpdump" as i75, "rust" as i76, "sphinx-doc" as i77, "sqlite" as i78, "unzip" as i79, "util-macros" as i80, "xcb-proto" as i81, "xorgproto" as i82, "xtrans" as i83, "xz" as i84, "zip" as i85, "zlib" as i86, "zstd" as i87
+import "adwaita-icon-theme" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gtk+3" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "py3cairo" as i10, "pygobject3" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "nicotine-plus",
   version: "3.0.6",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87],
+  description: "Graphical client for the Soulseek file sharing network",
+  url: "https://nicotine-plus.github.io/nicotine-plus/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nicotine-plus.rb"), formula)

@@ -223,6 +223,12 @@ import "gettext" as i0, "pcre2" as i1, "curl" as i2, "expat" as i3, "openssl@1.1
 pkg(
   name: "git",
   version: "2.32.0",
+  description: "Distributed revision control system",
+  url: "https://git-scm.com",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

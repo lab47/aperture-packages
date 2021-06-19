@@ -46,6 +46,12 @@ import "coreutils" as i0, "libtool" as i1
 pkg(
   name: "sha1dc",
   version: "1.0.3",
+  description: "Tool to detect SHA-1 collisions in files, including SHAttered",
+  url: "https://github.com/cr-marcstevens/sha1collisiondetection",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

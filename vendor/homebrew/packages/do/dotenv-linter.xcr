@@ -52,6 +52,12 @@ import "rust" as i0
 pkg(
   name: "dotenv-linter",
   version: "3.1.0",
+  description: "Lightning-fast linter for .env files written in Rust",
+  url: "https://dotenv-linter.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

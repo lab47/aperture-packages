@@ -61,6 +61,12 @@ import "pkg-config" as i0, "libogg" as i1, "libvorbis" as i2, "sdl" as i3
 pkg(
   name: "sdl_sound",
   version: "1.0.3",
+  description: "Library to decode several popular sound file formats",
+  url: "https://icculus.org/SDL_sound/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

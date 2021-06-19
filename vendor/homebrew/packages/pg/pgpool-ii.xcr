@@ -40,6 +40,12 @@ import "postgresql" as i0
 pkg(
   name: "pgpool-ii",
   version: "4.2.3",
+  description: "PostgreSQL connection pool server",
+  url: "https://www.pgpool.net/mediawiki/index.php/Main_Page",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

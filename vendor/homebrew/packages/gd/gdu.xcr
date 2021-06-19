@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "gdu",
   version: "5.1.0",
+  description: "Disk usage analyzer with console interface written in Go",
+  url: "https://github.com/dundee/gdu",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ttf2eot",
   version: "0.0.3",
+  description: "Convert TTF files to EOT",
+  url: "https://github.com/wget/ttf2eot",
+  metadata: %{
+    "license": "LGPL-2.0-or-later or BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "libtiff" as i0
 pkg(
   name: "spandsp",
   version: "0.0.6",
+  description: "DSP functions library for telephony",
+  url: "https://www.soft-switch.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "go" as i0, "docker-machine" as i1
 pkg(
   name: "docker-machine-parallels",
   version: "2.0.1",
+  description: "Parallels Driver for Docker Machine",
+  url: "https://github.com/Parallels/docker-machine-parallels",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

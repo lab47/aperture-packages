@@ -95,12 +95,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "at-spi2-core" as i1, "atk" as i2, "autoconf" as i3, "automake" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cairo" as i8, "dbus" as i9, "docbook" as i10, "docbook-xsl" as i11, "expat" as i12, "flex" as i13, "fontconfig" as i14, "freetype" as i15, "gdbm" as i16, "gettext" as i17, "glib" as i18, "gnu-getopt" as i19, "gobject-introspection" as i20, "gperf" as i21, "help2man" as i22, "intltool" as i23, "libffi" as i24, "libgcrypt" as i25, "libgpg-error" as i26, "libpng" as i27, "libpthread-stubs" as i28, "libtool" as i29, "libx11" as i30, "libxau" as i31, "libxcb" as i32, "libxdmcp" as i33, "libxext" as i34, "libxfixes" as i35, "libxi" as i36, "libxml2" as i37, "libxrender" as i38, "libxslt" as i39, "libxtst" as i40, "lzo" as i41, "m4" as i42, "meson" as i43, "mpdecimal" as i44, "ncurses" as i45, "ninja" as i46, "openssl@1.1" as i47, "pcre" as i48, "perl" as i49, "pixman" as i50, "pkg-config" as i51, "python@3.9" as i52, "readline" as i53, "sqlite" as i54, "unzip" as i55, "util-macros" as i56, "xcb-proto" as i57, "xmlto" as i58, "xorgproto" as i59, "xtrans" as i60, "xz" as i61, "zip" as i62, "zlib" as i63
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "python@3.9" as i3, "at-spi2-core" as i4, "atk" as i5, "libxml2" as i6
 
 pkg(
   name: "at-spi2-atk",
   version: "2.34.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63],
+  description: "Accessibility Toolkit GTK+ module",
+  url: "https://www.freedesktop.org/wiki/Accessibility/AT-SPI2",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "at-spi2-atk.rb"), formula)

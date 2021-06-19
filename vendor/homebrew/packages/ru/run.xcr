@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "run",
   version: "0.7.2",
+  description: "Easily manage and invoke small scripts and wrappers",
+  url: "https://github.com/TekWizely/run",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

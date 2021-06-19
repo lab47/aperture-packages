@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fon-flash-cli",
   version: "1.12.0",
+  description: "Flash La Fonera and Atheros chipset compatible devices",
+  url: "https://www.gargoyle-router.com/wiki/doku.php?id=fon_flash",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

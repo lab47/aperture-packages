@@ -54,6 +54,12 @@ import "autoconf" as i0
 pkg(
   name: "autoconf-archive",
   version: "2021.02.19",
+  description: "Collection of over 500 reusable autoconf macros",
+  url: "https://savannah.gnu.org/projects/autoconf-archive/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

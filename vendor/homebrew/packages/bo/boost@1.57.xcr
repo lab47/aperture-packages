@@ -112,6 +112,12 @@ import "homebrew-install" as hi
 pkg(
   name: "boost@1.57",
   version: "1.57.0",
+  description: "Collection of portable C++ source libraries",
+  url: "https://www.boost.org",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

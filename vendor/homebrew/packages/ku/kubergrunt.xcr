@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "kubergrunt",
   version: "0.7.1",
+  description: "Collection of commands to fill in the gaps between Terraform, Helm, and Kubectl",
+  url: "https://github.com/gruntwork-io/kubergrunt",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bibutils",
   version: "6.10",
+  description: "Bibliography conversion utilities",
+  url: "https://sourceforge.net/p/bibutils/home/Bibutils/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

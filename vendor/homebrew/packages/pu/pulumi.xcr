@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "pulumi",
   version: "3.4.0",
+  description: "Cloud native development platform",
+  url: "https://pulumi.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

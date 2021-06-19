@@ -57,6 +57,12 @@ import "flac" as i0, "libao" as i1, "libogg" as i2, "libvorbis" as i3, "speex" a
 pkg(
   name: "timidity",
   version: "2.15.0",
+  description: "Software synthesizer",
+  url: "https://timidity.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

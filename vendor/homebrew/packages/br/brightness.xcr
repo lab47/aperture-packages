@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "brightness",
   version: "1.2",
+  description: "Change macOS display brightness from the command-line",
+  url: "https://github.com/nriley/brightness",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

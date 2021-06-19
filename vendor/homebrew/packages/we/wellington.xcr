@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "wellington",
   version: "1.0.5",
+  description: "Project-focused tool to manage Sass and spriting",
+  url: "https://getwt.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

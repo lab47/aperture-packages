@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "gauge",
   version: "1.2.1",
+  description: "Test automation tool that supports executable documentation",
+  url: "https://gauge.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

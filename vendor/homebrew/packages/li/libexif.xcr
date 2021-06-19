@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gettext" as i3
 pkg(
   name: "libexif",
   version: "0.6.22",
+  description: "EXIF parsing library",
+  url: "https://libexif.github.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

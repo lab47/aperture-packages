@@ -48,6 +48,12 @@ import "node" as i0
 pkg(
   name: "http-server",
   version: "0.12.3",
+  description: "Simple zero-configuration command-line HTTP server",
+  url: "https://github.com/http-party/http-server",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

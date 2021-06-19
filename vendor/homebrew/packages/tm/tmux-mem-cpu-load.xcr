@@ -41,6 +41,12 @@ import "cmake" as i0
 pkg(
   name: "tmux-mem-cpu-load",
   version: "3.4.0",
+  description: "CPU, RAM memory, and load monitor for use with tmux",
+  url: "https://github.com/thewtex/tmux-mem-cpu-load",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

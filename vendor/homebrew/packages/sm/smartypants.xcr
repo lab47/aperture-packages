@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "smartypants",
   version: "1.5.1",
+  description: "Typography prettifier",
+  url: "https://daringfireball.net/projects/smartypants/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

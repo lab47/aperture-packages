@@ -45,6 +45,12 @@ import "glktermw" as i0
 pkg(
   name: "glulxe",
   version: "0.5.4",
+  description: "Portable VM like the Z-machine",
+  url: "https://www.eblong.com/zarf/glulx/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

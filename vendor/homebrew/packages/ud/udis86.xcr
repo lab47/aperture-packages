@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "udis86",
   version: "1.7.2",
+  description: "Minimalistic disassembler library for x86",
+  url: "https://udis86.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

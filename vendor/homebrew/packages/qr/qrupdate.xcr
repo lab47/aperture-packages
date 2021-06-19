@@ -59,6 +59,12 @@ import "gcc" as i0, "openblas" as i1
 pkg(
   name: "qrupdate",
   version: "1.1.2",
+  description: "Fast updates of QR and Cholesky decompositions",
+  url: "https://sourceforge.net/projects/qrupdate/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

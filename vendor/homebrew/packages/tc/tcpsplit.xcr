@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcpsplit",
   version: "0.2",
+  description: "Break a packet trace into some number of sub-traces",
+  url: "https://www.icir.org/mallman/software/tcpsplit/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

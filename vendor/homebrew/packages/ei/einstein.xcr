@@ -40,6 +40,12 @@ import "sdl" as i0, "sdl_mixer" as i1, "sdl_ttf" as i2
 pkg(
   name: "einstein",
   version: "2.0",
+  description: "Remake of the old DOS game Sherlock",
+  url: "https://web.archive.org/web/20120621005109/games.flowix.com/en/index.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

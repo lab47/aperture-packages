@@ -67,6 +67,12 @@ import "coreutils" as i0, "hadoop" as i1, "hbase" as i2, "hive" as i3, "openjdk"
 pkg(
   name: "sqoop",
   version: "1.4.7",
+  description: "Transfer bulk data between Hadoop and structured datastores",
+  url: "https://sqoop.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

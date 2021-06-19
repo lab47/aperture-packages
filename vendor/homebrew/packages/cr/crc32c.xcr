@@ -60,6 +60,12 @@ import "cmake" as i0
 pkg(
   name: "crc32c",
   version: "1.1.1",
+  description: "Implementation of CRC32C with CPU-specific acceleration",
+  url: "https://github.com/google/crc32c",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

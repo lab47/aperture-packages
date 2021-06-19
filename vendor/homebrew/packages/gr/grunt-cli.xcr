@@ -57,6 +57,12 @@ import "node" as i0
 pkg(
   name: "grunt-cli",
   version: "1.4.3",
+  description: "JavaScript Task Runner",
+  url: "https://gruntjs.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

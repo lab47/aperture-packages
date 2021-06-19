@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "diskus",
   version: "0.6.0",
+  description: "Minimal, fast alternative to 'du -sh'",
+  url: "https://github.com/sharkdp/diskus",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

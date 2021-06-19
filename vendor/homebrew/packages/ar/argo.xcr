@@ -52,6 +52,12 @@ import "go" as i0, "node@14" as i1, "yarn" as i2
 pkg(
   name: "argo",
   version: "3.0.7",
+  description: "Get stuff done with container-native workflows for Kubernetes",
+  url: "https://argoproj.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

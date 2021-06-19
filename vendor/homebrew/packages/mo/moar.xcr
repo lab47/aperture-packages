@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "moar",
   version: "1.8.1",
+  description: "Nice to use pager for humans",
+  url: "https://github.com/walles/moar",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "oxipng",
   version: "4.0.3",
+  description: "Multithreaded PNG optimizer written in Rust",
+  url: "https://github.com/shssoichiro/oxipng",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

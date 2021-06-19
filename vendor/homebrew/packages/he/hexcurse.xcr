@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hexcurse",
   version: "1.60.0",
+  description: "Ncurses-based console hex editor",
+  url: "https://github.com/LonnyGomes/hexcurse",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

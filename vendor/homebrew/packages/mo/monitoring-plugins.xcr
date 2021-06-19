@@ -51,6 +51,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "monitoring-plugins",
   version: "2.3.1",
+  description: "Plugins for nagios compatible monitoring systems",
+  url: "https://www.monitoring-plugins.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

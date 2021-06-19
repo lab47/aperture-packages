@@ -108,6 +108,12 @@ import "nagios-plugins" as i0, "openssl@1.1" as i1
 pkg(
   name: "nrpe",
   version: "4.0.3",
+  description: "Nagios remote plugin executor",
+  url: "https://www.nagios.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "smake" as i0
 pkg(
   name: "star",
   version: "1.5.3",
+  description: "Standard tap archiver",
+  url: "https://cdrtools.sourceforge.io/private/star.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

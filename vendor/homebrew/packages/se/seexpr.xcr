@@ -78,6 +78,12 @@ import "cmake" as i0, "doxygen" as i1, "libpng" as i2
 pkg(
   name: "seexpr",
   version: "3.0.1",
+  description: "Embeddable expression evaluation engine",
+  url: "https://wdas.github.io/SeExpr/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "gawk" as i2, "libtool" as i3, "pkg-c
 pkg(
   name: "mdbtools",
   version: "0.9.3",
+  description: "Tools to facilitate the use of Microsoft Access databases",
+  url: "https://github.com/mdbtools/mdbtools/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

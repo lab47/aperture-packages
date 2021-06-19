@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dshb",
   version: "0.2.0",
+  description: "macOS system monitor in Swift",
+  url: "https://github.com/beltex/dshb",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

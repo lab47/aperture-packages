@@ -43,6 +43,12 @@ import "libxslt" as i0
 pkg(
   name: "xmlstarlet",
   version: "1.6.1",
+  description: "XML command-line utilities",
+  url: "https://xmlstar.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

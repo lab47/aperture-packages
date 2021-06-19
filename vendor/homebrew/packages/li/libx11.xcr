@@ -90,6 +90,12 @@ import "pkg-config" as i0, "util-macros" as i1, "xtrans" as i2, "libxcb" as i3, 
 pkg(
   name: "libx11",
   version: "1.7.2",
+  description: "X.Org: Core X11 protocol client library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

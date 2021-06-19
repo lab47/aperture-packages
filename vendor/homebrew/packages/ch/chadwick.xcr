@@ -156,6 +156,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chadwick",
   version: "0.7.2",
+  description: "Tools for parsing Retrosheet MLB play-by-play files",
+  url: "https://chadwick.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

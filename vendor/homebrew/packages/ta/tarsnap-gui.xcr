@@ -38,6 +38,12 @@ import "qt" as i0, "tarsnap" as i1
 pkg(
   name: "tarsnap-gui",
   version: "1.0.2",
+  description: "Cross-platform GUI for the Tarsnap command-line client",
+  url: "https://github.com/Tarsnap/tarsnap-gui/wiki",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

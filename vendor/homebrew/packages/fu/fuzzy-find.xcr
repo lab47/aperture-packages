@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fuzzy-find",
   version: "0.6.0",
+  description: "Fuzzy filename finder matching across directories as well as files",
+  url: "https://github.com/silentbicycle/ff",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

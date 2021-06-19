@@ -62,6 +62,12 @@ import "cmake" as i0, "boost" as i1, "freetype" as i2
 pkg(
   name: "c10t",
   version: "1.7",
+  description: "Minecraft cartography tool",
+  url: "https://github.com/udoprog/c10t",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

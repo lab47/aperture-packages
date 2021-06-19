@@ -59,6 +59,12 @@ import "libao" as i0, "libid3tag" as i1, "mad" as i2
 pkg(
   name: "mpg321",
   version: "0.3.2",
+  description: "Command-line MP3 player",
+  url: "https://mpg321.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

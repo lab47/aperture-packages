@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "yj",
   version: "5.0.0",
+  description: "CLI to convert between YAML, TOML, JSON and HCL",
+  url: "https://github.com/sclevine/yj",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

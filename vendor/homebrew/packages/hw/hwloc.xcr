@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libxml2" as i1
 pkg(
   name: "hwloc",
   version: "2.4.1",
+  description: "Portable abstraction of the hierarchical topology of modern architectures",
+  url: "https://www.open-mpi.org/projects/hwloc/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

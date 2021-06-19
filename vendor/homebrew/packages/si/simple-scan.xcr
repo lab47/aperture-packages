@@ -53,6 +53,12 @@ import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala"
 pkg(
   name: "simple-scan",
   version: "40.1",
+  description: "GNOME document scanning application",
+  url: "https://gitlab.gnome.org/GNOME/simple-scan",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "a52dec",
   version: "0.7.4",
+  description: "Library for decoding ATSC A/52 streams (AKA 'AC-3')",
+  url: "https://liba52.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

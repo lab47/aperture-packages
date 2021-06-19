@@ -35,6 +35,12 @@ import "sdl" as i0
 pkg(
   name: "sdl_rtf",
   version: "0.1.0",
+  description: "Sample library to display Rich Text Format (RTF) documents",
+  url: "https://www.libsdl.org/projects/SDL_rtf/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

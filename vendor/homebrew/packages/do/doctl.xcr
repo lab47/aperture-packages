@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "doctl",
   version: "1.61.0",
+  description: "Command-line tool for DigitalOcean",
+  url: "https://github.com/digitalocean/doctl",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

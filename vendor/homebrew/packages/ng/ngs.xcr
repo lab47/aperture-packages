@@ -48,6 +48,12 @@ import "cmake" as i0, "pandoc" as i1, "pkg-config" as i2, "bdw-gc" as i3, "gnu-s
 pkg(
   name: "ngs",
   version: "0.2.12",
+  description: "Powerful programming language and shell designed specifically for Ops",
+  url: "https://ngs-lang.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

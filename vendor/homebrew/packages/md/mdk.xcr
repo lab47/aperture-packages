@@ -80,6 +80,12 @@ import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "flex" 
 pkg(
   name: "mdk",
   version: "1.3.0",
+  description: "GNU MIX development kit",
+  url: "https://www.gnu.org/software/mdk/mdk.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

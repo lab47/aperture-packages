@@ -57,6 +57,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gst-rtsp-server",
   version: "1.18.4",
+  description: "RTSP server library based on GStreamer",
+  url: "https://gstreamer.freedesktop.org/modules/gst-rtsp-server.html",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

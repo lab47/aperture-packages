@@ -109,6 +109,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "gerbv",
   version: "2.7.0",
+  description: "Gerber (RS-274X) viewer",
+  url: "http://gerbv.gpleda.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

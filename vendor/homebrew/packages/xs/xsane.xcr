@@ -54,6 +54,12 @@ import "pkg-config" as i0, "gtk+" as i1, "sane-backends" as i2
 pkg(
   name: "xsane",
   version: "0.999",
+  description: "Graphical scanning frontend",
+  url: "https://wiki.ubuntuusers.de/XSane/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

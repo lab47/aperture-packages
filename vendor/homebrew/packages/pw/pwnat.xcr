@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pwnat",
   version: "0.3-beta",
+  description: "Proxy server that works behind a NAT",
+  url: "https://samy.pl/pwnat/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

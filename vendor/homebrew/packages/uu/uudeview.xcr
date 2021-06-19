@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "uudeview",
   version: "0.5.20",
+  description: "Smart multi-file multi-part decoder",
+  url: "http://www.fpx.de/fp/Software/UUDeview/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

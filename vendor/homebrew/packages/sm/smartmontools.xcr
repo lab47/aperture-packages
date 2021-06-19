@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "smartmontools",
   version: "7.2",
+  description: "SMART hard drive monitoring",
+  url: "https://www.smartmontools.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

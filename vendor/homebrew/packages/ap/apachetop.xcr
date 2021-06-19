@@ -54,6 +54,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "adns" as i3, "nc
 pkg(
   name: "apachetop",
   version: "0.19.7",
+  description: "Top-like display of Apache log",
+  url: "https://web.archive.org/web/20170809160553/freecode.com/projects/apachetop",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

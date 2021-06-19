@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libarchive" as i1
 pkg(
   name: "archivemount",
   version: "0.9.1",
+  description: "File system for accessing archives using libarchive",
+  url: "https://www.cybernoia.de/software/archivemount.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

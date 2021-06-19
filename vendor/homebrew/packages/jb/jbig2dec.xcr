@@ -59,6 +59,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "jbig2dec",
   version: "0.19",
+  description: "JBIG2 decoder and library (for monochrome documents)",
+  url: "https://jbig2dec.com/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

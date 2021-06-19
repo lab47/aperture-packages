@@ -644,12 +644,18 @@ end
 
 import "homebrew-install" as hi
 
-import "abseil" as i0, "apache-arrow" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cmake" as i10, "curl" as i11, "cython" as i12, "doxygen" as i13, "expat" as i14, "flex" as i15, "gcc" as i16, "gdbm" as i17, "gettext" as i18, "gflags" as i19, "glog" as i20, "gmp" as i21, "grpc" as i22, "help2man" as i23, "icu4c" as i24, "isl" as i25, "jemalloc" as i26, "krb5" as i27, "libedit" as i28, "libev" as i29, "libffi" as i30, "libgit2" as i31, "libidn2" as i32, "libmpc" as i33, "libssh2" as i34, "libtool" as i35, "libunistring" as i36, "libxml2" as i37, "libyaml" as i38, "llvm" as i39, "lz4" as i40, "m4" as i41, "mpdecimal" as i42, "mpfr" as i43, "ncurses" as i44, "nghttp2" as i45, "ninja" as i46, "numpy" as i47, "openblas" as i48, "openldap" as i49, "openssl@1.1" as i50, "pcre" as i51, "perl" as i52, "pkg-config" as i53, "protobuf" as i54, "python-tabulate" as i55, "python@3.7" as i56, "python@3.8" as i57, "python@3.9" as i58, "rapidjson" as i59, "re2" as i60, "readline" as i61, "rtmpdump" as i62, "ruby" as i63, "rust" as i64, "six" as i65, "snappy" as i66, "sphinx-doc" as i67, "sqlite" as i68, "swig" as i69, "tcl-tk" as i70, "thrift" as i71, "unzip" as i72, "xz" as i73, "zip" as i74, "zlib" as i75, "zstd" as i76
+import "apache-arrow" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libgit2" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "protobuf" as i10, "python-tabulate" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "six" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "dvc",
   version: "2.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76],
+  description: "Git for data science projects",
+  url: "https://dvc.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dvc.rb"), formula)

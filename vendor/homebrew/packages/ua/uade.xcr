@@ -75,6 +75,12 @@ import "pkg-config" as i0, "libao" as i1
 pkg(
   name: "uade",
   version: "2.13",
+  description: "Play Amiga tunes through UAE emulation",
+  url: "https://zakalwe.fi/uade/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

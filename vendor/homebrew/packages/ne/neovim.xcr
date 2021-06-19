@@ -131,6 +131,12 @@ import "cmake" as i0, "luarocks" as i1, "pkg-config" as i2, "gettext" as i3, "li
 pkg(
   name: "neovim",
   version: "0.4.4",
+  description: "Ambitious Vim-fork focused on extensibility and agility",
+  url: "https://neovim.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

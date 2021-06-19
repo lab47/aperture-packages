@@ -48,6 +48,12 @@ import "gsl" as i0, "htslib" as i1
 pkg(
   name: "bcftools",
   version: "1.12",
+  description: "Tools for BCF/VCF files and variant calling from samtools",
+  url: "https://www.htslib.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

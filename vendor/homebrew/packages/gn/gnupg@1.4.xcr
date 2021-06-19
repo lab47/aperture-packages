@@ -103,6 +103,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnupg@1.4",
   version: "1.4.23",
+  description: "GNU Pretty Good Privacy (PGP) package",
+  url: "https://www.gnupg.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

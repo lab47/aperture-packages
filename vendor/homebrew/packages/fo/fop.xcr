@@ -70,6 +70,12 @@ import "openjdk" as i0
 pkg(
   name: "fop",
   version: "2.6",
+  description: "XSL-FO print formatter for making PDF or PS documents",
+  url: "https://xmlgraphics.apache.org/fop/index.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

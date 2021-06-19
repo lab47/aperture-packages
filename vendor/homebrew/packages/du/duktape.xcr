@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "duktape",
   version: "2.6.0",
+  description: "Embeddable Javascript engine with compact footprint",
+  url: "https://duktape.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

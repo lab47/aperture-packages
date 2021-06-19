@@ -28,6 +28,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-whatis",
   version: "1.0.0",
+  description: "Resolves abbreviations and aliases to Ruby versions",
+  url: "https://github.com/rkh/rbenv-whatis",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

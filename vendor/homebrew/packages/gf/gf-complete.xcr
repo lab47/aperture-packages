@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "gf-complete",
   version: "2.0",
+  description: "Comprehensive Library for Galois Field Arithmetic",
+  url: "https://web.archive.org/web/20191024182742/jerasure.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

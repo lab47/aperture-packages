@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pk
 pkg(
   name: "watch",
   version: "3.3.17",
+  description: "Executes a program periodically, showing output fullscreen",
+  url: "https://gitlab.com/procps-ng/procps",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

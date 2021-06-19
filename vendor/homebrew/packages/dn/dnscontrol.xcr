@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "dnscontrol",
   version: "3.9.0",
+  description: "It is system for maintaining DNS zones",
+  url: "https://github.com/StackExchange/dnscontrol",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

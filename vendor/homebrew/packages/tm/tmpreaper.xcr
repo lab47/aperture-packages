@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tmpreaper",
   version: "1.6.14",
+  description: "Clean up files in directories based on their age",
+  url: "https://packages.debian.org/sid/tmpreaper",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

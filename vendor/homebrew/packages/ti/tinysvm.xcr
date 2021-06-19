@@ -68,6 +68,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tinysvm",
   version: "0.09",
+  description: "Support vector machine library for pattern recognition",
+  url: "http://chasen.org/~taku/software/TinySVM/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

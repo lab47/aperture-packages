@@ -41,6 +41,12 @@ import "pkg-config" as i0, "libnfc" as i1, "libusb" as i2
 pkg(
   name: "mfcuk",
   version: "0.3.8",
+  description: "MiFare Classic Universal toolKit",
+  url: "https://github.com/nfc-tools/mfcuk",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "ipmitool",
   version: "1.8.18",
+  description: "Utility for IPMI control with kernel driver or LAN interface",
+  url: "https://github.com/ipmitool/ipmitool",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

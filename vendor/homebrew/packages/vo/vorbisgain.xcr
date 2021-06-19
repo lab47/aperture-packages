@@ -40,6 +40,12 @@ import "libogg" as i0, "libvorbis" as i1
 pkg(
   name: "vorbisgain",
   version: "0.37",
+  description: "Add Replay Gain volume tags to Ogg Vorbis files",
+  url: "https://sjeng.org/vorbisgain.html",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

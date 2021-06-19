@@ -202,12 +202,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cbc" as i1, "cgl" as i2, "clp" as i3, "cmake" as i4, "coinutils" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "m4" as i13, "mpdecimal" as i14, "mpfr" as i15, "ncurses" as i16, "openblas" as i17, "openssl@1.1" as i18, "osi" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28, "zstd" as i29
+import "bzip2" as i0, "cbc" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "snakemake",
   version: "6.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  description: "Pythonic workflow system",
+  url: "https://snakemake.readthedocs.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snakemake.rb"), formula)

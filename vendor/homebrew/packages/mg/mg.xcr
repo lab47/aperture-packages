@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mg",
   version: "6.8.1",
+  description: "Small Emacs-like editor",
+  url: "https://github.com/ibara/mg",
+  metadata: %{
+    "license": "Public Domain and ISC and Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

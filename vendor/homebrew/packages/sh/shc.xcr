@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shc",
   version: "4.0.3",
+  description: "Shell Script Compiler",
+  url: "https://neurobin.github.io/shc",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

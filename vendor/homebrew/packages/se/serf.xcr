@@ -52,6 +52,12 @@ import "go" as i0, "zip" as i1
 pkg(
   name: "serf",
   version: "0.9.5",
+  description: "Service orchestration and management tool",
+  url: "https://serfdom.io/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

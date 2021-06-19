@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mon",
   version: "1.2.3",
+  description: "Monitor hosts/services/whatever and alert about problems",
+  url: "https://github.com/visionmedia/mon",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

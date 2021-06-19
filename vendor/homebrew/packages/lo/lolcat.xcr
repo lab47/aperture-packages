@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lolcat",
   version: "100.0.1",
+  description: "Rainbows and unicorns in your console!",
+  url: "https://github.com/busyloop/lolcat",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

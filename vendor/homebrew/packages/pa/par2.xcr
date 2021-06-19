@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "par2",
   version: "0.8.1",
+  description: "Parchive: Parity Archive Volume Set for data recovery",
+  url: "https://github.com/Parchive/par2cmdline",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

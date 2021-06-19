@@ -63,6 +63,12 @@ import "texi2html" as i0, "texinfo" as i1, "emacs" as i2
 pkg(
   name: "proof-general",
   version: "4.4",
+  description: "Emacs-based generic interface for theorem provers",
+  url: "https://proofgeneral.github.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

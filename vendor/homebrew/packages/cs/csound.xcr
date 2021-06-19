@@ -161,6 +161,12 @@ import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "fltk" as i4, "
 pkg(
   name: "csound",
   version: "6.16.0",
+  description: "Sound and music computing system",
+  url: "https://csound.com",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
 
   def install(ctx) {

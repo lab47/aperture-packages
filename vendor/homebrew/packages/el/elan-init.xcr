@@ -66,6 +66,12 @@ import "rust" as i0, "coreutils" as i1, "gmp" as i2
 pkg(
   name: "elan-init",
   version: "1.0.6",
+  description: "Lean Theorem Prover installer and version manager",
+  url: "https://github.com/leanprover/elan",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

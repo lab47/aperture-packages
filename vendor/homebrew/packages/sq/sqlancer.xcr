@@ -52,6 +52,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "sqlancer",
   version: "1.1.0",
+  description: "Detecting Logic Bugs in DBMS",
+  url: "https://github.com/sqlancer/sqlancer",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

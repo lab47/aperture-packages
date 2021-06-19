@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "liblockfile",
   version: "1.17",
+  description: "Library providing functions to lock standard mailboxes",
+  url: "https://tracker.debian.org/pkg/liblockfile",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

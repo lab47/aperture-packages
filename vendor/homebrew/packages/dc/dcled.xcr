@@ -42,6 +42,12 @@ import "libhid" as i0, "libusb" as i1
 pkg(
   name: "dcled",
   version: "2.2",
+  description: "Linux driver for dream cheeky USB message board",
+  url: "https://www.jeffrika.com/~malakai/dcled/index.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -94,6 +94,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "bullet" as i3, "dbus" 
 pkg(
   name: "efl",
   version: "1.25.1",
+  description: "Enlightenment Foundation Libraries",
+  url: "https://www.enlightenment.org",
+  metadata: %{
+    "license": "GPL-2.0-only and LGPL-2.1-only and BSD-2-Clause and FTL and zlib-acknowledgement",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
 
   def install(ctx) {

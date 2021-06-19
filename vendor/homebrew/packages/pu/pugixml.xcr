@@ -62,6 +62,12 @@ import "cmake" as i0
 pkg(
   name: "pugixml",
   version: "1.11.4",
+  description: "Light-weight C++ XML processing library",
+  url: "https://pugixml.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

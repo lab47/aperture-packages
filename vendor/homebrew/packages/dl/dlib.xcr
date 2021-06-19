@@ -67,6 +67,12 @@ import "cmake" as i0, "jpeg" as i1, "libpng" as i2, "openblas" as i3
 pkg(
   name: "dlib",
   version: "19.22",
+  description: "C++ library for machine learning",
+  url: "http://dlib.net/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

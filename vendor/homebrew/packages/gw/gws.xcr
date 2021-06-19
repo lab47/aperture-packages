@@ -34,6 +34,12 @@ import "bash" as i0
 pkg(
   name: "gws",
   version: "0.2.0",
+  description: "Manage workspaces composed of git repositories",
+  url: "https://streakycobra.github.io/gws/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "cmake" as i0, "pkg-config" as i1, "fftw" as i2, "gnuplot" as i3, "jpeg" 
 pkg(
   name: "matplotplusplus",
   version: "1.1.0",
+  description: "C++ Graphics Library for Data Visualization",
+  url: "https://github.com/alandefreitas/matplotplusplus",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

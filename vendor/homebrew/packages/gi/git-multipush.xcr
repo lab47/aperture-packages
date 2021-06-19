@@ -41,6 +41,12 @@ import "asciidoc" as i0
 pkg(
   name: "git-multipush",
   version: "2.3",
+  description: "Push a branch to multiple remotes in one command",
+  url: "https://github.com/gavinbeatty/git-multipush",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

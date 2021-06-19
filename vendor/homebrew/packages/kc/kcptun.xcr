@@ -86,6 +86,12 @@ import "go" as i0
 pkg(
   name: "kcptun",
   version: "20210103",
+  description: "Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC",
+  url: "https://github.com/xtaci/kcptun",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

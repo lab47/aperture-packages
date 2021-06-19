@@ -60,6 +60,12 @@ import "go" as i0, "pkg-config" as i1, "fftw" as i2
 pkg(
   name: "mpdviz",
   version: "0.4.6",
+  description: "Standalone console MPD visualizer",
+  url: "https://github.com/lucy/mpdviz",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

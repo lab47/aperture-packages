@@ -61,6 +61,12 @@ import "cabal-install" as i0, "ghc@8.8" as i1
 pkg(
   name: "elm-format",
   version: "0.8.4",
+  description: "Elm source code formatter, inspired by gofmt",
+  url: "https://github.com/avh4/elm-format",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

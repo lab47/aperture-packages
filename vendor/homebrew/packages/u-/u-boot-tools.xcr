@@ -49,6 +49,12 @@ import "openssl@1.1" as i0, "bison" as i1, "flex" as i2
 pkg(
   name: "u-boot-tools",
   version: "2021.01",
+  description: "Universal boot loader",
+  url: "https://www.denx.de/wiki/U-Boot/",
+  metadata: %{
+    "license": "GPL-2.0-only and GPL-2.0-or-later and BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

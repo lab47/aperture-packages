@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ssed",
   version: "3.62",
+  description: "Super sed stream editor",
+  url: "https://sed.sourceforge.io/grabbag/ssed/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

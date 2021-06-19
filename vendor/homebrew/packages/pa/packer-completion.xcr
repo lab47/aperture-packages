@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "packer-completion",
   version: "1.4.3",
+  description: "Bash completion for Packer",
+  url: "https://github.com/mrolli/packer-bash-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

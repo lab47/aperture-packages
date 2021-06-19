@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "runcocoa",
   version: "20120108",
+  description: "Tools to run Cocoa/Objective-C and C code from the command-line",
+  url: "https://github.com/michaeltyson/Commandline-Cocoa",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

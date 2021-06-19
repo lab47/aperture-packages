@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "platypus",
   version: "5.3",
+  description: "Create macOS applications from {Perl,Ruby,sh,Python} scripts",
+  url: "https://sveinbjorn.org/platypus",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

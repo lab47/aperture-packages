@@ -41,6 +41,12 @@ import "rust" as i0
 pkg(
   name: "angle-grinder",
   version: "0.16",
+  description: "Slice and dice log files on the command-line",
+  url: "https://github.com/rcoh/angle-grinder",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

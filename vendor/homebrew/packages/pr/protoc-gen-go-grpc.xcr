@@ -58,6 +58,12 @@ import "go" as i0, "protobuf" as i1
 pkg(
   name: "protoc-gen-go-grpc",
   version: "1.1.0",
+  description: "Protoc plugin that generates code for gRPC-Go clients",
+  url: "https://github.com/grpc/grpc-go",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

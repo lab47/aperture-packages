@@ -103,6 +103,12 @@ import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "erlang@22"
 pkg(
   name: "couchdb",
   version: "3.1.1",
+  description: "Apache CouchDB database server",
+  url: "https://couchdb.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

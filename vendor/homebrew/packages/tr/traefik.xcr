@@ -101,6 +101,12 @@ import "go" as i0, "go-bindata" as i1
 pkg(
   name: "traefik",
   version: "2.4.8",
+  description: "Modern reverse proxy",
+  url: "https://traefik.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

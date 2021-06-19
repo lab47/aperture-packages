@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pict",
   version: "3.7.1",
+  description: "Pairwise Independent Combinatorial Tool",
+  url: "https://github.com/Microsoft/pict/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

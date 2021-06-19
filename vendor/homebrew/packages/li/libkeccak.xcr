@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libkeccak",
   version: "1.2",
+  description: "Keccak-family hashing library",
+  url: "https://github.com/maandree/libkeccak",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sec",
   version: "2.9.0",
+  description: "Event correlation tool for event processing of various kinds",
+  url: "https://simple-evcorr.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

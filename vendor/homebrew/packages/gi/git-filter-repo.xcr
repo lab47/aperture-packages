@@ -44,12 +44,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "git" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pcre2" as i25, "pkg-config" as i26, "python@3.9" as i27, "readline" as i28, "rtmpdump" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
+import "python@3.9" as i0, "git" as i1
 
 pkg(
   name: "git-filter-repo",
   version: "2.32.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+  description: "Quickly rewrite git repository history",
+  url: "https://github.com/newren/git-filter-repo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-filter-repo.rb"), formula)

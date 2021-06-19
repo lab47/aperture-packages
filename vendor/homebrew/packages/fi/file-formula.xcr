@@ -70,6 +70,12 @@ import "libmagic" as i0
 pkg(
   name: "file-formula",
   version: "5.40",
+  description: "Utility to determine file types",
+  url: "https://darwinsys.com/file/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

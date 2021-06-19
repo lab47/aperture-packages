@@ -37,6 +37,12 @@ import "cmake" as i0, "geoip" as i1
 pkg(
   name: "subnetcalc",
   version: "2.4.18",
+  description: "IPv4/IPv6 subnet calculator",
+  url: "https://www.uni-due.de/~be0001/subnetcalc/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

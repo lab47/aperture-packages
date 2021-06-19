@@ -38,6 +38,12 @@ import "pkg-config" as i0, "libusb" as i1
 pkg(
   name: "lm4tools",
   version: "0.1.3",
+  description: "Tools for TI Stellaris Launchpad boards",
+  url: "https://github.com/utzig/lm4tools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

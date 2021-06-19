@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "go-md2man",
   version: "2.0.0",
+  description: "Converts markdown into roff (man pages)",
+  url: "https://github.com/cpuguy83/go-md2man",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

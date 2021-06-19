@@ -54,6 +54,12 @@ import "autoconf" as i0, "automake" as i1, "zlib" as i2
 pkg(
   name: "osmfilter",
   version: "0.9",
+  description: "Command-line tool to filter OpenStreetMap files for specific tags",
+  url: "https://wiki.openstreetmap.org/wiki/Osmfilter",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

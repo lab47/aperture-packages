@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "lolcode",
   version: "0.11.2",
+  description: "Esoteric programming language",
+  url: "http://www.lolcode.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

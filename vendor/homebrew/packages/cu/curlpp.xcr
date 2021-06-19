@@ -64,6 +64,12 @@ import "cmake" as i0, "curl" as i1
 pkg(
   name: "curlpp",
   version: "0.8.1",
+  description: "C++ wrapper for libcURL",
+  url: "https://www.curlpp.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "cmake" as i0
 pkg(
   name: "brotli",
   version: "1.0.9",
+  description: "Generic-purpose lossless compression algorithm by Google",
+  url: "https://github.com/google/brotli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

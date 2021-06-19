@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libbinio",
   version: "1.5",
+  description: "Binary I/O stream class library",
+  url: "https://adplug.github.io/libbinio/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

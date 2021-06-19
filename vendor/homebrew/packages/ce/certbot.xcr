@@ -188,12 +188,18 @@ end
 
 import "homebrew-install" as hi
 
-import "augeas" as i0, "bison" as i1, "brotli" as i2, "bzip2" as i3, "c-ares" as i4, "cmake" as i5, "curl" as i6, "dialog" as i7, "expat" as i8, "gdbm" as i9, "gettext" as i10, "jemalloc" as i11, "krb5" as i12, "libev" as i13, "libffi" as i14, "libidn2" as i15, "libssh2" as i16, "libunistring" as i17, "libxml2" as i18, "m4" as i19, "mpdecimal" as i20, "ncurses" as i21, "nghttp2" as i22, "ninja" as i23, "openldap" as i24, "openssl@1.1" as i25, "pkg-config" as i26, "python@3.9" as i27, "readline" as i28, "rtmpdump" as i29, "rust" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "zip" as i35, "zlib" as i36, "zstd" as i37
+import "augeas" as i0, "bzip2" as i1, "dialog" as i2, "expat" as i3, "gdbm" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "rust" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "certbot",
   version: "1.16.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37],
+  description: "Tool to obtain certs from Let's Encrypt and autoenable HTTPS",
+  url: "https://certbot.eff.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "certbot.rb"), formula)

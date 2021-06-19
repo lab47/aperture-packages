@@ -61,6 +61,12 @@ import "readline" as i0
 pkg(
   name: "tig",
   version: "2.5.4",
+  description: "Text interface for Git repositories",
+  url: "https://jonas.github.io/tig/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

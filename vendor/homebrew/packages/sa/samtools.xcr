@@ -43,6 +43,12 @@ import "htslib" as i0, "ncurses" as i1
 pkg(
   name: "samtools",
   version: "1.12",
+  description: "Tools for manipulating next-generation sequencing data",
+  url: "https://www.htslib.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

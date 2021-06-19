@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "avimetaedit",
   version: "1.0.2",
+  description: "Tool for embedding, validating, and exporting of AVI files metadata",
+  url: "https://mediaarea.net/AVIMetaEdit",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

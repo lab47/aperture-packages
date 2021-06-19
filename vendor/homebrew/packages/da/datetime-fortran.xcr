@@ -50,6 +50,12 @@ import "gcc" as i0
 pkg(
   name: "datetime-fortran",
   version: "1.7.0",
+  description: "Fortran time and date manipulation library",
+  url: "https://github.com/wavebitscientific/datetime-fortran",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "crystal" as i0, "libevent" as i1, "libyaml" as i2, "openssl@1.1" as i3
 pkg(
   name: "crystal-icr",
   version: "0.8.0",
+  description: "Interactive console for Crystal programming language",
+  url: "https://github.com/crystal-community/icr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

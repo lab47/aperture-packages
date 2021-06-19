@@ -58,6 +58,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "adwaita-icon-theme" as
 pkg(
   name: "gtranslator",
   version: "40.0",
+  description: "GNOME gettext PO file editor",
+  url: "https://wiki.gnome.org/Design/Apps/Translator",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

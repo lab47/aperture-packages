@@ -53,6 +53,12 @@ import "openjdk" as i0
 pkg(
   name: "asciidoctorj",
   version: "2.5.1",
+  description: "Java wrapper and bindings for Asciidoctor",
+  url: "https://github.com/asciidoctor/asciidoctorj",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

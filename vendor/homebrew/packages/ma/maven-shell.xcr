@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "maven-shell",
   version: "1.1.0",
+  description: "Shell for Maven",
+  url: "https://github.com/jdillon/mvnsh",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

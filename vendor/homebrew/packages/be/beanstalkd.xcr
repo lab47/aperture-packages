@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "beanstalkd",
   version: "1.12",
+  description: "Generic work queue originally designed to reduce web latency",
+  url: "https://beanstalkd.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

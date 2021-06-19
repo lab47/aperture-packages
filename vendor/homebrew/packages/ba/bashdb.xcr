@@ -49,6 +49,12 @@ import "bash" as i0
 pkg(
   name: "bashdb",
   version: "5.0-1.1.2",
+  description: "Bash shell debugger",
+  url: "https://bashdb.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

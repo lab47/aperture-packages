@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "darkstat",
   version: "3.0.719",
+  description: "Network traffic analyzer",
+  url: "https://unix4lyfe.org/darkstat/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

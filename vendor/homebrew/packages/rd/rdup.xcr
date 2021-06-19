@@ -49,6 +49,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "glib" as i3, "li
 pkg(
   name: "rdup",
   version: "1.1.15",
+  description: "Utility to create a file list suitable for making backups",
+  url: "https://github.com/miekg/rdup",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

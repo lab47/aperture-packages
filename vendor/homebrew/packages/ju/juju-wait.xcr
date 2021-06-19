@@ -43,12 +43,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "go" as i6, "juju" as i7, "libffi" as i8, "libtool" as i9, "libyaml" as i10, "m4" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "perl" as i15, "pkg-config" as i16, "python@3.9" as i17, "readline" as i18, "sqlite" as i19, "unzip" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "juju" as i3, "libffi" as i4, "libyaml" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "juju-wait",
   version: "2.8.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  description: "Juju plugin for waiting for deployments to settle",
+  url: "https://launchpad.net/juju-wait",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "juju-wait.rb"), formula)

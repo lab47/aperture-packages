@@ -96,6 +96,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "cucumber-cpp",
   version: "0.5",
+  description: "Support for writing Cucumber step definitions in C++",
+  url: "https://cucumber.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

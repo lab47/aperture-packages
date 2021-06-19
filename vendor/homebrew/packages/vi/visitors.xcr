@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "visitors",
   version: "0.7",
+  description: "Web server log analyzer",
+  url: "http://www.hping.org/visitors/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

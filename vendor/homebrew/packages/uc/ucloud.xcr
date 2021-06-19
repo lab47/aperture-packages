@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "ucloud",
   version: "0.1.35",
+  description: "Official tool for managing UCloud services",
+  url: "https://www.ucloud.cn",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

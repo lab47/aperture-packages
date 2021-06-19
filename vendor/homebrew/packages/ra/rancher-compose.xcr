@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "rancher-compose",
   version: "0.12.5",
+  description: "Docker Compose compatible client to deploy to Rancher",
+  url: "https://github.com/rancher/rancher-compose",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

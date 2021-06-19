@@ -78,6 +78,12 @@ import "go" as i0
 pkg(
   name: "nebula",
   version: "1.4.0",
+  description: "Scalable overlay networking tool for connecting computers anywhere",
+  url: "https://github.com/slackhq/nebula",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

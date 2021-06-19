@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bittwist",
   version: "2.0",
+  description: "Libcap-based Ethernet packet generator",
+  url: "https://bittwist.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

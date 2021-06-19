@@ -48,6 +48,12 @@ import "openjdk@8" as i0
 pkg(
   name: "app-engine-java",
   version: "1.9.83",
+  description: "Google App Engine for Java",
+  url: "https://cloud.google.com/appengine/docs/java/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

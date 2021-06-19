@@ -68,6 +68,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libmaxminddb" as i3
 pkg(
   name: "goaccess",
   version: "1.5",
+  description: "Log analyzer and interactive viewer for the Apache Webserver",
+  url: "https://goaccess.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

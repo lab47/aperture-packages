@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "cjdns",
   version: "21.1",
+  description: "Advanced mesh routing system with cryptographic addressing",
+  url: "https://github.com/cjdelisle/cjdns/",
+  metadata: %{
+    "license": "GPL-3.0-or-later and GPL-2.0-or-later and BSD-3-Clause and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

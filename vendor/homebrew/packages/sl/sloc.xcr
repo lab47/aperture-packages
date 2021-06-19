@@ -51,6 +51,12 @@ import "node" as i0
 pkg(
   name: "sloc",
   version: "0.2.1",
+  description: "Simple tool to count source lines of code",
+  url: "https://github.com/flosse/sloc#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

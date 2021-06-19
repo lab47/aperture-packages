@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "cloudflare-wrangler",
   version: "1.17.0",
+  description: "CLI tool for Cloudflare Workers",
+  url: "https://github.com/cloudflare/wrangler",
+  metadata: %{
+    "license": "Apache-2.0 or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

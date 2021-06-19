@@ -38,6 +38,12 @@ import "openjdk" as i0
 pkg(
   name: "cqlkit",
   version: "0.3.3",
+  description: "CLI tool to export Cassandra query as CSV and JSON format",
+  url: "https://github.com/tenmax/cqlkit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

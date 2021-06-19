@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kerl",
   version: "2.1.2",
+  description: "Easy building and installing of Erlang/OTP instances",
+  url: "https://github.com/kerl/kerl",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

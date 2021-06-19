@@ -33,6 +33,12 @@ import "openjdk" as i0
 pkg(
   name: "fmpp",
   version: "0.9.16",
+  description: "Text file preprocessing tool using FreeMarker templates",
+  url: "https://fmpp.sourceforge.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "flash",
   version: "2.7.2",
+  description: "Command-line script to flash SD card images of any kind",
+  url: "https://github.com/hypriot/flash",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

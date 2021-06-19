@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libxmp" as i1
 pkg(
   name: "xmp",
   version: "4.1.0",
+  description: "Command-line player for module music formats (MOD, S3M, IT, etc)",
+  url: "https://xmp.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

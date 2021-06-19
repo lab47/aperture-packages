@@ -55,6 +55,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "git-absorb",
   version: "0.6.6",
+  description: "Automatic git commit --fixup",
+  url: "https://github.com/tummychow/git-absorb",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "colormake",
   version: "0.9.20140503",
+  description: "Wrapper around make to colorize the output",
+  url: "https://github.com/pagekite/Colormake",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

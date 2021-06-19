@@ -51,6 +51,12 @@ import "docutils" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "libp
 pkg(
   name: "libdrm",
   version: "2.4.106",
+  description: "Library for accessing the direct rendering manager",
+  url: "https://dri.freedesktop.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

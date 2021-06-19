@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zzz",
   version: "1",
+  description: "Command-line tool to put Macs to sleep",
+  url: "https://github.com/Orc/Zzz",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

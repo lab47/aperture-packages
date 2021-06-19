@@ -59,6 +59,12 @@ import "pkg-config" as i0, "texinfo" as i1, "texinfo" as i2, "ghostscript" as i3
 pkg(
   name: "groff",
   version: "1.22.4",
+  description: "GNU troff text-formatting system",
+  url: "https://www.gnu.org/software/groff/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

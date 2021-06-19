@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "recutils",
   version: "1.8",
+  description: "Tools to work with human-editable, plain text data files",
+  url: "https://www.gnu.org/software/recutils/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "boost" as i3, "open
 pkg(
   name: "bulk_extractor",
   version: "1.5.5",
+  description: "Stream-based forensics tool",
+  url: "https://github.com/simsong/bulk_extractor/wiki",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

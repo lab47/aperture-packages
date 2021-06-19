@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fcitx-remote-for-osx",
   version: "0.3.0",
+  description: "Handle input method in command-line",
+  url: "https://github.com/xcodebuild/fcitx-remote-for-osx",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

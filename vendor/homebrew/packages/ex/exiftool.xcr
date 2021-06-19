@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "exiftool",
   version: "12.26",
+  description: "Perl lib for reading and writing EXIF metadata",
+  url: "https://exiftool.org",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

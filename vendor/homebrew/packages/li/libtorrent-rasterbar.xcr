@@ -95,12 +95,18 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "boost-python3" as i1, "bzip2" as i2, "cmake" as i3, "cython" as i4, "expat" as i5, "gcc" as i6, "gdbm" as i7, "gmp" as i8, "icu4c" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "m4" as i13, "mpdecimal" as i14, "mpfr" as i15, "ncurses" as i16, "numpy" as i17, "openblas" as i18, "openssl@1.1" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28, "zstd" as i29
+import "pkg-config" as i0, "boost" as i1, "boost-python3" as i2, "openssl@1.1" as i3, "python@3.9" as i4
 
 pkg(
   name: "libtorrent-rasterbar",
   version: "1.2.10",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  description: "C++ bittorrent library with Python bindings",
+  url: "https://www.libtorrent.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtorrent-rasterbar.rb"), formula)

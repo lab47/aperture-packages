@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scheme48",
   version: "1.9.2",
+  description: "Scheme byte-code interpreter",
+  url: "https://www.s48.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "genstats",
   version: "1.2",
+  description: "Generate statistics about stdin or textfiles",
+  url: "https://www.vanheusden.com/genstats/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

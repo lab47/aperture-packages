@@ -80,6 +80,12 @@ import "cmake" as i0, "doxygen" as i1
 pkg(
   name: "glm",
   version: "0.9.9.8",
+  description: "C++ mathematics library for graphics software",
+  url: "https://glm.g-truc.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

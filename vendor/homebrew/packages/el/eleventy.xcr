@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "eleventy",
   version: "0.12.1",
+  description: "Simpler static site generator",
+  url: "https://www.11ty.dev",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

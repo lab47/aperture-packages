@@ -43,6 +43,12 @@ import "openjdk" as i0
 pkg(
   name: "hapi-fhir-cli",
   version: "5.4.0",
+  description: "Command-line interface for the HAPI FHIR library",
+  url: "https://hapifhir.io/hapi-fhir/docs/tools/hapi_fhir_cli.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

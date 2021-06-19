@@ -44,6 +44,12 @@ import "boost" as i0, "cmake" as i1
 pkg(
   name: "clfft",
   version: "2.12.2",
+  description: "FFT functions written in OpenCL",
+  url: "https://github.com/clMathLibraries/clFFT",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -105,12 +105,18 @@ end
 
 import "homebrew-install" as hi
 
-import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "berkeley-db" as i7, "bison" as i8, "boost" as i9, "brotli" as i10, "bzip2" as i11, "c-ares" as i12, "cairo" as i13, "cargo-c" as i14, "cmake" as i15, "curl" as i16, "dav1d" as i17, "docbook" as i18, "docbook-xsl" as i19, "doxygen" as i20, "expat" as i21, "ffmpeg" as i22, "flac" as i23, "flex" as i24, "fontconfig" as i25, "freetype" as i26, "frei0r" as i27, "fribidi" as i28, "gdbm" as i29, "gettext" as i30, "giflib" as i31, "glib" as i32, "gmp" as i33, "gnu-getopt" as i34, "gnu-sed" as i35, "gnutls" as i36, "gobject-introspection" as i37, "gperf" as i38, "graphite2" as i39, "guile" as i40, "harfbuzz" as i41, "help2man" as i42, "icu4c" as i43, "jemalloc" as i44, "jpeg" as i45, "krb5" as i46, "lame" as i47, "leptonica" as i48, "libass" as i49, "libatomic_ops" as i50, "libbluray" as i51, "libev" as i52, "libevent" as i53, "libffi" as i54, "libgcrypt" as i55, "libgit2" as i56, "libgpg-error" as i57, "libidn2" as i58, "libogg" as i59, "libpng" as i60, "libpthread-stubs" as i61, "libsamplerate" as i62, "libsndfile" as i63, "libsodium" as i64, "libsoxr" as i65, "libssh2" as i66, "libtasn1" as i67, "libtiff" as i68, "libtool" as i69, "libunistring" as i70, "libvidstab" as i71, "libvorbis" as i72, "libvpx" as i73, "libx11" as i74, "libxau" as i75, "libxcb" as i76, "libxdmcp" as i77, "libxext" as i78, "libxml2" as i79, "libxrender" as i80, "libxslt" as i81, "little-cms2" as i82, "lzo" as i83, "m4" as i84, "meson" as i85, "mpdecimal" as i86, "nasm" as i87, "ncurses" as i88, "nettle" as i89, "nghttp2" as i90, "ninja" as i91, "opencore-amr" as i92, "openjpeg" as i93, "openldap" as i94, "openssl@1.1" as i95, "opus" as i96, "p11-kit" as i97, "pcre" as i98, "perl" as i99, "pixman" as i100, "pkg-config" as i101, "python@3.9" as i102, "rav1e" as i103, "readline" as i104, "rtmpdump" as i105, "rubberband" as i106, "rust" as i107, "sdl2" as i108, "snappy" as i109, "source-highlight" as i110, "speex" as i111, "sphinx-doc" as i112, "sqlite" as i113, "srt" as i114, "tesseract" as i115, "theora" as i116, "unbound" as i117, "unzip" as i118, "util-macros" as i119, "webp" as i120, "x264" as i121, "x265" as i122, "xcb-proto" as i123, "xmlto" as i124, "xorgproto" as i125, "xtrans" as i126, "xvid" as i127, "xz" as i128, "yasm" as i129, "zeromq" as i130, "zimg" as i131, "zip" as i132, "zlib" as i133, "zstd" as i134
+import "ffmpeg" as i0, "python@3.9" as i1, "rtmpdump" as i2, "libxslt" as i3
 
 pkg(
   name: "yle-dl",
   version: "20210502",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131, i132, i133, i134],
+  description: "Download Yle videos from the command-line",
+  url: "https://aajanki.github.io/yle-dl/index-en.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "yle-dl.rb"), formula)

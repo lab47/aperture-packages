@@ -96,6 +96,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "skktools",
   version: "1.3.4",
+  description: "SKK dictionary maintenance tools",
+  url: "https://github.com/skk-dev/skktools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

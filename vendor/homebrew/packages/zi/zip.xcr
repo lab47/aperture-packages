@@ -45,9 +45,6 @@ class Zip < Formula
   end
 
   def install
-    if OS.mac?
-      system "make", "-f", "unix/Makefile", "CC=#{ENV.cc} -Wno-implicit-function-declaration", "flags"
-    end
     system "make", "-f", "unix/Makefile", "CC=#{ENV.cc}", "generic"
     system "make", "-f", "unix/Makefile", "BINDIR=#{bin}", "MANDIR=#{man1}", "install"
   end
@@ -81,6 +78,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zip",
   version: "3.0",
+  description: "Compression and file packaging/archive utility",
+  url: "https://infozip.sourceforge.io/Zip.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

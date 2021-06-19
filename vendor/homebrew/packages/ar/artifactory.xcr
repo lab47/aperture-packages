@@ -72,6 +72,12 @@ import "openjdk" as i0
 pkg(
   name: "artifactory",
   version: "6.23.21",
+  description: "Manages binaries",
+  url: "https://www.jfrog.com/artifactory/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

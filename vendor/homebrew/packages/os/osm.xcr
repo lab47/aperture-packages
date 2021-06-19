@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "osm",
   version: "0.8.4",
+  description: "Open Service Mesh (OSM)",
+  url: "https://openservicemesh.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

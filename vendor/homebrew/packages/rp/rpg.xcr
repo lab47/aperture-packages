@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rpg",
   version: "0.3.0",
+  description: "Ruby package management for UNIX",
+  url: "https://github.com/rtomayko/rpg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

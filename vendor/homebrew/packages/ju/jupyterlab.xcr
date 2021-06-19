@@ -404,12 +404,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "boost" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cabal-install" as i9, "cmake" as i10, "docbook" as i11, "docbook-xsl" as i12, "expat" as i13, "expect" as i14, "gdbm" as i15, "ghc" as i16, "gnu-getopt" as i17, "icu4c" as i18, "ipython" as i19, "jemalloc" as i20, "libev" as i21, "libffi" as i22, "libgcrypt" as i23, "libgpg-error" as i24, "libsodium" as i25, "libtool" as i26, "libuv" as i27, "libxml2" as i28, "libxslt" as i29, "m4" as i30, "mpdecimal" as i31, "ncurses" as i32, "nghttp2" as i33, "ninja" as i34, "node" as i35, "openssl@1.1" as i36, "pandoc" as i37, "perl" as i38, "pkg-config" as i39, "python@3.9" as i40, "readline" as i41, "source-highlight" as i42, "sphinx-doc" as i43, "sqlite" as i44, "tcl-tk" as i45, "unzip" as i46, "xmlto" as i47, "xz" as i48, "zeromq" as i49, "zip" as i50, "zlib" as i51
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "ipython" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "node" as i7, "openssl@1.1" as i8, "pandoc" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zeromq" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "jupyterlab",
   version: "3.0.16",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51],
+  description: "Interactive environments for writing and running code",
+  url: "https://jupyter.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jupyterlab.rb"), formula)

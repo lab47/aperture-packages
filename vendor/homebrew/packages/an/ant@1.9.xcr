@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ant@1.9",
   version: "1.9.15",
+  description: "Java build tool",
+  url: "https://ant.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

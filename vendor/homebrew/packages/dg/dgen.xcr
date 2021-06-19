@@ -58,6 +58,12 @@ import "libarchive" as i0, "sdl" as i1
 pkg(
   name: "dgen",
   version: "1.33",
+  description: "Sega Genesis / Mega Drive emulator",
+  url: "https://dgen.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

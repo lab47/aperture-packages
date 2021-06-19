@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "c14-cli",
   version: "0.5.0",
+  description: "Manage your Online C14 archives from the command-line",
+  url: "https://github.com/scaleway/c14-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

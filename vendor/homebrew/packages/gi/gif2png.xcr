@@ -35,6 +35,12 @@ import "libpng" as i0
 pkg(
   name: "gif2png",
   version: "2.5.13",
+  description: "Convert GIFs to PNGs",
+  url: "http://www.catb.org/~esr/gif2png/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

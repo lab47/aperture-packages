@@ -90,6 +90,12 @@ import "ncurses" as i0, "pcre" as i1, "texinfo" as i2
 pkg(
   name: "zsh",
   version: "5.8",
+  description: "UNIX shell (command interpreter)",
+  url: "https://www.zsh.org/",
+  metadata: %{
+    "license": "MIT-Modern-Variant",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

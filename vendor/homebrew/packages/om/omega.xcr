@@ -42,6 +42,12 @@ import "pkg-config" as i0, "libmagic" as i1, "pcre" as i2, "xapian" as i3
 pkg(
   name: "omega",
   version: "1.4.17",
+  description: "Packaged search engine for websites, built on top of Xapian",
+  url: "https://xapian.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

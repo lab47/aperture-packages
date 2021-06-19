@@ -36,6 +36,12 @@ import "bash" as i0, "jq" as i1, "terminal-notifier" as i2, "curl" as i3
 pkg(
   name: "imgur-screenshot",
   version: "2.0.0",
+  description: "Take screenshot selection, upload to imgur. + more cool things",
+  url: "https://github.com/jomo/imgur-screenshot",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

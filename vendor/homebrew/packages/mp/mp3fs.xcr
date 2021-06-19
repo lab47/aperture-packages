@@ -45,6 +45,12 @@ import "pkg-config" as i0, "flac" as i1, "lame" as i2, "libid3tag" as i3, "libvo
 pkg(
   name: "mp3fs",
   version: "1.0",
+  description: "Read-only FUSE file system: transcodes audio formats to MP3",
+  url: "https://khenriks.github.io/mp3fs/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

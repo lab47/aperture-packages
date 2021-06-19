@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "gofabric8",
   version: "0.4.176",
+  description: "CLI for fabric8 running on Kubernetes or OpenShift",
+  url: "https://github.com/fabric8io/gofabric8/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

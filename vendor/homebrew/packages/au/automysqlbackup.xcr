@@ -79,6 +79,12 @@ import "homebrew-install" as hi
 pkg(
   name: "automysqlbackup",
   version: "3.0-rc6",
+  description: "Automate MySQL backups",
+  url: "https://sourceforge.net/projects/automysqlbackup/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libyaml",
   version: "0.2.5",
+  description: "YAML Parser",
+  url: "https://github.com/yaml/libyaml",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

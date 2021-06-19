@@ -139,6 +139,12 @@ import "pkg-config" as i0, "fftw" as i1, "gtk+" as i2, "gtkglext" as i3, "gtksou
 pkg(
   name: "gwyddion",
   version: "2.58",
+  description: "Scanning Probe Microscopy visualization and analysis tool",
+  url: "http://gwyddion.net/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

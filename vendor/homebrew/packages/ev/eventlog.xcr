@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "eventlog",
   version: "0.2.13",
+  description: "Replacement for syslog API providing structure to messages",
+  url: "https://my.balabit.com/downloads/eventlog/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

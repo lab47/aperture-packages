@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "htpdate",
   version: "1.2.2",
+  description: "Synchronize time with remote web servers",
+  url: "http://www.vervest.org/htp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

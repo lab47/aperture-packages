@@ -48,6 +48,12 @@ import "maven" as i0, "openjdk@8" as i1
 pkg(
   name: "aws-apigateway-importer",
   version: "1.0.1",
+  description: "Create or update Amazon API Gateway APIs from a Swagger or RAML API",
+  url: "https://github.com/amazon-archives/aws-apigateway-importer",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

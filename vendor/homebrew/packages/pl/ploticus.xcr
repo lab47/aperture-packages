@@ -68,6 +68,12 @@ import "libpng" as i0
 pkg(
   name: "ploticus",
   version: "2.42",
+  description: "Scriptable plotting and graphing utility",
+  url: "https://ploticus.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

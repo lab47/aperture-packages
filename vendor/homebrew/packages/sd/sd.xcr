@@ -43,6 +43,12 @@ import "rust" as i0
 pkg(
   name: "sd",
   version: "0.7.6",
+  description: "Intuitive find & replace CLI",
+  url: "https://github.com/chmln/sd",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

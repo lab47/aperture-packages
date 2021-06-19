@@ -42,6 +42,12 @@ import "id3lib" as i0
 pkg(
   name: "id3v2",
   version: "0.1.12",
+  description: "Command-line editor",
+  url: "https://id3v2.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

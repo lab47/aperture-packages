@@ -30,6 +30,12 @@ import "pyenv" as i0
 pkg(
   name: "pyenv-virtualenvwrapper",
   version: "20140609",
+  description: "Alternative to pyenv for managing virtualenvs",
+  url: "https://github.com/pyenv/pyenv-virtualenvwrapper",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

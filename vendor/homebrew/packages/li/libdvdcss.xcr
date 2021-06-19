@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libdvdcss",
   version: "1.4.3",
+  description: "Access DVDs as block devices without the decryption",
+  url: "https://www.videolan.org/developers/libdvdcss.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

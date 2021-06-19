@@ -70,6 +70,12 @@ import "pkg-config" as i0, "libpng" as i1, "libsamplerate" as i2, "sdl2" as i3, 
 pkg(
   name: "chocolate-doom",
   version: "3.0.1",
+  description: "Accurate source port of Doom",
+  url: "https://www.chocolate-doom.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

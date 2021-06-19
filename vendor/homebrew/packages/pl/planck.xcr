@@ -45,6 +45,12 @@ import "clojure" as i0, "cmake" as i1, "pkg-config" as i2, "icu4c" as i3, "libzi
 pkg(
   name: "planck",
   version: "2.25.0",
+  description: "Stand-alone ClojureScript REPL",
+  url: "https://planck-repl.org/",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

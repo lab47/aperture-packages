@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kstart",
   version: "4.2",
+  description: "Modified version of kinit that can use keytabs to authenticate",
+  url: "https://www.eyrie.org/~eagle/software/kstart/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

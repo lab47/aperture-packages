@@ -59,6 +59,12 @@ import "pkg-config" as i0, "util-macros" as i1
 pkg(
   name: "xtrans",
   version: "1.4.0",
+  description: "X.Org: X Network Transport layer shared code",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

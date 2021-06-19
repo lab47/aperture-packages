@@ -44,6 +44,12 @@ import "pcre2" as i0, "ncurses" as i1
 pkg(
   name: "fdupes",
   version: "2.1.2",
+  description: "Identify or delete duplicate files",
+  url: "https://github.com/adrianlopezroche/fdupes",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

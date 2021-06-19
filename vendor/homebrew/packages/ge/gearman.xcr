@@ -95,6 +95,12 @@ import "pkg-config" as i0, "sphinx-doc" as i1, "boost" as i2, "libevent" as i3, 
 pkg(
   name: "gearman",
   version: "1.1.19.1",
+  description: "Application framework to farm out work to other machines or processes",
+  url: "http://gearman.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

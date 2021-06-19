@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "shapelib",
   version: "1.5.0",
+  description: "Library for reading and writing ArcView Shapefiles",
+  url: "http://shapelib.maptools.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

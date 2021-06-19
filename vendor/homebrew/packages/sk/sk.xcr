@@ -46,6 +46,12 @@ import "rust" as i0
 pkg(
   name: "sk",
   version: "0.9.4",
+  description: "Fuzzy Finder in rust!",
+  url: "https://github.com/lotabout/skim",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

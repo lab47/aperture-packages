@@ -55,6 +55,12 @@ import "go" as i0
 pkg(
   name: "git-appraise",
   version: "0.6",
+  description: "Distributed code review system for Git repos",
+  url: "https://github.com/google/git-appraise",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

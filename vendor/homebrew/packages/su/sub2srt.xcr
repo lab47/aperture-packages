@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sub2srt",
   version: "0.5.5",
+  description: "Convert subtitles from .sub to subviewer .srt format",
+  url: "https://github.com/robelix/sub2srt",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "pkg-config" as i0
 pkg(
   name: "confuse",
   version: "3.3",
+  description: "Configuration file parser library written in C",
+  url: "https://github.com/libconfuse/libconfuse",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

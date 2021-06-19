@@ -43,6 +43,12 @@ import "libusb-compat" as i0
 pkg(
   name: "bootloadhid",
   version: "2012-12-08",
+  description: "HID-based USB bootloader for AVR microcontrollers",
+  url: "https://www.obdev.at/products/vusb/bootloadhid.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

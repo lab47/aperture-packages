@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "kumo",
   version: "1.28",
+  description: "Word Clouds in Java",
+  url: "https://github.com/kennycason/kumo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

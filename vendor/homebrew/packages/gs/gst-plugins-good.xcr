@@ -67,6 +67,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "flac" a
 pkg(
   name: "gst-plugins-good",
   version: "1.18.4",
+  description: "GStreamer plugins (well-supported, under the LGPL)",
+  url: "https://gstreamer.freedesktop.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

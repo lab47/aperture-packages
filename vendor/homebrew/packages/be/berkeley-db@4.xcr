@@ -87,6 +87,12 @@ import "homebrew-install" as hi
 pkg(
   name: "berkeley-db@4",
   version: "4.8.30",
+  description: "High performance key/value database",
+  url: "https://www.oracle.com/database/technologies/related/berkeleydb.html",
+  metadata: %{
+    "license": "Sleepycat",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

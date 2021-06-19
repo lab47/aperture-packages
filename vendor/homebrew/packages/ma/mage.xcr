@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "mage",
   version: "1.11.0",
+  description: "Make/rake-like build tool using Go",
+  url: "https://magefile.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

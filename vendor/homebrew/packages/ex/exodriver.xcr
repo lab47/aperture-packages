@@ -42,6 +42,12 @@ import "libusb" as i0
 pkg(
   name: "exodriver",
   version: "2.6.0",
+  description: "Thin interface to LabJack devices",
+  url: "https://labjack.com/support/linux-and-mac-os-x-drivers",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docker-completion",
   version: "20.10.7",
+  description: "Bash, Zsh and Fish completion for Docker",
+  url: "https://www.docker.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "pkg-config" as i0, "libxcb" as i1
 pkg(
   name: "xcb-util-renderutil",
   version: "0.3.9",
+  description: "Convenience functions for the X Render extension",
+  url: "https://xcb.freedesktop.org",
+  metadata: %{
+    "license": "X11 and HPND-sell-variant",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "pkg-config" as i0, "gtkmm" as i1, "gtksourceview" as i2
 pkg(
   name: "gtksourceviewmm",
   version: "2.10.3",
+  description: "C++ bindings for gtksourceview",
+  url: "https://developer.gnome.org/gtksourceviewmm/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

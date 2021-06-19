@@ -111,6 +111,12 @@ import "gobject-introspection" as i0, "pkg-config" as i1, "gtk+3" as i2
 pkg(
   name: "amtk",
   version: "5.2.0",
+  description: "Actions, Menus and Toolbars Kit for GNOME",
+  url: "https://wiki.gnome.org/Projects/Amtk",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

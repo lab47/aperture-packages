@@ -262,6 +262,12 @@ import "zlib" as i0
 pkg(
   name: "gcc@4.9",
   version: "4.9.4",
+  description: "GNU Compiler Collection",
+  url: "https://gcc.gnu.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

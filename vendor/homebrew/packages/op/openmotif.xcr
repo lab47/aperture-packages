@@ -66,6 +66,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "
 pkg(
   name: "openmotif",
   version: "2.3.8",
+  description: "LGPL release of the Motif toolkit",
+  url: "https://motif.ics.com/motif",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

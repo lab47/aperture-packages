@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rolldice",
   version: "1.16",
+  description: "Rolls an amount of virtual dice",
+  url: "https://github.com/sstrickl/rolldice",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

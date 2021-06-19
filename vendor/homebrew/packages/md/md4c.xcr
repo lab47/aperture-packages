@@ -64,6 +64,12 @@ import "cmake" as i0
 pkg(
   name: "md4c",
   version: "0.4.8",
+  description: "C Markdown parser. Fast. SAX-like interface",
+  url: "https://github.com/mity/md4c",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

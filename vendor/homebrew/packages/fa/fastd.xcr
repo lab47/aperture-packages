@@ -53,6 +53,12 @@ import "bison" as i0, "cmake" as i1, "meson" as i2, "ninja" as i3, "pkg-config" 
 pkg(
   name: "fastd",
   version: "21",
+  description: "Fast and Secure Tunnelling Daemon",
+  url: "https://github.com/NeoRaider/fastd",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

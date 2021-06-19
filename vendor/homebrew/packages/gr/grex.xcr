@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "grex",
   version: "1.2.0",
+  description: "Command-line tool for generating regular expressions",
+  url: "https://github.com/pemistahl/grex",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

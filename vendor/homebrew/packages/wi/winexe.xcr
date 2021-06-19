@@ -77,6 +77,12 @@ import "autoconf" as i0, "pkg-config" as i1, "perl" as i2
 pkg(
   name: "winexe",
   version: "1.00",
+  description: "Remote Windows-command executor",
+  url: "https://sourceforge.net/projects/winexe/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "pkg-config" as i0, "sdl" as i1, "expat" as i2, "zlib" as i3
 pkg(
   name: "advancemenu",
   version: "3.9",
+  description: "Frontend for AdvanceMAME/MESS",
+  url: "https://www.advancemame.it/menu-readme.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "autossh",
   version: "1.4g",
+  description: "Automatically restart SSH sessions and tunnels",
+  url: "https://www.harding.motd.ca/autossh/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

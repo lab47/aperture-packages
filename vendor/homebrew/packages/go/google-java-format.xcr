@@ -35,6 +35,12 @@ import "openjdk" as i0
 pkg(
   name: "google-java-format",
   version: "1.10.0",
+  description: "Reformats Java source code to comply with Google Java Style",
+  url: "https://github.com/google/google-java-format",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

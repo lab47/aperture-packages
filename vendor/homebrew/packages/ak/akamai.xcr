@@ -33,6 +33,12 @@ import "go" as i0
 pkg(
   name: "akamai",
   version: "1.2.1",
+  description: "CLI toolkit for working with Akamai's APIs",
+  url: "https://github.com/akamai/cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

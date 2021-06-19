@@ -96,6 +96,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sdl",
   version: "1.2.15",
+  description: "Low-level access to audio, keyboard, mouse, joystick and graphics",
+  url: "https://www.libsdl.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

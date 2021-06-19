@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "montage",
   version: "4.0",
+  description: "Toolkit for assembling FITS images into custom mosaics",
+  url: "http://montage.ipac.caltech.edu",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

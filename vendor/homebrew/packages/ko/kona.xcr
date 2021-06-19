@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kona",
   version: "20201009",
+  description: "Open-source implementation of the K programming language",
+  url: "https://github.com/kevinlawler/kona",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "m4" as i0
 pkg(
   name: "autoconf@2.13",
   version: "2.13",
+  description: "Automatic configure script builder",
+  url: "https://www.gnu.org/software/autoconf/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

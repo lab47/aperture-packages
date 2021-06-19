@@ -70,6 +70,12 @@ import "cmake" as i0, "flint" as i1, "gmp" as i2, "mpfr" as i3
 pkg(
   name: "arb",
   version: "2.19.0",
+  description: "C library for arbitrary-precision interval arithmetic",
+  url: "https://arblib.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

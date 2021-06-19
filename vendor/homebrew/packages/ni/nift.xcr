@@ -38,6 +38,12 @@ import "luajit-openresty" as i0
 pkg(
   name: "nift",
   version: "2.4.12",
+  description: "Cross-platform open source framework for managing and generating websites",
+  url: "https://nift.dev/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

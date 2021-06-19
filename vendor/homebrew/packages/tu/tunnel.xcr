@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "tunnel",
   version: "0.5.15",
+  description: "Expose local servers to the internet securely",
+  url: "https://tunnel.labstack.com/docs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

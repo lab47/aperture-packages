@@ -63,6 +63,12 @@ import "boost" as i0, "cmake" as i1, "doxygen" as i2, "pkg-config" as i3, "fontc
 pkg(
   name: "forge",
   version: "1.0.7",
+  description: "High Performance Visualization",
+  url: "https://github.com/arrayfire/forge",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

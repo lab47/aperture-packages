@@ -87,6 +87,12 @@ import "openssl@1.1" as i0, "pcre" as i1
 pkg(
   name: "haproxy",
   version: "2.4.0",
+  description: "Reliable, high performance TCP/HTTP load balancer",
+  url: "https://www.haproxy.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later with openvpn-openssl-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

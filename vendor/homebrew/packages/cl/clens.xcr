@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clens",
   version: "0.7.0",
+  description: "Library to help port code from OpenBSD to other operating systems",
+  url: "https://github.com/conformal/clens",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

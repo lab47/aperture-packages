@@ -36,6 +36,12 @@ import "cmake" as i0
 pkg(
   name: "clblast",
   version: "1.5.2",
+  description: "Tuned OpenCL BLAS library",
+  url: "https://github.com/CNugteren/CLBlast",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "libpcap" as i0
 pkg(
   name: "httpry",
   version: "0.1.8",
+  description: "Packet sniffer for displaying and logging HTTP traffic",
+  url: "https://github.com/jbittel/httpry",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

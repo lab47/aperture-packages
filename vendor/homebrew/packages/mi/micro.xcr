@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "micro",
   version: "2.0.9",
+  description: "Modern and intuitive terminal-based text editor",
+  url: "https://github.com/zyedidia/micro",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

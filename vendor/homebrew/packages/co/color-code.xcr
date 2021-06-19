@@ -37,6 +37,12 @@ import "qt@5" as i0
 pkg(
   name: "color-code",
   version: "0.8.5",
+  description: "Free advanced MasterMind clone",
+  url: "http://colorcode.laebisch.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

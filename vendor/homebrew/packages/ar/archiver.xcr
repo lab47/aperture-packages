@@ -55,6 +55,12 @@ import "go" as i0
 pkg(
   name: "archiver",
   version: "3.5.0",
+  description: "Cross-platform, multi-format archive utility",
+  url: "https://github.com/mholt/archiver",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -91,6 +91,12 @@ import "cmake" as i0, "luarocks" as i1, "ffmpeg" as i2, "freetype" as i3, "lua@5
 pkg(
   name: "corsixth",
   version: "0.64",
+  description: "Open source clone of Theme Hospital",
+  url: "https://github.com/CorsixTH/CorsixTH",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

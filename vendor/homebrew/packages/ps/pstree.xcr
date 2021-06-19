@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pstree",
   version: "2.39",
+  description: "Show ps output as a tree",
+  url: "http://www.thp.uni-duisburg.de/pstree/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

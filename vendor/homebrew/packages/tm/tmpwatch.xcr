@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tmpwatch",
   version: "2.11",
+  description: "Find and remove files not accessed in a specified time",
+  url: "https://pagure.io/tmpwatch",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

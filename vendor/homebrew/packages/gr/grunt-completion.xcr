@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "grunt-completion",
   version: "1.4.3",
+  description: "Bash and Zsh completion for Grunt",
+  url: "https://gruntjs.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

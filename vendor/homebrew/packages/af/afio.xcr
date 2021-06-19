@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "afio",
   version: "2.5.2",
+  description: "Creates cpio-format archives",
+  url: "https://github.com/kholtman/afio",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

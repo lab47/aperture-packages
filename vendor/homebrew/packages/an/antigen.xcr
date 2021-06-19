@@ -35,6 +35,12 @@ import "zsh" as i0
 pkg(
   name: "antigen",
   version: "2.2.3",
+  description: "Plugin manager for zsh, inspired by oh-my-zsh and vundle",
+  url: "https://antigen.sharats.me/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

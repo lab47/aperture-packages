@@ -153,6 +153,12 @@ import "pkg-config" as i0, "json-c" as i1, "libsndfile" as i2, "libsoxr" as i3, 
 pkg(
   name: "pulseaudio",
   version: "14.2",
+  description: "Sound system for POSIX OSes",
+  url: "https://wiki.freedesktop.org/www/Software/PulseAudio/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later and BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

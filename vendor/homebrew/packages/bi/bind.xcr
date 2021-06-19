@@ -142,12 +142,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "gettext" as i7, "json-c" as i8, "libffi" as i9, "libidn2" as i10, "libtool" as i11, "libunistring" as i12, "libuv" as i13, "libxml2" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
+import "pkg-config" as i0, "json-c" as i1, "libidn2" as i2, "libuv" as i3, "openssl@1.1" as i4, "python@3.9" as i5
 
 pkg(
   name: "bind",
   version: "9.16.16",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
+  description: "Implementation of the DNS protocols",
+  url: "https://www.isc.org/bind/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bind.rb"), formula)

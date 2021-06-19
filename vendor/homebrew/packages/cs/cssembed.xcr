@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cssembed",
   version: "0.4.5",
+  description: "Automatic data URI embedding in CSS files",
+  url: "https://www.nczonline.net/blog/2009/11/03/automatic-data-uri-embedding-in-css-files/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

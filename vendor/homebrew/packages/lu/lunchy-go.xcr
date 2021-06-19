@@ -65,6 +65,12 @@ import "go" as i0
 pkg(
   name: "lunchy-go",
   version: "0.2.1",
+  description: "Friendly wrapper for launchctl",
+  url: "https://github.com/sosedoff/lunchy-go",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

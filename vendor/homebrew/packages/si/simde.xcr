@@ -53,6 +53,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "simde",
   version: "0.7.2",
+  description: "Implementations of SIMD intrinsics for systems which don't natively support them",
+  url: "https://github.com/simd-everywhere/simde",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

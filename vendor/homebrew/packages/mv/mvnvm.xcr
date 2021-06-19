@@ -61,6 +61,12 @@ import "openjdk" as i0
 pkg(
   name: "mvnvm",
   version: "1.0.15",
+  description: "Maven version manager",
+  url: "https://mvnvm.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

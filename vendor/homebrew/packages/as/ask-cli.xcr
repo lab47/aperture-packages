@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "ask-cli",
   version: "2.22.4",
+  description: "CLI tool for Alexa Skill Kit",
+  url: "https://www.npmjs.com/package/ask-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

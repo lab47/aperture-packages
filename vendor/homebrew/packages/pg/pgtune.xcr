@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pgtune",
   version: "0.9.3",
+  description: "Tuning wizard for postgresql.conf",
+  url: "https://web.archive.org/web/20190717075914/pgfoundry.org/projects/pgtune",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

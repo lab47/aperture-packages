@@ -51,12 +51,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libssh2" as i17, "libtool" as i18, "libunistring" as i19, "libxml2" as i20, "libyaml" as i21, "m4" as i22, "mpdecimal" as i23, "ncurses" as i24, "nghttp2" as i25, "ninja" as i26, "openldap" as i27, "openssl@1.1" as i28, "pcre" as i29, "perl" as i30, "pkg-config" as i31, "python@3.9" as i32, "readline" as i33, "rtmpdump" as i34, "ruby" as i35, "sphinx-doc" as i36, "sqlite" as i37, "swig" as i38, "unzip" as i39, "xz" as i40, "zip" as i41, "zlib" as i42, "zstd" as i43
+import "bzip2" as i0, "curl" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "swig" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "osc",
   version: "0.173.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
+  description: "Command-line interface to work with an Open Build Service",
+  url: "https://openbuildservice.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osc.rb"), formula)

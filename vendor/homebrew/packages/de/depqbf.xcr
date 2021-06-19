@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "depqbf",
   version: "6.03",
+  description: "Solver for quantified boolean formulae (QBF)",
+  url: "https://lonsing.github.io/depqbf/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gvp",
   version: "0.3.0",
+  description: "Go versioning packager",
+  url: "https://github.com/pote/gvp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

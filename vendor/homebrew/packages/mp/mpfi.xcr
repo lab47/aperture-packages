@@ -62,6 +62,12 @@ import "gmp" as i0, "mpfr" as i1
 pkg(
   name: "mpfi",
   version: "1.5.3",
+  description: "Multiple precision interval arithmetic library",
+  url: "https://perso.ens-lyon.fr/nathalie.revol/software.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

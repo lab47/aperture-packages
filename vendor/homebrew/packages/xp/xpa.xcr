@@ -38,6 +38,12 @@ import "libxt" as i0
 pkg(
   name: "xpa",
   version: "2.1.20",
+  description: "Seamless communication between Unix programs",
+  url: "https://hea-www.harvard.edu/RD/xpa/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

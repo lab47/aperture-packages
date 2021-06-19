@@ -43,6 +43,12 @@ import "node@14" as i0, "openjdk" as i1
 pkg(
   name: "jhipster",
   version: "7.0.1",
+  description: "Generate, develop and deploy Spring Boot + Angular/React applications",
+  url: "https://www.jhipster.tech/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

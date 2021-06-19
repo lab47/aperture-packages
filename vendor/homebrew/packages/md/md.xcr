@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "md",
   version: "147",
+  description: "Process raw dependency files produced by cpp",
+  url: "https://opensource.apple.com/source/adv_cmds/adv_cmds-147/md/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "scons" as i0, "open-mpi" as i1
 pkg(
   name: "bsponmpi",
   version: "0.3",
+  description: "Implements the BSPlib standard on top of MPI",
+  url: "https://sourceforge.net/projects/bsponmpi/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

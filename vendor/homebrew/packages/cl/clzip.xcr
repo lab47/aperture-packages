@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clzip",
   version: "1.11",
+  description: "C language version of lzip",
+  url: "https://www.nongnu.org/lzip/clzip.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "bmake" as i0
 pkg(
   name: "kcgi",
   version: "0.12.5",
+  description: "Minimal CGI and FastCGI library for C/C++",
+  url: "https://kristaps.bsd.lv/kcgi",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

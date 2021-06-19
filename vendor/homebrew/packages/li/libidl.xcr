@@ -39,6 +39,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "bison" as i3, "flex" 
 pkg(
   name: "libidl",
   version: "0.8.14",
+  description: "Library for creating CORBA IDL files",
+  url: "https://ftp.acc.umu.se/pub/gnome/sources/libIDL/0.8/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

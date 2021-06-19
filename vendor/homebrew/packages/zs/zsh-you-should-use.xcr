@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-you-should-use",
   version: "1.7.3",
+  description: "ZSH plugin that reminds you to use existing aliases for commands you just typed",
+  url: "https://github.com/MichaelAquilina/zsh-you-should-use",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

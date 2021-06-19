@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "binkd",
   version: "1.0.4",
+  description: "TCP/IP FTN Mailer",
+  url: "https://2f.ru/binkd/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "readline" as i0
 pkg(
   name: "pdsh",
   version: "2.34",
+  description: "Efficient rsh-like utility, for using hosts in parallel",
+  url: "https://github.com/chaos/pdsh",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

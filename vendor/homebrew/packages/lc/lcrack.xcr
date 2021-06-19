@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lcrack",
   version: "20040914",
+  description: "Generic password cracker",
+  url: "https://packages.debian.org/sid/lcrack",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

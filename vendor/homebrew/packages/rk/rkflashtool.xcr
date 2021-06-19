@@ -43,6 +43,12 @@ import "pkg-config" as i0, "libusb" as i1
 pkg(
   name: "rkflashtool",
   version: "6.1",
+  description: "Tools for flashing Rockchip devices",
+  url: "https://sourceforge.net/projects/rkflashtool/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

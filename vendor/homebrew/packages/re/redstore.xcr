@@ -36,6 +36,12 @@ import "pkg-config" as i0, "redland" as i1
 pkg(
   name: "redstore",
   version: "0.5.4",
+  description: "Lightweight RDF triplestore powered by Redland",
+  url: "https://www.aelius.com/njh/redstore/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "gperf" as i0, "libmagic" as i1, "pcre" as i2, "ragel" as i3
 pkg(
   name: "ohcount",
   version: "4.0.0",
+  description: "Source code line counter",
+  url: "https://github.com/blackducksoftware/ohcount",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

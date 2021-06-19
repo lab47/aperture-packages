@@ -68,6 +68,12 @@ import "libtool" as i0
 pkg(
   name: "trafshow",
   version: "5.2.3",
+  description: "Continuous network traffic display",
+  url: "https://web.archive.org/web/20130707021442/soft.risp.ru/trafshow/index_en.shtml",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

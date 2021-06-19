@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "openslp",
   version: "2.0.0",
+  description: "Implementation of Service Location Protocol",
+  url: "http://www.openslp.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

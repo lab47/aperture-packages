@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lmdb",
   version: "0.9.29",
+  description: "Lightning memory-mapped database: key-value data store",
+  url: "https://symas.com/lmdb/",
+  metadata: %{
+    "license": "OLDAP-2.8",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

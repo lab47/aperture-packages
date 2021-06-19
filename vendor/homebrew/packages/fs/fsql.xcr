@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "fsql",
   version: "0.4.0",
+  description: "Search through your filesystem with SQL-esque queries",
+  url: "https://github.com/kashav/fsql",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

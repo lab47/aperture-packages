@@ -59,6 +59,12 @@ import "go" as i0
 pkg(
   name: "earthly",
   version: "0.5.16",
+  description: "Build automation tool for the container era",
+  url: "https://earthly.dev/",
+  metadata: %{
+    "license": "BUSL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

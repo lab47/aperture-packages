@@ -67,6 +67,12 @@ import "pkg-config" as i0, "curl" as i1, "zlib" as i2
 pkg(
   name: "media-info",
   version: "21.03",
+  description: "Unified display of technical and tag data for audio/video",
+  url: "https://mediaarea.net/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

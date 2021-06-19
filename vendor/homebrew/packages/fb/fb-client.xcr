@@ -70,12 +70,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "rtmpdump" as i27, "sphinx-doc" as i28, "sqlite" as i29, "unzip" as i30, "xz" as i31, "zip" as i32, "zlib" as i33, "zstd" as i34
+import "pkg-config" as i0, "curl" as i1, "python@3.9" as i2
 
 pkg(
   name: "fb-client",
   version: "2.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
+  description: "Shell-script client for https://paste.xinu.at",
+  url: "https://paste.xinu.at",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fb-client.rb"), formula)

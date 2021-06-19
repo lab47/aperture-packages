@@ -75,6 +75,12 @@ import "cmake" as i0, "bison" as i1, "flex" as i2, "libffi" as i3
 pkg(
   name: "never",
   version: "2.0.3",
+  description: "Statically typed, embedded functional programming language",
+  url: "https://never-lang.readthedocs.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

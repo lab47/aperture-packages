@@ -69,6 +69,12 @@ import "pkg-config" as i0, "libssh" as i1, "mysql-client" as i2, "openssl@1.1" a
 pkg(
   name: "hydra",
   version: "9.2",
+  description: "Network logon cracker which supports many services",
+  url: "https://github.com/vanhauser-thc/thc-hydra",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

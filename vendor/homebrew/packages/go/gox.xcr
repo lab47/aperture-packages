@@ -56,6 +56,12 @@ import "go" as i0
 pkg(
   name: "gox",
   version: "1.0.1",
+  description: "Go cross compile tool",
+  url: "https://github.com/mitchellh/gox",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

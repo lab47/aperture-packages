@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rzip",
   version: "2.1",
+  description: "File compression tool (like gzip or bzip2)",
+  url: "https://rzip.samba.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

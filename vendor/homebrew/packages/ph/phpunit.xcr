@@ -126,6 +126,12 @@ import "homebrew-install" as hi
 pkg(
   name: "phpunit",
   version: "9.5.5",
+  description: "Programmer-oriented testing framework for PHP",
+  url: "https://phpunit.de",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

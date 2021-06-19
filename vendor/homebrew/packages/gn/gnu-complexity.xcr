@@ -62,6 +62,12 @@ import "autogen" as i0
 pkg(
   name: "gnu-complexity",
   version: "1.10",
+  description: "Measures complexity of C source",
+  url: "https://www.gnu.org/software/complexity",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

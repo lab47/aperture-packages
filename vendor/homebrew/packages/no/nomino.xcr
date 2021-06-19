@@ -43,6 +43,12 @@ import "rust" as i0
 pkg(
   name: "nomino",
   version: "1.1.0",
+  description: "Batch rename utility",
+  url: "https://github.com/yaa110/nomino",
+  metadata: %{
+    "license": "Apache-2.0 or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

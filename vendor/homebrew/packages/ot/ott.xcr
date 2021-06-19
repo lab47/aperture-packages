@@ -46,6 +46,12 @@ import "ocaml" as i0
 pkg(
   name: "ott",
   version: "0.31",
+  description: "Tool for writing definitions of programming languages and calculi",
+  url: "https://www.cl.cam.ac.uk/~pes20/ott/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

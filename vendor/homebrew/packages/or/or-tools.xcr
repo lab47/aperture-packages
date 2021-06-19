@@ -69,6 +69,12 @@ import "cmake" as i0, "pkg-config" as i1, "abseil" as i2, "cbc" as i3, "cgl" as 
 pkg(
   name: "or-tools",
   version: "9.0",
+  description: "Google's Operations Research tools",
+  url: "https://developers.google.com/optimization/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cowsay",
   version: "3.04",
+  description: "Configurable talking characters in ASCII art",
+  url: "https://github.com/tnalpgge/rank-amateur-cowsay",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxinerama" as i2, "libxkbcommon" a
 pkg(
   name: "xdotool",
   version: "3.20160805.1",
+  description: "Fake keyboard/mouse input and window management for X",
+  url: "https://www.semicomplete.com/projects/xdotool/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

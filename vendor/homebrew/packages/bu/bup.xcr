@@ -35,12 +35,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cabal-install" as i1, "expat" as i2, "gdbm" as i3, "ghc" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pandoc" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "pandoc" as i0, "pkg-config" as i1, "python@3.9" as i2
 
 pkg(
   name: "bup",
   version: "0.32",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  description: "Backup tool",
+  url: "https://bup.github.io/",
+  metadata: %{
+    "license": "BSD-2-Clause and LGPL-2.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bup.rb"), formula)

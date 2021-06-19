@@ -56,6 +56,12 @@ import "pkg-config" as i0, "gtkmm3" as i1, "gtksourceview3" as i2
 pkg(
   name: "gtksourceviewmm3",
   version: "3.18.0",
+  description: "C++ bindings for gtksourceview3",
+  url: "https://developer.gnome.org/gtksourceviewmm/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

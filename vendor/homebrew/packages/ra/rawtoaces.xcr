@@ -53,6 +53,12 @@ import "cmake" as i0, "aces_container" as i1, "boost" as i2, "ceres-solver" as i
 pkg(
   name: "rawtoaces",
   version: "1.0",
+  description: "Utility for converting RAW to ACES",
+  url: "https://github.com/ampas/rawtoaces",
+  metadata: %{
+    "license": "AMPAS",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

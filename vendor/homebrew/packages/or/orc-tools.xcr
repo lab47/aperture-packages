@@ -34,6 +34,12 @@ import "openjdk" as i0
 pkg(
   name: "orc-tools",
   version: "1.6.7",
+  description: "ORC java command-line tools and utilities",
+  url: "https://orc.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

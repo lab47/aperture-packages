@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ios-class-guard",
   version: "0.8",
+  description: "Objective-C obfuscator for Mach-O executables",
+  url: "https://github.com/Polidea/ios-class-guard/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "exercism",
   version: "3.0.13",
+  description: "Command-line tool to interact with exercism.io",
+  url: "https://exercism.io/cli/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pcsc-lite",
   version: "1.9.1",
+  description: "Middleware to access a smart card using SCard API",
+  url: "https://pcsclite.apdu.fr/",
+  metadata: %{
+    "license": "BSD-3-Clause and GPL-3.0-or-later and ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

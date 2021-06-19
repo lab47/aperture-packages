@@ -31,6 +31,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-communal-gems",
   version: "1.0.1",
+  description: "Share gems across multiple rbenv Ruby installs",
+  url: "https://github.com/tpope/rbenv-communal-gems",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

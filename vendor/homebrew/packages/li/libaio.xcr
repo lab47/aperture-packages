@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libaio",
   version: "0.3.112",
+  description: "Linux-native asynchronous I/O access library",
+  url: "https://pagure.io/libaio",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

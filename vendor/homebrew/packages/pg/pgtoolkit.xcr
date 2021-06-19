@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pgtoolkit",
   version: "1.0.2",
+  description: "Tools for PostgreSQL maintenance",
+  url: "https://github.com/grayhemp/pgtoolkit",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

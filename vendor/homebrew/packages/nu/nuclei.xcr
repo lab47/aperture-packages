@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "nuclei",
   version: "2.3.8",
+  description: "HTTP/DNS scanner configurable via YAML templates",
+  url: "https://nuclei.projectdiscovery.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

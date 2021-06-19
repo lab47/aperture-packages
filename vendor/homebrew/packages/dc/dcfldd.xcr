@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dcfldd",
   version: "1.3.4-1",
+  description: "Enhanced version of dd for forensics and security",
+  url: "https://dcfldd.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

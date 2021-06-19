@@ -38,6 +38,12 @@ import "libdnet" as i0
 pkg(
   name: "tcpreplay",
   version: "4.3.3",
+  description: "Replay saved tcpdump files at arbitrary speeds",
+  url: "https://tcpreplay.appneta.com/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

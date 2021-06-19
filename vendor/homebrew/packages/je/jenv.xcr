@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jenv",
   version: "0.5.4",
+  description: "Manage your Java environment",
+  url: "https://www.jenv.be/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

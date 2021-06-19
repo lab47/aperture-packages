@@ -63,6 +63,12 @@ import "go" as i0
 pkg(
   name: "ethereum",
   version: "1.10.3",
+  description: "Official Go implementation of the Ethereum protocol",
+  url: "https://ethereum.github.io/go-ethereum/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

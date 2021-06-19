@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pit",
   version: "0.1.0",
+  description: "Project manager from hell (integrates with Git)",
+  url: "https://github.com/michaeldv/pit",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

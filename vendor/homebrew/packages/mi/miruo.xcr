@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "miruo",
   version: "0.9.6b",
+  description: "Pretty-print TCP session monitor/analyzer",
+  url: "https://github.com/KLab/miruo/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

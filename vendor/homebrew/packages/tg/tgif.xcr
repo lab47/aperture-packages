@@ -75,6 +75,12 @@ import "libice" as i0, "libidn" as i1, "libsm" as i2, "libx11" as i3, "libxext" 
 pkg(
   name: "tgif",
   version: "4.2.5",
+  description: "Xlib-based interactive 2D drawing tool",
+  url: "http://bourbon.usc.edu/tgif/",
+  metadata: %{
+    "license": "QPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

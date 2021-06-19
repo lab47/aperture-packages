@@ -75,6 +75,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "libpng" as i3
 pkg(
   name: "libharu",
   version: "2.3.0",
+  description: "Library for generating PDF files",
+  url: "https://github.com/libharu/libharu",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-completions",
   version: "0.33.0",
+  description: "Additional completion definitions for zsh",
+  url: "https://github.com/zsh-users/zsh-completions",
+  metadata: %{
+    "license": "MIT-Modern-Variant",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

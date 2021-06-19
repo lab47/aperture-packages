@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dnsmap",
   version: "0.30",
+  description: "Passive DNS network mapper (a.k.a. subdomains bruteforcer)",
+  url: "https://code.google.com/archive/p/dnsmap/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

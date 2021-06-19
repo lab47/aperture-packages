@@ -67,12 +67,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "double-conversion" as i10, "expat" as i11, "fmt" as i12, "folly" as i13, "gdbm" as i14, "gettext" as i15, "gflags" as i16, "glog" as i17, "googletest" as i18, "icu4c" as i19, "jemalloc" as i20, "krb5" as i21, "libev" as i22, "libevent" as i23, "libffi" as i24, "libidn2" as i25, "libssh2" as i26, "libtool" as i27, "libunistring" as i28, "libxml2" as i29, "lz4" as i30, "m4" as i31, "mpdecimal" as i32, "ncurses" as i33, "nghttp2" as i34, "ninja" as i35, "openldap" as i36, "openssl@1.1" as i37, "pcre" as i38, "perl" as i39, "pkg-config" as i40, "python@3.9" as i41, "readline" as i42, "rtmpdump" as i43, "rust" as i44, "snappy" as i45, "sphinx-doc" as i46, "sqlite" as i47, "unzip" as i48, "xz" as i49, "zip" as i50, "zlib" as i51, "zstd" as i52
+import "cmake" as i0, "googletest" as i1, "pkg-config" as i2, "rust" as i3, "boost" as i4, "fmt" as i5, "folly" as i6, "gflags" as i7, "glog" as i8, "libevent" as i9, "openssl@1.1" as i10, "pcre" as i11, "python@3.9" as i12
 
 pkg(
   name: "watchman",
   version: "2021.06.07.00",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52],
+  description: "Watch files and take action when they change",
+  url: "https://github.com/facebook/watchman",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "watchman.rb"), formula)

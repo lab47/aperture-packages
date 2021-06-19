@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "gopls",
   version: "0.7.0",
+  description: "Language server for the Go language",
+  url: "https://github.com/golang/tools/tree/master/gopls",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -62,6 +62,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "ffmpeg" as i3
 pkg(
   name: "ffms2",
   version: "2.40",
+  description: "Libav/ffmpeg based source library and Avisynth plugin",
+  url: "https://github.com/FFMS/ffms2",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

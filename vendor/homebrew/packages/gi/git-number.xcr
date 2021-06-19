@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-number",
   version: "1.0.1",
+  description: "Use numbers for dealing with files in git",
+  url: "https://github.com/holygeek/git-number",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

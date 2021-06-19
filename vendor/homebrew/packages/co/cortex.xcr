@@ -88,6 +88,12 @@ import "go" as i0
 pkg(
   name: "cortex",
   version: "1.9.0",
+  description: "Long term storage for Prometheus",
+  url: "https://cortexmetrics.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

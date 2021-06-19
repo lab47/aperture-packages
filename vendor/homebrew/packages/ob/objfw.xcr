@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "objfw",
   version: "0.90.2",
+  description: "Portable, lightweight framework for the Objective-C language",
+  url: "https://heap.zone/objfw/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "cmake" as i0
 pkg(
   name: "rp",
   version: "1.0",
+  description: "Tool to find ROP sequences in PE/Elf/Mach-O x86/x64 binaries",
+  url: "https://0vercl0k.github.io/rp/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

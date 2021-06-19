@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hilite",
   version: "1.5",
+  description: "CLI tool that runs a command and highlights STDERR output",
+  url: "https://sourceforge.net/projects/hilite/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "libdvdcss" as i0
 pkg(
   name: "libdvdread",
   version: "6.1.2",
+  description: "C library for reading DVD-video images",
+  url: "https://www.videolan.org/developers/libdvdnav.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

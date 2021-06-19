@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sqlite-analyzer",
   version: "3.35.5",
+  description: "Analyze how space is allocated inside an SQLite file",
+  url: "https://www.sqlite.org/",
+  metadata: %{
+    "license": "blessing",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

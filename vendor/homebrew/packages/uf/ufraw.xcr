@@ -62,6 +62,12 @@ import "pkg-config" as i0, "dcraw" as i1, "gettext" as i2, "glib" as i3, "jasper
 pkg(
   name: "ufraw",
   version: "0.22",
+  description: "Unidentified Flying RAW: RAW image processing utility",
+  url: "https://ufraw.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

@@ -101,12 +101,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "go" as i3, "libffi" as i4, "mage" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
+import "go" as i0, "mage" as i1, "python@3.9" as i2
 
 pkg(
   name: "heartbeat",
   version: "7.13.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  description: "Lightweight Shipper for Uptime Monitoring",
+  url: "https://www.elastic.co/beats/heartbeat",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "heartbeat.rb"), formula)

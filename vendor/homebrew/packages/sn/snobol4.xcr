@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "snobol4",
   version: "1.5",
+  description: "String oriented and symbolic programming language",
+  url: "https://www.snobol4.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

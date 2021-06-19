@@ -108,12 +108,18 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "bzip2" as i1, "cmake" as i2, "cython" as i3, "expat" as i4, "gcc" as i5, "gdbm" as i6, "gmp" as i7, "icu4c" as i8, "isl" as i9, "libffi" as i10, "libmpc" as i11, "m4" as i12, "mpdecimal" as i13, "mpfr" as i14, "ncurses" as i15, "numpy" as i16, "openblas" as i17, "openssl@1.1" as i18, "pkg-config" as i19, "python@3.9" as i20, "readline" as i21, "sphinx-doc" as i22, "sqlite" as i23, "unzip" as i24, "xz" as i25, "zip" as i26, "zlib" as i27, "zstd" as i28
+import "numpy" as i0, "boost" as i1, "python@3.9" as i2
 
 pkg(
   name: "boost-python3",
   version: "1.76.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
+  description: "C++ library for C++/Python3 interoperability",
+  url: "https://www.boost.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "boost-python3.rb"), formula)

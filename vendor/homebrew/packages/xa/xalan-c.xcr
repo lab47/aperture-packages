@@ -91,6 +91,12 @@ import "xerces-c" as i0
 pkg(
   name: "xalan-c",
   version: "1.11",
+  description: "XSLT processor",
+  url: "https://xalan.apache.org/xalan-c/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -187,12 +187,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libsodium" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "rtmpdump" as i28, "rust" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libsodium" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "rust" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "magic-wormhole",
   version: "0.12.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+  description: "Securely transfers data between computers",
+  url: "https://github.com/warner/magic-wormhole",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "magic-wormhole.rb"), formula)

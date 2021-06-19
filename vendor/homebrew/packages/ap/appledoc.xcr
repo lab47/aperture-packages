@@ -82,6 +82,12 @@ import "homebrew-install" as hi
 pkg(
   name: "appledoc",
   version: "2.2.1",
+  description: "Objective-C API documentation generator",
+  url: "http://appledoc.gentlebytes.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

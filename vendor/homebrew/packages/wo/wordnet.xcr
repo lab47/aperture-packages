@@ -55,6 +55,12 @@ import "tcl-tk" as i0
 pkg(
   name: "wordnet",
   version: "3.1",
+  description: "Lexical database for the English language",
+  url: "https://wordnet.princeton.edu/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

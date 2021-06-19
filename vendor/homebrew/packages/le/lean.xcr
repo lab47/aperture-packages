@@ -64,6 +64,12 @@ import "cmake" as i0, "coreutils" as i1, "gmp" as i2, "jemalloc" as i3
 pkg(
   name: "lean",
   version: "3.30.0",
+  description: "Theorem prover",
+  url: "https://leanprover-community.github.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

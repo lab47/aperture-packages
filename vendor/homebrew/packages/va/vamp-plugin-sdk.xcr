@@ -64,6 +64,12 @@ import "automake" as i0, "pkg-config" as i1, "flac" as i2, "libogg" as i3, "libs
 pkg(
   name: "vamp-plugin-sdk",
   version: "2.10.0",
+  description: "Audio processing plugin system sdk",
+  url: "https://www.vamp-plugins.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

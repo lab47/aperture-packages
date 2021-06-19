@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rinetd",
   version: "0.73",
+  description: "Internet TCP redirection server",
+  url: "https://github.com/samhocevar/rinetd",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "check" as i0, "pkg-config" as i1, "libevent" as i2, "libnet" as i3, "lib
 pkg(
   name: "sslsplit",
   version: "0.5.5",
+  description: "Man-in-the-middle attacks against SSL encrypted network connections",
+  url: "https://www.roe.ch/SSLsplit",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

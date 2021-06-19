@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "mill",
   version: "0.9.8",
+  description: "Scala build tool",
+  url: "https://com-lihaoyi.github.io/mill/mill/Intro_to_Mill.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

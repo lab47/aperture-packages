@@ -49,6 +49,12 @@ import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
 pkg(
   name: "shellcheck",
   version: "0.7.2",
+  description: "Static analysis and lint tool, for (ba)sh scripts",
+  url: "https://www.shellcheck.net/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

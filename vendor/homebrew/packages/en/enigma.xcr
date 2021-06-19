@@ -85,6 +85,12 @@ import "autoconf" as i0, "automake" as i1, "imagemagick" as i2, "pkg-config" as 
 pkg(
   name: "enigma",
   version: "1.21",
+  description: "Puzzle game inspired by Oxyd and Rock'n'Roll",
+  url: "https://www.nongnu.org/enigma/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

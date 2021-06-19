@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dropbox-uploader",
   version: "1.0",
+  description: "Bash script for interacting with Dropbox",
+  url: "https://www.andreafabrizi.it/2016/01/01/Dropbox-Uploader/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

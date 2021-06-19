@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "systemc",
   version: "2.3.2",
+  description: "Core SystemC language and examples",
+  url: "https://accellera.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

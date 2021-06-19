@@ -96,6 +96,12 @@ import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxau" as i3, "libxaw" a
 pkg(
   name: "ddd",
   version: "3.3.12",
+  description: "Graphical front-end for command-line debuggers",
+  url: "https://www.gnu.org/s/ddd/",
+  metadata: %{
+    "license": "GPL-3.0-only and GFDL-1.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

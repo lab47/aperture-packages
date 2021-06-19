@@ -38,6 +38,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libdmtx",
   version: "0.7.5",
+  description: "Data Matrix library",
+  url: "https://libdmtx.sourceforge.io",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

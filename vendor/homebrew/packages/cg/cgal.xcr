@@ -96,6 +96,12 @@ import "cmake" as i0, "qt@5" as i1, "boost" as i2, "eigen" as i3, "gmp" as i4, "
 pkg(
   name: "cgal",
   version: "5.2.2",
+  description: "Computational Geometry Algorithms Library",
+  url: "https://www.cgal.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

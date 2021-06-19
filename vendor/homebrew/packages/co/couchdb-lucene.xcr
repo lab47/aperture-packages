@@ -121,6 +121,12 @@ import "maven" as i0, "couchdb" as i1, "openjdk" as i2
 pkg(
   name: "couchdb-lucene",
   version: "2.1.0",
+  description: "Full-text search of CouchDB documents using Lucene",
+  url: "https://github.com/rnewson/couchdb-lucene",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

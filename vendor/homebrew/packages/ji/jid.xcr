@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "jid",
   version: "0.7.6",
+  description: "Json incremental digger",
+  url: "https://github.com/simeji/jid",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

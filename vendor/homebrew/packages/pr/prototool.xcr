@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "prototool",
   version: "1.10.0",
+  description: "Your Swiss Army Knife for Protocol Buffers",
+  url: "https://github.com/uber/prototool",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

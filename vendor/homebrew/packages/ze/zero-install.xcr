@@ -91,6 +91,12 @@ import "ocaml" as i0, "ocamlbuild" as i1, "opam" as i2, "pkg-config" as i3, "gnu
 pkg(
   name: "zero-install",
   version: "2.17",
+  description: "Decentralised cross-platform software installation system",
+  url: "https://0install.net/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

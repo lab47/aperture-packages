@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "marst",
   version: "2.7",
+  description: "Algol-to-C translator",
+  url: "https://www.gnu.org/software/marst",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

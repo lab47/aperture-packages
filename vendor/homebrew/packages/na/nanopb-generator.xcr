@@ -56,12 +56,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "protobuf" as i8, "python@3.7" as i9, "python@3.8" as i10, "python@3.9" as i11, "readline" as i12, "six" as i13, "sqlite" as i14, "tcl-tk" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "protobuf" as i0, "python@3.9" as i1
 
 pkg(
   name: "nanopb-generator",
   version: "0.4.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "C library for encoding and decoding Protocol Buffer messages",
+  url: "https://jpa.kapsi.fi/nanopb/docs/index.html",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nanopb-generator.rb"), formula)

@@ -54,6 +54,12 @@ import "counterfeiter" as i0, "go" as i1, "go-bindata" as i2, "mockery" as i3, "
 pkg(
   name: "eksctl",
   version: "0.53.0",
+  description: "Simple command-line tool for creating clusters on Amazon EKS",
+  url: "https://eksctl.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

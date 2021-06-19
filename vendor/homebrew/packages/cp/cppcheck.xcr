@@ -89,7 +89,7 @@ class Cppcheck < Formula
     sample_addon_file = testpath/"sampleaddon.py"
     sample_addon_file.write <<~EOS
       #!/usr/bin/env #{Formula["python@3.9"].opt_bin}/python3
-      """A simple test addon for #{name}, prints function names and token count"""
+      \"\"\"A simple test addon for #{name}, prints function names and token count\"\"\"
       import sys
       from importlib import machinery, util
       # Manually import the '#{cppcheck_module}' module
@@ -122,12 +122,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libxml2" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pcre" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "cmake" as i0, "python@3.9" as i1, "pcre" as i2, "libxml2" as i3
 
 pkg(
   name: "cppcheck",
   version: "2.4.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  description: "Static analysis of C and C++ code",
+  url: "https://sourceforge.net/projects/cppcheck/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cppcheck.rb"), formula)

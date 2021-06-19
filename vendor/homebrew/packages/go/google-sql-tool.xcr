@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "google-sql-tool",
   version: "r10",
+  description: "Command-line tool for executing common SQL statements",
+  url: "https://cloud.google.com/sql/docs/mysql-client",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

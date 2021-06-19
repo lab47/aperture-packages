@@ -74,6 +74,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "tcl-tk" as i3
 pkg(
   name: "expect",
   version: "5.45.4",
+  description: "Program that can automate interactive applications",
+  url: "https://core.tcl-lang.org/expect/index",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

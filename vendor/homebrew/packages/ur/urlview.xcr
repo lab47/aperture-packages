@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "urlview",
   version: "0.9-21",
+  description: "URL extractor/launcher",
+  url: "https://packages.debian.org/sid/misc/urlview",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

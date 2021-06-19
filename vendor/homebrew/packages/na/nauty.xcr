@@ -76,6 +76,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nauty",
   version: "27r1",
+  description: "Automorphism groups of graphs and digraphs",
+  url: "https://pallini.di.uniroma1.it/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

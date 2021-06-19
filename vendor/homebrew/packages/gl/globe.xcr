@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "globe",
   version: "0.0.20140814",
+  description: "Prints ASCII graphic of currently-lit side of the Earth",
+  url: "https://www.acme.com/software/globe/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

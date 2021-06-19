@@ -30,6 +30,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-binstubs",
   version: "1.5",
+  description: "Make rbenv aware of bundler binstubs",
+  url: "https://github.com/ianheggie/rbenv-binstubs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

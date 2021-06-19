@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "inxi",
   version: "3.3.04-1",
+  description: "Full featured CLI system information tool",
+  url: "https://smxi.org/docs/inxi.htm",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

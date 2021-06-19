@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "sampler",
   version: "1.1.0",
+  description: "Tool for shell commands execution, visualization and alerting",
+  url: "https://sampler.dev",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

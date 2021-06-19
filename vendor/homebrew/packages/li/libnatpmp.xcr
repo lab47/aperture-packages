@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libnatpmp",
   version: "20150609",
+  description: "NAT port mapping protocol library",
+  url: "http://miniupnp.free.fr/libnatpmp.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

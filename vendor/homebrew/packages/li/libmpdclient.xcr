@@ -49,6 +49,12 @@ import "doxygen" as i0, "meson" as i1, "ninja" as i2
 pkg(
   name: "libmpdclient",
   version: "2.19",
+  description: "Library for MPD in the C, C++, and Objective-C languages",
+  url: "https://www.musicpd.org/libs/libmpdclient/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

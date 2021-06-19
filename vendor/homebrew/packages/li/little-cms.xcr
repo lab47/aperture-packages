@@ -51,6 +51,12 @@ import "jpeg" as i0, "libtiff" as i1
 pkg(
   name: "little-cms",
   version: "1.19",
+  description: "Version 1 of the Little CMS library",
+  url: "https://www.littlecms.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

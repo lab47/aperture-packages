@@ -108,6 +108,12 @@ import "autoconf" as i0, "automake" as i1, "intltool" as i2, "libtool" as i3, "m
 pkg(
   name: "avahi",
   version: "0.8",
+  description: "Service Discovery for Linux using mDNS/DNS-SD",
+  url: "https://avahi.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

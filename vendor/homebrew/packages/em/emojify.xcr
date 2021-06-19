@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "emojify",
   version: "1.0.2",
+  description: "Emoji on the command-line :scream:",
+  url: "https://github.com/mrowa44/emojify",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

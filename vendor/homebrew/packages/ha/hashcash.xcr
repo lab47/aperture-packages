@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hashcash",
   version: "1.22",
+  description: "Proof-of-work algorithm to counter denial-of-service (DoS) attacks",
+  url: "http://hashcash.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

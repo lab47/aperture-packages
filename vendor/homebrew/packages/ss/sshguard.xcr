@@ -96,6 +96,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sshguard",
   version: "2.4.2",
+  description: "Protect from brute force attacks against SSH",
+  url: "https://www.sshguard.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

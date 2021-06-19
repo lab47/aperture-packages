@@ -61,6 +61,12 @@ import "pkg-config" as i0, "util-macros" as i1, "libx11" as i2, "libxext" as i3,
 pkg(
   name: "libxaw3d",
   version: "1.6.3",
+  description: "X.Org: 3D Athena widget set based on the Xt library",
+  url: "https://www.x.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

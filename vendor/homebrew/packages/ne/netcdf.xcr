@@ -181,6 +181,12 @@ import "cmake" as i0, "gcc" as i1, "hdf5" as i2, "curl" as i3
 pkg(
   name: "netcdf",
   version: "4.8.0",
+  description: "Libraries and data formats for array-oriented scientific data",
+  url: "https://www.unidata.ucar.edu/software/netcdf",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

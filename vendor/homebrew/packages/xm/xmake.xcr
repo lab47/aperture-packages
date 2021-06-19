@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xmake",
   version: "2.5.4",
+  description: "Cross-platform build utility based on Lua",
+  url: "https://xmake.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

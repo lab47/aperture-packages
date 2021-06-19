@@ -47,6 +47,12 @@ import "gradle" as i0, "openjdk" as i1
 pkg(
   name: "micronaut",
   version: "2.5.5",
+  description: "Modern JVM-based framework for building modular microservices",
+  url: "https://micronaut.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "coreutils" as i0, "fswatch" as i1
 pkg(
   name: "gitwatch",
   version: "0.1",
+  description: "Watch a file or folder and automatically commit changes to a git repo easily",
+  url: "https://github.com/gitwatch/gitwatch",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "ponyc" as i0
 pkg(
   name: "pony-stable",
   version: "0.2.2",
+  description: "Dependency manager for the Pony language",
+  url: "https://github.com/ponylang/pony-stable",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

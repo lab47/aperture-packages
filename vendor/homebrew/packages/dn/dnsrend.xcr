@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dnsrend",
   version: "0.08",
+  description: "DNS message dissector",
+  url: "https://lecter.redbrick.dcu.ie/dnsrend/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

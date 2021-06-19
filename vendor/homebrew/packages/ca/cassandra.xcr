@@ -184,6 +184,12 @@ import "cython" as i0, "openjdk@8" as i1
 pkg(
   name: "cassandra",
   version: "3.11.10",
+  description: "Eventually consistent, distributed key-value store",
+  url: "https://cassandra.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

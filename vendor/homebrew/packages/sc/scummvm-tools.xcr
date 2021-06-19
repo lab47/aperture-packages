@@ -47,6 +47,12 @@ import "boost" as i0, "flac" as i1, "freetype" as i2, "libpng" as i3, "libvorbis
 pkg(
   name: "scummvm-tools",
   version: "2.2.0",
+  description: "Collection of tools for ScummVM",
+  url: "https://www.scummvm.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

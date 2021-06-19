@@ -57,6 +57,12 @@ import "autoconf" as i0
 pkg(
   name: "duti",
   version: "1.5.4",
+  description: "Select default apps for documents and URL schemes on macOS",
+  url: "https://github.com/moretension/duti/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -71,6 +71,12 @@ import "i2util" as i0
 pkg(
   name: "owamp",
   version: "3.4-10",
+  description: "Implementation of the One-Way Active Measurement Protocol",
+  url: "https://www.internet2.edu/products-services/performance-analytics/performance-tools/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

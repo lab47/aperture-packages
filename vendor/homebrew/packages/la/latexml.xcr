@@ -229,6 +229,12 @@ import "libxml2" as i0, "libxslt" as i1, "perl" as i2
 pkg(
   name: "latexml",
   version: "0.8.5",
+  description: "LaTeX to XML/HTML/MathML Converter",
+  url: "https://dlmf.nist.gov/LaTeXML/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

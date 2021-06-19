@@ -61,6 +61,12 @@ import "bison" as i0, "pkg-config" as i1, "rust" as i2, "libpng" as i3
 pkg(
   name: "rgbds",
   version: "0.5.1",
+  description: "Rednex GameBoy Development System",
+  url: "https://rgbds.gbdev.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

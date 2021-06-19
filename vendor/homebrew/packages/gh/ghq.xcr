@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "ghq",
   version: "1.2.1",
+  description: "Remote repository management made easy",
+  url: "https://github.com/x-motemen/ghq",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

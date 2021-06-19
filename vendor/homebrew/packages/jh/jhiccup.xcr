@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jhiccup",
   version: "2.0.10",
+  description: "Measure pauses and stalls of an app's Java runtime platform",
+  url: "https://www.azul.com/products/components/jhiccup/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

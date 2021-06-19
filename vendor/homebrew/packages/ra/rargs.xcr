@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "rargs",
   version: "0.3.0",
+  description: "Util like xargs + awk with pattern matching support",
+  url: "https://github.com/lotabout/rargs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

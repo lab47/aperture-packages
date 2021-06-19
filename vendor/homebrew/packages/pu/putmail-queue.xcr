@@ -29,6 +29,12 @@ import "putmail" as i0
 pkg(
   name: "putmail-queue",
   version: "0.2",
+  description: "Queue package for putmail",
+  url: "https://putmail.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

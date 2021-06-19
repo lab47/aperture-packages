@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "psutils",
   version: "p17",
+  description: "Collection of PostScript document handling utilities",
+  url: "http://knackered.org/angus/psutils/",
+  metadata: %{
+    "license": "psutils",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

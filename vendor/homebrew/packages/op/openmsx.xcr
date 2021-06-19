@@ -67,12 +67,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "freetype" as i3, "gdbm" as i4, "glew" as i5, "libffi" as i6, "libogg" as i7, "libpng" as i8, "libtool" as i9, "libvorbis" as i10, "m4" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sdl2" as i18, "sdl2_ttf" as i19, "sphinx-doc" as i20, "sqlite" as i21, "theora" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
+import "python@3.9" as i0, "freetype" as i1, "glew" as i2, "libogg" as i3, "libpng" as i4, "libvorbis" as i5, "sdl2" as i6, "sdl2_ttf" as i7, "theora" as i8, "zlib" as i9
 
 pkg(
   name: "openmsx",
   version: "17.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  description: "MSX emulator",
+  url: "https://openmsx.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openmsx.rb"), formula)

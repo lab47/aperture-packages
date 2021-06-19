@@ -44,6 +44,12 @@ import "pkg-config" as i0, "libgeotiff" as i1, "libpng" as i2, "libspatialite" a
 pkg(
   name: "librasterlite",
   version: "1.1g",
+  description: "Library to store and retrieve huge raster coverages",
+  url: "https://www.gaia-gis.it/fossil/librasterlite/index",
+  metadata: %{
+    "license": "MPL-1.1 or GPL-2.0-or-later or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

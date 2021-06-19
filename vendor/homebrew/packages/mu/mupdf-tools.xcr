@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mupdf-tools",
   version: "1.18.0",
+  description: "Lightweight PDF and XPS viewer",
+  url: "https://mupdf.com/",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

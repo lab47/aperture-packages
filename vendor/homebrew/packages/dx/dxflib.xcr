@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dxflib",
   version: "2.5.0.0-1",
+  description: "C++ library for parsing DXF files",
+  url: "https://www.ribbonsoft.com/en/what-is-dxflib",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

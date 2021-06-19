@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libowfat",
   version: "0.32",
+  description: "Reimplements libdjb",
+  url: "https://www.fefe.de/libowfat/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

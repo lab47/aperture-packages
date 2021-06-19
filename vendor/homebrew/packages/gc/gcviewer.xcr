@@ -35,6 +35,12 @@ import "openjdk" as i0
 pkg(
   name: "gcviewer",
   version: "1.36",
+  description: "Java garbage collection visualization tool",
+  url: "https://github.com/chewiebug/GCViewer",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

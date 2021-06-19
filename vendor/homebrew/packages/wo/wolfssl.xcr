@@ -109,6 +109,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "wolfssl",
   version: "4.7.0",
+  description: "Embedded SSL Library written in C",
+  url: "https://www.wolfssl.com",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

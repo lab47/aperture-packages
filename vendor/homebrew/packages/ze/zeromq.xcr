@@ -78,6 +78,12 @@ import "asciidoc" as i0, "pkg-config" as i1, "xmlto" as i2, "libsodium" as i3
 pkg(
   name: "zeromq",
   version: "4.3.4",
+  description: "High-performance, asynchronous messaging library",
+  url: "https://zeromq.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later with LGPL-3.0-linking-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

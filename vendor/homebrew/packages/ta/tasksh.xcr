@@ -50,6 +50,12 @@ import "cmake" as i0, "task" as i1
 pkg(
   name: "tasksh",
   version: "1.2.0",
+  description: "Shell wrapper for Taskwarrior commands",
+  url: "https://gothenburgbitfactory.org/projects/tasksh.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

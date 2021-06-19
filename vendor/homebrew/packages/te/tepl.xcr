@@ -131,6 +131,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "tepl",
   version: "6.00.0",
+  description: "GNOME Text Editor Product Line",
+  url: "https://wiki.gnome.org/Projects/Tepl",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

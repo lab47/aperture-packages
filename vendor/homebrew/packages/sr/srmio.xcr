@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "srmio",
   version: "0.1.1~git1",
+  description: "C library to access the PowerControl of a SRM bike power meter",
+  url: "https://www.zuto.de/project/srmio/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

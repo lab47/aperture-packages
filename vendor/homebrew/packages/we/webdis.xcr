@@ -87,6 +87,12 @@ import "libevent" as i0
 pkg(
   name: "webdis",
   version: "0.1.15",
+  description: "Redis HTTP interface with JSON output",
+  url: "https://webd.is/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

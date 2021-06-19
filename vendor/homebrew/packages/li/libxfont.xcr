@@ -66,6 +66,12 @@ import "pkg-config" as i0, "util-macros" as i1, "xtrans" as i2, "freetype" as i3
 pkg(
   name: "libxfont",
   version: "1.5.4",
+  description: "X.Org: Core of the legacy X11 font system",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

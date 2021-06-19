@@ -57,6 +57,12 @@ import "libid3tag" as i0, "mad" as i1
 pkg(
   name: "madplay",
   version: "0.15.2b",
+  description: "MPEG Audio Decoder",
+  url: "https://www.underbit.com/products/mad/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

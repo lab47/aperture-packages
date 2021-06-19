@@ -82,6 +82,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libgsm",
   version: "1.0.19",
+  description: "Lossy speech compression library",
+  url: "http://www.quut.com/gsm/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "blueutil",
   version: "2.9.0",
+  description: "Get/set bluetooth power and discoverable state",
+  url: "https://github.com/toy/blueutil",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

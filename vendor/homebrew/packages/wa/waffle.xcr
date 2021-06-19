@@ -48,6 +48,12 @@ import "cmake" as i0, "docbook-xsl" as i1
 pkg(
   name: "waffle",
   version: "1.7.0",
+  description: "C library for selecting an OpenGL API and window system at runtime",
+  url: "http://www.waffle-gl.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "goenv",
   version: "1.23.3",
+  description: "Go version management",
+  url: "https://github.com/syndbg/goenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

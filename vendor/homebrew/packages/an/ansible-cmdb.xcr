@@ -30,6 +30,12 @@ import "libyaml" as i0
 pkg(
   name: "ansible-cmdb",
   version: "1.31",
+  description: "Generates static HTML overview page from Ansible facts",
+  url: "https://github.com/fboender/ansible-cmdb",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

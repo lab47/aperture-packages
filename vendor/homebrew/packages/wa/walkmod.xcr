@@ -33,6 +33,12 @@ import "openjdk" as i0
 pkg(
   name: "walkmod",
   version: "3.0.0",
+  description: "Java-based open source tool to apply and share code conventions",
+  url: "https://walkmod.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

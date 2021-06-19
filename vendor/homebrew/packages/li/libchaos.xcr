@@ -55,6 +55,12 @@ import "cmake" as i0
 pkg(
   name: "libchaos",
   version: "1.0",
+  description: "Advanced library for randomization, hashing and statistical analysis",
+  url: "https://github.com/maciejczyzewski/libchaos",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

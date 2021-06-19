@@ -51,6 +51,12 @@ import "openssl@1.1" as i0, "postgresql" as i1, "unixodbc" as i2
 pkg(
   name: "psqlodbc",
   version: "13.01.0000",
+  description: "Official PostgreSQL ODBC driver",
+  url: "https://odbc.postgresql.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

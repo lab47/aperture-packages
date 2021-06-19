@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libgcrypt" as i7, "libgpg-error" as i8, "libtool" as i9, "libxml2" as i10, "libxslt" as i11, "m4" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "perl" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "sqlite" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libxml2" as i4, "libxslt" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "termtosvg",
   version: "1.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
+  description: "Record terminal sessions as SVG animations",
+  url: "https://nbedos.github.io/termtosvg",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "termtosvg.rb"), formula)

@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-history-substring-search",
   version: "1.0.2",
+  description: "Zsh port of Fish shell's history search",
+  url: "https://github.com/zsh-users/zsh-history-substring-search",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

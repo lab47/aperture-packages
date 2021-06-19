@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "massren",
   version: "1.5.4",
+  description: "Easily rename multiple files using your text editor",
+  url: "https://github.com/laurent22/massren",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

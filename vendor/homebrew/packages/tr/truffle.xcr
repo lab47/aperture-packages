@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "truffle",
   version: "5.3.10",
+  description: "Development environment, testing framework and asset pipeline for Ethereum",
+  url: "https://trufflesuite.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

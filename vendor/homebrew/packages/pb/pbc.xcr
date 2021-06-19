@@ -76,6 +76,12 @@ import "gmp" as i0
 pkg(
   name: "pbc",
   version: "0.5.14",
+  description: "Pairing-based cryptography",
+  url: "https://crypto.stanford.edu/pbc/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

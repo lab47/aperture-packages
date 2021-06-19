@@ -32,6 +32,12 @@ import "exiftool" as i0
 pkg(
   name: "iphotoexport",
   version: "1.6.4",
+  description: "Export and synchronize iPhoto library to a folder tree",
+  url: "https://code.google.com/archive/p/iphotoexport/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "bison" as i2, "help2man" as i3, "pkg
 pkg(
   name: "msc-generator",
   version: "6.3.10",
+  description: "Draws signalling charts from textual description",
+  url: "https://sourceforge.net/p/msc-generator",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

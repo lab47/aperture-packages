@@ -74,6 +74,12 @@ import "glide" as i0, "go" as i1
 pkg(
   name: "snap-telemetry",
   version: "2.0.0",
+  description: "Snap is an opensource telemetry framework",
+  url: "https://snap-telemetry.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

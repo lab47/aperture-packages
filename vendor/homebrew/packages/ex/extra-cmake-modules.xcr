@@ -54,6 +54,12 @@ import "cmake" as i0, "qt@5" as i1, "sphinx-doc" as i2
 pkg(
   name: "extra-cmake-modules",
   version: "5.83.0",
+  description: "Extra modules and scripts for CMake",
+  url: "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html",
+  metadata: %{
+    "license": "BSD-2-Clause and BSD-3-Clause and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

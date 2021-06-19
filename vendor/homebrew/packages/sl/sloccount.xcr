@@ -63,6 +63,12 @@ import "flex" as i0
 pkg(
   name: "sloccount",
   version: "2.26",
+  description: "Count lines of code in many languages",
+  url: "https://dwheeler.com/sloccount/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

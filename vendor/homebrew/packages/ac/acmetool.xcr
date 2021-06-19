@@ -71,6 +71,12 @@ import "go" as i0, "libpcap" as i1
 pkg(
   name: "acmetool",
   version: "0.0.67",
+  description: "Automatic certificate acquisition tool for ACME (Let's Encrypt)",
+  url: "https://github.com/hlandau/acmetool",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -83,6 +83,12 @@ import "jpeg-turbo" as i0, "libogg" as i1, "libpng" as i2, "libuv" as i3, "libvo
 pkg(
   name: "hashlink",
   version: "1.11",
+  description: "Virtual machine for Haxe",
+  url: "https://hashlink.haxe.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

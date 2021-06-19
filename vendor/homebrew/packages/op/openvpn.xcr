@@ -114,6 +114,12 @@ import "pkg-config" as i0, "lz4" as i1, "lzo" as i2, "openssl@1.1" as i3, "pkcs1
 pkg(
   name: "openvpn",
   version: "2.5.2",
+  description: "SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension",
+  url: "https://openvpn.net/community/",
+  metadata: %{
+    "license": "GPL-2.0-only with openvpn-openssl-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

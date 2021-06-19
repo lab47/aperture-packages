@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dvdrtools",
   version: "0.2.1",
+  description: "Fork of cdrtools DVD writer support",
+  url: "https://savannah.nongnu.org/projects/dvdrtools/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "pcre" as i3, "xz
 pkg(
   name: "the_silver_searcher",
   version: "2.2.0",
+  description: "Code-search similar to ack",
+  url: "https://github.com/ggreer/the_silver_searcher",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

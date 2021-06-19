@@ -155,6 +155,12 @@ import "automake" as i0, "boost" as i1, "gsl" as i2, "netcdf" as i3, "qrupdate" 
 pkg(
   name: "libbi",
   version: "1.4.5",
+  description: "Bayesian state-space modelling on parallel computer hardware",
+  url: "https://libbi.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

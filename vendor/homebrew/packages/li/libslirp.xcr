@@ -54,6 +54,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3
 pkg(
   name: "libslirp",
   version: "4.5.0",
+  description: "General purpose TCP-IP emulator",
+  url: "https://gitlab.freedesktop.org/slirp/libslirp",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

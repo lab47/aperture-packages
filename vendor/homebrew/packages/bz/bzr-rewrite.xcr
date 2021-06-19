@@ -68,6 +68,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-rewrite",
   version: "0.6.3",
+  description: "Bazaar plugin to support rewriting revisions and rebasing",
+  url: "https://launchpad.net/bzr-rewrite",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

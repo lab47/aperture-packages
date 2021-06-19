@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "websocketd",
   version: "0.4.1",
+  description: "WebSockets the Unix way",
+  url: "http://websocketd.com",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

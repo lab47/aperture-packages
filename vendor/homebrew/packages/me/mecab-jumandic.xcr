@@ -60,6 +60,12 @@ import "mecab" as i0
 pkg(
   name: "mecab-jumandic",
   version: "7.0-20130310",
+  description: "See mecab",
+  url: "https://taku910.github.io/mecab/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

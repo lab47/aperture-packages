@@ -49,6 +49,12 @@ import "pkg-config" as i0, "glib" as i1, "gnutls" as i2, "ncurses" as i3, "sqlit
 pkg(
   name: "ncdc",
   version: "1.22.1",
+  description: "NCurses direct connect",
+  url: "https://dev.yorhel.nl/ncdc",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "libsigc++@2",
   version: "2.10.7",
+  description: "Callback framework for C++",
+  url: "https://libsigcplusplus.github.io/libsigcplusplus/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

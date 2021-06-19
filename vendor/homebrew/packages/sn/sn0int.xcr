@@ -63,6 +63,12 @@ import "pkg-config" as i0, "rust" as i1, "sphinx-doc" as i2, "libsodium" as i3, 
 pkg(
   name: "sn0int",
   version: "0.21.1",
+  description: "Semi-automatic OSINT framework and package manager",
+  url: "https://github.com/kpcyrd/sn0int",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

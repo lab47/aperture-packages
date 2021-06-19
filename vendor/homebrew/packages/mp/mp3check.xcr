@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp3check",
   version: "0.8.7",
+  description: "Tool to check mp3 files for consistency",
+  url: "https://code.google.com/archive/p/mp3check/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

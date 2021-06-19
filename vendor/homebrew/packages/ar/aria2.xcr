@@ -68,6 +68,12 @@ import "pkg-config" as i0, "libssh2" as i1, "libxml2" as i2, "zlib" as i3
 pkg(
   name: "aria2",
   version: "1.35.0",
+  description: "Download with resuming and segmented downloading",
+  url: "https://aria2.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "norm",
   version: "1.5.8",
+  description: "NACK-Oriented Reliable Multicast",
+  url: "https://www.nrl.navy.mil/itd/ncs/products/norm",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

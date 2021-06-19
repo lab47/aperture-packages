@@ -46,6 +46,12 @@ import "sbt" as i0, "openjdk@8" as i1
 pkg(
   name: "wartremover",
   version: "2.4.15",
+  description: "Flexible Scala code linting tool",
+  url: "https://github.com/wartremover/wartremover",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

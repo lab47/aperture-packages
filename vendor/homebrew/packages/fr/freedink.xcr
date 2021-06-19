@@ -69,6 +69,12 @@ import "glm" as i0, "pkg-config" as i1, "check" as i2, "cxxtest" as i3, "fontcon
 pkg(
   name: "freedink",
   version: "109.6",
+  description: "Portable version of the Dink Smallwood game engine",
+  url: "https://www.gnu.org/software/freedink/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

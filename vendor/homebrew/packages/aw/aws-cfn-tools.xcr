@@ -49,6 +49,12 @@ import "ec2-api-tools" as i0, "openjdk" as i1
 pkg(
   name: "aws-cfn-tools",
   version: "1.0.12",
+  description: "Client for Amazon CloudFormation web service",
+  url: "https://aws.amazon.com/developertools/AWS-CloudFormation/2555753788650372",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

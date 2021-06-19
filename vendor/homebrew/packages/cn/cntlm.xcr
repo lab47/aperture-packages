@@ -91,6 +91,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cntlm",
   version: "0.92.3",
+  description: "NTLM authentication proxy with tunneling",
+  url: "https://cntlm.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

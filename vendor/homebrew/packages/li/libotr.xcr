@@ -42,6 +42,12 @@ import "libgcrypt" as i0
 pkg(
   name: "libotr",
   version: "4.1.1",
+  description: "Off-The-Record (OTR) messaging library",
+  url: "https://otr.cypherpunks.ca/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

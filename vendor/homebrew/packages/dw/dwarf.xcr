@@ -60,6 +60,12 @@ import "flex" as i0, "readline" as i1, "bison" as i2
 pkg(
   name: "dwarf",
   version: "0.4.0",
+  description: "Object file manipulation tool",
+  url: "https://github.com/elboza/dwarf-ng/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

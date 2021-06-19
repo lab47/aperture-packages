@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "tika",
   version: "1.26",
+  description: "Content analysis toolkit",
+  url: "https://tika.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

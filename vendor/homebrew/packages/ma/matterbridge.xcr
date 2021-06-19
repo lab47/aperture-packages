@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "matterbridge",
   version: "1.22.2",
+  description: "Protocol bridge for multiple chat platforms",
+  url: "https://github.com/42wim/matterbridge",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

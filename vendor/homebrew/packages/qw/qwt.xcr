@@ -119,6 +119,12 @@ import "qt@5" as i0
 pkg(
   name: "qwt",
   version: "6.1.6",
+  description: "Qt Widgets for Technical Applications",
+  url: "https://qwt.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1-only with Qwt-exception-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

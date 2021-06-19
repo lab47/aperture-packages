@@ -58,6 +58,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "sqlcipher",
   version: "4.4.3",
+  description: "SQLite extension providing 256-bit AES encryption",
+  url: "https://www.zetetic.net/sqlcipher/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -69,6 +69,12 @@ import "cmake" as i0, "gettext" as i1, "ninja" as i2, "maxima" as i3, "wxmac" as
 pkg(
   name: "wxmaxima",
   version: "21.05.2",
+  description: "Cross platform GUI for Maxima",
+  url: "https://wxmaxima-developers.github.io/wxmaxima/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

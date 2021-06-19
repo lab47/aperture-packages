@@ -309,12 +309,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "go" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libidn2" as i17, "libsodium" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "libyaml" as i23, "lxc" as i24, "lz4" as i25, "lzo" as i26, "m4" as i27, "mpdecimal" as i28, "ncurses" as i29, "nghttp2" as i30, "ninja" as i31, "openldap" as i32, "openssl@1.1" as i33, "perl" as i34, "pkg-config" as i35, "python@3.9" as i36, "readline" as i37, "rtmpdump" as i38, "rust" as i39, "snap" as i40, "sphinx-doc" as i41, "sqlite" as i42, "squashfs" as i43, "unzip" as i44, "xdelta" as i45, "xz" as i46, "zip" as i47, "zlib" as i48, "zstd" as i49
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libsodium" as i4, "libyaml" as i5, "lxc" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "rust" as i13, "snap" as i14, "sqlite" as i15, "unzip" as i16, "xdelta" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "snapcraft",
   version: "4.8.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49],
+  description: "Package any app for every Linux desktop, server, cloud or device",
+  url: "https://snapcraft.io/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snapcraft.rb"), formula)

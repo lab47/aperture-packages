@@ -43,6 +43,12 @@ import "pod2man" as i0, "perl" as i1
 pkg(
   name: "unum",
   version: "3.3",
+  description: "Interconvert numbers, Unicode, and HTML/XHTML entities",
+  url: "https://www.fourmilab.ch/webtools/unum/",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

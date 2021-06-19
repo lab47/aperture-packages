@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-async",
   version: "1.8.5",
+  description: "Perform tasks asynchronously without external tools",
+  url: "https://github.com/mafredri/zsh-async",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "iperf",
   version: "2.0.13",
+  description: "Tool to measure maximum TCP and UDP bandwidth",
+  url: "https://sourceforge.net/projects/iperf2/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

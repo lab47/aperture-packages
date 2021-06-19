@@ -49,6 +49,12 @@ import "ncurses" as i0, "pcre2" as i1
 pkg(
   name: "less",
   version: "581.2",
+  description: "Pager program similar to more",
+  url: "https://www.greenwoodsoftware.com/less/index.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

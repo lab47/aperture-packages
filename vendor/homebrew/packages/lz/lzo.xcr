@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lzo",
   version: "2.10",
+  description: "Real-time data compression library",
+  url: "https://www.oberhumer.com/opensource/lzo/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

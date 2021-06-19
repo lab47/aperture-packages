@@ -35,6 +35,12 @@ import "gtk+3" as i0
 pkg(
   name: "clearlooks-phenix",
   version: "7.0.1",
+  description: "GTK+3 port of the Clearlooks Theme",
+  url: "https://github.com/jpfleury/clearlooks-phenix",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

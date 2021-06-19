@@ -54,6 +54,12 @@ import "openjdk" as i0
 pkg(
   name: "sbt",
   version: "1.5.3",
+  description: "Build tool for Scala projects",
+  url: "https://www.scala-sbt.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

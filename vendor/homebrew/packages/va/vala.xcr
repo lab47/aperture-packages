@@ -69,6 +69,12 @@ import "gettext" as i0, "glib" as i1, "graphviz" as i2, "pkg-config" as i3, "bis
 pkg(
   name: "vala",
   version: "0.52.4",
+  description: "Compiler for the GObject type system",
+  url: "https://wiki.gnome.org/Projects/Vala",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "go" as i0, "pkg-config" as i1, "libvirt" as i2, "terraform" as i3
 pkg(
   name: "terraform-provider-libvirt",
   version: "0.6.3",
+  description: "Terraform provisioning with Linux KVM using libvirt",
+  url: "https://github.com/dmacvicar/terraform-provider-libvirt",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

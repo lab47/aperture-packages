@@ -45,6 +45,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "minisat",
   version: "2.2.1",
+  description: "Minimalistic and high-performance SAT solver",
+  url: "https://github.com/stp/minisat",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "graphviz" as i0
 pkg(
   name: "makefile2graph",
   version: "1.5.0",
+  description: "Create a graph of dependencies from GNU-Make",
+  url: "https://github.com/lindenb/makefile2graph",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gpp",
   version: "2.27",
+  description: "General-purpose preprocessor with customizable syntax",
+  url: "https://logological.org/gpp",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

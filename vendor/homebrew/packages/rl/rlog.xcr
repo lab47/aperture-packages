@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rlog",
   version: "1.4",
+  description: "Flexible message logging facility for C++",
+  url: "https://www.arg0.net/rlog",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

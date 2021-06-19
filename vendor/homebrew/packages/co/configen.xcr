@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "configen",
   version: "1.1.2",
+  description: "Configuration file code generator for use in Xcode projects",
+  url: "https://github.com/theappbusiness/ConfigGenerator",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

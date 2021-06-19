@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "inform6",
   version: "6.34-6.12.4-1",
+  description: "Design system for interactive fiction",
+  url: "https://inform-fiction.org/inform6.html",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "megacmd",
   version: "0.016",
+  description: "Command-line client for mega.co.nz storage service",
+  url: "https://github.com/t3rm1n4l/megacmd",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "go" as i0, "go-md2man" as i1
 pkg(
   name: "vgrep",
   version: "2.5.1",
+  description: "User-friendly pager for grep",
+  url: "https://github.com/vrothberg/vgrep",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

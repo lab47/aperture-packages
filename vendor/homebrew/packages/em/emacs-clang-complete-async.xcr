@@ -60,6 +60,12 @@ import "llvm" as i0
 pkg(
   name: "emacs-clang-complete-async",
   version: "0.5",
+  description: "Emacs plugin using libclang to complete C/C++ code",
+  url: "https://github.com/Golevka/emacs-clang-complete-async",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

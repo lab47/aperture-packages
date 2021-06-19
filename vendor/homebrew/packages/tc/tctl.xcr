@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "tctl",
   version: "1.10.2",
+  description: "Temporal CLI (tctl)",
+  url: "https://temporal.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "xz" as i0
 pkg(
   name: "rpm2cpio",
   version: "1.4",
+  description: "Tool to convert RPM package to CPIO archive",
+  url: "https://svnweb.freebsd.org/ports/head/archivers/rpm2cpio/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

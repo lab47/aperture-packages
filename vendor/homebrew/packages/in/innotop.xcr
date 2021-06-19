@@ -79,6 +79,12 @@ import "mysql-client" as i0, "openssl@1.1" as i1, "perl" as i2
 pkg(
   name: "innotop",
   version: "1.13.0",
+  description: "Top clone for MySQL",
+  url: "https://github.com/innotop/innotop/",
+  metadata: %{
+    "license": "GPL-2.0-only or Artistic-1.0-Perl",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

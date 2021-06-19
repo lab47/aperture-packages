@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "zoxide",
   version: "0.7.2",
+  description: "Shell extension to navigate your filesystem faster",
+  url: "https://github.com/ajeetdsouza/zoxide",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

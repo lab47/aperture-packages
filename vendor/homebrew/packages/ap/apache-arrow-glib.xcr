@@ -70,6 +70,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "apache-arrow-glib",
   version: "4.0.1",
+  description: "GLib bindings for Apache Arrow",
+  url: "https://arrow.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

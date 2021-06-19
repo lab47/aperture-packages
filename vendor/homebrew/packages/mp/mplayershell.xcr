@@ -47,6 +47,12 @@ import "mplayer" as i0
 pkg(
   name: "mplayershell",
   version: "0.9.3",
+  description: "Improved visual experience for MPlayer on macOS",
+  url: "https://github.com/donmelton/MPlayerShell",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

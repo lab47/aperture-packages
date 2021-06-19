@@ -49,6 +49,12 @@ import "cmake" as i0, "gnutls" as i1
 pkg(
   name: "taskd",
   version: "1.1.0",
+  description: "Client-server synchronization for todo lists",
+  url: "https://taskwarrior.org/docs/taskserver/setup.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

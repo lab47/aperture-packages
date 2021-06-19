@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mac-robber",
   version: "1.02",
+  description: "Digital investigation tool",
+  url: "https://www.sleuthkit.org/mac-robber/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

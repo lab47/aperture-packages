@@ -80,6 +80,12 @@ import "popt" as i0
 pkg(
   name: "logrotate",
   version: "3.18.1",
+  description: "Rotates, compresses, and mails system logs",
+  url: "https://github.com/logrotate/logrotate",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

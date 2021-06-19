@@ -49,6 +49,12 @@ import "pkg-config" as i0, "protobuf" as i1
 pkg(
   name: "protobuf-c",
   version: "1.4.0",
+  description: "Protocol buffers library",
+  url: "https://github.com/protobuf-c/protobuf-c",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

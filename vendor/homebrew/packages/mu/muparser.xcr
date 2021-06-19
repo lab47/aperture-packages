@@ -82,6 +82,12 @@ import "cmake" as i0
 pkg(
   name: "muparser",
   version: "2.3.2",
+  description: "C++ math expression parser library",
+  url: "https://beltoforion.de/en/muparser/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "cpp-gsl",
   version: "3.1.0",
+  description: "Microsoft's C++ Guidelines Support Library",
+  url: "https://github.com/Microsoft/GSL",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

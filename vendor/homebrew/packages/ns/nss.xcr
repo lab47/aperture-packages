@@ -123,6 +123,12 @@ import "nspr" as i0, "sqlite" as i1, "zlib" as i2
 pkg(
   name: "nss",
   version: "3.67",
+  description: "Libraries for security-enabled client and server applications",
+  url: "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

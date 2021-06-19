@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gem-completion",
   version: "2",
+  description: "Bash completion for gem",
+  url: "https://github.com/mernen/completion-ruby",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -107,6 +107,12 @@ import "pkg-config" as i0, "libgcrypt" as i1, "libtool" as i2, "net-snmp" as i3,
 pkg(
   name: "collectd",
   version: "5.12.0",
+  description: "Statistics collection and monitoring daemon",
+  url: "https://collectd.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "vegeta",
   version: "12.8.4",
+  description: "HTTP load testing tool and library",
+  url: "https://github.com/tsenart/vegeta",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

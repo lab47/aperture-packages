@@ -92,6 +92,12 @@ import "pkg-config" as i0, "boost" as i1, "freetype" as i2, "libpng" as i3, "sdl
 pkg(
   name: "mupen64plus",
   version: "2.5",
+  description: "Cross-platform plugin-based N64 emulator",
+  url: "https://www.mupen64plus.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

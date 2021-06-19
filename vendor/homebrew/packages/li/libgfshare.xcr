@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libgfshare",
   version: "2.0.0",
+  description: "Library for sharing secrets",
+  url: "https://www.digital-scurf.org/software/libgfshare",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

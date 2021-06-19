@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dante",
   version: "1.4.3",
+  description: "SOCKS server and client, implementing RFC 1928 and related standards",
+  url: "https://www.inet.no/dante/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

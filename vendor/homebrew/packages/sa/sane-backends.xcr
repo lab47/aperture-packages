@@ -69,6 +69,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "libus
 pkg(
   name: "sane-backends",
   version: "1.0.32",
+  description: "Backends for scanner access",
+  url: "http://www.sane-project.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

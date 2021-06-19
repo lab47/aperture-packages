@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shntool",
   version: "3.0.10",
+  description: "Multi-purpose tool for manipulating and analyzing WAV files",
+  url: "http://shnutils.freeshell.org/shntool/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

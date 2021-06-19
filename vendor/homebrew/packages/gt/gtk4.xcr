@@ -102,6 +102,12 @@ import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "mes
 pkg(
   name: "gtk4",
   version: "4.2.1",
+  description: "Toolkit for creating graphical user interfaces",
+  url: "https://gtk.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "blink1",
   version: "2.1.0",
+  description: "Control blink(1) indicator light",
+  url: "https://blink1.thingm.com/",
+  metadata: %{
+    "license": "CC-BY-SA-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

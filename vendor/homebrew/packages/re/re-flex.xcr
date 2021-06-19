@@ -47,6 +47,12 @@ import "pcre2" as i0
 pkg(
   name: "re-flex",
   version: "3.0.7",
+  description: "Regex-centric, fast and flexible scanner generator for C++",
+  url: "https://www.genivia.com/doc/reflex/html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

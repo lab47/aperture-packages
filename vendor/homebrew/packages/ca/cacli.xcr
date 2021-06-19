@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "cacli",
   version: "1.3.2",
+  description: "Train machine learning models from Cloud Annotations",
+  url: "https://cloud.annotations.ai",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

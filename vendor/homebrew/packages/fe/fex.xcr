@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fex",
   version: "2.0.0",
+  description: "Powerful field extraction tool",
+  url: "https://www.semicomplete.com/projects/fex/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

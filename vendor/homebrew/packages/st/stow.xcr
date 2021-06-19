@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "stow",
   version: "2.3.1",
+  description: "Organize software neatly under a single directory tree (e.g. /usr/local)",
+  url: "https://www.gnu.org/software/stow/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

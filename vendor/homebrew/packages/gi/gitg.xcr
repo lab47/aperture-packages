@@ -155,6 +155,12 @@ import "intltool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala
 pkg(
   name: "gitg",
   version: "3.32.1",
+  description: "GNOME GUI client to view git repositories",
+  url: "https://wiki.gnome.org/Apps/Gitg",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {

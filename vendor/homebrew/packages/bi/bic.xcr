@@ -60,6 +60,12 @@ import "gmp" as i0
 pkg(
   name: "bic",
   version: "1.0.0",
+  description: "C interpreter and API explorer",
+  url: "https://github.com/hexagonal-sun/bic",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

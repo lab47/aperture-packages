@@ -75,6 +75,12 @@ import "openjdk" as i0
 pkg(
   name: "apollo",
   version: "1.7.1",
+  description: "Multi-protocol messaging broker based on ActiveMQ",
+  url: "https://activemq.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

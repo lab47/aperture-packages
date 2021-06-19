@@ -46,6 +46,12 @@ import "ghostscript" as i0
 pkg(
   name: "epstool",
   version: "3.09",
+  description: "Edit preview images and fix bounding boxes in EPS files",
+  url: "http://www.ghostgum.com.au/software/epstool.htm",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xmlformat",
   version: "1.04",
+  description: "Format XML documents",
+  url: "http://www.kitebird.com/software/xmlformat/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dropbear",
   version: "2020.81",
+  description: "Small SSH server/client for POSIX-based system",
+  url: "https://matt.ucc.asn.au/dropbear/dropbear.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

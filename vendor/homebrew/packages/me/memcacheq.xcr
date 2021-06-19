@@ -38,6 +38,12 @@ import "berkeley-db" as i0, "libevent" as i1
 pkg(
   name: "memcacheq",
   version: "0.2.0",
+  description: "Queue service for memcache",
+  url: "https://code.google.com/archive/p/memcacheq/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

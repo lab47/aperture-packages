@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wandio",
   version: "4.2.3",
+  description: "Transparently read from and write to zip, bzip2, lzma or zstd archives",
+  url: "https://research.wand.net.nz/software/libwandio.php",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

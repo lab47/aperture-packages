@@ -57,6 +57,12 @@ import "ncurses" as i0, "libxslt" as i1
 pkg(
   name: "kakoune",
   version: "2020.09.01",
+  description: "Selection-based modal text editor",
+  url: "https://github.com/mawww/kakoune",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

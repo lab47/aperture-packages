@@ -60,6 +60,12 @@ import "cfitsio" as i0, "fftw" as i1, "wcslib" as i2
 pkg(
   name: "cpl",
   version: "7.1.4",
+  description: "ISO-C libraries for developing astronomical data-reduction tasks",
+  url: "https://www.eso.org/sci/software/cpl/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

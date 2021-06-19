@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "btparse",
   version: "0.35",
+  description: "BibTeX utility libraries",
+  url: "https://metacpan.org/pod/distribution/Text-BibTeX/btparse/doc/btparse.pod",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -73,6 +73,12 @@ import "pkg-config" as i0, "libtiff" as i1, "curl" as i2, "sqlite" as i3
 pkg(
   name: "proj",
   version: "8.0.1",
+  description: "Cartographic Projections Library",
+  url: "https://proj.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

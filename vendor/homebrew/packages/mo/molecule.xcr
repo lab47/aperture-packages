@@ -285,12 +285,18 @@ end
 
 import "homebrew-install" as hi
 
-import "ansible" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libgcrypt" as i17, "libgpg-error" as i18, "libidn2" as i19, "libssh2" as i20, "libtool" as i21, "libunistring" as i22, "libxml2" as i23, "libxslt" as i24, "libyaml" as i25, "m4" as i26, "mpdecimal" as i27, "ncurses" as i28, "nghttp2" as i29, "ninja" as i30, "openldap" as i31, "openssl@1.1" as i32, "perl" as i33, "pkg-config" as i34, "python@3.9" as i35, "readline" as i36, "rtmpdump" as i37, "rust" as i38, "sphinx-doc" as i39, "sqlite" as i40, "unzip" as i41, "xz" as i42, "zip" as i43, "zlib" as i44, "zstd" as i45
+import "ansible" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "rust" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "molecule",
   version: "3.3.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
+  description: "Automated testing for Ansible roles",
+  url: "https://molecule.readthedocs.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "molecule.rb"), formula)

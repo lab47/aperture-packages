@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "udns",
   version: "0.4",
+  description: "DNS resolver library",
+  url: "https://www.corpit.ru/mjt/udns.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

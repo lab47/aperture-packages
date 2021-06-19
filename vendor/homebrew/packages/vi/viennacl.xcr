@@ -39,6 +39,12 @@ import "cmake" as i0
 pkg(
   name: "viennacl",
   version: "1.7.1",
+  description: "Linear algebra library for many-core architectures and multi-core CPUs",
+  url: "https://viennacl.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

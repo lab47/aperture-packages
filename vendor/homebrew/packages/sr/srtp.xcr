@@ -45,6 +45,12 @@ import "pkg-config" as i0
 pkg(
   name: "srtp",
   version: "2.3.0",
+  description: "Implementation of the Secure Real-time Transport Protocol",
+  url: "https://github.com/cisco/libsrtp",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

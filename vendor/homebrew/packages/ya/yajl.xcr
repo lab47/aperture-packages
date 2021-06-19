@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "yajl",
   version: "2.1.0",
+  description: "Yet Another JSON Library",
+  url: "https://lloyd.github.io/yajl/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

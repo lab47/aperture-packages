@@ -65,6 +65,12 @@ import "cmake" as i0, "doxygen" as i1, "gcc" as i2, "xz" as i3
 pkg(
   name: "kim-api",
   version: "2.2.1",
+  description: "Knowledgebase of Interatomic Models (KIM) API",
+  url: "https://openkim.org",
+  metadata: %{
+    "license": "CDDL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

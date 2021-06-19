@@ -56,6 +56,12 @@ import "pkg-config" as i0, "cairo" as i1, "gdal" as i2, "pango" as i3
 pkg(
   name: "simple-tiles",
   version: "0.6.1",
+  description: "Image generation library for spatial data",
+  url: "https://github.com/propublica/simple-tiles",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

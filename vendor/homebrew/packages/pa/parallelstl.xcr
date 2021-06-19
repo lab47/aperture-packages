@@ -51,6 +51,12 @@ import "cmake" as i0, "tbb@2020" as i1
 pkg(
   name: "parallelstl",
   version: "20201111",
+  description: "C++ standard library algorithms with support for execution policies",
+  url: "https://github.com/intel/parallelstl",
+  metadata: %{
+    "license": "Apache-2.0 with LLVM-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

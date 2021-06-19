@@ -40,6 +40,12 @@ import "pkg-config" as i0, "libogg" as i1, "libvorbis" as i2, "speex" as i3, "th
 pkg(
   name: "libshout",
   version: "2.4.5",
+  description: "Data and connectivity library for the icecast server",
+  url: "https://icecast.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

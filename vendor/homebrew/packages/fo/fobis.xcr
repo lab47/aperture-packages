@@ -66,12 +66,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "doxygen" as i12, "expat" as i13, "flex" as i14, "fontconfig" as i15, "freetype" as i16, "fribidi" as i17, "gcc" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "gmp" as i25, "gobject-introspection" as i26, "gperf" as i27, "graphite2" as i28, "graphviz" as i29, "groff" as i30, "gts" as i31, "harfbuzz" as i32, "help2man" as i33, "icu4c" as i34, "isl" as i35, "jasper" as i36, "jbig2dec" as i37, "jemalloc" as i38, "jpeg" as i39, "krb5" as i40, "libev" as i41, "libffi" as i42, "libidn" as i43, "libidn2" as i44, "libmpc" as i45, "libpng" as i46, "libpthread-stubs" as i47, "librsvg" as i48, "libssh2" as i49, "libtiff" as i50, "libtool" as i51, "libunistring" as i52, "libx11" as i53, "libxau" as i54, "libxcb" as i55, "libxdmcp" as i56, "libxext" as i57, "libxml2" as i58, "libxrender" as i59, "libyaml" as i60, "little-cms2" as i61, "lz4" as i62, "lzo" as i63, "m4" as i64, "meson" as i65, "mpdecimal" as i66, "mpfr" as i67, "ncurses" as i68, "netpbm" as i69, "nghttp2" as i70, "ninja" as i71, "openjdk" as i72, "openjpeg" as i73, "openldap" as i74, "openssl@1.1" as i75, "pango" as i76, "pcre" as i77, "perl" as i78, "pixman" as i79, "pkg-config" as i80, "psutils" as i81, "python@3.9" as i82, "readline" as i83, "rtmpdump" as i84, "ruby" as i85, "rust" as i86, "scons" as i87, "sphinx-doc" as i88, "sqlite" as i89, "subversion" as i90, "swig" as i91, "texinfo" as i92, "uchardet" as i93, "unzip" as i94, "utf8proc" as i95, "util-macros" as i96, "webp" as i97, "xcb-proto" as i98, "xorgproto" as i99, "xtrans" as i100, "xz" as i101, "zip" as i102, "zlib" as i103, "zstd" as i104
+import "bzip2" as i0, "expat" as i1, "gcc" as i2, "gdbm" as i3, "graphviz" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "fobis",
   version: "3.0.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104],
+  description: "KISS build tool for automatically building modern Fortran projects",
+  url: "https://github.com/szaghi/FoBiS",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fobis.rb"), formula)

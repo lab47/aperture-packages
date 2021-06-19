@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pod2man",
   version: "4.14",
+  description: "Perl documentation generator",
+  url: "https://www.eyrie.org/~eagle/software/podlators/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

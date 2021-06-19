@@ -72,6 +72,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "softhsm",
   version: "2.6.1",
+  description: "Cryptographic store accessible through a PKCS#11 interface",
+  url: "https://www.opendnssec.org/softhsm/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

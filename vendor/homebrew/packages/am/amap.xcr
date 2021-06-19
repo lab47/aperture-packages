@@ -60,6 +60,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "amap",
   version: "5.4",
+  description: "Perform application protocol detection",
+  url: "https://github.com/vanhauser-thc/THC-Archive",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

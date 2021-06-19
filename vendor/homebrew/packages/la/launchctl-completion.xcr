@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "launchctl-completion",
   version: "1.0",
+  description: "Bash completion for Launchctl",
+  url: "https://github.com/CamJN/launchctl-completion",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

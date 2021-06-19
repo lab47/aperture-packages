@@ -68,6 +68,12 @@ import "openjdk" as i0, "flex" as i1
 pkg(
   name: "mercury",
   version: "20.06.1",
+  description: "Logic/functional programming language",
+  url: "https://mercurylang.org/",
+  metadata: %{
+    "license": "GPL-2.0-only and LGPL-2.0-only and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

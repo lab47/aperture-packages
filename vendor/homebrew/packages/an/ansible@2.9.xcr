@@ -633,12 +633,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libgcrypt" as i16, "libgpg-error" as i17, "libidn2" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "libxslt" as i23, "libyaml" as i24, "m4" as i25, "mpdecimal" as i26, "ncurses" as i27, "nghttp2" as i28, "ninja" as i29, "openldap" as i30, "openssl@1.1" as i31, "perl" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "rtmpdump" as i36, "rust" as i37, "sphinx-doc" as i38, "sqlite" as i39, "unzip" as i40, "xz" as i41, "zip" as i42, "zlib" as i43, "zstd" as i44
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "krb5" as i3, "libffi" as i4, "libxslt" as i5, "libyaml" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "rust" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "ansible@2.9",
   version: "2.9.22",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
+  description: "Automate deployment, configuration, and upgrading",
+  url: "https://www.ansible.com/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible@2.9.rb"), formula)

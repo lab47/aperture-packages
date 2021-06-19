@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "phpmd",
   version: "2.10.1",
+  description: "PHP Mess Detector",
+  url: "https://phpmd.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

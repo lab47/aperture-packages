@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "direnv",
   version: "2.28.0",
+  description: "Load/unload environment variables based on $PWD",
+  url: "https://direnv.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

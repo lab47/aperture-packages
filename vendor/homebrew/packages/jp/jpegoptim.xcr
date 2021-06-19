@@ -43,6 +43,12 @@ import "jpeg" as i0
 pkg(
   name: "jpegoptim",
   version: "1.4.6",
+  description: "Utility to optimize JPEG files",
+  url: "https://github.com/tjko/jpegoptim",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

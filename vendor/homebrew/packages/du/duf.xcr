@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "duf",
   version: "0.6.2",
+  description: "Disk Usage/Free Utility - a better 'df' alternative",
+  url: "https://github.com/muesli/duf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

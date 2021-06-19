@@ -65,12 +65,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gmp" as i3, "i686-elf-binutils" as i4, "i686-elf-gcc" as i5, "libffi" as i6, "libmpc" as i7, "m4" as i8, "mpdecimal" as i9, "mpfr" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "python@3.9" as i0, "xz" as i1, "zlib" as i2
 
 pkg(
   name: "i386-elf-gdb",
   version: "10.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "GNU debugger for i386-elf cross development",
+  url: "https://www.gnu.org/software/gdb/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "i386-elf-gdb.rb"), formula)

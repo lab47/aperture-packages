@@ -87,6 +87,12 @@ import "libtool" as i0
 pkg(
   name: "beecrypt",
   version: "4.2.1",
+  description: "C/C++ cryptography library",
+  url: "https://beecrypt.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

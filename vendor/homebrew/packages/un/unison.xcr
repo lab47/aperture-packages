@@ -58,6 +58,12 @@ import "ocaml" as i0
 pkg(
   name: "unison",
   version: "2.51.3",
+  description: "File synchronization tool for OSX",
+  url: "https://www.cis.upenn.edu/~bcpierce/unison/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

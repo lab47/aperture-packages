@@ -53,6 +53,12 @@ import "cmake" as i0, "doxygen" as i1
 pkg(
   name: "elektra",
   version: "0.9.6",
+  description: "Framework to access config settings in a global key database",
+  url: "https://libelektra.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

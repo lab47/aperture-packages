@@ -96,6 +96,12 @@ import "pkg-config" as i0, "glib" as i1, "gnutls" as i2, "gsasl" as i3, "gtk+3" 
 pkg(
   name: "libinfinity",
   version: "0.6.8",
+  description: "GObject-based C implementation of the Infinote protocol",
+  url: "https://gobby.github.io",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

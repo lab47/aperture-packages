@@ -70,6 +70,12 @@ import "xerces-c" as i0
 pkg(
   name: "xqilla",
   version: "2.3.4",
+  description: "XQuery and XPath 2 command-line interpreter",
+  url: "https://xqilla.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "range-v3",
   version: "0.11.0",
+  description: "Experimental range library for C++14/17/20",
+  url: "https://ericniebler.github.io/range-v3/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

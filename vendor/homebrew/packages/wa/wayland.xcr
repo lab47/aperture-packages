@@ -58,6 +58,12 @@ import "pkg-config" as i0, "expat" as i1, "libffi" as i2, "libxml2" as i3
 pkg(
   name: "wayland",
   version: "1.19.0",
+  description: "Protocol for a compositor to talk to its clients",
+  url: "https://wayland.freedesktop.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

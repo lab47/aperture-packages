@@ -70,6 +70,12 @@ import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, "p
 pkg(
   name: "pam-u2f",
   version: "1.1.1",
+  description: "Provides an easy way to use U2F-compliant authenticators with PAM",
+  url: "https://developers.yubico.com/pam-u2f/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

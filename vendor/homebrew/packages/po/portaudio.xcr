@@ -75,6 +75,12 @@ import "pkg-config" as i0
 pkg(
   name: "portaudio",
   version: "19.7.0",
+  description: "Cross-platform library for audio I/O",
+  url: "http://www.portaudio.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

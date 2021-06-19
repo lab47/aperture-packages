@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "act",
   version: "0.2.23",
+  description: "Run your GitHub Actions locally 🚀",
+  url: "https://github.com/nektos/act",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

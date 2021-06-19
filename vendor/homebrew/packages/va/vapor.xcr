@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vapor",
   version: "18.3.3",
+  description: "Command-line tool for Vapor (Server-side Swift web framework)",
+  url: "https://vapor.codes",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

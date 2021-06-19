@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bartycrouch",
   version: "4.6.0",
+  description: "Incrementally update/translate your Strings files",
+  url: "https://github.com/Flinesoft/BartyCrouch",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

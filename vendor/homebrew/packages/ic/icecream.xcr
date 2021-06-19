@@ -148,6 +148,12 @@ import "autoconf" as i0, "automake" as i1, "docbook2x" as i2, "libtool" as i3, "
 pkg(
   name: "icecream",
   version: "1.3.1",
+  description: "Distributed compiler with a central scheduler to share build load",
+  url: "https://en.opensuse.org/Icecream",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

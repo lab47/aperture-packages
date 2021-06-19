@@ -56,6 +56,12 @@ import "help2man" as i0, "readline" as i1, "flex" as i2, "texinfo" as i3
 pkg(
   name: "cgdb",
   version: "0.7.1",
+  description: "Curses-based interface to the GNU Debugger",
+  url: "https://cgdb.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

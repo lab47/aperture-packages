@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "snappy" as i3
 pkg(
   name: "sparkey",
   version: "1.0.0",
+  description: "Constant key-value store, best for frequent read/infrequent write uses",
+  url: "https://github.com/spotify/sparkey/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

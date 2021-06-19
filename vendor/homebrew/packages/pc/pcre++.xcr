@@ -112,6 +112,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pcre" as i3
 pkg(
   name: "pcre++",
   version: "0.9.5",
+  description: "C++ wrapper for the Perl Compatible Regular Expressions",
+  url: "https://www.daemon.de/projects/pcrepp/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

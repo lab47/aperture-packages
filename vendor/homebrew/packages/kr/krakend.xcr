@@ -113,6 +113,12 @@ import "go" as i0
 pkg(
   name: "krakend",
   version: "1.4.1",
+  description: "Ultra-High performance API Gateway built in Go",
+  url: "https://www.krakend.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

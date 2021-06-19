@@ -39,6 +39,12 @@ import "cmake" as i0
 pkg(
   name: "switch-lan-play",
   version: "0.2.3",
+  description: "Make you and your friends play games like in a LAN",
+  url: "https://github.com/spacemeowx2/switch-lan-play",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "cmake" as i0, "doxygen" as i1
 pkg(
   name: "rttr",
   version: "0.9.6",
+  description: "C++ Reflection Library",
+  url: "https://www.rttr.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

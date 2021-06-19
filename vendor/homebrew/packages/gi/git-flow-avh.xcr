@@ -68,6 +68,12 @@ import "gnu-getopt" as i0
 pkg(
   name: "git-flow-avh",
   version: "1.12.3",
+  description: "AVH edition of git-flow",
+  url: "https://github.com/petervanderdoes/gitflow-avh",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

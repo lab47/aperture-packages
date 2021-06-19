@@ -53,6 +53,12 @@ import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxext" as i3, "libxmu" 
 pkg(
   name: "geomview",
   version: "1.9.5",
+  description: "Interactive 3D viewing program",
+  url: "http://www.geomview.org",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

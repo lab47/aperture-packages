@@ -37,6 +37,12 @@ import "openjdk" as i0
 pkg(
   name: "dita-ot",
   version: "3.6.1",
+  description: "DITA Open Toolkit is an implementation of the OASIS DITA specification",
+  url: "https://www.dita-ot.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

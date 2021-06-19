@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1, "openjdk" as i2, "emacs" as i3
 pkg(
   name: "nesc",
   version: "1.4.0",
+  description: "Programming language for deeply networked systems",
+  url: "https://github.com/tinyos/nesc",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

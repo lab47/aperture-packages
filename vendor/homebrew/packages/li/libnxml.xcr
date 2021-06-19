@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libnxml",
   version: "0.18.3",
+  description: "C library for parsing, writing, and creating XML files",
+  url: "https://www.autistici.org/bakunin/libnxml/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

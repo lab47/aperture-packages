@@ -57,6 +57,12 @@ import "gambit-scheme" as i0, "leveldb" as i1, "libyaml" as i2, "lmdb" as i3, "o
 pkg(
   name: "gerbil-scheme",
   version: "0.16",
+  description: "Opinionated dialect of Scheme designed for Systems Programming",
+  url: "https://cons.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

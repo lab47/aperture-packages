@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "speedtest-cli",
   version: "2.1.3",
+  description: "Command-line interface for https://speedtest.net bandwidth tests",
+  url: "https://github.com/sivel/speedtest-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

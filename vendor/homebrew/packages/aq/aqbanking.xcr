@@ -86,6 +86,12 @@ import "gettext" as i0, "gmp" as i1, "gwenhywfar" as i2, "ktoblzcheck" as i3, "l
 pkg(
   name: "aqbanking",
   version: "6.3.0",
+  description: "Generic online banking interface",
+  url: "https://www.aquamaniac.de/sites/aqbanking/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

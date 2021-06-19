@@ -40,6 +40,12 @@ import "rust" as i0
 pkg(
   name: "boringtun",
   version: "0.3.0",
+  description: "Userspace WireGuard implementation in Rust",
+  url: "https://github.com/cloudflare/boringtun",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

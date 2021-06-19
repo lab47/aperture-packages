@@ -73,6 +73,12 @@ import "tinysvm" as i0
 pkg(
   name: "yamcha",
   version: "0.33",
+  description: "NLP text chunker using Support Vector Machines",
+  url: "http://chasen.org/~taku/software/yamcha/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

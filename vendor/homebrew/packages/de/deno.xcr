@@ -83,6 +83,12 @@ import "llvm" as i0, "ninja" as i1, "rust" as i2, "xz" as i3
 pkg(
   name: "deno",
   version: "1.11.0",
+  description: "Secure runtime for JavaScript and TypeScript",
+  url: "https://deno.land/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

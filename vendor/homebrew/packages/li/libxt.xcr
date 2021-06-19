@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libice" as i1, "libsm" as i2, "libx11" as i3
 pkg(
   name: "libxt",
   version: "1.2.1",
+  description: "X.Org: X Toolkit Intrinsics library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

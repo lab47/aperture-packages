@@ -90,6 +90,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libmodplug" as i
 pkg(
   name: "openjazz",
   version: "20190106",
+  description: "Open source Jazz Jackrabit engine",
+  url: "http://www.alister.eu/jazz/oj/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

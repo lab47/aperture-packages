@@ -43,6 +43,12 @@ import "cmake" as i0, "pkg-config" as i1, "jansson" as i2, "snappy" as i3, "xz" 
 pkg(
   name: "avro-c",
   version: "1.10.2",
+  description: "Data serialization system",
+  url: "https://avro.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

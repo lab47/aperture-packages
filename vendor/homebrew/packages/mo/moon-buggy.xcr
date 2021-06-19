@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "moon-buggy",
   version: "1.0",
+  description: "Drive some car across the moon",
+  url: "https://www.seehuhn.de/pages/moon-buggy.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

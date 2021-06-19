@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "openssl@1.1" as 
 pkg(
   name: "openfortivpn",
   version: "1.16.0",
+  description: "Open Fortinet client for PPP+SSL VPN tunnel services",
+  url: "https://github.com/adrienverge/openfortivpn",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

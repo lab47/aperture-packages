@@ -36,6 +36,12 @@ import "cabal-install" as i0, "ghc" as i1
 pkg(
   name: "texmath",
   version: "0.12.3",
+  description: "Haskell library for converting LaTeX math to MathML",
+  url: "https://johnmacfarlane.net/texmath.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

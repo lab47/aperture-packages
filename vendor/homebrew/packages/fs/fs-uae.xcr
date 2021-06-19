@@ -65,6 +65,12 @@ import "pkg-config" as i0, "freetype" as i1, "gettext" as i2, "glew" as i3, "gli
 pkg(
   name: "fs-uae",
   version: "3.0.5",
+  description: "Amiga emulator",
+  url: "https://fs-uae.net/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

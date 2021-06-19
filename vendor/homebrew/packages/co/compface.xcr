@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "compface",
   version: "1.5.2",
+  description: "Convert to and from the X-Face format",
+  url: "https://web.archive.org/web/20170720045032/freecode.com/projects/compface",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

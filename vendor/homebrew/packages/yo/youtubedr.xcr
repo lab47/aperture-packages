@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "youtubedr",
   version: "2.7.0",
+  description: "Download Youtube Video in Golang",
+  url: "https://github.com/kkdai/youtube",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

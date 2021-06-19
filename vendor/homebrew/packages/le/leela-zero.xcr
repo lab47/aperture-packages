@@ -51,6 +51,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "leela-zero",
   version: "0.17",
+  description: "Neural Network Go engine with no human-provided knowledge",
+  url: "https://zero.sjeng.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

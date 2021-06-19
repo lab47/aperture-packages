@@ -74,6 +74,12 @@ import "gmp" as i0, "libtiff" as i1, "nettle" as i2, "pcre" as i3
 pkg(
   name: "pike",
   version: "8.0.1116",
+  description: "Dynamic programming language",
+  url: "https://pike.lysator.liu.se/",
+  metadata: %{
+    "license": "GPL-2.0-only or LGPL-2.1-only or MPL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

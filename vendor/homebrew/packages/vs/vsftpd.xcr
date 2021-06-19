@@ -89,6 +89,12 @@ import "perl" as i0
 pkg(
   name: "vsftpd",
   version: "3.0.4",
+  description: "Secure FTP server for UNIX",
+  url: "https://security.appspot.com/vsftpd.html",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

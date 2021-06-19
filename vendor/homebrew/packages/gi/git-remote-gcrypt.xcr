@@ -40,6 +40,12 @@ import "docutils" as i0
 pkg(
   name: "git-remote-gcrypt",
   version: "1.4",
+  description: "GPG-encrypted git remotes",
+  url: "https://spwhitton.name/tech/code/git-remote-gcrypt/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

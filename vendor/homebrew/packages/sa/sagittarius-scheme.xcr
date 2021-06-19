@@ -41,6 +41,12 @@ import "cmake" as i0, "bdw-gc" as i1, "libffi" as i2, "openssl@1.1" as i3, "unix
 pkg(
   name: "sagittarius-scheme",
   version: "0.9.7",
+  description: "Free Scheme implementation supporting R6RS and R7RS",
+  url: "https://bitbucket.org/ktakashi/sagittarius-scheme/wiki/Home",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

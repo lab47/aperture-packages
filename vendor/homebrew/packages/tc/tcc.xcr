@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcc",
   version: "0.9.27",
+  description: "Tiny C compiler",
+  url: "https://bellard.org/tcc/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

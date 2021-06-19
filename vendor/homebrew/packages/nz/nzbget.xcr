@@ -115,6 +115,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "libxml2" as i2, "ncurses" as i3
 pkg(
   name: "nzbget",
   version: "21.1",
+  description: "Binary newsgrabber for nzb files",
+  url: "https://nzbget.net/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "go" as i0, "zstd" as i1
 pkg(
   name: "goredo",
   version: "1.3.0",
+  description: "Go implementation of djb's redo, a Makefile replacement that sucks less",
+  url: "http://www.goredo.cypherpunks.ru/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

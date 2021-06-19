@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libsodium",
   version: "1.0.18",
+  description: "NaCl networking and cryptography library",
+  url: "https://libsodium.org/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

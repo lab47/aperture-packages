@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "diffstat",
   version: "1.64",
+  description: "Produce graph of changes introduced by a diff file",
+  url: "https://invisible-island.net/diffstat/",
+  metadata: %{
+    "license": "MIT-CMU",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "orgalorg",
   version: "1.0.1",
+  description: "Parallel SSH commands executioner and file synchronization tool",
+  url: "https://github.com/reconquest/orgalorg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "pkg-config" as i0, "atk" as i1, "cairo" as i2, "fontconfig" as i3, "free
 pkg(
   name: "gkrellm",
   version: "2.3.11",
+  description: "Extensible GTK system monitoring application",
+  url: "https://billw2.github.io/gkrellm/gkrellm.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

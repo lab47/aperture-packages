@@ -53,6 +53,12 @@ import "openjdk" as i0
 pkg(
   name: "groovy",
   version: "3.0.8",
+  description: "Java-based scripting language",
+  url: "https://www.groovy-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

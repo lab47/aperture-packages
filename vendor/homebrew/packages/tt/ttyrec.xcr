@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ttyrec",
   version: "1.0.8",
+  description: "Terminal interaction recorder and player",
+  url: "http://0xcc.net/ttyrec/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

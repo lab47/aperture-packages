@@ -59,12 +59,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "flex" as i6, "gdbm" as i7, "gettext" as i8, "help2man" as i9, "libffi" as i10, "libxml2" as i11, "lua" as i12, "m4" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "perl" as i17, "pkg-config" as i18, "python@3.9" as i19, "readline" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
+import "cmake" as i0, "doxygen" as i1, "lua" as i2, "python@3.9" as i3
 
 pkg(
   name: "clingo",
   version: "5.5.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  description: "ASP system to ground and solve logic programs",
+  url: "https://potassco.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clingo.rb"), formula)

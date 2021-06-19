@@ -54,6 +54,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "flex" as i3
 pkg(
   name: "miller",
   version: "5.10.2",
+  description: "Like sed, awk, cut, join & sort for name-indexed data such as CSV",
+  url: "https://github.com/johnkerl/miller",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

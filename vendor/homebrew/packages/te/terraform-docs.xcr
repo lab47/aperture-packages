@@ -77,6 +77,12 @@ import "go" as i0
 pkg(
   name: "terraform-docs",
   version: "0.14.1",
+  description: "Tool to generate documentation from Terraform modules",
+  url: "https://github.com/terraform-docs/terraform-docs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

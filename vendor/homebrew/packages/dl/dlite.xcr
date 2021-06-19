@@ -55,6 +55,12 @@ import "go" as i0
 pkg(
   name: "dlite",
   version: "1.1.5",
+  description: "Provides a way to use docker on macOS without docker-machine",
+  url: "https://github.com/nlf/dlite",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

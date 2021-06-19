@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cproto",
   version: "4.7s",
+  description: "Generate function prototypes for functions in input files",
+  url: "https://invisible-island.net/cproto/",
+  metadata: %{
+    "license": "Public Domain and MIT and (GPL-3.0-or-later with Autoconf-exception-3.0)",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

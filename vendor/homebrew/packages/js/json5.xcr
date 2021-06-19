@@ -52,6 +52,12 @@ import "node" as i0
 pkg(
   name: "json5",
   version: "2.2.0",
+  description: "JSON enhanced with usability features",
+  url: "https://json5.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

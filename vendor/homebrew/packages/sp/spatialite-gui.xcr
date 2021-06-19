@@ -66,6 +66,12 @@ import "pkg-config" as i0, "freexl" as i1, "geos" as i2, "libgaiagraphics" as i3
 pkg(
   name: "spatialite-gui",
   version: "1.7.1",
+  description: "GUI tool supporting SpatiaLite",
+  url: "https://www.gaia-gis.it/fossil/spatialite_gui/index",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

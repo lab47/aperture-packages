@@ -51,6 +51,12 @@ import "cmake" as i0, "libomp" as i1, "openblas" as i2
 pkg(
   name: "faiss",
   version: "1.7.1",
+  description: "Efficient similarity search and clustering of dense vectors",
+  url: "https://github.com/facebookresearch/faiss",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

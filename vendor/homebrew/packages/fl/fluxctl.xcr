@@ -61,6 +61,12 @@ import "go" as i0
 pkg(
   name: "fluxctl",
   version: "1.22.2",
+  description: "Command-line tool to access Weave Flux, the Kubernetes GitOps operator",
+  url: "https://github.com/fluxcd/flux",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

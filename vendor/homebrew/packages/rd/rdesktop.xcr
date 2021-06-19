@@ -51,6 +51,12 @@ import "pkg-config" as i0, "gnutls" as i1, "libao" as i2, "libtasn1" as i3, "lib
 pkg(
   name: "rdesktop",
   version: "1.9.0",
+  description: "UNIX client for connecting to Windows Remote Desktop Services",
+  url: "https://github.com/rdesktop/rdesktop",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

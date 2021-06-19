@@ -67,6 +67,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "reminiscence",
   version: "0.4.8",
+  description: "Flashback engine reimplementation",
+  url: "http://cyxdown.free.fr/reminiscence/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

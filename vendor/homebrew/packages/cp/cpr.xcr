@@ -64,6 +64,12 @@ import "cmake" as i0, "openssl@1.1" as i1, "curl" as i2
 pkg(
   name: "cpr",
   version: "1.6.2",
+  description: "C++ Requests, a spiritual port of Python Requests",
+  url: "https://whoshuu.github.io/cpr/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

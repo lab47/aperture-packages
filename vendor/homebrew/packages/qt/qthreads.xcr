@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "qthreads",
   version: "1.16",
+  description: "Lightweight locality-aware user-level threading runtime",
+  url: "https://github.com/Qthreads/qthreads",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -72,6 +72,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "name-that-hash",
   version: "1.10.0",
+  description: "Modern hash identification system",
+  url: "https://nth.skerritt.blog/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

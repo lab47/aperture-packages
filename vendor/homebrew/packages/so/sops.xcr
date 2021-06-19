@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "sops",
   version: "3.7.1",
+  description: "Editor of encrypted files",
+  url: "https://github.com/mozilla/sops",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

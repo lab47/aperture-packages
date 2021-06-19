@@ -54,6 +54,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libfixbuf" as i3, "li
 pkg(
   name: "yaf",
   version: "2.12.1",
+  description: "Yet another flowmeter: processes packet data from pcap(3)",
+  url: "https://tools.netsa.cert.org/yaf/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

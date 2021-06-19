@@ -83,6 +83,12 @@ import "pkg-config" as i0, "qt@5" as i1, "sdl2" as i2, "sdl2_mixer" as i3, "sdl_
 pkg(
   name: "qtads",
   version: "2.1.7",
+  description: "TADS multimedia interpreter",
+  url: "https://qtads.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

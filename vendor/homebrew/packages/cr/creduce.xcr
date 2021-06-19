@@ -120,6 +120,12 @@ import "astyle" as i0, "delta" as i1, "llvm@9" as i2, "perl" as i3
 pkg(
   name: "creduce",
   version: "2.10.0",
+  description: "Reduce a C/C++ program while keeping a property of interest",
+  url: "https://embed.cs.utah.edu/creduce/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -83,6 +83,12 @@ import "cmake" as i0, "boost" as i1, "libstxxl" as i2, "libxml2" as i3, "libzip"
 pkg(
   name: "osrm-backend",
   version: "5.25.0",
+  description: "High performance routing engine",
+  url: "http://project-osrm.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

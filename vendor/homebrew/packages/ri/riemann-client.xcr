@@ -47,6 +47,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "riemann-client",
   version: "1.10.4",
+  description: "C client library for the Riemann monitoring system",
+  url: "https://github.com/algernon/riemann-c-client",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

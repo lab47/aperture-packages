@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vavrdiasm",
   version: "3.1",
+  description: "8-bit Atmel AVR disassembler",
+  url: "https://github.com/vsergeev/vAVRdisasm",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

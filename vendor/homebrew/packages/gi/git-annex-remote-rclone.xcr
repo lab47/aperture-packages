@@ -59,6 +59,12 @@ import "git-annex" as i0, "rclone" as i1
 pkg(
   name: "git-annex-remote-rclone",
   version: "0.6",
+  description: "Use rclone supported cloud storage with git-annex",
+  url: "https://github.com/DanielDent/git-annex-remote-rclone",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

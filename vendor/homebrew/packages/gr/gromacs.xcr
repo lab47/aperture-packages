@@ -96,6 +96,12 @@ import "cmake" as i0, "fftw" as i1, "gcc" as i2, "gsl" as i3, "openblas" as i4
 pkg(
   name: "gromacs",
   version: "2021.2",
+  description: "Versatile package for molecular dynamics calculations",
+  url: "https://www.gromacs.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

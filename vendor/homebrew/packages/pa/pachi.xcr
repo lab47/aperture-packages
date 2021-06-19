@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pachi",
   version: "12.60",
+  description: "Software for the Board Game of Go/Weiqi/Baduk",
+  url: "https://pachi.or.cz/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

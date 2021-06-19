@@ -75,6 +75,12 @@ import "cmake" as i0, "pkg-config" as i1, "mbedtls" as i2
 pkg(
   name: "ortp",
   version: "4.5.15",
+  description: "Real-time transport protocol (RTP, RFC3550) library",
+  url: "https://www.linphone.org/technical-corner/ortp",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

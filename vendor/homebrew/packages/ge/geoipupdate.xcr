@@ -48,6 +48,12 @@ import "go" as i0, "pandoc" as i1, "curl" as i2, "zlib" as i3
 pkg(
   name: "geoipupdate",
   version: "4.7.1",
+  description: "Automatic updates of GeoIP2 and GeoIP Legacy databases",
+  url: "https://github.com/maxmind/geoipupdate",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gplcver",
   version: "2.12a",
+  description: "Pragmatic C Software GPL Cver 2001",
+  url: "https://gplcver.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "node" as i0
 pkg(
   name: "charge",
   version: "1.7.0",
+  description: "Opinionated, zero-config static site generator",
+  url: "https://charge.js.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

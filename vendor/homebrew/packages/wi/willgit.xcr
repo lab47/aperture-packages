@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "willgit",
   version: "1.0.0",
+  description: "William's miscellaneous git tools",
+  url: "https://github.com/DanielVartanov/willgit",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

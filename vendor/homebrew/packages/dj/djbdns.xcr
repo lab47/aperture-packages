@@ -54,6 +54,12 @@ import "daemontools" as i0, "ucspi-tcp" as i1
 pkg(
   name: "djbdns",
   version: "1.05",
+  description: "D.J. Bernstein's DNS tools",
+  url: "https://cr.yp.to/djbdns.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

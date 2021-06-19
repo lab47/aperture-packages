@@ -62,6 +62,12 @@ import "go" as i0, "gnupg" as i1, "terminal-notifier" as i2
 pkg(
   name: "gopass",
   version: "1.12.6",
+  description: "Slightly more awesome Standard Unix Password Manager for Teams",
+  url: "https://github.com/gopasspw/gopass",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

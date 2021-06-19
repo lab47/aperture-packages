@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sbjson",
   version: "5.0.3",
+  description: "JSON CLI parser & reformatter based on SBJson v5",
+  url: "https://github.com/stig/json-framework",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

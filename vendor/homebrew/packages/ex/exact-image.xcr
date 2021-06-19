@@ -42,6 +42,12 @@ import "pkg-config" as i0, "libagg" as i1
 pkg(
   name: "exact-image",
   version: "1.0.2",
+  description: "Image processing library",
+  url: "https://exactcode.com/opensource/exactimage/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

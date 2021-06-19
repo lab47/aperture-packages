@@ -36,6 +36,12 @@ import "readline" as i0
 pkg(
   name: "takt",
   version: "0.310",
+  description: "Text-based music programming language",
+  url: "https://takt.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

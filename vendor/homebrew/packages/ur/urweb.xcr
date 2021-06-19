@@ -69,6 +69,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "mlton" as i3, "gmp"
 pkg(
   name: "urweb",
   version: "20200209",
+  description: "Ur/Web programming language",
+  url: "http://www.impredicative.com/ur/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

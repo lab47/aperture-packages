@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpage",
   version: "2.5.7",
+  description: "Many to one page printing utility",
+  url: "https://mesa.nl/pub/mpage/README",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

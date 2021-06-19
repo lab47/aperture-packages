@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcodegen",
   version: "2.23.1",
+  description: "Generate your Xcode project from a spec file and your folder structure",
+  url: "https://github.com/yonaskolb/XcodeGen",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

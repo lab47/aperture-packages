@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "iam-policy-json-to-terraform",
   version: "1.7.0",
+  description: "Convert a JSON IAM Policy into terraform",
+  url: "https://github.com/flosell/iam-policy-json-to-terraform",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

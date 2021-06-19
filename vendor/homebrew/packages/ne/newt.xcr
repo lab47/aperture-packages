@@ -73,6 +73,12 @@ import "gettext" as i0, "popt" as i1, "s-lang" as i2
 pkg(
   name: "newt",
   version: "0.52.21",
+  description: "Library for color text mode, widget based user interfaces",
+  url: "https://pagure.io/newt",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

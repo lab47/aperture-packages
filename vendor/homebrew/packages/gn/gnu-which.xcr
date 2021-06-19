@@ -69,6 +69,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnu-which",
   version: "2.21",
+  description: "GNU implementation of which utility",
+  url: "https://savannah.gnu.org/projects/which/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

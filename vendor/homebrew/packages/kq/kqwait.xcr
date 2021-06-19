@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kqwait",
   version: "1.0.3",
+  description: "Wait for events on files or directories on macOS",
+  url: "https://github.com/sschober/kqwait",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "httptunnel",
   version: "3.3",
+  description: "Tunnels a data stream in HTTP requests",
+  url: "https://github.com/larsbrinkhoff/httptunnel",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

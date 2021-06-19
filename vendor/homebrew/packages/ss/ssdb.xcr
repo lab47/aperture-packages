@@ -106,6 +106,12 @@ import "autoconf" as i0
 pkg(
   name: "ssdb",
   version: "1.9.9",
+  description: "NoSQL database supporting many data structures: Redis alternative",
+  url: "http://ssdb.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

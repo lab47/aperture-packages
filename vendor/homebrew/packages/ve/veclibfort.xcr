@@ -41,6 +41,12 @@ import "gcc" as i0
 pkg(
   name: "veclibfort",
   version: "0.4.2",
+  description: "GNU Fortran compatibility for Apple's vecLib",
+  url: "https://github.com/mcg1969/vecLibFort",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rmate",
   version: "1.5.8",
+  description: "Edit files from an SSH session in TextMate",
+  url: "https://github.com/textmate/rmate",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

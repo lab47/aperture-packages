@@ -41,12 +41,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "berkeley-db" as i1, "bzip2" as i2, "expat" as i3, "gdbm" as i4, "libffi" as i5, "m4" as i6, "mpdecimal" as i7, "ncurses" as i8, "openjdk" as i9, "openssl@1.1" as i10, "perl" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "python@3.9" as i0
 
 pkg(
   name: "mx",
   version: "5.296.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Command-line tool used for the development of Graal projects",
+  url: "https://github.com/graalvm/mx",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mx.rb"), formula)

@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sfst",
   version: "1.4.7f",
+  description: "Toolbox for morphological analysers and other FST-based tools",
+  url: "https://www.cis.uni-muenchen.de/~schmid/tools/SFST/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

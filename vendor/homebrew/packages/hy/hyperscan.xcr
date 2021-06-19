@@ -49,6 +49,12 @@ import "boost" as i0, "cmake" as i1, "pkg-config" as i2, "ragel" as i3, "pcre" a
 pkg(
   name: "hyperscan",
   version: "5.4.0",
+  description: "High-performance regular expression matching library",
+  url: "https://www.hyperscan.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -277,6 +277,12 @@ import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" a
 pkg(
   name: "mikutter",
   version: "4.1.1",
+  description: "Extensible Twitter client",
+  url: "https://mikutter.hachune.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

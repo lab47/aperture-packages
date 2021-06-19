@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "killswitch",
   version: "0.7.2",
+  description: "VPN kill switch for macOS",
+  url: "https://vpn-kill-switch.com",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

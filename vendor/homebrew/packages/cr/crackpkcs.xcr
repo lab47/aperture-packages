@@ -46,6 +46,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1
 pkg(
   name: "crackpkcs",
   version: "0.2.11",
+  description: "Multithreaded program to crack PKCS#12 files",
+  url: "https://crackpkcs12.sourceforge.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

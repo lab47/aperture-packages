@@ -57,6 +57,12 @@ import "openssl@1.1" as i0, "perl" as i1
 pkg(
   name: "pulledpork",
   version: "0.7.4",
+  description: "Snort rule management",
+  url: "https://github.com/shirkdog/pulledpork",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

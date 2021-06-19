@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "argus",
   version: "3.0.8.2",
+  description: "Audit Record Generation and Utilization System server",
+  url: "https://qosient.com/argus/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

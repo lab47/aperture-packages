@@ -49,6 +49,12 @@ import "go" as i0, "go-bindata" as i1
 pkg(
   name: "aliyun-cli",
   version: "3.0.79",
+  description: "Universal Command-Line Interface for Alibaba Cloud",
+  url: "https://github.com/aliyun/aliyun-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

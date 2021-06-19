@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "icon",
   version: "9.5.20i",
+  description: "General-purpose programming language",
+  url: "https://www.cs.arizona.edu/icon/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "blis",
   version: "0.8.1",
+  description: "BLAS-like Library Instantiation Software Framework",
+  url: "https://github.com/flame/blis",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

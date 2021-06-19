@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-autosuggestions",
   version: "0.7.0",
+  description: "Fish-like fast/unobtrusive autosuggestions for zsh",
+  url: "https://github.com/zsh-users/zsh-autosuggestions",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

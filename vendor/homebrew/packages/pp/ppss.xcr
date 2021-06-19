@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ppss",
   version: "2.97",
+  description: "Shell script to execute commands in parallel",
+  url: "https://github.com/louwrentius/PPSS",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

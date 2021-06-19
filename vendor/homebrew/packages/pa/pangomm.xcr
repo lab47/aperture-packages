@@ -106,6 +106,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairomm" as i3, "glibm
 pkg(
   name: "pangomm",
   version: "2.48.1",
+  description: "C++ interface to Pango",
+  url: "https://www.pango.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

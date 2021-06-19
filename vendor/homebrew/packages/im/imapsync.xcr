@@ -186,6 +186,12 @@ import "pod2man" as i0, "perl" as i1
 pkg(
   name: "imapsync",
   version: "1.977",
+  description: "Migrate or backup IMAP mail accounts",
+  url: "https://imapsync.lamiral.info/",
+  metadata: %{
+    "license": "NLPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

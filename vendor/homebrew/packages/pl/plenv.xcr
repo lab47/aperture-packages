@@ -43,6 +43,12 @@ import "perl-build" as i0
 pkg(
   name: "plenv",
   version: "2.3.1",
+  description: "Perl binary manager",
+  url: "https://github.com/tokuhirom/plenv",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

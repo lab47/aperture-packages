@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hubflow",
   version: "1.5.3",
+  description: "GitFlow for GitHub",
+  url: "https://datasift.github.io/gitflow/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

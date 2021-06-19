@@ -49,6 +49,12 @@ import "pkg-config" as i0, "gtkmm" as i1, "libgnomecanvas" as i2
 pkg(
   name: "libgnomecanvasmm",
   version: "2.26.0",
+  description: "C++ wrapper for libgnomecanvas",
+  url: "https://launchpad.net/libgnomecanvasmm",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

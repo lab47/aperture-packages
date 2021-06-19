@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "glkterm",
   version: "1.0.4",
+  description: "Terminal-window Glk library",
+  url: "https://www.eblong.com/zarf/glk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

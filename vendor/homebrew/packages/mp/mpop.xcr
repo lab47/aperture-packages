@@ -36,6 +36,12 @@ import "pkg-config" as i0, "gnutls" as i1
 pkg(
   name: "mpop",
   version: "1.4.13",
+  description: "POP3 client",
+  url: "https://marlam.de/mpop/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "csvprintf",
   version: "1.1.0",
+  description: "Command-line utility for parsing CSV files",
+  url: "https://github.com/archiecobbs/csvprintf",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mozilla-addon-sdk",
   version: "1.17",
+  description: "Create Firefox add-ons using JS, HTML, and CSS",
+  url: "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "source-to-image",
   version: "1.3.1",
+  description: "Tool for building source and injecting into docker images",
+  url: "https://github.com/openshift/source-to-image",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

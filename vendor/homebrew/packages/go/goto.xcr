@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "goto",
   version: "2.0.0",
+  description: "Bash tool for navigation to aliased directories with auto-completion",
+  url: "https://github.com/iridakos/goto",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

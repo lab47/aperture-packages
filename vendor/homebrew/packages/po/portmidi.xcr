@@ -75,6 +75,12 @@ import "cmake" as i0
 pkg(
   name: "portmidi",
   version: "217",
+  description: "Cross-platform library for real-time MIDI I/O",
+  url: "https://sourceforge.net/projects/portmedia/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

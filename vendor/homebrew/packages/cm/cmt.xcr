@@ -55,6 +55,12 @@ import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2
 pkg(
   name: "cmt",
   version: "0.7.1",
+  description: "Write consistent git commit messages based on a custom template",
+  url: "https://github.com/smallhadroncollider/cmt",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

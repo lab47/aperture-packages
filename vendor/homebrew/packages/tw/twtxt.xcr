@@ -117,6 +117,12 @@ import "python@3.8" as i0
 pkg(
   name: "twtxt",
   version: "1.2.3",
+  description: "Decentralised, minimalist microblogging service for hackers",
+  url: "https://github.com/buckket/twtxt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

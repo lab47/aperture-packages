@@ -84,6 +84,12 @@ import "cmake" as i0, "ninja" as i1, "subversion" as i2, "libxml2" as i3, "ncurs
 pkg(
   name: "clang-format",
   version: "12.0.0",
+  description: "Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript",
+  url: "https://clang.llvm.org/docs/ClangFormat.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

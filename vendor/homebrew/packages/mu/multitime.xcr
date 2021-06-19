@@ -41,6 +41,12 @@ import "autoconf" as i0
 pkg(
   name: "multitime",
   version: "1.4",
+  description: "Time command execution over multiple executions",
+  url: "https://tratt.net/laurie/src/multitime/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

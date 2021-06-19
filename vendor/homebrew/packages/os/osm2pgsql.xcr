@@ -55,6 +55,12 @@ import "cmake" as i0, "lua" as i1, "boost" as i2, "geos" as i3, "luajit-openrest
 pkg(
   name: "osm2pgsql",
   version: "1.5.0",
+  description: "OpenStreetMap data to PostgreSQL converter",
+  url: "https://osm2pgsql.org",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

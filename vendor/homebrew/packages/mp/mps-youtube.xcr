@@ -58,12 +58,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "fontconfig" as i2, "freetype" as i3, "gdbm" as i4, "giflib" as i5, "gperf" as i6, "imlib2" as i7, "jpeg" as i8, "libcaca" as i9, "libffi" as i10, "libpng" as i11, "libpthread-stubs" as i12, "libtiff" as i13, "libx11" as i14, "libxau" as i15, "libxcb" as i16, "libxdmcp" as i17, "libxext" as i18, "mpdecimal" as i19, "mplayer" as i20, "ncurses" as i21, "openssl@1.1" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sqlite" as i26, "unzip" as i27, "util-macros" as i28, "xcb-proto" as i29, "xorgproto" as i30, "xtrans" as i31, "xz" as i32, "yasm" as i33, "zip" as i34, "zlib" as i35
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "mplayer" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "mps-youtube",
   version: "0.2.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  description: "Terminal based YouTube player and downloader",
+  url: "https://github.com/mps-youtube/mps-youtube",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mps-youtube.rb"), formula)

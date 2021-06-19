@@ -159,6 +159,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "c7n",
   version: "0.9.11.0",
+  description: "Rules engine for cloud security, cost optimization, and governance",
+  url: "https://github.com/cloud-custodian/cloud-custodian",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {

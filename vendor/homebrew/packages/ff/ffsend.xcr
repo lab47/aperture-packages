@@ -48,6 +48,12 @@ import "rust" as i0
 pkg(
   name: "ffsend",
   version: "0.2.72",
+  description: "Fully featured Firefox Send client",
+  url: "https://gitlab.com/timvisee/ffsend",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

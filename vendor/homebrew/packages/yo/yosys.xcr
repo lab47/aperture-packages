@@ -38,12 +38,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "expat" as i3, "flex" as i4, "gdbm" as i5, "gettext" as i6, "help2man" as i7, "libffi" as i8, "libxml2" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "unzip" as i19, "xz" as i20, "zip" as i21, "zlib" as i22
+import "bison" as i0, "pkg-config" as i1, "libffi" as i2, "python@3.9" as i3, "readline" as i4, "flex" as i5
 
 pkg(
   name: "yosys",
   version: "0.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  description: "Framework for Verilog RTL synthesis",
+  url: "http://www.clifford.at/yosys/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "yosys.rb"), formula)

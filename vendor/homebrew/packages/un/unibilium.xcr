@@ -48,6 +48,12 @@ import "libtool" as i0
 pkg(
   name: "unibilium",
   version: "2.1.1",
+  description: "Very basic terminfo library",
+  url: "https://github.com/neovim/unibilium",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

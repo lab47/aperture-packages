@@ -187,6 +187,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "tcl-tk",
   version: "8.6.11",
+  description: "Tool Command Language",
+  url: "https://www.tcl-lang.org",
+  metadata: %{
+    "license": "TCL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

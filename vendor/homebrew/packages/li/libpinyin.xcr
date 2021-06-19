@@ -84,6 +84,12 @@ import "autoconf" as i0, "automake" as i1, "gnome-common" as i2, "libtool" as i3
 pkg(
   name: "libpinyin",
   version: "2.6.0",
+  description: "Library to deal with pinyin",
+  url: "https://github.com/libpinyin/libpinyin",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

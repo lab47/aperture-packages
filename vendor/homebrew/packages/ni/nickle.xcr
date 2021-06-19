@@ -40,6 +40,12 @@ import "readline" as i0
 pkg(
   name: "nickle",
   version: "2.90",
+  description: "Desk calculator language",
+  url: "https://www.nickle.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

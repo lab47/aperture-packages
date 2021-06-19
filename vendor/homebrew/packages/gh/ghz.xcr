@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "ghz",
   version: "0.95.0",
+  description: "Simple gRPC benchmarking and load testing tool",
+  url: "https://ghz.sh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

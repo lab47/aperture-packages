@@ -187,6 +187,12 @@ import "unzip" as i0
 pkg(
   name: "lua@5.3",
   version: "5.3.6",
+  description: "Powerful, lightweight programming language",
+  url: "https://www.lua.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

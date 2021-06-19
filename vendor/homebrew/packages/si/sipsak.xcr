@@ -39,6 +39,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "sipsak",
   version: "0.9.8.1",
+  description: "SIP Swiss army knife",
+  url: "https://github.com/nils-ohlmeier/sipsak/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

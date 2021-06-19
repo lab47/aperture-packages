@@ -130,6 +130,12 @@ import "libdvdread" as i0
 pkg(
   name: "dvdbackup",
   version: "0.4.2",
+  description: "Rip DVD's from the command-line",
+  url: "https://dvdbackup.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

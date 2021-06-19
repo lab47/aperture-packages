@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hyperspec",
   version: "7.0",
+  description: "Common Lisp ANSI-standard Hyperspec",
+  url: "https://www.lispworks.com/documentation/common-lisp.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

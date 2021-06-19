@@ -54,6 +54,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gettext" as i3, "li
 pkg(
   name: "pinentry-mac",
   version: "1.1.1.1",
+  description: "Pinentry for GPG on Mac",
+  url: "https://github.com/GPGTools/pinentry",
+  metadata: %{
+    "license": "GPL-2.0-or-later and GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

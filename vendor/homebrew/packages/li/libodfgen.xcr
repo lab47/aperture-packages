@@ -63,6 +63,12 @@ import "boost" as i0, "libetonyek" as i1, "libwpg" as i2, "pkg-config" as i3, "l
 pkg(
   name: "libodfgen",
   version: "0.1.8",
+  description: "ODF export library for projects using librevenge",
+  url: "https://sourceforge.net/p/libwpd/wiki/libodfgen/",
+  metadata: %{
+    "license": "MPL-2.0 or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

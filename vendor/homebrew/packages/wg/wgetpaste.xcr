@@ -36,6 +36,12 @@ import "wget" as i0
 pkg(
   name: "wgetpaste",
   version: "2.30",
+  description: "Automate pasting to a number of pastebin services",
+  url: "https://wgetpaste.zlin.dk/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

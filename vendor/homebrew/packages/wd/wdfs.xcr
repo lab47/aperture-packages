@@ -45,6 +45,12 @@ import "pkg-config" as i0, "glib" as i1, "neon" as i2
 pkg(
   name: "wdfs",
   version: "1.4.2",
+  description: "Webdav file system",
+  url: "http://noedler.de/projekte/wdfs/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

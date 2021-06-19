@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "unifdef",
   version: "2.12",
+  description: "Selectively process conditional C preprocessor directives",
+  url: "https://dotat.at/prog/unifdef/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

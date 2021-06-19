@@ -63,6 +63,12 @@ import "cmake" as i0, "gcc" as i1, "open-mpi" as i2
 pkg(
   name: "opencoarrays",
   version: "2.9.2",
+  description: "Open-source coarray Fortran ABI, API, and compiler wrapper",
+  url: "http://www.opencoarrays.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

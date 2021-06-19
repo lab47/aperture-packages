@@ -102,6 +102,12 @@ import "autoconf" as i0, "automake" as i1, "emacs" as i2, "libgpg-error" as i3, 
 pkg(
   name: "mu",
   version: "1.4.15",
+  description: "Tool for searching e-mail messages stored in the maildir-format",
+  url: "https://www.djcbsoftware.nl/code/mu/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

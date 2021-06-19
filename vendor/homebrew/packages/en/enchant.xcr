@@ -44,6 +44,12 @@ import "pkg-config" as i0, "aspell" as i1, "glib" as i2
 pkg(
   name: "enchant",
   version: "2.2.15",
+  description: "Spellchecker wrapping library",
+  url: "https://abiword.github.io/enchant/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

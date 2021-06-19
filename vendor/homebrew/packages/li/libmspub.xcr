@@ -63,6 +63,12 @@ import "boost" as i0, "libwpg" as i1, "pkg-config" as i2, "icu4c" as i3, "librev
 pkg(
   name: "libmspub",
   version: "0.1.4",
+  description: "Interpret and import Microsoft Publisher content",
+  url: "https://wiki.documentfoundation.org/DLP/Libraries/libmspub",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

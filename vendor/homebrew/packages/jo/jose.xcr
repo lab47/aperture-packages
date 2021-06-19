@@ -51,6 +51,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "jansson" as i3, "opens
 pkg(
   name: "jose",
   version: "11",
+  description: "C-language implementation of Javascript Object Signing and Encryption",
+  url: "https://github.com/latchset/jose",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

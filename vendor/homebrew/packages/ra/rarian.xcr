@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rarian",
   version: "0.8.1",
+  description: "Documentation metadata library",
+  url: "https://rarian.freedesktop.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

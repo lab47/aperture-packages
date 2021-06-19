@@ -55,6 +55,12 @@ import "cmake" as i0, "libmodplug" as i1, "minizip" as i2, "sdl2" as i3, "sdl2_m
 pkg(
   name: "mrboom",
   version: "5.2",
+  description: "Eight player Bomberman clone",
+  url: "http://mrboom.mumblecore.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "darkhttpd",
   version: "1.13",
+  description: "Small static webserver without CGI",
+  url: "https://unix4lyfe.org/darkhttpd/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

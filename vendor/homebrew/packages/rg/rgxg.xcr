@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rgxg",
   version: "0.1.2",
+  description: "C library and command-line tool to generate (extended) regular expressions",
+  url: "https://rgxg.github.io",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

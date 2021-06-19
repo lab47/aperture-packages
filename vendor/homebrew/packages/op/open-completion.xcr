@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "open-completion",
   version: "1.0.4",
+  description: "Bash completion for open",
+  url: "https://github.com/moshen/open-bash-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

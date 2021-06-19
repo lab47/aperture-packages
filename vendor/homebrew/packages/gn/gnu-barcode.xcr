@@ -74,6 +74,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnu-barcode",
   version: "0.99",
+  description: "Convert text strings to printed bars",
+  url: "https://www.gnu.org/software/barcode/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

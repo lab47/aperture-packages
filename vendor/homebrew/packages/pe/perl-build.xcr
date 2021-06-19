@@ -147,6 +147,12 @@ import "perl" as i0
 pkg(
   name: "perl-build",
   version: "1.32",
+  description: "Perl builder",
+  url: "https://github.com/tokuhirom/Perl-Build",
+  metadata: %{
+    "license": "Artistic-1.0 or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

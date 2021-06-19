@@ -83,6 +83,12 @@ import "openjdk@11" as i0
 pkg(
   name: "questdb",
   version: "6.0.3",
+  description: "Time Series Database",
+  url: "https://questdb.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

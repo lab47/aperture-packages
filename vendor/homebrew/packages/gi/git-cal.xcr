@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-cal",
   version: "0.9.1",
+  description: "GitHub-like contributions calendar but on the command-line",
+  url: "https://github.com/k4rthik/git-cal",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

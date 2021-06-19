@@ -141,6 +141,12 @@ import "openssl@1.1" as i0, "m4" as i1, "texinfo" as i2, "ncurses" as i3
 pkg(
   name: "mit-scheme",
   version: "11.2",
+  description: "MIT/GNU Scheme development tools and runtime library",
+  url: "https://www.gnu.org/software/mit-scheme/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

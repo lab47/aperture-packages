@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fping",
   version: "5.0",
+  description: "Scriptable ping program for checking if multiple hosts are up",
+  url: "https://fping.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -113,6 +113,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swiftgen",
   version: "6.4.0",
+  description: "Swift code generator for assets, storyboards, Localizable.strings, …",
+  url: "https://github.com/SwiftGen/SwiftGen",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "gnu-sed" as i0
 pkg(
   name: "hashcat",
   version: "6.1.1",
+  description: "World's fastest and most advanced password recovery utility",
+  url: "https://hashcat.net/hashcat/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

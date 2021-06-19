@@ -38,6 +38,12 @@ import "cmake" as i0, "mbedtls" as i1
 pkg(
   name: "dislocker",
   version: "0.7.1",
+  description: "FUSE driver to read/write Windows' BitLocker-ed volumes",
+  url: "https://github.com/Aorimn/dislocker",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

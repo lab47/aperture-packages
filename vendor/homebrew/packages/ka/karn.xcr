@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "karn",
   version: "0.0.5",
+  description: "Manage multiple Git identities",
+  url: "https://github.com/prydonius/karn",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

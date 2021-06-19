@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "potrace",
   version: "1.16",
+  description: "Convert bitmaps to vector graphics",
+  url: "https://potrace.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

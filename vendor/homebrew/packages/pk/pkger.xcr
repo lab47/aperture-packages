@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "pkger",
   version: "0.17.1",
+  description: "Embed static files in Go binaries (replacement for gobuffalo/packr)",
+  url: "https://github.com/markbates/pkger",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

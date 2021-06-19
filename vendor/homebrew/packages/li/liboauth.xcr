@@ -41,6 +41,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "liboauth",
   version: "1.0.3",
+  description: "C library for the OAuth Core RFC 5849 standard",
+  url: "https://liboauth.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

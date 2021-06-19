@@ -70,6 +70,12 @@ import "pkg-config" as i0, "glib" as i1, "libmpdclient" as i2
 pkg(
   name: "mpdscribble",
   version: "0.22",
+  description: "Last.fm reporting client for mpd",
+  url: "https://www.musicpd.org/clients/mpdscribble/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

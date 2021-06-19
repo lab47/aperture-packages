@@ -71,6 +71,12 @@ import "pkg-config" as i0, "ffmpeg" as i1, "libxslt" as i2
 pkg(
   name: "unpaper",
   version: "6.1",
+  description: "Post-processing for scanned/photocopied books",
+  url: "https://www.flameeyes.com/projects/unpaper",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

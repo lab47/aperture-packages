@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nanorc",
   version: "2020.10.10",
+  description: "Improved Nano Syntax Highlighting Files",
+  url: "https://github.com/scopatz/nanorc",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

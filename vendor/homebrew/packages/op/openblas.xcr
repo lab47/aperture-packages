@@ -94,6 +94,12 @@ import "gcc" as i0
 pkg(
   name: "openblas",
   version: "0.3.15",
+  description: "Optimized BLAS library",
+  url: "https://www.openblas.net/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "libforensic1394",
   version: "0.2",
+  description: "Live memory forensics over IEEE 1394 (\"FireWire\") interface",
+  url: "https://freddie.witherden.org/tools/libforensic1394/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

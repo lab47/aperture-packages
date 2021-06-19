@@ -61,6 +61,12 @@ import "libpcap" as i0
 pkg(
   name: "ngrep",
   version: "1.47",
+  description: "Network grep",
+  url: "https://github.com/jpr5/ngrep",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

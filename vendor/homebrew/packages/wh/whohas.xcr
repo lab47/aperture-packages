@@ -68,6 +68,12 @@ import "homebrew-install" as hi
 pkg(
   name: "whohas",
   version: "0.29.1",
+  description: "Query multiple distributions' package archives",
+  url: "http://www.philippwesche.org/200811/whohas/intro.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

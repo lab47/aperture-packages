@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pbzip2",
   version: "1.1.13",
+  description: "Parallel bzip2",
+  url: "https://web.archive.org/web/20180226093549/compression.ca/pbzip2/",
+  metadata: %{
+    "license": "bzip2-1.0.6",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -119,6 +119,12 @@ import "openjdk" as i0
 pkg(
   name: "prestodb",
   version: "0.254.1",
+  description: "Distributed SQL query engine for big data",
+  url: "https://prestodb.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

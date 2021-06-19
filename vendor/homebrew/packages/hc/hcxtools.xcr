@@ -52,6 +52,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1
 pkg(
   name: "hcxtools",
   version: "6.2.0",
+  description: "Utils for conversion of cap/pcap/pcapng WiFi dump files",
+  url: "https://github.com/ZerBea/hcxtools",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

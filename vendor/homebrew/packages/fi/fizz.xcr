@@ -69,6 +69,12 @@ import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fmt" as i3, "fo
 pkg(
   name: "fizz",
   version: "2021.06.07.00",
+  description: "C++14 implementation of the TLS-1.3 standard",
+  url: "https://github.com/facebookincubator/fizz",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "janet",
   version: "1.16.1",
+  description: "Dynamic language and bytecode vm",
+  url: "https://janet-lang.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -66,6 +66,12 @@ import "go" as i0
 pkg(
   name: "nats-server",
   version: "2.2.6",
+  description: "Lightweight cloud messaging system",
+  url: "https://nats.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

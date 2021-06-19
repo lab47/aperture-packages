@@ -47,6 +47,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libid3tag" as i3, "li
 pkg(
   name: "herrie",
   version: "2.2",
+  description: "Minimalistic audio player built upon Ncurses",
+  url: "https://github.com/EdSchouten/herrie",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

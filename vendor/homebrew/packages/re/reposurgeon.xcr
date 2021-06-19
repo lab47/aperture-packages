@@ -56,6 +56,12 @@ import "asciidoctor" as i0, "go" as i1, "git" as i2
 pkg(
   name: "reposurgeon",
   version: "4.21",
+  description: "Edit version-control repository history",
+  url: "http://www.catb.org/esr/reposurgeon/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

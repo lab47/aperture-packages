@@ -46,6 +46,12 @@ import "autoconf" as i0, "sqlite" as i1
 pkg(
   name: "vcprompt",
   version: "1.2.1",
+  description: "Provide version control info in shell prompts",
+  url: "https://hg.gerg.ca/vcprompt",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

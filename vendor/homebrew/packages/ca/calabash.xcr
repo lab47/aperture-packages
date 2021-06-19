@@ -33,6 +33,12 @@ import "saxon" as i0
 pkg(
   name: "calabash",
   version: "1.3.0-100",
+  description: "XProc (XML Pipeline Language) implementation",
+  url: "https://xmlcalabash.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "unarj",
   version: "2.65",
+  description: "ARJ file archiver",
+  url: "http://www.arjsoftware.com/files.htm",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aescrypt",
   version: "0.7",
+  description: "Program for encryption/decryption",
+  url: "https://aescrypt.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

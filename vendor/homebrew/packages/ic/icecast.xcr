@@ -70,6 +70,12 @@ import "pkg-config" as i0, "libvorbis" as i1, "openssl@1.1" as i2, "curl" as i3,
 pkg(
   name: "icecast",
   version: "2.4.4",
+  description: "Streaming MP3 audio server",
+  url: "https://icecast.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

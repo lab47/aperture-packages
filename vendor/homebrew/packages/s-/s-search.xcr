@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "s-search",
   version: "0.5.15",
+  description: "Web search from the terminal",
+  url: "https://github.com/zquestz/s",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

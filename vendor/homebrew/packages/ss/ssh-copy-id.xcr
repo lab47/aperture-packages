@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ssh-copy-id",
   version: "8.6p1",
+  description: "Add a public key to a remote machine's authorized_keys file",
+  url: "https://www.openssh.com/",
+  metadata: %{
+    "license": "SSH-OpenSSH",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

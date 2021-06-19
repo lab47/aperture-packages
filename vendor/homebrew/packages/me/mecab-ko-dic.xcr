@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "mecab-ko" as i2
 pkg(
   name: "mecab-ko-dic",
   version: "2.1.1-20180720",
+  description: "See mecab",
+  url: "https://bitbucket.org/eunjeon/mecab-ko-dic",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

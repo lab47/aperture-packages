@@ -55,6 +55,12 @@ import "go" as i0
 pkg(
   name: "helm",
   version: "3.6.0",
+  description: "Kubernetes package manager",
+  url: "https://helm.sh/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

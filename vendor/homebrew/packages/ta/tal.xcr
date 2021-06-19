@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tal",
   version: "1.9",
+  description: "Align line endings if they match",
+  url: "https://web.archive.org/web/20160406172703/https://thomasjensen.com/software/tal/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

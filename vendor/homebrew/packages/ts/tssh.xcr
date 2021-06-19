@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "tssh",
   version: "2.1.1",
+  description: "SSH Lightweight management tools",
+  url: "https://github.com/luanruisong/tssh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

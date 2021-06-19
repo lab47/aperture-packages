@@ -217,6 +217,12 @@ import "homebrew-install" as hi
 pkg(
   name: "asciidoctor",
   version: "2.0.15",
+  description: "Text processor and publishing toolchain for AsciiDoc",
+  url: "https://asciidoctor.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

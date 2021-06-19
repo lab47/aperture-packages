@@ -64,6 +64,12 @@ import "go" as i0
 pkg(
   name: "kube-linter",
   version: "0.2.2",
+  description: "Static analysis tool for Kubernetes YAML files and Helm charts",
+  url: "https://github.com/stackrox/kube-linter",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

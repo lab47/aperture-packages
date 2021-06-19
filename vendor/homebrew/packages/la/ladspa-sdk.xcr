@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ladspa-sdk",
   version: "1.15",
+  description: "Linux Audio Developer's Simple Plugin",
+  url: "https://ladspa.org",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

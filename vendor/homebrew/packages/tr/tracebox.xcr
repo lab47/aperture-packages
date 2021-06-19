@@ -60,6 +60,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "json-c" as i3, "lib
 pkg(
   name: "tracebox",
   version: "0.4.4",
+  description: "Middlebox detection tool",
+  url: "https://www.github.com/tracebox/tracebox",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

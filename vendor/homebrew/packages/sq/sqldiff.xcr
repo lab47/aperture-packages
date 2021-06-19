@@ -48,6 +48,12 @@ import "tcl-tk" as i0
 pkg(
   name: "sqldiff",
   version: "3.35.5",
+  description: "Displays the differences between SQLite databases",
+  url: "https://www.sqlite.org/sqldiff.html",
+  metadata: %{
+    "license": "blessing",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

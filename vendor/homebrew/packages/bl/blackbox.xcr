@@ -50,6 +50,12 @@ import "gnupg" as i0
 pkg(
   name: "blackbox",
   version: "2.0.0",
+  description: "Safely store secrets in Git/Mercurial/Subversion",
+  url: "https://github.com/StackExchange/blackbox",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -96,6 +96,12 @@ import "homebrew-install" as hi
 pkg(
   name: "popt",
   version: "1.18",
+  description: "Library like getopt(3) with a number of enhancements",
+  url: "https://github.com/rpm-software-management/popt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

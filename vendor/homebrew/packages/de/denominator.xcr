@@ -31,6 +31,12 @@ import "openjdk" as i0
 pkg(
   name: "denominator",
   version: "4.7.1",
+  description: "Portable Java library for manipulating DNS clouds",
+  url: "https://github.com/Netflix/denominator/tree/v4.7.1/cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

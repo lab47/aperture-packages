@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "prestd",
   version: "1.0.8",
+  description: "Simplify and accelerate development on any Postgres application, existing or new",
+  url: "https://github.com/prest/prest",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

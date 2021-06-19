@@ -47,6 +47,12 @@ import "cmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "libtins",
   version: "4.3",
+  description: "C++ network packet sniffing and crafting library",
+  url: "https://libtins.github.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

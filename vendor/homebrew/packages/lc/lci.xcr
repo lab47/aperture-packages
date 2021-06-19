@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lci",
   version: "0.6",
+  description: "Interpreter for the lambda calculus",
+  url: "https://lci.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

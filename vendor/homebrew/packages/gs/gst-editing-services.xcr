@@ -53,6 +53,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gst-editing-services",
   version: "1.18.4",
+  description: "GStreamer Editing Services",
+  url: "https://gstreamer.freedesktop.org/modules/gst-editing-services.html",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

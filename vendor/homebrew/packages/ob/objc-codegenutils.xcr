@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "objc-codegenutils",
   version: "1.0",
+  description: "Three small tools to help work with XCode",
+  url: "https://github.com/square/objc-codegenutils",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

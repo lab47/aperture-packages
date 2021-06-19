@@ -63,6 +63,12 @@ import "sqlite" as i0, "unixodbc" as i1, "libxml2" as i2, "zlib" as i3
 pkg(
   name: "sqliteodbc",
   version: "0.9998",
+  description: "ODBC driver for SQLite",
+  url: "https://ch-werner.homepage.t-online.de/sqliteodbc/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

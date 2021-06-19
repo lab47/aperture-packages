@@ -54,6 +54,12 @@ import "pkg-config" as i0, "cmu-sphinxbase" as i1
 pkg(
   name: "cmu-pocketsphinx",
   version: "0.8",
+  description: "Lightweight speech recognition engine for mobile devices",
+  url: "https://cmusphinx.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wwwoffle",
   version: "2.9j",
+  description: "Better browsing for computers with intermittent connections",
+  url: "https://www.gedanken.org.uk/software/wwwoffle/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

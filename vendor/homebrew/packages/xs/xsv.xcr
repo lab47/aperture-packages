@@ -37,6 +37,12 @@ import "rust" as i0
 pkg(
   name: "xsv",
   version: "0.13.0",
+  description: "Fast CSV toolkit written in Rust",
+  url: "https://github.com/BurntSushi/xsv",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

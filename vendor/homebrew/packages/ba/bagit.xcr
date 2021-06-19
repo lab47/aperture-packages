@@ -49,6 +49,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "bagit",
   version: "1.8.1",
+  description: "Library for creation, manipulation, and validation of bags",
+  url: "https://libraryofcongress.github.io/bagit-python/",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

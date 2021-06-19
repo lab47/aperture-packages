@@ -43,6 +43,12 @@ import "ruby" as i0
 pkg(
   name: "brew-gem",
   version: "1.1.1",
+  description: "Install RubyGems as Homebrew formulae",
+  url: "https://github.com/sportngin/brew-gem",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

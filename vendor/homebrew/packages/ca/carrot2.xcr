@@ -80,6 +80,12 @@ import "gradle@6" as i0, "openjdk" as i1
 pkg(
   name: "carrot2",
   version: "4.2.1",
+  description: "Search results clustering engine",
+  url: "https://project.carrot2.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

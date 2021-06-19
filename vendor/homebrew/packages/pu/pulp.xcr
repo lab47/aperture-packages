@@ -45,6 +45,12 @@ import "bower" as i0, "node" as i1, "purescript" as i2
 pkg(
   name: "pulp",
   version: "15.0.0",
+  description: "Build tool for PureScript projects",
+  url: "https://github.com/bodil/pulp",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -63,6 +63,12 @@ import "openssl@1.1" as i0, "readline" as i1
 pkg(
   name: "pwsafe",
   version: "0.2.0",
+  description: "Generate passwords and manage encrypted password databases",
+  url: "https://github.com/nsd20463/pwsafe",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

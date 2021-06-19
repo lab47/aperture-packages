@@ -33,6 +33,12 @@ import "maven" as i0, "openjdk@8" as i1
 pkg(
   name: "jooby-bootstrap",
   version: "0.2.2",
+  description: "Script to simplify the creation of jooby apps",
+  url: "https://github.com/jooby-project/jooby-bootstrap",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

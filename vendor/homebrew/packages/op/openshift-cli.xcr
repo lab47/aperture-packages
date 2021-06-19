@@ -71,6 +71,12 @@ import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3, "krb5" as 
 pkg(
   name: "openshift-cli",
   version: "4.6.0",
+  description: "OpenShift command-line interface tools",
+  url: "https://www.openshift.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

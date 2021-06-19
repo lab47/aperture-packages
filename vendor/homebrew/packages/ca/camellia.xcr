@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "camellia",
   version: "2.7.0",
+  description: "Image Processing & Computer Vision library written in C",
+  url: "https://camellia.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

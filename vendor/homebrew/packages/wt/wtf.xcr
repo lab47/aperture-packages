@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wtf",
   version: "20210416",
+  description: "Translate common Internet acronyms",
+  url: "https://sourceforge.net/projects/bsdwtf/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -56,6 +56,12 @@ import "go" as i0
 pkg(
   name: "juju",
   version: "2.9.0",
+  description: "DevOps management tool",
+  url: "https://juju.is/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

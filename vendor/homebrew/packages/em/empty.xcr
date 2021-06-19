@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "empty",
   version: "0.6.21b",
+  description: "Lightweight Expect-like PTY tool for shell scripts",
+  url: "https://empty.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

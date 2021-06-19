@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "angular-cli",
   version: "12.0.4",
+  description: "CLI tool for Angular",
+  url: "https://cli.angular.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "treecc",
   version: "0.3.10",
+  description: "Aspect-oriented approach to writing compilers",
+  url: "https://gnu.org/software/dotgnu/treecc/treecc.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libice" as i3, "libsm
 pkg(
   name: "wmctrl",
   version: "1.07",
+  description: "UNIX/Linux command-line tool to interact with an EWMH/NetWM",
+  url: "https://sites.google.com/site/tstyblo/wmctrl",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

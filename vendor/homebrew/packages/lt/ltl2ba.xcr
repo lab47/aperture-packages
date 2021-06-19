@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ltl2ba",
   version: "1.3",
+  description: "Translate LTL formulae to Buchi automata",
+  url: "https://www.lsv.ens-cachan.fr/~gastin/ltl2ba/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

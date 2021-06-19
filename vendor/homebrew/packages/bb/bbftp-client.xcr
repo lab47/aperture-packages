@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bbftp-client",
   version: "3.2.1",
+  description: "Secure file transfer software, optimized for large files",
+  url: "https://software.in2p3.fr/bbftp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

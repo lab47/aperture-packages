@@ -96,6 +96,12 @@ import "go" as i0
 pkg(
   name: "caddy",
   version: "2.4.2",
+  description: "Powerful, enterprise-ready, open source web server with automatic HTTPS",
+  url: "https://caddyserver.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

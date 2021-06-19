@@ -42,6 +42,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2
 pkg(
   name: "htmldoc",
   version: "1.9.12",
+  description: "Convert HTML to PDF or PostScript",
+  url: "https://www.msweet.org/htmldoc/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

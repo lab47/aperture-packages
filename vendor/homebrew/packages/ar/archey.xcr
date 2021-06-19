@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "archey",
   version: "1.6.0",
+  description: "Graphical system information display for macOS",
+  url: "https://obihann.github.io/archey-osx/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

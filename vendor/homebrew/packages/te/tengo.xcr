@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "tengo",
   version: "2.7.0",
+  description: "Fast script language for Go",
+  url: "https://tengolang.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

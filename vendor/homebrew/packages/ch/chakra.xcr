@@ -50,6 +50,12 @@ import "cmake" as i0, "icu4c" as i1
 pkg(
   name: "chakra",
   version: "1.11.24",
+  description: "Core part of the JavaScript engine that powers Microsoft Edge",
+  url: "https://github.com/Microsoft/ChakraCore",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

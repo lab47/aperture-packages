@@ -73,6 +73,12 @@ import "pkg-config" as i0
 pkg(
   name: "makedepend",
   version: "1.0.6",
+  description: "Creates dependencies in makefiles",
+  url: "https://x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

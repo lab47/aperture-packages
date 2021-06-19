@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "task-spooler",
   version: "1.0.1",
+  description: "Batch system to run tasks one after another",
+  url: "https://vicerveza.homeunix.net/~viric/soft/ts/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xclogparser",
   version: "0.2.27",
+  description: "Tool to parse the SLF serialization format used by Xcode",
+  url: "https://github.com/spotify/XCLogParser",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

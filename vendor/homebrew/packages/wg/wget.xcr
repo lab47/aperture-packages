@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libidn2" as i1, "openssl@1.1" as i2
 pkg(
   name: "wget",
   version: "1.21.1",
+  description: "Internet file retriever",
+  url: "https://www.gnu.org/software/wget/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

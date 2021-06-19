@@ -37,6 +37,12 @@ import "openjdk" as i0
 pkg(
   name: "bfg",
   version: "1.14.0",
+  description: "Remove large files or passwords from Git history like git-filter-branch",
+  url: "https://rtyley.github.io/bfg-repo-cleaner/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

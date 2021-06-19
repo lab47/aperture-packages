@@ -60,6 +60,12 @@ import "cmake" as i0, "libpng" as i1, "libtiff" as i2, "openssl@1.1" as i3, "lib
 pkg(
   name: "dcmtk",
   version: "3.6.6",
+  description: "OFFIS DICOM toolkit command-line utilities",
+  url: "https://dicom.offis.de/dcmtk.php.en",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

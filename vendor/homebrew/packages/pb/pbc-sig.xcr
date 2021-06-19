@@ -71,6 +71,12 @@ import "pbc" as i0
 pkg(
   name: "pbc-sig",
   version: "0.0.8",
+  description: "Signatures library",
+  url: "https://crypto.stanford.edu/pbc/sig/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

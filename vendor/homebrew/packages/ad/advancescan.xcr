@@ -41,6 +41,12 @@ import "zlib" as i0
 pkg(
   name: "advancescan",
   version: "1.18",
+  description: "Rom manager for AdvanceMAME/MESS",
+  url: "https://www.advancemame.it/scan-readme.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

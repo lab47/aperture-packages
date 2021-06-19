@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "prodigal",
   version: "2.6.3",
+  description: "Microbial gene prediction",
+  url: "https://github.com/hyattpd/Prodigal",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -144,12 +144,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "bazel" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "m4" as i13, "mpdecimal" as i14, "mpfr" as i15, "ncurses" as i16, "numpy" as i17, "openblas" as i18, "openjdk@11" as i19, "openssl@1.1" as i20, "perl" as i21, "pkg-config" as i22, "python@3.9" as i23, "readline" as i24, "sphinx-doc" as i25, "sqlite" as i26, "unzip" as i27, "xz" as i28, "zip" as i29, "zlib" as i30, "zstd" as i31
+import "bazel" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "numpy" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "libtensorflow",
   version: "2.5.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "C interface for Google's OS library for Machine Intelligence",
+  url: "https://www.tensorflow.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtensorflow.rb"), formula)

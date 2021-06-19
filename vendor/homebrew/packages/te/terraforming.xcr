@@ -138,6 +138,12 @@ import "ruby" as i0
 pkg(
   name: "terraforming",
   version: "0.18.0",
+  description: "Export existing AWS resources to Terraform style (tf, tfstate)",
+  url: "https://terraforming.dtan4.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

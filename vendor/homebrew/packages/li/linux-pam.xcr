@@ -54,6 +54,12 @@ import "pkg-config" as i0, "berkeley-db" as i1, "libprelude" as i2, "libtirpc" a
 pkg(
   name: "linux-pam",
   version: "1.5.1",
+  description: "Pluggable Authentication Modules for Linux",
+  url: "http://www.linux-pam.org",
+  metadata: %{
+    "license": "BSD-3-Clause or GPL-1.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

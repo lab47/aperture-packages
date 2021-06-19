@@ -47,6 +47,12 @@ import "cmake" as i0, "qt@5" as i1
 pkg(
   name: "qtkeychain",
   version: "0.12.0",
+  description: "Platform-independent Qt API for storing passwords securely",
+  url: "https://github.com/frankosterfeld/qtkeychain",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

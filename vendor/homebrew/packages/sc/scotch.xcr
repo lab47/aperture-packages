@@ -60,6 +60,12 @@ import "open-mpi" as i0, "bison" as i1, "flex" as i2, "zlib" as i3
 pkg(
   name: "scotch",
   version: "6.1.0",
+  description: "Package for graph partitioning, graph clustering, and sparse matrix ordering",
+  url: "https://gitlab.inria.fr/scotch/scotch",
+  metadata: %{
+    "license": "CECILL-C",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

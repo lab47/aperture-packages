@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "chart-testing",
   version: "3.4.0",
+  description: "Testing and linting Helm charts",
+  url: "https://github.com/helm/chart-testing",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

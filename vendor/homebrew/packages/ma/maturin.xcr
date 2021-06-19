@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "maturin",
   version: "0.10.6",
+  description: "Build and publish Rust crates as Python packages",
+  url: "https://github.com/PyO3/maturin",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

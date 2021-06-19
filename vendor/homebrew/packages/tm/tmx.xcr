@@ -67,6 +67,12 @@ import "cmake" as i0, "libxml2" as i1
 pkg(
   name: "tmx",
   version: "1.4.0",
+  description: "Portable C library to load tiled maps in your games",
+  url: "https://github.com/baylej/tmx",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

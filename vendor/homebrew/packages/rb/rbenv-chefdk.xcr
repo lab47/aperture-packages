@@ -32,6 +32,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-chefdk",
   version: "1.0.0",
+  description: "Treat ChefDK as another version in rbenv",
+  url: "https://github.com/docwhat/rbenv-chefdk",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

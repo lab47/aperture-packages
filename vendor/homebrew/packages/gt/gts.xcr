@@ -56,6 +56,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "netpbm" as i3
 pkg(
   name: "gts",
   version: "0.7.6",
+  description: "GNU triangulated surface library",
+  url: "https://gts.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

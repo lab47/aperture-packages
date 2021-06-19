@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mairix",
   version: "0.24",
+  description: "Email index and search tool",
+  url: "http://www.rpcurnow.force9.co.uk/mairix/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

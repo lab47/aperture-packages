@@ -42,6 +42,12 @@ import "cmake" as i0, "glib" as i1, "openssl@1.1" as i2
 pkg(
   name: "gammu",
   version: "1.42.0",
+  description: "Command-line utility to control a phone",
+  url: "https://wammu.eu/gammu/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

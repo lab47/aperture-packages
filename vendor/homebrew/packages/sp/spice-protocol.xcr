@@ -53,6 +53,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "spice-protocol",
   version: "0.14.3",
+  description: "Headers for SPICE protocol",
+  url: "https://www.spice-space.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

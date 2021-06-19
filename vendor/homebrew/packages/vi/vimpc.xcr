@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "vimpc",
   version: "0.09.2",
+  description: "Ncurses based mpd client with vi like key bindings",
+  url: "https://sourceforge.net/projects/vimpc/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

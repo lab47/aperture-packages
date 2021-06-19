@@ -51,6 +51,12 @@ import "expect" as i0
 pkg(
   name: "deja-gnu",
   version: "1.6.2",
+  description: "Framework for testing other programs",
+  url: "https://www.gnu.org/software/dejagnu/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

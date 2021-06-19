@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "taktuk",
   version: "3.7.7",
+  description: "Deploy commands to (a potentially large set of) remote nodes",
+  url: "https://taktuk.gforge.inria.fr/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -77,6 +77,12 @@ import "cmake" as i0, "boost" as i1, "libomp" as i2, "openssl@1.1" as i3
 pkg(
   name: "cryfs",
   version: "0.10.2",
+  description: "Encrypts your files so you can safely store them in Dropbox, iCloud, etc.",
+  url: "https://www.cryfs.org",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

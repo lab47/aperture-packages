@@ -43,6 +43,12 @@ import "gmp" as i0
 pkg(
   name: "cln",
   version: "1.3.6",
+  description: "Class Library for Numbers",
+  url: "https://www.ginac.de/CLN/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

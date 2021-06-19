@@ -64,6 +64,12 @@ import "openjdk" as i0
 pkg(
   name: "aspectj",
   version: "1.9.6",
+  description: "Aspect-oriented programming for Java",
+  url: "https://www.eclipse.org/aspectj/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hr",
   version: "1.3",
+  description: "<hr />, for your terminal window",
+  url: "https://github.com/LuRsT/hr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

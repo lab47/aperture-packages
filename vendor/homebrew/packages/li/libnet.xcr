@@ -33,6 +33,12 @@ import "doxygen" as i0
 pkg(
   name: "libnet",
   version: "1.2",
+  description: "C library for creating IP packets",
+  url: "https://github.com/sam-github/libnet",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

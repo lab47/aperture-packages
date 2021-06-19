@@ -53,6 +53,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "pjproject",
   version: "2.10",
+  description: "C library for multimedia protocols such as SIP, SDP, RTP and more",
+  url: "https://www.pjsip.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

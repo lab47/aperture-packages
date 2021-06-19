@@ -48,6 +48,12 @@ import "pkg-config" as i0, "libimobiledevice" as i1, "libplist" as i2, "libzip" 
 pkg(
   name: "ideviceinstaller",
   version: "1.1.1",
+  description: "Tool for managing apps on iOS devices",
+  url: "https://www.libimobiledevice.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

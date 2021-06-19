@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "croc",
   version: "9.1.5",
+  description: "Securely send things from one computer to another",
+  url: "https://github.com/schollz/croc",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

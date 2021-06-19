@@ -63,6 +63,12 @@ import "cmake" as i0, "ncurses" as i1, "pcre2" as i2
 pkg(
   name: "fish",
   version: "3.2.2",
+  description: "User-friendly command-line shell for UNIX-like operating systems",
+  url: "https://fishshell.com",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

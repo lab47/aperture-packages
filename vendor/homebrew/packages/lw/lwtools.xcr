@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lwtools",
   version: "4.18",
+  description: "Cross-development tools for Motorola 6809 and Hitachi 6309",
+  url: "http://www.lwtools.ca/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

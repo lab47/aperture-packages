@@ -49,6 +49,12 @@ import "gsl" as i0
 pkg(
   name: "dieharder",
   version: "3.31.1",
+  description: "Random number test suite",
+  url: "https://webhome.phy.duke.edu/~rgb/General/dieharder.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

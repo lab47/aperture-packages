@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dehydrated",
   version: "0.7.0",
+  description: "LetsEncrypt/acme client implemented as a shell-script",
+  url: "https://dehydrated.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

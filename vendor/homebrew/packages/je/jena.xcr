@@ -42,6 +42,12 @@ import "openjdk" as i0
 pkg(
   name: "jena",
   version: "4.1.0",
+  description: "Framework for building semantic web and linked data apps",
+  url: "https://jena.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

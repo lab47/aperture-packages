@@ -41,6 +41,12 @@ import "cmake" as i0, "fftw" as i1
 pkg(
   name: "arss",
   version: "0.2.3",
+  description: "Analyze a sound file into a spectrogram",
+  url: "https://arss.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

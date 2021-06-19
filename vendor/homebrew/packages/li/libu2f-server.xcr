@@ -78,6 +78,12 @@ import "check" as i0, "gengetopt" as i1, "help2man" as i2, "pkg-config" as i3, "
 pkg(
   name: "libu2f-server",
   version: "1.1.0",
+  description: "Server-side of the Universal 2nd Factor (U2F) protocol",
+  url: "https://developers.yubico.com/libu2f-server/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

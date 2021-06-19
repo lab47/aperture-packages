@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bcal",
   version: "2.2",
+  description: "Storage conversion and expression calculator",
+  url: "https://github.com/jarun/bcal",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

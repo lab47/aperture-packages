@@ -41,6 +41,12 @@ import "sdl" as i0
 pkg(
   name: "mp3blaster",
   version: "3.2.6",
+  description: "Text-based mp3 player",
+  url: "https://mp3blaster.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

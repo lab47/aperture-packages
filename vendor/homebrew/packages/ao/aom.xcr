@@ -64,6 +64,12 @@ import "cmake" as i0, "yasm" as i1
 pkg(
   name: "aom",
   version: "3.1.1",
+  description: "Codec library for encoding and decoding AV1 video streams",
+  url: "https://aomedia.googlesource.com/aom",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

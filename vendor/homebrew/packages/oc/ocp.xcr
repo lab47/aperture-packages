@@ -86,6 +86,12 @@ import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-tur
 pkg(
   name: "ocp",
   version: "0.2.90",
+  description: "UNIX port of the Open Cubic Player",
+  url: "https://stian.cubic.org/project-ocp.php",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

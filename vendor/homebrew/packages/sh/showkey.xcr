@@ -51,6 +51,12 @@ import "xmlto" as i0
 pkg(
   name: "showkey",
   version: "1.8",
+  description: "Simple keystroke visualizer",
+  url: "http://www.catb.org/~esr/showkey/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

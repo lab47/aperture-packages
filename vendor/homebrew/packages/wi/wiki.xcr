@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "wiki",
   version: "1.4.1",
+  description: "Fetch summaries from MediaWiki wikis, like Wikipedia",
+  url: "https://github.com/walle/wiki",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

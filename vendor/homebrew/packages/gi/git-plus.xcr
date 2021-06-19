@@ -49,6 +49,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "git-plus",
   version: "0.4.6",
+  description: "Git utilities: git multi, git relation, git old-branches, git recent",
+  url: "https://github.com/tkrajina/git-plus",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

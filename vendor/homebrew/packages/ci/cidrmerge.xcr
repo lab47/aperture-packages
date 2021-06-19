@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cidrmerge",
   version: "1.5.3",
+  description: "CIDR merging with white listing (network exclusion)",
+  url: "https://cidrmerge.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

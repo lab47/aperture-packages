@@ -41,6 +41,12 @@ import "libev" as i0
 pkg(
   name: "weighttp",
   version: "0.4",
+  description: "Webserver benchmarking tool that supports multithreading",
+  url: "https://redmine.lighttpd.net/projects/weighttp/wiki",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

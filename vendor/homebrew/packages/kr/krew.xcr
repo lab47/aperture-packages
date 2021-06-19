@@ -57,6 +57,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "krew",
   version: "0.4.1",
+  description: "Package manager for kubectl plugins",
+  url: "https://sigs.k8s.io/krew/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

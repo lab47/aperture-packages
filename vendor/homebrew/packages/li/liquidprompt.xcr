@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "liquidprompt",
   version: "2.0.3",
+  description: "Adaptive prompt for bash and zsh shells",
+  url: "https://github.com/nojhan/liquidprompt",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

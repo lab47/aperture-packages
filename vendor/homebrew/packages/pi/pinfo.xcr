@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gettext" as i3
 pkg(
   name: "pinfo",
   version: "0.6.13",
+  description: "User-friendly, console-based viewer for Info documents",
+  url: "https://packages.debian.org/sid/pinfo",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

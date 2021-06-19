@@ -43,6 +43,12 @@ import "glktermw" as i0
 pkg(
   name: "git-if",
   version: "1.3.6",
+  description: "Glulx interpreter that is optimized for speed",
+  url: "https://ifarchive.org/indexes/if-archiveXprogrammingXglulxXinterpretersXgit.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ent",
   version: "1.0",
+  description: "Pseudorandom number sequence test program",
+  url: "https://www.fourmilab.ch/random/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

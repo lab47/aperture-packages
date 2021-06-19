@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cweb",
   version: "3.64c",
+  description: "Literate documentation system for C, C++, and Java",
+  url: "https://cs.stanford.edu/~knuth/cweb.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

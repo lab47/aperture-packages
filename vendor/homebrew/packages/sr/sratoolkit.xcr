@@ -90,6 +90,12 @@ import "hdf5" as i0, "libmagic" as i1, "libxml2" as i2, "perl" as i3
 pkg(
   name: "sratoolkit",
   version: "2.11.0",
+  description: "Data tools for INSDC Sequence Read Archive",
+  url: "https://github.com/ncbi/sra-tools",
+  metadata: %{
+    "license": "Public Domain and GPL-3.0-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

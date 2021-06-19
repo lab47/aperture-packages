@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gpatch",
   version: "2.7.6",
+  description: "Apply a diff file to an original",
+  url: "https://savannah.gnu.org/projects/patch/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

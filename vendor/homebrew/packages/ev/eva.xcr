@@ -36,6 +36,12 @@ import "rust" as i0
 pkg(
   name: "eva",
   version: "0.2.7",
+  description: "Calculator REPL, similar to bc(1)",
+  url: "https://github.com/NerdyPepper/eva/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "bison" as i0, "ed" as i1, "texinfo" as i2, "flex" as i3
 pkg(
   name: "bc",
   version: "1.07.1",
+  description: "Arbitrary precision numeric processing language",
+  url: "https://www.gnu.org/software/bc/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

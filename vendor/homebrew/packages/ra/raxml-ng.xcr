@@ -58,6 +58,12 @@ import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "gmp"
 pkg(
   name: "raxml-ng",
   version: "1.0.2",
+  description: "RAxML Next Generation: faster, easier-to-use and more flexible",
+  url: "https://sco.h-its.org/exelixis/web/software/raxml/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

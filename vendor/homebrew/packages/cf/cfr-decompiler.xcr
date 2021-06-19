@@ -94,6 +94,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "cfr-decompiler",
   version: "0.151",
+  description: "Yet Another Java Decompiler",
+  url: "https://www.benf.org/other/cfr/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

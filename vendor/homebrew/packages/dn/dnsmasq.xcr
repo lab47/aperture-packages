@@ -102,6 +102,12 @@ import "pkg-config" as i0
 pkg(
   name: "dnsmasq",
   version: "2.85",
+  description: "Lightweight DNS forwarder and DHCP server",
+  url: "https://thekelleys.org.uk/dnsmasq/doc.html",
+  metadata: %{
+    "license": "GPL-2.0-only or GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

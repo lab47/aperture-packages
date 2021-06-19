@@ -74,6 +74,12 @@ import "ecl" as i0, "zlib" as i1
 pkg(
   name: "sbcl",
   version: "2.1.5",
+  description: "Steel Bank Common Lisp system",
+  url: "http://www.sbcl.org/",
+  metadata: %{
+    "license": "Public Domain and MIT and Xerox and BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

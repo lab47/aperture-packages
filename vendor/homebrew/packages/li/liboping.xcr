@@ -46,6 +46,12 @@ import "ncurses" as i0
 pkg(
   name: "liboping",
   version: "1.10.0",
+  description: "C library to generate ICMP echo requests",
+  url: "https://noping.cc/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

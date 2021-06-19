@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "asn1c",
   version: "0.9.28",
+  description: "Compile ASN.1 specifications into C source code",
+  url: "https://lionet.info/asn1c/blog/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

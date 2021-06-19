@@ -40,6 +40,12 @@ import "cmake" as i0, "libusb" as i1
 pkg(
   name: "vrpn",
   version: "07.34",
+  description: "Virtual reality peripheral network",
+  url: "https://github.com/vrpn/vrpn/wiki",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

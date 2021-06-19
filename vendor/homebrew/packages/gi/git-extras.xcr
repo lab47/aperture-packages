@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-extras",
   version: "6.2.0",
+  description: "Small git utilities",
+  url: "https://github.com/tj/git-extras",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

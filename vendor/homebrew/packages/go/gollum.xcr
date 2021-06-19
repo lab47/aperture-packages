@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "gollum",
   version: "0.6.0",
+  description: "Go n:m message multiplexer",
+  url: "https://github.com/trivago/gollum",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

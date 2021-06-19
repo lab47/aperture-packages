@@ -51,6 +51,12 @@ import "openjdk@11" as i0
 pkg(
   name: "maxwell",
   version: "1.33.1",
+  description: "Reads MySQL binlogs and writes row updates as JSON to Kafka",
+  url: "https://maxwells-daemon.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "libgit2-glib",
   version: "0.99.0.1",
+  description: "Glib wrapper library around libgit2 git access library",
+  url: "https://github.com/GNOME/libgit2-glib",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

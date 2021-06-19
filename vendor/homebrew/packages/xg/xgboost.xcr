@@ -47,6 +47,12 @@ import "cmake" as i0, "libomp" as i1, "numpy" as i2, "scipy" as i3
 pkg(
   name: "xgboost",
   version: "1.3.3",
+  description: "Scalable, Portable and Distributed Gradient Boosting Library",
+  url: "https://xgboost.ai/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "node-build" as i0
 pkg(
   name: "nodenv",
   version: "1.4.0",
+  description: "Manage multiple NodeJS versions",
+  url: "https://github.com/nodenv/nodenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

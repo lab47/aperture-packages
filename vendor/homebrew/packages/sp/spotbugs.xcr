@@ -57,6 +57,12 @@ import "openjdk" as i0
 pkg(
   name: "spotbugs",
   version: "4.2.3",
+  description: "Tool for Java static analysis (FindBugs's successor)",
+  url: "https://spotbugs.github.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

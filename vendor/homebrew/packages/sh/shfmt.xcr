@@ -46,6 +46,12 @@ import "go" as i0, "scdoc" as i1
 pkg(
   name: "shfmt",
   version: "3.3.0",
+  description: "Autoformat shell script source code",
+  url: "https://github.com/mvdan/sh",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

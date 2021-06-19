@@ -55,6 +55,12 @@ import "maven" as i0, "openjdk@11" as i1
 pkg(
   name: "swagger-codegen",
   version: "3.0.26",
+  description: "Generate clients, server stubs, and docs from an OpenAPI spec",
+  url: "https://swagger.io/swagger-codegen/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

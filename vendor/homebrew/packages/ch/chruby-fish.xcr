@@ -38,6 +38,12 @@ import "chruby" as i0, "fish" as i1
 pkg(
   name: "chruby-fish",
   version: "0.8.2",
+  description: "Thin wrapper around chruby to make it work with the Fish shell",
+  url: "https://github.com/JeanMertz/chruby-fish#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

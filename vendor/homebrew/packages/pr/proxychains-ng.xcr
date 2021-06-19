@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "proxychains-ng",
   version: "4.14",
+  description: "Hook preloader",
+  url: "https://sourceforge.net/projects/proxychains-ng/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

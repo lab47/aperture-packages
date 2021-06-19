@@ -92,6 +92,12 @@ import "pkg-config" as i0, "boost" as i1, "lua" as i2, "openssl@1.1" as i3, "sql
 pkg(
   name: "pdns",
   version: "4.4.1",
+  description: "Authoritative nameserver",
+  url: "https://www.powerdns.com",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

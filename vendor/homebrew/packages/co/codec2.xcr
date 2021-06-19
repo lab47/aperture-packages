@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "codec2",
   version: "0.9.2",
+  description: "Open source speech codec",
+  url: "https://www.rowetel.com/?page_id=452",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

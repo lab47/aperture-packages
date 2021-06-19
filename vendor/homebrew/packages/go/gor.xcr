@@ -49,6 +49,12 @@ import "go" as i0, "libpcap" as i1
 pkg(
   name: "gor",
   version: "1.2.0",
+  description: "Real-time HTTP traffic replay tool written in Go",
+  url: "https://goreplay.org",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

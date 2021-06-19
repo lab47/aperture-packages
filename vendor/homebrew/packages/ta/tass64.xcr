@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tass64",
   version: "1.56.2625",
+  description: "Multi pass optimizing macro assembler for the 65xx series of processors",
+  url: "https://tass64.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-or-later and LGPL-2.1-only and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

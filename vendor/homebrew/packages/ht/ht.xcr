@@ -45,6 +45,12 @@ import "lzo" as i0, "ncurses" as i1
 pkg(
   name: "ht",
   version: "2.1.0",
+  description: "Viewer/editor/analyzer for executables",
+  url: "https://hte.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

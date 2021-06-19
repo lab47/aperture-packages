@@ -72,12 +72,18 @@ end
 
 import "homebrew-install" as hi
 
-import "aom" as i0, "asciidoc" as i1, "asciidoctor" as i2, "autoconf" as i3, "autoconf-archive" as i4, "automake" as i5, "bdw-gc" as i6, "berkeley-db" as i7, "bison" as i8, "boost" as i9, "brotli" as i10, "bzip2" as i11, "c-ares" as i12, "cairo" as i13, "cargo-c" as i14, "cmake" as i15, "curl" as i16, "cython" as i17, "dav1d" as i18, "docbook" as i19, "docbook-xsl" as i20, "docutils" as i21, "doxygen" as i22, "expat" as i23, "ffmpeg" as i24, "flac" as i25, "flex" as i26, "fontconfig" as i27, "freetype" as i28, "frei0r" as i29, "fribidi" as i30, "gdbm" as i31, "gettext" as i32, "giflib" as i33, "glib" as i34, "gmp" as i35, "gnu-getopt" as i36, "gnu-sed" as i37, "gnutls" as i38, "gobject-introspection" as i39, "gperf" as i40, "graphite2" as i41, "guile" as i42, "harfbuzz" as i43, "help2man" as i44, "icu4c" as i45, "jemalloc" as i46, "jpeg" as i47, "krb5" as i48, "lame" as i49, "leptonica" as i50, "libarchive" as i51, "libass" as i52, "libatomic_ops" as i53, "libb2" as i54, "libbluray" as i55, "libev" as i56, "libevent" as i57, "libffi" as i58, "libgcrypt" as i59, "libgit2" as i60, "libgpg-error" as i61, "libidn2" as i62, "libogg" as i63, "libpng" as i64, "libpthread-stubs" as i65, "libsamplerate" as i66, "libsndfile" as i67, "libsodium" as i68, "libsoxr" as i69, "libssh2" as i70, "libtasn1" as i71, "libtiff" as i72, "libtool" as i73, "libunistring" as i74, "libvidstab" as i75, "libvorbis" as i76, "libvpx" as i77, "libx11" as i78, "libxau" as i79, "libxcb" as i80, "libxdmcp" as i81, "libxext" as i82, "libxml2" as i83, "libxrender" as i84, "libxslt" as i85, "little-cms2" as i86, "luajit-openresty" as i87, "lz4" as i88, "lzo" as i89, "m4" as i90, "meson" as i91, "mpdecimal" as i92, "mujs" as i93, "nasm" as i94, "ncurses" as i95, "nettle" as i96, "nghttp2" as i97, "ninja" as i98, "opencore-amr" as i99, "openjpeg" as i100, "openldap" as i101, "openssl@1.1" as i102, "opus" as i103, "p11-kit" as i104, "pcre" as i105, "perl" as i106, "pixman" as i107, "pkg-config" as i108, "python@3.9" as i109, "rav1e" as i110, "readline" as i111, "rtmpdump" as i112, "rubberband" as i113, "rust" as i114, "sdl2" as i115, "snappy" as i116, "source-highlight" as i117, "speex" as i118, "sphinx-doc" as i119, "sqlite" as i120, "srt" as i121, "tesseract" as i122, "theora" as i123, "uchardet" as i124, "unbound" as i125, "unzip" as i126, "util-macros" as i127, "vapoursynth" as i128, "webp" as i129, "x264" as i130, "x265" as i131, "xcb-proto" as i132, "xmlto" as i133, "xorgproto" as i134, "xtrans" as i135, "xvid" as i136, "xz" as i137, "yasm" as i138, "youtube-dl" as i139, "zeromq" as i140, "zimg" as i141, "zip" as i142, "zlib" as i143, "zstd" as i144
+import "docutils" as i0, "pkg-config" as i1, "python@3.9" as i2, "ffmpeg" as i3, "jpeg" as i4, "libarchive" as i5, "libass" as i6, "little-cms2" as i7, "luajit-openresty" as i8, "mujs" as i9, "uchardet" as i10, "vapoursynth" as i11, "youtube-dl" as i12
 
 pkg(
   name: "mpv",
   version: "0.33.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131, i132, i133, i134, i135, i136, i137, i138, i139, i140, i141, i142, i143, i144],
+  description: "Media player based on MPlayer and mplayer2",
+  url: "https://mpv.io",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mpv.rb"), formula)

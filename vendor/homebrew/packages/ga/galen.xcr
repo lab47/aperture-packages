@@ -34,6 +34,12 @@ import "openjdk" as i0
 pkg(
   name: "galen",
   version: "2.4.4",
+  description: "Automated testing of look and feel for responsive websites",
+  url: "http://galenframework.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

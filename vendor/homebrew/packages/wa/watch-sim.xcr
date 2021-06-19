@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "watch-sim",
   version: "1.0.0",
+  description: "Command-line WatchKit application launcher",
+  url: "https://github.com/alloy/watch-sim",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

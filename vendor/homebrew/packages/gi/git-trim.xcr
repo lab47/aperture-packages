@@ -45,6 +45,12 @@ import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "git-trim",
   version: "0.4.2",
+  description: "Trim your git remote tracking branches that are merged or gone",
+  url: "https://github.com/foriequal0/git-trim",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

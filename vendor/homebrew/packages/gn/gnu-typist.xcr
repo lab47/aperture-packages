@@ -57,6 +57,12 @@ import "gettext" as i0
 pkg(
   name: "gnu-typist",
   version: "2.9.5",
+  description: "GNU typing tutor",
+  url: "https://www.gnu.org/software/gtypist/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

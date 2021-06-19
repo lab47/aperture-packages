@@ -43,6 +43,12 @@ import "pkg-config" as i0, "fftw" as i1, "libsndfile" as i2
 pkg(
   name: "waon",
   version: "0.11",
+  description: "Wave-to-notes transcriber",
+  url: "https://kichiki.github.io/WaoN/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -104,6 +104,12 @@ import "notmuch" as i0, "readline" as i1, "perl" as i2
 pkg(
   name: "notmuch-mutt",
   version: "0.32.1",
+  description: "Notmuch integration for Mutt",
+  url: "https://notmuchmail.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "xmake" as i0
 pkg(
   name: "tbox",
   version: "1.6.6",
+  description: "Glib-like multi-platform C library",
+  url: "https://tboox.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

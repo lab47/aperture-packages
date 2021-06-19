@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "gost",
   version: "2.11.1",
+  description: "GO Simple Tunnel - a simple tunnel written in golang",
+  url: "https://github.com/ginuerzh/gost",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

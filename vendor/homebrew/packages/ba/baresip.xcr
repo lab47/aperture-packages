@@ -51,6 +51,12 @@ import "libre" as i0, "librem" as i1
 pkg(
   name: "baresip",
   version: "0.6.5",
+  description: "Modular SIP useragent",
+  url: "https://github.com/baresip/baresip",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

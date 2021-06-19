@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libgadu",
   version: "1.12.2",
+  description: "Library for ICQ instant messenger protocol",
+  url: "https://libgadu.net/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

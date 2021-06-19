@@ -43,6 +43,12 @@ import "openssl@1.1" as i0, "ncurses" as i1
 pkg(
   name: "xaric",
   version: "0.13.9",
+  description: "IRC client",
+  url: "https://xaric.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

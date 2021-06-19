@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xctool",
   version: "0.3.7",
+  description: "Drop-in replacement for xcodebuild with a few extra features",
+  url: "https://github.com/facebookarchive/xctool",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

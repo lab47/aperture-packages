@@ -305,12 +305,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "expect" as i5, "gdbm" as i6, "go" as i7, "libffi" as i8, "libtool" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "tcl-tk" as i19, "unzip" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
 
 pkg(
   name: "cloudformation-cli",
   version: "0.2.12",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  description: "CloudFormation Provider Development Toolkit",
+  url: "https://github.com/aws-cloudformation/cloudformation-cli/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cloudformation-cli.rb"), formula)

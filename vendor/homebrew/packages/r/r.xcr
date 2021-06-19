@@ -155,6 +155,12 @@ import "pkg-config" as i0, "gcc" as i1, "gettext" as i2, "jpeg" as i3, "libpng" 
 pkg(
   name: "r",
   version: "4.1.0",
+  description: "Software environment for statistical computing",
+  url: "https://www.r-project.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

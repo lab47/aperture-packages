@@ -54,6 +54,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "json_spirit",
   version: "4.08",
+  description: "C++ JSON parser/generator",
+  url: "https://www.codeproject.com/Articles/20027/JSON-Spirit-A-C-JSON-Parser-Generator-Implemented",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

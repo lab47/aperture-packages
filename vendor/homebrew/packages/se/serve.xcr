@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "serve",
   version: "0.5.0",
+  description: "Static http server anywhere you need one",
+  url: "https://github.com/syntaqx/serve",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

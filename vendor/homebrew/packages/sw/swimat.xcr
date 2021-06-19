@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swimat",
   version: "1.7.0",
+  description: "Command-line tool to help format Swift code",
+  url: "https://github.com/Jintin/Swimat",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

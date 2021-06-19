@@ -50,6 +50,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "ntp",
   version: "4.2.8p15",
+  description: "Network Time Protocol (NTP) Distribution",
+  url: "https://www.eecis.udel.edu/~mills/ntp/html/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

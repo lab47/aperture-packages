@@ -95,6 +95,12 @@ import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "libtool" a
 pkg(
   name: "tesseract",
   version: "4.1.1",
+  description: "OCR (Optical Character Recognition) engine",
+  url: "https://github.com/tesseract-ocr/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

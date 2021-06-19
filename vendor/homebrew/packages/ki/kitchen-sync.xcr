@@ -51,6 +51,12 @@ import "cmake" as i0, "libpq" as i1, "mysql-client" as i2
 pkg(
   name: "kitchen-sync",
   version: "2.11",
+  description: "Fast efficiently sync database without dumping & reloading",
+  url: "https://github.com/willbryant/kitchen_sync",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

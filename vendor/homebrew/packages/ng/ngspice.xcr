@@ -71,6 +71,12 @@ import "fftw" as i0, "readline" as i1
 pkg(
   name: "ngspice",
   version: "34",
+  description: "Spice circuit simulator",
+  url: "https://ngspice.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

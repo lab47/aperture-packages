@@ -40,6 +40,12 @@ import "apache-spark" as i0, "elasticsearch@6" as i1, "hadoop" as i2, "hbase" as
 pkg(
   name: "predictionio",
   version: "0.14.0",
+  description: "Source machine learning server",
+  url: "https://predictionio.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

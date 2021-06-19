@@ -82,6 +82,12 @@ import "go" as i0
 pkg(
   name: "syncthing",
   version: "1.17.0",
+  description: "Open source continuous file synchronization application",
+  url: "https://syncthing.net/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "openjdk" as i0
 pkg(
   name: "kaitai-struct-compiler",
   version: "0.9",
+  description: "Compiler for generating binary data parsers",
+  url: "https://kaitai.io/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

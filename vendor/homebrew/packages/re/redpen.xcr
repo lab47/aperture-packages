@@ -43,6 +43,12 @@ import "openjdk@11" as i0
 pkg(
   name: "redpen",
   version: "1.10.4",
+  description: "Proofreading tool to help writers of technical documentation",
+  url: "https://redpen.cc/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

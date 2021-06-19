@@ -83,6 +83,12 @@ import "pkg-config" as i0, "glib" as i1, "openssl@1.1" as i2
 pkg(
   name: "glib-openssl",
   version: "2.50.8",
+  description: "OpenSSL GIO module for glib",
+  url: "https://launchpad.net/glib-networking",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

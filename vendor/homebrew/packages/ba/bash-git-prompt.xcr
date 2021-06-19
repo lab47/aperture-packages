@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bash-git-prompt",
   version: "2.7.1",
+  description: "Informative, fancy bash prompt for Git users",
+  url: "https://github.com/magicmonty/bash-git-prompt",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

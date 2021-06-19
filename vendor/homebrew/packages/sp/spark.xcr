@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "spark",
   version: "1.0.1",
+  description: "Sparklines for the shell",
+  url: "https://zachholman.com/spark/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

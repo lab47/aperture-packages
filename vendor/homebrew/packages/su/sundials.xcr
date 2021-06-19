@@ -71,6 +71,12 @@ import "cmake" as i0, "gcc" as i1, "open-mpi" as i2, "openblas" as i3, "suite-sp
 pkg(
   name: "sundials",
   version: "5.7.0",
+  description: "Nonlinear and differential/algebraic equations solver",
+  url: "https://computing.llnl.gov/projects/sundials",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

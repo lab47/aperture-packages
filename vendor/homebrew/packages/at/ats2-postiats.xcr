@@ -47,6 +47,12 @@ import "gmp" as i0
 pkg(
   name: "ats2-postiats",
   version: "0.4.2",
+  description: "Programming language with formal specification features",
+  url: "http://www.ats-lang.org/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

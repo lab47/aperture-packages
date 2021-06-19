@@ -45,6 +45,12 @@ import "wget" as i0
 pkg(
   name: "luaver",
   version: "1.1.0",
+  description: "Manage and switch between versions of Lua, LuaJIT, and Luarocks",
+  url: "https://github.com/DhavalKapil/luaver",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

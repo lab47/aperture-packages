@@ -99,12 +99,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "freetype" as i4, "gcc" as i5, "gdbm" as i6, "gmp" as i7, "isl" as i8, "jpeg" as i9, "libffi" as i10, "libmpc" as i11, "libpng" as i12, "libtiff" as i13, "m4" as i14, "mpdecimal" as i15, "mpfr" as i16, "ncurses" as i17, "numpy" as i18, "openblas" as i19, "openssl@1.1" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sphinx-doc" as i24, "sqlite" as i25, "tcl-tk" as i26, "unzip" as i27, "xz" as i28, "zip" as i29, "zlib" as i30, "zstd" as i31
+import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libpng" as i6, "libtiff" as i7, "mpdecimal" as i8, "ncurses" as i9, "numpy" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "tcl-tk" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "wxpython",
   version: "4.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "Python bindings for wxWidgets",
+  url: "https://www.wxpython.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later with WxWindows-exception-3.1",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wxpython.rb"), formula)

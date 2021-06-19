@@ -65,6 +65,12 @@ import "gmp" as i0, "mpfr" as i1
 pkg(
   name: "libmpc",
   version: "1.2.1",
+  description: "C library for the arithmetic of high precision complex numbers",
+  url: "http://www.multiprecision.org/mpc/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

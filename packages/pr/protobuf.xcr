@@ -1,4 +1,4 @@
-import fetch, python
+import fetch, "python@3.9" as python
 
 pkg(
   name: "protobuf"

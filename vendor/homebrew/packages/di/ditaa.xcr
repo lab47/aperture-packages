@@ -33,6 +33,12 @@ import "openjdk" as i0
 pkg(
   name: "ditaa",
   version: "0.11.0",
+  description: "Convert ASCII diagrams into proper bitmap graphics",
+  url: "https://ditaa.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

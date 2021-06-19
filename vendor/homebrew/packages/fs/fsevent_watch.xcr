@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fsevent_watch",
   version: "0.2",
+  description: "macOS FSEvents client",
+  url: "https://github.com/proger/fsevent_watch",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

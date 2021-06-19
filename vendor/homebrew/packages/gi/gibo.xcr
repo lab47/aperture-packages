@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gibo",
   version: "2.2.4",
+  description: "Access GitHub's .gitignore boilerplates",
+  url: "https://github.com/simonwhitaker/gibo",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

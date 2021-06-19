@@ -59,6 +59,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "rtptools",
   version: "1.22",
+  description: "Set of tools for processing RTP data",
+  url: "https://web.archive.org/web/20190924020700/www.cs.columbia.edu/irt/software/rtptools/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "envchain",
   version: "1.0.1",
+  description: "Secure your credentials in environment variables",
+  url: "https://github.com/sorah/envchain",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

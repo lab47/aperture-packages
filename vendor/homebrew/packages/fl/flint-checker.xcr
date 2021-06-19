@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "flint-checker",
   version: "0.1.0",
+  description: "Check your project for common sources of contributor friction",
+  url: "https://github.com/pengwynn/flint",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

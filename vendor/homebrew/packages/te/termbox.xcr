@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "termbox",
   version: "1.1.2",
+  description: "Library for writing text-based user interfaces",
+  url: "https://code.google.com/p/termbox/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

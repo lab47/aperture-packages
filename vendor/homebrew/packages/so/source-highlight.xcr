@@ -46,6 +46,12 @@ import "boost" as i0
 pkg(
   name: "source-highlight",
   version: "3.1.9",
+  description: "Source-code syntax highlighter",
+  url: "https://www.gnu.org/software/src-highlite/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

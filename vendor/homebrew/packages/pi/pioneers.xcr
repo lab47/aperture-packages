@@ -54,6 +54,12 @@ import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "gettext" as i3, "
 pkg(
   name: "pioneers",
   version: "15.6",
+  description: "Settlers of Catan clone",
+  url: "https://pio.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

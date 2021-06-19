@@ -48,6 +48,12 @@ import "go" as i0, "docker-machine" as i1
 pkg(
   name: "docker-machine-driver-vultr",
   version: "1.4.0",
+  description: "Docker Machine driver plugin for Vultr Cloud",
+  url: "https://github.com/janeczku/docker-machine-vultr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

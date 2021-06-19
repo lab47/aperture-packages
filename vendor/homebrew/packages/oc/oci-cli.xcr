@@ -121,6 +121,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "oci-cli",
   version: "2.25.2",
+  description: "Oracle Cloud Infrastructure CLI",
+  url: "https://docs.cloud.oracle.com/iaas/Content/API/Concepts/cliconcepts.htm",
+  metadata: %{
+    "license": "UPL-1.0 or Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

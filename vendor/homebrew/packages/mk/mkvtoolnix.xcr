@@ -103,6 +103,12 @@ import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fm
 pkg(
   name: "mkvtoolnix",
   version: "57.0.0",
+  description: "Matroska media files manipulation tools",
+  url: "https://mkvtoolnix.download/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

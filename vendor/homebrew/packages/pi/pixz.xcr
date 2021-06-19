@@ -52,6 +52,12 @@ import "asciidoc" as i0, "docbook" as i1, "pkg-config" as i2, "libarchive" as i3
 pkg(
   name: "pixz",
   version: "1.0.7",
+  description: "Parallel, indexed, xz compressor",
+  url: "https://github.com/vasi/pixz",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

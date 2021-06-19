@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zpaq",
   version: "7.15",
+  description: "Incremental, journaling command-line archiver",
+  url: "http://mattmahoney.net/dc/zpaq.html",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

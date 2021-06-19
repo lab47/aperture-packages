@@ -81,6 +81,12 @@ import "openjdk" as i0
 pkg(
   name: "leiningen",
   version: "2.9.6",
+  description: "Build tool for Clojure",
+  url: "https://github.com/technomancy/leiningen",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

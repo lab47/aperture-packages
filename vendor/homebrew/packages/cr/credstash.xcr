@@ -94,12 +94,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "python@3.9" as i25, "readline" as i26, "rtmpdump" as i27, "rust" as i28, "sphinx-doc" as i29, "sqlite" as i30, "unzip" as i31, "xz" as i32, "zip" as i33, "zlib" as i34, "zstd" as i35
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "rust" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "credstash",
   version: "1.17.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  description: "Little utility for managing credentials in the cloud",
+  url: "https://github.com/fugue/credstash",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "credstash.rb"), formula)

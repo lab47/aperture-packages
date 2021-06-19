@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ptunnel",
   version: "0.72",
+  description: "Tunnel over ICMP",
+  url: "https://www.cs.uit.no/~daniels/PingTunnel/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

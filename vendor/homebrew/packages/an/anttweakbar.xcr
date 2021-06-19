@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "anttweakbar",
   version: "1.16",
+  description: "C/C++ library for adding GUIs to OpenGL apps",
+  url: "https://anttweakbar.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

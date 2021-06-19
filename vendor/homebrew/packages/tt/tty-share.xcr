@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "tty-share",
   version: "2.2.0",
+  description: "Terminal sharing over the Internet",
+  url: "https://tty-share.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

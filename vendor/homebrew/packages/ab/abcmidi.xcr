@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "abcmidi",
   version: "2021.05.25",
+  description: "Converts abc music notation files to MIDI files",
+  url: "https://ifdo.ca/~seymour/runabc/top.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "pkg-config" as i0, "boost" as i1
 pkg(
   name: "librevenge",
   version: "0.0.4",
+  description: "Base library for writing document import filters",
+  url: "https://sourceforge.net/p/libwpd/wiki/librevenge/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "cfitsio" as i0
 pkg(
   name: "ccfits",
   version: "2.5",
+  description: "Object oriented interface to the cfitsio library",
+  url: "https://heasarc.gsfc.nasa.gov/fitsio/CCfits/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

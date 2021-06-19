@@ -54,6 +54,12 @@ import "mono" as i0
 pkg(
   name: "paket",
   version: "5.257.0",
+  description: "Dependency manager for .NET with support for NuGet and Git repositories",
+  url: "https://fsprojects.github.io/Paket/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

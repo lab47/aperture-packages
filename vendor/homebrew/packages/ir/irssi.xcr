@@ -93,6 +93,12 @@ import "pkg-config" as i0, "glib" as i1, "openssl@1.1" as i2, "ncurses" as i3, "
 pkg(
   name: "irssi",
   version: "1.2.3",
+  description: "Modular IRC client",
+  url: "https://irssi.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

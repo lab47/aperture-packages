@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "gostatic",
   version: "2.29",
+  description: "Fast static site generator",
+  url: "https://github.com/piranha/gostatic",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

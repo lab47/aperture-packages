@@ -58,6 +58,12 @@ import "cmake" as i0
 pkg(
   name: "abseil",
   version: "20210324.2",
+  description: "C++ Common Libraries",
+  url: "https://abseil.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

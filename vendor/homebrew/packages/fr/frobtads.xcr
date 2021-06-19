@@ -38,6 +38,12 @@ import "curl" as i0
 pkg(
   name: "frobtads",
   version: "1.2.4",
+  description: "TADS interpreter and compilers",
+  url: "https://www.tads.org/frobtads.htm",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

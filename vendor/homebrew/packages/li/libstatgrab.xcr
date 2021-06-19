@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libstatgrab",
   version: "0.92",
+  description: "Provides cross-platform access to statistics about the system",
+  url: "https://www.i-scream.org/libstatgrab/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

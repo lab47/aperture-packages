@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "homesick-completion",
   version: "1.0.0",
+  description: "Bash completion for Homesick",
+  url: "https://github.com/JoeNyland/homesick-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

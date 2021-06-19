@@ -38,6 +38,12 @@ import "go" as i0, "jpeg-turbo" as i1, "qpdf" as i2
 pkg(
   name: "pdftilecut",
   version: "0.5",
+  description: "Sub-divide a PDF page(s) into smaller pages so you can print them",
+  url: "https://github.com/oxplot/pdftilecut",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -70,6 +70,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "boost" as i3, "gnut
 pkg(
   name: "upscaledb",
   version: "2.2.1",
+  description: "Database for embedded devices",
+  url: "https://upscaledb.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

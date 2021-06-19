@@ -46,6 +46,12 @@ import "xmlto" as i0
 pkg(
   name: "patchutils",
   version: "0.4.2",
+  description: "Small collection of programs that operate on patch files",
+  url: "http://cyberelk.net/tim/software/patchutils/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

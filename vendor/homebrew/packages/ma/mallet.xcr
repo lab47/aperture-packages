@@ -41,6 +41,12 @@ import "openjdk" as i0
 pkg(
   name: "mallet",
   version: "2.0.8",
+  description: "MAchine Learning for LanguagE Toolkit",
+  url: "http://mallet.cs.umass.edu/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

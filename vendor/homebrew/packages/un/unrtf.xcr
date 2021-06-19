@@ -60,6 +60,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "unrtf",
   version: "0.21.10",
+  description: "RTF to other formats converter",
+  url: "https://www.gnu.org/software/unrtf/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

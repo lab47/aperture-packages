@@ -38,6 +38,12 @@ import "libdnet" as i0
 pkg(
   name: "daemonlogger",
   version: "1.2.1",
+  description: "Network packet logger and soft tap daemon",
+  url: "https://sourceforge.net/projects/daemonlogger/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

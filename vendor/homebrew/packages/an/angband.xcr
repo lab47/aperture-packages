@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "angband",
   version: "4.2.1",
+  description: "Dungeon exploration game",
+  url: "https://rephial.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "maven" as i0
 pkg(
   name: "pax-construct",
   version: "1.6.0",
+  description: "Tools to setup and develop OSGi projects quickly",
+  url: "https://ops4j1.jira.com/wiki/display/paxconstruct/Pax+Construct",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

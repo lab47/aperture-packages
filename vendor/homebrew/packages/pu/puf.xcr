@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "puf",
   version: "1.0.0",
+  description: "Parallel URL fetcher",
+  url: "https://puf.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

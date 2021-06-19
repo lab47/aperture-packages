@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libevent" as i1
 pkg(
   name: "fstrm",
   version: "0.6.1",
+  description: "Frame Streams implementation in C",
+  url: "https://github.com/farsightsec/fstrm",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

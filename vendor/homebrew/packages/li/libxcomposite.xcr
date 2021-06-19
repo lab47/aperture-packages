@@ -60,6 +60,12 @@ import "pkg-config" as i0, "libxfixes" as i1, "xorgproto" as i2
 pkg(
   name: "libxcomposite",
   version: "0.4.5",
+  description: "X.Org: Client library for the Composite extension",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

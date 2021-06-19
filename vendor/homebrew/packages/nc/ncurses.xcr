@@ -104,6 +104,12 @@ import "pkg-config" as i0
 pkg(
   name: "ncurses",
   version: "6.2",
+  description: "Text-based UI library",
+  url: "https://www.gnu.org/software/ncurses/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

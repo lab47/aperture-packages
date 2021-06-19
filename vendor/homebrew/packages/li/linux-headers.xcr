@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "linux-headers",
   version: "4.4.80",
+  description: "Header files of the Linux kernel",
+  url: "https://kernel.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

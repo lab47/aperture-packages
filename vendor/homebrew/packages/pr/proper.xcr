@@ -36,6 +36,12 @@ import "rebar3" as i0, "erlang" as i1
 pkg(
   name: "proper",
   version: "1.4",
+  description: "QuickCheck-inspired property-based testing tool for Erlang",
+  url: "https://proper-testing.github.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

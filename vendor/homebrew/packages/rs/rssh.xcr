@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rssh",
   version: "2.3.4",
+  description: "Restricted shell for use with OpenSSH",
+  url: "http://www.pizzashack.org/rssh",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

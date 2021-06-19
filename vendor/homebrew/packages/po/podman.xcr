@@ -43,6 +43,12 @@ import "go" as i0, "go-md2man" as i1
 pkg(
   name: "podman",
   version: "3.2.0",
+  description: "Tool for managing OCI containers and pods",
+  url: "https://podman.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

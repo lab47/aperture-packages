@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tta",
   version: "2.2",
+  description: "Lossless audio codec",
+  url: "https://web.archive.org/web/20100131140204/true-audio.com/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

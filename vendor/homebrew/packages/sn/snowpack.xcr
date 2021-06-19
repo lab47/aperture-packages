@@ -48,6 +48,12 @@ import "node" as i0
 pkg(
   name: "snowpack",
   version: "3.5.7",
+  description: "Frontend build tool designed for the modern web",
+  url: "https://www.snowpack.dev",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

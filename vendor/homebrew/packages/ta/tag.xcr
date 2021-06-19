@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tag",
   version: "0.10",
+  description: "Manipulate and query tags on macOS files",
+  url: "https://github.com/jdberry/tag/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

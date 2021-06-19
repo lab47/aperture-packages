@@ -46,6 +46,12 @@ import "zlib" as i0
 pkg(
   name: "stress-ng",
   version: "0.12.10",
+  description: "Stress test a computer system in various selectable ways",
+  url: "https://kernel.ubuntu.com/~cking/stress-ng/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

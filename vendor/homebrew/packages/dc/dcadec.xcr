@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dcadec",
   version: "0.2.0",
+  description: "DTS Coherent Acoustics decoder with support for HD extensions",
+  url: "https://github.com/foo86/dcadec",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

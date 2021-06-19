@@ -55,6 +55,12 @@ import "bison" as i0, "ruby" as i1
 pkg(
   name: "mruby-cli",
   version: "0.0.4",
+  description: "Build native command-line applications for Linux, MacOS, and Windows",
+  url: "https://github.com/hone/mruby-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

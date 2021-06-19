@@ -39,6 +39,12 @@ import "cmake" as i0, "pkg-config" as i1, "glib" as i2
 pkg(
   name: "cf4ocl",
   version: "2.1.0",
+  description: "C Framework for OpenCL",
+  url: "https://fakenmc.github.io/cf4ocl/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

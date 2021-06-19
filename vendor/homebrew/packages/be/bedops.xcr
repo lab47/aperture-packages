@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bedops",
   version: "2.4.39",
+  description: "Set and statistical operations on genomic data of arbitrary scale",
+  url: "https://github.com/bedops/bedops",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -68,6 +68,12 @@ import "sdl" as i0
 pkg(
   name: "pmdmini",
   version: "1.0.1",
+  description: "Plays music in PC-88/98 PMD chiptune format",
+  url: "https://github.com/mistydemeo/pmdmini",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

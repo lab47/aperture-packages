@@ -64,6 +64,12 @@ import "gettext" as i0, "perl" as i1
 pkg(
   name: "help2man",
   version: "1.48.3",
+  description: "Automatically generate simple man pages",
+  url: "https://www.gnu.org/software/help2man/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

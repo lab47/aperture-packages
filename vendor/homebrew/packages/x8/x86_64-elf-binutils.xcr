@@ -50,6 +50,12 @@ import "texinfo" as i0
 pkg(
   name: "x86_64-elf-binutils",
   version: "2.36.1",
+  description: "GNU Binutils for x86_64-elf cross development",
+  url: "https://www.gnu.org/software/binutils/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

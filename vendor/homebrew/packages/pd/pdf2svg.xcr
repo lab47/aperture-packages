@@ -39,6 +39,12 @@ import "pkg-config" as i0, "cairo" as i1, "poppler" as i2
 pkg(
   name: "pdf2svg",
   version: "0.2.3",
+  description: "PDF converter to SVG",
+  url: "https://cityinthesky.co.uk/opensource/pdf2svg",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpssh",
   version: "1.3.3",
+  description: "Mass parallel ssh",
+  url: "https://github.com/ndenev/mpssh",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

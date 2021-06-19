@@ -52,6 +52,12 @@ import "libnfc" as i0, "libusb" as i1, "openssl@1.1" as i2
 pkg(
   name: "mfterm",
   version: "1.0.7",
+  description: "Terminal for working with Mifare Classic 1-4k Tags",
+  url: "https://github.com/4ZM/mfterm",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

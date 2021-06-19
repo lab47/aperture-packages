@@ -108,6 +108,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nethacked",
   version: "1.0",
+  description: "Bugfixed and interface-patched Nethack",
+  url: "https://nethacked.github.io/",
+  metadata: %{
+    "license": "NGPL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

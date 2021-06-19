@@ -55,6 +55,12 @@ import "zlib" as i0
 pkg(
   name: "sword",
   version: "1.9.0",
+  description: "Cross-platform tools to write Bible software",
+  url: "https://www.crosswire.org/sword/index.jsp",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

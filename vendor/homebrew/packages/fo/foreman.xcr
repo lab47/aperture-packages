@@ -43,6 +43,12 @@ import "ruby" as i0
 pkg(
   name: "foreman",
   version: "0.87.2",
+  description: "Manage Procfile-based applications",
+  url: "https://ddollar.github.io/foreman/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

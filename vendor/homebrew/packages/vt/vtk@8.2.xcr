@@ -141,12 +141,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gcc" as i14, "gdbm" as i15, "gettext" as i16, "gmp" as i17, "gperf" as i18, "hdf5" as i19, "help2man" as i20, "icu4c" as i21, "isl" as i22, "jemalloc" as i23, "jpeg" as i24, "krb5" as i25, "libev" as i26, "libffi" as i27, "libidn2" as i28, "libmpc" as i29, "libpng" as i30, "libssh2" as i31, "libtiff" as i32, "libtool" as i33, "libunistring" as i34, "libxml2" as i35, "m4" as i36, "mpdecimal" as i37, "mpfr" as i38, "ncurses" as i39, "netcdf" as i40, "nghttp2" as i41, "ninja" as i42, "openldap" as i43, "openssl@1.1" as i44, "perl" as i45, "pkg-config" as i46, "pyqt-builder" as i47, "pyqt@5" as i48, "python@3.9" as i49, "qt@5" as i50, "readline" as i51, "rtmpdump" as i52, "sip" as i53, "sphinx-doc" as i54, "sqlite" as i55, "szip" as i56, "tcl-tk" as i57, "unzip" as i58, "xz" as i59, "zip" as i60, "zlib" as i61, "zstd" as i62
+import "cmake" as i0, "boost" as i1, "fontconfig" as i2, "hdf5" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "netcdf" as i7, "pyqt@5" as i8, "python@3.9" as i9, "qt@5" as i10, "expat" as i11, "libxml2" as i12, "tcl-tk" as i13, "zlib" as i14
 
 pkg(
   name: "vtk@8.2",
   version: "8.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62],
+  description: "Toolkit for 3D computer graphics, image processing, and visualization",
+  url: "https://www.vtk.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vtk@8.2.rb"), formula)

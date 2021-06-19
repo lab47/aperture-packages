@@ -60,6 +60,12 @@ import "dep" as i0, "go" as i1, "docker-machine" as i2
 pkg(
   name: "docker-machine-driver-hyperkit",
   version: "1.0.0",
+  description: "Docker Machine driver for hyperkit",
+  url: "https://github.com/machine-drivers/docker-machine-driver-hyperkit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

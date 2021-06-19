@@ -49,6 +49,12 @@ import "nasm" as i0, "readline" as i1, "sdl" as i2
 pkg(
   name: "pce",
   version: "0.2.2",
+  description: "PC emulator",
+  url: "http://www.hampa.ch/pce/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

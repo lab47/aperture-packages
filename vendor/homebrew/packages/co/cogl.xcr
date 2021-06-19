@@ -81,6 +81,12 @@ import "gobject-introspection" as i0, "pkg-config" as i1, "cairo" as i2, "gdk-pi
 pkg(
   name: "cogl",
   version: "1.22.8",
+  description: "Low level OpenGL abstraction library developed for Clutter",
+  url: "https://developer.gnome.org/cogl/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

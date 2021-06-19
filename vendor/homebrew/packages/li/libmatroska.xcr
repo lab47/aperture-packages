@@ -35,6 +35,12 @@ import "cmake" as i0, "libebml" as i1
 pkg(
   name: "libmatroska",
   version: "1.6.3",
+  description: "Extensible, open standard container format for audio/video",
+  url: "https://www.matroska.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

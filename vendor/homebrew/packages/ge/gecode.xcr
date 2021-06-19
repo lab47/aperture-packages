@@ -86,6 +86,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gecode",
   version: "6.2.0",
+  description: "Toolkit for developing constraint-based systems and applications",
+  url: "https://www.gecode.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

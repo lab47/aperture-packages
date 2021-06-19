@@ -62,6 +62,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "http_load",
   version: "20160309",
+  description: "Test throughput of a web server by running parallel fetches",
+  url: "https://www.acme.com/software/http_load/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

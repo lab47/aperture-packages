@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "gdrive",
   version: "2.1.0",
+  description: "Google Drive CLI Client",
+  url: "https://github.com/gdrive-org/gdrive",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

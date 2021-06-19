@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lsusb",
   version: "1.0",
+  description: "List USB devices, just like the Linux lsusb command",
+  url: "https://github.com/jlhonora/lsusb",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

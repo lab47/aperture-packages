@@ -187,12 +187,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "gmp" as i7, "gpatch" as i8, "libffi" as i9, "libtool" as i10, "m4" as i11, "mpdecimal" as i12, "mpfr" as i13, "ncurses" as i14, "ninja" as i15, "ocaml" as i16, "opam" as i17, "openjdk@11" as i18, "openssl@1.1" as i19, "perl" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sphinx-doc" as i24, "sqlite" as i25, "unzip" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
+import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "ninja" as i4, "opam" as i5, "openjdk@11" as i6, "pkg-config" as i7, "python@3.9" as i8, "gmp" as i9, "mpfr" as i10, "sqlite" as i11, "m4" as i12, "unzip" as i13, "ncurses" as i14, "xz" as i15, "zlib" as i16
 
 pkg(
   name: "infer",
   version: "1.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  description: "Static analyzer for Java, C, C++, and Objective-C",
+  url: "https://fbinfer.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "infer.rb"), formula)

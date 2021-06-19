@@ -51,6 +51,12 @@ import "cmake" as i0
 pkg(
   name: "vc",
   version: "1.4.1",
+  description: "SIMD Vector Classes for C++",
+  url: "https://github.com/VcDevel/Vc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

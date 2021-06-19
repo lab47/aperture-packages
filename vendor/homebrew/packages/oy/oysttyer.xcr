@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "oysttyer",
   version: "2.10.0",
+  description: "Command-line Twitter client",
+  url: "https://github.com/oysttyer/oysttyer",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

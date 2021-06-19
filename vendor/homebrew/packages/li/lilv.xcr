@@ -40,6 +40,12 @@ import "pkg-config" as i0, "lv2" as i1, "serd" as i2, "sord" as i3, "sratom" as 
 pkg(
   name: "lilv",
   version: "0.24.12",
+  description: "C library to use LV2 plugins",
+  url: "https://drobilla.net/software/lilv/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

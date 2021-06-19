@@ -46,6 +46,12 @@ import "pod2man" as i0, "perl" as i1
 pkg(
   name: "num-utils",
   version: "0.5",
+  description: "Programs for dealing with numbers from the command-line",
+  url: "https://suso.suso.org/xulu/Num-utils",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

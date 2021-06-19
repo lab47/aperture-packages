@@ -83,6 +83,12 @@ import "perl" as i0
 pkg(
   name: "fetch-crl",
   version: "3.0.21",
+  description: "Retrieve certificate revocation lists (CRLs)",
+  url: "https://wiki.nikhef.nl/grid/FetchCRL3",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -63,6 +63,12 @@ import "a52dec" as i0, "faad2" as i1, "flac" as i2, "fluid-synth" as i3, "freety
 pkg(
   name: "scummvm",
   version: "2.2.0",
+  description: "Graphic adventure game interpreter",
+  url: "https://www.scummvm.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libident",
   version: "0.32",
+  description: "Ident protocol library",
+  url: "https://www.remlab.net/libident/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

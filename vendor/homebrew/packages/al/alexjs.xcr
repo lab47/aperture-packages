@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "alexjs",
   version: "9.1.0",
+  description: "Catch insensitive, inconsiderate writing",
+  url: "https://alexjs.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

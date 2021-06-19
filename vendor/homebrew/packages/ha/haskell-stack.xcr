@@ -51,6 +51,12 @@ import "cabal-install" as i0, "ghc" as i1, "zlib" as i2
 pkg(
   name: "haskell-stack",
   version: "2.7.1",
+  description: "Cross-platform program for developing Haskell projects",
+  url: "https://haskellstack.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

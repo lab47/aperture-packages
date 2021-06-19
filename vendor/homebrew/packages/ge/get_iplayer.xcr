@@ -146,6 +146,12 @@ import "atomicparsley" as i0, "ffmpeg" as i1, "libxml2" as i2, "perl" as i3
 pkg(
   name: "get_iplayer",
   version: "3.27",
+  description: "Utility for downloading TV and radio programmes from BBC iPlayer",
+  url: "https://github.com/get-iplayer/get_iplayer",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "libtool" as i0
 pkg(
   name: "libvterm",
   version: "0.1.4",
+  description: "C99 library which implements a VT220 or xterm terminal emulator",
+  url: "http://www.leonerd.org.uk/code/libvterm/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

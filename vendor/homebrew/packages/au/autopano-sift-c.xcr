@@ -55,6 +55,12 @@ import "cmake" as i0, "libpano" as i1
 pkg(
   name: "autopano-sift-c",
   version: "2.5.1",
+  description: "Find control points in overlapping image pairs",
+  url: "https://wiki.panotools.org/Autopano-sift-C",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

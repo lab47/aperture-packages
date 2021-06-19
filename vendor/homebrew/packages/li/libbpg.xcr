@@ -45,6 +45,12 @@ import "cmake" as i0, "yasm" as i1, "jpeg" as i2, "libpng" as i3
 pkg(
   name: "libbpg",
   version: "0.9.8",
+  description: "Image format meant to improve on JPEG quality and file size",
+  url: "https://bellard.org/bpg/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

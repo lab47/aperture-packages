@@ -57,6 +57,12 @@ import "zlib" as i0
 pkg(
   name: "pigz",
   version: "2.6",
+  description: "Parallel gzip",
+  url: "https://zlib.net/pigz/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

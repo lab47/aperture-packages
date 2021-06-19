@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "growly",
   version: "0.2.0",
+  description: "Redirect command output to a growl notification",
+  url: "https://github.com/ryankee/growly",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

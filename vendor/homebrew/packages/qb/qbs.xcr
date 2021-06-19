@@ -53,6 +53,12 @@ import "qt@5" as i0
 pkg(
   name: "qbs",
   version: "1.19.0",
+  description: "Build tool for developing projects across multiple platforms",
+  url: "https://wiki.qt.io/Qbs",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

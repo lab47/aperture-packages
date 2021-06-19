@@ -96,6 +96,12 @@ import "mysql-client" as i0, "openssl@1.1" as i1, "perl" as i2
 pkg(
   name: "mytop",
   version: "1.9.1",
+  description: "Top-like query monitor for MySQL",
+  url: "https://web.archive.org/web/20200221154243/www.mysqlfanboy.com/mytop-3/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

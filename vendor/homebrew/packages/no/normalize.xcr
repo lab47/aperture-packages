@@ -55,6 +55,12 @@ import "mad" as i0
 pkg(
   name: "normalize",
   version: "0.7.7",
+  description: "Adjust volume of audio files to a standard level",
+  url: "https://www.nongnu.org/normalize/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "passwdqc",
   version: "1.4.0",
+  description: "Password/passphrase strength checking and enforcement toolset",
+  url: "https://www.openwall.com/passwdqc/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

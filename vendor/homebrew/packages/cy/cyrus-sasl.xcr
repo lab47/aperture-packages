@@ -56,6 +56,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "cyrus-sasl",
   version: "2.1.27",
+  description: "Simple Authentication and Security Layer",
+  url: "https://www.cyrusimap.org/sasl/",
+  metadata: %{
+    "license": "BSD-3-Clause-Attribution",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "geocode-glib",
   version: "3.26.2",
+  description: "GNOME library for gecoding and reverse geocoding",
+  url: "https://developer.gnome.org/geocode-glib",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

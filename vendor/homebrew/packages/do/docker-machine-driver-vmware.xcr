@@ -48,6 +48,12 @@ import "go" as i0, "docker-machine" as i1
 pkg(
   name: "docker-machine-driver-vmware",
   version: "0.1.3",
+  description: "VMware Fusion & Workstation docker-machine driver",
+  url: "https://www.vmware.com/products/personal-desktop-virtualization.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

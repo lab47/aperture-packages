@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "delta",
   version: "2006.08.03",
+  description: "Programmatically minimize files to isolate features of interest",
+  url: "https://web.archive.org/web/20170805142100/delta.tigris.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

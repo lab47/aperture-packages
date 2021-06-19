@@ -43,6 +43,12 @@ import "cmake" as i0
 pkg(
   name: "pelikan",
   version: "0.1.2",
+  description: "Production-ready cache services",
+  url: "https://twitter.github.io/pelikan",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

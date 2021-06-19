@@ -48,6 +48,12 @@ import "cmake" as i0
 pkg(
   name: "chaiscript",
   version: "6.1.0",
+  description: "Easy to use embedded scripting language for C++",
+  url: "https://chaiscript.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

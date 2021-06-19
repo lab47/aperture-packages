@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rem",
   version: "20150618",
+  description: "Command-line tool to access OSX Reminders.app database",
+  url: "https://github.com/kykim/rem",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "libx11" as i3, "libxex
 pkg(
   name: "libvdpau",
   version: "1.4",
+  description: "Open source Video Decode and Presentation API library",
+  url: "https://www.freedesktop.org/wiki/Software/VDPAU/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

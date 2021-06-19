@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "doctest",
   version: "2.4.6",
+  description: "Feature-rich C++11/14/17/20 single-header testing framework",
+  url: "https://github.com/onqtam/doctest",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

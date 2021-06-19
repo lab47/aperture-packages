@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libpng" as i1, "sdl2" as i2
 pkg(
   name: "flif",
   version: "0.3",
+  description: "Free Loseless Image Format",
+  url: "https://flif.info/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

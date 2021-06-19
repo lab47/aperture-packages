@@ -61,6 +61,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "gbdfed",
   version: "1.6",
+  description: "Bitmap Font Editor",
+  url: "http://sofia.nmsu.edu/~mleisher/Software/gbdfed/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

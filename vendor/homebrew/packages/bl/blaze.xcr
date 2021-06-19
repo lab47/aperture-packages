@@ -63,6 +63,12 @@ import "cmake" as i0, "openblas" as i1
 pkg(
   name: "blaze",
   version: "3.8",
+  description: "High-performance C++ math library for dense and sparse arithmetic",
+  url: "https://bitbucket.org/blaze-lib/blaze",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

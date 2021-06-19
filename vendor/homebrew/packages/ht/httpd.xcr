@@ -189,6 +189,12 @@ import "apr" as i0, "apr-util" as i1, "brotli" as i2, "nghttp2" as i3, "openssl@
 pkg(
   name: "httpd",
   version: "2.4.48",
+  description: "Apache HTTP server",
+  url: "https://httpd.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnu-shogi",
   version: "1.4.2",
+  description: "Japanese Chess",
+  url: "https://www.gnu.org/software/gnushogi/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

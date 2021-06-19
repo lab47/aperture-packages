@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "spring-completion",
   version: "0.0.1",
+  description: "Bash completion for Spring",
+  url: "https://github.com/jacaetevha/spring_bash_completion",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

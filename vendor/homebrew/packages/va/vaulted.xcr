@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "vaulted",
   version: "3.0.0",
+  description: "Allows the secure storage and execution of environments",
+  url: "https://github.com/miquella/vaulted",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

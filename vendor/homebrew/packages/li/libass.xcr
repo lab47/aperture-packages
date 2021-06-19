@@ -84,6 +84,12 @@ import "nasm" as i0, "pkg-config" as i1, "freetype" as i2, "fribidi" as i3, "har
 pkg(
   name: "libass",
   version: "0.15.1",
+  description: "Subtitle renderer for the ASS/SSA subtitle format",
+  url: "https://github.com/libass/libass",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

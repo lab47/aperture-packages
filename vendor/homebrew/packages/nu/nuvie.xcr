@@ -85,6 +85,12 @@ import "sdl" as i0
 pkg(
   name: "nuvie",
   version: "0.5",
+  description: "Ultima 6 engine",
+  url: "https://nuvie.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

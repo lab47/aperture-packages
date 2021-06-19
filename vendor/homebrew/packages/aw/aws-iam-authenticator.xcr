@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "aws-iam-authenticator",
   version: "0.5.3",
+  description: "Use AWS IAM credentials to authenticate to Kubernetes",
+  url: "https://github.com/kubernetes-sigs/aws-iam-authenticator",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

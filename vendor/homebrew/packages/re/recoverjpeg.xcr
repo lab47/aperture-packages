@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "recoverjpeg",
   version: "2.6.3",
+  description: "Tool to recover JPEG images from a file system image",
+  url: "https://rfc1149.net/devel/recoverjpeg.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

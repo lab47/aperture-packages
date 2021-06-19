@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "term",
   version: "2.1",
+  description: "Open terminal in specified directory (and optionally run command)",
+  url: "https://github.com/liyanage/macosx-shell-scripts/blob/HEAD/term",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

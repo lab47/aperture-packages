@@ -64,6 +64,12 @@ import "bsdmake" as i0
 pkg(
   name: "bsdiff",
   version: "4.3",
+  description: "Generate and apply patches to binary files",
+  url: "https://www.daemonology.net/bsdiff/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

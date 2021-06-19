@@ -53,6 +53,12 @@ import "intltool" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3, "gtk
 pkg(
   name: "gdmap",
   version: "0.8.1",
+  description: "Tool to inspect the used space of folders",
+  url: "https://sourceforge.net/projects/gdmap/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cppi",
   version: "1.18",
+  description: "Indent C preprocessor directives to reflect their nesting",
+  url: "https://www.gnu.org/software/cppi/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

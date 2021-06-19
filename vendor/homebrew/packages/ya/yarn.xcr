@@ -51,6 +51,12 @@ import "node" as i0
 pkg(
   name: "yarn",
   version: "1.22.10",
+  description: "JavaScript package manager",
+  url: "https://yarnpkg.com/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

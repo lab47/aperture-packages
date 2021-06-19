@@ -82,6 +82,12 @@ import "go" as i0
 pkg(
   name: "clipper",
   version: "2.0.0",
+  description: "Share macOS clipboard with tmux and other local and remote apps",
+  url: "https://wincent.com/products/clipper",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

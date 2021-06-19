@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hmmer",
   version: "3.3.2",
+  description: "Build profile HMMs and scan against sequence databases",
+  url: "http://hmmer.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

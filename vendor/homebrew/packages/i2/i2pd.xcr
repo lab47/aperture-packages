@@ -90,6 +90,12 @@ import "boost" as i0, "miniupnpc" as i1, "openssl@1.1" as i2
 pkg(
   name: "i2pd",
   version: "2.38.0",
+  description: "Full-featured C++ implementation of I2P client",
+  url: "https://i2pd.website/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

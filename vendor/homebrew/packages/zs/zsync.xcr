@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsync",
   version: "0.6.2",
+  description: "File transfer program",
+  url: "http://zsync.moria.org.uk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

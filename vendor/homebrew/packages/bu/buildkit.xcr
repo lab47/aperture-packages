@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "buildkit",
   version: "0.8.3",
+  description: "Сoncurrent, cache-efficient, and Dockerfile-agnostic builder toolkit",
+  url: "https://github.com/moby/buildkit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

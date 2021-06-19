@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jam",
   version: "2.6.1",
+  description: "Make-like build tool",
+  url: "https://www.perforce.com/documentation/jam-documentation",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

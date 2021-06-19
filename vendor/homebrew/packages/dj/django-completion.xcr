@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "django-completion",
   version: "3.2.4",
+  description: "Bash completion for Django",
+  url: "https://www.djangoproject.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

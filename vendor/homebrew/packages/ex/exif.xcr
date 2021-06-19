@@ -48,6 +48,12 @@ import "pkg-config" as i0, "libexif" as i1, "popt" as i2
 pkg(
   name: "exif",
   version: "0.6.22",
+  description: "Read, write, modify, and display EXIF data on the command-line",
+  url: "https://libexif.github.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

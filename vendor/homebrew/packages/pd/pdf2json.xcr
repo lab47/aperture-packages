@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pdf2json",
   version: "0.71",
+  description: "PDF to JSON and XML converter",
+  url: "https://github.com/flexpaper/pdf2json",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

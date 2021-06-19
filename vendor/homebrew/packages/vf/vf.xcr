@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vf",
   version: "0.0.1",
+  description: "Enhanced version of `cd` command",
+  url: "https://github.com/glejeune/vf",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

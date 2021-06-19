@@ -37,6 +37,12 @@ import "pkg-config" as i0
 pkg(
   name: "libpthread-stubs",
   version: "0.4",
+  description: "X.Org: pthread-stubs.pc",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

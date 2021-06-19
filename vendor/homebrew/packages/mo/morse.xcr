@@ -42,6 +42,12 @@ import "pkg-config" as i0, "pulseaudio" as i1
 pkg(
   name: "morse",
   version: "2.5",
+  description: "QSO generator and morse code trainer",
+  url: "http://www.catb.org/~esr/morse/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

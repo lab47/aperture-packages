@@ -46,6 +46,12 @@ import "mono" as i0
 pkg(
   name: "scriptcs",
   version: "0.17.1",
+  description: "Tools to write and execute C#",
+  url: "https://github.com/scriptcs/scriptcs",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

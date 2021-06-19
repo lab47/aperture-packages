@@ -42,6 +42,12 @@ import "pkg-config" as i0, "cairo" as i1, "jpeg" as i2, "libgeotiff" as i3, "lib
 pkg(
   name: "libgaiagraphics",
   version: "0.5",
+  description: "Library supporting common-utility raster handling",
+  url: "https://www.gaia-gis.it/fossil/libgaiagraphics/index",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

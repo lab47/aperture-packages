@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "awsweeper",
   version: "0.11.1",
+  description: "CLI tool for cleaning your AWS account",
+  url: "https://github.com/jckuester/awsweeper/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

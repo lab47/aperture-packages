@@ -66,6 +66,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "sdl2"
 pkg(
   name: "sdl2_image",
   version: "2.0.5",
+  description: "Library for loading images as SDL surfaces and textures",
+  url: "https://www.libsdl.org/projects/SDL_image/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

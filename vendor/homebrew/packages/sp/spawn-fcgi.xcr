@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "spawn-fcgi",
   version: "1.6.4",
+  description: "Spawn fast-CGI processes",
+  url: "https://redmine.lighttpd.net/projects/spawn-fcgi",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

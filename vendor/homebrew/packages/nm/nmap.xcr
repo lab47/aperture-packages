@@ -63,6 +63,12 @@ import "openssl@1.1" as i0, "bison" as i1, "flex" as i2, "zlib" as i3
 pkg(
   name: "nmap",
   version: "7.91",
+  description: "Port scanning utility for large networks",
+  url: "https://nmap.org/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

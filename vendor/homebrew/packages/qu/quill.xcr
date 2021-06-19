@@ -55,6 +55,12 @@ import "cmake" as i0
 pkg(
   name: "quill",
   version: "1.6.2",
+  description: "C++14 Asynchronous Low Latency Logging Library",
+  url: "https://github.com/odygrd/quill",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

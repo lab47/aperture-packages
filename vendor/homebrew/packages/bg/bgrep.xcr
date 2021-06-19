@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bgrep",
   version: "0.2",
+  description: "Like grep but for binary strings",
+  url: "https://github.com/tmbinc/bgrep",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

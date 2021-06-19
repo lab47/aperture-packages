@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "annie",
   version: "0.10.3",
+  description: "Fast, simple and clean video downloader",
+  url: "https://github.com/iawia002/annie",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -77,6 +77,12 @@ import "pkg-config" as i0, "jansson" as i1, "libevent" as i2, "sqlite" as i3, "c
 pkg(
   name: "mediaconch",
   version: "18.03.2",
+  description: "Conformance checker and technical metadata reporter",
+  url: "https://mediaarea.net/MediaConch",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

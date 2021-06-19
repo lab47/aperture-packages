@@ -55,6 +55,12 @@ import "openjdk" as i0
 pkg(
   name: "jdnssec-tools",
   version: "0.15",
+  description: "Java command-line tools for DNSSEC",
+  url: "https://github.com/dblacka/jdnssec-tools",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

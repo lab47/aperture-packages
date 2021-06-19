@@ -70,6 +70,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "rtmpdump",
   version: "2.4+20151223",
+  description: "Tool for downloading RTMP streaming media",
+  url: "https://rtmpdump.mplayerhq.hu/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

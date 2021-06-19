@@ -89,12 +89,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "flac" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "glm" as i10, "help2man" as i11, "jpeg" as i12, "libffi" as i13, "libogg" as i14, "libxml2" as i15, "m4" as i16, "mpdecimal" as i17, "ncurses" as i18, "openssl@1.1" as i19, "perl" as i20, "pkg-config" as i21, "portaudio" as i22, "portmidi" as i23, "pugixml" as i24, "python@3.9" as i25, "rapidjson" as i26, "readline" as i27, "sdl2" as i28, "sphinx-doc" as i29, "sqlite" as i30, "unzip" as i31, "utf8proc" as i32, "xz" as i33, "zip" as i34, "zlib" as i35
+import "glm" as i0, "pkg-config" as i1, "python@3.9" as i2, "rapidjson" as i3, "sphinx-doc" as i4, "flac" as i5, "jpeg" as i6, "portaudio" as i7, "portmidi" as i8, "pugixml" as i9, "sdl2" as i10, "sqlite" as i11, "utf8proc" as i12, "expat" as i13, "zlib" as i14
 
 pkg(
   name: "mame",
   version: "0.232",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  description: "Multiple Arcade Machine Emulator",
+  url: "https://mamedev.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mame.rb"), formula)

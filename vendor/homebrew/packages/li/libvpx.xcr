@@ -50,6 +50,12 @@ import "yasm" as i0
 pkg(
   name: "libvpx",
   version: "1.10.0",
+  description: "VP8/VP9 video codec",
+  url: "https://www.webmproject.org/code/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

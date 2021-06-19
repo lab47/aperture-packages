@@ -58,6 +58,12 @@ import "pkg-config" as i0, "gettext" as i1, "libsndfile" as i2, "sdl2" as i3, "z
 pkg(
   name: "mednafen",
   version: "1.26.1",
+  description: "Multi-system emulator",
+  url: "https://mednafen.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

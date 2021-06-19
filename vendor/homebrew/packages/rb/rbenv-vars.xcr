@@ -30,6 +30,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-vars",
   version: "1.2.0",
+  description: "Safely sets global and per-project environment variables",
+  url: "https://github.com/sstephenson/rbenv-vars",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

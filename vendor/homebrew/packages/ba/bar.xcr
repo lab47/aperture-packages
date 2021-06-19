@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bar",
   version: "1.4",
+  description: "Provide progress bars for shell scripts",
+  url: "http://www.theiling.de/projects/bar.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

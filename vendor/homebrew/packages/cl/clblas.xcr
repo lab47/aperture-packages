@@ -47,6 +47,12 @@ import "boost" as i0, "cmake" as i1
 pkg(
   name: "clblas",
   version: "2.12",
+  description: "Library containing BLAS functions written in OpenCL",
+  url: "https://github.com/clMathLibraries/clBLAS",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

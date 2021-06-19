@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "govendor",
   version: "1.0.9",
+  description: "Tool for vendoring Go dependencies",
+  url: "https://github.com/kardianos/govendor",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

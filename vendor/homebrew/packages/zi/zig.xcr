@@ -59,6 +59,12 @@ import "cmake" as i0, "llvm" as i1
 pkg(
   name: "zig",
   version: "0.8.0",
+  description: "Programming language designed for robustness, optimality, and clarity",
+  url: "https://ziglang.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

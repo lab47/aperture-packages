@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "flac" as i3, "gdbm" as i4, "jpeg" as i5, "libffi" as i6, "libmodplug" as i7, "libogg" as i8, "libpng" as i9, "libtiff" as i10, "libvorbis" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "protobuf" as i16, "python@3.7" as i17, "python@3.8" as i18, "python@3.9" as i19, "readline" as i20, "sdl2" as i21, "sdl2_image" as i22, "sdl2_mixer" as i23, "six" as i24, "sphinx-doc" as i25, "sqlite" as i26, "tcl-tk" as i27, "unzip" as i28, "webp" as i29, "xz" as i30, "zip" as i31, "zlib" as i32
+import "cmake" as i0, "pkg-config" as i1, "protobuf" as i2, "python@3.9" as i3, "sdl2" as i4, "sdl2_image" as i5, "sdl2_mixer" as i6
 
 pkg(
   name: "cdogs-sdl",
   version: "0.12.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32],
+  description: "Classic overhead run-and-gun game",
+  url: "https://cxong.github.io/cdogs-sdl/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cdogs-sdl.rb"), formula)

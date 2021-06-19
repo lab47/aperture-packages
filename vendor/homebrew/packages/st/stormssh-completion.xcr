@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "stormssh-completion",
   version: "0.1.1",
+  description: "Completion for storm-ssh",
+  url: "https://github.com/vigo/stormssh-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

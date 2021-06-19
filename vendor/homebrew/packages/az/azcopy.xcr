@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "azcopy",
   version: "10.10.0",
+  description: "Azure Storage data transfer utility",
+  url: "https://github.com/Azure/azure-storage-azcopy",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

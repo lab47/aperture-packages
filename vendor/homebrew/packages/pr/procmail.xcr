@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "procmail",
   version: "14",
+  description: "Autonomous mail processor",
+  url: "https://web.archive.org/web/20151013184044/procmail.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libantlr3c",
   version: "3.4",
+  description: "ANTLRv3 parsing library for C",
+  url: "https://www.antlr3.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

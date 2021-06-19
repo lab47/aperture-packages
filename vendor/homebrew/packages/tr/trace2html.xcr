@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "trace2html",
   version: "2015-07-07",
+  description: "Utility from Google Trace Viewer to convert JSON traces to HTML",
+  url: "https://github.com/google/trace-viewer",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

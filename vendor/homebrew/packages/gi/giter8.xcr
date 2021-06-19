@@ -32,6 +32,12 @@ import "openjdk" as i0
 pkg(
   name: "giter8",
   version: "0.13.1",
+  description: "Generate files and directories from templates in a git repo",
+  url: "https://github.com/foundweekends/giter8",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

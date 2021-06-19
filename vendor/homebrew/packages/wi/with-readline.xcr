@@ -43,6 +43,12 @@ import "readline" as i0
 pkg(
   name: "with-readline",
   version: "0.1.1",
+  description: "Allow GNU Readline to be used with arbitrary programs",
+  url: "https://www.greenend.org.uk/rjk/sw/withreadline.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "libxml2" as i0, "ncurses" as i1
 pkg(
   name: "mandown",
   version: "1.0.1",
+  description: "Man-page inspired Markdown viewer",
+  url: "https://github.com/Titor8115/mandown",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

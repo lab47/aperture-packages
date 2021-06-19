@@ -53,6 +53,12 @@ import "go" as i0, "helm" as i1
 pkg(
   name: "helmfile",
   version: "0.139.9",
+  description: "Deploy Kubernetes Helm Charts",
+  url: "https://github.com/roboll/helmfile",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

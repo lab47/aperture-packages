@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gperf",
   version: "3.1",
+  description: "Perfect hash function generator",
+  url: "https://www.gnu.org/software/gperf",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

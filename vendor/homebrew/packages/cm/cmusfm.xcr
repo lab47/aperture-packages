@@ -84,6 +84,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2
 pkg(
   name: "cmusfm",
   version: "0.4.0",
+  description: "Last.fm standalone scrobbler for the cmus music player",
+  url: "https://github.com/Arkq/cmusfm",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

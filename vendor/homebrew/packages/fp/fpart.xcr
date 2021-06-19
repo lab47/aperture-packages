@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "fpart",
   version: "1.2.0",
+  description: "Sorts file trees and packs them into bags",
+  url: "https://github.com/martymac/fpart/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

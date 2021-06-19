@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "lefthook",
   version: "0.7.6",
+  description: "Fast and powerful Git hooks manager for any type of projects",
+  url: "https://github.com/evilmartians/lefthook",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

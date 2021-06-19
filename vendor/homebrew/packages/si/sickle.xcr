@@ -45,6 +45,12 @@ import "zlib" as i0
 pkg(
   name: "sickle",
   version: "1.33",
+  description: "Windowed adaptive trimming for FASTQ files using quality",
+  url: "https://github.com/najoshi/sickle",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ccrypt",
   version: "1.11",
+  description: "Encrypt and decrypt files and streams",
+  url: "https://ccrypt.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

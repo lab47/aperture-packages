@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "typespeed",
   version: "0.6.5",
+  description: "Zap words flying across the screen by typing them correctly",
+  url: "https://typespeed.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

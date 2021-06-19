@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "tfsec",
   version: "0.40.2",
+  description: "Static analysis powered security scanner for your terraform code",
+  url: "https://github.com/tfsec/tfsec",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

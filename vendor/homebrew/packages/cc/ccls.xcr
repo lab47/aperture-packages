@@ -46,6 +46,12 @@ import "cmake" as i0, "rapidjson" as i1, "llvm" as i2
 pkg(
   name: "ccls",
   version: "0.20210330",
+  description: "C/C++/ObjC language server",
+  url: "https://github.com/MaskRay/ccls",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

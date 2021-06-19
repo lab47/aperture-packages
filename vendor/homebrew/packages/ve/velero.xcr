@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "velero",
   version: "1.6.0",
+  description: "Disaster recovery for Kubernetes resources and persistent volumes",
+  url: "https://github.com/vmware-tanzu/velero",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

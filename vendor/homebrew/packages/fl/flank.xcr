@@ -46,6 +46,12 @@ import "openjdk" as i0
 pkg(
   name: "flank",
   version: "21.06.0",
+  description: "Massively parallel Android and iOS test runner for Firebase Test Lab",
+  url: "https://github.com/Flank/flank",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

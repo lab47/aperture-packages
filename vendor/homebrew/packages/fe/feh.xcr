@@ -46,6 +46,12 @@ import "imlib2" as i0, "libexif" as i1, "libx11" as i2, "libxinerama" as i3, "li
 pkg(
   name: "feh",
   version: "3.7",
+  description: "X11 image viewer",
+  url: "https://feh.finalrewind.org/",
+  metadata: %{
+    "license": "MIT-feh",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

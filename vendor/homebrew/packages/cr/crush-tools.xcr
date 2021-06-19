@@ -51,6 +51,12 @@ import "pcre" as i0
 pkg(
   name: "crush-tools",
   version: "20150716",
+  description: "Command-line tools for processing delimited text data",
+  url: "https://github.com/google/crush-tools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

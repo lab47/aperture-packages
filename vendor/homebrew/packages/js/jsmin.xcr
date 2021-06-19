@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jsmin",
   version: "2013-03-29",
+  description: "Minify JavaScript code",
+  url: "https://www.crockford.com/javascript/jsmin.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

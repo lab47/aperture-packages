@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jove",
   version: "4.16.0.73",
+  description: "Emacs-style editor with vi-like memory, CPU, and size requirements",
+  url: "https://directory.fsf.org/wiki/Jove",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

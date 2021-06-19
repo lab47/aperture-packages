@@ -157,6 +157,12 @@ import "homebrew-install" as hi
 pkg(
   name: "isc-dhcp",
   version: "4.4.2",
+  description: "Production-grade DHCP solution",
+  url: "https://www.isc.org/dhcp",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

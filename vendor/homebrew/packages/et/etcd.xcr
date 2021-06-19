@@ -83,6 +83,12 @@ import "go" as i0
 pkg(
   name: "etcd",
   version: "3.4.16",
+  description: "Key value store for shared configuration and service discovery",
+  url: "https://github.com/etcd-io/etcd",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

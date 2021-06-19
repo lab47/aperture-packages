@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "promtail",
   version: "2.2.1",
+  description: "Log agent for Loki",
+  url: "https://grafana.com/loki",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

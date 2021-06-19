@@ -50,6 +50,12 @@ import "coreutils" as i0, "gnu-sed" as i1, "groff" as i2, "ncurses" as i3
 pkg(
   name: "myman",
   version: "2009-10-30",
+  description: "Text-mode videogame inspired by Namco's Pac-Man",
+  url: "https://myman.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

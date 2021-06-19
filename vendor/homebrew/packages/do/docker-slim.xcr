@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "docker-slim",
   version: "1.35.0",
+  description: "Minify and secure Docker images",
+  url: "https://dockersl.im",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

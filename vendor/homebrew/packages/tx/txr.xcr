@@ -43,6 +43,12 @@ import "libffi" as i0, "bison" as i1, "flex" as i2
 pkg(
   name: "txr",
   version: "262",
+  description: "Original, new programming language for convenient data munging",
+  url: "https://www.nongnu.org/txr/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -90,6 +90,12 @@ import "cmake" as i0, "faad2" as i1, "ffmpeg" as i2, "flac" as i3, "libbs2b" as 
 pkg(
   name: "qmmp",
   version: "1.5.0",
+  description: "Qt-based Multimedia Player",
+  url: "https://qmmp.ylsoftware.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {

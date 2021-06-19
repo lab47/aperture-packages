@@ -44,6 +44,12 @@ import "gcc" as i0
 pkg(
   name: "qd",
   version: "2.3.22",
+  description: "C++/Fortran-90 double-double and quad-double package",
+  url: "https://www.davidhbailey.com/dhbsoftware/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

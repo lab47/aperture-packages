@@ -64,6 +64,12 @@ import "dmenu" as i0, "libx11" as i1, "libxft" as i2, "libxinerama" as i3
 pkg(
   name: "dwm",
   version: "6.2",
+  description: "Dynamic window manager",
+  url: "https://dwm.suckless.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

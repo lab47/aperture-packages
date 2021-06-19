@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dhcping",
   version: "1.2",
+  description: "Perform a dhcp-request to check whether a dhcp-server is running",
+  url: "https://www.mavetju.org/unix/general.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

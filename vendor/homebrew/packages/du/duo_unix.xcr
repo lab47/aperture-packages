@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
 pkg(
   name: "duo_unix",
   version: "1.11.4",
+  description: "Two-factor authentication for SSH",
+  url: "https://www.duosecurity.com/docs/duounix",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

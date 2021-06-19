@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ansifilter",
   version: "2.18",
+  description: "Strip or convert ANSI codes into HTML, (La)Tex, RTF, or BBCode",
+  url: "http://www.andre-simon.de/doku/ansifilter/ansifilter.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xmlsh",
   version: "1.2.5",
+  description: "XML shell",
+  url: "http://www.xmlsh.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

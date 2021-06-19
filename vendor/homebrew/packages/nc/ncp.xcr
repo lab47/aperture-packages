@@ -53,6 +53,12 @@ import "libowfat" as i0
 pkg(
   name: "ncp",
   version: "1.2.4",
+  description: "File copy tool for LANs",
+  url: "https://www.fefe.de/ncp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "range2cidr",
   version: "1.0.0",
+  description: "Converts IP ranges to CIDRs",
+  url: "https://ipinfo.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

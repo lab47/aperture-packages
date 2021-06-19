@@ -80,6 +80,12 @@ import "ncurses" as i0
 pkg(
   name: "lv",
   version: "4.51",
+  description: "Powerful multi-lingual file viewer/grep",
+  url: "https://web.archive.org/web/20160310122517/www.ff.iij4u.or.jp/~nrt/lv/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

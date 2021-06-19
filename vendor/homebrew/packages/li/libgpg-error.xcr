@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libgpg-error",
   version: "1.42",
+  description: "Common error values for all GnuPG components",
+  url: "https://www.gnupg.org/related_software/libgpg-error/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "kubernetes-cli" as i0
 pkg(
   name: "kube-ps1",
   version: "0.7.0",
+  description: "Kubernetes prompt info for bash and zsh",
+  url: "https://github.com/jonmosco/kube-ps1",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

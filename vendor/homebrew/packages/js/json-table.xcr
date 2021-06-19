@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "json-table",
   version: "4.3.3",
+  description: "Transform nested JSON data into tabular data in the shell",
+  url: "https://github.com/micha/json-table",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

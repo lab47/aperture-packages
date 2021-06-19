@@ -66,6 +66,12 @@ import "homebrew-install" as hi
 pkg(
   name: "couchpotatoserver",
   version: "3.0.1",
+  description: "Download movies automatically",
+  url: "https://couchpota.to",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

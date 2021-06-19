@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "scmpuff",
   version: "0.3.0",
+  description: "Adds numbered shortcuts for common git commands",
+  url: "https://mroth.github.io/scmpuff/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

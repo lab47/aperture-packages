@@ -50,6 +50,12 @@ import "libpcap" as i0, "openssl@1.1" as i1
 pkg(
   name: "tcpdump",
   version: "4.99.1",
+  description: "Command-line packet analyzer",
+  url: "https://www.tcpdump.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

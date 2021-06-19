@@ -204,6 +204,12 @@ import "cmake" as i0, "pkg-config" as i1, "icu4c" as i2, "libevent" as i3, "lz4"
 pkg(
   name: "mysql",
   version: "8.0.25",
+  description: "Open source relational database management system",
+  url: "https://dev.mysql.com/doc/refman/8.0/en/",
+  metadata: %{
+    "license": "GPL-2.0-only with Universal-FOSS-exception-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

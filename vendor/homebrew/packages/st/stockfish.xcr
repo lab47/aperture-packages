@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "stockfish",
   version: "13",
+  description: "Strong open-source chess engine",
+  url: "https://stockfishchess.org/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

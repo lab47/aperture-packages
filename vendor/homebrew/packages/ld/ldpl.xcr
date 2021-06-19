@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ldpl",
   version: "4.4",
+  description: "Compiled programming language inspired by COBOL",
+  url: "https://www.ldpl-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

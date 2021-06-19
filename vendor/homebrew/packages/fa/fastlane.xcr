@@ -56,6 +56,12 @@ import "ruby@2.7" as i0
 pkg(
   name: "fastlane",
   version: "2.185.0",
+  description: "Easiest way to build and release mobile apps",
+  url: "https://fastlane.tools",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

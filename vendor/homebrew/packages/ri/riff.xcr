@@ -48,6 +48,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "riff",
   version: "0.5.0",
+  description: "Function As A Service on top of Kubernetes, riff is for functions",
+  url: "https://www.projectriff.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

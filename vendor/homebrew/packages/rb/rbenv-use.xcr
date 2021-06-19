@@ -29,6 +29,12 @@ import "rbenv" as i0, "rbenv-whatis" as i1
 pkg(
   name: "rbenv-use",
   version: "1.0.0",
+  description: "Switch between rubies without reference to patch levels",
+  url: "https://github.com/rkh/rbenv-use",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

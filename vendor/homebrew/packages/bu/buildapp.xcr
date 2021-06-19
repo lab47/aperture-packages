@@ -40,6 +40,12 @@ import "sbcl" as i0
 pkg(
   name: "buildapp",
   version: "1.5.6",
+  description: "Creates executables with SBCL",
+  url: "https://www.xach.com/lisp/buildapp/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

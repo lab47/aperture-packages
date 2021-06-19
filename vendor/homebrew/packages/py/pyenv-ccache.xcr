@@ -34,6 +34,12 @@ import "ccache" as i0, "pyenv" as i1
 pkg(
   name: "pyenv-ccache",
   version: "0.0.2",
+  description: "Make Python build faster, using the leverage of `ccache`",
+  url: "https://github.com/pyenv/pyenv-ccache",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

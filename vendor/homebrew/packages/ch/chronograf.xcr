@@ -90,6 +90,12 @@ import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3, "influxdb"
 pkg(
   name: "chronograf",
   version: "1.8.10",
+  description: "Open source monitoring and visualization UI for the TICK stack",
+  url: "https://docs.influxdata.com/chronograf/latest/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

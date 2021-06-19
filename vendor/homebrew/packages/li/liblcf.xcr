@@ -55,6 +55,12 @@ import "pkg-config" as i0, "icu4c" as i1, "expat" as i2
 pkg(
   name: "liblcf",
   version: "0.6.2",
+  description: "Library for RPG Maker 2000/2003 games data",
+  url: "https://easyrpg.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

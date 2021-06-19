@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "talisman",
   version: "1.11.0",
+  description: "Tool to detect and prevent secrets from getting checked in",
+  url: "https://thoughtworks.github.io/talisman/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

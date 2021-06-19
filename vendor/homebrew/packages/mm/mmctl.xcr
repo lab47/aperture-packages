@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "mmctl",
   version: "6.0.0",
+  description: "Remote CLI tool for Mattermost server",
+  url: "https://github.com/mattermost/mmctl",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

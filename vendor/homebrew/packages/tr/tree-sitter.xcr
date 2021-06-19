@@ -118,6 +118,12 @@ import "emscripten" as i0, "node" as i1, "rust" as i2
 pkg(
   name: "tree-sitter",
   version: "0.19.5",
+  description: "Parser generator tool and incremental parsing library",
+  url: "https://tree-sitter.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

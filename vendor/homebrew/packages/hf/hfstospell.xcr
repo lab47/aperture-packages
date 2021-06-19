@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "hfstospell",
   version: "0.5.2",
+  description: "Helsinki Finite-State Technology ospell",
+  url: "https://hfst.github.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

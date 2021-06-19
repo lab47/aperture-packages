@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nef",
   version: "0.6.2",
+  description: "💊 steroids for Xcode Playgrounds",
+  url: "https://nef.bow-swift.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

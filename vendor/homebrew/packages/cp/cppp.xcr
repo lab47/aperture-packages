@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cppp",
   version: "2.6",
+  description: "Partial Preprocessor for C",
+  url: "https://www.muppetlabs.com/~breadbox/software/cppp.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

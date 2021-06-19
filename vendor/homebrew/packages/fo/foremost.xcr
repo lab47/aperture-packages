@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "foremost",
   version: "1.5.7",
+  description: "Console program to recover files based on their headers and footers",
+  url: "https://foremost.sourceforge.io/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

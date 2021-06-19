@@ -52,6 +52,12 @@ import "cmake" as i0, "gflags" as i1
 pkg(
   name: "glog",
   version: "0.5.0",
+  description: "Application-level logging library",
+  url: "https://github.com/google/glog",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

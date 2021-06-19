@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "ory-hydra",
   version: "1.10.2",
+  description: "OpenID Certified OAuth 2.0 Server and OpenID Connect Provider",
+  url: "https://www.ory.sh/hydra/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

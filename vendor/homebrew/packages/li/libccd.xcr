@@ -51,6 +51,12 @@ import "cmake" as i0
 pkg(
   name: "libccd",
   version: "2.1",
+  description: "Collision detection between two convex shapes",
+  url: "https://github.com/danfis/libccd",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

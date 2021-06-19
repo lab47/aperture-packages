@@ -47,6 +47,12 @@ import "autoconf" as i0, "automake" as i1, "flac" as i2, "libao" as i3, "libogg"
 pkg(
   name: "flac123",
   version: "0.0.12",
+  description: "Command-line program for playing FLAC audio files",
+  url: "https://flac-tools.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

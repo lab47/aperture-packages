@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "scw",
   version: "2.3.1",
+  description: "Command-line Interface for Scaleway",
+  url: "https://github.com/scaleway/scaleway-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

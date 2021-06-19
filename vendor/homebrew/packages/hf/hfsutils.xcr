@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hfsutils",
   version: "3.2.6",
+  description: "Tools for reading and writing Macintosh volumes",
+  url: "https://www.mars.org/home/rob/proj/hfs/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

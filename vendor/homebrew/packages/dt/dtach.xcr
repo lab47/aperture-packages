@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dtach",
   version: "0.9",
+  description: "Emulates the detach feature of screen",
+  url: "https://dtach.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "truecrack",
   version: "3.5",
+  description: "Brute-force password cracker for TrueCrypt",
+  url: "https://github.com/lvaccaro/truecrack",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

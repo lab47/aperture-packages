@@ -46,6 +46,12 @@ import "groff" as i0, "ncurses" as i1
 pkg(
   name: "vifm",
   version: "0.11",
+  description: "Ncurses based file manager with vi like keybindings",
+  url: "https://vifm.info/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

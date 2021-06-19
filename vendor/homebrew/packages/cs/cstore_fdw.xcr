@@ -53,6 +53,12 @@ import "postgresql" as i0, "protobuf-c" as i1
 pkg(
   name: "cstore_fdw",
   version: "1.7.0",
+  description: "Columnar store for analytics with Postgres",
+  url: "https://github.com/citusdata/cstore_fdw",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

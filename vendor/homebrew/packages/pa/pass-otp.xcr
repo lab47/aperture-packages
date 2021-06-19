@@ -61,6 +61,12 @@ import "oath-toolkit" as i0, "pass" as i1
 pkg(
   name: "pass-otp",
   version: "1.2.0",
+  description: "Pass extension for managing one-time-password tokens",
+  url: "https://github.com/tadfisher/pass-otp#readme",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

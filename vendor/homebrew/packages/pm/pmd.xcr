@@ -46,6 +46,12 @@ import "openjdk" as i0
 pkg(
   name: "pmd",
   version: "6.35.0",
+  description: "Source code analyzer for Java, JavaScript, and more",
+  url: "https://pmd.github.io",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

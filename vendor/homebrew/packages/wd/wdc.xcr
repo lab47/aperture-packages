@@ -78,6 +78,12 @@ import "cmake" as i0, "boost" as i1, "openssl@1.1" as i2, "pugixml" as i3, "curl
 pkg(
   name: "wdc",
   version: "1.1.5",
+  description: "WebDAV Client provides easy and convenient to work with WebDAV-servers",
+  url: "https://cloudpolis.github.io/webdav-client-cpp",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

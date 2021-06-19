@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fsw",
   version: "1.3.9",
+  description: "File change monitor with multiple backends",
+  url: "https://emcrisostomo.github.io/fsw/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

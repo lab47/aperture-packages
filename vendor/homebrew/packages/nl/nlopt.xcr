@@ -59,6 +59,12 @@ import "cmake" as i0
 pkg(
   name: "nlopt",
   version: "2.7.0",
+  description: "Free/open-source library for nonlinear optimization",
+  url: "https://nlopt.readthedocs.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

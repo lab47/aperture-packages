@@ -54,6 +54,12 @@ import "texinfo" as i0
 pkg(
   name: "ne",
   version: "3.3.1",
+  description: "Text editor based on the POSIX standard",
+  url: "https://github.com/vigna/ne",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

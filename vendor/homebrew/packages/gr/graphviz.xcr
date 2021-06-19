@@ -83,6 +83,12 @@ import "autoconf" as i0, "automake" as i1, "bison" as i2, "pkg-config" as i3, "g
 pkg(
   name: "graphviz",
   version: "2.47.2",
+  description: "Graph visualization software from AT&T and Bell Labs",
+  url: "https://www.graphviz.org/",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

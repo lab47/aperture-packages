@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp4v2",
   version: "2.0.0",
+  description: "Read, create, and modify MP4 files",
+  url: "https://code.google.com/archive/p/mp4v2/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

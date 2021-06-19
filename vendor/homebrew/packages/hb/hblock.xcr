@@ -31,6 +31,12 @@ import "curl" as i0
 pkg(
   name: "hblock",
   version: "3.2.2",
+  description: "Adblocker that creates a hosts file from multiple sources",
+  url: "https://hblock.molinero.dev/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

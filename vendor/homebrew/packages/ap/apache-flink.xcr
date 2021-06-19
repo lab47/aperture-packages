@@ -53,6 +53,12 @@ import "openjdk@11" as i0
 pkg(
   name: "apache-flink",
   version: "1.13.1",
+  description: "Scalable batch and stream data processing",
+  url: "https://flink.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

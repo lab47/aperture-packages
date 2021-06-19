@@ -43,6 +43,12 @@ import "coreutils" as i0
 pkg(
   name: "libfaketime",
   version: "0.9.9",
+  description: "Report faked system time to programs",
+  url: "https://github.com/wolfcw/libfaketime",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

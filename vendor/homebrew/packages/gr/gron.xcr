@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "gron",
   version: "0.6.1",
+  description: "Make JSON greppable",
+  url: "https://github.com/tomnomnom/gron",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

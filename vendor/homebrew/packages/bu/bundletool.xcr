@@ -49,6 +49,12 @@ import "openjdk" as i0
 pkg(
   name: "bundletool",
   version: "1.6.1",
+  description: "Command-line tool to manipulate Android App Bundles",
+  url: "https://github.com/google/bundletool",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

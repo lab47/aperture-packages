@@ -45,6 +45,12 @@ import "cmake" as i0, "pkg-config" as i1, "libusb" as i2
 pkg(
   name: "airspy",
   version: "1.0.10",
+  description: "Driver and tools for a software-defined radio",
+  url: "https://airspy.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

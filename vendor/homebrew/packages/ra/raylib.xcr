@@ -76,6 +76,12 @@ import "cmake" as i0
 pkg(
   name: "raylib",
   version: "3.7.0",
+  description: "Simple and easy-to-use library to learn videogames programming",
+  url: "https://www.raylib.com/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

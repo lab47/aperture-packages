@@ -59,6 +59,12 @@ import "gradle" as i0, "openjdk" as i1
 pkg(
   name: "smali",
   version: "2.5.2",
+  description: "Assembler/disassembler for Android's Java VM implementation",
+  url: "https://github.com/JesusFreke/smali",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

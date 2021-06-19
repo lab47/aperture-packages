@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "kubeaudit",
   version: "0.14.1",
+  description: "Helps audit your Kubernetes clusters against common security controls",
+  url: "https://github.com/Shopify/kubeaudit",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

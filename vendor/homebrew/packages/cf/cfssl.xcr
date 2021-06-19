@@ -73,6 +73,12 @@ import "go" as i0, "libtool" as i1
 pkg(
   name: "cfssl",
   version: "1.6.0",
+  description: "CloudFlare's PKI toolkit",
+  url: "https://cfssl.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "pkg-config" as i0, "glib" as i1, "libgsf" as i2, "libpng" as i3, "libwmf
 pkg(
   name: "wv",
   version: "1.2.9",
+  description: "Programs for accessing Microsoft Word documents",
+  url: "https://wvware.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

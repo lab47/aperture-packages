@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp3wrap",
   version: "0.5",
+  description: "Wrap two or more mp3 files in a single large file",
+  url: "https://mp3wrap.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "rust" as i0, "openssl@1.1" as i1
 pkg(
   name: "sccache",
   version: "0.2.15",
+  description: "Used as a compiler wrapper and avoids compilation when possible",
+  url: "https://github.com/mozilla/sccache",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "cglm",
   version: "0.8.3",
+  description: "Optimized OpenGL/Graphics Math (glm) for C",
+  url: "https://github.com/recp/cglm",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

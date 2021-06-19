@@ -47,6 +47,12 @@ import "cmake" as i0, "qt@5" as i1
 pkg(
   name: "qjson",
   version: "0.9.0",
+  description: "Map JSON to QVariant objects",
+  url: "https://qjson.sourceforge.io",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

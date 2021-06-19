@@ -50,6 +50,12 @@ import "libpng" as i0
 pkg(
   name: "png++",
   version: "0.2.10",
+  description: "C++ wrapper for libpng library",
+  url: "https://www.nongnu.org/pngpp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

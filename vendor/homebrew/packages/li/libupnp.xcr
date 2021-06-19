@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libupnp",
   version: "1.14.7",
+  description: "Portable UPnP development kit",
+  url: "https://pupnp.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

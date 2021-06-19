@@ -57,6 +57,12 @@ import "openjdk" as i0
 pkg(
   name: "polynote",
   version: "0.3.12",
+  description: "Polyglot notebook with first-class Scala support",
+  url: "https://polynote.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

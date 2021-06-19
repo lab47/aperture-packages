@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "gobuster",
   version: "3.1.0",
+  description: "Directory/file & DNS busting tool written in Go",
+  url: "https://github.com/OJ/gobuster",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

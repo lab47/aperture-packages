@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "z80dasm",
   version: "1.1.6",
+  description: "Disassembler for the Zilog Z80 microprocessor and compatibles",
+  url: "https://www.tablix.org/~avian/blog/articles/z80dasm/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -164,12 +164,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gcc" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "isl" as i14, "jemalloc" as i15, "krb5" as i16, "libedit" as i17, "libev" as i18, "libffi" as i19, "libgit2" as i20, "libidn2" as i21, "libmpc" as i22, "libssh2" as i23, "libtool" as i24, "libunistring" as i25, "libxml2" as i26, "libyaml" as i27, "llvm" as i28, "m4" as i29, "mbedtls" as i30, "metis" as i31, "mpdecimal" as i32, "mpfr" as i33, "ncurses" as i34, "nghttp2" as i35, "ninja" as i36, "openblas" as i37, "openldap" as i38, "openlibm" as i39, "openssl@1.1" as i40, "p7zip" as i41, "pcre" as i42, "pcre2" as i43, "perl" as i44, "pkg-config" as i45, "python@3.9" as i46, "readline" as i47, "rtmpdump" as i48, "ruby" as i49, "sphinx-doc" as i50, "sqlite" as i51, "suite-sparse" as i52, "swig" as i53, "tbb" as i54, "unzip" as i55, "utf8proc" as i56, "xz" as i57, "zip" as i58, "zlib" as i59, "zstd" as i60
+import "python@3.9" as i0, "curl" as i1, "gcc" as i2, "gmp" as i3, "libgit2" as i4, "libssh2" as i5, "llvm" as i6, "mbedtls" as i7, "mpfr" as i8, "nghttp2" as i9, "openblas" as i10, "openlibm" as i11, "p7zip" as i12, "pcre2" as i13, "suite-sparse" as i14, "utf8proc" as i15, "perl" as i16, "zlib" as i17
 
 pkg(
   name: "julia",
   version: "1.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60],
+  description: "Fast, Dynamic Programming Language",
+  url: "https://julialang.org/",
+  metadata: %{
+    "license": "MIT and BSD-3-Clause and Apache-2.0 and BSL-1.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "julia.rb"), formula)

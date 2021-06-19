@@ -83,6 +83,12 @@ import "rust" as i0, "unzip" as i1
 pkg(
   name: "geckodriver",
   version: "0.29.1",
+  description: "WebDriver <-> Marionette proxy",
+  url: "https://github.com/mozilla/geckodriver",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

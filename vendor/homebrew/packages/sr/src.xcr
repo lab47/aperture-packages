@@ -50,6 +50,12 @@ import "rcs" as i0
 pkg(
   name: "src",
   version: "1.28",
+  description: "Simple revision control: RCS reloaded with a modern UI",
+  url: "http://www.catb.org/~esr/src/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

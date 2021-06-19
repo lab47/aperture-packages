@@ -86,6 +86,12 @@ import "intltool" as i0, "pkg-config" as i1, "atk" as i2, "cairo" as i3, "gdk-pi
 pkg(
   name: "goffice",
   version: "0.10.50",
+  description: "Gnumeric spreadsheet program",
+  url: "https://developer.gnome.org/goffice/",
+  metadata: %{
+    "license": "GPL-3.0-only or GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

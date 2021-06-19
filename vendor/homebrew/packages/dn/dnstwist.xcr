@@ -102,6 +102,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "geoip" as i3, "libffi" as i4
 pkg(
   name: "dnstwist",
   version: "20201228",
+  description: "Test domains for typo squatting, phishing and corporate espionage",
+  url: "https://github.com/elceef/dnstwist",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

@@ -136,6 +136,12 @@ import "perl" as i0
 pkg(
   name: "sql-translator",
   version: "1.62",
+  description: "Manipulate structured data definitions (SQL and more)",
+  url: "https://github.com/dbsrgits/sql-translator/",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

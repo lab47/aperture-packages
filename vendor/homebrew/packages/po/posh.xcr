@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "posh",
   version: "0.14.1",
+  description: "Policy-compliant ordinary shell",
+  url: "https://salsa.debian.org/clint/posh",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

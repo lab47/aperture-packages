@@ -52,12 +52,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "berkeley-db" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "doxygen" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "glib-networking" as i25, "gmp" as i26, "gnu-sed" as i27, "gnutls" as i28, "gobject-introspection" as i29, "gperf" as i30, "graphite2" as i31, "graphviz" as i32, "groff" as i33, "gsettings-desktop-schemas" as i34, "gts" as i35, "guile" as i36, "harfbuzz" as i37, "help2man" as i38, "icu4c" as i39, "jasper" as i40, "jbig2dec" as i41, "jemalloc" as i42, "jpeg" as i43, "json-glib" as i44, "krb5" as i45, "libarchive" as i46, "libatomic_ops" as i47, "libb2" as i48, "libev" as i49, "libevent" as i50, "libffi" as i51, "libidn" as i52, "libidn2" as i53, "libpng" as i54, "libpsl" as i55, "libpthread-stubs" as i56, "librsvg" as i57, "libsoup" as i58, "libssh2" as i59, "libtasn1" as i60, "libtiff" as i61, "libtool" as i62, "libunistring" as i63, "libx11" as i64, "libxau" as i65, "libxcb" as i66, "libxdmcp" as i67, "libxext" as i68, "libxml2" as i69, "libxrender" as i70, "libyaml" as i71, "little-cms2" as i72, "lz4" as i73, "lzo" as i74, "m4" as i75, "meson" as i76, "mpdecimal" as i77, "ncurses" as i78, "netpbm" as i79, "nettle" as i80, "nghttp2" as i81, "ninja" as i82, "openjdk" as i83, "openjpeg" as i84, "openldap" as i85, "openssl@1.1" as i86, "p11-kit" as i87, "pango" as i88, "pcre" as i89, "perl" as i90, "pixman" as i91, "pkg-config" as i92, "pod2man" as i93, "psutils" as i94, "python@3.9" as i95, "readline" as i96, "rtmpdump" as i97, "ruby" as i98, "rust" as i99, "scons" as i100, "sphinx-doc" as i101, "sqlite" as i102, "subversion" as i103, "swig" as i104, "texinfo" as i105, "uchardet" as i106, "unbound" as i107, "unzip" as i108, "utf8proc" as i109, "util-macros" as i110, "vala" as i111, "webp" as i112, "xcb-proto" as i113, "xorgproto" as i114, "xtrans" as i115, "xz" as i116, "zip" as i117, "zlib" as i118, "zstd" as i119
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4, "json-glib" as i5, "libarchive" as i6, "libsoup" as i7, "python@3.9" as i8, "pod2man" as i9, "libxml2" as i10
 
 pkg(
   name: "osinfo-db-tools",
   version: "1.9.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119],
+  description: "Tools for managing the libosinfo database files",
+  url: "https://libosinfo.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osinfo-db-tools.rb"), formula)

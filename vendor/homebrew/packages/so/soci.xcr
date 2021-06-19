@@ -62,6 +62,12 @@ import "cmake" as i0, "sqlite" as i1
 pkg(
   name: "soci",
   version: "4.0.2",
+  description: "Database access library for C++",
+  url: "https://soci.sourceforge.io/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

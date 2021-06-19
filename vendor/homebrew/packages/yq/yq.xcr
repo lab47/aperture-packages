@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "yq",
   version: "4.9.6",
+  description: "Process YAML documents from the CLI",
+  url: "https://github.com/mikefarah/yq",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

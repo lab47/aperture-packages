@@ -47,6 +47,12 @@ import "libre" as i0
 pkg(
   name: "librem",
   version: "0.6.0",
+  description: "Toolkit library for real-time audio and video processing",
+  url: "https://github.com/creytiv/rem",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

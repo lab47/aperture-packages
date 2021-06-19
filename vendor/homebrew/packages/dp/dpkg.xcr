@@ -137,6 +137,12 @@ import "pkg-config" as i0, "po4a" as i1, "gettext" as i2, "gnu-tar" as i3, "gpat
 pkg(
   name: "dpkg",
   version: "1.20.9",
+  description: "Debian package management system",
+  url: "https://wiki.debian.org/Teams/Dpkg",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

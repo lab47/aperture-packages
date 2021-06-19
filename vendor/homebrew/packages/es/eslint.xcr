@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "eslint",
   version: "7.28.0",
+  description: "AST-based pattern checker for JavaScript",
+  url: "https://eslint.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swiftlint",
   version: "0.43.1",
+  description: "Tool to enforce Swift style and conventions",
+  url: "https://github.com/realm/SwiftLint",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

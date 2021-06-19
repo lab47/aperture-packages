@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "capstone",
   version: "4.0.2",
+  description: "Multi-platform, multi-architecture disassembly framework",
+  url: "https://www.capstone-engine.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

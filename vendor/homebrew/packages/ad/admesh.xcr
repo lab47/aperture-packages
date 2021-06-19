@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "admesh",
   version: "0.98.4",
+  description: "Processes triangulated solid meshes",
+  url: "https://github.com/admesh/admesh",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

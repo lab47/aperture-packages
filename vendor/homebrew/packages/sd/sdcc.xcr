@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "boost" as i2, "gputils" as i3, "read
 pkg(
   name: "sdcc",
   version: "4.1.0",
+  description: "ANSI C compiler for Intel 8051, Maxim 80DS390, and Zilog Z80",
+  url: "https://sdcc.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only and GPL-3.0-only and Public Domain and Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "transcrypt",
   version: "2.1.0",
+  description: "Configure transparent encryption of files in a Git repo",
+  url: "https://github.com/elasticdog/transcrypt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

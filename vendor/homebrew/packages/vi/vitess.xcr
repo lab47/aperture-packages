@@ -60,6 +60,12 @@ import "go" as i0, "etcd" as i1
 pkg(
   name: "vitess",
   version: "10.0.2",
+  description: "Database clustering system for horizontal scaling of MySQL",
+  url: "https://vitess.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

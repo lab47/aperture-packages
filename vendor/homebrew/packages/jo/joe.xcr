@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "joe",
   version: "4.6",
+  description: "Full featured terminal-based screen editor",
+  url: "https://joe-editor.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

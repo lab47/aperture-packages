@@ -49,6 +49,12 @@ import "libconfig" as i0, "pcre" as i1
 pkg(
   name: "sslh",
   version: "1.21c",
+  description: "Forward connections based on first data packet sent by client",
+  url: "https://www.rutschle.net/tech/sslh.shtml",
+  metadata: %{
+    "license": "GPL-2.0-or-later and BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

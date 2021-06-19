@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dirac",
   version: "1.0.2",
+  description: "General-purpose video codec aimed at a range of resolutions",
+  url: "https://sourceforge.net/projects/dirac/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

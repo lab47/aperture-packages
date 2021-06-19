@@ -72,6 +72,12 @@ import "cmake" as i0, "apr-util" as i1
 pkg(
   name: "log4cxx",
   version: "0.12.0",
+  description: "Library of C++ classes for flexible logging",
+  url: "https://logging.apache.org/log4cxx/index.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

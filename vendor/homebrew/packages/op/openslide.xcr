@@ -54,6 +54,12 @@ import "pkg-config" as i0, "cairo" as i1, "gdk-pixbuf" as i2, "glib" as i3, "jpe
 pkg(
   name: "openslide",
   version: "3.4.1",
+  description: "C library to read whole-slide images (a.k.a. virtual slides)",
+  url: "https://openslide.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

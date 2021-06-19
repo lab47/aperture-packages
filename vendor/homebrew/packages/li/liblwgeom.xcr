@@ -89,6 +89,12 @@ import "autoconf" as i0, "automake" as i1, "gpp" as i2, "libtool" as i3, "pkg-co
 pkg(
   name: "liblwgeom",
   version: "2.5.4",
+  description: "Allows SpatiaLite to support ST_MakeValid() like PostGIS",
+  url: "https://postgis.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

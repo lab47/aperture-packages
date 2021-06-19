@@ -80,6 +80,12 @@ import "pkg-config" as i0, "coinutils" as i1, "openblas" as i2, "osi" as i3
 pkg(
   name: "clp",
   version: "1.17.6",
+  description: "Linear programming solver",
+  url: "https://github.com/coin-or/Clp",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

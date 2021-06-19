@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "sproxy",
   version: "1.02",
+  description: "HTTP proxy server collecting URLs in a 'siege-friendly' manner",
+  url: "https://www.joedog.org/sproxy-home/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

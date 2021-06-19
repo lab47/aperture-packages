@@ -45,6 +45,12 @@ import "openjdk" as i0
 pkg(
   name: "ec2-ami-tools",
   version: "1.5.7",
+  description: "Amazon EC2 AMI Tools (helps bundle Amazon Machine Images)",
+  url: "https://aws.amazon.com/developertools/368",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

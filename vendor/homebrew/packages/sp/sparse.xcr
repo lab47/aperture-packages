@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sparse",
   version: "0.6.3",
+  description: "Static C code analysis tool",
+  url: "https://sparse.wiki.kernel.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "dmd" as i0, "pkg-config" as i1, "curl" as i2
 pkg(
   name: "dub",
   version: "1.26.0",
+  description: "Build tool for D projects",
+  url: "https://code.dlang.org/getting_started",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

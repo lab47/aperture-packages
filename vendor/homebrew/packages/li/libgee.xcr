@@ -73,6 +73,12 @@ import "gobject-introspection" as i0, "pkg-config" as i1, "vala" as i2, "glib" a
 pkg(
   name: "libgee",
   version: "0.20.4",
+  description: "Collection library providing GObject-based interfaces",
+  url: "https://wiki.gnome.org/Projects/Libgee",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

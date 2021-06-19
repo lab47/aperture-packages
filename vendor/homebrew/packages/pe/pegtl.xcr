@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "pegtl",
   version: "3.2.0",
+  description: "Parsing Expression Grammar Template Library",
+  url: "https://github.com/taocpp/PEGTL",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

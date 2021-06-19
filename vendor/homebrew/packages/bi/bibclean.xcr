@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bibclean",
   version: "3.04",
+  description: "BibTeX bibliography file pretty printer and syntax checker",
+  url: "https://www.math.utah.edu/~beebe/software/bibclean/bibclean-03.html#HDR.3",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "oksh",
   version: "6.9",
+  description: "Portable OpenBSD ksh, based on the public domain Korn shell (pdksh)",
+  url: "https://github.com/ibara/oksh",
+  metadata: %{
+    "license": "Public Domain and BSD-3-Clause and ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -99,6 +99,12 @@ import "cmake" as i0, "doxygen" as i1, "pkg-config" as i2, "armadillo" as i3, "b
 pkg(
   name: "mlpack",
   version: "3.4.2",
+  description: "Scalable C++ machine learning library",
+  url: "https://www.mlpack.org",
+  metadata: %{
+    "license": "BSD-3-Clause and MPL-2.0 and BSL-1.0 and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

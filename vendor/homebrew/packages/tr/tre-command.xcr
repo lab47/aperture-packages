@@ -37,6 +37,12 @@ import "rust" as i0
 pkg(
   name: "tre-command",
   version: "0.3.6",
+  description: "Tree command, improved",
+  url: "https://github.com/dduan/tre",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

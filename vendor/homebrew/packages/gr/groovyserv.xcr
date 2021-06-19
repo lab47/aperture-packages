@@ -47,6 +47,12 @@ import "go" as i0, "groovy" as i1, "openjdk@8" as i2
 pkg(
   name: "groovyserv",
   version: "1.2.0",
+  description: "Speed up Groovy startup time",
+  url: "https://kobo.github.io/groovyserv/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "node" as i0
 pkg(
   name: "bit",
   version: "14.8.8",
+  description: "Distributed Code Component Manager",
+  url: "https://bit.dev",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

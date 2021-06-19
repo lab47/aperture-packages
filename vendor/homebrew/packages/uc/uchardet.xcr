@@ -38,6 +38,12 @@ import "cmake" as i0
 pkg(
   name: "uchardet",
   version: "0.0.7",
+  description: "Encoding detector library",
+  url: "https://www.freedesktop.org/wiki/Software/uchardet/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

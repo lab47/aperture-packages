@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mdr",
   version: "1.0.1",
+  description: "Make diffs readable",
+  url: "https://github.com/halffullheart/mdr",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

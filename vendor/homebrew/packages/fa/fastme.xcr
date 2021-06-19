@@ -51,6 +51,12 @@ import "gcc" as i0
 pkg(
   name: "fastme",
   version: "2.1.6.1",
+  description: "Accurate and fast distance-based phylogeny inference program",
+  url: "http://www.atgc-montpellier.fr/fastme/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

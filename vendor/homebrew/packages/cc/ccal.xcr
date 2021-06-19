@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ccal",
   version: "2.5.3",
+  description: "Create Chinese calendars for print or browsing",
+  url: "http://ccal.chinesebay.com/ccal/ccal.htm",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "cmake" as i0, "llvm" as i1
 pkg(
   name: "enzyme",
   version: "0.0.13",
+  description: "High-performance automatic differentiation of LLVM",
+  url: "https://enzyme.mit.edu",
+  metadata: %{
+    "license": "Apache-2.0 with LLVM-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

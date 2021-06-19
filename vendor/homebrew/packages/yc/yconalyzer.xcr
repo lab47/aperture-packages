@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yconalyzer",
   version: "1.0.4",
+  description: "TCP traffic analyzer",
+  url: "https://sourceforge.net/projects/yconalyzer/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

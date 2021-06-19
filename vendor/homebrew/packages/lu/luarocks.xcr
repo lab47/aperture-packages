@@ -98,6 +98,12 @@ import "lua" as i0, "unzip" as i1
 pkg(
   name: "luarocks",
   version: "3.7.0",
+  description: "Package manager for the Lua programming language",
+  url: "https://luarocks.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

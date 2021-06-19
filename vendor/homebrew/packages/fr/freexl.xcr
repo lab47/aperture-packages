@@ -61,6 +61,12 @@ import "doxygen" as i0
 pkg(
   name: "freexl",
   version: "1.0.6",
+  description: "Library to extract data from Excel .xls files",
+  url: "https://www.gaia-gis.it/fossil/freexl/index",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

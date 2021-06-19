@@ -87,12 +87,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "bzip2" as i6, "cairo" as i7, "cfitsio" as i8, "cmake" as i9, "cython" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gcc" as i15, "gdbm" as i16, "gettext" as i17, "glib" as i18, "gmp" as i19, "gperf" as i20, "gsl" as i21, "help2man" as i22, "isl" as i23, "jasper" as i24, "jpeg" as i25, "krb5" as i26, "libffi" as i27, "libmpc" as i28, "libpng" as i29, "libpthread-stubs" as i30, "libtiff" as i31, "libtool" as i32, "libx11" as i33, "libxau" as i34, "libxcb" as i35, "libxdmcp" as i36, "libxext" as i37, "libxml2" as i38, "libxrender" as i39, "libyaml" as i40, "lz4" as i41, "lzo" as i42, "m4" as i43, "meson" as i44, "mpdecimal" as i45, "mpfr" as i46, "ncurses" as i47, "netpbm" as i48, "ninja" as i49, "numpy" as i50, "openblas" as i51, "openjdk" as i52, "openssl@1.1" as i53, "pcre" as i54, "perl" as i55, "pixman" as i56, "pkg-config" as i57, "python@3.9" as i58, "readline" as i59, "ruby" as i60, "scons" as i61, "sphinx-doc" as i62, "sqlite" as i63, "subversion" as i64, "swig" as i65, "unzip" as i66, "utf8proc" as i67, "util-macros" as i68, "wcslib" as i69, "xcb-proto" as i70, "xorgproto" as i71, "xtrans" as i72, "xz" as i73, "zip" as i74, "zlib" as i75, "zstd" as i76
+import "bzip2" as i0, "cairo" as i1, "cfitsio" as i2, "expat" as i3, "gdbm" as i4, "gsl" as i5, "jpeg" as i6, "libffi" as i7, "libpng" as i8, "mpdecimal" as i9, "ncurses" as i10, "netpbm" as i11, "numpy" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sqlite" as i17, "swig" as i18, "unzip" as i19, "wcslib" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
 
 pkg(
   name: "astrometry-net",
   version: "0.85",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76],
+  description: "Automatic identification of astronomical images",
+  url: "https://github.com/dstndstn/astrometry.net",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "astrometry-net.rb"), formula)

@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "aurora",
   version: "2.2",
+  description: "Beanstalkd queue server console",
+  url: "https://xuri.me/aurora",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

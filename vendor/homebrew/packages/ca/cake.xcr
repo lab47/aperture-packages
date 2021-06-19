@@ -46,6 +46,12 @@ import "mono" as i0
 pkg(
   name: "cake",
   version: "1.1.0",
+  description: "Cross platform build automation system with a C# DSL",
+  url: "https://cakebuild.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

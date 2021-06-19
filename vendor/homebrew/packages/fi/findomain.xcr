@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "findomain",
   version: "4.3.0",
+  description: "Cross-platform subdomain enumerator",
+  url: "https://github.com/Findomain/findomain",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

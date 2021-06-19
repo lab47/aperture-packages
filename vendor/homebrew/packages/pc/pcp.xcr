@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "pcp",
   version: "0.4.0",
+  description: "📦 Command-line peer-to-peer data transfer tool based on libp2p",
+  url: "https://github.com/dennis-tra/pcp",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

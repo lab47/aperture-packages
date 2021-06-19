@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "libcbor",
   version: "0.8.0",
+  description: "CBOR protocol implementation for C and others",
+  url: "https://github.com/PJK/libcbor",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

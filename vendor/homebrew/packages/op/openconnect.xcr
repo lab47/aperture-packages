@@ -72,6 +72,12 @@ import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "stoken" as i3
 pkg(
   name: "openconnect",
   version: "8.10",
+  description: "Open client for Cisco AnyConnect VPN",
+  url: "https://www.infradead.org/openconnect/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

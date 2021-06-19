@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "storm",
   version: "2.2.0",
+  description: "Distributed realtime computation system to process data streams",
+  url: "https://storm.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

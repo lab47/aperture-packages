@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "odt2txt",
   version: "0.5",
+  description: "Convert OpenDocument files to plain text",
+  url: "https://github.com/dstosberg/odt2txt/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

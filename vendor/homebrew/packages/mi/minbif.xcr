@@ -67,6 +67,12 @@ import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3, "gnutls
 pkg(
   name: "minbif",
   version: "1.0.5-20150505",
+  description: "IRC-to-other-IM-networks gateway using Pidgin library",
+  url: "https://web.archive.org/web/20180831190920/https://symlink.me/projects/minbif/wiki/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

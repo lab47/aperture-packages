@@ -45,6 +45,12 @@ import "gnutls" as i0
 pkg(
   name: "libmicrohttpd",
   version: "0.9.73",
+  description: "Light HTTP/1.1 server library",
+  url: "https://www.gnu.org/software/libmicrohttpd/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

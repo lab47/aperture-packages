@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "webkit2png",
   version: "0.7",
+  description: "Create screenshots of webpages from the terminal",
+  url: "https://www.paulhammond.org/webkit2png/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

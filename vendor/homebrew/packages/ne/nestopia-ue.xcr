@@ -60,6 +60,12 @@ import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config
 pkg(
   name: "nestopia-ue",
   version: "1.51.0",
+  description: "NES emulator",
+  url: "http://0ldsk00l.ca/nestopia/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

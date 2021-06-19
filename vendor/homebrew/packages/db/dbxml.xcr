@@ -81,6 +81,12 @@ import "berkeley-db" as i0, "xerces-c" as i1, "xqilla" as i2
 pkg(
   name: "dbxml",
   version: "6.1.4",
+  description: "Embeddable XML database with XQuery support and other advanced features",
+  url: "https://www.oracle.com/database/berkeley-db/xml.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

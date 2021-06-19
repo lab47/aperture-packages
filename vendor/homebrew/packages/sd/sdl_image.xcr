@@ -63,6 +63,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "sdl" 
 pkg(
   name: "sdl_image",
   version: "1.2.12",
+  description: "Image file loading library",
+  url: "https://www.libsdl.org/projects/SDL_image",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

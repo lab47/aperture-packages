@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aterm",
   version: "2.8",
+  description: "Annotated Term for tree-like ADT exchange",
+  url: "https://strategoxt.org/Tools/ATermFormat",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

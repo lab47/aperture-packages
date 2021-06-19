@@ -59,6 +59,12 @@ import "cmake" as i0, "libuv" as i1, "openssl@1.1" as i2
 pkg(
   name: "qpid-proton",
   version: "0.34.0",
+  description: "High-performance, lightweight AMQP 1.0 messaging library",
+  url: "https://qpid.apache.org/proton/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

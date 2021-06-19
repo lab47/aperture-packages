@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "vsearch",
   version: "2.17.0",
+  description: "Versatile open-source tool for microbiome analysis",
+  url: "https://github.com/torognes/vsearch",
+  metadata: %{
+    "license": "BSD-2-Clause or GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

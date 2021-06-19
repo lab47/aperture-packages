@@ -36,6 +36,12 @@ import "osinfo-db-tools" as i0
 pkg(
   name: "osinfo-db",
   version: "20210531",
+  description: "Osinfo database of operating systems for virtualization provisioning tools",
+  url: "https://libosinfo.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

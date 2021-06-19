@@ -37,6 +37,12 @@ import "cmake" as i0
 pkg(
   name: "flvmeta",
   version: "1.2.2",
+  description: "Manipulate Adobe flash video files (FLV)",
+  url: "https://www.flvmeta.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

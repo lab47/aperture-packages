@@ -47,6 +47,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "sslscan",
   version: "2.0.10",
+  description: "Test SSL/TLS enabled services to discover supported cipher suites",
+  url: "https://github.com/rbsec/sslscan",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

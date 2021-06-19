@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "gitleaks",
   version: "7.5.0",
+  description: "Audit git repos for secrets",
+  url: "https://github.com/zricethezav/gitleaks",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

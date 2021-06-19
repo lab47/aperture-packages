@@ -44,6 +44,12 @@ import "libnet" as i0
 pkg(
   name: "arp-sk",
   version: "0.0.16",
+  description: "ARP traffic generation tool",
+  url: "https://web.archive.org/web/20180223202629/sid.rstack.org/arp-sk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

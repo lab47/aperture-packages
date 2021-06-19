@@ -141,6 +141,12 @@ import "gradle@6" as i0, "openjdk" as i1
 pkg(
   name: "elasticsearch",
   version: "7.10.2",
+  description: "Distributed search & analytics engine",
+  url: "https://www.elastic.co/products/elasticsearch",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

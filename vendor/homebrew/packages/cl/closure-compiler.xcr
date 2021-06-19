@@ -41,6 +41,12 @@ import "openjdk" as i0
 pkg(
   name: "closure-compiler",
   version: "20210601",
+  description: "JavaScript optimizing compiler",
+  url: "https://developers.google.com/closure/compiler",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

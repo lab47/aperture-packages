@@ -74,6 +74,12 @@ import "cmake" as i0, "fmt" as i1
 pkg(
   name: "spdlog",
   version: "1.8.5",
+  description: "Super fast C++ logging library",
+  url: "https://github.com/gabime/spdlog",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

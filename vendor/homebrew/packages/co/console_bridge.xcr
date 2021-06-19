@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "console_bridge",
   version: "1.0.1",
+  description: "Robot Operating System-independent package for logging",
+  url: "https://wiki.ros.org/console_bridge/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

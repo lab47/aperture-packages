@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "cmake" as i2, "hdf5" as i3
 pkg(
   name: "kallisto",
   version: "0.46.2",
+  description: "Quantify abundances of transcripts from RNA-Seq data",
+  url: "https://pachterlab.github.io/kallisto/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "picat",
   version: "3.1",
+  description: "Simple, and yet powerful, logic-based multi-paradigm programming language",
+  url: "http://picat-lang.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

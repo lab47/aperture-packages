@@ -41,6 +41,12 @@ import "rust" as i0
 pkg(
   name: "xh",
   version: "0.10.0",
+  description: "Friendly and fast tool for sending HTTP requests",
+  url: "https://github.com/ducaale/xh",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

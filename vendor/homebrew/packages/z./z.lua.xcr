@@ -30,6 +30,12 @@ import "lua" as i0
 pkg(
   name: "z.lua",
   version: "1.8.13",
+  description: "New cd command that helps you navigate faster by learning your habits",
+  url: "https://github.com/skywind3000/z.lua",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

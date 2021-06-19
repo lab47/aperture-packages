@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gptsync",
   version: "0.14",
+  description: "GPT and MBR partition tables synchronization tool",
+  url: "https://refit.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

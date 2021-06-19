@@ -52,6 +52,12 @@ import "rust" as i0, "curl" as i1, "xz" as i2
 pkg(
   name: "rustup-init",
   version: "1.24.3",
+  description: "Rust toolchain installer",
+  url: "https://github.com/rust-lang/rustup",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

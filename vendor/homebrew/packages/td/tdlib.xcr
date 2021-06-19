@@ -54,6 +54,12 @@ import "cmake" as i0, "gperf" as i1, "openssl@1.1" as i2, "readline" as i3
 pkg(
   name: "tdlib",
   version: "1.7.0",
+  description: "Cross-platform library for building Telegram clients",
+  url: "https://core.telegram.org/tdlib",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

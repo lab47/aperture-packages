@@ -104,6 +104,12 @@ import "cmake" as i0, "pkg-config" as i1, "curl" as i2, "icu4c" as i3, "openssl@
 pkg(
   name: "dotnet",
   version: "5.0.203",
+  description: ".NET Core",
+  url: "https://dotnet.microsoft.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

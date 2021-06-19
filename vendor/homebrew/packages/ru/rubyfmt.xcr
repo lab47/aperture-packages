@@ -44,6 +44,12 @@ import "ruby" as i0
 pkg(
   name: "rubyfmt",
   version: "0.2.0",
+  description: "Ruby autoformatter",
+  url: "https://github.com/penelopezone/rubyfmt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

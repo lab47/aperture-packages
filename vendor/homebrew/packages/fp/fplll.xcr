@@ -64,6 +64,12 @@ import "automake" as i0, "gmp" as i1, "mpfr" as i2
 pkg(
   name: "fplll",
   version: "5.4.1",
+  description: "Lattice algorithms using floating-point arithmetic",
+  url: "https://github.com/fplll/fplll",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

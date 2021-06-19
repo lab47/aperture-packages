@@ -44,6 +44,12 @@ import "openjdk" as i0
 pkg(
   name: "vert.x",
   version: "4.1.0",
+  description: "Toolkit for building reactive applications on the JVM",
+  url: "https://vertx.io/",
+  metadata: %{
+    "license": "EPL-2.0 or Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

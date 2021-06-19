@@ -63,12 +63,18 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "asciidoctor" as i3, "atk" as i4, "autoconf" as i5, "autogen" as i6, "automake" as i7, "bdw-gc" as i8, "berkeley-db" as i9, "bison" as i10, "brotli" as i11, "bzip2" as i12, "c-ares" as i13, "cairo" as i14, "cmake" as i15, "coreutils" as i16, "curl" as i17, "docbook" as i18, "docbook-xsl" as i19, "doxygen" as i20, "expat" as i21, "flex" as i22, "fontconfig" as i23, "freetype" as i24, "fribidi" as i25, "gd" as i26, "gdbm" as i27, "gdk-pixbuf" as i28, "gdl" as i29, "gettext" as i30, "ghostscript" as i31, "glib" as i32, "gmp" as i33, "gnome-themes-standard" as i34, "gnu-getopt" as i35, "gnu-sed" as i36, "gnutls" as i37, "gobject-introspection" as i38, "gperf" as i39, "graphite2" as i40, "graphviz" as i41, "groff" as i42, "gsettings-desktop-schemas" as i43, "gtk+" as i44, "gtk+3" as i45, "gtksourceview3" as i46, "gts" as i47, "guile" as i48, "guile@2" as i49, "harfbuzz" as i50, "help2man" as i51, "hicolor-icon-theme" as i52, "icu4c" as i53, "intltool" as i54, "itstool" as i55, "jasper" as i56, "jbig2dec" as i57, "jemalloc" as i58, "jpeg" as i59, "krb5" as i60, "libatomic_ops" as i61, "libepoxy" as i62, "libev" as i63, "libevent" as i64, "libffi" as i65, "libgcrypt" as i66, "libgda" as i67, "libgee" as i68, "libgpg-error" as i69, "libidn" as i70, "libidn2" as i71, "libpng" as i72, "libpthread-stubs" as i73, "librsvg" as i74, "libssh2" as i75, "libtasn1" as i76, "libtiff" as i77, "libtool" as i78, "libunistring" as i79, "libx11" as i80, "libxau" as i81, "libxcb" as i82, "libxdmcp" as i83, "libxext" as i84, "libxml2" as i85, "libxrender" as i86, "libxslt" as i87, "libyaml" as i88, "little-cms2" as i89, "lz4" as i90, "lzo" as i91, "m4" as i92, "meson" as i93, "mpdecimal" as i94, "ncurses" as i95, "netpbm" as i96, "nettle" as i97, "nghttp2" as i98, "ninja" as i99, "openjdk" as i100, "openjpeg" as i101, "openldap" as i102, "openssl@1.1" as i103, "p11-kit" as i104, "pango" as i105, "pcre" as i106, "pcre2" as i107, "perl" as i108, "pixman" as i109, "pkg-config" as i110, "psutils" as i111, "python@3.9" as i112, "readline" as i113, "rtmpdump" as i114, "ruby" as i115, "rust" as i116, "scons" as i117, "shared-mime-info" as i118, "sphinx-doc" as i119, "sqlite" as i120, "subversion" as i121, "swig" as i122, "texinfo" as i123, "uchardet" as i124, "unbound" as i125, "unzip" as i126, "utf8proc" as i127, "util-macros" as i128, "vala" as i129, "vte3" as i130, "webp" as i131, "xcb-proto" as i132, "xmlto" as i133, "xorgproto" as i134, "xtrans" as i135, "xz" as i136, "zip" as i137, "zlib" as i138, "zstd" as i139
+import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "autogen" as i4, "gdl" as i5, "gnome-themes-standard" as i6, "gnutls" as i7, "gtksourceview3" as i8, "hicolor-icon-theme" as i9, "libgda" as i10, "libxml2" as i11, "python@3.9" as i12, "shared-mime-info" as i13, "vala" as i14, "vte3" as i15
 
 pkg(
   name: "anjuta",
   version: "3.34.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131, i132, i133, i134, i135, i136, i137, i138, i139],
+  description: "GNOME Integrated Development Environment",
+  url: "http://anjuta.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "anjuta.rb"), formula)

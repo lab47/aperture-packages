@@ -229,6 +229,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3,
 pkg(
   name: "libopendkim",
   version: "2.10.3",
+  description: "Implementation of Domain Keys Identified Mail authentication",
+  url: "http://opendkim.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

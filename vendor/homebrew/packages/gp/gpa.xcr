@@ -46,6 +46,12 @@ import "pkg-config" as i0, "desktop-file-utils" as i1, "gpgme" as i2, "gtk+" as 
 pkg(
   name: "gpa",
   version: "0.10.0",
+  description: "Graphical user interface for the GnuPG",
+  url: "https://www.gnupg.org/related_software/gpa/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

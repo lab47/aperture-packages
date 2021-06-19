@@ -44,6 +44,12 @@ import "rust" as i0
 pkg(
   name: "just",
   version: "0.9.5",
+  description: "Handy way to save and run project-specific commands",
+  url: "https://github.com/casey/just",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

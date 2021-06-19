@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "align",
   version: "1.7.5",
+  description: "Text column alignment filter",
+  url: "https://legacy.cs.indiana.edu/~kinzler/align/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

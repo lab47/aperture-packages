@@ -104,6 +104,12 @@ import "go" as i0
 pkg(
   name: "nsq",
   version: "1.2.0",
+  description: "Realtime distributed messaging platform",
+  url: "https://nsq.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

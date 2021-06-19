@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tnftpd",
   version: "20200704",
+  description: "NetBSD's FTP server",
+  url: "https://ftp.netbsd.org/pub/NetBSD/misc/tnftp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

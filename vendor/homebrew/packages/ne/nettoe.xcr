@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nettoe",
   version: "1.5.1",
+  description: "Tic Tac Toe-like game for the console",
+  url: "https://nettoe.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

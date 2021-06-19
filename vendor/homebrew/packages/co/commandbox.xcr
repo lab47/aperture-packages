@@ -45,6 +45,12 @@ import "openjdk@11" as i0
 pkg(
   name: "commandbox",
   version: "5.3.1",
+  description: "CFML embedded server, package manager, and app scaffolding tools",
+  url: "https://www.ortussolutions.com/products/commandbox",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

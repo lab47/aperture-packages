@@ -104,6 +104,12 @@ import "cmake" as i0, "flatbuffers" as i1, "rapidjson" as i2, "spdlog" as i3, "b
 pkg(
   name: "vowpal-wabbit",
   version: "8.10.2",
+  description: "Online learning algorithm",
+  url: "https://github.com/VowpalWabbit/vowpal_wabbit",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

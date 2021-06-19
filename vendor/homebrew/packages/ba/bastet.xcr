@@ -62,6 +62,12 @@ import "boost" as i0
 pkg(
   name: "bastet",
   version: "0.43.2",
+  description: "Bastard Tetris",
+  url: "https://fph.altervista.org/prog/bastet.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

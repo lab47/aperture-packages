@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chruby",
   version: "0.3.9",
+  description: "Ruby environment tool",
+  url: "https://github.com/postmodern/chruby#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

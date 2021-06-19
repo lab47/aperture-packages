@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tivodecode",
   version: "0.2pre4",
+  description: "Convert .tivo to .mpeg",
+  url: "https://tivodecode.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

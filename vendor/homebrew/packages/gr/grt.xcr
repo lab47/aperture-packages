@@ -44,6 +44,12 @@ import "cmake" as i0
 pkg(
   name: "grt",
   version: "0.2.4",
+  description: "Gesture Recognition Toolkit for real-time machine learning",
+  url: "https://nickgillian.com/grt/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

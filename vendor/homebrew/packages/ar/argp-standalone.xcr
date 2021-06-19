@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "argp-standalone",
   version: "1.3",
+  description: "Standalone version of arguments parsing functions from GLIBC",
+  url: "https://www.lysator.liu.se/~nisse/misc/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

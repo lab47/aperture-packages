@@ -74,6 +74,12 @@ import "gmp" as i0, "i686-elf-binutils" as i1, "libmpc" as i2, "mpfr" as i3
 pkg(
   name: "i686-elf-gcc",
   version: "11.1.0",
+  description: "GNU compiler collection for i686-elf",
+  url: "https://gcc.gnu.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later with GCC-exception-3.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

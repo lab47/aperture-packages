@@ -57,6 +57,12 @@ import "ocaml-findlib" as i0, "ocaml" as i1
 pkg(
   name: "ocaml-num",
   version: "1.4",
+  description: "OCaml legacy Num library for arbitrary-precision arithmetic",
+  url: "https://github.com/ocaml/num",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

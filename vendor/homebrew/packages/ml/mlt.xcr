@@ -63,6 +63,12 @@ import "cmake" as i0, "pkg-config" as i1, "ffmpeg" as i2, "fftw" as i3, "frei0r"
 pkg(
   name: "mlt",
   version: "7.0.1",
+  description: "Author, manage, and run multitrack audio/video compositions",
+  url: "https://www.mltframework.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

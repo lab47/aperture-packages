@@ -59,6 +59,12 @@ import "gmp" as i0
 pkg(
   name: "mpfr",
   version: "4.1.0",
+  description: "C library for multiple-precision floating-point computations",
+  url: "https://www.mpfr.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

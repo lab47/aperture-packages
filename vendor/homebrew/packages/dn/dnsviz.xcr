@@ -142,12 +142,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bind" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cmake" as i11, "curl" as i12, "doxygen" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "gobject-introspection" as i25, "gperf" as i26, "graphite2" as i27, "graphviz" as i28, "groff" as i29, "gts" as i30, "harfbuzz" as i31, "help2man" as i32, "icu4c" as i33, "jasper" as i34, "jbig2dec" as i35, "jemalloc" as i36, "jpeg" as i37, "json-c" as i38, "krb5" as i39, "libev" as i40, "libffi" as i41, "libidn" as i42, "libidn2" as i43, "libpng" as i44, "libpthread-stubs" as i45, "librsvg" as i46, "libssh2" as i47, "libtiff" as i48, "libtool" as i49, "libunistring" as i50, "libuv" as i51, "libx11" as i52, "libxau" as i53, "libxcb" as i54, "libxdmcp" as i55, "libxext" as i56, "libxml2" as i57, "libxrender" as i58, "libyaml" as i59, "little-cms2" as i60, "lz4" as i61, "lzo" as i62, "m4" as i63, "meson" as i64, "mpdecimal" as i65, "ncurses" as i66, "netpbm" as i67, "nghttp2" as i68, "ninja" as i69, "openjdk" as i70, "openjpeg" as i71, "openldap" as i72, "openssl@1.1" as i73, "pango" as i74, "pcre" as i75, "perl" as i76, "pixman" as i77, "pkg-config" as i78, "psutils" as i79, "python@3.9" as i80, "readline" as i81, "rtmpdump" as i82, "ruby" as i83, "rust" as i84, "scons" as i85, "sphinx-doc" as i86, "sqlite" as i87, "subversion" as i88, "swig" as i89, "texinfo" as i90, "uchardet" as i91, "unzip" as i92, "utf8proc" as i93, "util-macros" as i94, "webp" as i95, "xcb-proto" as i96, "xorgproto" as i97, "xtrans" as i98, "xz" as i99, "zip" as i100, "zlib" as i101, "zstd" as i102
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "graphviz" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "swig" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "dnsviz",
   version: "0.9.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102],
+  description: "Tools for analyzing and visualizing DNS and DNSSEC behavior",
+  url: "https://github.com/dnsviz/dnsviz/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dnsviz.rb"), formula)

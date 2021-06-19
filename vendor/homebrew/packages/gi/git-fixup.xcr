@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-fixup",
   version: "1.3.0",
+  description: "Alias for git commit --fixup <ref>",
+  url: "https://github.com/keis/git-fixup",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

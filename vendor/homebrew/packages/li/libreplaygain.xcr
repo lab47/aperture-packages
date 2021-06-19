@@ -42,6 +42,12 @@ import "cmake" as i0
 pkg(
   name: "libreplaygain",
   version: "r475",
+  description: "Library to implement ReplayGain standard for audio",
+  url: "https://www.musepack.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

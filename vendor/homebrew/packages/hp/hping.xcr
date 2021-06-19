@@ -92,6 +92,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hping",
   version: "3.20051105",
+  description: "Command-line oriented TCP/IP packet assembler/analyzer",
+  url: "http://www.hping.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

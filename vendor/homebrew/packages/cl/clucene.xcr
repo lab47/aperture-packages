@@ -55,6 +55,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "clucene",
   version: "2.3.3.4",
+  description: "C++ port of Lucene: high-performance, full-featured text search engine",
+  url: "https://clucene.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

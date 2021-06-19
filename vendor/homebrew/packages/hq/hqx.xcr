@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "hqx",
   version: "1.2",
+  description: "Magnification filter designed for pixel art",
+  url: "https://github.com/grom358/hqx",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

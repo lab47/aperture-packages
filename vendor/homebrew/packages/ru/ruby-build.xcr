@@ -51,6 +51,12 @@ import "autoconf" as i0, "pkg-config" as i1, "readline" as i2
 pkg(
   name: "ruby-build",
   version: "20210611",
+  description: "Install various Ruby versions and implementations",
+  url: "https://github.com/rbenv/ruby-build",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

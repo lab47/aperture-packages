@@ -88,6 +88,12 @@ import "libatomic_ops" as i0, "pkg-config" as i1
 pkg(
   name: "bdw-gc",
   version: "8.0.4",
+  description: "Garbage collector for C and C++",
+  url: "https://www.hboehm.info/gc/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

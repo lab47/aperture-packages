@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cc65",
   version: "2.19",
+  description: "6502 C compiler",
+  url: "https://cc65.github.io/cc65/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

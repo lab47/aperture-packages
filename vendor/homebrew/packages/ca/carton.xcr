@@ -191,6 +191,12 @@ import "perl" as i0
 pkg(
   name: "carton",
   version: "1.0.34",
+  description: "Perl module dependency manager (aka Bundler for Perl)",
+  url: "https://metacpan.org/pod/Carton",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

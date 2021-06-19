@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "diff-so-fancy",
   version: "1.4.1",
+  description: "Good-lookin' diffs with diff-highlight and more",
+  url: "https://github.com/so-fancy/diff-so-fancy",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

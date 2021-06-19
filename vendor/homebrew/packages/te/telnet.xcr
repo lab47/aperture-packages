@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "telnet",
   version: "63",
+  description: "User interface to the TELNET protocol",
+  url: "https://opensource.apple.com/",
+  metadata: %{
+    "license": "BSD-4-Clause-UC and APSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

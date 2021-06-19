@@ -59,6 +59,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "freetype" as i3, "g
 pkg(
   name: "libming",
   version: "0.4.8",
+  description: "C library for generating Macromedia Flash files",
+  url: "http://www.libming.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

@@ -93,6 +93,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libelf",
   version: "0.8.13",
+  description: "ELF object file access library",
+  url: "https://web.archive.org/web/20181111033959/www.mr511.de/software/english.html",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpg123",
   version: "1.28.0",
+  description: "MP3 player for Linux and UNIX",
+  url: "https://www.mpg123.de/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

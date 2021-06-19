@@ -57,6 +57,12 @@ import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "adwai
 pkg(
   name: "file-roller",
   version: "3.40.0",
+  description: "GNOME archive manager",
+  url: "https://wiki.gnome.org/Apps/FileRoller",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -74,6 +74,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "imap-uw",
   version: "2007f",
+  description: "University of Washington IMAP toolkit",
+  url: "https://web.archive.org/web/20191028114408/https://www.washington.edu/imap/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

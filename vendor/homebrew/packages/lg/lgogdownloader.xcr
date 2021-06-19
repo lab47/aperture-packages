@@ -58,6 +58,12 @@ import "cmake" as i0, "help2man" as i1, "pkg-config" as i2, "boost" as i3, "html
 pkg(
   name: "lgogdownloader",
   version: "3.7",
+  description: "Unofficial downloader for GOG.com games",
+  url: "https://sites.google.com/site/gogdownloader/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

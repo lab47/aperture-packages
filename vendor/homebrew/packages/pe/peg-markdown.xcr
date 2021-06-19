@@ -41,6 +41,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "peg-markdown",
   version: "0.4.14",
+  description: "Markdown implementation based on a PEG grammar",
+  url: "https://github.com/jgm/peg-markdown",
+  metadata: %{
+    "license": "GPL-2.0-or-later or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

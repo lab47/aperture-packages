@@ -40,6 +40,12 @@ import "pkg-config" as i0
 pkg(
   name: "serd",
   version: "0.30.10",
+  description: "C library for RDF syntax",
+  url: "https://drobilla.net/software/serd/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -94,6 +94,12 @@ import "openjdk@11" as i0
 pkg(
   name: "neo4j",
   version: "4.2.7",
+  description: "Robust (fully ACID) transactional property graph database",
+  url: "https://neo4j.com/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

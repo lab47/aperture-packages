@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aws-keychain",
   version: "3.0.0",
+  description: "Uses macOS keychain for storage of AWS credentials",
+  url: "https://github.com/pda/aws-keychain",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

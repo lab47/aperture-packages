@@ -55,6 +55,12 @@ import "go" as i0, "packr" as i1
 pkg(
   name: "circleci",
   version: "0.1.15338",
+  description: "Enables you to reproduce the CircleCI environment locally",
+  url: "https://circleci.com/docs/2.0/local-cli/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-builder",
   version: "0.7.3",
+  description: "Bazaar plugin to construct a branch based on a recipe",
+  url: "https://launchpad.net/bzr-builder",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "libcds",
   version: "2.3.3",
+  description: "C++ library of Concurrent Data Structures",
+  url: "https://libcds.sourceforge.io/doc/cds-api/index.html",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

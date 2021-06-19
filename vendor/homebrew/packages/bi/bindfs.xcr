@@ -60,6 +60,12 @@ import "pkg-config" as i0
 pkg(
   name: "bindfs",
   version: "1.14.8",
+  description: "FUSE file system for mounting to another location",
+  url: "https://bindfs.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

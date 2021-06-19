@@ -53,6 +53,12 @@ import "pkg-config" as i0, "lz4" as i1, "lzo" as i2, "squashfs" as i3, "xz" as i
 pkg(
   name: "squashfuse",
   version: "0.1.103",
+  description: "FUSE filesystem to mount squashfs archives",
+  url: "https://github.com/vasi/squashfuse",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

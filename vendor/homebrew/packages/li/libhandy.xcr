@@ -110,6 +110,12 @@ import "gettext" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as
 pkg(
   name: "libhandy",
   version: "1.2.2",
+  description: "Building blocks for modern adaptive GNOME apps",
+  url: "https://gitlab.gnome.org/GNOME/libhandy",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

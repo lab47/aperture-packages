@@ -258,6 +258,12 @@ import "perl" as i0
 pkg(
   name: "rex",
   version: "1.11.0",
+  description: "Command-line tool which executes commands on remote servers",
+  url: "https://www.rexify.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

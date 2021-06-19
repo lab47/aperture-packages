@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "yaml-cpp",
   version: "0.6.3",
+  description: "C++ YAML parser and emitter for YAML 1.2 spec",
+  url: "https://github.com/jbeder/yaml-cpp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

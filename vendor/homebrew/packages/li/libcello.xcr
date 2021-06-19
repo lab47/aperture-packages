@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libcello",
   version: "2.1.0",
+  description: "Higher-level programming in C",
+  url: "http://libcello.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

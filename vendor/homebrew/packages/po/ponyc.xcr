@@ -54,6 +54,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "ponyc",
   version: "0.41.0",
+  description: "Object-oriented, actor-model, capabilities-secure programming language",
+  url: "https://www.ponylang.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

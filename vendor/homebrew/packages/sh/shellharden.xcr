@@ -40,6 +40,12 @@ import "rust" as i0
 pkg(
   name: "shellharden",
   version: "4.1.2",
+  description: "Bash syntax highlighter that encourages/fixes variables quoting",
+  url: "https://github.com/anordal/shellharden",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

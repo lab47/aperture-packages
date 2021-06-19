@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "giflib",
   version: "5.2.1",
+  description: "Library and utilities for processing GIFs",
+  url: "https://giflib.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "zsh" as i0
 pkg(
   name: "zinit",
   version: "3.7",
+  description: "Flexible and fast Zsh plugin manager",
+  url: "https://zdharma.github.io/zinit/wiki/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

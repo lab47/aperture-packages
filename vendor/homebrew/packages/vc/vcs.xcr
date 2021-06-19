@@ -50,6 +50,12 @@ import "ffmpeg" as i0, "ghostscript" as i1, "gnu-getopt" as i2, "imagemagick" as
 pkg(
   name: "vcs",
   version: "1.13.4",
+  description: "Creates video contact sheets (previews) of videos",
+  url: "https://p.outlyer.net/vcs/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -76,6 +76,12 @@ import "openjdk" as i0
 pkg(
   name: "selenium-server-standalone",
   version: "3.141.59",
+  description: "Browser automation for testing purposes",
+  url: "https://www.seleniumhq.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

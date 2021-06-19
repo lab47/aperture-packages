@@ -80,6 +80,12 @@ import "pkg-config" as i0, "libevent" as i1, "readline" as i2, "libxml2" as i3
 pkg(
   name: "lldpd",
   version: "1.0.11",
+  description: "Implementation of IEEE 802.1ab (LLDP)",
+  url: "https://vincentbernat.github.io/lldpd/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

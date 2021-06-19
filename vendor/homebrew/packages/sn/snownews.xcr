@@ -50,6 +50,12 @@ import "coreutils" as i0, "pkg-config" as i1, "gettext" as i2, "ncurses" as i3, 
 pkg(
   name: "snownews",
   version: "1.6.10",
+  description: "Text mode RSS newsreader",
+  url: "https://github.com/kouya/snownews",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

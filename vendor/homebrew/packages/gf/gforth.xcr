@@ -45,6 +45,12 @@ import "emacs" as i0, "libffi" as i1, "libtool" as i2, "pcre" as i3
 pkg(
   name: "gforth",
   version: "0.7.3",
+  description: "Implementation of the ANS Forth language",
+  url: "https://www.gnu.org/software/gforth/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

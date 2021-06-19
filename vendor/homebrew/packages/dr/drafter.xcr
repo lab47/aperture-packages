@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "drafter",
   version: "5.0.0",
+  description: "Native C/C++ API Blueprint Parser",
+  url: "https://apiblueprint.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "mapcidr",
   version: "0.0.7",
+  description: "Subnet/CIDR operation utility",
+  url: "https://projectdiscovery.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

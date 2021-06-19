@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libcaca" as i1
 pkg(
   name: "toilet",
   version: "0.3",
+  description: "Color-based alternative to figlet (uses libcaca)",
+  url: "http://caca.zoy.org/wiki/toilet",
+  metadata: %{
+    "license": "WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

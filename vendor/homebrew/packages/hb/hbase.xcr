@@ -186,6 +186,12 @@ import "ant" as i0, "lzo" as i1, "openjdk@11" as i2
 pkg(
   name: "hbase",
   version: "2.4.3",
+  description: "Hadoop database: a distributed, scalable, big data store",
+  url: "https://hbase.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -124,6 +124,12 @@ import "openssl@1.1" as i0, "wxmac" as i1
 pkg(
   name: "erlang",
   version: "24.0.2",
+  description: "Programming language for highly scalable real-time systems",
+  url: "https://www.erlang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

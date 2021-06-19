@@ -72,6 +72,12 @@ import "cmake" as i0, "protobuf" as i1
 pkg(
   name: "protoc-gen-grpc-web",
   version: "1.2.1",
+  description: "Protoc plugin that generates code for gRPC-Web clients",
+  url: "https://github.com/grpc/grpc-web",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

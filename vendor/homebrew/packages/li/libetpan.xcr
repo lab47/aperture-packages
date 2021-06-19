@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libetpan",
   version: "1.9.4",
+  description: "Portable mail library handling several protocols",
+  url: "https://www.etpan.org/libetpan.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

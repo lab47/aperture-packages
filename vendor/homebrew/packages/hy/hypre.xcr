@@ -54,6 +54,12 @@ import "gcc" as i0, "open-mpi" as i1
 pkg(
   name: "hypre",
   version: "2.21.0",
+  description: "Library featuring parallel multigrid methods for grid problems",
+  url: "https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods",
+  metadata: %{
+    "license": "MIT or Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -122,6 +122,12 @@ import "openssl@1.1" as i0, "bzip2" as i1, "sqlite" as i2
 pkg(
   name: "dovecot",
   version: "2.3.14",
+  description: "IMAP/POP3 server",
+  url: "https://dovecot.org/",
+  metadata: %{
+    "license": "BSD-3-Clause and LGPL-2.1-or-later and MIT and Unicode-DFS-2016 and Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

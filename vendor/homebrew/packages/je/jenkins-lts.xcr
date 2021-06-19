@@ -80,6 +80,12 @@ import "openjdk@11" as i0
 pkg(
   name: "jenkins-lts",
   version: "2.289.1",
+  description: "Extendable open-source CI server",
+  url: "https://jenkins.io/index.html#stable",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

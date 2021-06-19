@@ -129,6 +129,12 @@ import "go" as i0
 pkg(
   name: "v2ray",
   version: "4.39.2",
+  description: "Platform for building proxies to bypass network restrictions",
+  url: "https://v2fly.org/",
+  metadata: %{
+    "license": "MIT and CC-BY-SA-4.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

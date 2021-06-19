@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ttf2pt1",
   version: "3.4.4",
+  description: "True Type Font to Postscript Type 1 converter",
+  url: "https://ttf2pt1.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-open",
   version: "1.3",
+  description: "Open GitHub webpages from a terminal",
+  url: "https://github.com/jeffreyiacono/git-open",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

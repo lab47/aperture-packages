@@ -45,6 +45,12 @@ import "postgresql" as i0
 pkg(
   name: "pex",
   version: "1.20140409",
+  description: "Package manager for PostgreSQL",
+  url: "https://github.com/petere/pex",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

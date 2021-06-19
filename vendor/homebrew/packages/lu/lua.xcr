@@ -65,13 +65,7 @@ class Lua < Formula
     # We ship our own pkg-config file as Lua no longer provide them upstream.
     arch = OS.mac? ? "macosx" : "linux"
     system "make", arch, "INSTALL_TOP=#{prefix}"
-
-    if OS.mac?
-      system "make", "install", "INSTALL_TOP=#{prefix}", "INSTALL_MAN=#{man1}"
-    else
-      system "make", "install", "INSTALL_TOP=#{prefix}"
-    end
-
+    system "make", "install", "INSTALL_TOP=#{prefix}", ("INSTALL_MAN=#{man1}" unless OS.mac?)
     (lib/"pkgconfig/lua.pc").write pc_file
 
     # Fix some software potentially hunting for different pc names.
@@ -131,6 +125,12 @@ import "unzip" as i0
 pkg(
   name: "lua",
   version: "5.4.3",
+  description: "Powerful, lightweight programming language",
+  url: "https://www.lua.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

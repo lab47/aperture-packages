@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ruby-install",
   version: "0.8.1",
+  description: "Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby",
+  url: "https://github.com/postmodern/ruby-install#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

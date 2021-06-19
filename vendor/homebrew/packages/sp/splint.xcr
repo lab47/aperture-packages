@@ -81,6 +81,12 @@ import "flex" as i0
 pkg(
   name: "splint",
   version: "3.1.2",
+  description: "Secure Programming Lint",
+  url: "https://sourceforge.net/projects/splint/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

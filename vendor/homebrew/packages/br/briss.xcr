@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "briss",
   version: "0.9",
+  description: "Crop PDF files",
+  url: "https://briss.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

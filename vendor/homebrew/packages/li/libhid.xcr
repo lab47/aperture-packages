@@ -63,6 +63,12 @@ import "libusb" as i0, "libusb-compat" as i1
 pkg(
   name: "libhid",
   version: "0.2.16",
+  description: "Library to access and interact with USB HID devices",
+  url: "https://directory.fsf.org/wiki/Libhid",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "powerline-go",
   version: "1.21.0",
+  description: "Beautiful and useful low-latency prompt for your shell",
+  url: "https://github.com/justjanne/powerline-go",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

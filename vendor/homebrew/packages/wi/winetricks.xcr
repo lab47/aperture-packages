@@ -32,6 +32,12 @@ import "cabextract" as i0, "p7zip" as i1, "unzip" as i2
 pkg(
   name: "winetricks",
   version: "20210206",
+  description: "Automatic workarounds for problems in Wine",
+  url: "https://github.com/Winetricks/winetricks",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

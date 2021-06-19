@@ -46,6 +46,12 @@ import "lzlib" as i0
 pkg(
   name: "plzip",
   version: "1.9",
+  description: "Data compressor",
+  url: "https://www.nongnu.org/lzip/plzip.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

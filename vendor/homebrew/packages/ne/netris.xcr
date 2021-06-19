@@ -87,6 +87,12 @@ import "homebrew-install" as hi
 pkg(
   name: "netris",
   version: "0.52",
+  description: "Networked variant of tetris",
+  url: "https://web.archive.org/web/20071223041235/www.netris.be/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

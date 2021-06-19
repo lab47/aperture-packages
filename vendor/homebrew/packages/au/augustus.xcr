@@ -93,6 +93,12 @@ import "boost" as i0, "bamtools" as i1, "zlib" as i2, "gcc" as i3
 pkg(
   name: "augustus",
   version: "3.3.3",
+  description: "Predict genes in eukaryotic genomic sequences",
+  url: "https://bioinf.uni-greifswald.de/augustus/",
+  metadata: %{
+    "license": "Artistic-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

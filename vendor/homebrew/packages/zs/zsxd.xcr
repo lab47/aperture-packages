@@ -37,6 +37,12 @@ import "cmake" as i0, "solarus" as i1
 pkg(
   name: "zsxd",
   version: "1.12.2",
+  description: "Zelda Mystery of Solarus XD",
+  url: "https://www.solarus-games.org/en/games/the-legend-of-zelda-mystery-of-solarus-xd",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

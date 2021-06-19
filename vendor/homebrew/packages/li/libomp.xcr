@@ -66,6 +66,12 @@ import "cmake" as i0
 pkg(
   name: "libomp",
   version: "12.0.0",
+  description: "LLVM's OpenMP runtime library",
+  url: "https://openmp.llvm.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

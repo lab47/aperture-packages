@@ -606,6 +606,12 @@ import "ncurses" as i0
 pkg(
   name: "aspell",
   version: "0.60.8",
+  description: "Spell checker with better logic than ispell",
+  url: "http://aspell.net/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

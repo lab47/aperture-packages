@@ -73,6 +73,12 @@ import "lua" as i0, "pkg-config" as i1, "kyoto-cabinet" as i2, "zlib" as i3
 pkg(
   name: "kyoto-tycoon",
   version: "0.9.56",
+  description: "Database server with interface to Kyoto Cabinet",
+  url: "https://fallabs.com/kyototycoon/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

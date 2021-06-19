@@ -40,6 +40,12 @@ import "node" as i0
 pkg(
   name: "lerna",
   version: "4.0.0",
+  description: "Tool for managing JavaScript projects with multiple packages",
+  url: "https://lerna.js.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

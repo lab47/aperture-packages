@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "envv",
   version: "1.7",
+  description: "Shell-independent handling of environment variables",
+  url: "https://github.com/jakewendt/envv#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

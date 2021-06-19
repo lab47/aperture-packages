@@ -200,6 +200,12 @@ import "autoconf" as i0
 pkg(
   name: "openjdk",
   version: "16.0.1",
+  description: "Development kit for the Java programming language",
+  url: "https://openjdk.java.net/",
+  metadata: %{
+    "license": "GPL-2.0-only with Classpath-exception-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

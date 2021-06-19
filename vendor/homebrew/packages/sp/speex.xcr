@@ -66,6 +66,12 @@ import "pkg-config" as i0, "libogg" as i1
 pkg(
   name: "speex",
   version: "1.2.0",
+  description: "Audio codec designed for speech",
+  url: "https://speex.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

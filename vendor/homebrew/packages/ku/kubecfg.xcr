@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "kubecfg",
   version: "0.20.0",
+  description: "Manage complex enterprise Kubernetes environments as code",
+  url: "https://github.com/bitnami/kubecfg",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

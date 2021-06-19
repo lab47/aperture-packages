@@ -92,6 +92,12 @@ import "pkg-config" as i0, "libevent" as i1, "openssl@1.1" as i2
 pkg(
   name: "pgbouncer",
   version: "1.15.0",
+  description: "Lightweight connection pooler for PostgreSQL",
+  url: "https://www.pgbouncer.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

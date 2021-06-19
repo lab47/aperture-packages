@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libde265",
   version: "1.0.8",
+  description: "Open h.265 video codec implementation",
+  url: "https://github.com/strukturag/libde265",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

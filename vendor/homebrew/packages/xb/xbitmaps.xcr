@@ -54,6 +54,12 @@ import "pkg-config" as i0, "util-macros" as i1
 pkg(
   name: "xbitmaps",
   version: "1.1.2",
+  description: "Bitmap images used by multiple X11 applications",
+  url: "https://xcb.freedesktop.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

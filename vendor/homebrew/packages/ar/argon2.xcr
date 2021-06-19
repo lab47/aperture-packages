@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "argon2",
   version: "20190702",
+  description: "Password hashing library and CLI utility",
+  url: "https://github.com/P-H-C/phc-winner-argon2",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

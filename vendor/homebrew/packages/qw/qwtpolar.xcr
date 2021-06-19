@@ -105,6 +105,12 @@ import "qt@5" as i0, "qwt" as i1
 pkg(
   name: "qwtpolar",
   version: "1.1.1",
+  description: "Library for displaying values on a polar coordinate system",
+  url: "https://qwtpolar.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -62,6 +62,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm" as i3, "libxml
 pkg(
   name: "libxml++@4",
   version: "4.0.1",
+  description: "C++ wrapper for libxml",
+  url: "https://libxmlplusplus.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

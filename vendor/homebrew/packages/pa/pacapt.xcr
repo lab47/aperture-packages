@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pacapt",
   version: "2.4.4",
+  description: "Package manager in the style of Arch's pacman",
+  url: "https://github.com/icy/pacapt",
+  metadata: %{
+    "license": "Fair",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

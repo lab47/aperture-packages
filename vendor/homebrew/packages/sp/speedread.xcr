@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "speedread",
   version: "1.0",
+  description: "Simple terminal-based rapid serial visual presentation (RSVP) reader",
+  url: "https://github.com/pasky/speedread",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

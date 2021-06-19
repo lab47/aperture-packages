@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kakasi",
   version: "2.3.6",
+  description: "Convert Kanji characters to Hiragana, Katakana, or Romaji",
+  url: "http://kakasi.namazu.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

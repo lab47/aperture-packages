@@ -76,6 +76,12 @@ import "nspr" as i0, "readline" as i1
 pkg(
   name: "spidermonkey",
   version: "1.8.5",
+  description: "JavaScript-C Engine",
+  url: "https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey",
+  metadata: %{
+    "license": "MPL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

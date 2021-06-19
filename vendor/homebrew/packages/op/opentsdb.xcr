@@ -157,6 +157,12 @@ import "gnuplot" as i0, "hbase" as i1, "lzo" as i2, "openjdk@8" as i3
 pkg(
   name: "opentsdb",
   version: "2.4.0",
+  description: "Scalable, distributed Time Series Database",
+  url: "http://opentsdb.net/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

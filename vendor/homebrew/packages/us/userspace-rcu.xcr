@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "userspace-rcu",
   version: "0.12.2",
+  description: "Library for userspace RCU (read-copy-update)",
+  url: "https://liburcu.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

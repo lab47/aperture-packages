@@ -185,6 +185,12 @@ import "go" as i0
 pkg(
   name: "mailhog",
   version: "1.0.1",
+  description: "Web and API based SMTP testing tool",
+  url: "https://github.com/mailhog/MailHog",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

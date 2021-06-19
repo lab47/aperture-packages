@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pgpdump",
   version: "0.33",
+  description: "PGP packet visualizer",
+  url: "https://www.mew.org/~kazu/proj/pgpdump/en/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

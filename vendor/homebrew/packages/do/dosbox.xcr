@@ -54,6 +54,12 @@ import "libpng" as i0, "sdl" as i1, "sdl_net" as i2, "sdl_sound" as i3
 pkg(
   name: "dosbox",
   version: "0.74-3",
+  description: "DOS Emulator",
+  url: "https://www.dosbox.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

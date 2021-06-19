@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "boom-completion",
   version: "0.5.0",
+  description: "Bash and Zsh completion for Boom",
+  url: "https://zachholman.com/boom",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

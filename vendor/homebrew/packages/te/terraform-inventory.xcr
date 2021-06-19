@@ -85,6 +85,12 @@ import "go" as i0
 pkg(
   name: "terraform-inventory",
   version: "0.9",
+  description: "Terraform State → Ansible Dynamic Inventory",
+  url: "https://github.com/adammck/terraform-inventory",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

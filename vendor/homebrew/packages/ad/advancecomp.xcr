@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "bzip2" as i3, "zlib
 pkg(
   name: "advancecomp",
   version: "2.1",
+  description: "Recompression utilities for .PNG, .MNG, .ZIP, and .GZ files",
+  url: "https://www.advancemame.it/comp-readme.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "tinyxml2",
   version: "9.0.0",
+  description: "Improved tinyxml (in memory efficiency and size)",
+  url: "http://grinninglizard.com/tinyxml2",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

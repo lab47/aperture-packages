@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "aws-es-proxy",
   version: "1.2",
+  description: "Small proxy between HTTP client and AWS Elasticsearch",
+  url: "https://github.com/abutaha/aws-es-proxy",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

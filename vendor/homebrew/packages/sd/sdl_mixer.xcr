@@ -76,6 +76,12 @@ import "pkg-config" as i0, "flac" as i1, "libmikmod" as i2, "libogg" as i3, "lib
 pkg(
   name: "sdl_mixer",
   version: "1.2.12",
+  description: "Sample multi-channel audio mixer library",
+  url: "https://www.libsdl.org/projects/SDL_mixer/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

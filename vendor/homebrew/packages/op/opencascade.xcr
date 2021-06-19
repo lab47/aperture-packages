@@ -81,6 +81,12 @@ import "cmake" as i0, "doxygen" as i1, "rapidjson" as i2, "freeimage" as i3, "fr
 pkg(
   name: "opencascade",
   version: "7.5.1",
+  description: "3D modeling and numerical simulation software for CAD/CAM/CAE",
+  url: "https://dev.opencascade.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

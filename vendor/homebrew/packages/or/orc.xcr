@@ -44,6 +44,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "orc",
   version: "0.4.32",
+  description: "Oil Runtime Compiler (ORC)",
+  url: "https://gstreamer.freedesktop.org/projects/orc.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

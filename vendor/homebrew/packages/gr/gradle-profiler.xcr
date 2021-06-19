@@ -36,6 +36,12 @@ import "openjdk@11" as i0
 pkg(
   name: "gradle-profiler",
   version: "0.16.0",
+  description: "Profiling and benchmarking tool for Gradle builds",
+  url: "https://github.com/gradle/gradle-profiler/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

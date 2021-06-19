@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "curseofwar",
   version: "1.3.0",
+  description: "Fast-paced action strategy game",
+  url: "https://a-nikolaev.github.io/curseofwar/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

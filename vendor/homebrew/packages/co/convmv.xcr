@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "convmv",
   version: "2.05",
+  description: "Filename encoding conversion tool",
+  url: "https://www.j3e.de/linux/convmv/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -63,6 +63,12 @@ import "ncurses" as i0
 pkg(
   name: "rogue",
   version: "5.4.4",
+  description: "Dungeon crawling video game",
+  url: "https://sourceforge.net/projects/roguelike/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

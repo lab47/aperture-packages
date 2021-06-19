@@ -59,6 +59,12 @@ import "cmake" as i0
 pkg(
   name: "clog",
   version: "1.3.0",
+  description: "Colorized pattern-matching log tail utility",
+  url: "https://taskwarrior.org/docs/clog/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "gmailctl",
   version: "0.8.0",
+  description: "Declarative configuration for Gmail filters",
+  url: "https://github.com/mbrt/gmailctl",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

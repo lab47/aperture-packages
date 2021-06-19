@@ -104,6 +104,12 @@ import "homebrew-install" as hi
 pkg(
   name: "audiofile",
   version: "0.3.6",
+  description: "Reads and writes many common audio file formats",
+  url: "https://audiofile.68k.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

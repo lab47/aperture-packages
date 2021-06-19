@@ -46,6 +46,12 @@ import "cmake" as i0, "libpng" as i1
 pkg(
   name: "teem",
   version: "1.11.0",
+  description: "Libraries for scientific raster data",
+  url: "https://teem.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

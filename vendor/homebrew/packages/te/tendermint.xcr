@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "tendermint",
   version: "0.34.10",
+  description: "BFT state machine replication for applications in any programming languages",
+  url: "https://tendermint.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

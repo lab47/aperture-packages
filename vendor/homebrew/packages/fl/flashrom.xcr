@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libftdi0" as i1, "libusb-compat" as i2
 pkg(
   name: "flashrom",
   version: "1.2",
+  description: "Identify, read, write, verify, and erase flash chips",
+  url: "https://flashrom.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

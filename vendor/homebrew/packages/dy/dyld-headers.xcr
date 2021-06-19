@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dyld-headers",
   version: "851.27",
+  description: "Header files for the dynamic linker",
+  url: "https://opensource.apple.com/",
+  metadata: %{
+    "license": "APSL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "goofys",
   version: "0.24.0",
+  description: "Filey-System interface to Amazon S3",
+  url: "https://github.com/kahing/goofys",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

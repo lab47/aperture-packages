@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docker-machine-completion",
   version: "0.16.2",
+  description: "Completion script for docker-machine",
+  url: "https://docs.docker.com/machine/completion/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

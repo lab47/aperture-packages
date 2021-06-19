@@ -55,6 +55,12 @@ import "ant" as i0, "openjdk" as i1, "rlwrap" as i2
 pkg(
   name: "abcl",
   version: "1.8.0",
+  description: "Armed Bear Common Lisp: a full implementation of Common Lisp",
+  url: "https://abcl.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later with Classpath-exception-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

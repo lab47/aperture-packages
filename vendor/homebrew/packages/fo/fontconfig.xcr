@@ -94,6 +94,12 @@ import "pkg-config" as i0, "freetype" as i1, "gperf" as i2, "bzip2" as i3, "expa
 pkg(
   name: "fontconfig",
   version: "2.13.1",
+  description: "XML-based font configuration API for X Windows",
+  url: "https://wiki.freedesktop.org/www/Software/fontconfig/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

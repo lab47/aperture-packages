@@ -61,6 +61,12 @@ import "tcl-tk" as i0
 pkg(
   name: "git-gui",
   version: "2.32.0",
+  description: "Tcl/Tk UI for the git revision control system",
+  url: "https://git-scm.com",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

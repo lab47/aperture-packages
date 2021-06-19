@@ -48,6 +48,12 @@ import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2, "unzip" as i3, "zlib"
 pkg(
   name: "pandoc-crossref",
   version: "0.3.11.0",
+  description: "Pandoc filter for numbering and cross-referencing",
+  url: "https://github.com/lierdakil/pandoc-crossref",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

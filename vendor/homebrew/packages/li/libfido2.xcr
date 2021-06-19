@@ -74,6 +74,12 @@ import "cmake" as i0, "mandoc" as i1, "pkg-config" as i2, "libcbor" as i3, "open
 pkg(
   name: "libfido2",
   version: "1.7.0",
+  description: "Provides library functionality for FIDO U2F & FIDO 2.0, including USB",
+  url: "https://developers.yubico.com/libfido2/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

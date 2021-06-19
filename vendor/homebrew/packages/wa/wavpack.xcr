@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wavpack",
   version: "5.4.0",
+  description: "Hybrid lossless audio compression",
+  url: "https://www.wavpack.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

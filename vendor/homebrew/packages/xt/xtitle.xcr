@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xtitle",
   version: "1.0.4",
+  description: "Set window title and icon for your X terminal",
+  url: "https://www.cs.indiana.edu/~kinzler/xtitle/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

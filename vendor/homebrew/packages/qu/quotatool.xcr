@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "quotatool",
   version: "1.6.2",
+  description: "Edit disk quotas from the command-line",
+  url: "https://quotatool.ekenberg.se/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

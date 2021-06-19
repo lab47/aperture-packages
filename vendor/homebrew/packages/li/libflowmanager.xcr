@@ -37,6 +37,12 @@ import "libtrace" as i0
 pkg(
   name: "libflowmanager",
   version: "3.0.0",
+  description: "Flow-based measurement tasks with packet-based inputs",
+  url: "https://research.wand.net.nz/software/libflowmanager.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

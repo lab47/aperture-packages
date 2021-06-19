@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wumpus",
   version: "1.7",
+  description: "Exact clone of the ancient BASIC Hunt the Wumpus game",
+  url: "http://www.catb.org/~esr/wumpus/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

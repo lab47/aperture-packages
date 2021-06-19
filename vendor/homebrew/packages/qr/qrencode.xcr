@@ -53,6 +53,12 @@ import "pkg-config" as i0, "libpng" as i1
 pkg(
   name: "qrencode",
   version: "4.1.1",
+  description: "QR Code generation",
+  url: "https://fukuchi.org/works/qrencode/index.html.en",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

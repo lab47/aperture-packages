@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xtail",
   version: "2.1",
+  description: "Watch growth of multiple files or directories (like `tail -f`)",
+  url: "https://unicom.crosenthal.com/sw/xtail",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

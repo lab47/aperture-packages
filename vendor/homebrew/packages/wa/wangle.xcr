@@ -90,6 +90,12 @@ import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fizz" as i3, "f
 pkg(
   name: "wangle",
   version: "2021.06.07.00",
+  description: "Modular, composable client/server abstractions framework",
+  url: "https://github.com/facebook/wangle",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {

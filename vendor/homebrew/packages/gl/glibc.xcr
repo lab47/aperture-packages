@@ -192,6 +192,12 @@ import "binutils" as i0, "linux-headers" as i1
 pkg(
   name: "glibc",
   version: "2.23",
+  description: "GNU C Library",
+  url: "https://www.gnu.org/software/libc/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

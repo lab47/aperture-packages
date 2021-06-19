@@ -69,6 +69,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libspiro",
   version: "20200505",
+  description: "Library to simplify the drawing of curves",
+  url: "https://github.com/fontforge/libspiro",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

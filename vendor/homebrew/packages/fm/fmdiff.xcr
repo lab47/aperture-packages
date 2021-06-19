@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fmdiff",
   version: "20150915",
+  description: "Use FileMerge as a diff command for Subversion and Mercurial",
+  url: "https://github.com/brunodefraine/fmscripts",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

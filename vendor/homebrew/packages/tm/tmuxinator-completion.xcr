@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tmuxinator-completion",
   version: "3.0.0",
+  description: "Shell completion for Tmuxinator",
+  url: "https://github.com/tmuxinator/tmuxinator",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

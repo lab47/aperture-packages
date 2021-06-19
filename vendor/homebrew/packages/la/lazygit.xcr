@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "lazygit",
   version: "0.28.2",
+  description: "Simple terminal UI for git commands",
+  url: "https://github.com/jesseduffield/lazygit/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

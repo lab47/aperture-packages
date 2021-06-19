@@ -55,6 +55,12 @@ import "pkg-config" as i0, "libx11" as i1, "xorgproto" as i2
 pkg(
   name: "libxfixes",
   version: "6.0.0",
+  description: "X.Org: Header files for the XFIXES extension",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

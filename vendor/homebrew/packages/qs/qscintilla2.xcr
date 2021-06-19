@@ -104,12 +104,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "expat" as i3, "flex" as i4, "gdbm" as i5, "gettext" as i6, "gperf" as i7, "help2man" as i8, "libffi" as i9, "libxml2" as i10, "m4" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "perl" as i15, "pkg-config" as i16, "pyqt-builder" as i17, "pyqt@5" as i18, "python@3.9" as i19, "qt@5" as i20, "readline" as i21, "sip" as i22, "sqlite" as i23, "unzip" as i24, "xz" as i25, "zip" as i26, "zlib" as i27
+import "pyqt-builder" as i0, "sip" as i1, "pyqt@5" as i2, "python@3.9" as i3, "qt@5" as i4
 
 pkg(
   name: "qscintilla2",
   version: "2.12.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+  description: "Port to Qt of the Scintilla editing component",
+  url: "https://www.riverbankcomputing.com/software/qscintilla/intro",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qscintilla2.rb"), formula)

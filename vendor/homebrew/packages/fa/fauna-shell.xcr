@@ -42,6 +42,12 @@ import "node" as i0
 pkg(
   name: "fauna-shell",
   version: "0.12.4",
+  description: "Interactive shell for FaunaDB",
+  url: "https://fauna.com/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

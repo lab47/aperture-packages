@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libcpuid",
   version: "0.5.1",
+  description: "Small C library for x86 CPU detection and feature extraction",
+  url: "https://github.com/anrieff/libcpuid",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

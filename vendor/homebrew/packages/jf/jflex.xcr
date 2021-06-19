@@ -36,6 +36,12 @@ import "openjdk" as i0
 pkg(
   name: "jflex",
   version: "1.8.2",
+  description: "Lexical analyzer generator for Java, written in Java",
+  url: "https://jflex.de/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

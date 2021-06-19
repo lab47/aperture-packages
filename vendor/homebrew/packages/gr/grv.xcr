@@ -59,6 +59,12 @@ import "cmake" as i0, "go" as i1, "pkg-config" as i2, "ncurses" as i3, "readline
 pkg(
   name: "grv",
   version: "0.3.2",
+  description: "Terminal interface for viewing git repositories",
+  url: "https://github.com/rgburke/grv",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

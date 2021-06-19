@@ -48,6 +48,12 @@ import "cmake" as i0
 pkg(
   name: "mkvalidator",
   version: "0.6.0",
+  description: "Tool to verify Matroska and WebM files for spec conformance",
+  url: "https://www.matroska.org/downloads/mkvalidator.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

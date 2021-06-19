@@ -95,6 +95,12 @@ import "mysql-client" as i0, "openssl@1.1" as i1, "perl" as i2
 pkg(
   name: "percona-toolkit",
   version: "3.3.1",
+  description: "Command-line tools for MySQL, MariaDB and system tasks",
+  url: "https://www.percona.com/software/percona-toolkit/",
+  metadata: %{
+    "license": "GPL-2.0-only or Artistic-1.0-Perl",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

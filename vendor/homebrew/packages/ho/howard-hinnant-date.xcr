@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "howard-hinnant-date",
   version: "3.0.1",
+  description: "C++ library for date and time operations based on <chrono>",
+  url: "https://github.com/HowardHinnant/date",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

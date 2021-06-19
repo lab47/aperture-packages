@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "findent",
   version: "3.1.7",
+  description: "Indent and beautify Fortran sources and generate dependency information",
+  url: "https://www.ratrabbit.nl/ratrabbit/findent/index.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fabric-completion",
   version: "1",
+  description: "Bash completion for Fabric",
+  url: "https://github.com/kbakulin/fabric-completion",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

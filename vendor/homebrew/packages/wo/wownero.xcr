@@ -100,6 +100,12 @@ import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "hidapi" as i3, "libsod
 pkg(
   name: "wownero",
   version: "0.9.3.3",
+  description: "Official wallet and node software for the Wownero cryptocurrency",
+  url: "https://wownero.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

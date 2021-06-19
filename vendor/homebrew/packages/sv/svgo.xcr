@@ -35,6 +35,12 @@ import "node" as i0
 pkg(
   name: "svgo",
   version: "2.3.0",
+  description: "Nodejs-based tool for optimizing SVG vector graphics files",
+  url: "https://github.com/svg/svgo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

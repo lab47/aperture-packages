@@ -51,6 +51,12 @@ import "dmd" as i0
 pkg(
   name: "dfix",
   version: "0.3.5",
+  description: "Auto-upgrade tool for D source code",
+  url: "https://github.com/dlang-community/dfix",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "readline" as i0
 pkg(
   name: "gqlplus",
   version: "1.16",
+  description: "Drop-in replacement for sqlplus, an Oracle SQL client",
+  url: "https://gqlplus.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

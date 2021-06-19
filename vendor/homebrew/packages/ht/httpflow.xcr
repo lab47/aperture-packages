@@ -36,6 +36,12 @@ import "pcre" as i0
 pkg(
   name: "httpflow",
   version: "0.0.9",
+  description: "Packet capture and analysis utility similar to tcpdump for HTTP",
+  url: "https://github.com/six-ddc/httpflow",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

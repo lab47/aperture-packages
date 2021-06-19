@@ -69,6 +69,12 @@ import "pkg-config" as i0
 pkg(
   name: "vstr",
   version: "1.0.15",
+  description: "C string library",
+  url: "http://www.and.org/vstr/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

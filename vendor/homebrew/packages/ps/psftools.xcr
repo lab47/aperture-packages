@@ -48,6 +48,12 @@ import "autoconf" as i0
 pkg(
   name: "psftools",
   version: "1.0.14",
+  description: "Tools for fixed-width bitmap fonts",
+  url: "https://www.seasip.info/Unix/PSF/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

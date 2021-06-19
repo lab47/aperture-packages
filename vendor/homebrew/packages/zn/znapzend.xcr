@@ -97,6 +97,12 @@ import "perl" as i0
 pkg(
   name: "znapzend",
   version: "0.20.0",
+  description: "ZFS backup with remote capabilities and mbuffer integration",
+  url: "https://www.znapzend.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

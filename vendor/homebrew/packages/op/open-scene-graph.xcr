@@ -94,6 +94,12 @@ import "cmake" as i0, "doxygen" as i1, "graphviz" as i2, "pkg-config" as i3, "fr
 pkg(
   name: "open-scene-graph",
   version: "3.6.5",
+  description: "3D graphics toolkit",
+  url: "https://github.com/openscenegraph/OpenSceneGraph",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

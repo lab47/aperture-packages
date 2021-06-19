@@ -77,6 +77,12 @@ import "boost" as i0, "cmake" as i1, "expat" as i2
 pkg(
   name: "libosmium",
   version: "2.17.0",
+  description: "Fast and flexible C++ library for working with OpenStreetMap data",
+  url: "https://osmcode.org/libosmium/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

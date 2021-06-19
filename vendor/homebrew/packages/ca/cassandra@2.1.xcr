@@ -145,6 +145,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cassandra@2.1",
   version: "2.1.21",
+  description: "Distributed key-value store",
+  url: "https://cassandra.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

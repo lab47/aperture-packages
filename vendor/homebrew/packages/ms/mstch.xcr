@@ -70,6 +70,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "mstch",
   version: "1.0.2",
+  description: "Complete implementation of {{mustache}} templates using modern C++",
+  url: "https://github.com/no1msd/mstch",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

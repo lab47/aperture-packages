@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "trec_eval",
   version: "9.0.8",
+  description: "Evaluation software used in the Text Retrieval Conference",
+  url: "https://trec.nist.gov/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

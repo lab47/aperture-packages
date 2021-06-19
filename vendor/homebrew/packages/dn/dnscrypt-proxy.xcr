@@ -104,6 +104,12 @@ import "go" as i0
 pkg(
   name: "dnscrypt-proxy",
   version: "2.0.45",
+  description: "Secure communications between a client and a DNS resolver",
+  url: "https://dnscrypt.info",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

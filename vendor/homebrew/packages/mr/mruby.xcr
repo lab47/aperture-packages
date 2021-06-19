@@ -50,6 +50,12 @@ import "bison" as i0, "ruby" as i1
 pkg(
   name: "mruby",
   version: "3.0.0",
+  description: "Lightweight implementation of the Ruby language",
+  url: "https://mruby.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

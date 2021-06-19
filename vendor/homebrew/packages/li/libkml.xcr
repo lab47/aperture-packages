@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libkml",
   version: "1.2.0",
+  description: "Library to parse, generate and operate on KML",
+  url: "https://code.google.com/archive/p/libkml/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

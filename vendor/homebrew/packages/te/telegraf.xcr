@@ -84,6 +84,12 @@ import "go" as i0
 pkg(
   name: "telegraf",
   version: "1.18.3",
+  description: "Server-level metric gathering agent for InfluxDB",
+  url: "https://www.influxdata.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

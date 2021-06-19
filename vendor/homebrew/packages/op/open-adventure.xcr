@@ -47,12 +47,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "boost" as i4, "bzip2" as i5, "docbook" as i6, "docbook-xsl" as i7, "expat" as i8, "gdbm" as i9, "icu4c" as i10, "libedit" as i11, "libffi" as i12, "libgcrypt" as i13, "libgpg-error" as i14, "libtool" as i15, "libxml2" as i16, "libxslt" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "source-highlight" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
+import "asciidoc" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libedit" as i4, "libffi" as i5, "libxml2" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "open-adventure",
   version: "1.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "Colossal Cave Adventure, the 1995 430-point version",
+  url: "http://www.catb.org/~esr/open-adventure/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-adventure.rb"), formula)

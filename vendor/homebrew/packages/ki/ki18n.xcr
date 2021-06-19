@@ -75,6 +75,12 @@ import "cmake" as i0, "doxygen" as i1, "extra-cmake-modules" as i2, "graphviz" a
 pkg(
   name: "ki18n",
   version: "5.83.0",
+  description: "KDE Gettext-based UI text internationalization",
+  url: "https://api.kde.org/frameworks/ki18n/html/index.html",
+  metadata: %{
+    "license": "BSD-3-Clause and LGPL-2.0-or-later and (LGPL-2.1-only or LGPL-3.0-only)",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

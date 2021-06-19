@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mint",
   version: "0.16.0",
+  description: "Dependency manager that installs and runs Swift command-line tool packages",
+  url: "https://github.com/yonaskolb/Mint",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

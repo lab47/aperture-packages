@@ -74,6 +74,12 @@ import "cmake" as i0, "ncurses" as i1
 pkg(
   name: "spigot",
   version: "20210527",
+  description: "Command-line streaming exact real calculator",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/spigot/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

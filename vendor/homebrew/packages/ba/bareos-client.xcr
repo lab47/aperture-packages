@@ -79,6 +79,12 @@ import "cmake" as i0, "gettext" as i1, "openssl@1.1" as i2, "readline" as i3
 pkg(
   name: "bareos-client",
   version: "19.2.9",
+  description: "Client for Bareos (Backup Archiving REcovery Open Sourced)",
+  url: "https://www.bareos.org/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "since",
   version: "1.1",
+  description: "Stateful tail: show changes to files since last check",
+  url: "http://welz.org.za/projects/since",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

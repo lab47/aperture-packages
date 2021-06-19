@@ -82,6 +82,12 @@ import "pkg-config" as i0, "libarchive" as i1
 pkg(
   name: "traildb",
   version: "0.6",
+  description: "Blazingly-fast database for log-structured data",
+  url: "http://traildb.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

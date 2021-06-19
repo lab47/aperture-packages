@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "exomizer",
   version: "3.0.2",
+  description: "6502 compressor with CBM PET 4032 support",
+  url: "https://bitbucket.org/magli143/exomizer/wiki/Home",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

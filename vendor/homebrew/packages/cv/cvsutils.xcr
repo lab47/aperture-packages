@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cvsutils",
   version: "0.2.6",
+  description: "CVS utilities for use in working directories",
+  url: "https://www.red-bean.com/cvsutils/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

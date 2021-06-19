@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "bower",
   version: "1.8.10",
+  description: "Package manager for the web",
+  url: "https://bower.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

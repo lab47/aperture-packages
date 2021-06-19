@@ -56,6 +56,12 @@ import "doxygen" as i0, "pkg-config" as i1
 pkg(
   name: "open-zwave",
   version: "1.6.1914",
+  description: "Library that interfaces with selected Z-Wave PC controllers",
+  url: "http://www.openzwave.com",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "rust" as i0
 pkg(
   name: "b3sum",
   version: "0.3.8",
+  description: "BLAKE3 cryptographic hash function",
+  url: "https://github.com/BLAKE3-team/BLAKE3",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

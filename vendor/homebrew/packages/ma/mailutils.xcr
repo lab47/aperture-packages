@@ -44,6 +44,12 @@ import "gnutls" as i0, "gsasl" as i1, "libtool" as i2, "readline" as i3
 pkg(
   name: "mailutils",
   version: "3.12",
+  description: "Swiss Army knife of email handling",
+  url: "https://mailutils.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

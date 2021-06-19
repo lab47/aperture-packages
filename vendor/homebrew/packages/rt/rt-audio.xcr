@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rt-audio",
   version: "5.1.0",
+  description: "API for realtime audio input/output",
+  url: "https://www.music.mcgill.ca/~gary/rtaudio/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

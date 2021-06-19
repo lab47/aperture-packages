@@ -67,6 +67,12 @@ import "openjdk@11" as i0
 pkg(
   name: "alluxio",
   version: "2.5.0-2",
+  description: "Open Source Memory Speed Virtual Distributed Storage",
+  url: "https://www.alluxio.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

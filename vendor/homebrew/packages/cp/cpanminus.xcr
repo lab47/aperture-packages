@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cpanminus",
   version: "1.9019",
+  description: "Get, unpack, build, and install modules from CPAN",
+  url: "https://github.com/miyagawa/cpanminus",
+  metadata: %{
+    "license": "GPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

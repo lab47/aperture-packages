@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "wolfssl" as i3
 pkg(
   name: "wolfmqtt",
   version: "1.8.0",
+  description: "Small, fast, portable MQTT client C implementation",
+  url: "https://github.com/wolfSSL/wolfMQTT",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

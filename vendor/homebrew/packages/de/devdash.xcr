@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "devdash",
   version: "0.5.0",
+  description: "Highly Configurable Terminal Dashboard for Developers",
+  url: "https://thedevdash.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

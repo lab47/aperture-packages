@@ -103,6 +103,12 @@ import "gradle" as i0, "protobuf" as i1, "rustup-init" as i2, "openjdk" as i3
 pkg(
   name: "signal-cli",
   version: "0.8.3",
+  description: "CLI and dbus interface for WhisperSystems/libsignal-service-java",
+  url: "https://github.com/AsamK/signal-cli",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

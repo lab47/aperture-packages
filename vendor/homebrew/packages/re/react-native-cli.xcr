@@ -40,6 +40,12 @@ import "node" as i0
 pkg(
   name: "react-native-cli",
   version: "2.0.1",
+  description: "Tools for creating native apps for Android and iOS",
+  url: "https://facebook.github.io/react-native/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

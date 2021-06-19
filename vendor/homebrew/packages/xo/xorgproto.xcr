@@ -46,6 +46,12 @@ import "pkg-config" as i0, "util-macros" as i1
 pkg(
   name: "xorgproto",
   version: "2021.4",
+  description: "X.Org: Protocol Headers",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libfabric",
   version: "1.12.1",
+  description: "OpenFabrics libfabric",
+  url: "https://ofiwg.github.io/libfabric/",
+  metadata: %{
+    "license": "BSD-2-Clause or GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

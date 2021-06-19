@@ -45,6 +45,12 @@ import "cabal-install" as i0, "ghc@8.6" as i1, "pkg-config" as i2, "nettle" as i
 pkg(
   name: "hopenpgp-tools",
   version: "0.23.6",
+  description: "Command-line tools for OpenPGP-related operations",
+  url: "https://hackage.haskell.org/package/hopenpgp-tools",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

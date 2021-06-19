@@ -113,6 +113,12 @@ import "cmake" as i0, "pkg-config" as i1, "openssl@1.1" as i2
 pkg(
   name: "libsignal-protocol-c",
   version: "2.3.3",
+  description: "Signal Protocol C Library",
+  url: "https://github.com/signalapp/libsignal-protocol-c",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "pkg-config" as i0, "raptor" as i1
 pkg(
   name: "rasqal",
   version: "0.9.33",
+  description: "RDF query library",
+  url: "http://librdf.org/rasqal/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

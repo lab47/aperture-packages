@@ -58,6 +58,12 @@ import "cmake" as i0
 pkg(
   name: "utf8cpp",
   version: "3.2.1",
+  description: "UTF-8 with C++ in a Portable Way",
+  url: "https://github.com/nemtrif/utfcpp",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

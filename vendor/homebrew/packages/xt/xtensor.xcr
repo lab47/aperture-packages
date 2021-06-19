@@ -63,6 +63,12 @@ import "cmake" as i0
 pkg(
   name: "xtensor",
   version: "0.23.10",
+  description: "Multi-dimensional arrays with broadcasting and lazy computing",
+  url: "https://xtensor.readthedocs.io/en/latest/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wbox",
   version: "5",
+  description: "HTTP testing tool and configuration-less HTTP server",
+  url: "http://hping.org/wbox/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

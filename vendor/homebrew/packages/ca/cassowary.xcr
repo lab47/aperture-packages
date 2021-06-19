@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "cassowary",
   version: "0.14.0",
+  description: "Modern cross-platform HTTP load-testing tool written in Go",
+  url: "https://github.com/rogerwelin/cassowary",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

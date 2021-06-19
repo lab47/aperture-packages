@@ -80,6 +80,12 @@ import "m4" as i0
 pkg(
   name: "gmp",
   version: "6.2.1",
+  description: "GNU multiple precision arithmetic library",
+  url: "https://gmplib.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later or GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

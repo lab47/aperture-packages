@@ -51,6 +51,12 @@ import "node" as i0
 pkg(
   name: "serverless",
   version: "2.46.0",
+  description: "Build applications with serverless architectures",
+  url: "https://www.serverless.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "ffuf",
   version: "1.3.1",
+  description: "Fast web fuzzer written in Go",
+  url: "https://github.com/ffuf/ffuf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

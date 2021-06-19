@@ -72,6 +72,12 @@ import "cabal-install" as i0, "ghc" as i1
 pkg(
   name: "ormolu",
   version: "0.1.4.1",
+  description: "Formatter for Haskell source code",
+  url: "https://github.com/tweag/ormolu",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

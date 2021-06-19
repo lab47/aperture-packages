@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "iniparser",
   version: "4.1",
+  description: "Library for parsing ini files",
+  url: "http://ndevilla.free.fr/iniparser/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

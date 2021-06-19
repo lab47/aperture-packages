@@ -53,6 +53,12 @@ import "boost" as i0, "gd" as i1
 pkg(
   name: "mkhexgrid",
   version: "0.1.1",
+  description: "Fully-configurable hex grid generator",
+  url: "http://www.nomic.net/~uckelman/mkhexgrid/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

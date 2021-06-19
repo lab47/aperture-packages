@@ -54,6 +54,12 @@ import "gettext" as i0
 pkg(
   name: "calcurse",
   version: "4.7.1",
+  description: "Text-based personal organizer",
+  url: "https://calcurse.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

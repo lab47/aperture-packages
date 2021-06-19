@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jslint4java",
   version: "2.0.5",
+  description: "Java wrapper for JavaScript Lint (jsl)",
+  url: "https://code.google.com/archive/p/jslint4java/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "openssl@1.1" as i0, "bzip2" as i1
 pkg(
   name: "dmg2img",
   version: "1.6.7",
+  description: "Utilities for converting macOS DMG images",
+  url: "http://vu1tur.eu.org/tools/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

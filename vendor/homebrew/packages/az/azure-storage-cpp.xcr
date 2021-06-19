@@ -65,6 +65,12 @@ import "cmake" as i0, "boost" as i1, "cpprestsdk" as i2, "gettext" as i3, "opens
 pkg(
   name: "azure-storage-cpp",
   version: "7.5.0",
+  description: "Microsoft Azure Storage Client Library for C++",
+  url: "https://azure.github.io/azure-storage-cpp",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

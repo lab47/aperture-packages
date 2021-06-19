@@ -58,6 +58,12 @@ import "pkg-config" as i0, "glib" as i1, "libfixbuf" as i2, "yaf" as i3, "libpca
 pkg(
   name: "silk",
   version: "3.19.1",
+  description: "Collection of traffic analysis tools",
+  url: "https://tools.netsa.cert.org/silk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

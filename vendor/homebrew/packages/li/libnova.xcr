@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libnova",
   version: "0.15.0",
+  description: "Celestial mechanics, astrometry and astrodynamics library",
+  url: "https://libnova.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

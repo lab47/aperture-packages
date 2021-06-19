@@ -36,6 +36,12 @@ import "rsync" as i0
 pkg(
   name: "rsnapshot",
   version: "1.4.4",
+  description: "File system snapshot utility (based on rsync)",
+  url: "https://www.rsnapshot.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

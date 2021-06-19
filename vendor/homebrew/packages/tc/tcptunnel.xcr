@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcptunnel",
   version: "0.8",
+  description: "TCP port forwarder",
+  url: "http://www.vakuumverpackt.de/tcptunnel/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

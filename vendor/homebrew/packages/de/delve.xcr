@@ -33,6 +33,12 @@ import "go" as i0
 pkg(
   name: "delve",
   version: "1.6.1",
+  description: "Debugger for the Go programming language",
+  url: "https://github.com/go-delve/delve",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

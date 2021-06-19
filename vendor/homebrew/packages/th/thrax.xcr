@@ -42,6 +42,12 @@ import "openfst" as i0
 pkg(
   name: "thrax",
   version: "1.3.5",
+  description: "Tools for compiling grammars into finite state transducers",
+  url: "http://www.openfst.org/twiki/bin/view/GRM/Thrax",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

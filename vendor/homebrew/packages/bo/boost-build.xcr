@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "boost-build",
   version: "1.76.0",
+  description: "C++ build system",
+  url: "https://www.boost.org/build/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lcdf-typetools",
   version: "2.108",
+  description: "Manipulate OpenType and multiple-master fonts",
+  url: "https://www.lcdf.org/type/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

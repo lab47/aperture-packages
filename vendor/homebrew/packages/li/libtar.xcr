@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libtar",
   version: "1.2.20",
+  description: "C library for manipulating POSIX tar files",
+  url: "https://repo.or.cz/libtar.git",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

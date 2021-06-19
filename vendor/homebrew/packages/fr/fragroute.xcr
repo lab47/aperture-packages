@@ -71,6 +71,12 @@ import "libdnet" as i0, "libevent" as i1, "libpcap" as i2
 pkg(
   name: "fragroute",
   version: "1.2",
+  description: "Intercepts, modifies and rewrites egress traffic for a specified host",
+  url: "https://www.monkey.org/~dugsong/fragroute/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

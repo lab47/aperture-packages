@@ -42,6 +42,12 @@ import "libpng" as i0
 pkg(
   name: "apng2gif",
   version: "1.8",
+  description: "Convert APNG animations into animated GIF format",
+  url: "https://apng2gif.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

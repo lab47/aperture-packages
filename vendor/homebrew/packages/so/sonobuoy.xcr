@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "sonobuoy",
   version: "0.51.0",
+  description: "Kubernetes component that generates reports on cluster conformance",
+  url: "https://github.com/vmware-tanzu/sonobuoy",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

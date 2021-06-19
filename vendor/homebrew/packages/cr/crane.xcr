@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "crane",
   version: "0.5.1",
+  description: "Tool for interacting with remote images and registries",
+  url: "https://github.com/google/go-containerregistry",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

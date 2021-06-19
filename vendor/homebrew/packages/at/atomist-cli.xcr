@@ -55,6 +55,12 @@ import "node" as i0
 pkg(
   name: "atomist-cli",
   version: "1.8.0",
+  description: "Unified command-line tool for interacting with Atomist services",
+  url: "https://github.com/atomist/cli#readme",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yadm",
   version: "3.1.0",
+  description: "Yet Another Dotfiles Manager",
+  url: "https://yadm.io/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

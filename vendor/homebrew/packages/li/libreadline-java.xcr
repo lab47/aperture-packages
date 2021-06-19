@@ -118,6 +118,12 @@ import "openjdk@8" as i0, "readline" as i1
 pkg(
   name: "libreadline-java",
   version: "0.8.0",
+  description: "Port of GNU readline for Java",
+  url: "https://java-readline.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

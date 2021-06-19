@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "szip",
   version: "2.1.1",
+  description: "Implementation of extended-Rice lossless compression algorithm",
+  url: "https://support.hdfgroup.org/HDF5/release/obtain5.html#extlibs",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

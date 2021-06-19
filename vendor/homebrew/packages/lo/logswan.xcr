@@ -41,6 +41,12 @@ import "cmake" as i0, "jansson" as i1, "libmaxminddb" as i2
 pkg(
   name: "logswan",
   version: "2.1.10",
+  description: "Fast Web log analyzer using probabilistic data structures",
+  url: "https://www.logswan.org",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

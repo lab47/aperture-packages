@@ -103,6 +103,12 @@ import "pkg-config" as i0, "json-c" as i1, "libiconv" as i2, "libtool" as i3, "o
 pkg(
   name: "clamav",
   version: "0.103.2",
+  description: "Anti-virus software",
+  url: "https://www.clamav.net/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

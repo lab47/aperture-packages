@@ -51,6 +51,12 @@ import "openjdk" as i0
 pkg(
   name: "jasmin",
   version: "2.4",
+  description: "Assembler for the Java Virtual Machine",
+  url: "https://jasmin.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

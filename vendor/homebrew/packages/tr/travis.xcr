@@ -192,6 +192,12 @@ import "pkg-config" as i0, "ruby" as i1, "libffi" as i2
 pkg(
   name: "travis",
   version: "1.10.0",
+  description: "Command-line client for Travis CI",
+  url: "https://github.com/travis-ci/travis.rb/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

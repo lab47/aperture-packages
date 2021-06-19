@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "eject",
   version: "0.1.27",
+  description: "Generate swift code from Interface Builder xibs",
+  url: "https://github.com/Rightpoint/Eject",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gaul",
   version: "0.1850-0",
+  description: "Genetic Algorithm Utility Library",
+  url: "https://gaul.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

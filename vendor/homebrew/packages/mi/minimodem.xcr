@@ -49,6 +49,12 @@ import "pkg-config" as i0, "fftw" as i1, "libsndfile" as i2, "pulseaudio" as i3
 pkg(
   name: "minimodem",
   version: "0.24",
+  description: "General-purpose software audio FSK modem",
+  url: "http://www.whence.com/minimodem/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "m-cli",
   version: "0.3.0",
+  description: "Swiss Army Knife for macOS",
+  url: "https://github.com/rgcr/m-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

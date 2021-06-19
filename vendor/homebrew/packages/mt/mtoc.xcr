@@ -61,6 +61,12 @@ import "llvm" as i0
 pkg(
   name: "mtoc",
   version: "949.0.1",
+  description: "Mach-O to PE/COFF binary converter",
+  url: "https://opensource.apple.com/source/cctools/cctools-949.0.1/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

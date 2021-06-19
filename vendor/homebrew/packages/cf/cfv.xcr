@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cfv",
   version: "1.18.3",
+  description: "Test and create various files (e.g., .sfv, .csv, .crc., .torrent)",
+  url: "https://cfv.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

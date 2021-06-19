@@ -106,6 +106,12 @@ import "pkg-config" as i0, "groff" as i1, "libpipeline" as i2, "zlib" as i3
 pkg(
   name: "man-db",
   version: "2.9.4",
+  description: "Unix documentation system",
+  url: "https://www.nongnu.org/man-db/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

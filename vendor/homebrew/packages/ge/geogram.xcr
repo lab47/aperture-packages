@@ -57,6 +57,12 @@ import "cmake" as i0, "glfw" as i1
 pkg(
   name: "geogram",
   version: "1.7.6",
+  description: "Programming library of geometric algorithms",
+  url: "http://alice.loria.fr/software/geogram/doc/html/index.html",
+  metadata: %{
+    "license": "BSD-3-Clause and Public Domain and LGPL-3.0-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

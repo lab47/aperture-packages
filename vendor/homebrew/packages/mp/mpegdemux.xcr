@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpegdemux",
   version: "0.1.4",
+  description: "MPEG1/2 system stream demultiplexer",
+  url: "http://www.hampa.ch/mpegdemux/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

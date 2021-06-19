@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "alac",
   version: "0.2.0",
+  description: "Basic decoder for Apple Lossless Audio Codec files (ALAC)",
+  url: "https://web.archive.org/web/20150319040222/craz.net/programs/itunes/alac.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

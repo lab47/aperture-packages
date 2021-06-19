@@ -101,6 +101,12 @@ import "boost" as i0, "cmake" as i1, "icu4c" as i2, "libpq" as i3, "mysql" as i4
 pkg(
   name: "manticoresearch",
   version: "3.6.0",
+  description: "Open source text search engine",
+  url: "https://www.manticoresearch.com",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

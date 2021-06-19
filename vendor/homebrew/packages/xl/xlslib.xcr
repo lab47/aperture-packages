@@ -38,6 +38,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "xlslib",
   version: "2.5.0",
+  description: "C++/C library to construct Excel .xls files in code",
+  url: "https://sourceforge.net/projects/xlslib",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

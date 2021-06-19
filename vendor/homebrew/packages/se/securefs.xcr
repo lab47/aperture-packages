@@ -44,6 +44,12 @@ import "cmake" as i0
 pkg(
   name: "securefs",
   version: "0.11.1",
+  description: "Filesystem with transparent authenticated encryption",
+  url: "https://github.com/netheril96/securefs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

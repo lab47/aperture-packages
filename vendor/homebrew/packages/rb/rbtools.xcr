@@ -59,6 +59,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "rbtools",
   version: "2.0",
+  description: "CLI and API for working with code and document reviews on Review Board",
+  url: "https://www.reviewboard.org/downloads/rbtools/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

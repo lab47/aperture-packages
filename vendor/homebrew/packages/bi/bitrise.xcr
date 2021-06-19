@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "bitrise",
   version: "1.47.0",
+  description: "Command-line automation tool",
+  url: "https://github.com/bitrise-io/bitrise",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "openjdk@8" as i0
 pkg(
   name: "apache-drill",
   version: "1.18.0",
+  description: "Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud Storage",
+  url: "https://drill.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

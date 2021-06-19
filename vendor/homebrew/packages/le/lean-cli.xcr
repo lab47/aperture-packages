@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "lean-cli",
   version: "0.25.0",
+  description: "Command-line tool to develop and manage LeanCloud apps",
+  url: "https://github.com/leancloud/lean-cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

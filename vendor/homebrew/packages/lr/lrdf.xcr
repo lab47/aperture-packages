@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "lrdf",
   version: "0.6.1",
+  description: "RDF library for accessing plugin metadata in the LADSPA plugin system",
+  url: "https://github.com/swh/LRDF",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

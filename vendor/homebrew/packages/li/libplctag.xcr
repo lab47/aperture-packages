@@ -56,6 +56,12 @@ import "cmake" as i0
 pkg(
   name: "libplctag",
   version: "2.3.6",
+  description: "Portable and simple API for accessing AB PLC data over Ethernet",
+  url: "https://github.com/libplctag/libplctag",
+  metadata: %{
+    "license": "LGPL-2.0-or-later or MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

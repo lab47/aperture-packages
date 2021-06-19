@@ -63,6 +63,12 @@ import "go" as i0
 pkg(
   name: "packer",
   version: "1.7.2",
+  description: "Tool for creating identical machine images for multiple platforms",
+  url: "https://packer.io",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "libpng" as i0
 pkg(
   name: "s-lang",
   version: "2.3.2",
+  description: "Library for creating multi-platform software",
+  url: "https://www.jedsoft.org/slang/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

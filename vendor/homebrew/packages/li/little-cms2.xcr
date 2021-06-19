@@ -51,6 +51,12 @@ import "jpeg" as i0, "libtiff" as i1
 pkg(
   name: "little-cms2",
   version: "2.12",
+  description: "Color management engine supporting ICC profiles",
+  url: "https://www.littlecms.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

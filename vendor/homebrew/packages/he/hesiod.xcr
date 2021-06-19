@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "libidn" as i3
 pkg(
   name: "hesiod",
   version: "3.2.1",
+  description: "Library for the simple string lookup service built on top of DNS",
+  url: "https://github.com/achernya/hesiod",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

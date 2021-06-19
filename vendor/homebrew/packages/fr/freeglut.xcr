@@ -62,6 +62,12 @@ import "cmake" as i0, "libx11" as i1, "libxi" as i2, "libxrandr" as i3, "libxxf8
 pkg(
   name: "freeglut",
   version: "3.2.1",
+  description: "Open-source alternative to the OpenGL Utility Toolkit (GLUT) library",
+  url: "https://freeglut.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

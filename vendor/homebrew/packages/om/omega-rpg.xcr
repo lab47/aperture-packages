@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "omega-rpg",
   version: "0.80.2",
+  description: "Classic Roguelike game",
+  url: "http://www.alcyone.com/max/projects/omega/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

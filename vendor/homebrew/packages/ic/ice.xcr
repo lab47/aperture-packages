@@ -97,6 +97,12 @@ import "lmdb" as i0, "mcpp" as i1
 pkg(
   name: "ice",
   version: "3.7.5",
+  description: "Comprehensive RPC framework",
+  url: "https://zeroc.com",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

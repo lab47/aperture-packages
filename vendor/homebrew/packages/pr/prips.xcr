@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "prips",
   version: "1.1.1",
+  description: "Print the IP addresses in a given range",
+  url: "https://devel.ringlet.net/sysutils/prips/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

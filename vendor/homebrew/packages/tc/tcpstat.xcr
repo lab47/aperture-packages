@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcpstat",
   version: "0.1",
+  description: "Active TCP connections monitoring tool",
+  url: "https://github.com/jtt/tcpstat",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

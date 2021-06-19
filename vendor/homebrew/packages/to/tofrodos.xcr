@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tofrodos",
   version: "1.7.13",
+  description: "Converts DOS <-> UNIX text files, alias tofromdos",
+  url: "https://www.thefreecountry.com/tofrodos/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "pkg-config" as i0, "flac" as i1, "libmodplug" as i2, "libvorbis" as i3, 
 pkg(
   name: "sdl2_mixer",
   version: "2.0.4",
+  description: "Sample multi-channel audio mixer library",
+  url: "https://www.libsdl.org/projects/SDL_mixer/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

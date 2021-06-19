@@ -40,6 +40,12 @@ import "node" as i0
 pkg(
   name: "autorest",
   version: "3.2.3",
+  description: "Swagger (OpenAPI) Specification code generator",
+  url: "https://github.com/Azure/autorest",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

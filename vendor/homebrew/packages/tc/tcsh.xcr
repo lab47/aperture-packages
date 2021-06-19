@@ -49,6 +49,12 @@ import "ncurses" as i0
 pkg(
   name: "tcsh",
   version: "6.22.04",
+  description: "Enhanced, fully compatible version of the Berkeley C shell",
+  url: "https://www.tcsh.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

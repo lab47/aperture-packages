@@ -55,6 +55,12 @@ import "ant" as i0, "libreadline-java" as i1, "openjdk@8" as i2
 pkg(
   name: "henplus",
   version: "0.9.8",
+  description: "SQL shell that can handle multiple sessions in parallel",
+  url: "https://github.com/neurolabs/henplus",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

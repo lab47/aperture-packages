@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "visionmedia-watch",
   version: "0.3.1",
+  description: "Periodically executes the given command",
+  url: "https://github.com/visionmedia/watch",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

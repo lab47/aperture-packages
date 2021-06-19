@@ -48,6 +48,12 @@ import "pkg-config" as i0, "gettext" as i1, "gtk+" as i2
 pkg(
   name: "gtk-chtheme",
   version: "0.3.1",
+  description: "GTK+ 2.0 theme changer GUI",
+  url: "http://plasmasturm.org/code/gtk-chtheme/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

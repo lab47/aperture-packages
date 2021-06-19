@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "microplane",
   version: "0.0.32",
+  description: "CLI tool to make git changes across many repos",
+  url: "https://github.com/Clever/microplane",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

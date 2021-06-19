@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "objc-run",
   version: "1.4",
+  description: "Use Objective-C files for shell script-like tasks",
+  url: "https://github.com/iljaiwas/objc-run",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

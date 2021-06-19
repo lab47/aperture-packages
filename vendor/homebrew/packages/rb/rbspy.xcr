@@ -55,6 +55,12 @@ import "rust" as i0
 pkg(
   name: "rbspy",
   version: "0.6.0",
+  description: "Sampling profiler for Ruby",
+  url: "https://rbspy.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

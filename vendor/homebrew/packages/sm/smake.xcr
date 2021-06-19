@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "smake",
   version: "1.2.5",
+  description: "Portable make program with automake features",
+  url: "https://s-make.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

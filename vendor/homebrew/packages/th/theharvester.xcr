@@ -225,12 +225,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libtool" as i7, "libyaml" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "perl" as i13, "pkg-config" as i14, "python@3.7" as i15, "python@3.8" as i16, "python@3.9" as i17, "readline" as i18, "six" as i19, "sqlite" as i20, "tcl-tk" as i21, "unzip" as i22, "xz" as i23, "zip" as i24, "zlib" as i25
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libyaml" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "six" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "theharvester",
   version: "3.2.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  description: "Gather materials from public sources (for pen testers)",
+  url: "http://www.edge-security.com/theharvester.php",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "theharvester.rb"), formula)

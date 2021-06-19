@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gpcslots2",
   version: "0.4.5b",
+  description: "Casino text-console game",
+  url: "https://sourceforge.net/projects/gpcslots2/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

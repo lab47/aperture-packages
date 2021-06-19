@@ -39,6 +39,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "leptonica" as i3
 pkg(
   name: "jbig2enc",
   version: "0.29",
+  description: "JBIG2 encoder (for monochrome documents)",
+  url: "https://github.com/agl/jbig2enc",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

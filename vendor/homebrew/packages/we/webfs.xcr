@@ -48,6 +48,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "webfs",
   version: "1.21",
+  description: "HTTP server for purely static content",
+  url: "https://linux.bytesex.org/misc/webfs.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

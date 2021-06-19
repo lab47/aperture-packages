@@ -54,6 +54,12 @@ import "cmake" as i0, "ispc" as i1, "tbb" as i2
 pkg(
   name: "open-image-denoise",
   version: "1.4.0",
+  description: "High-performance denoising library for ray tracing",
+  url: "https://openimagedenoise.github.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

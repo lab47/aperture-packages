@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wrk-trello",
   version: "1.0.1",
+  description: "Command-line interface to Trello",
+  url: "https://github.com/blangel/wrk",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

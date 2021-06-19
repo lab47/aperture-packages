@@ -42,6 +42,12 @@ import "cmake" as i0
 pkg(
   name: "geographiclib",
   version: "1.51",
+  description: "C++ geography library",
+  url: "https://geographiclib.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

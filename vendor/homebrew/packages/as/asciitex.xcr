@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "asciitex",
   version: "0.21",
+  description: "Generate ASCII-art representations of mathematical equations",
+  url: "https://asciitex.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

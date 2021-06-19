@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp3cat",
   version: "0.5",
+  description: "Reads and writes mp3 files",
+  url: "https://tomclegg.ca/mp3cat",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

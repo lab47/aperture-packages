@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "genact",
   version: "0.11.0",
+  description: "Nonsense activity generator",
+  url: "https://github.com/svenstaro/genact",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

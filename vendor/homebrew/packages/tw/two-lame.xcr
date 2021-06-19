@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "two-lame",
   version: "0.4.0",
+  description: "Optimized MPEG Audio Layer 2 (MP2) encoder",
+  url: "https://www.twolame.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "tnef",
   version: "1.4.18",
+  description: "Microsoft MS-TNEF attachment unpacker",
+  url: "https://github.com/verdammelt/tnef",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

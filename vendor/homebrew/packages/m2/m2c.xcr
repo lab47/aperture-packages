@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "m2c",
   version: "0.7",
+  description: "Modula-2 to C compiler",
+  url: "https://savannah.nongnu.org/projects/m2c/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

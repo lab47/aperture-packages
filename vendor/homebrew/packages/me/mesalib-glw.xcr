@@ -44,6 +44,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxt" as i2, "mesa" as i3
 pkg(
   name: "mesalib-glw",
   version: "8.0.0",
+  description: "Open-source implementation of the OpenGL specification",
+  url: "https://www.mesa3d.org",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "cmake" as i0
 pkg(
   name: "gflags",
   version: "2.2.2",
+  description: "Library for processing command-line flags",
+  url: "https://gflags.github.io/gflags/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

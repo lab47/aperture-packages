@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jython",
   version: "2.7.2",
+  description: "Python implementation written in Java (successor to JPython)",
+  url: "https://www.jython.org/",
+  metadata: %{
+    "license": "PSF-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

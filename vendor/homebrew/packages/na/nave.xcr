@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nave",
   version: "3.2.2",
+  description: "Virtual environments for Node.js",
+  url: "https://github.com/isaacs/nave",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

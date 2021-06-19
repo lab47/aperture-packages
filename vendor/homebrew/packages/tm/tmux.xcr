@@ -84,6 +84,12 @@ import "pkg-config" as i0, "libevent" as i1, "ncurses" as i2, "utf8proc" as i3
 pkg(
   name: "tmux",
   version: "3.2a",
+  description: "Terminal multiplexer",
+  url: "https://tmux.github.io/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

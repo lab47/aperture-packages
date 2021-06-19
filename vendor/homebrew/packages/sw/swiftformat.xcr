@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swiftformat",
   version: "0.48.4",
+  description: "Formatting tool for reformatting Swift code",
+  url: "https://github.com/nicklockwood/SwiftFormat",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

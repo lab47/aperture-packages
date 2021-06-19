@@ -57,6 +57,12 @@ import "rust" as i0
 pkg(
   name: "cloudformation-guard",
   version: "2.0.2",
+  description: "Checks CloudFormation templates for compliance using a declarative syntax",
+  url: "https://github.com/aws-cloudformation/cloudformation-guard",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

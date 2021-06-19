@@ -73,6 +73,12 @@ import "openjdk@8" as i0
 pkg(
   name: "cassandra-reaper",
   version: "2.2.5",
+  description: "Management interface for Cassandra",
+  url: "https://cassandra-reaper.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

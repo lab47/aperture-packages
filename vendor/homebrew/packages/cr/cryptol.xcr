@@ -45,6 +45,12 @@ import "cabal-install" as i0, "ghc" as i1, "z3" as i2, "ncurses" as i3, "zlib" a
 pkg(
   name: "cryptol",
   version: "2.11.0",
+  description: "Domain-specific language for specifying cryptographic algorithms",
+  url: "https://www.cryptol.net/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

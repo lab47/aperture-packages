@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aida-header",
   version: "3.2.1",
+  description: "Abstract Interfaces for Data Analysis define interfaces for physics analysis",
+  url: "https://aida.freehep.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

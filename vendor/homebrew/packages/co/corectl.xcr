@@ -74,6 +74,12 @@ import "aspcud" as i0, "go" as i1, "ocaml" as i2, "opam" as i3, "libev" as i4
 pkg(
   name: "corectl",
   version: "0.7.18",
+  description: "CoreOS over macOS made very simple",
+  url: "https://github.com/TheNewNormal/corectl",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

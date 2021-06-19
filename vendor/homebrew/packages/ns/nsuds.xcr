@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nsuds",
   version: "0.7B",
+  description: "Ncurses Sudoku system",
+  url: "https://nsuds.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

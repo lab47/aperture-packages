@@ -113,6 +113,12 @@ import "cmake" as i0, "fftw" as i1, "gdcm" as i2, "hdf5" as i3, "jpeg" as i4, "l
 pkg(
   name: "itk",
   version: "5.2.0",
+  description: "Insight Toolkit is a toolkit for performing registration and segmentation",
+  url: "https://itk.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

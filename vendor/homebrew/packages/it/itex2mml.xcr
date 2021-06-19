@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "itex2mml",
   version: "1.6.0",
+  description: "Text filter to convert itex equations to MathML",
+  url: "https://golem.ph.utexas.edu/~distler/blog/itex2MML.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

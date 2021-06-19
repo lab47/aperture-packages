@@ -61,12 +61,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "isl" as i10, "libffi" as i11, "libmpc" as i12, "libnetworkit" as i13, "libomp" as i14, "libtool" as i15, "libyaml" as i16, "m4" as i17, "mpdecimal" as i18, "mpfr" as i19, "ncurses" as i20, "numpy" as i21, "openblas" as i22, "openssl@1.1" as i23, "pcre" as i24, "perl" as i25, "pkg-config" as i26, "pybind11" as i27, "python@3.9" as i28, "readline" as i29, "ruby" as i30, "scipy" as i31, "sphinx-doc" as i32, "sqlite" as i33, "swig" as i34, "tlx" as i35, "unzip" as i36, "xz" as i37, "zip" as i38, "zlib" as i39, "zstd" as i40
+import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "gdbm" as i4, "libffi" as i5, "libnetworkit" as i6, "mpdecimal" as i7, "ncurses" as i8, "numpy" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "scipy" as i14, "sqlite" as i15, "tlx" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "networkit",
   version: "8.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40],
+  description: "Performance toolkit for large-scale network analysis",
+  url: "https://networkit.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "networkit.rb"), formula)

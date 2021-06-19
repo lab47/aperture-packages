@@ -153,12 +153,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "brotli" as i2, "bzip2" as i3, "c-ares" as i4, "cmake" as i5, "curl" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "jemalloc" as i10, "krb5" as i11, "libev" as i12, "libffi" as i13, "libidn2" as i14, "libssh2" as i15, "libunistring" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "ncurses" as i20, "nghttp2" as i21, "ninja" as i22, "openldap" as i23, "openssl@1.1" as i24, "pcre" as i25, "perl" as i26, "pkg-config" as i27, "python@3.9" as i28, "readline" as i29, "rtmpdump" as i30, "sphinx-doc" as i31, "sqlite" as i32, "unzip" as i33, "xz" as i34, "yajl" as i35, "zip" as i36, "zlib" as i37, "zstd" as i38
+import "pkg-config" as i0, "openssl@1.1" as i1, "pcre" as i2, "python@3.9" as i3, "yajl" as i4, "curl" as i5, "libxml2" as i6, "openldap" as i7, "perl" as i8
 
 pkg(
   name: "uwsgi",
   version: "2.0.19.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
+  description: "Full stack for building hosting services",
+  url: "https://uwsgi-docs.readthedocs.io/en/latest/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "uwsgi.rb"), formula)

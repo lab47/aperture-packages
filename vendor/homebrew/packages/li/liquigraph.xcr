@@ -59,6 +59,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "liquigraph",
   version: "4.0.2",
+  description: "Migration runner for Neo4j",
+  url: "https://www.liquigraph.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

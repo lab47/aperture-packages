@@ -50,6 +50,12 @@ import "cmake" as i0, "pkg-config" as i1, "assimp" as i2, "freetype" as i3, "gle
 pkg(
   name: "pioneer",
   version: "20210203",
+  description: "Game of lonely space adventure",
+  url: "https://pioneerspacesim.net/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

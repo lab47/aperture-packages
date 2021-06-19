@@ -56,6 +56,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "libsamplerate" as i3, 
 pkg(
   name: "rubberband",
   version: "1.9.2",
+  description: "Audio time stretcher tool and library",
+  url: "https://breakfastquay.com/rubberband/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

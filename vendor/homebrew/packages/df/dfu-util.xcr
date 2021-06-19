@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libusb" as i1
 pkg(
   name: "dfu-util",
   version: "0.10",
+  description: "USB programmer",
+  url: "https://dfu-util.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -112,6 +112,12 @@ import "openjdk" as i0
 pkg(
   name: "akka",
   version: "2.4.20",
+  description: "Toolkit for building concurrent, distributed, and fault tolerant apps",
+  url: "https://github.com/akka/akka",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gerrit-tools",
   version: "1.0.0",
+  description: "Tools to ease Gerrit code review",
+  url: "https://github.com/indirect/gerrit-tools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

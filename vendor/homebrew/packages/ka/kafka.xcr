@@ -132,6 +132,12 @@ import "openjdk" as i0, "zookeeper" as i1
 pkg(
   name: "kafka",
   version: "2.8.0",
+  description: "Open-source distributed event streaming platform",
+  url: "https://kafka.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

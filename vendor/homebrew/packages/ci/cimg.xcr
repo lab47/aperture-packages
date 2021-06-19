@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cimg",
   version: "2.9.7",
+  description: "C++ toolkit for image processing",
+  url: "https://cimg.eu/",
+  metadata: %{
+    "license": "CECILL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

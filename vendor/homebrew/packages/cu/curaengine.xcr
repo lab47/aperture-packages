@@ -78,6 +78,12 @@ import "cmake" as i0
 pkg(
   name: "curaengine",
   version: "4.9.1",
+  description: "C++ 3D printing GCode generator",
+  url: "https://github.com/Ultimaker/CuraEngine",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

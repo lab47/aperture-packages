@@ -89,6 +89,12 @@ import "jpeg" as i0, "libpng" as i1
 pkg(
   name: "fltk",
   version: "1.3.6",
+  description: "Cross-platform C++ GUI toolkit",
+  url: "https://www.fltk.org/",
+  metadata: %{
+    "license": "LGPL-2.0-only with FLTK-exception",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

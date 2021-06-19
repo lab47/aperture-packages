@@ -50,6 +50,12 @@ import "asciidoc" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, "x
 pkg(
   name: "simple-obfs",
   version: "0.0.5",
+  description: "Simple obfusacting plugin of shadowsocks-libev",
+  url: "https://github.com/shadowsocks/simple-obfs",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "httrack",
   version: "3.49.2",
+  description: "Website copier/offline browser",
+  url: "https://www.httrack.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

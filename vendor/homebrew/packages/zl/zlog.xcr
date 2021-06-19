@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zlog",
   version: "1.2.15",
+  description: "High-performance C logging library",
+  url: "https://github.com/HardySimpson/zlog",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

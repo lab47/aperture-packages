@@ -51,12 +51,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libb2" as i4, "libffi" as i5, "lz4" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xxhash" as i16, "xz" as i17, "zip" as i18, "zlib" as i19, "zstd" as i20
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libb2" as i3, "libffi" as i4, "lz4" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xxhash" as i14, "xz" as i15, "zip" as i16, "zlib" as i17, "zstd" as i18
 
 pkg(
   name: "borgbackup",
   version: "1.1.16",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "Deduplicating archiver with compression and authenticated encryption",
+  url: "https://borgbackup.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "borgbackup.rb"), formula)

@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "goreleaser",
   version: "0.169.0",
+  description: "Deliver Go binaries as fast and easily as possible",
+  url: "https://goreleaser.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

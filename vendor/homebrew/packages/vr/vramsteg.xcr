@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "vramsteg",
   version: "1.1.0",
+  description: "Add progress bars to command-line applications",
+  url: "https://gothenburgbitfactory.org/projects/vramsteg.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

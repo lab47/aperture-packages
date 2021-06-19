@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ffind",
   version: "1.0.1",
+  description: "Friendlier find",
+  url: "https://github.com/sjl/friendly-find",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

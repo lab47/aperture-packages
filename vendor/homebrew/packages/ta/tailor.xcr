@@ -32,6 +32,12 @@ import "openjdk" as i0
 pkg(
   name: "tailor",
   version: "0.12.0",
+  description: "Cross-platform static analyzer and linter for Swift",
+  url: "https://sleekbyte.github.io/tailor/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

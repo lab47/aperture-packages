@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "i2util",
   version: "1.2",
+  description: "Internet2 utility tools",
+  url: "https://software.internet2.edu/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

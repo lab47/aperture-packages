@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-hooks",
   version: "1.00.0",
+  description: "Manage project, user, and global Git hooks",
+  url: "https://github.com/icefox/git-hooks",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

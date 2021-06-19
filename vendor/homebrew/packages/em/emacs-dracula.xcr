@@ -27,6 +27,12 @@ import "emacs" as i0
 pkg(
   name: "emacs-dracula",
   version: "1.7.0",
+  description: "Dark color theme available for a number of editors",
+  url: "https://github.com/dracula/emacs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

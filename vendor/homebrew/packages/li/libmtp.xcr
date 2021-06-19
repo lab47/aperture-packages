@@ -39,6 +39,12 @@ import "pkg-config" as i0, "libusb-compat" as i1
 pkg(
   name: "libmtp",
   version: "1.1.18",
+  description: "Implementation of Microsoft's Media Transfer Protocol (MTP)",
+  url: "https://libmtp.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

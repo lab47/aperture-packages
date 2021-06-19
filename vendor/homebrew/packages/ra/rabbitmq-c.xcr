@@ -47,6 +47,12 @@ import "cmake" as i0, "pkg-config" as i1, "openssl@1.1" as i2, "popt" as i3
 pkg(
   name: "rabbitmq-c",
   version: "0.11.0",
+  description: "C AMQP client library for RabbitMQ",
+  url: "https://github.com/alanxz/rabbitmq-c",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

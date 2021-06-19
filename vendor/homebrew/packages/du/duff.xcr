@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "duff",
   version: "0.5.2",
+  description: "Quickly find duplicates in a set of files from the command-line",
+  url: "https://duff.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

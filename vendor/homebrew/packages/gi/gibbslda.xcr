@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gibbslda",
   version: "0.2",
+  description: "Library wrapping imlib2's context API",
+  url: "https://gibbslda.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

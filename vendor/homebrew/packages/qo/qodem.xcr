@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "qodem",
   version: "1.0.1",
+  description: "Terminal emulator and BBS client",
+  url: "https://qodem.sourceforge.io/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

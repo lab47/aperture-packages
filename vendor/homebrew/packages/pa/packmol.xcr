@@ -46,6 +46,12 @@ import "gcc" as i0
 pkg(
   name: "packmol",
   version: "20.010",
+  description: "Packing optimization for molecular dynamics simulations",
+  url: "https://www.ime.unicamp.br/~martinez/packmol/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

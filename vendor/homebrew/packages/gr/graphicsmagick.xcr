@@ -67,6 +67,12 @@ import "pkg-config" as i0, "freetype" as i1, "jasper" as i2, "jpeg" as i3, "libp
 pkg(
   name: "graphicsmagick",
   version: "1.3.36",
+  description: "Image processing tools collection",
+  url: "http://www.graphicsmagick.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

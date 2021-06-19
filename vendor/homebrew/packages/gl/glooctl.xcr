@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "glooctl",
   version: "1.7.11",
+  description: "Envoy-Powered API Gateway",
+  url: "https://docs.solo.io/gloo/latest/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

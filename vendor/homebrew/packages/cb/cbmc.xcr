@@ -54,6 +54,12 @@ import "cmake" as i0, "maven" as i1, "openjdk" as i2
 pkg(
   name: "cbmc",
   version: "5.32.1",
+  description: "C Bounded Model Checker",
+  url: "https://www.cprover.org/cbmc/",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

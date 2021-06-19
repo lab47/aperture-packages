@@ -59,12 +59,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
+import "python@3.9" as i0
 
 pkg(
   name: "ccm",
   version: "3.1.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  description: "Create and destroy an Apache Cassandra cluster on localhost",
+  url: "https://github.com/pcmanus/ccm",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ccm.rb"), formula)

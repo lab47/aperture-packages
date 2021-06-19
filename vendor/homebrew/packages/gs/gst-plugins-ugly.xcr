@@ -64,6 +64,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "flac" as i3, "gettext"
 pkg(
   name: "gst-plugins-ugly",
   version: "1.18.4",
+  description: "Library for constructing graphs of media-handling components",
+  url: "https://gstreamer.freedesktop.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

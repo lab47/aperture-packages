@@ -86,6 +86,12 @@ import "homebrew-install" as hi
 pkg(
   name: "expat",
   version: "2.4.1",
+  description: "XML 1.0 parser",
+  url: "https://libexpat.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

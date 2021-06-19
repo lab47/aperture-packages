@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "algernon",
   version: "1.12.12",
+  description: "Pure Go web server with Lua, Markdown, HTTP/2 and template support",
+  url: "https://algernon.roboticoverlords.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

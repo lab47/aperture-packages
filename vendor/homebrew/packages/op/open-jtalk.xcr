@@ -68,6 +68,12 @@ import "homebrew-install" as hi
 pkg(
   name: "open-jtalk",
   version: "1.11",
+  description: "Japanese text-to-speech system",
+  url: "https://open-jtalk.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

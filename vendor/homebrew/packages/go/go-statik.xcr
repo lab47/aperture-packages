@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "go-statik",
   version: "0.1.7",
+  description: "Embed files into a Go executable",
+  url: "https://github.com/rakyll/statik",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

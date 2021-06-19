@@ -44,6 +44,12 @@ import "jansson" as i0
 pkg(
   name: "jshon",
   version: "20131105",
+  description: "Parse, read, and create JSON from the shell",
+  url: "http://kmkeen.com/jshon/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

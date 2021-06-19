@@ -145,6 +145,12 @@ import "bazaar" as i0, "go" as i1, "pkg-config" as i2, "protobuf" as i3, "rust" 
 pkg(
   name: "influxdb",
   version: "2.0.7",
+  description: "Time series, events, and metrics database",
+  url: "https://influxdata.com/time-series-platform/influxdb/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

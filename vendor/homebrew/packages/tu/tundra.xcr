@@ -93,6 +93,12 @@ import "googletest" as i0
 pkg(
   name: "tundra",
   version: "2.15",
+  description: "Code build system that tries to be fast for incremental builds",
+  url: "https://github.com/deplinenoise/tundra",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

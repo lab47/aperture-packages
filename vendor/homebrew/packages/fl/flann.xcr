@@ -53,6 +53,12 @@ import "cmake" as i0, "hdf5" as i1
 pkg(
   name: "flann",
   version: "1.9.1",
+  description: "Fast Library for Approximate Nearest Neighbors",
+  url: "https://github.com/flann-lib/flann",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

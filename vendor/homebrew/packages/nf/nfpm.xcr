@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "nfpm",
   version: "2.5.1",
+  description: "Simple deb and rpm packager",
+  url: "https://nfpm.goreleaser.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

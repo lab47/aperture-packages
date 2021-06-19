@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "chezmoi",
   version: "2.0.13",
+  description: "Manage your dotfiles across multiple diverse machines, securely",
+  url: "https://chezmoi.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

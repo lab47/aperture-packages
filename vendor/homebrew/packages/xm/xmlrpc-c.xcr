@@ -42,6 +42,12 @@ import "curl" as i0, "libxml2" as i1
 pkg(
   name: "xmlrpc-c",
   version: "1.51.07",
+  description: "Lightweight RPC library (based on XML and HTTP)",
+  url: "https://xmlrpc-c.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

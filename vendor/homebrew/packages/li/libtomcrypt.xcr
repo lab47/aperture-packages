@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libtomcrypt",
   version: "1.18.2",
+  description: "Comprehensive, modular and portable cryptographic toolkit",
+  url: "https://www.libtom.net/",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

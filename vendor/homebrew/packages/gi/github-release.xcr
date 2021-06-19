@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "github-release",
   version: "0.10.0",
+  description: "Create and edit releases on Github (and upload artifacts)",
+  url: "https://github.com/github-release/github-release",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

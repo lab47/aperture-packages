@@ -64,6 +64,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "gitui",
   version: "0.16.1",
+  description: "Blazing fast terminal-ui for git written in rust",
+  url: "https://github.com/extrawurst/gitui",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

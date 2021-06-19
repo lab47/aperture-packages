@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cdpr",
   version: "2.4",
+  description: "Cisco Discovery Protocol Reporter",
+  url: "http://www.monkeymental.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

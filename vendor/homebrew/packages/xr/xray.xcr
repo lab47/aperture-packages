@@ -109,6 +109,12 @@ import "go" as i0
 pkg(
   name: "xray",
   version: "1.4.2",
+  description: "Platform for building proxies to bypass network restrictions",
+  url: "https://xtls.github.io/",
+  metadata: %{
+    "license": "MPL-2.0 and CC-BY-SA-4.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

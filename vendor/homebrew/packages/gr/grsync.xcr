@@ -43,6 +43,12 @@ import "intltool" as i0, "pkg-config" as i1, "gettext" as i2, "gtk+" as i3
 pkg(
   name: "grsync",
   version: "1.2.8",
+  description: "GUI for rsync",
+  url: "https://www.opbyte.it/grsync/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

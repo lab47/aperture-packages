@@ -46,6 +46,12 @@ import "cmake" as i0, "doxygen" as i1, "openssl@1.1" as i2, "libxml2" as i3
 pkg(
   name: "davix",
   version: "0.7.6",
+  description: "Library and tools for advanced file I/O with HTTP-based protocols",
+  url: "https://github.com/cern-fts/davix",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

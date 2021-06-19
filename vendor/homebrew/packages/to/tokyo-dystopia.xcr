@@ -49,6 +49,12 @@ import "tokyo-cabinet" as i0
 pkg(
   name: "tokyo-dystopia",
   version: "0.9.15",
+  description: "Lightweight full-text search system",
+  url: "https://fallabs.com/tokyodystopia/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

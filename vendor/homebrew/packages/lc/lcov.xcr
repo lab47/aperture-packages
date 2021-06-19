@@ -97,6 +97,12 @@ import "perl" as i0, "zlib" as i1
 pkg(
   name: "lcov",
   version: "1.15",
+  description: "Graphical front-end for GCC's coverage testing tool (gcov)",
+  url: "https://github.com/linux-test-project/lcov",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

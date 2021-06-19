@@ -34,6 +34,12 @@ import "pcre" as i0
 pkg(
   name: "classads",
   version: "1.0.10",
+  description: "Classified Advertisements (used by HTCondor Central Manager)",
+  url: "https://research.cs.wisc.edu/htcondor/classad/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

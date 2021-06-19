@@ -43,6 +43,12 @@ import "pkg-config" as i0
 pkg(
   name: "cmuclmtk",
   version: "0.7",
+  description: "Language model tools (from CMU Sphinx)",
+  url: "https://cmusphinx.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

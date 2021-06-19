@@ -107,6 +107,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gperf" as i3, "zlib
 pkg(
   name: "libid3tag",
   version: "0.15.1b",
+  description: "ID3 tag manipulation library",
+  url: "https://www.underbit.com/products/mad/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

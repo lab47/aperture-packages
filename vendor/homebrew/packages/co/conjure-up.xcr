@@ -296,12 +296,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "awscli" as i4, "berkeley-db" as i5, "bison" as i6, "bzip2" as i7, "cmake" as i8, "doxygen" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "ghostscript" as i16, "go" as i17, "gperf" as i18, "groff" as i19, "help2man" as i20, "jasper" as i21, "jbig2dec" as i22, "jpeg" as i23, "jq" as i24, "juju" as i25, "juju-wait" as i26, "krb5" as i27, "libffi" as i28, "libidn" as i29, "libpng" as i30, "libtiff" as i31, "libtool" as i32, "libxml2" as i33, "libyaml" as i34, "little-cms2" as i35, "lz4" as i36, "m4" as i37, "mpdecimal" as i38, "ncurses" as i39, "netpbm" as i40, "oniguruma" as i41, "openjdk" as i42, "openjpeg" as i43, "openssl@1.1" as i44, "pcre" as i45, "perl" as i46, "pkg-config" as i47, "psutils" as i48, "pwgen" as i49, "python@3.9" as i50, "readline" as i51, "redis" as i52, "ruby" as i53, "scons" as i54, "sphinx-doc" as i55, "sqlite" as i56, "subversion" as i57, "swig" as i58, "texinfo" as i59, "uchardet" as i60, "unzip" as i61, "utf8proc" as i62, "xz" as i63, "zip" as i64, "zlib" as i65
+import "awscli" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "jq" as i4, "juju" as i5, "juju-wait" as i6, "libffi" as i7, "libyaml" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "pwgen" as i13, "python@3.9" as i14, "readline" as i15, "redis" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
 
 pkg(
   name: "conjure-up",
   version: "2.6.14",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65],
+  description: "Big software deployments so easy it's almost magical",
+  url: "https://conjure-up.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "conjure-up.rb"), formula)

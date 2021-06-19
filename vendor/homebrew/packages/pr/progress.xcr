@@ -49,6 +49,12 @@ import "ncurses" as i0
 pkg(
   name: "progress",
   version: "0.16",
+  description: "Coreutils progress viewer",
+  url: "https://github.com/Xfennec/progress",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

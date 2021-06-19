@@ -66,6 +66,12 @@ import "pkg-config" as i0, "libsndfile" as i1
 pkg(
   name: "libsamplerate",
   version: "0.1.9",
+  description: "Library for sample rate conversion of audio data",
+  url: "http://www.mega-nerd.com/SRC",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

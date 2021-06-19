@@ -39,6 +39,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "taglib",
   version: "1.12",
+  description: "Audio metadata library",
+  url: "https://taglib.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

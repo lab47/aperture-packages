@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "ssh-vault",
   version: "0.12.7",
+  description: "Encrypt/decrypt using SSH keys",
+  url: "https://ssh-vault.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

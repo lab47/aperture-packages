@@ -56,6 +56,12 @@ import "boost-build" as i0, "boost" as i1, "gperftools" as i2
 pkg(
   name: "jumanpp",
   version: "1.02",
+  description: "Japanese Morphological Analyzer based on RNNLM",
+  url: "https://nlp.ist.i.kyoto-u.ac.jp/EN/index.php?JUMAN%2B%2B",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

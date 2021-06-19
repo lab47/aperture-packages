@@ -52,6 +52,12 @@ import "openjdk" as i0
 pkg(
   name: "jsonschema2pojo",
   version: "1.1.1",
+  description: "Generates Java types from JSON Schema (or example JSON)",
+  url: "https://www.jsonschema2pojo.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

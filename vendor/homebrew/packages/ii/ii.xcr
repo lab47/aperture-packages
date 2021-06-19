@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ii",
   version: "1.8",
+  description: "Minimalist IRC client",
+  url: "https://tools.suckless.org/ii/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

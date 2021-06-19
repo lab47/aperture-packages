@@ -54,6 +54,12 @@ import "cmake" as i0
 pkg(
   name: "libtrng",
   version: "4.24",
+  description: "Tina's Random Number Generator Library",
+  url: "https://www.numbercrunch.de/trng/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

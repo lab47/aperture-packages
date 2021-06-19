@@ -49,6 +49,12 @@ import "openjdk" as i0
 pkg(
   name: "clojurescript",
   version: "1.10.866",
+  description: "Clojure to JS compiler",
+  url: "https://github.com/clojure/clojurescript",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

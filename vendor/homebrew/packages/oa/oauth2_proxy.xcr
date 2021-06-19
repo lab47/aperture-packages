@@ -98,6 +98,12 @@ import "go" as i0
 pkg(
   name: "oauth2_proxy",
   version: "7.1.3",
+  description: "Reverse proxy for authenticating users via OAuth 2 providers",
+  url: "https://oauth2-proxy.github.io/oauth2-proxy/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

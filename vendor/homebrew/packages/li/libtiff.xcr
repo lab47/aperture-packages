@@ -66,6 +66,12 @@ import "jpeg" as i0, "zlib" as i1
 pkg(
   name: "libtiff",
   version: "4.3.0",
+  description: "TIFF library and utilities",
+  url: "https://libtiff.gitlab.io/libtiff/",
+  metadata: %{
+    "license": "libtiff",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

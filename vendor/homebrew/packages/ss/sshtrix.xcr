@@ -44,6 +44,12 @@ import "libssh" as i0
 pkg(
   name: "sshtrix",
   version: "0.0.3",
+  description: "SSH login cracker",
+  url: "https://nullsecurity.net/tools/cracker.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

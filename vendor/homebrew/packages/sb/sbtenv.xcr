@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sbtenv",
   version: "0.0.24",
+  description: "Command-line tool for managing sbt environments",
+  url: "https://github.com/sbtenv/sbtenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "ghostscript" as i0, "netpbm" as i1
 pkg(
   name: "latex2html",
   version: "2021",
+  description: "LaTeX-to-HTML translator",
+  url: "https://www.latex2html.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

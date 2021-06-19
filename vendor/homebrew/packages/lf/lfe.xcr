@@ -43,6 +43,12 @@ import "emacs" as i0, "erlang" as i1
 pkg(
   name: "lfe",
   version: "2.0",
+  description: "Concurrent Lisp for the Erlang VM",
+  url: "https://lfe.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

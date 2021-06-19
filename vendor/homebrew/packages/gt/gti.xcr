@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gti",
   version: "1.7.0",
+  description: "ASCII-art displaying typo-corrector for commands",
+  url: "https://r-wos.org/hacks/gti",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

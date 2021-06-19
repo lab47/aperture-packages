@@ -60,6 +60,12 @@ import "bison" as i0, "cmake" as i1, "flex" as i2
 pkg(
   name: "fluent-bit",
   version: "1.7.8",
+  description: "Data Collector for IoT",
+  url: "https://github.com/fluent/fluent-bit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

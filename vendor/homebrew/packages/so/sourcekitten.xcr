@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sourcekitten",
   version: "0.31.0",
+  description: "Framework and command-line tool for interacting with SourceKit",
+  url: "https://github.com/jpsim/SourceKitten",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

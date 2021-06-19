@@ -199,6 +199,12 @@ import "go" as i0
 pkg(
   name: "gx-go",
   version: "1.9.0",
+  description: "Tool to use with the gx package manager for packages written in go",
+  url: "https://github.com/whyrusleeping/gx-go",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

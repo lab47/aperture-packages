@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ssdeep",
   version: "2.14.1",
+  description: "Recursive piecewise hashing tool",
+  url: "https://ssdeep-project.github.io/ssdeep/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

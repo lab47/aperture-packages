@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "lf",
   version: "23",
+  description: "Terminal file manager",
+  url: "https://godoc.org/github.com/gokcehan/lf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

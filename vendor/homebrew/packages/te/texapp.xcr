@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "texapp",
   version: "0.6.11",
+  description: "App.net client based on TTYtter",
+  url: "https://www.floodgap.com/software/texapp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "cmake" as i0, "llvm" as i1
 pkg(
   name: "castxml",
   version: "0.4.3",
+  description: "C-family Abstract Syntax Tree XML Output",
+  url: "https://github.com/CastXML/CastXML",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

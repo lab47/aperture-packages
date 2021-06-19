@@ -62,6 +62,12 @@ import "autoconf" as i0, "automake" as i1, "docbook" as i2, "ghostscript" as i3,
 pkg(
   name: "open-sp",
   version: "1.5.2",
+  description: "SGML parser",
+  url: "https://openjade.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

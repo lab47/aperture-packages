@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "balance",
   version: "3.57",
+  description: "Software load balancer",
+  url: "https://www.inlab.net/balance/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

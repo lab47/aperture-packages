@@ -51,6 +51,12 @@ import "bison" as i0, "pkg-config" as i1, "sdl2_image" as i2
 pkg(
   name: "tenyr",
   version: "0.9.8",
+  description: "32-bit computing environment (including simulated CPU)",
+  url: "https://tenyr.info/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

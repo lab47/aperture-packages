@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sqlmap",
   version: "1.5.6",
+  description: "Penetration testing for SQL injection and database servers",
+  url: "https://sqlmap.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

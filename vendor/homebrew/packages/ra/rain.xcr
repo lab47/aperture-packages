@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "rain",
   version: "1.2.0",
+  description: "Command-line tool for working with AWS CloudFormation",
+  url: "https://github.com/aws-cloudformation/rain",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

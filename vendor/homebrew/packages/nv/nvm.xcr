@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nvm",
   version: "0.38.0",
+  description: "Manage multiple Node.js versions",
+  url: "https://github.com/nvm-sh/nvm",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

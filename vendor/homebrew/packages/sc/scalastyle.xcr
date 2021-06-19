@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scalastyle",
   version: "1.0.0",
+  description: "Run scalastyle from the command-line",
+  url: "http://www.scalastyle.org/command-line.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

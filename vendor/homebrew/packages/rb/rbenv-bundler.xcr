@@ -32,6 +32,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-bundler",
   version: "1.00",
+  description: "Makes shims aware of bundle install paths",
+  url: "https://github.com/carsomyr/rbenv-bundler",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

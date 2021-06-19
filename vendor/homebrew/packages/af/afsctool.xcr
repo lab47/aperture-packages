@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "afsctool",
   version: "1.6.4",
+  description: "Utility for manipulating HFS+ compressed files",
+  url: "https://brkirch.wordpress.com/afsctool/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -30,6 +30,12 @@ import "php" as i0
 pkg(
   name: "phpbrew",
   version: "1.27.0",
+  description: "Brew & manage PHP versions in pure PHP at HOME",
+  url: "https://phpbrew.github.io/phpbrew",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

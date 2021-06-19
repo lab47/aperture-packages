@@ -51,6 +51,12 @@ import "openjdk" as i0
 pkg(
   name: "sbuild",
   version: "0.7.7",
+  description: "Scala-based build system",
+  url: "http://sbuild.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

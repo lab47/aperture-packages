@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "ungit",
   version: "1.5.18",
+  description: "Easiest way to use Git. On any platform. Anywhere",
+  url: "https://github.com/FredrikNoren/ungit",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

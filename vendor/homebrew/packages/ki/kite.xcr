@@ -64,6 +64,12 @@ import "bdw-gc" as i0
 pkg(
   name: "kite",
   version: "1.0.4",
+  description: "Programming language designed to minimize programmer experience",
+  url: "https://web.archive.org/web/20200217045713/http://www.kite-language.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

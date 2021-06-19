@@ -88,6 +88,12 @@ import "gmp" as i0, "m4" as i1
 pkg(
   name: "nettle",
   version: "3.7.3",
+  description: "Low-level cryptographic library",
+  url: "https://www.lysator.liu.se/~nisse/nettle/",
+  metadata: %{
+    "license": "GPL-2.0-or-later or LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

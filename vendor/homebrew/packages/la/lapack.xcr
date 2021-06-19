@@ -60,6 +60,12 @@ import "cmake" as i0, "gcc" as i1
 pkg(
   name: "lapack",
   version: "3.9.1",
+  description: "Linear Algebra PACKage",
+  url: "https://www.netlib.org/lapack/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

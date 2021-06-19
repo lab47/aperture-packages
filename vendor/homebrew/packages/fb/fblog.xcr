@@ -42,6 +42,12 @@ import "rust" as i0
 pkg(
   name: "fblog",
   version: "2.3.0",
+  description: "Small command-line JSON log viewer",
+  url: "https://github.com/brocode/fblog",
+  metadata: %{
+    "license": "WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dnstracer",
   version: "1.9",
+  description: "Trace a chain of DNS servers to the source",
+  url: "https://www.mavetju.org/unix/dnstracer.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

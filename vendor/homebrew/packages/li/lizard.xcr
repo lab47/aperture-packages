@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lizard",
   version: "1.0",
+  description: "Efficient compressor with very fast decompression",
+  url: "https://github.com/inikep/lizard",
+  metadata: %{
+    "license": "BSD-2-Clause and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

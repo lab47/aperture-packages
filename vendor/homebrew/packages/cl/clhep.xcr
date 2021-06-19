@@ -65,6 +65,12 @@ import "cmake" as i0
 pkg(
   name: "clhep",
   version: "2.4.4.2",
+  description: "Class Library for High Energy Physics",
+  url: "https://proj-clhep.web.cern.ch/proj-clhep/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

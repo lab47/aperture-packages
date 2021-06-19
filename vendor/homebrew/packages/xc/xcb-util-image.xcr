@@ -51,6 +51,12 @@ import "pkg-config" as i0, "libxcb" as i1, "xcb-util" as i2
 pkg(
   name: "xcb-util-image",
   version: "0.4.0",
+  description: "XCB port of Xlib's XImage and XShmImage",
+  url: "https://xcb.freedesktop.org",
+  metadata: %{
+    "license": "X11",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

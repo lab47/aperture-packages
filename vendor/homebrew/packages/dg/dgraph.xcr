@@ -85,6 +85,12 @@ import "go" as i0, "jemalloc" as i1
 pkg(
   name: "dgraph",
   version: "20.11.3",
+  description: "Fast, Distributed Graph DB",
+  url: "https://dgraph.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

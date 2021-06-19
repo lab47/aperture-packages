@@ -50,6 +50,12 @@ import "pkg-config" as i0, "cairo" as i1, "glib" as i2, "gnutls" as i3, "gtk+" a
 pkg(
   name: "claws-mail",
   version: "3.17.8",
+  description: "User-friendly, lightweight, and fast email client",
+  url: "https://www.claws-mail.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

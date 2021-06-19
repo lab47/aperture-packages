@@ -102,6 +102,12 @@ import "autoconf" as i0, "automake" as i1, "libpcap" as i2, "openssl@1.1" as i3
 pkg(
   name: "ssldump",
   version: "0.9b3",
+  description: "SSLv3/TLS network protocol analyzer",
+  url: "https://ssldump.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wput",
   version: "0.6.2",
+  description: "Tiny, wget-like FTP client for uploading files",
+  url: "https://wput.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

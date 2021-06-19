@@ -38,6 +38,12 @@ import "openjdk" as i0
 pkg(
   name: "pig",
   version: "0.17.0",
+  description: "Platform for analyzing large data sets",
+  url: "https://pig.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

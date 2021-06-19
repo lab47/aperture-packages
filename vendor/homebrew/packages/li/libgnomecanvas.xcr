@@ -108,6 +108,12 @@ import "intltool" as i0, "pkg-config" as i1, "gettext" as i2, "gtk+" as i3, "lib
 pkg(
   name: "libgnomecanvas",
   version: "2.30.3",
+  description: "Highlevel, structured graphics library",
+  url: "https://developer.gnome.org/libgnomecanvas/2.30/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

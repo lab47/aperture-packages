@@ -58,6 +58,12 @@ import "ruby" as i0
 pkg(
   name: "um",
   version: "4.2.0",
+  description: "Command-line utility for creating and maintaining personal man pages",
+  url: "https://github.com/sinclairtarget/um",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

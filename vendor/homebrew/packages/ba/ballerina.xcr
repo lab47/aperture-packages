@@ -47,6 +47,12 @@ import "openjdk@8" as i0
 pkg(
   name: "ballerina",
   version: "1.2.13",
+  description: "Programming Language for Network Distributed Applications",
+  url: "https://ballerina.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

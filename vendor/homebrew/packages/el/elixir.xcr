@@ -43,6 +43,12 @@ import "erlang" as i0
 pkg(
   name: "elixir",
   version: "1.12.1",
+  description: "Functional metaprogramming aware language built on Erlang VM",
+  url: "https://elixir-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

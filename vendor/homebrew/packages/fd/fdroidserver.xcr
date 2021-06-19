@@ -434,12 +434,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "cython" as i9, "expat" as i10, "freetype" as i11, "gcc" as i12, "gdbm" as i13, "gettext" as i14, "gmp" as i15, "isl" as i16, "jemalloc" as i17, "jpeg" as i18, "krb5" as i19, "libev" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libmpc" as i25, "libpng" as i26, "libssh2" as i27, "libtiff" as i28, "libtool" as i29, "libunistring" as i30, "libxml2" as i31, "libxslt" as i32, "m4" as i33, "mpdecimal" as i34, "mpfr" as i35, "ncurses" as i36, "nghttp2" as i37, "ninja" as i38, "numpy" as i39, "openblas" as i40, "openldap" as i41, "openssl@1.1" as i42, "perl" as i43, "pkg-config" as i44, "python@3.7" as i45, "python@3.8" as i46, "python@3.9" as i47, "readline" as i48, "rtmpdump" as i49, "rust" as i50, "s3cmd" as i51, "six" as i52, "sphinx-doc" as i53, "sqlite" as i54, "tcl-tk" as i55, "unzip" as i56, "webp" as i57, "xz" as i58, "zip" as i59, "zlib" as i60, "zstd" as i61
+import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libtiff" as i6, "libxml2" as i7, "libxslt" as i8, "mpdecimal" as i9, "ncurses" as i10, "numpy" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "rust" as i16, "s3cmd" as i17, "sqlite" as i18, "tcl-tk" as i19, "unzip" as i20, "webp" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
 
 pkg(
   name: "fdroidserver",
   version: "2.0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
+  description: "Create and manage Android app repositories for F-Droid",
+  url: "https://f-droid.org",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fdroidserver.rb"), formula)

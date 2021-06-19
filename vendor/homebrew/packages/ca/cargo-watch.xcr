@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "cargo-watch",
   version: "7.7.2",
+  description: "Watches over your Cargo project's source",
+  url: "https://github.com/passcod/cargo-watch",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

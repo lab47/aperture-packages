@@ -82,6 +82,12 @@ import "homebrew-install" as hi
 pkg(
   name: "redis@4.0",
   version: "4.0.14",
+  description: "Persistent key-value database, with built-in net interface",
+  url: "https://redis.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "quickjs" as i0
 pkg(
   name: "qp",
   version: "1.0.1",
+  description: "Command-line (ND)JSON querying",
+  url: "https://github.com/paybase/qp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

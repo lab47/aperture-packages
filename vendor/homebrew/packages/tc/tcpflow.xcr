@@ -46,6 +46,12 @@ import "boost" as i0, "openssl@1.1" as i1
 pkg(
   name: "tcpflow",
   version: "1.6.1",
+  description: "TCP/IP packet demultiplexer",
+  url: "https://github.com/simsong/tcpflow",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

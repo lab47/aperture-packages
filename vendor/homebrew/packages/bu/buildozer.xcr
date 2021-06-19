@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "buildozer",
   version: "4.0.1",
+  description: "Rewrite bazel BUILD files using standard commands",
+  url: "https://github.com/bazelbuild/buildtools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

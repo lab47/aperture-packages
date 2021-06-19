@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cheops",
   version: "1.3",
+  description: "CHEss OPponent Simulator",
+  url: "https://logological.org/cheops",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

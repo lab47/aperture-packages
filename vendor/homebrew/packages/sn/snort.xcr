@@ -89,6 +89,12 @@ import "pkg-config" as i0, "daq" as i1, "libdnet" as i2, "libpcap" as i3, "luaji
 pkg(
   name: "snort",
   version: "2.9.17.1",
+  description: "Flexible Network Intrusion Detection System",
+  url: "https://www.snort.org",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

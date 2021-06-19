@@ -36,6 +36,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "testssl",
   version: "3.0.5",
+  description: "Tool which checks for the support of TLS/SSL ciphers and flaws",
+  url: "https://testssl.sh/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

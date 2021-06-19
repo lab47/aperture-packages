@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fsevents-tools",
   version: "1.0.0",
+  description: "Command-line utilities for the FSEvents API",
+  url: "https://geoff.greer.fm/fsevents/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

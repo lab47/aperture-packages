@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "titlecase",
   version: "1.004",
+  description: "Script to convert text to title case",
+  url: "http://plasmasturm.org/code/titlecase/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "cmake" as i0, "ninja" as i1, "libxml2" as i2, "ncurses" as i3, "zlib" as
 pkg(
   name: "clang-format@8",
   version: "8.0.1",
+  description: "Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript",
+  url: "https://clang.llvm.org/docs/ClangFormat.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

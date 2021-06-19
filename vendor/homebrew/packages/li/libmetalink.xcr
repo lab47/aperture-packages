@@ -43,6 +43,12 @@ import "pkg-config" as i0, "expat" as i1
 pkg(
   name: "libmetalink",
   version: "0.1.3",
+  description: "C library to parse Metalink XML files",
+  url: "https://launchpad.net/libmetalink/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

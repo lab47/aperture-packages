@@ -203,6 +203,12 @@ import "homebrew-install" as hi
 pkg(
   name: "openssl@1.1",
   version: "1.1.1k",
+  description: "Cryptography and SSL/TLS Toolkit",
+  url: "https://openssl.org/",
+  metadata: %{
+    "license": "OpenSSL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

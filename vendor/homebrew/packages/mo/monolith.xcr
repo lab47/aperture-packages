@@ -36,6 +36,12 @@ import "pkg-config" as i0, "rust" as i1, "openssl@1.1" as i2
 pkg(
   name: "monolith",
   version: "2.6.0",
+  description: "CLI tool for saving complete web pages as a single HTML file",
+  url: "https://github.com/Y2Z/monolith",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

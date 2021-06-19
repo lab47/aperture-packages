@@ -64,6 +64,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "bzip2" as i2, "zlib" as i3
 pkg(
   name: "libewf",
   version: "20140812",
+  description: "Library for support of the Expert Witness Compression Format",
+  url: "https://github.com/libyal/libewf",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

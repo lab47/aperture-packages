@@ -40,6 +40,12 @@ import "node" as i0
 pkg(
   name: "prettier",
   version: "2.3.1",
+  description: "Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML",
+  url: "https://prettier.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

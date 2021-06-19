@@ -36,6 +36,12 @@ import "go" as i0, "scdoc" as i1
 pkg(
   name: "aerc",
   version: "0.5.2",
+  description: "Email client that runs in your terminal",
+  url: "https://aerc-mail.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

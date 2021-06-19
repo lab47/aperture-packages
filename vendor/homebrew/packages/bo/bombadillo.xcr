@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "bombadillo",
   version: "2.3.3",
+  description: "Non-web browser, designed for a growing list of protocols",
+  url: "https://bombadillo.colorfield.space/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

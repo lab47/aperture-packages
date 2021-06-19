@@ -90,6 +90,12 @@ import "go" as i0, "gox" as i1, "node@14" as i2, "yarn" as i3
 pkg(
   name: "vault",
   version: "1.7.2",
+  description: "Secures, stores, and tightly controls access to secrets",
+  url: "https://vaultproject.io/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

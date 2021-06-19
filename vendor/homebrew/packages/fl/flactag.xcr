@@ -57,6 +57,12 @@ import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "flac" as i3, 
 pkg(
   name: "flactag",
   version: "2.0.4",
+  description: "Tag single album FLAC files with MusicBrainz CUE sheets",
+  url: "https://flactag.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -110,6 +110,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "pkg-config" as i2, "gtk
 pkg(
   name: "gdl",
   version: "3.34.0",
+  description: "GNOME Docking Library provides docking features for GTK+ 3",
+  url: "https://developer.gnome.org/gdl/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config
 pkg(
   name: "simple-mtpfs",
   version: "0.4.0",
+  description: "Simple MTP fuse filesystem driver",
+  url: "https://github.com/phatina/simple-mtpfs",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

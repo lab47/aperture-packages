@@ -37,6 +37,12 @@ import "openjdk@8" as i0
 pkg(
   name: "apache-geode",
   version: "1.13.2",
+  description: "In-memory Data Grid for fast transactional data processing",
+  url: "https://geode.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

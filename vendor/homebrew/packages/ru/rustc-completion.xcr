@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rustc-completion",
   version: "0.12.1",
+  description: "Bash completion for rustc",
+  url: "https://github.com/roshan/rust-bash-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

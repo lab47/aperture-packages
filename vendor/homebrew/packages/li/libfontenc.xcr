@@ -59,6 +59,12 @@ import "font-util" as i0, "pkg-config" as i1, "util-macros" as i2, "xorgproto" a
 pkg(
   name: "libfontenc",
   version: "1.1.4",
+  description: "X.Org: Font encoding library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

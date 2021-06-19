@@ -51,6 +51,12 @@ import "go" as i0
 pkg(
   name: "immudb",
   version: "1.0.1",
+  description: "Lightweight, high-speed immutable database",
+  url: "https://www.codenotary.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

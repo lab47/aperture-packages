@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tclap",
   version: "1.2.4",
+  description: "Templatized C++ command-line parser library",
+  url: "https://tclap.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

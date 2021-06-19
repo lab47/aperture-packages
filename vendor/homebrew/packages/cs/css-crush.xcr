@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "css-crush",
   version: "3.0.1",
+  description: "Extensible PHP based CSS preprocessor",
+  url: "https://the-echoplex.net/csscrush",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

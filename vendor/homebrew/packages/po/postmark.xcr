@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "postmark",
   version: "1.53",
+  description: "File system benchmark from NetApp",
+  url: "https://packages.debian.org/sid/postmark",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

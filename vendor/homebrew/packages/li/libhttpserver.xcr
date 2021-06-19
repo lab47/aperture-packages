@@ -64,6 +64,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libhttpserver",
   version: "0.18.2",
+  description: "C++ library of embedded Rest HTTP server",
+  url: "https://github.com/etr/libhttpserver",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -31,6 +31,12 @@ import "openjdk" as i0
 pkg(
   name: "jbake",
   version: "2.6.7",
+  description: "Java based static site/blog generator",
+  url: "https://jbake.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

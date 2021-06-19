@@ -46,6 +46,12 @@ import "pkg-config" as i0, "gtk+3" as i1, "imagemagick" as i2, "libarchive" as i
 pkg(
   name: "pqiv",
   version: "2.12",
+  description: "Powerful image viewer with minimal UI",
+  url: "https://github.com/phillipberndt/pqiv",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

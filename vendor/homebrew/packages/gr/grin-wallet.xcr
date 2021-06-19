@@ -36,6 +36,12 @@ import "llvm" as i0, "rust" as i1
 pkg(
   name: "grin-wallet",
   version: "5.0.3",
+  description: "Official wallet for the cryptocurrency Grin",
+  url: "https://grin.mw",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

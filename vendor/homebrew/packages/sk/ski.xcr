@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ski",
   version: "6.13",
+  description: "Evade the deadly Yeti on your jet-powered skis",
+  url: "http://catb.org/~esr/ski/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

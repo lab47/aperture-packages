@@ -72,6 +72,12 @@ import "openjdk" as i0
 pkg(
   name: "tomcat",
   version: "10.0.6",
+  description: "Implementation of Java Servlet and JavaServer Pages",
+  url: "https://tomcat.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

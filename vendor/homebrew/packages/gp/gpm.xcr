@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "gpm",
   version: "1.4.0",
+  description: "Barebones dependency manager for Go",
+  url: "https://github.com/pote/gpm",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

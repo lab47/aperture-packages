@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "leakcanary-shark",
   version: "2.7",
+  description: "CLI Java memory leak explorer for LeakCanary",
+  url: "https://square.github.io/leakcanary/shark/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

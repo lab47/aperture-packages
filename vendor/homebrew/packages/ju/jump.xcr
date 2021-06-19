@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "jump",
   version: "0.40.0",
+  description: "Helps you navigate your file system faster by learning your habits",
+  url: "https://github.com/gsamokovarov/jump",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

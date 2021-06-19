@@ -38,6 +38,12 @@ import "openjdk" as i0
 pkg(
   name: "jboss-forge",
   version: "3.9.8.Final",
+  description: "Tools to help set up and configure a project",
+  url: "https://forge.jboss.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

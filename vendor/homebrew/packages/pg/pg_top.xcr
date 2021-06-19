@@ -56,6 +56,12 @@ import "postgresql" as i0, "ncurses" as i1
 pkg(
   name: "pg_top",
   version: "3.7.0",
+  description: "Monitor PostgreSQL processes",
+  url: "https://pg_top.gitlab.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

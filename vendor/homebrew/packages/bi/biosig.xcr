@@ -60,6 +60,12 @@ import "gawk" as i0, "libarchive" as i1, "dcmtk" as i2, "libb64" as i3, "numpy" 
 pkg(
   name: "biosig",
   version: "2.2.1",
+  description: "Tools for biomedical signal processing and data conversion",
+  url: "https://biosig.sourceforge.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

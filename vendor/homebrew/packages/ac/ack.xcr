@@ -64,6 +64,12 @@ import "pod2man" as i0, "perl" as i1
 pkg(
   name: "ack",
   version: "3.5.0",
+  description: "Search tool like grep, but optimized for programmers",
+  url: "https://beyondgrep.com/",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

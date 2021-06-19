@@ -33,6 +33,12 @@ import "rust" as i0
 pkg(
   name: "as-tree",
   version: "0.12.0",
+  description: "Print a list of paths as a tree of paths 🌳",
+  url: "https://github.com/jez/as-tree",
+  metadata: %{
+    "license": "BlueOak-1.0.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

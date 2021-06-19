@@ -48,6 +48,12 @@ import "cabal-install" as i0, "ghc" as i1, "ncurses" as i2
 pkg(
   name: "hlint",
   version: "3.3.1",
+  description: "Haskell source code suggestions",
+  url: "https://github.com/ndmitchell/hlint",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

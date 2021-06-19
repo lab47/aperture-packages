@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pngcrush",
   version: "1.8.13",
+  description: "Optimizer for PNG files",
+  url: "https://pmt.sourceforge.io/pngcrush",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

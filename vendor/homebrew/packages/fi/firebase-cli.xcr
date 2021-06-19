@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "firebase-cli",
   version: "9.12.1",
+  description: "Firebase command-line tools",
+  url: "https://firebase.google.com/docs/cli/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

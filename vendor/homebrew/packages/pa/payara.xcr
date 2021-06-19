@@ -86,6 +86,12 @@ import "openjdk@8" as i0
 pkg(
   name: "payara",
   version: "5.192",
+  description: "Java EE application server forked from GlassFish",
+  url: "https://www.payara.fish",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

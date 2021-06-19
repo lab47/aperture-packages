@@ -151,6 +151,12 @@ import "go" as i0, "node" as i1, "yarn" as i2, "zlib" as i3
 pkg(
   name: "grafana",
   version: "8.0.1",
+  description: "Gorgeous metric visualizations and dashboards for timeseries databases",
+  url: "https://grafana.com",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -82,6 +82,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "jsonrpc-glib",
   version: "3.38.0",
+  description: "GNOME library to communicate with JSON-RPC based peers",
+  url: "https://gitlab.gnome.org/GNOME/jsonrpc-glib",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

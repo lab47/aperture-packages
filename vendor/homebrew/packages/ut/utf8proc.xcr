@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "utf8proc",
   version: "2.6.1",
+  description: "Clean C library for processing UTF-8 Unicode data",
+  url: "https://juliastrings.github.io/utf8proc/",
+  metadata: %{
+    "license": "MIT and Unicode-DFS-2015",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

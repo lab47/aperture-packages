@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "libxmu" as i3, "lib
 pkg(
   name: "libxaw",
   version: "1.0.14",
+  description: "X.Org: X Athena Widget Set",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

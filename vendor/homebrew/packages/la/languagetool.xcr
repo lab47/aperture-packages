@@ -61,6 +61,12 @@ import "maven" as i0, "openjdk@11" as i1
 pkg(
   name: "languagetool",
   version: "5.3",
+  description: "Style and grammar checker",
+  url: "https://www.languagetool.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

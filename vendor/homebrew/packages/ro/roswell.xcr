@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "curl" as i2
 pkg(
   name: "roswell",
   version: "21.05.14.109",
+  description: "Lisp installer and launcher for major environments",
+  url: "https://github.com/roswell/roswell",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

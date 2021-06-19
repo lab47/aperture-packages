@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "z80asm",
   version: "1.8",
+  description: "Assembler for the Zilog Z80 microprcessor and compatibles",
+  url: "https://www.nongnu.org/z80asm/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

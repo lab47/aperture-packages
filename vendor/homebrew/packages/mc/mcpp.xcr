@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mcpp",
   version: "2.7.2",
+  description: "Alternative C/C++ preprocessor",
+  url: "https://mcpp.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

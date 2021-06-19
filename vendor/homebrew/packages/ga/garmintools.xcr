@@ -41,6 +41,12 @@ import "libusb-compat" as i0
 pkg(
   name: "garmintools",
   version: "0.10",
+  description: "Interface to the Garmin Forerunner GPS units",
+  url: "https://code.google.com/archive/p/garmintools/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

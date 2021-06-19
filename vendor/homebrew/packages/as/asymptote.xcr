@@ -67,6 +67,12 @@ import "glm" as i0, "fftw" as i1, "ghostscript" as i2, "gsl" as i3, "readline" a
 pkg(
   name: "asymptote",
   version: "2.70",
+  description: "Powerful descriptive vector graphics language",
+  url: "https://asymptote.sourceforge.io",
+  metadata: %{
+    "license": "LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

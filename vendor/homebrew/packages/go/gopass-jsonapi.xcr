@@ -61,6 +61,12 @@ import "go" as i0, "gopass" as i1
 pkg(
   name: "gopass-jsonapi",
   version: "1.11.1",
+  description: "Gopass Browser Bindings",
+  url: "https://github.com/gopasspw/gopass-jsonapi",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

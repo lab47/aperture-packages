@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cifer",
   version: "1.2.0",
+  description: "Work on automating classical cipher cracking in C",
+  url: "https://code.google.com/p/cifer/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

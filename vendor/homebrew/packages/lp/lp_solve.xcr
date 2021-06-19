@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lp_solve",
   version: "5.5.2.11",
+  description: "Mixed integer linear programming solver",
+  url: "https://sourceforge.net/projects/lpsolve/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

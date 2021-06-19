@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dvorak7min",
   version: "1.6.1",
+  description: "Dvorak (simplified keyboard layout) typing tutor",
+  url: "https://web.archive.org/web/dvorak7min.sourcearchive.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

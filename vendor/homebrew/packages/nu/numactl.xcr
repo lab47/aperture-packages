@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "numactl",
   version: "2.0.14",
+  description: "NUMA support for Linux",
+  url: "https://github.com/numactl/numactl",
+  metadata: %{
+    "license": "GPL-2.0-only and LGPL-2.1-only and Public Domain and Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

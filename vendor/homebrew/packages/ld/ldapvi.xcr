@@ -64,6 +64,12 @@ import "pkg-config" as i0, "xz" as i1, "gettext" as i2, "glib" as i3, "openssl@1
 pkg(
   name: "ldapvi",
   version: "1.7",
+  description: "Update LDAP entries with a text editor",
+  url: "http://www.lichteblau.com/ldapvi/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

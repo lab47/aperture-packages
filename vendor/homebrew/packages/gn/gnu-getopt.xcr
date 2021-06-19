@@ -48,6 +48,12 @@ import "asciidoctor" as i0
 pkg(
   name: "gnu-getopt",
   version: "2.37",
+  description: "Command-line option parsing utility",
+  url: "https://github.com/karelzak/util-linux",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

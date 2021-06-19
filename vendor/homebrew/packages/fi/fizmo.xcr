@@ -54,6 +54,12 @@ import "pkg-config" as i0, "freetype" as i1, "jpeg" as i2, "libpng" as i3, "libs
 pkg(
   name: "fizmo",
   version: "0.8.5",
+  description: "Z-Machine interpreter",
+  url: "https://fizmo.spellbreaker.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -71,6 +71,12 @@ import "cmake" as i0
 pkg(
   name: "cxxopts",
   version: "2.2.1",
+  description: "Lightweight C++ command-line option parser",
+  url: "https://github.com/jarro2783/cxxopts",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

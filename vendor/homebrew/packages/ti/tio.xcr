@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tio",
   version: "1.32",
+  description: "Simple TTY terminal I/O application",
+  url: "https://tio.github.io",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-upload",
   version: "1.1.0",
+  description: "Bazaar plugin to incrementally upload changes to a dumb server",
+  url: "https://launchpad.net/bzr-upload",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

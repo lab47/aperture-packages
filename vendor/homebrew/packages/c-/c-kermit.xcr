@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "c-kermit",
   version: "9.0.302",
+  description: "Scriptable network and serial communication for UNIX and VMS",
+  url: "https://www.kermitproject.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

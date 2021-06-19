@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "docker-ls",
   version: "0.5.1",
+  description: "Tools for browsing and manipulating docker registries",
+  url: "https://github.com/mayflower/docker-ls",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

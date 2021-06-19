@@ -82,6 +82,12 @@ import "pkg-config" as i0, "opus" as i1
 pkg(
   name: "libopusenc",
   version: "0.2.1",
+  description: "Convenience libraray for creating .opus files",
+  url: "https://opus-codec.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

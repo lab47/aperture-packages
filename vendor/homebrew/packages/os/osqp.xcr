@@ -111,6 +111,12 @@ import "cmake" as i0
 pkg(
   name: "osqp",
   version: "0.6.2",
+  description: "Operator splitting QP solver",
+  url: "https://osqp.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

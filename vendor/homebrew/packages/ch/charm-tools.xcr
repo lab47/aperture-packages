@@ -303,12 +303,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "charm" as i7, "cmake" as i8, "curl" as i9, "expat" as i10, "gdbm" as i11, "gettext" as i12, "go" as i13, "jemalloc" as i14, "krb5" as i15, "libev" as i16, "libffi" as i17, "libidn2" as i18, "libssh2" as i19, "libtool" as i20, "libunistring" as i21, "libxml2" as i22, "libyaml" as i23, "m4" as i24, "mpdecimal" as i25, "ncurses" as i26, "nghttp2" as i27, "ninja" as i28, "openldap" as i29, "openssl@1.1" as i30, "perl" as i31, "pkg-config" as i32, "python@3.9" as i33, "readline" as i34, "rtmpdump" as i35, "rust" as i36, "sphinx-doc" as i37, "sqlite" as i38, "unzip" as i39, "xz" as i40, "zip" as i41, "zlib" as i42, "zstd" as i43
+import "bzip2" as i0, "charm" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libyaml" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "rust" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "charm-tools",
   version: "2.8.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43],
+  description: "Tools for authoring and maintaining juju charms",
+  url: "https://github.com/juju/charm-tools",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "charm-tools.rb"), formula)

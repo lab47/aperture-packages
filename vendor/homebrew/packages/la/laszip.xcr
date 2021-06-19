@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "laszip",
   version: "3.4.3",
+  description: "Lossless LiDAR compression",
+  url: "https://laszip.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

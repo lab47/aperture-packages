@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chicken",
   version: "5.2.0",
+  description: "Compiler for the Scheme programming language",
+  url: "https://www.call-cc.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ip_relay",
   version: "0.71",
+  description: "TCP traffic shaping relay application",
+  url: "http://www.stewart.com.au/ip_relay/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

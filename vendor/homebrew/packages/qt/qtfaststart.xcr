@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "qtfaststart",
   version: "12.3",
+  description: "Utility for Quicktime files",
+  url: "https://libav.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

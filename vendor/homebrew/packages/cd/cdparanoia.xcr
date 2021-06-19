@@ -63,6 +63,12 @@ import "autoconf" as i0
 pkg(
   name: "cdparanoia",
   version: "10.2",
+  description: "Audio extraction tool for sampling CDs",
+  url: "https://www.xiph.org/paranoia/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

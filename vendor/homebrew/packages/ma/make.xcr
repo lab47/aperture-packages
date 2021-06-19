@@ -75,6 +75,12 @@ import "lzip" as i0
 pkg(
   name: "make",
   version: "4.3",
+  description: "Utility for directing compilation",
+  url: "https://www.gnu.org/software/make/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

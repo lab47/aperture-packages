@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "qhull",
   version: "2020.2",
+  description: "Computes convex hulls in n dimensions",
+  url: "http://www.qhull.org/",
+  metadata: %{
+    "license": "Qhull",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

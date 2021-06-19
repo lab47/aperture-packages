@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "jam" as i2, "pkg-config" as i3, "phy
 pkg(
   name: "lincity-ng",
   version: "2.0",
+  description: "City simulation game",
+  url: "https://github.com/lincity-ng/lincity-ng/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

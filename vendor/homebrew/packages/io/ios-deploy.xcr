@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ios-deploy",
   version: "1.11.4",
+  description: "Install and debug iPhone apps from the command-line",
+  url: "https://github.com/ios-control/ios-deploy",
+  metadata: %{
+    "license": "GPL-3.0-or-later and BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

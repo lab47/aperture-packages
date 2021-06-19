@@ -43,6 +43,12 @@ import "zlib" as i0
 pkg(
   name: "bwa",
   version: "0.7.17",
+  description: "Burrow-Wheeler Aligner for pairwise alignment of DNA",
+  url: "https://github.com/lh3/bwa",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -68,6 +68,12 @@ import "go" as i0
 pkg(
   name: "emp",
   version: "0.13.0",
+  description: "CLI for Empire",
+  url: "https://github.com/remind101/empire",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

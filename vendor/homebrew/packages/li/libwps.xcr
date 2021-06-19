@@ -59,6 +59,12 @@ import "boost" as i0, "pkg-config" as i1, "librevenge" as i2, "libwpd" as i3
 pkg(
   name: "libwps",
   version: "0.4.12",
+  description: "Library to import files in MS Works format",
+  url: "https://libwps.sourceforge.io",
+  metadata: %{
+    "license": "LGPL-2.1-or-later or MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

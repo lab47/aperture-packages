@@ -68,6 +68,12 @@ import "go" as i0
 pkg(
   name: "apache-brooklyn-cli",
   version: "1.0.0",
+  description: "Apache Brooklyn command-line interface",
+  url: "https://brooklyn.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

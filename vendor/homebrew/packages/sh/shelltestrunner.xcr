@@ -39,6 +39,12 @@ import "cabal-install" as i0, "ghc@8.8" as i1
 pkg(
   name: "shelltestrunner",
   version: "1.9",
+  description: "Portable command-line tool for testing command-line programs",
+  url: "https://github.com/simonmichael/shelltestrunner",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

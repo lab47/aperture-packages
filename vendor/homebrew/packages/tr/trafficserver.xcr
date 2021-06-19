@@ -89,6 +89,12 @@ import "pkg-config" as i0, "hwloc" as i1, "openssl@1.1" as i2, "pcre" as i3, "ya
 pkg(
   name: "trafficserver",
   version: "9.0.1",
+  description: "HTTP/1.1 compliant caching proxy server",
+  url: "https://trafficserver.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

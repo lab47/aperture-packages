@@ -44,6 +44,12 @@ import "tor" as i0
 pkg(
   name: "onioncat",
   version: "0.3.9",
+  description: "VPN-adapter that provides location privacy using Tor or I2P",
+  url: "https://www.onioncat.org",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

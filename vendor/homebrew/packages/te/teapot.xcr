@@ -57,6 +57,12 @@ import "cmake" as i0
 pkg(
   name: "teapot",
   version: "2.3.0",
+  description: "Table editor and planner",
+  url: "https://www.syntax-k.de/projekte/teapot/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

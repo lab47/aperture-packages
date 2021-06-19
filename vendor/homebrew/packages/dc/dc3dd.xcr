@@ -74,6 +74,12 @@ import "gettext" as i0
 pkg(
   name: "dc3dd",
   version: "7.2.646",
+  description: "Patched GNU dd that is intended for forensic acquisition of data",
+  url: "https://sourceforge.net/projects/dc3dd/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

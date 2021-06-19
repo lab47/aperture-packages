@@ -41,6 +41,12 @@ import "libevent" as i0
 pkg(
   name: "redsocks",
   version: "0.4",
+  description: "Transparent socks redirector",
+  url: "https://darkk.net.ru/redsocks/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

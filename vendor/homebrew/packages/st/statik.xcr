@@ -246,12 +246,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "krb5" as i4, "libffi" as i5, "libpq" as i6, "m4" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libpq" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "statik",
   version: "0.23.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  description: "Python-based, generic static web site generator aimed at developers",
+  url: "https://getstatik.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "statik.rb"), formula)

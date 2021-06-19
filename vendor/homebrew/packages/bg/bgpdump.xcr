@@ -45,6 +45,12 @@ import "autoconf" as i0
 pkg(
   name: "bgpdump",
   version: "1.6.2",
+  description: "C library for analyzing MRT/Zebra/Quagga dump files",
+  url: "https://github.com/RIPE-NCC/bgpdump/wiki",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

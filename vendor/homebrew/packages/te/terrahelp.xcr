@@ -61,6 +61,12 @@ import "go" as i0
 pkg(
   name: "terrahelp",
   version: "0.7.4",
+  description: "Tool providing extra functionality for Terraform",
+  url: "https://github.com/opencredo/terrahelp",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

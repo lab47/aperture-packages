@@ -121,6 +121,12 @@ import "gperf" as i0
 pkg(
   name: "coreutils",
   version: "8.32",
+  description: "GNU File, Shell, and Text utilities",
+  url: "https://www.gnu.org/software/coreutils",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lsof",
   version: "4.94.0",
+  description: "Utility to list open files",
+  url: "https://github.com/lsof-org/lsof",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

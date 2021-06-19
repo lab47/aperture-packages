@@ -50,6 +50,12 @@ import "ncurses" as i0
 pkg(
   name: "lame",
   version: "3.100",
+  description: "High quality MPEG Audio Layer III (MP3) encoder",
+  url: "https://lame.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "gmp" as i0
 pkg(
   name: "mosml",
   version: "2.10.1",
+  description: "Moscow ML",
+  url: "https://mosml.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

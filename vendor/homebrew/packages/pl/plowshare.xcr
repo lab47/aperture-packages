@@ -36,6 +36,12 @@ import "bash" as i0, "coreutils" as i1, "feh" as i2, "gnu-sed" as i3, "libcaca" 
 pkg(
   name: "plowshare",
   version: "2.1.7",
+  description: "Download/upload tool for popular file sharing websites",
+  url: "https://github.com/mcrapet/plowshare",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

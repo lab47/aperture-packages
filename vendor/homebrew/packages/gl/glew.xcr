@@ -95,6 +95,12 @@ import "cmake" as i0
 pkg(
   name: "glew",
   version: "2.2.0",
+  description: "OpenGL Extension Wrangler Library",
+  url: "https://glew.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

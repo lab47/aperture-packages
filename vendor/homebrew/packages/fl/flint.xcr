@@ -98,6 +98,12 @@ import "gmp" as i0, "mpfr" as i1, "ntl" as i2
 pkg(
   name: "flint",
   version: "2.7.1",
+  description: "C library for number theory",
+  url: "https://flintlib.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

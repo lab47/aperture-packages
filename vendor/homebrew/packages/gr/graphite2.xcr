@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "graphite2",
   version: "1.3.14",
+  description: "Smart font renderer for non-Roman scripts",
+  url: "https://graphite.sil.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later or LGPL-2.1-or-later or MPL-1.1+",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

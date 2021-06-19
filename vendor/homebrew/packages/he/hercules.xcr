@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hercules",
   version: "3.13",
+  description: "System/370, ESA/390 and z/Architecture Emulator",
+  url: "http://www.hercules-390.eu/",
+  metadata: %{
+    "license": "QPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

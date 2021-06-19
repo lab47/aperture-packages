@@ -67,6 +67,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "siege",
   version: "4.0.9",
+  description: "HTTP regression testing and benchmarking utility",
+  url: "https://www.joedog.org/siege-home/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

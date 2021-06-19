@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libxmi",
   version: "1.2",
+  description: "C/C++ function library for rasterizing 2D vector graphics",
+  url: "https://www.gnu.org/software/libxmi/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

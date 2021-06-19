@@ -51,6 +51,12 @@ import "glide" as i0, "go" as i1
 pkg(
   name: "textql",
   version: "2.0.3",
+  description: "Executes SQL across text files",
+  url: "https://github.com/dinedal/textql",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

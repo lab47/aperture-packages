@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "macos-trash",
   version: "1.1.1",
+  description: "Move files and folders to the trash",
+  url: "https://github.com/sindresorhus/macos-trash",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

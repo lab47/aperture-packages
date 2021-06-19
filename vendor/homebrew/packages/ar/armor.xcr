@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "armor",
   version: "0.4.14",
+  description: "Uncomplicated, modern HTTP server",
+  url: "https://github.com/labstack/armor",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

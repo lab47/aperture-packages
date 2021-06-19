@@ -72,6 +72,12 @@ import "openjdk" as i0
 pkg(
   name: "jolie",
   version: "1.10.4",
+  description: "Service-oriented programming language",
+  url: "https://www.jolie-lang.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

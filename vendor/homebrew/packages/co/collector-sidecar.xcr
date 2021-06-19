@@ -64,6 +64,12 @@ import "go" as i0, "mercurial" as i1, "filebeat" as i2
 pkg(
   name: "collector-sidecar",
   version: "1.1.0",
+  description: "Manage log collectors through Graylog",
+  url: "https://www.graylog.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

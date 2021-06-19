@@ -57,6 +57,12 @@ import "openjdk" as i0
 pkg(
   name: "allure",
   version: "2.14.0",
+  description: "Flexible lightweight test report tool",
+  url: "https://github.com/allure-framework/allure2",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

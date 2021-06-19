@@ -98,6 +98,12 @@ import "pkg-config" as i0, "gtk+3" as i1
 pkg(
   name: "gtkdatabox",
   version: "1.0.0",
+  description: "Widget for live display of large amounts of changing data",
+  url: "https://sourceforge.net/projects/gtkdatabox/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

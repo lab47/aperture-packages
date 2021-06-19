@@ -69,6 +69,12 @@ import "cmake" as i0, "luajit-openresty" as i1, "libuv" as i2
 pkg(
   name: "luv",
   version: "1.41.0-0",
+  description: "Bare libuv bindings for lua",
+  url: "https://github.com/luvit/luv",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

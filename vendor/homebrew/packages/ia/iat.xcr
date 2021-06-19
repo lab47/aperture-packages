@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "iat",
   version: "0.1.7",
+  description: "Converts many CD-ROM image formats to ISO9660",
+  url: "https://sourceforge.net/projects/iat.berlios/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

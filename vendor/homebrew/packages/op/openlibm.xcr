@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "openlibm",
   version: "0.7.5",
+  description: "High quality, portable, open source libm implementation",
+  url: "https://openlibm.org",
+  metadata: %{
+    "license": "MIT and ISC and BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "pkg-config" as i0, "freetype" as i1, "libpng" as i2
 pkg(
   name: "swfmill",
   version: "0.3.6",
+  description: "Processor of xml2swf and swf2xml",
+  url: "https://swfmill.org",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

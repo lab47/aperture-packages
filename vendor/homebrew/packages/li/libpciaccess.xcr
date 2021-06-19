@@ -52,6 +52,12 @@ import "pkg-config" as i0, "util-macros" as i1
 pkg(
   name: "libpciaccess",
   version: "0.16",
+  description: "Generic PCI access library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

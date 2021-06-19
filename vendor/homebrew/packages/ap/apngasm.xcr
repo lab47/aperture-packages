@@ -43,6 +43,12 @@ import "cmake" as i0, "boost" as i1, "libpng" as i2, "lzlib" as i3
 pkg(
   name: "apngasm",
   version: "3.1.6",
+  description: "Next generation of apngasm, the APNG assembler",
+  url: "https://github.com/apngasm/apngasm",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

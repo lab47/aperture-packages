@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "geph4",
   version: "4.4.4",
+  description: "Modular Internet censorship circumvention system to deal with national filtering",
+  url: "https://geph.io/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

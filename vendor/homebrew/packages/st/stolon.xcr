@@ -62,6 +62,12 @@ import "go" as i0, "postgresql" as i1
 pkg(
   name: "stolon",
   version: "0.16.0",
+  description: "Cloud native PostgreSQL manager for high availability",
+  url: "https://github.com/sorintlab/stolon",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

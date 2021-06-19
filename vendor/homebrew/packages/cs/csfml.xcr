@@ -48,6 +48,12 @@ import "cmake" as i0, "sfml" as i1
 pkg(
   name: "csfml",
   version: "2.5",
+  description: "SMFL bindings for C",
+  url: "https://www.sfml-dev.org/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

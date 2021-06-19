@@ -61,6 +61,12 @@ import "rust" as i0
 pkg(
   name: "gping",
   version: "1.2.1",
+  description: "Ping, but with a graph",
+  url: "https://github.com/orf/gping",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

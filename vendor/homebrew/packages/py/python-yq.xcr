@@ -79,12 +79,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "jq" as i6, "libffi" as i7, "libtool" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "oniguruma" as i12, "openssl@1.1" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "unzip" as i19, "xz" as i20, "zip" as i21, "zlib" as i22
+import "jq" as i0, "python@3.9" as i1
 
 pkg(
   name: "python-yq",
   version: "2.12.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  description: "Command-line YAML and XML processor that wraps jq",
+  url: "https://kislyuk.github.io/yq/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "python-yq.rb"), formula)

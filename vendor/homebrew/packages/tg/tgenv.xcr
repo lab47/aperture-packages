@@ -36,6 +36,12 @@ import "unzip" as i0
 pkg(
   name: "tgenv",
   version: "0.0.3",
+  description: "Terragrunt version manager inspired by tfenv",
+  url: "https://github.com/cunymatthieu/tgenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

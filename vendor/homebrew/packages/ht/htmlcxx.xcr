@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "htmlcxx",
   version: "0.87",
+  description: "Non-validating CSS1 and HTML parser for C++",
+  url: "https://htmlcxx.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

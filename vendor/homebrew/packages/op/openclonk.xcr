@@ -49,6 +49,12 @@ import "cmake" as i0, "boost" as i1, "freealut" as i2, "freetype" as i3, "glew" 
 pkg(
   name: "openclonk",
   version: "7.0",
+  description: "Multiplayer action game",
+  url: "https://www.openclonk.org/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

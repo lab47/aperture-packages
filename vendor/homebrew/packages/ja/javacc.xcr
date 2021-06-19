@@ -62,6 +62,12 @@ import "ant" as i0, "openjdk" as i1
 pkg(
   name: "javacc",
   version: "7.0.10",
+  description: "Parser generator for use with Java applications",
+  url: "https://javacc.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

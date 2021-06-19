@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wallpaper",
   version: "2.1.0",
+  description: "Manage the desktop wallpaper",
+  url: "https://github.com/sindresorhus/macos-wallpaper",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

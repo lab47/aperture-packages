@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tty-solitaire",
   version: "1.3.0",
+  description: "Ncurses-based klondike solitaire game",
+  url: "https://github.com/mpereira/tty-solitaire",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

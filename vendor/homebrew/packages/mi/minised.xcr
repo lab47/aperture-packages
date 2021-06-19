@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "minised",
   version: "1.15",
+  description: "Smaller, cheaper, faster SED implementation",
+  url: "https://www.exactcode.com/opensource/minised/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

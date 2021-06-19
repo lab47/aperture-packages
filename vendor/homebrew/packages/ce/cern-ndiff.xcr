@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "cern-ndiff",
   version: "5.07.00",
+  description: "Numerical diff tool",
+  url: "https://mad.web.cern.ch/mad/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

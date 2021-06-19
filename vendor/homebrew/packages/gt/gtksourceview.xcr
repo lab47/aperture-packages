@@ -113,6 +113,12 @@ import "intltool" as i0, "pkg-config" as i1, "gettext" as i2, "gtk+" as i3, "gtk
 pkg(
   name: "gtksourceview",
   version: "2.10.5",
+  description: "Text view with syntax, undo/redo, and text marks",
+  url: "https://projects.gnome.org/gtksourceview/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

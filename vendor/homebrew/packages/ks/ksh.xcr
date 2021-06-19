@@ -40,6 +40,12 @@ import "meson" as i0, "ninja" as i1
 pkg(
   name: "ksh",
   version: "2020.0.0",
+  description: "KornShell, ksh93",
+  url: "http://www.kornshell.com",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

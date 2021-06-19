@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "rclone",
   version: "1.55.1",
+  description: "Rsync for cloud storage",
+  url: "https://rclone.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

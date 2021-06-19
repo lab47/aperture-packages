@@ -66,6 +66,12 @@ import "pkg-config" as i0, "glib" as i1, "id3lib" as i2
 pkg(
   name: "castget",
   version: "2.0.1",
+  description: "Command-line podcast and RSS enclosure downloader",
+  url: "https://castget.johndal.com/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

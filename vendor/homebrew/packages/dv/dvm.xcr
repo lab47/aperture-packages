@@ -64,6 +64,12 @@ import "go" as i0
 pkg(
   name: "dvm",
   version: "1.0.2",
+  description: "Docker Version Manager",
+  url: "https://github.com/howtowhale/dvm",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

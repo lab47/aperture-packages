@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "convox",
   version: "3.0.48",
+  description: "Command-line interface for the Convox PaaS",
+  url: "https://convox.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

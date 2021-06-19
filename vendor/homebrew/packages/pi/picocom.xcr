@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "picocom",
   version: "3.1",
+  description: "Minimal dumb-terminal emulation program",
+  url: "https://github.com/npat-efault/picocom",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

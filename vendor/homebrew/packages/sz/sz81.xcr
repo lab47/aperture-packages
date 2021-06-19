@@ -43,6 +43,12 @@ import "sdl" as i0
 pkg(
   name: "sz81",
   version: "2.1.7",
+  description: "ZX80/81 emulator",
+  url: "https://sz81.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -70,6 +70,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libb2",
   version: "0.98.1",
+  description: "Secure hashing function",
+  url: "https://blake2.net/",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

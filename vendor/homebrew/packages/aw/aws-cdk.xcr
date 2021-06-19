@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "aws-cdk",
   version: "1.108.1",
+  description: "AWS Cloud Development Kit - framework for defining AWS infra as code",
+  url: "https://github.com/aws/aws-cdk",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

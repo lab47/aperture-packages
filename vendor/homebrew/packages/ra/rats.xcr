@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rats",
   version: "2.4",
+  description: "Rough auditing tool for security",
+  url: "https://security.web.cern.ch/security/recommendations/en/codetools/rats.shtml",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

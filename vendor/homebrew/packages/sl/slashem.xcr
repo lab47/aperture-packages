@@ -76,6 +76,12 @@ import "pkg-config" as i0
 pkg(
   name: "slashem",
   version: "0.0.8E0F1",
+  description: "Fork/variant of Nethack",
+  url: "https://slashem.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

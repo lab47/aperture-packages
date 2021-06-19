@@ -42,6 +42,12 @@ import "cmake" as i0, "doxygen" as i1, "graphviz" as i2, "wget" as i3
 pkg(
   name: "libwbxml",
   version: "0.11.7",
+  description: "Library and tools to parse and encode WBXML documents",
+  url: "https://github.com/libwbxml/libwbxml",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "dnsmasq" as i0, "php" as i1
 pkg(
   name: "easyengine",
   version: "4.1.5",
+  description: "Command-line control panel to manage WordPress sites",
+  url: "https://easyengine.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

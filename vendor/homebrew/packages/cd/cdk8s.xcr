@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "cdk8s",
   version: "0.33.0",
+  description: "Define k8s native apps and abstractions using object-oriented programming",
+  url: "https://cdk8s.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

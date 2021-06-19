@@ -41,6 +41,12 @@ import "libxml2" as i0
 pkg(
   name: "raptor",
   version: "2.0.15",
+  description: "RDF parser toolkit",
+  url: "https://librdf.org/raptor/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

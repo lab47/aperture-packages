@@ -54,6 +54,12 @@ import "cmake" as i0, "openssl@1.1" as i1, "curl" as i2, "zlib" as i3
 pkg(
   name: "mariadb-connector-c",
   version: "3.1.13",
+  description: "MariaDB database connector for C applications",
+  url: "https://downloads.mariadb.org/connector-c/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -22,6 +22,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cap-completion",
   version: "1.0.0",
+  description: "Bash completion for Capistrano",
+  url: "https://github.com/bashaus/capistrano-autocomplete",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

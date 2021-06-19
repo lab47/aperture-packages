@@ -70,6 +70,12 @@ import "bison" as i0, "cmake" as i1, "flex" as i2, "pkg-config" as i3, "zlib" as
 pkg(
   name: "ibex",
   version: "2.8.9",
+  description: "C++ library for constraint processing over real numbers",
+  url: "https://web.archive.org/web/20190826220512/www.ibex-lib.org/",
+  metadata: %{
+    "license": "LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

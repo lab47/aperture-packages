@@ -59,6 +59,12 @@ import "pyenv" as i0
 pkg(
   name: "pyenv-virtualenv",
   version: "1.1.5",
+  description: "Pyenv plugin to manage virtualenv",
+  url: "https://github.com/pyenv/pyenv-virtualenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

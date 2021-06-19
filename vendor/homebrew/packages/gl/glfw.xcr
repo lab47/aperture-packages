@@ -76,6 +76,12 @@ import "cmake" as i0
 pkg(
   name: "glfw",
   version: "3.3.4",
+  description: "Multi-platform library for OpenGL applications",
+  url: "https://www.glfw.org/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "postgresql" as i0
 pkg(
   name: "ephemeralpg",
   version: "3.1",
+  description: "Run tests on an isolated, temporary Postgres database",
+  url: "https://eradman.com/ephemeralpg/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

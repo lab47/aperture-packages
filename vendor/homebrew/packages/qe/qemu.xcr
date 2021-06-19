@@ -127,6 +127,12 @@ import "libtool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib"
 pkg(
   name: "qemu",
   version: "6.0.0",
+  description: "Emulator for x86 and PowerPC",
+  url: "https://www.qemu.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {

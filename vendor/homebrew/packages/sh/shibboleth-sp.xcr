@@ -98,6 +98,12 @@ import "apr" as i0, "apr-util" as i1, "pkg-config" as i2, "boost" as i3, "httpd"
 pkg(
   name: "shibboleth-sp",
   version: "3.2.2",
+  description: "Shibboleth 2 Service Provider daemon",
+  url: "https://wiki.shibboleth.net/confluence/display/SHIB2",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

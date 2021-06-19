@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "fortio",
   version: "1.16.0",
+  description: "HTTP and gRPC load testing and visualization tool and server",
+  url: "https://fortio.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

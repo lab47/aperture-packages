@@ -125,6 +125,12 @@ import "ffmpeg" as i0, "flac" as i1, "jpeg" as i2, "libexif" as i3, "libid3tag" 
 pkg(
   name: "minidlna",
   version: "1.3.0",
+  description: "Media server software, compliant with DLNA/UPnP-AV clients",
+  url: "https://sourceforge.net/projects/minidlna/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

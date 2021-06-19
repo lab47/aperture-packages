@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "imath",
   version: "3.0.4",
+  description: "Library of 2D and 3D vector, matrix, and math operations",
+  url: "https://www.openexr.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

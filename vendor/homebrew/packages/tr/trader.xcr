@@ -47,6 +47,12 @@ import "pkg-config" as i0, "gettext" as i1, "ncurses" as i2
 pkg(
   name: "trader",
   version: "7.16",
+  description: "Star Traders",
+  url: "https://www.zap.org.au/projects/trader/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "pkg-config" as i0, "fftw" as i1, "liquid-dsp" as i2, "luajit-openresty" 
 pkg(
   name: "luaradio",
   version: "0.10.0",
+  description: "Lightweight, embeddable flow graph signal processing framework for SDR",
+  url: "https://luaradio.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

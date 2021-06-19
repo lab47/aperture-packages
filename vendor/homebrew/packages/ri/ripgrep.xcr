@@ -52,6 +52,12 @@ import "asciidoctor" as i0, "pkg-config" as i1, "rust" as i2, "pcre2" as i3
 pkg(
   name: "ripgrep",
   version: "13.0.0",
+  description: "Search tool like grep and The Silver Searcher",
+  url: "https://github.com/BurntSushi/ripgrep",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

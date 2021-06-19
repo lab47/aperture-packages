@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "dstask",
   version: "0.24.1",
+  description: "Git-powered personal task tracker",
+  url: "https://github.com/naggie/dstask",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

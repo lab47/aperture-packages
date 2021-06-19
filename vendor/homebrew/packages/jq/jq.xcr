@@ -56,6 +56,12 @@ import "oniguruma" as i0
 pkg(
   name: "jq",
   version: "1.6",
+  description: "Lightweight and flexible command-line JSON processor",
+  url: "https://stedolan.github.io/jq/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

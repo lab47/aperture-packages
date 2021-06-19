@@ -77,6 +77,12 @@ import "freetype" as i0, "libice" as i1, "libsm" as i2, "libx11" as i3, "libxext
 pkg(
   name: "lesstif",
   version: "0.95.2",
+  description: "Open source implementation of OSF/Motif",
+  url: "https://lesstif.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

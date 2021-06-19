@@ -43,6 +43,12 @@ import "cmake" as i0, "boost" as i1, "gdal" as i2
 pkg(
   name: "points2grid",
   version: "1.3.1",
+  description: "Generate digital elevation models using local griding",
+  url: "https://github.com/CRREL/points2grid",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

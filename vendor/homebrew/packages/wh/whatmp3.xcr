@@ -42,12 +42,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "flac" as i2, "gdbm" as i3, "lame" as i4, "libffi" as i5, "libogg" as i6, "mktorrent" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "flac" as i0, "lame" as i1, "mktorrent" as i2, "python@3.9" as i3
 
 pkg(
   name: "whatmp3",
   version: "3.8",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  description: "Small script to create mp3 torrents out of FLACs",
+  url: "https://github.com/RecursiveForest/whatmp3",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "whatmp3.rb"), formula)

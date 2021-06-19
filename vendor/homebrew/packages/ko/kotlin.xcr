@@ -46,6 +46,12 @@ import "openjdk" as i0
 pkg(
   name: "kotlin",
   version: "1.5.10",
+  description: "Statically typed programming language for the JVM",
+  url: "https://kotlinlang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

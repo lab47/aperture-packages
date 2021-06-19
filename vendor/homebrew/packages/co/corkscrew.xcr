@@ -66,6 +66,12 @@ import "libtool" as i0
 pkg(
   name: "corkscrew",
   version: "2.0",
+  description: "Tunnel SSH through HTTP proxies",
+  url: "https://packages.debian.org/sid/corkscrew",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

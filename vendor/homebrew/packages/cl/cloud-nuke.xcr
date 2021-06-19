@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "cloud-nuke",
   version: "0.1.30",
+  description: "CLI tool to nuke (delete) cloud resources",
+  url: "https://gruntwork.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

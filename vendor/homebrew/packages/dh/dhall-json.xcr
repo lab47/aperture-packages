@@ -40,6 +40,12 @@ import "cabal-install" as i0, "ghc" as i1, "ncurses" as i2, "zlib" as i3
 pkg(
   name: "dhall-json",
   version: "1.7.7",
+  description: "Dhall to JSON compiler and a Dhall to YAML compiler",
+  url: "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-json",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

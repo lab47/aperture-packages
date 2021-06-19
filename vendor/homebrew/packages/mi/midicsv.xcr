@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "midicsv",
   version: "1.1",
+  description: "Convert MIDI audio files to human-readable CSV format",
+  url: "https://www.fourmilab.ch/webtools/midicsv",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

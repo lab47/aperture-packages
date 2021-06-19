@@ -57,6 +57,12 @@ import "jpeg" as i0, "netpbm" as i1
 pkg(
   name: "gocr",
   version: "0.52",
+  description: "Optical Character Recognition (OCR), converts images back to text",
+  url: "https://wasd.urz.uni-magdeburg.de/jschulen/ocr/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

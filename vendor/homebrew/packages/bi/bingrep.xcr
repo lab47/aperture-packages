@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "bingrep",
   version: "0.8.5",
+  description: "Greps through binaries from various OSs and architectures",
+  url: "https://github.com/m4b/bingrep",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

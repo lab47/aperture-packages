@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "setweblocthumb",
   version: "1.0.0",
+  description: "Assigns custom icons to webloc files",
+  url: "https://hasseg.org/setWeblocThumb/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "libxrender" as i3, 
 pkg(
   name: "libxrandr",
   version: "1.5.2",
+  description: "X.Org: X Resize, Rotate and Reflection extension library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

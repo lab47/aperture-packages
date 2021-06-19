@@ -84,12 +84,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "bazel" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "m4" as i7, "mpdecimal" as i8, "ncurses" as i9, "openjdk@11" as i10, "openssl@1.1" as i11, "perl" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "bazel" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "libtensorflow@1",
   version: "1.15.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "C interface for Google's OS library for Machine Intelligence",
+  url: "https://www.tensorflow.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtensorflow@1.rb"), formula)

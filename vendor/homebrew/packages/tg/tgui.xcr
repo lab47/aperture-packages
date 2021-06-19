@@ -53,6 +53,12 @@ import "cmake" as i0, "sfml" as i1
 pkg(
   name: "tgui",
   version: "0.9.1",
+  description: "GUI library for use with sfml",
+  url: "https://tgui.eu",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

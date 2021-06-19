@@ -43,6 +43,12 @@ import "cmake" as i0
 pkg(
   name: "libvidstab",
   version: "1.1.0",
+  description: "Transcode video stabilization plugin",
+  url: "http://public.hronopik.de/vid.stab/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

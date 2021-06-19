@@ -51,6 +51,12 @@ import "pkg-config" as i0, "libgcrypt" as i1, "pcre" as i2, "poppler" as i3
 pkg(
   name: "pdfgrep",
   version: "2.1.2",
+  description: "Search PDFs for strings matching a regular expression",
+  url: "https://pdfgrep.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mafft",
   version: "7.481",
+  description: "Multiple alignments with fast Fourier transforms",
+  url: "https://mafft.cbrc.jp/alignment/software/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

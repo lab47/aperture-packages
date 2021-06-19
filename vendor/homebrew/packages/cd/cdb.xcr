@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cdb",
   version: "0.75",
+  description: "Create and read constant databases",
+  url: "https://cr.yp.to/cdb.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

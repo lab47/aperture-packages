@@ -57,6 +57,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
 pkg(
   name: "shellinabox",
   version: "2.20",
+  description: "Export command-line tools to web based terminal emulator",
+  url: "https://github.com/shellinabox/shellinabox",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

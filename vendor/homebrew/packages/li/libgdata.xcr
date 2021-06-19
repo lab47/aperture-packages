@@ -93,6 +93,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" a
 pkg(
   name: "libgdata",
   version: "0.18.1",
+  description: "GLib-based library for accessing online service APIs",
+  url: "https://wiki.gnome.org/Projects/libgdata",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

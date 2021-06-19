@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dex",
   version: "1.0",
+  description: "Dextrous text editor",
+  url: "https://github.com/tihirvon/dex",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

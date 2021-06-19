@@ -40,6 +40,12 @@ import "pkg-config" as i0, "libdvdread" as i1
 pkg(
   name: "libdvdnav",
   version: "6.1.1",
+  description: "DVD navigation library",
+  url: "https://www.videolan.org/developers/libdvdnav.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

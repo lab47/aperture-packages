@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bonnie++",
   version: "2.00a",
+  description: "Benchmark suite for file systems and hard drives",
+  url: "https://www.coker.com.au/bonnie++/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

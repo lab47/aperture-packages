@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "lego",
   version: "4.4.0",
+  description: "Let's Encrypt client and ACME library",
+  url: "https://go-acme.github.io/lego/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

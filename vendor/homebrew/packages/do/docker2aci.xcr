@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "docker2aci",
   version: "0.17.2",
+  description: "Library and CLI tool to convert Docker images to ACIs",
+  url: "https://github.com/appc/docker2aci",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

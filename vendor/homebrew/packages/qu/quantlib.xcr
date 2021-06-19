@@ -53,6 +53,12 @@ import "boost" as i0
 pkg(
   name: "quantlib",
   version: "1.22",
+  description: "Library for quantitative finance",
+  url: "https://www.quantlib.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

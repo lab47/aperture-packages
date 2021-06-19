@@ -78,6 +78,12 @@ import "lzip" as i0
 pkg(
   name: "ed",
   version: "1.17",
+  description: "Classic UNIX line editor",
+  url: "https://www.gnu.org/software/ed/ed.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

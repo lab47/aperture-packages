@@ -54,6 +54,12 @@ import "lzo" as i0
 pkg(
   name: "lzop",
   version: "1.04",
+  description: "File compressor",
+  url: "https://www.lzop.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

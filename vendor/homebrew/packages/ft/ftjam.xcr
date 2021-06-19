@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ftjam",
   version: "2.5.2",
+  description: "Build tool that can be used as a replacement for Make",
+  url: "https://www.freetype.org/jam/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

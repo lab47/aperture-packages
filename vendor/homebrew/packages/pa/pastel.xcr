@@ -43,6 +43,12 @@ import "rust" as i0
 pkg(
   name: "pastel",
   version: "0.8.0",
+  description: "Command-line tool to generate, analyze, convert and manipulate colors",
+  url: "https://github.com/sharkdp/pastel",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "ocaml" as i0
 pkg(
   name: "dune",
   version: "2.8.5",
+  description: "Composable build system for OCaml",
+  url: "https://dune.build/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

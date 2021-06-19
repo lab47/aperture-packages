@@ -53,6 +53,12 @@ import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2, "ncurses" as i3, "
 pkg(
   name: "taskell",
   version: "1.11.0",
+  description: "Command-line Kanban board/task manager with support for Trello",
+  url: "https://taskell.app",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

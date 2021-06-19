@@ -102,6 +102,12 @@ import "gd" as i0, "libusb-compat" as i1
 pkg(
   name: "apcupsd",
   version: "3.14.14",
+  description: "Daemon for controlling APC UPSes",
+  url: "http://www.apcupsd.org",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

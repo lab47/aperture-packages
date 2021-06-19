@@ -65,6 +65,12 @@ import "cmake" as i0, "apr" as i1, "apr-util" as i2, "libevent" as i3, "ossp-uui
 pkg(
   name: "openmama",
   version: "6.3.1",
+  description: "Open source high performance messaging API for various Market Data sources",
+  url: "https://openmama.finos.org",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

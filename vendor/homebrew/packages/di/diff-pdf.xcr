@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "diff-pdf",
   version: "0.5",
+  description: "Visually compare two PDF files",
+  url: "https://vslavik.github.io/diff-pdf/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "yasm" as i3
 pkg(
   name: "kvazaar",
   version: "2.0.0",
+  description: "Ultravideo HEVC encoder",
+  url: "https://github.com/ultravideo/kvazaar",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

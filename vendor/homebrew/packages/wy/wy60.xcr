@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wy60",
   version: "2.0.9",
+  description: "Wyse 60 compatible terminal emulator",
+  url: "https://code.google.com/archive/p/wy60/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

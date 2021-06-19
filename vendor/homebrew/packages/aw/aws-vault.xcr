@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "aws-vault",
   version: "6.2.0",
+  description: "Securely store and access AWS credentials in development environments",
+  url: "https://github.com/99designs/aws-vault",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

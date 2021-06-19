@@ -45,6 +45,12 @@ import "libpng" as i0
 pkg(
   name: "icoutils",
   version: "0.32.3",
+  description: "Create and extract MS Windows icons and cursors",
+  url: "https://www.nongnu.org/icoutils/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

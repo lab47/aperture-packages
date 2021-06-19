@@ -44,6 +44,12 @@ import "zlib" as i0
 pkg(
   name: "flow-tools",
   version: "0.68.5.1",
+  description: "Collect, send, process, and generate NetFlow data reports",
+  url: "https://code.google.com/archive/p/flow-tools/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "openjdk" as i0
 pkg(
   name: "mockserver",
   version: "5.11.2",
+  description: "Mock HTTP server and proxy",
+  url: "https://www.mock-server.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

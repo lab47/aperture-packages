@@ -55,6 +55,12 @@ import "cmake" as i0, "jpeg-turbo" as i1, "libpng" as i2, "lzo" as i3, "openssl@
 pkg(
   name: "libvnc",
   version: "0.9.13",
+  description: "Cross-platform C libraries for easy implementation of VNC server or client",
+  url: "https://libvnc.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

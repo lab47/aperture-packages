@@ -150,6 +150,12 @@ import "gnu-sed" as i0, "openjdk" as i1, "pkg-config" as i2, "arpack" as i3, "ep
 pkg(
   name: "octave",
   version: "6.2.0",
+  description: "High-level interpreted language for numerical computing",
+  url: "https://www.gnu.org/software/octave/index.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
 
   def install(ctx) {

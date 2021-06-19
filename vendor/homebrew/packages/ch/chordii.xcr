@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chordii",
   version: "4.5.3b",
+  description: "Text file to music sheet converter",
+  url: "https://www.vromans.org/johan/projects/Chordii/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

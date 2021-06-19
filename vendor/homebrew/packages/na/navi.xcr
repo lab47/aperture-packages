@@ -40,6 +40,12 @@ import "rust" as i0, "fzf" as i1, "zlib" as i2
 pkg(
   name: "navi",
   version: "2.16.0",
+  description: "Interactive cheatsheet tool for the command-line",
+  url: "https://github.com/denisidoro/navi",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

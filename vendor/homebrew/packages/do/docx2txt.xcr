@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docx2txt",
   version: "1.4",
+  description: "Converts Microsoft Office docx documents to equivalent text documents",
+  url: "https://docx2txt.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

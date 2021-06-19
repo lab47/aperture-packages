@@ -116,12 +116,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gettext" as i3, "libffi" as i4, "libxml2" as i5, "meson" as i6, "mpdecimal" as i7, "ncurses" as i8, "ninja" as i9, "openssl@1.1" as i10, "pcre" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "libffi" as i4, "pcre" as i5, "python@3.9" as i6
 
 pkg(
   name: "glib",
   version: "2.68.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Core application library for C",
+  url: "https://developer.gnome.org/glib/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glib.rb"), formula)

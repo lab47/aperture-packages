@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-git-prompt",
   version: "0.5",
+  description: "Informative git prompt for zsh",
+  url: "https://github.com/olivierverdier/zsh-git-prompt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

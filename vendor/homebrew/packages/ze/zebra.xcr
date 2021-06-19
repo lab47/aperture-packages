@@ -52,6 +52,12 @@ import "icu4c" as i0, "yaz" as i1
 pkg(
   name: "zebra",
   version: "2.2.2",
+  description: "Information management system",
+  url: "https://www.indexdata.com/resources/software/zebra/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

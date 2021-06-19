@@ -67,6 +67,12 @@ import "python@3.8" as i0
 pkg(
   name: "mdv",
   version: "1.7.4",
+  description: "Styled terminal markdown viewer",
+  url: "https://github.com/axiros/terminal_markdown_viewer",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

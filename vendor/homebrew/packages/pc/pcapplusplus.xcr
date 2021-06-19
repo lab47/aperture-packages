@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pcapplusplus",
   version: "21.05",
+  description: "C++ network sniffing, packet parsing and crafting framework",
+  url: "https://pcapplusplus.github.io",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

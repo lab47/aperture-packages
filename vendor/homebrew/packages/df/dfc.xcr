@@ -42,6 +42,12 @@ import "cmake" as i0, "gettext" as i1
 pkg(
   name: "dfc",
   version: "3.1.1",
+  description: "Display graphs and colors of file system space/usage",
+  url: "https://projects.gw-computing.net/projects/dfc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

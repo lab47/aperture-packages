@@ -160,6 +160,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "jbig2dec" as i
 pkg(
   name: "ghostscript",
   version: "9.54.0",
+  description: "Interpreter for PostScript and PDF",
+  url: "https://www.ghostscript.com/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

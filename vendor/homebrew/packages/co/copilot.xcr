@@ -60,6 +60,12 @@ import "go" as i0, "node" as i1
 pkg(
   name: "copilot",
   version: "1.7.1",
+  description: "CLI tool for Amazon ECS and AWS Fargate",
+  url: "https://github.com/aws/copilot-cli/wiki",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

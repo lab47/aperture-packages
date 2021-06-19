@@ -67,6 +67,12 @@ import "openjdk@11" as i0
 pkg(
   name: "sonarqube",
   version: "8.9.0.43852",
+  description: "Manage code quality",
+  url: "https://www.sonarqube.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -81,6 +81,12 @@ import "help2man" as i0, "gettext" as i1, "bison" as i2, "m4" as i3
 pkg(
   name: "flex",
   version: "2.6.4",
+  description: "Fast Lexical Analyzer, generates Scanners (tokenizers)",
+  url: "https://github.com/westes/flex",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

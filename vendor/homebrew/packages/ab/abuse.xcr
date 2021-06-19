@@ -113,6 +113,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "abuse",
   version: "0.8",
+  description: "Dark 2D side-scrolling platform game",
+  url: "http://abuse.zoy.org/",
+  metadata: %{
+    "license": "Public Domain and GPL-2.0-or-later and WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "homebrew-install" as hi
 pkg(
   name: "launchdns",
   version: "1.0.4",
+  description: "Mini DNS server designed solely to route queries to localhost",
+  url: "https://github.com/josh/launchdns",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

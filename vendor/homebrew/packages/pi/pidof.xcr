@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pidof",
   version: "0.1.4",
+  description: "Display the PID number for a given process name",
+  url: "http://www.nightproductions.net/cli.htm",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

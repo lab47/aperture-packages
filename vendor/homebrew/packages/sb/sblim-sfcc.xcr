@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
 pkg(
   name: "sblim-sfcc",
   version: "2.2.8",
+  description: "Project to enhance the manageability of GNU/Linux system",
+  url: "https://sourceforge.net/projects/sblim/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

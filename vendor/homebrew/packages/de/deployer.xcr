@@ -37,6 +37,12 @@ import "php" as i0
 pkg(
   name: "deployer",
   version: "6.8.0",
+  description: "Deployment tool written in PHP with support for popular frameworks",
+  url: "https://deployer.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

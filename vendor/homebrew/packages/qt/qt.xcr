@@ -246,12 +246,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "assimp" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "cmake" as i8, "cups" as i9, "dbus" as i10, "docbook" as i11, "docbook-xsl" as i12, "double-conversion" as i13, "expat" as i14, "freetype" as i15, "gdbm" as i16, "gettext" as i17, "glib" as i18, "gnu-getopt" as i19, "icu4c" as i20, "jasper" as i21, "jpeg" as i22, "krb5" as i23, "libb2" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libpng" as i28, "libproxy" as i29, "libtiff" as i30, "libtool" as i31, "libxml2" as i32, "libxslt" as i33, "m4" as i34, "meson" as i35, "mpdecimal" as i36, "ncurses" as i37, "ninja" as i38, "openssl@1.1" as i39, "pcre" as i40, "pcre2" as i41, "perl" as i42, "pkg-config" as i43, "python@3.9" as i44, "readline" as i45, "sphinx-doc" as i46, "sqlite" as i47, "unzip" as i48, "webp" as i49, "xmlto" as i50, "xz" as i51, "zip" as i52, "zlib" as i53, "zstd" as i54
+import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "assimp" as i3, "brotli" as i4, "dbus" as i5, "double-conversion" as i6, "freetype" as i7, "glib" as i8, "icu4c" as i9, "jasper" as i10, "jpeg" as i11, "libb2" as i12, "libpng" as i13, "libproxy" as i14, "libtiff" as i15, "pcre2" as i16, "python@3.9" as i17, "sqlite" as i18, "webp" as i19, "zstd" as i20, "cups" as i21, "krb5" as i22, "perl" as i23, "zlib" as i24
 
 pkg(
   name: "qt",
   version: "6.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54],
+  description: "Cross-platform application and UI framework",
+  url: "https://www.qt.io/",
+  metadata: %{
+    "license": "GFDL-1.3-only and GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qt.rb"), formula)

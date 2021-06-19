@@ -95,6 +95,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bash",
   version: "5.1.8",
+  description: "Bourne-Again SHell, a UNIX command interpreter",
+  url: "https://www.gnu.org/software/bash/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

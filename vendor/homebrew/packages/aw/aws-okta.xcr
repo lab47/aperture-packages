@@ -64,6 +64,12 @@ import "go" as i0, "govendor" as i1
 pkg(
   name: "aws-okta",
   version: "1.0.11",
+  description: "Authenticate with AWS using your Okta credentials",
+  url: "https://github.com/segmentio/aws-okta",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

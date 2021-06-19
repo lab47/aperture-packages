@@ -71,6 +71,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "arpack",
   version: "3.8.0",
+  description: "Routines to solve large scale eigenvalue problems",
+  url: "https://github.com/opencollab/arpack-ng",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "cmake" as i0
 pkg(
   name: "gaffitter",
   version: "1.0.0",
+  description: "Efficiently fit files/folders to fixed size volumes (like DVDs)",
+  url: "https://gaffitter.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

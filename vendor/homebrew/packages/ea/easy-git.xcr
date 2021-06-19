@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "easy-git",
   version: "1.7.5.2",
+  description: "Wrapper to simplify learning and using git",
+  url: "https://people.gnome.org/~newren/eg/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

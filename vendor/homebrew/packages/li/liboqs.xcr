@@ -47,6 +47,12 @@ import "cmake" as i0, "doxygen" as i1, "ninja" as i2, "openssl@1.1" as i3
 pkg(
   name: "liboqs",
   version: "0.6.0",
+  description: "Library for quantum-safe cryptography",
+  url: "https://openquantumsafe.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

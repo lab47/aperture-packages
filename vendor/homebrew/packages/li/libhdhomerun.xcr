@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libhdhomerun",
   version: "20210224",
+  description: "C library for controlling SiliconDust HDHomeRun TV tuners",
+  url: "https://www.silicondust.com/support/linux/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

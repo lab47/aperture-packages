@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "uriparser",
   version: "0.9.5",
+  description: "URI parsing library (strictly RFC 3986 compliant)",
+  url: "https://uriparser.github.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

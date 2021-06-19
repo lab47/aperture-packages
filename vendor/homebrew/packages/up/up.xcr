@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "up",
   version: "0.4",
+  description: "Tool for writing command-line pipes with instant live preview",
+  url: "https://github.com/akavel/up",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

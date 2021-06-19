@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "style-check",
   version: "0.14",
+  description: "Parses latex-formatted text in search of forbidden phrases",
+  url: "https://www.cs.umd.edu/~nspring/software/style-check-readme.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "imagemagick" as i0, "jp2a" as i1
 pkg(
   name: "spaceman-diff",
   version: "1.0.3",
+  description: "Diff images from the command-line",
+  url: "https://github.com/holman/spaceman-diff",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "timedog",
   version: "1.4",
+  description: "Lists files that were saved by a backup of the macOS Time Machine",
+  url: "https://github.com/nlfiedler/timedog",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

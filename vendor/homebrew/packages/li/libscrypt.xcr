@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libscrypt",
   version: "1.21",
+  description: "Library for scrypt",
+  url: "https://lolware.net/libscrypt.html",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

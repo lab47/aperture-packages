@@ -52,6 +52,12 @@ import "rust" as i0
 pkg(
   name: "svgcleaner",
   version: "0.9.5",
+  description: "Cleans your SVG files by removing unnecessary data",
+  url: "https://github.com/RazrFalcon/svgcleaner",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

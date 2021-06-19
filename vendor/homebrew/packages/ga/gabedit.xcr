@@ -58,6 +58,12 @@ import "pkg-config" as i0, "gtk+" as i1, "gtkglext" as i2
 pkg(
   name: "gabedit",
   version: "2.5.0",
+  description: "GUI to computational chemistry packages like Gamess-US, Gaussian, etc.",
+  url: "https://gabedit.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

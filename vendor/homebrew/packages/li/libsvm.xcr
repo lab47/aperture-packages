@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libsvm",
   version: "3.25",
+  description: "Library for support vector machines",
+  url: "https://www.csie.ntu.edu.tw/~cjlin/libsvm/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "pkg-config" as i0, "libusb" as i1
 pkg(
   name: "libusb-compat",
   version: "0.1.5",
+  description: "Library for USB device access",
+  url: "https://libusb.info/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

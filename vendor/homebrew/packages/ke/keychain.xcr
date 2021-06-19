@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "keychain",
   version: "2.8.5",
+  description: "User-friendly front-end to ssh-agent(1)",
+  url: "https://www.funtoo.org/Keychain",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

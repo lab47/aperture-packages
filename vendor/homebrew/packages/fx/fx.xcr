@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "fx",
   version: "20.0.2",
+  description: "Command-line JSON processing tool",
+  url: "https://github.com/antonmedv/fx",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

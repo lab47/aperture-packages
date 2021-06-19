@@ -64,6 +64,12 @@ import "gmp" as i0
 pkg(
   name: "isl@0.18",
   version: "0.18",
+  description: "Integer Set Library for the polyhedral model",
+  url: "http://isl.gforge.inria.fr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

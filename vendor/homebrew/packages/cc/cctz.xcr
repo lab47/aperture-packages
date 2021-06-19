@@ -67,6 +67,12 @@ import "cmake" as i0
 pkg(
   name: "cctz",
   version: "2.3",
+  description: "C++ library for translating between absolute and civil times",
+  url: "https://github.com/google/cctz",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

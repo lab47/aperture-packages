@@ -82,6 +82,12 @@ import "scons" as i0
 pkg(
   name: "gpsd",
   version: "3.21",
+  description: "Global Positioning System (GPS) daemon",
+  url: "http://catb.org/gpsd/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

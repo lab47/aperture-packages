@@ -39,6 +39,12 @@ import "libtool" as i0, "libmaa" as i1
 pkg(
   name: "dict",
   version: "1.13.0",
+  description: "Dictionary Server Protocol (RFC2229) client",
+  url: "http://www.dict.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

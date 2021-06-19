@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "abnfgen",
   version: "0.20",
+  description: "Quickly generate random documents that match an ABFN grammar",
+  url: "http://www.quut.com/abnfgen/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

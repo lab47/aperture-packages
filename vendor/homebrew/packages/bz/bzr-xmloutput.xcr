@@ -37,6 +37,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-xmloutput",
   version: "0.8.8",
+  description: "Bazaar plugin that provides a option to generate XML output",
+  url: "https://launchpad.net/bzr-xmloutput",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

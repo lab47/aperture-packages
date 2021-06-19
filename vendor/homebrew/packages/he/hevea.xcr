@@ -46,6 +46,12 @@ import "ocamlbuild" as i0, "ocaml" as i1
 pkg(
   name: "hevea",
   version: "2.35",
+  description: "LaTeX-to-HTML translator",
+  url: "http://hevea.inria.fr/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "tre" as i0
 pkg(
   name: "crm114",
   version: "20100106",
+  description: "Examine, sort, filter or alter logs or data streams",
+  url: "https://crm114.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "rust" as i0
 pkg(
   name: "rm-improved",
   version: "0.13.1",
+  description: "Command-line deletion tool focused on safety, ergonomics, and performance",
+  url: "https://github.com/nivekuil/rip",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

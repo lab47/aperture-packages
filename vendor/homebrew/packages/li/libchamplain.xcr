@@ -122,6 +122,12 @@ import "gnome-common" as i0, "gobject-introspection" as i1, "meson" as i2, "ninj
 pkg(
   name: "libchamplain",
   version: "0.12.20",
+  description: "ClutterActor for displaying maps",
+  url: "https://wiki.gnome.org/Projects/libchamplain",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

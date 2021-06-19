@@ -44,6 +44,12 @@ import "pod2man" as i0, "perl" as i1
 pkg(
   name: "rename",
   version: "1.601",
+  description: "Perl-powered file rename script with many helpful built-ins",
+  url: "http://plasmasturm.org/code/rename",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

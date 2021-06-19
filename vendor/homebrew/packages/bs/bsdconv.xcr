@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bsdconv",
   version: "11.6",
+  description: "Charset/encoding converter library",
+  url: "https://github.com/buganini/bsdconv",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tpp",
   version: "1.3.1",
+  description: "Ncurses-based presentation tool",
+  url: "https://synflood.at/tpp.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

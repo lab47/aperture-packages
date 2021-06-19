@@ -61,6 +61,12 @@ import "gettext" as i0
 pkg(
   name: "cracklib",
   version: "2.9.7",
+  description: "LibCrack password checking library",
+  url: "https://github.com/cracklib/cracklib",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

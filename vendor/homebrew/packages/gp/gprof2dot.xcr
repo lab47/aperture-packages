@@ -194,12 +194,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "doxygen" as i12, "expat" as i13, "flex" as i14, "fontconfig" as i15, "freetype" as i16, "fribidi" as i17, "gd" as i18, "gdbm" as i19, "gdk-pixbuf" as i20, "gettext" as i21, "ghostscript" as i22, "glib" as i23, "gobject-introspection" as i24, "gperf" as i25, "graphite2" as i26, "graphviz" as i27, "groff" as i28, "gts" as i29, "harfbuzz" as i30, "help2man" as i31, "icu4c" as i32, "jasper" as i33, "jbig2dec" as i34, "jemalloc" as i35, "jpeg" as i36, "krb5" as i37, "libev" as i38, "libffi" as i39, "libidn" as i40, "libidn2" as i41, "libpng" as i42, "libpthread-stubs" as i43, "librsvg" as i44, "libssh2" as i45, "libtiff" as i46, "libtool" as i47, "libunistring" as i48, "libx11" as i49, "libxau" as i50, "libxcb" as i51, "libxdmcp" as i52, "libxext" as i53, "libxml2" as i54, "libxrender" as i55, "libyaml" as i56, "little-cms2" as i57, "lz4" as i58, "lzo" as i59, "m4" as i60, "meson" as i61, "mpdecimal" as i62, "ncurses" as i63, "netpbm" as i64, "nghttp2" as i65, "ninja" as i66, "openjdk" as i67, "openjpeg" as i68, "openldap" as i69, "openssl@1.1" as i70, "pango" as i71, "pcre" as i72, "perl" as i73, "pixman" as i74, "pkg-config" as i75, "psutils" as i76, "python@3.9" as i77, "readline" as i78, "rtmpdump" as i79, "ruby" as i80, "rust" as i81, "scons" as i82, "sphinx-doc" as i83, "sqlite" as i84, "subversion" as i85, "swig" as i86, "texinfo" as i87, "uchardet" as i88, "unzip" as i89, "utf8proc" as i90, "util-macros" as i91, "webp" as i92, "xcb-proto" as i93, "xorgproto" as i94, "xtrans" as i95, "xz" as i96, "zip" as i97, "zlib" as i98, "zstd" as i99
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "graphviz" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "gprof2dot",
   version: "2021.2.21",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99],
+  description: "Convert the output from many profilers into a Graphviz dot graph",
+  url: "https://github.com/jrfonseca/gprof2dot",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gprof2dot.rb"), formula)

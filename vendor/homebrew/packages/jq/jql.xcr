@@ -41,6 +41,12 @@ import "rust" as i0
 pkg(
   name: "jql",
   version: "2.9.4",
+  description: "JSON query language CLI tool",
+  url: "https://github.com/yamafaktory/jql",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

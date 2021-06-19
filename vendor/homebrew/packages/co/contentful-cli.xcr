@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "contentful-cli",
   version: "1.6.40",
+  description: "Contentful command-line tools",
+  url: "https://github.com/contentful/contentful-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

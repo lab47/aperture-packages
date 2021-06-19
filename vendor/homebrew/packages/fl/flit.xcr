@@ -65,7 +65,7 @@ class Flit < Formula
 
   test do
     (testpath/"sample.py").write <<~END
-      """A sample package"""
+      \"\"\"A sample package\"\"\"
       __version__ = "0.1"
     END
     (testpath/"pyproject.toml").write <<~END
@@ -92,6 +92,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "flit",
   version: "3.2.0",
+  description: "Simplified packaging of Python modules",
+  url: "https://github.com/takluyver/flit",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

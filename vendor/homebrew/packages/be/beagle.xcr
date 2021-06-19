@@ -64,6 +64,12 @@ import "autoconf" as i0, "automake" as i1, "doxygen" as i2, "libtool" as i3, "op
 pkg(
   name: "beagle",
   version: "3.1.2",
+  description: "Evaluate the likelihood of sequence evolution on trees",
+  url: "https://github.com/beagle-dev/beagle-lib",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

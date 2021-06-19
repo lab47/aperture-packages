@@ -112,6 +112,12 @@ import "icu4c" as i0, "bzip2" as i1, "zlib" as i2
 pkg(
   name: "boost",
   version: "1.76.0",
+  description: "Collection of portable C++ source libraries",
+  url: "https://www.boost.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

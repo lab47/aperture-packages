@@ -90,6 +90,12 @@ import "automake" as i0, "mhash" as i1, "zlib" as i2
 pkg(
   name: "mcrypt",
   version: "2.6.8",
+  description: "Replacement for the old crypt package and crypt(1) command",
+  url: "https://mcrypt.sourceforge.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

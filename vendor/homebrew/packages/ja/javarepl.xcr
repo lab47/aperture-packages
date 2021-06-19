@@ -32,6 +32,12 @@ import "openjdk@8" as i0
 pkg(
   name: "javarepl",
   version: "428",
+  description: "Read Eval Print Loop (REPL) for Java",
+  url: "https://github.com/albertlatacz/java-repl",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

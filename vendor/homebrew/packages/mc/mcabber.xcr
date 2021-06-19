@@ -75,6 +75,12 @@ import "pkg-config" as i0, "glib" as i1, "gpgme" as i2, "libgcrypt" as i3, "libi
 pkg(
   name: "mcabber",
   version: "1.1.2",
+  description: "Console Jabber client",
+  url: "https://mcabber.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

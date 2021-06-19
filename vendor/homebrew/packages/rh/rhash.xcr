@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rhash",
   version: "1.4.1",
+  description: "Utility for computing and verifying hash sums of files",
+  url: "https://sourceforge.net/projects/rhash/",
+  metadata: %{
+    "license": "0BSD",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

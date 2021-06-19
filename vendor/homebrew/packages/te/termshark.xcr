@@ -111,6 +111,12 @@ import "go" as i0, "wireshark" as i1
 pkg(
   name: "termshark",
   version: "2.2.0",
+  description: "Terminal UI for tshark, inspired by Wireshark",
+  url: "https://termshark.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

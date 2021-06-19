@@ -123,6 +123,12 @@ import "pkg-config" as i0, "scons" as i1, "apr" as i2, "apr-util" as i3, "openss
 pkg(
   name: "subversion@1.8",
   version: "1.8.19",
+  description: "Version control system",
+  url: "https://subversion.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

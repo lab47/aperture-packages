@@ -39,6 +39,12 @@ import "coreutils" as i0
 pkg(
   name: "http-parser",
   version: "2.9.4",
+  description: "HTTP request/response parser for c",
+  url: "https://github.com/nodejs/http-parser",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

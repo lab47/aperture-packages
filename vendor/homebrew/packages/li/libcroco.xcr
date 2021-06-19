@@ -45,6 +45,12 @@ import "intltool" as i0, "pkg-config" as i1, "glib" as i2, "libxml2" as i3
 pkg(
   name: "libcroco",
   version: "0.6.13",
+  description: "CSS parsing and manipulation toolkit for GNOME",
+  url: "https://gitlab.gnome.org/GNOME/libcroco",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

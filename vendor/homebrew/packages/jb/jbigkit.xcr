@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jbigkit",
   version: "2.1",
+  description: "JBIG1 data compression standard implementation",
+  url: "https://www.cl.cam.ac.uk/~mgk25/jbigkit/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

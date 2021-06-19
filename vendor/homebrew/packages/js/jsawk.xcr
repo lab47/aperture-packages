@@ -30,6 +30,12 @@ import "spidermonkey" as i0
 pkg(
   name: "jsawk",
   version: "1.4",
+  description: "Like awk, but for JSON, using JavaScript objects and arrays",
+  url: "https://github.com/micha/jsawk",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

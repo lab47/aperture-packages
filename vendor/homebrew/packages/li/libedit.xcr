@@ -59,6 +59,12 @@ import "ncurses" as i0
 pkg(
   name: "libedit",
   version: "20210522-3.1",
+  description: "BSD-style licensed readline alternative",
+  url: "https://thrysoee.dk/editline/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

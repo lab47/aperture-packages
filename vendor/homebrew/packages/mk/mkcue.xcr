@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mkcue",
   version: "1",
+  description: "Generate a CUE sheet from a CD",
+  url: "https://packages.debian.org/sid/mkcue",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

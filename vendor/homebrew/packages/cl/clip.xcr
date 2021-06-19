@@ -46,6 +46,12 @@ import "cmake" as i0, "pkg-config" as i1, "cairo" as i2, "fmt" as i3, "freetype"
 pkg(
   name: "clip",
   version: "0.7",
+  description: "Create high-quality charts from the command-line",
+  url: "https://clip-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

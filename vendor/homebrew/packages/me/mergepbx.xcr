@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mergepbx",
   version: "0.10",
+  description: "Merge XCode project files in git",
+  url: "https://github.com/simonwagner/mergepbx",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

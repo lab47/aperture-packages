@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libpoker-eval",
   version: "138.0",
+  description: "C library to evaluate poker hands",
+  url: "https://pokersource.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

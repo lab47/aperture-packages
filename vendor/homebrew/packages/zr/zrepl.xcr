@@ -88,6 +88,12 @@ import "go" as i0
 pkg(
   name: "zrepl",
   version: "0.4.0",
+  description: "One-stop ZFS backup & replication solution",
+  url: "https://zrepl.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

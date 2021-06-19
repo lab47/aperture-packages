@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "inframap",
   version: "0.6.6",
+  description: "Read your tfstate or HCL to generate a graph",
+  url: "https://github.com/cycloidio/inframap",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

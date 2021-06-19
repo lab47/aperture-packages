@@ -61,6 +61,12 @@ import "cmake" as i0, "pkg-config" as i1, "swig" as i2, "boost" as i3, "confuse"
 pkg(
   name: "libftdi",
   version: "1.5",
+  description: "Library to talk to FTDI chips",
+  url: "https://www.intra2net.com/en/developer/libftdi",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -76,6 +76,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sleepwatcher",
   version: "2.2.1",
+  description: "Monitors sleep, wakeup, and idleness of a Mac",
+  url: "https://www.bernhard-baehr.de/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

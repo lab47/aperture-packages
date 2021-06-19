@@ -25,6 +25,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-extmerge",
   version: "1.0.0",
+  description: "External merge tool support for Bazaar",
+  url: "https://launchpad.net/bzr-extmerge",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "fftw" as i0, "jpeg" as i1, "libice" as i2, "libpng" as i3, "libsm" as i4
 pkg(
   name: "grace",
   version: "5.1.25",
+  description: "WYSIWYG 2D plotting tool for X11",
+  url: "https://plasma-gate.weizmann.ac.il/Grace/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

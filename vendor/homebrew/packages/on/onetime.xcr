@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "onetime",
   version: "1.81",
+  description: "Encryption with one-time pads",
+  url: "https://www.red-bean.com/onetime/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

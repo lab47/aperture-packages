@@ -44,6 +44,12 @@ import "cmake" as i0, "libomp" as i1
 pkg(
   name: "lightgbm",
   version: "3.2.1",
+  description: "Fast, distributed, high performance gradient boosting framework",
+  url: "https://github.com/microsoft/LightGBM",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

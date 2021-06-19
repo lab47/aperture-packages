@@ -49,6 +49,12 @@ import "go" as i0, "protobuf" as i1
 pkg(
   name: "protoc-gen-go",
   version: "1.26.0",
+  description: "Go support for Google's protocol buffers",
+  url: "https://github.com/protocolbuffers/protobuf-go",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

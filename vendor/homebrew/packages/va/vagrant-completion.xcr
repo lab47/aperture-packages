@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vagrant-completion",
   version: "2.2.16",
+  description: "Bash completion for Vagrant",
+  url: "https://github.com/hashicorp/vagrant",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

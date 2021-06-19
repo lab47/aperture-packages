@@ -44,6 +44,12 @@ import "zlib" as i0
 pkg(
   name: "packetq",
   version: "1.4.3",
+  description: "SQL-frontend to PCAP-files",
+  url: "https://www.dns-oarc.net/tools/packetq",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

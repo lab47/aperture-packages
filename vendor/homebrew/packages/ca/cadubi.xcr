@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cadubi",
   version: "1.3.4",
+  description: "Creative ASCII drawing utility",
+  url: "https://github.com/statico/cadubi/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

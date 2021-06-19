@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "libusrsctp",
   version: "0.9.5.0",
+  description: "Portable SCTP userland stack",
+  url: "https://github.com/sctplab/usrsctp",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

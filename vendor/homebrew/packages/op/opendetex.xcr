@@ -45,6 +45,12 @@ import "flex" as i0
 pkg(
   name: "opendetex",
   version: "2.8.9",
+  description: "Tool to strip TeX or LaTeX commands from documents",
+  url: "https://github.com/pkubowicz/opendetex",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

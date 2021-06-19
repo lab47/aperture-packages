@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dmagnetic",
   version: "0.30",
+  description: "Magnetic Scrolls Interpreter",
+  url: "https://www.dettus.net/dMagnetic/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

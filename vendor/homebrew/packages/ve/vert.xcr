@@ -45,6 +45,12 @@ import "dep" as i0, "go" as i1
 pkg(
   name: "vert",
   version: "0.1.0",
+  description: "Command-line version testing",
+  url: "https://github.com/Masterminds/vert",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "spaceship",
   version: "3.12.4",
+  description: "Zsh prompt for Astronauts",
+  url: "https://denysdovhan.com/spaceship-prompt",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

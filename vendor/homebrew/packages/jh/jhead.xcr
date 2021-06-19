@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jhead",
   version: "3.04",
+  description: "Extract Digicam setting info from EXIF JPEG headers",
+  url: "https://www.sentex.net/~mwandel/jhead/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

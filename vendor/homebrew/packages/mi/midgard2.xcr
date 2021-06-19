@@ -58,6 +58,12 @@ import "pkg-config" as i0, "dbus-glib" as i1, "glib" as i2, "libgda" as i3
 pkg(
   name: "midgard2",
   version: "12.09",
+  description: "Generic content repository for web and desktop applications",
+  url: "http://www.midgard-project.org/",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -46,12 +46,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "docbook" as i6, "docbook-xsl" as i7, "expat" as i8, "gdbm" as i9, "gnu-getopt" as i10, "icu4c" as i11, "krb5" as i12, "libffi" as i13, "libgcrypt" as i14, "libgpg-error" as i15, "libpq" as i16, "libtool" as i17, "libxml2" as i18, "libxslt" as i19, "m4" as i20, "mpdecimal" as i21, "ncurses" as i22, "openldap" as i23, "openssl@1.1" as i24, "perl" as i25, "pkg-config" as i26, "postgresql" as i27, "python@3.9" as i28, "readline" as i29, "sqlite" as i30, "unzip" as i31, "xmlto" as i32, "xz" as i33, "zip" as i34, "zlib" as i35
+import "pkg-config" as i0, "python@3.9" as i1, "xmlto" as i2, "libpq" as i3, "postgresql" as i4
 
 pkg(
   name: "libpqxx",
   version: "7.5.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  description: "C++ connector for PostgreSQL",
+  url: "http://pqxx.org/development/libpqxx/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpqxx.rb"), formula)

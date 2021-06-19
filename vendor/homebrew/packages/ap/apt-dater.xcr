@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gettext" as i3, 
 pkg(
   name: "apt-dater",
   version: "1.0.4",
+  description: "Manage package updates on remote hosts using SSH",
+  url: "https://github.com/DE-IBH/apt-dater",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

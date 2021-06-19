@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "desk",
   version: "0.6.0",
+  description: "Lightweight workspace manager for the shell",
+  url: "https://github.com/jamesob/desk",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

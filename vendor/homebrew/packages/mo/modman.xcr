@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "modman",
   version: "1.14",
+  description: "Module deployment script geared towards Magento development",
+  url: "https://github.com/colinmollenhour/modman",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

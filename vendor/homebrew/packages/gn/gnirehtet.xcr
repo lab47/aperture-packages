@@ -80,6 +80,12 @@ import "rust" as i0
 pkg(
   name: "gnirehtet",
   version: "2.5",
+  description: "Reverse tethering tool for Android",
+  url: "https://github.com/Genymobile/gnirehtet",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

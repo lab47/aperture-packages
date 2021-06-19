@@ -56,6 +56,12 @@ import "go" as i0
 pkg(
   name: "rack",
   version: "1.2",
+  description: "CLI for Rackspace",
+  url: "https://github.com/rackspace/rack",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

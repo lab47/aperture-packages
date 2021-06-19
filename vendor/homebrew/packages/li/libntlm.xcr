@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libntlm",
   version: "1.6",
+  description: "Implements Microsoft's NTLM authentication",
+  url: "https://www.nongnu.org/libntlm/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

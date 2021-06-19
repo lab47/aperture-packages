@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "doublecpp",
   version: "0.6.3",
+  description: "Double dispatch in C++",
+  url: "https://doublecpp.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -108,6 +108,12 @@ import "autoconf" as i0, "automake" as i1, "gpgme" as i2, "openssl@1.1" as i3, "
 pkg(
   name: "mutt",
   version: "2.1.0",
+  description: "Mongrel of mail user agents (part elm, pine, mush, mh, etc.)",
+  url: "http://www.mutt.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

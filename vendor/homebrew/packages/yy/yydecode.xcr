@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yydecode",
   version: "0.2.10",
+  description: "Decode yEnc archives",
+  url: "https://yydecode.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -89,6 +89,12 @@ import "cmake" as i0, "gnutls" as i1, "libgcrypt" as i2, "libidn" as i3
 pkg(
   name: "freediameter",
   version: "1.5.0",
+  description: "Open source Diameter (Authentication) protocol implementation",
+  url: "http://www.freediameter.net",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

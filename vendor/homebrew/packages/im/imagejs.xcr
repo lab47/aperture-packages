@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "imagejs",
   version: "0.7.2",
+  description: "Tool to hide JavaScript inside valid image files",
+  url: "https://github.com/jklmnn/imagejs",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

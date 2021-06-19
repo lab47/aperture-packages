@@ -64,12 +64,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "bdw-gc" as i3, "berkeley-db" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "expat" as i8, "gdbm" as i9, "gettext" as i10, "gmp" as i11, "gnu-getopt" as i12, "gnu-sed" as i13, "gnupg" as i14, "gnutls" as i15, "gperf" as i16, "guile" as i17, "jemalloc" as i18, "libassuan" as i19, "libatomic_ops" as i20, "libev" as i21, "libevent" as i22, "libffi" as i23, "libgcrypt" as i24, "libgpg-error" as i25, "libidn2" as i26, "libksba" as i27, "libpng" as i28, "libtasn1" as i29, "libtool" as i30, "libunistring" as i31, "libusb" as i32, "libxml2" as i33, "m4" as i34, "mpdecimal" as i35, "ncurses" as i36, "nettle" as i37, "nghttp2" as i38, "ninja" as i39, "npth" as i40, "openssl@1.1" as i41, "p11-kit" as i42, "pass" as i43, "perl" as i44, "pinentry" as i45, "pkg-config" as i46, "python@3.9" as i47, "qrencode" as i48, "readline" as i49, "sphinx-doc" as i50, "sqlite" as i51, "tree" as i52, "unbound" as i53, "unzip" as i54, "xz" as i55, "zip" as i56, "zlib" as i57
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pass" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "pass-git-helper",
   version: "1.1.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57],
+  description: "Git credential helper interfacing with pass",
+  url: "https://github.com/languitar/pass-git-helper",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pass-git-helper.rb"), formula)

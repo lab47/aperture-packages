@@ -80,6 +80,12 @@ import "rust" as i0
 pkg(
   name: "texlab",
   version: "3.2.0",
+  description: "Implementation of the Language Server Protocol for LaTeX",
+  url: "https://texlab.netlify.com/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

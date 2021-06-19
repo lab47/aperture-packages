@@ -89,6 +89,12 @@ import "go" as i0
 pkg(
   name: "gitlab-runner",
   version: "13.12.0",
+  description: "Official GitLab CI runner",
+  url: "https://gitlab.com/gitlab-org/gitlab-runner",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

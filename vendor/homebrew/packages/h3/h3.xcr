@@ -38,6 +38,12 @@ import "cmake" as i0
 pkg(
   name: "h3",
   version: "3.7.1",
+  description: "Hexagonal hierarchical geospatial indexing system",
+  url: "https://uber.github.io/h3/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

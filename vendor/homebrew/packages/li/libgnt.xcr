@@ -70,6 +70,12 @@ import "gtk-doc" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib"
 pkg(
   name: "libgnt",
   version: "2.14.1",
+  description: "NCurses toolkit for creating text-mode graphical user interfaces",
+  url: "https://keep.imfreedom.org/libgnt/libgnt",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

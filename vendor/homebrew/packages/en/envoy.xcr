@@ -60,6 +60,12 @@ import "automake" as i0, "bazelisk" as i1, "cmake" as i2, "coreutils" as i3, "go
 pkg(
   name: "envoy",
   version: "1.18.3",
+  description: "Cloud-native high-performance edge/middle/service proxy",
+  url: "https://www.envoyproxy.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libplist" as i1, "libtasn1" as i2, "libusbmuxd" as i
 pkg(
   name: "libimobiledevice",
   version: "1.3.0",
+  description: "Library to communicate with iOS devices natively",
+  url: "https://www.libimobiledevice.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -68,6 +68,12 @@ import "libpcap" as i0
 pkg(
   name: "p0f",
   version: "3.09b",
+  description: "Versatile passive OS fingerprinting, masquerade detection tool",
+  url: "https://lcamtuf.coredump.cx/p0f3/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

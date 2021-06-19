@@ -41,6 +41,12 @@ import "autoconf" as i0, "fftw" as i1
 pkg(
   name: "skymaker",
   version: "3.10.5",
+  description: "Generates fake astronomical images",
+  url: "https://www.astromatic.net/software/skymaker",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

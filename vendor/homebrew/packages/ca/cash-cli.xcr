@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "cash-cli",
   version: "4.2.1",
+  description: "Convert currency rates directly from your terminal",
+  url: "https://github.com/xxczaki/cash-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

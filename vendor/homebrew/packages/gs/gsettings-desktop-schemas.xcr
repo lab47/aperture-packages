@@ -59,6 +59,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gsettings-desktop-schemas",
   version: "40.0",
+  description: "GSettings schemas for desktop components",
+  url: "https://download.gnome.org/sources/gsettings-desktop-schemas/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

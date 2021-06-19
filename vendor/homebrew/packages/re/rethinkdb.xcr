@@ -96,6 +96,12 @@ import "boost" as i0, "openssl@1.1" as i1, "curl" as i2
 pkg(
   name: "rethinkdb",
   version: "2.4.1",
+  description: "Open-source database for the realtime web",
+  url: "https://rethinkdb.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

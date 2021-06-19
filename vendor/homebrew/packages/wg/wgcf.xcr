@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "wgcf",
   version: "2.2.3",
+  description: "Generate WireGuard profile from Cloudflare Warp account",
+  url: "https://github.com/ViRb3/wgcf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "check",
   version: "0.15.2",
+  description: "C unit testing framework",
+  url: "https://libcheck.github.io/check/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

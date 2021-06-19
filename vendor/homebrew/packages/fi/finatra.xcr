@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "finatra",
   version: "1.5.3",
+  description: "Scala web framework inspired by Sinatra",
+  url: "http://finatra.info/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

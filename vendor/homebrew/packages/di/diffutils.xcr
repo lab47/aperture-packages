@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "diffutils",
   version: "3.7",
+  description: "File comparison utilities",
+  url: "https://www.gnu.org/s/diffutils/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

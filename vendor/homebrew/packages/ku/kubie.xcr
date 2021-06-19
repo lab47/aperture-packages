@@ -65,6 +65,12 @@ import "rust" as i0
 pkg(
   name: "kubie",
   version: "0.15.0",
+  description: "Much more powerful alternative to kubectx and kubens",
+  url: "https://blog.sbstp.ca/introducing-kubie/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

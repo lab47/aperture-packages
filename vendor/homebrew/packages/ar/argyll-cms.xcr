@@ -67,6 +67,12 @@ import "jam" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3
 pkg(
   name: "argyll-cms",
   version: "2.2.0",
+  description: "ICC compatible color management system",
+  url: "https://www.argyllcms.com/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

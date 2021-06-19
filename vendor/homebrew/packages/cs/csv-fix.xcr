@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "csv-fix",
   version: "1.6",
+  description: "Tool for manipulating CSV data",
+  url: "https://neilb.bitbucket.io/csvfix/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "openjdk" as i0
 pkg(
   name: "batik",
   version: "1.14",
+  description: "Java-based toolkit for SVG images",
+  url: "https://xmlgraphics.apache.org/batik/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "gtmess",
   version: "0.97",
+  description: "Console MSN messenger client",
+  url: "https://gtmess.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

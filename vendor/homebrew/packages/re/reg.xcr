@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "reg",
   version: "0.16.1",
+  description: "Docker registry v2 command-line client",
+  url: "https://r.j3ss.co",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

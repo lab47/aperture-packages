@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "gojq",
   version: "0.12.4",
+  description: "Pure Go implementation of jq",
+  url: "https://github.com/itchyny/gojq",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

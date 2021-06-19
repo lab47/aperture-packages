@@ -37,6 +37,12 @@ import "ruby" as i0
 pkg(
   name: "gist",
   version: "6.0.0",
+  description: "Command-line utility for uploading Gists",
+  url: "https://github.com/defunkt/gist",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

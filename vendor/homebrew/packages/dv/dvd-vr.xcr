@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dvd-vr",
   version: "0.9.7",
+  description: "Utility to identify and extract recordings from DVD-VR files",
+  url: "https://www.pixelbeat.org/programs/dvd-vr/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

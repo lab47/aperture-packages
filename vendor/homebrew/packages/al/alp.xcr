@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "alp",
   version: "1.0.3",
+  description: "Access Log Profiler",
+  url: "https://github.com/tkuchiki/alp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "snappy" as i0, "zlib" as i1
 pkg(
   name: "wiredtiger",
   version: "10.0.0",
+  description: "High performance NoSQL extensible platform for data management",
+  url: "https://source.wiredtiger.com/",
+  metadata: %{
+    "license": "GPL-2.0-only or GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

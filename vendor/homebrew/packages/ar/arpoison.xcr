@@ -42,6 +42,12 @@ import "libnet" as i0
 pkg(
   name: "arpoison",
   version: "0.7",
+  description: "UNIX arp cache update utility",
+  url: "http://www.arpoison.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fastjar",
   version: "0.98",
+  description: "Implementation of Sun's jar tool",
+  url: "https://savannah.nongnu.org/projects/fastjar",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

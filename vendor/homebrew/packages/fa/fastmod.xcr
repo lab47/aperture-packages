@@ -36,6 +36,12 @@ import "rust" as i0
 pkg(
   name: "fastmod",
   version: "0.4.2",
+  description: "Fast partial replacement for the codemod tool",
+  url: "https://github.com/facebookincubator/fastmod",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

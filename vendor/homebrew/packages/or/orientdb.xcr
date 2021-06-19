@@ -122,6 +122,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "orientdb",
   version: "3.2.0",
+  description: "Graph database",
+  url: "https://orientdb.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

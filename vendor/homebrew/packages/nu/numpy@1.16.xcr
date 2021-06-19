@@ -85,6 +85,12 @@ import "gcc" as i0, "openblas" as i1
 pkg(
   name: "numpy@1.16",
   version: "1.16.6",
+  description: "Package for scientific computing with Python",
+  url: "https://www.numpy.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

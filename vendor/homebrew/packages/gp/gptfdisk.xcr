@@ -59,6 +59,12 @@ import "popt" as i0, "ncurses" as i1
 pkg(
   name: "gptfdisk",
   version: "1.0.8",
+  description: "Text-mode partitioning tools",
+  url: "https://www.rodsbooks.com/gdisk/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "gradle" as i0, "openjdk@11" as i1
 pkg(
   name: "kotlin-language-server",
   version: "1.1.1",
+  description: "Intelligent Kotlin support for any editor/IDE using the Language Server Protocol",
+  url: "https://github.com/fwcd/kotlin-language-server",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

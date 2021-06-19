@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tomee-webprofile",
   version: "8.0.4",
+  description: "All-Apache Java EE 7 Web Profile stack",
+  url: "https://tomee.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

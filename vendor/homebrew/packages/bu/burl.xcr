@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "burl",
   version: "1.0.1",
+  description: "Shell script wrapper that offers helpful shortcuts for curl(1)",
+  url: "https://github.com/tj/burl",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

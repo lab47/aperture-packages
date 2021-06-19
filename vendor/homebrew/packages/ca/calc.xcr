@@ -58,6 +58,12 @@ import "readline" as i0
 pkg(
   name: "calc",
   version: "2.13.0.1",
+  description: "Arbitrary precision calculator",
+  url: "http://www.isthe.com/chongo/tech/comp/calc/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

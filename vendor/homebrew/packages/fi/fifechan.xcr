@@ -59,6 +59,12 @@ import "cmake" as i0, "allegro" as i1, "sdl2" as i2, "sdl2_image" as i3, "sdl2_t
 pkg(
   name: "fifechan",
   version: "0.1.5",
+  description: "C++ GUI library designed for games",
+  url: "https://fifengine.github.io/fifechan/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

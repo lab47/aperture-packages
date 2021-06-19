@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "usb.ids",
   version: "2021.06.06",
+  description: "Repository of vendor, device, subsystem and device class IDs used in USB devices",
+  url: "http://www.linux-usb.org/usb-ids.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later or BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

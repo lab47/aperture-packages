@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "drone-cli",
   version: "1.2.4",
+  description: "Command-line client for the Drone continuous integration server",
+  url: "https://drone.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "go" as i0, "awscli" as i1
 pkg(
   name: "iamy",
   version: "2.3.2",
+  description: "AWS IAM import and export tool",
+  url: "https://github.com/99designs/iamy",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

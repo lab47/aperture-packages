@@ -71,6 +71,12 @@ import "glide" as i0, "go" as i1
 pkg(
   name: "helm@2",
   version: "2.17.0",
+  description: "Kubernetes package manager",
+  url: "https://helm.sh/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

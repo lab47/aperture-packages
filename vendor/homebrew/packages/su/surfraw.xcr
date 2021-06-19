@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "surfraw",
   version: "2.3.0",
+  description: "Shell Users' Revolutionary Front Rage Against the Web",
+  url: "https://packages.debian.org/sid/surfraw",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

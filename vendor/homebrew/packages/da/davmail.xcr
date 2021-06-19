@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "davmail",
   version: "5.5.1",
+  description: "POP/IMAP/SMTP/Caldav/Carddav/LDAP exchange gateway",
+  url: "https://davmail.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

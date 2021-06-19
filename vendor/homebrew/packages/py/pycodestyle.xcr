@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pycodestyle",
   version: "2.7.0",
+  description: "Simple Python style checker in one Python file",
+  url: "https://pycodestyle.pycqa.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -71,6 +71,12 @@ import "openjdk" as i0
 pkg(
   name: "djl-serving",
   version: "0.11.0",
+  description: "This module contains an universal model serving implementation",
+  url: "https://github.com/awslabs/djl/tree/master/serving",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

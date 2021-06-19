@@ -50,6 +50,12 @@ import "pkg-config" as i0, "ghostscript" as i1, "imagemagick" as i2, "plotutils"
 pkg(
   name: "pstoedit",
   version: "3.75",
+  description: "Convert PostScript and PDF files to editable vector graphics",
+  url: "http://www.pstoedit.net/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "glbinding",
   version: "2.1.4",
+  description: "C++ binding for the OpenGL API",
+  url: "https://github.com/cginternals/glbinding",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

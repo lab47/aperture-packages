@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
 pkg(
   name: "ipmiutil",
   version: "3.1.7",
+  description: "IPMI server management utility",
+  url: "https://ipmiutil.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

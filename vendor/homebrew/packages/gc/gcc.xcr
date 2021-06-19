@@ -314,6 +314,12 @@ import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4, "zl
 pkg(
   name: "gcc",
   version: "11.1.0",
+  description: "GNU compiler collection",
+  url: "https://gcc.gnu.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later with GCC-exception-3.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mas",
   version: "1.8.2",
+  description: "Mac App Store command-line interface",
+  url: "https://github.com/mas-cli/mas",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

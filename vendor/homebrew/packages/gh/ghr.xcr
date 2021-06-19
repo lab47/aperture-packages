@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "ghr",
   version: "0.13.0",
+  description: "Upload multiple artifacts to GitHub Release in parallel",
+  url: "https://tcnksm.github.io/ghr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

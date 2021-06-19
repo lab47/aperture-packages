@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "latex2rtf",
   version: "2.3.18a",
+  description: "Translate LaTeX to RTF",
+  url: "https://latex2rtf.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

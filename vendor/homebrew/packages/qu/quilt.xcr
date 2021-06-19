@@ -64,6 +64,12 @@ import "coreutils" as i0, "gnu-sed" as i1
 pkg(
   name: "quilt",
   version: "0.66",
+  description: "Work with series of patches",
+  url: "https://savannah.nongnu.org/projects/quilt",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

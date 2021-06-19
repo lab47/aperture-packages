@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "connect",
   version: "1.105",
+  description: "Provides SOCKS and HTTPS proxy support to SSH",
+  url: "https://github.com/gotoh/ssh-connect",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

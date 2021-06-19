@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cd-discid",
   version: "1.4",
+  description: "Read CD and get CDDB discid information",
+  url: "https://linukz.org/cd-discid.shtml",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

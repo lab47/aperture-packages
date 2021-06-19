@@ -109,6 +109,12 @@ import "nasm" as i0
 pkg(
   name: "x264",
   version: "r3049",
+  description: "H.264/AVC encoder",
+  url: "https://www.videolan.org/developers/x264.html",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

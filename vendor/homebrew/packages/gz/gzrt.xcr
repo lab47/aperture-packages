@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gzrt",
   version: "0.8",
+  description: "Gzip recovery toolkit",
+  url: "https://www.urbanophile.com/arenn/coding/gzrt/gzrt.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

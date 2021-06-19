@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "libsquish",
   version: "1.15",
+  description: "Library for compressing images with the DXT standard",
+  url: "https://sourceforge.net/projects/libsquish/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

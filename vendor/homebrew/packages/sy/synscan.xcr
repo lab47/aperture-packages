@@ -48,6 +48,12 @@ import "libpcap" as i0
 pkg(
   name: "synscan",
   version: "5.02",
+  description: "Asynchronous half-open TCP portscanner",
+  url: "http://digit-labs.org/files/tools/synscan/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "libpng" as i0
 pkg(
   name: "scale2x",
   version: "4.0",
+  description: "Real-time graphics effect",
+  url: "https://www.scale2x.it/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

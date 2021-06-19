@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "driftctl",
   version: "0.9.1",
+  description: "Detect, track and alert on infrastructure drift",
+  url: "https://driftctl.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

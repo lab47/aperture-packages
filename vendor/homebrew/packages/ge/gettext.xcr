@@ -70,6 +70,12 @@ import "libxml2" as i0, "ncurses" as i1
 pkg(
   name: "gettext",
   version: "0.21",
+  description: "GNU internationalization (i18n) and localization (l10n) library",
+  url: "https://www.gnu.org/software/gettext/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

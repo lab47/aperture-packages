@@ -50,6 +50,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "nopoll",
   version: "0.4.6.b400",
+  description: "Open-source C WebSocket toolkit",
+  url: "https://www.aspl.es/nopoll/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

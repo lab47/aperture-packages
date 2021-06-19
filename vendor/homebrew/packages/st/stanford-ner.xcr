@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "stanford-ner",
   version: "4.2.0",
+  description: "Stanford NLP Group's implementation of a Named Entity Recognizer",
+  url: "https://nlp.stanford.edu/software/CRF-NER.shtml",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

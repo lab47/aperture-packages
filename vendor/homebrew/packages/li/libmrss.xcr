@@ -35,6 +35,12 @@ import "pkg-config" as i0, "libnxml" as i1
 pkg(
   name: "libmrss",
   version: "0.19.2",
+  description: "C library for RSS files or streams",
+  url: "https://www.autistici.org/bakunin/libmrss/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

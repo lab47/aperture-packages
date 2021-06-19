@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vbindiff",
   version: "3.0_beta5",
+  description: "Visual Binary Diff",
+  url: "https://www.cjmweb.net/vbindiff/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

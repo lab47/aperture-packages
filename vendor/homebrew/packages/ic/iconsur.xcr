@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "iconsur",
   version: "1.6.2",
+  description: "macOS Big Sur Adaptive Icon Generator",
+  url: "https://github.com/rikumi/iconsur",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

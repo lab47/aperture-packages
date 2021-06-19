@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "aliddns",
   version: "0.0.9",
+  description: "Aliyun(Alibaba Cloud) ddns for golang",
+  url: "https://github.com/OpenIoTHub/aliddns",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

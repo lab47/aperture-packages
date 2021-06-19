@@ -73,6 +73,12 @@ import "cmake" as i0, "libuv" as i1, "openssl@1.1" as i2, "zlib" as i3
 pkg(
   name: "cassandra-cpp-driver",
   version: "2.16.1",
+  description: "DataStax C/C++ Driver for Apache Cassandra",
+  url: "https://docs.datastax.com/en/developer/cpp-driver/latest",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

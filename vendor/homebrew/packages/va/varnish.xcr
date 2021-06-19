@@ -86,12 +86,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "docutils" as i12, "doxygen" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "gobject-introspection" as i25, "gperf" as i26, "graphite2" as i27, "graphviz" as i28, "groff" as i29, "gts" as i30, "harfbuzz" as i31, "help2man" as i32, "icu4c" as i33, "jasper" as i34, "jbig2dec" as i35, "jemalloc" as i36, "jpeg" as i37, "krb5" as i38, "libev" as i39, "libffi" as i40, "libidn" as i41, "libidn2" as i42, "libpng" as i43, "libpthread-stubs" as i44, "librsvg" as i45, "libssh2" as i46, "libtiff" as i47, "libtool" as i48, "libunistring" as i49, "libx11" as i50, "libxau" as i51, "libxcb" as i52, "libxdmcp" as i53, "libxext" as i54, "libxml2" as i55, "libxrender" as i56, "libyaml" as i57, "little-cms2" as i58, "lz4" as i59, "lzo" as i60, "m4" as i61, "meson" as i62, "mpdecimal" as i63, "ncurses" as i64, "netpbm" as i65, "nghttp2" as i66, "ninja" as i67, "openjdk" as i68, "openjpeg" as i69, "openldap" as i70, "openssl@1.1" as i71, "pango" as i72, "pcre" as i73, "perl" as i74, "pixman" as i75, "pkg-config" as i76, "psutils" as i77, "python@3.9" as i78, "readline" as i79, "rtmpdump" as i80, "ruby" as i81, "rust" as i82, "scons" as i83, "sphinx-doc" as i84, "sqlite" as i85, "subversion" as i86, "swig" as i87, "texinfo" as i88, "uchardet" as i89, "unzip" as i90, "utf8proc" as i91, "util-macros" as i92, "webp" as i93, "xcb-proto" as i94, "xorgproto" as i95, "xtrans" as i96, "xz" as i97, "zip" as i98, "zlib" as i99, "zstd" as i100
+import "docutils" as i0, "graphviz" as i1, "pkg-config" as i2, "python@3.9" as i3, "sphinx-doc" as i4, "pcre" as i5
 
 pkg(
   name: "varnish",
   version: "6.6.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100],
+  description: "High-performance HTTP accelerator",
+  url: "https://www.varnish-cache.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "varnish.rb"), formula)

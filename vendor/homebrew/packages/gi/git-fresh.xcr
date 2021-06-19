@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-fresh",
   version: "1.13.0",
+  description: "Utility to keep git repos fresh",
+  url: "https://github.com/imsky/git-fresh",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

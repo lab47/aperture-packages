@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docker-clean",
   version: "2.0.4",
+  description: "Clean Docker containers, images, networks, and volumes",
+  url: "https://github.com/ZZROTDesign/docker-clean",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

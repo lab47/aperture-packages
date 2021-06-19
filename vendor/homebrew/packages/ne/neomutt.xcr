@@ -59,6 +59,12 @@ import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmd
 pkg(
   name: "neomutt",
   version: "20210205",
+  description: "E-mail reader with support for Notmuch, NNTP and much more",
+  url: "https://neomutt.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

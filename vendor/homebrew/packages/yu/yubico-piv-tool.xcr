@@ -50,6 +50,12 @@ import "check" as i0, "cmake" as i1, "gengetopt" as i2, "help2man" as i3, "libto
 pkg(
   name: "yubico-piv-tool",
   version: "2.2.0",
+  description: "Command-line tool for the YubiKey PIV application",
+  url: "https://developers.yubico.com/yubico-piv-tool/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

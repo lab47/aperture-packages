@@ -49,6 +49,12 @@ import "cmake" as i0, "libevent" as i1, "libuv" as i2, "openssl@1.1" as i3, "pro
 pkg(
   name: "cnats",
   version: "2.5.0",
+  description: "C client for the NATS messaging system",
+  url: "https://github.com/nats-io/nats.c",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

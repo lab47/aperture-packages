@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "viewvc",
   version: "1.2.1",
+  description: "Browser interface for CVS and Subversion repositories",
+  url: "http://www.viewvc.org",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

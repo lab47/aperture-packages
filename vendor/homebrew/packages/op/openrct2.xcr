@@ -77,6 +77,12 @@ import "cmake" as i0, "pkg-config" as i1, "duktape" as i2, "freetype" as i3, "ic
 pkg(
   name: "openrct2",
   version: "0.3.3",
+  description: "Open source re-implementation of RollerCoaster Tycoon 2",
+  url: "https://openrct2.io/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

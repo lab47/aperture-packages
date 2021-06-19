@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "le",
   version: "1.16.7",
+  description: "Text editor with block and binary operations",
+  url: "https://github.com/lavv17/le",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

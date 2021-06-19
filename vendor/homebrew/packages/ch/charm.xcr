@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "charm",
   version: "2.5.2",
+  description: "Tool for managing Juju Charms",
+  url: "https://github.com/juju/charmstore-client",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

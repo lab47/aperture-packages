@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "govc",
   version: "0.26.0",
+  description: "Command-line tool for VMware vSphere",
+  url: "https://github.com/vmware/govmomi/tree/master/govc",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

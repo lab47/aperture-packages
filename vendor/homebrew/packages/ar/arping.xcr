@@ -43,6 +43,12 @@ import "autoconf" as i0, "automake" as i1, "libnet" as i2, "libpcap" as i3
 pkg(
   name: "arping",
   version: "2.21",
+  description: "Utility to check whether MAC addresses are already taken on a LAN",
+  url: "https://github.com/ThomasHabets/arping",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -648,6 +648,12 @@ import "pkg-config" as i0, "rust" as i1, "libyaml" as i2, "openssl@1.1" as i3, "
 pkg(
   name: "ansible@2.8",
   version: "2.8.20",
+  description: "Automate deployment, configuration, and upgrading",
+  url: "https://www.ansible.com/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

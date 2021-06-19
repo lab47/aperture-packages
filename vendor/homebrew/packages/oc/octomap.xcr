@@ -48,6 +48,12 @@ import "cmake" as i0
 pkg(
   name: "octomap",
   version: "1.9.7",
+  description: "Efficient probabilistic 3D mapping framework based on octrees",
+  url: "https://octomap.github.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

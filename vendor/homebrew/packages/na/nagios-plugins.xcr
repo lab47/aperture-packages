@@ -62,6 +62,12 @@ import "autoconf" as i0, "automake" as i1, "openssl@1.1" as i2
 pkg(
   name: "nagios-plugins",
   version: "2.3.3",
+  description: "Plugins for the nagios network monitoring system",
+  url: "https://www.nagios-plugins.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "luarocks" as i0, "pkg-config" as i1, "libtermkey" as i2, "lua" as i3
 pkg(
   name: "vis",
   version: "0.7",
+  description: "Vim-like text editor",
+  url: "https://github.com/martanne/vis",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

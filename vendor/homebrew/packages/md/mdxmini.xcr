@@ -83,6 +83,12 @@ import "sdl" as i0
 pkg(
   name: "mdxmini",
   version: "1.0.0",
+  description: "Plays music in X68000 MDX chiptune format",
+  url: "https://github.com/mistydemeo/mdxmini/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

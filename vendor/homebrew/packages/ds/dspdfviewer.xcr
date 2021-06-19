@@ -100,6 +100,12 @@ import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "boost"
 pkg(
   name: "dspdfviewer",
   version: "1.15.1",
+  description: "Dual-Screen PDF Viewer for latex-beamer",
+  url: "https://dspdfviewer.danny-edel.de/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {

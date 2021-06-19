@@ -93,6 +93,12 @@ import "homebrew-install" as hi
 pkg(
   name: "findutils",
   version: "4.8.0",
+  description: "Collection of GNU find, xargs, and locate",
+  url: "https://www.gnu.org/software/findutils/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

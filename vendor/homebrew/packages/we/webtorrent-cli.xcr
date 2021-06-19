@@ -65,6 +65,12 @@ import "node" as i0
 pkg(
   name: "webtorrent-cli",
   version: "3.3.0",
+  description: "Command-line streaming torrent client",
+  url: "https://webtorrent.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

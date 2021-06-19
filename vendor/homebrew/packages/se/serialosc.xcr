@@ -39,6 +39,12 @@ import "confuse" as i0, "liblo" as i1, "libmonome" as i2
 pkg(
   name: "serialosc",
   version: "1.4.3",
+  description: "Opensound control server for monome devices",
+  url: "https://github.com/monome/docs/blob/gh-pages/serialosc/osc.md",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

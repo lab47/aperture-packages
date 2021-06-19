@@ -80,6 +80,12 @@ import "homebrew-install" as hi
 pkg(
   name: "riemann",
   version: "0.3.6",
+  description: "Event stream processor",
+  url: "https://riemann.io/",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "cmake" as i0, "pkg-config" as i1, "libmicrohttpd" as i2, "libsndfile" as
 pkg(
   name: "faust",
   version: "2.30.5",
+  description: "Functional programming language for real time signal processing",
+  url: "https://faust.grame.fr",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

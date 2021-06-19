@@ -61,6 +61,12 @@ import "rust" as i0, "libgit2" as i1, "openssl@1.1" as i2
 pkg(
   name: "cargo-edit",
   version: "0.7.0",
+  description: "Utility for managing cargo dependencies from the command-line",
+  url: "https://killercup.github.io/cargo-edit/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

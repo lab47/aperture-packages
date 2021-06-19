@@ -22,6 +22,12 @@ import "homebrew-install" as hi
 pkg(
   name: "putmail",
   version: "1.4",
+  description: "MTA or SMTP client designed to replace the sendmail command",
+  url: "https://putmail.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

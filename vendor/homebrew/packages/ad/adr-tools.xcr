@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "adr-tools",
   version: "3.0.0",
+  description: "CLI tool for working with Architecture Decision Records",
+  url: "https://github.com/npryce/adr-tools",
+  metadata: %{
+    "license": "CC-BY-4.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

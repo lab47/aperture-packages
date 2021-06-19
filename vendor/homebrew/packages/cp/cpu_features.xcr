@@ -42,6 +42,12 @@ import "cmake" as i0
 pkg(
   name: "cpu_features",
   version: "0.6.0",
+  description: "Cross platform C99 library to get cpu features at runtime",
+  url: "https://github.com/google/cpu_features",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

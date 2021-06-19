@@ -67,6 +67,12 @@ import "zlib" as i0
 pkg(
   name: "libpng",
   version: "1.6.37",
+  description: "Library for manipulating PNG images",
+  url: "http://www.libpng.org/pub/png/libpng.html",
+  metadata: %{
+    "license": "libpng-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

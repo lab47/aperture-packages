@@ -44,6 +44,12 @@ import "zlib" as i0
 pkg(
   name: "atasm",
   version: "1.07d",
+  description: "Atari MAC/65 compatible assembler for Unix",
+  url: "https://atari.miribilist.com/atasm/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

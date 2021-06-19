@@ -89,6 +89,12 @@ import "cmake" as i0, "swig" as i1, "airspy" as i2, "boost" as i3, "gnuradio" as
 pkg(
   name: "gr-osmosdr",
   version: "0.2.3",
+  description: "Osmocom GNU Radio Blocks",
+  url: "https://osmocom.org/projects/sdr/wiki/GrOsmoSDR",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

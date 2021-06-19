@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hello",
   version: "2.10",
+  description: "Program providing model for GNU coding standards and practices",
+  url: "https://www.gnu.org/software/hello/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

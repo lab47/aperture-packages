@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "fargatecli",
   version: "0.3.2",
+  description: "CLI for AWS Fargate",
+  url: "https://github.com/awslabs/fargatecli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

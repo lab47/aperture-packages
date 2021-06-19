@@ -93,6 +93,12 @@ import "cmake" as i0, "luajit-openresty" as i1, "luv" as i2, "pkg-config" as i3,
 pkg(
   name: "luvit",
   version: "2.17.0",
+  description: "Asynchronous I/O for Lua",
+  url: "https://luvit.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

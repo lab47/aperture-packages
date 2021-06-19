@@ -55,6 +55,12 @@ import "rust" as i0, "libpq" as i1, "mysql-client" as i2, "sqlite" as i3
 pkg(
   name: "diesel",
   version: "1.4.7",
+  description: "Command-line tool for Rust ORM Diesel",
+  url: "https://diesel.rs",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

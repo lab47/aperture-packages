@@ -47,6 +47,12 @@ import "libgpg-error" as i0
 pkg(
   name: "libassuan",
   version: "2.5.5",
+  description: "Assuan IPC Library",
+  url: "https://www.gnupg.org/related_software/libassuan/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

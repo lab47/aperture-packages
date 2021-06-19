@@ -83,6 +83,12 @@ import "autoconf" as i0, "automake" as i1, "gnutls" as i2, "json-glib" as i3, "l
 pkg(
   name: "ntopng",
   version: "4.2",
+  description: "Next generation version of the original ntop",
+  url: "https://www.ntop.org/products/traffic-analysis/ntop/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {

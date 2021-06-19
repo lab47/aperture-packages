@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ndiff",
   version: "2.00",
+  description: "Virtual package provided by nmap",
+  url: "https://www.math.utah.edu/~beebe/software/ndiff/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

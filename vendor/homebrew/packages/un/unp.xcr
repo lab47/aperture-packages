@@ -38,6 +38,12 @@ import "p7zip" as i0
 pkg(
   name: "unp",
   version: "2.0-pre7-nmu1",
+  description: "Unpack everything with one command",
+  url: "https://packages.debian.org/source/stable/unp",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

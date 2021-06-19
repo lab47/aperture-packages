@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libb64",
   version: "1.2.1",
+  description: "Base64 encoding/decoding library",
+  url: "https://libb64.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

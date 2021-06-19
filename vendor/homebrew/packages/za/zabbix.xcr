@@ -51,6 +51,12 @@ import "openssl@1.1" as i0, "pcre" as i1
 pkg(
   name: "zabbix",
   version: "5.4.1",
+  description: "Availability and monitoring solution",
+  url: "https://www.zabbix.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

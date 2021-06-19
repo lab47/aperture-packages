@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "go-bindata",
   version: "3.22.0",
+  description: "Small utility that generates Go code from any file",
+  url: "https://github.com/kevinburke/go-bindata",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

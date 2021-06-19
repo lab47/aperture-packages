@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dsocks",
   version: "1.8",
+  description: "SOCKS client wrapper for *BSD/macOS",
+  url: "https://monkey.org/~dugsong/dsocks/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

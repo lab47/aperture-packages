@@ -98,12 +98,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "boost" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cmake" as i10, "condure" as i11, "curl" as i12, "docbook" as i13, "docbook-xsl" as i14, "expat" as i15, "flex" as i16, "gdbm" as i17, "gettext" as i18, "gnu-getopt" as i19, "gperf" as i20, "help2man" as i21, "icu4c" as i22, "jemalloc" as i23, "krb5" as i24, "libev" as i25, "libffi" as i26, "libgcrypt" as i27, "libgpg-error" as i28, "libidn2" as i29, "libsodium" as i30, "libssh2" as i31, "libtool" as i32, "libunistring" as i33, "libxml2" as i34, "libxslt" as i35, "m4" as i36, "mongrel2" as i37, "mpdecimal" as i38, "ncurses" as i39, "nghttp2" as i40, "ninja" as i41, "openldap" as i42, "openssl@1.1" as i43, "perl" as i44, "pkg-config" as i45, "python@3.9" as i46, "qt@5" as i47, "readline" as i48, "rtmpdump" as i49, "rust" as i50, "source-highlight" as i51, "sphinx-doc" as i52, "sqlite" as i53, "unzip" as i54, "xmlto" as i55, "xz" as i56, "zeromq" as i57, "zip" as i58, "zlib" as i59, "zstd" as i60, "zurl" as i61
+import "pkg-config" as i0, "rust" as i1, "condure" as i2, "mongrel2" as i3, "python@3.9" as i4, "qt@5" as i5, "zeromq" as i6, "zurl" as i7
 
 pkg(
   name: "pushpin",
   version: "1.32.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
+  description: "Reverse proxy for realtime web services",
+  url: "https://pushpin.org/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pushpin.rb"), formula)

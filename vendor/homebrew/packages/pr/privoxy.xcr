@@ -93,6 +93,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pcre" as i3
 pkg(
   name: "privoxy",
   version: "3.0.32",
+  description: "Advanced filtering web proxy",
+  url: "https://www.privoxy.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

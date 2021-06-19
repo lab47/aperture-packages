@@ -38,6 +38,12 @@ import "mon" as i0
 pkg(
   name: "mongroup",
   version: "0.4.1",
+  description: "Monitor a group of processes with mon",
+  url: "https://github.com/jgallen23/mongroup",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

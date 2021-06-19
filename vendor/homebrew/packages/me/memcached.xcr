@@ -77,6 +77,12 @@ import "libevent" as i0
 pkg(
   name: "memcached",
   version: "1.6.9",
+  description: "High performance, distributed memory object caching system",
+  url: "https://memcached.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

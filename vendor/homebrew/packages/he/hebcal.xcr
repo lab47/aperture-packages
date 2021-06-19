@@ -37,6 +37,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "hebcal",
   version: "4.25",
+  description: "Perpetual Jewish calendar for the command-line",
+  url: "https://github.com/hebcal/hebcal",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

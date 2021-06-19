@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cpulimit",
   version: "0.2",
+  description: "CPU usage limiter",
+  url: "https://github.com/opsengine/cpulimit",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

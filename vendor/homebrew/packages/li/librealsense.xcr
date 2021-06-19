@@ -59,6 +59,12 @@ import "cmake" as i0, "pkg-config" as i1, "glfw" as i2, "libusb" as i3, "openssl
 pkg(
   name: "librealsense",
   version: "2.45.0",
+  description: "Intel RealSense D400 series and SR300 capture",
+  url: "https://github.com/IntelRealSense/librealsense",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

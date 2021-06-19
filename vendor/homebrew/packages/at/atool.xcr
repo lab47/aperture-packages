@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "atool",
   version: "0.39.0",
+  description: "Archival front-end",
+  url: "https://savannah.nongnu.org/projects/atool/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

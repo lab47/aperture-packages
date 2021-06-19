@@ -68,6 +68,12 @@ import "cmake" as i0, "gettext" as i1, "libssh" as i2, "curl" as i3, "expat" as 
 pkg(
   name: "exiv2",
   version: "0.27.3",
+  description: "EXIF and IPTC metadata manipulation library and tools",
+  url: "https://www.exiv2.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

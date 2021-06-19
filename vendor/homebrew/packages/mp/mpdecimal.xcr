@@ -69,6 +69,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mpdecimal",
   version: "2.5.1",
+  description: "Library for decimal floating point arithmetic",
+  url: "https://www.bytereef.org/mpdecimal/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

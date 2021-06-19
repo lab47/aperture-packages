@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clpbar",
   version: "1.11.1",
+  description: "Command-line progress bar",
+  url: "https://clpbar.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "bison" as i0, "flex" as i1
 pkg(
   name: "aamath",
   version: "0.3",
+  description: "Renders mathematical expressions as ASCII art",
+  url: "http://fuse.superglue.se/aamath/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

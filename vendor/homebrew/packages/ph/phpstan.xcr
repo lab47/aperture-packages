@@ -85,6 +85,12 @@ import "homebrew-install" as hi
 pkg(
   name: "phpstan",
   version: "0.12.89",
+  description: "PHP Static Analysis Tool",
+  url: "https://github.com/phpstan/phpstan",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

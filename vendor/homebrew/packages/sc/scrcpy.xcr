@@ -94,6 +94,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "ffmpeg" as i3, "sdl2" 
 pkg(
   name: "scrcpy",
   version: "1.17",
+  description: "Display and control your Android device",
+  url: "https://github.com/Genymobile/scrcpy",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

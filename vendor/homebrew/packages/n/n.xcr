@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "n",
   version: "7.3.0",
+  description: "Node version management",
+  url: "https://github.com/tj/n",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

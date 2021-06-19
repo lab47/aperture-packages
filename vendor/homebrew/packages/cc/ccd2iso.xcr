@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ccd2iso",
   version: "0.3",
+  description: "Convert CloneCD images to ISO images",
+  url: "https://ccd2iso.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

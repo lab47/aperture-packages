@@ -40,6 +40,12 @@ import "fpc" as i0, "openssl@1.1" as i1
 pkg(
   name: "xidel",
   version: "0.9.8",
+  description: "XPath/XQuery 3.0, JSONiq interpreter to extract data from HTML/XML/JSON",
+  url: "https://www.videlibri.de/xidel.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

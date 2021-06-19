@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lifelines",
   version: "3.0.62",
+  description: "Text-based genealogy software",
+  url: "https://lifelines.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

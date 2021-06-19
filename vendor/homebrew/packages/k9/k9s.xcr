@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "k9s",
   version: "0.24.10",
+  description: "Kubernetes CLI To Manage Your Clusters In Style!",
+  url: "https://k9scli.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

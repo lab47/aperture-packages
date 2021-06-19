@@ -57,6 +57,12 @@ import "pkg-config" as i0, "libx11" as i1, "xorgproto" as i2
 pkg(
   name: "libxrender",
   version: "0.9.10",
+  description: "X.Org: Library for the Render Extension to the X11 protocol",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

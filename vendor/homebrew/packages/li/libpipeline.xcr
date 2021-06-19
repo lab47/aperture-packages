@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libpipeline",
   version: "1.5.3",
+  description: "C library for manipulating pipelines of subprocesses",
+  url: "http://libpipeline.nongnu.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

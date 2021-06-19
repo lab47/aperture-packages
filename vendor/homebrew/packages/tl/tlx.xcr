@@ -51,6 +51,12 @@ import "cmake" as i0
 pkg(
   name: "tlx",
   version: "0.5.20200222",
+  description: "Collection of Sophisticated C++ Data Structures, Algorithms and Helpers",
+  url: "https://tlx.github.io",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

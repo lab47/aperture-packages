@@ -36,6 +36,12 @@ import "berkeley-db" as i0
 pkg(
   name: "bogofilter",
   version: "1.2.5",
+  description: "Mail filter via statistical analysis",
+  url: "https://bogofilter.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lesspipe",
   version: "1.85",
+  description: "Input filter for the pager less",
+  url: "https://www-zeuthen.desy.de/~friebel/unix/lesspipe.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

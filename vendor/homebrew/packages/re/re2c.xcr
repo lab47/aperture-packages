@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "re2c",
   version: "2.1.1",
+  description: "Generate C-based recognizers from regular expressions",
+  url: "https://re2c.org",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

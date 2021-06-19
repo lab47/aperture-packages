@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "whalebrew",
   version: "0.3.1",
+  description: "Homebrew, but with Docker images",
+  url: "https://github.com/whalebrew/whalebrew",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

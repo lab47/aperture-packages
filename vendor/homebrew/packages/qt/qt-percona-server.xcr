@@ -102,6 +102,12 @@ import "cmake" as i0, "pkg-config" as i1, "percona-server" as i2, "qt" as i3
 pkg(
   name: "qt-percona-server",
   version: "6.1.0",
+  description: "Qt SQL Database Driver",
+  url: "https://www.qt.io/",
+  metadata: %{
+    "license": "LGPL-2.1-only and LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

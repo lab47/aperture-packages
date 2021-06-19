@@ -67,6 +67,12 @@ import "pkg-config" as i0, "icu4c" as i1
 pkg(
   name: "node@10",
   version: "10.24.1",
+  description: "Platform built on V8 to build network applications",
+  url: "https://nodejs.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

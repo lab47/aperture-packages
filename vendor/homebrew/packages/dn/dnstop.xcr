@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dnstop",
   version: "20140915",
+  description: "Console tool to analyze DNS traffic",
+  url: "http://dns.measurement-factory.com/tools/dnstop/index.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

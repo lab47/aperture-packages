@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cpio",
   version: "2.13",
+  description: "Copies files into or out of a cpio or tar archive",
+  url: "https://www.gnu.org/software/cpio/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

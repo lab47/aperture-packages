@@ -123,6 +123,12 @@ import "go" as i0
 pkg(
   name: "inlets",
   version: "3.0.2",
+  description: "Expose your local endpoints to the Internet",
+  url: "https://github.com/inlets/inlets",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

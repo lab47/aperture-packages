@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "avro-tools",
   version: "1.10.2",
+  description: "Avro command-line tools and utilities",
+  url: "https://avro.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

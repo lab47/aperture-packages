@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shorten",
   version: "3.6.1",
+  description: "Waveform compression",
+  url: "https://web.archive.org/web/20180903155129/www.etree.org/shnutils/shorten/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

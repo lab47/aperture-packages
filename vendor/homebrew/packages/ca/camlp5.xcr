@@ -52,6 +52,12 @@ import "ocaml" as i0
 pkg(
   name: "camlp5",
   version: "8.00",
+  description: "Preprocessor and pretty-printer for OCaml",
+  url: "https://camlp5.github.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

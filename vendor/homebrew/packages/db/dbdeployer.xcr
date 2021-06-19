@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "dbdeployer",
   version: "1.62.0",
+  description: "Tool to deploy sandboxed MySQL database servers",
+  url: "https://github.com/datacharmer/dbdeployer",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

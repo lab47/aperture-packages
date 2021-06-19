@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "massdns",
   version: "1.0.0",
+  description: "High-performance DNS stub resolver",
+  url: "https://github.com/blechschmidt/massdns",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "openjdk" as i0
 pkg(
   name: "procyon-decompiler",
   version: "0.5.36",
+  description: "Modern decompiler for Java 5 and beyond",
+  url: "https://bitbucket.org/mstrobel/procyon/wiki/Java%20Decompiler",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

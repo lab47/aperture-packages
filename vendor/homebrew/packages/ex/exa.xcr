@@ -68,6 +68,12 @@ import "pandoc" as i0, "rust" as i1, "zlib" as i2
 pkg(
   name: "exa",
   version: "0.10.1",
+  description: "Modern replacement for 'ls'",
+  url: "https://the.exa.website",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

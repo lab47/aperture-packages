@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "uni",
   version: "2.2.0",
+  description: "Unicode database query tool for the command-line",
+  url: "https://github.com/arp242/uni",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bltool",
   version: "0.2.4",
+  description: "Tool for command-line interaction with backloggery.com",
+  url: "https://github.com/ToxicFrog/bltool",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

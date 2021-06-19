@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "man2html",
   version: "3.0.1",
+  description: "Convert nroff man pages to HTML",
+  url: "https://savannah.nongnu.org/projects/man2html/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

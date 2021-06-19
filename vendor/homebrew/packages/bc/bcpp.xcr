@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bcpp",
   version: "20210108",
+  description: "C(++) beautifier",
+  url: "https://invisible-island.net/bcpp/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

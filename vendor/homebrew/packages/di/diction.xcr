@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "diction",
   version: "1.11",
+  description: "GNU diction and style",
+  url: "https://www.gnu.org/software/diction/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

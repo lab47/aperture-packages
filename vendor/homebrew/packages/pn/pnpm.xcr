@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "pnpm",
   version: "6.7.6",
+  description: "📦🚀 Fast, disk space efficient package manager",
+  url: "https://pnpm.js.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

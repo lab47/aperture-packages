@@ -45,6 +45,12 @@ import "cmake" as i0, "nasm" as i1
 pkg(
   name: "jpeg-turbo",
   version: "2.1.0",
+  description: "JPEG image codec that aids compression and decompression",
+  url: "https://www.libjpeg-turbo.org/",
+  metadata: %{
+    "license": "IJG",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "coreutils" as i0, "gnu-sed" as i1, "newt" as i2, "tmux" as i3
 pkg(
   name: "byobu",
   version: "5.133",
+  description: "Text-based window manager and terminal multiplexer",
+  url: "https://launchpad.net/byobu",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

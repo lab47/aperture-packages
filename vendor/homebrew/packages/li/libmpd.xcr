@@ -35,6 +35,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2
 pkg(
   name: "libmpd",
   version: "11.8.17",
+  description: "Higher level access to MPD functions",
+  url: "https://gmpc.wikia.com/wiki/Gnome_Music_Player_Client",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

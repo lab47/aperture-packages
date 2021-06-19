@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ex-vi",
   version: "050325",
+  description: "UTF8-friendly version of tradition vi",
+  url: "https://ex-vi.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

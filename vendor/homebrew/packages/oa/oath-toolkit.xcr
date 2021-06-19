@@ -43,6 +43,12 @@ import "pkg-config" as i0, "libxmlsec1" as i1
 pkg(
   name: "oath-toolkit",
   version: "2.6.6",
+  description: "Tools for one-time password authentication systems",
+  url: "https://www.nongnu.org/oath-toolkit/",
+  metadata: %{
+    "license": "GPL-3.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

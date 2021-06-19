@@ -86,12 +86,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "nanomsg" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sphinx-doc" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
+import "pkg-config" as i0, "python@3.9" as i1, "nanomsg" as i2
 
 pkg(
   name: "nanomsgxx",
   version: "0.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  description: "Nanomsg binding for C++11",
+  url: "https://achille-roussel.github.io/nanomsgxx/doc/nanomsgxx.7.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nanomsgxx.rb"), formula)

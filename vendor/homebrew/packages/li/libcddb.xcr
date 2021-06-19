@@ -46,6 +46,12 @@ import "pkg-config" as i0, "libcdio" as i1
 pkg(
   name: "libcddb",
   version: "1.3.2",
+  description: "CDDB server access library",
+  url: "https://libcddb.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

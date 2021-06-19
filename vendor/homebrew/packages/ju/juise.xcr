@@ -54,6 +54,12 @@ import "libtool" as i0, "libslax" as i1
 pkg(
   name: "juise",
   version: "0.9.0",
+  description: "JUNOS user interface scripting environment",
+  url: "https://github.com/Juniper/juise/wiki",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

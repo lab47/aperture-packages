@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "afl-fuzz",
   version: "2.57b",
+  description: "American fuzzy lop: Security-oriented fuzzer",
+  url: "https://github.com/google/AFL",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

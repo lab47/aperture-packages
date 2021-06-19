@@ -54,6 +54,12 @@ import "node" as i0
 pkg(
   name: "coffeescript",
   version: "2.5.1",
+  description: "Unfancy JavaScript",
+  url: "https://coffeescript.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

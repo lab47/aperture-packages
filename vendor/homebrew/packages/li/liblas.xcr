@@ -66,6 +66,12 @@ import "cmake" as i0, "boost" as i1, "libgeotiff" as i2
 pkg(
   name: "liblas",
   version: "1.8.1",
+  description: "C/C++ library for reading and writing the LAS LiDAR format",
+  url: "https://liblas.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

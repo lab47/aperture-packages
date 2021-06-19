@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nodeenv",
   version: "1.6.0",
+  description: "Node.js virtual environment builder",
+  url: "https://github.com/ekalinin/nodeenv",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

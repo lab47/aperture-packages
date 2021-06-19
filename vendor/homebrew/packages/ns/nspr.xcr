@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nspr",
   version: "4.31",
+  description: "Platform-neutral API for system-level and libc-like functions",
+  url: "https://developer.mozilla.org/docs/Mozilla/Projects/NSPR",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wren-cli",
   version: "0.3.0",
+  description: "Simple REPL and CLI tool for running Wren scripts",
+  url: "https://github.com/wren-lang/wren-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

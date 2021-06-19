@@ -59,6 +59,12 @@ import "openjdk" as i0
 pkg(
   name: "gradle",
   version: "7.0.2",
+  description: "Open-source build automation tool based on the Groovy and Kotlin DSL",
+  url: "https://www.gradle.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

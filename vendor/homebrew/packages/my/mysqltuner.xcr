@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mysqltuner",
   version: "1.7.21",
+  description: "Increase performance and stability of a MySQL installation",
+  url: "https://raw.github.com/major/MySQLTuner-perl/master/mysqltuner.pl",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

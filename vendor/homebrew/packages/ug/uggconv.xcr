@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "uggconv",
   version: "1.0",
+  description: "Universal Game Genie code converter",
+  url: "https://wyrmcorp.com/software/uggconv/index.shtml",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-gerrit",
   version: "0.3.0",
+  description: "Gerrit code review helper scripts",
+  url: "https://github.com/fbzhong/git-gerrit",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "faac",
   version: "1.29.9.2",
+  description: "ISO AAC audio encoder",
+  url: "https://sourceforge.net/projects/faac/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

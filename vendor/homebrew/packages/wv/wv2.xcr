@@ -42,6 +42,12 @@ import "cmake" as i0, "pkg-config" as i1, "glib" as i2, "libgsf" as i3
 pkg(
   name: "wv2",
   version: "0.4.2",
+  description: "Programs for accessing Microsoft Word documents",
+  url: "https://wvware.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

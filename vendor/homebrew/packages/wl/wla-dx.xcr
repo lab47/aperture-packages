@@ -70,6 +70,12 @@ import "cmake" as i0
 pkg(
   name: "wla-dx",
   version: "9.12",
+  description: "Yet another crossassembler package",
+  url: "https://github.com/vhelin/wla-dx",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

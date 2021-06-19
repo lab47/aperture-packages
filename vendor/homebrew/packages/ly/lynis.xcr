@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lynis",
   version: "3.0.4",
+  description: "Security and system auditing tool to harden systems",
+  url: "https://cisofy.com/lynis/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

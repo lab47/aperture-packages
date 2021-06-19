@@ -66,6 +66,12 @@ import "cmake" as i0, "pkg-config" as i1, "botan" as i2, "gnupg" as i3, "libgcry
 pkg(
   name: "qca",
   version: "2.3.3",
+  description: "Qt Cryptographic Architecture (QCA)",
+  url: "https://userbase.kde.org/QCA",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

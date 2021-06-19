@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "getmail",
   version: "5.15",
+  description: "Extensible mail retrieval system with POP3, IMAP4, SSL support",
+  url: "http://pyropus.ca/software/getmail/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

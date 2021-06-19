@@ -44,6 +44,12 @@ import "openjdk" as i0
 pkg(
   name: "jsvc",
   version: "1.2.4",
+  description: "Wrapper to launch Java applications as daemons",
+  url: "https://commons.apache.org/daemon/jsvc.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

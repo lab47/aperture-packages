@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "amtterm",
   version: "1.6",
+  description: "Serial-over-LAN (sol) client for Intel AMT",
+  url: "https://www.kraxel.org/blog/linux/amtterm/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

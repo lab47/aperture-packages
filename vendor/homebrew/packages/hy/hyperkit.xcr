@@ -97,6 +97,12 @@ import "aspcud" as i0, "ocaml" as i1, "opam" as i2, "libev" as i3
 pkg(
   name: "hyperkit",
   version: "0.20200908",
+  description: "Toolkit for embedding hypervisor capabilities in your application",
+  url: "https://github.com/moby/hyperkit",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

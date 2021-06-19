@@ -36,6 +36,12 @@ import "openjdk@8" as i0
 pkg(
   name: "zanata-client",
   version: "4.6.2",
+  description: "Zanata translation system command-line client",
+  url: "http://zanata.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

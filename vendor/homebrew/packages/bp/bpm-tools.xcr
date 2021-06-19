@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bpm-tools",
   version: "0.3",
+  description: "Detect tempo of audio files using beats-per-minute (BPM)",
+  url: "https://www.pogo.org.uk/~mark/bpm-tools/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

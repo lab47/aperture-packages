@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "subfinder",
   version: "2.4.8",
+  description: "Subdomain discovery tool",
+  url: "https://github.com/projectdiscovery/subfinder",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

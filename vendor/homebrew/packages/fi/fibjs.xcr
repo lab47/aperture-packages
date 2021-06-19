@@ -60,6 +60,12 @@ import "cmake" as i0
 pkg(
   name: "fibjs",
   version: "0.33.0",
+  description: "JavaScript on Fiber",
+  url: "https://fibjs.org/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

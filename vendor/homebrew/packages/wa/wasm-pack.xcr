@@ -41,6 +41,12 @@ import "rust" as i0, "rustup-init" as i1
 pkg(
   name: "wasm-pack",
   version: "0.9.1",
+  description: "Your favorite rust -> wasm workflow tool!",
+  url: "https://rustwasm.github.io/wasm-pack/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

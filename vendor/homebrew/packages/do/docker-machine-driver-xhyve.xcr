@@ -68,6 +68,12 @@ import "go" as i0, "docker-machine" as i1
 pkg(
   name: "docker-machine-driver-xhyve",
   version: "0.4.0",
+  description: "Docker Machine driver for xhyve",
+  url: "https://github.com/machine-drivers/docker-machine-driver-xhyve",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

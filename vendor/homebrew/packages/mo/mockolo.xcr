@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mockolo",
   version: "1.4.1",
+  description: "Efficient Mock Generator for Swift",
+  url: "https://github.com/uber/mockolo",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

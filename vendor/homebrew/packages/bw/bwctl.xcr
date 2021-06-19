@@ -50,6 +50,12 @@ import "i2util" as i0
 pkg(
   name: "bwctl",
   version: "1.5.4",
+  description: "Command-line tool and daemon for network measuring tools",
+  url: "https://software.internet2.edu/bwctl/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

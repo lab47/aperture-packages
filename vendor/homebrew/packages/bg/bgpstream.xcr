@@ -50,6 +50,12 @@ import "librdkafka" as i0, "wandio" as i1
 pkg(
   name: "bgpstream",
   version: "2.2.0",
+  description: "For live and historical BGP data analysis",
+  url: "https://bgpstream.caida.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

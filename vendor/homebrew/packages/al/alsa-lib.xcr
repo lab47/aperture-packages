@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "alsa-lib",
   version: "1.2.5",
+  description: "Provides audio and MIDI functionality to the Linux operating system",
+  url: "https://www.alsa-project.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

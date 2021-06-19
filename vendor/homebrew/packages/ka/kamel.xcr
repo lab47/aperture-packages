@@ -75,6 +75,12 @@ import "go" as i0, "openjdk@11" as i1
 pkg(
   name: "kamel",
   version: "1.4.0",
+  description: "Apache Camel K CLI",
+  url: "https://camel.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

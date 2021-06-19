@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "vsh",
   version: "0.11.0",
+  description: "HashiCorp Vault interactive shell",
+  url: "https://github.com/fishi0x01/vsh",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "openrtsp",
   version: "2020.11.05",
+  description: "Command-line RTSP client",
+  url: "http://www.live555.com/openRTSP",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -85,6 +85,12 @@ import "sdl" as i0, "sdl_ttf" as i1
 pkg(
   name: "nxengine",
   version: "1.0.0.6",
+  description: "Rewrite of Cave Story (Doukutsu Monogatari)",
+  url: "https://nxengine.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

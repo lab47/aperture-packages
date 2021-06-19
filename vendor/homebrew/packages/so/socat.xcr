@@ -42,6 +42,12 @@ import "openssl@1.1" as i0, "readline" as i1
 pkg(
   name: "socat",
   version: "1.7.4.1",
+  description: "SOcket CAT: netcat on steroids",
+  url: "http://www.dest-unreach.org/socat/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "rust" as i0
 pkg(
   name: "zenith",
   version: "0.12.0",
+  description: "In terminal graphical metrics for your *nix system",
+  url: "https://github.com/bvaisvil/zenith/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

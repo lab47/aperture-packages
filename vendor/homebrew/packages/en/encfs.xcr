@@ -55,6 +55,12 @@ import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "openssl@1.1" as i3
 pkg(
   name: "encfs",
   version: "1.9.5",
+  description: "Encrypted pass-through FUSE file system",
+  url: "https://vgough.github.io/encfs/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

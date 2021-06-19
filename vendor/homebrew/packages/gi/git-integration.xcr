@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-integration",
   version: "0.4",
+  description: "Manage git integration branches",
+  url: "https://johnkeeping.github.io/git-integration/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

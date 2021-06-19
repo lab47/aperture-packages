@@ -64,6 +64,12 @@ import "pkg-config" as i0, "libmpdclient" as i1
 pkg(
   name: "mpdas",
   version: "0.4.5",
+  description: "C++ client to submit tracks to audioscrobbler",
+  url: "https://www.50hz.ws/mpdas/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

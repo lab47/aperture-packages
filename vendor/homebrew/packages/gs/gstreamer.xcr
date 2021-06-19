@@ -76,6 +76,12 @@ import "bison" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i
 pkg(
   name: "gstreamer",
   version: "1.18.4",
+  description: "Development framework for multimedia applications",
+  url: "https://gstreamer.freedesktop.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

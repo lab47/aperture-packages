@@ -44,6 +44,12 @@ import "openjdk" as i0
 pkg(
   name: "frege",
   version: "3.24.405",
+  description: "Non-strict, functional programming language in the spirit of Haskell",
+  url: "https://github.com/Frege/frege/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "tesseract" as i0
 pkg(
   name: "tesseract-lang",
   version: "4.1.0",
+  description: "Enables extra languages support for Tesseract",
+  url: "https://github.com/tesseract-ocr/tessdata_fast/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

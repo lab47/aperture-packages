@@ -113,6 +113,12 @@ import "pkg-config" as i0, "gmp" as i1, "openssl@1.1" as i2, "zlib" as i3
 pkg(
   name: "john-jumbo",
   version: "1.9.0",
+  description: "Enhanced version of john, a UNIX password cracker",
+  url: "https://www.openwall.com/john/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

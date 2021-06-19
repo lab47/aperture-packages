@@ -308,12 +308,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "expect" as i10, "gdbm" as i11, "gettext" as i12, "jemalloc" as i13, "krb5" as i14, "libev" as i15, "libffi" as i16, "libidn2" as i17, "libssh2" as i18, "libtool" as i19, "libunistring" as i20, "libxml2" as i21, "m4" as i22, "mpdecimal" as i23, "ncurses" as i24, "nghttp2" as i25, "ninja" as i26, "openldap" as i27, "openssl@1.1" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "rtmpdump" as i33, "rust" as i34, "sphinx-doc" as i35, "sqlite" as i36, "tcl-tk" as i37, "unzip" as i38, "xz" as i39, "zip" as i40, "zlib" as i41, "zstd" as i42
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "rust" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "buku",
   version: "4.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42],
+  description: "Powerful command-line bookmark manager",
+  url: "https://github.com/jarun/buku",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "buku.rb"), formula)

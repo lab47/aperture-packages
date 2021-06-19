@@ -43,6 +43,12 @@ import "zlib" as i0
 pkg(
   name: "xorriso",
   version: "1.5.4",
+  description: "ISO9660+RR manipulation tool",
+  url: "https://www.gnu.org/software/xorriso/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

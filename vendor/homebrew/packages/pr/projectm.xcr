@@ -78,6 +78,12 @@ import "pkg-config" as i0, "sdl2" as i1
 pkg(
   name: "projectm",
   version: "3.1.12",
+  description: "Milkdrop-compatible music visualizer",
+  url: "https://github.com/projectM-visualizer/projectm",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

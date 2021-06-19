@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "torrentcheck",
   version: "1.00",
+  description: "Command-line torrent viewer and hash checker",
+  url: "https://torrentcheck.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

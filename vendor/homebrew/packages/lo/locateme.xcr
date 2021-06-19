@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "locateme",
   version: "0.2.1",
+  description: "Find your location using Apple's geolocation services",
+  url: "https://iharder.sourceforge.io/current/macosx/locateme",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

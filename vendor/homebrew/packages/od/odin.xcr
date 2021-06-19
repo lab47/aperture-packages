@@ -134,6 +134,12 @@ import "llvm@11" as i0, "libiconv" as i1
 pkg(
   name: "odin",
   version: "0.13.0",
+  description: "Programming language with focus on simplicity, performance and modern systems",
+  url: "https://odin-lang.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

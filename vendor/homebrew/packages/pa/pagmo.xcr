@@ -83,6 +83,12 @@ import "cmake" as i0, "boost" as i1, "eigen" as i2, "nlopt" as i3, "tbb" as i4
 pkg(
   name: "pagmo",
   version: "2.17.0",
+  description: "Scientific library for massively parallel optimization",
+  url: "https://esa.github.io/pagmo2/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later or GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

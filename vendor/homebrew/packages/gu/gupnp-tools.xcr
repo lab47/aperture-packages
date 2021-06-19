@@ -48,6 +48,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "gtk+3
 pkg(
   name: "gupnp-tools",
   version: "0.10.0",
+  description: "Free replacements of Intel's UPnP tools",
+  url: "https://wiki.gnome.org/GUPnP/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

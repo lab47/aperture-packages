@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "aws-rotate-key",
   version: "1.0.7",
+  description: "Easily rotate your AWS access key",
+  url: "https://github.com/stefansundin/aws-rotate-key",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

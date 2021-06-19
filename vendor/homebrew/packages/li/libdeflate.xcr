@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libdeflate",
   version: "1.7",
+  description: "Heavily optimized DEFLATE/zlib/gzip compression and decompression",
+  url: "https://github.com/ebiggers/libdeflate",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -83,6 +83,12 @@ import "lz4" as i0, "openssl@1.1" as i1, "popt" as i2, "xxhash" as i3, "zstd" as
 pkg(
   name: "rsync",
   version: "3.2.3",
+  description: "Utility that provides fast incremental file transfer",
+  url: "https://rsync.samba.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

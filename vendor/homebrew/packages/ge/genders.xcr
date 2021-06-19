@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "genders",
   version: "1.27.3",
+  description: "Static cluster configuration database for cluster management",
+  url: "https://github.com/chaos/genders",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

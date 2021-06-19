@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "exenv",
   version: "0.1.0",
+  description: "Elixir versions management tool",
+  url: "https://github.com/mururu/exenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "autoconf" as i0, "boost" as i1
 pkg(
   name: "mdds",
   version: "1.7.0",
+  description: "Multi-dimensional data structure and indexing algorithm",
+  url: "https://gitlab.com/mdds/mdds",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "cig",
   version: "0.1.5",
+  description: "CLI app for checking the state of your git repositories",
+  url: "https://github.com/stevenjack/cig",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

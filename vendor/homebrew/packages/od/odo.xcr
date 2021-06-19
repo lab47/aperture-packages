@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "odo",
   version: "0.2.2",
+  description: "Atomic odometer for the command-line",
+  url: "https://github.com/atomicobject/odo",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

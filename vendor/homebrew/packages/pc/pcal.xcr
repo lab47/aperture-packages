@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pcal",
   version: "4.11.0",
+  description: "Generate Postscript calendars without X",
+  url: "https://pcal.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "cmake" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "libssh",
   version: "0.9.5",
+  description: "C library SSHv1/SSHv2 client and server protocols",
+  url: "https://www.libssh.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

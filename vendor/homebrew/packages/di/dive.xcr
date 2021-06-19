@@ -51,6 +51,12 @@ import "go" as i0, "gpgme" as i1, "pkg-config" as i2
 pkg(
   name: "dive",
   version: "0.10.0",
+  description: "Tool for exploring each layer in a docker image",
+  url: "https://github.com/wagoodman/dive",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

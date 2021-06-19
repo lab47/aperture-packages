@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kimwitu++",
   version: "2.3.13",
+  description: "Tool for processing trees (i.e. terms)",
+  url: "https://www2.informatik.hu-berlin.de/sam/kimwitu++/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

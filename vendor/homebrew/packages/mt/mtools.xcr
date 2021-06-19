@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mtools",
   version: "4.0.29",
+  description: "Tools for manipulating MSDOS files",
+  url: "https://www.gnu.org/software/mtools/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

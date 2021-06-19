@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lz4",
   version: "1.9.3",
+  description: "Extremely Fast Compression algorithm",
+  url: "https://lz4.github.io/lz4/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

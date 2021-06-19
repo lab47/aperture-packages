@@ -77,6 +77,12 @@ import "go" as i0
 pkg(
   name: "frpc",
   version: "0.37.0",
+  description: "Client app of fast reverse proxy to expose a local server to the internet",
+  url: "https://github.com/fatedier/frp",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

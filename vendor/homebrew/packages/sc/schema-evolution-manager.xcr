@@ -35,6 +35,12 @@ import "ruby" as i0
 pkg(
   name: "schema-evolution-manager",
   version: "0.9.45",
+  description: "Manage postgresql database schema migrations",
+  url: "https://github.com/mbryzek/schema-evolution-manager",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

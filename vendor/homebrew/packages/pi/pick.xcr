@@ -45,6 +45,12 @@ import "ncurses" as i0
 pkg(
   name: "pick",
   version: "4.0.0",
+  description: "Utility to choose one option from a set of choices",
+  url: "https://github.com/mptre/pick",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

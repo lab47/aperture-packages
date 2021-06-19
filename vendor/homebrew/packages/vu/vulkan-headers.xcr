@@ -41,6 +41,12 @@ import "cmake" as i0
 pkg(
   name: "vulkan-headers",
   version: "1.2.180",
+  description: "Vulkan Header files and API registry",
+  url: "https://github.com/KhronosGroup/Vulkan-Headers",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

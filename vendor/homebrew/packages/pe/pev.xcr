@@ -37,6 +37,12 @@ import "openssl@1.1" as i0, "pcre" as i1
 pkg(
   name: "pev",
   version: "0.81",
+  description: "PE analysis toolkit",
+  url: "https://pev.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

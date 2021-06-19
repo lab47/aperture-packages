@@ -43,6 +43,12 @@ import "go" as i0, "awscli" as i1
 pkg(
   name: "rosa-cli",
   version: "1.0.8",
+  description: "RedHat OpenShift Service on AWS (ROSA) command-line interface",
+  url: "https://www.openshift.com/products/amazon-openshift",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

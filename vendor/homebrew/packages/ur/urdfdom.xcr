@@ -66,6 +66,12 @@ import "cmake" as i0, "console_bridge" as i1, "tinyxml" as i2, "urdfdom_headers"
 pkg(
   name: "urdfdom",
   version: "1.0.4",
+  description: "Unified Robot Description Format (URDF) parser",
+  url: "https://wiki.ros.org/urdf/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "libfuse"
 pkg(
   name: "sshfs",
   version: "3.7.1",
+  description: "File system client based on SSH File Transfer Protocol",
+  url: "https://github.com/libfuse/sshfs",
+  metadata: %{
+    "license": "LGPL-2.1-only or GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

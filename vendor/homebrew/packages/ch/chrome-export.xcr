@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chrome-export",
   version: "2.0.2",
+  description: "Convert Chrome’s bookmarks and history to HTML bookmarks files",
+  url: "https://github.com/bdesham/chrome-export",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

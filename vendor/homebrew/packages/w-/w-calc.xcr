@@ -39,6 +39,12 @@ import "gmp" as i0, "mpfr" as i1
 pkg(
   name: "w-calc",
   version: "2.5",
+  description: "Very capable calculator",
+  url: "https://w-calc.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

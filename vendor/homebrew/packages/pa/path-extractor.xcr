@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "path-extractor",
   version: "0.2.0",
+  description: "UNIX filter which outputs the filepaths found in stdin",
+  url: "https://github.com/edi9999/path-extractor",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

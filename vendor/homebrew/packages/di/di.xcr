@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "di",
   version: "4.50",
+  description: "Advanced df-like disk information utility",
+  url: "https://gentoo.com/di/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "pkg-config" as i0, "json-c" as i1, "libao" as i2, "libgcrypt" as i3
 pkg(
   name: "pianod",
   version: "301",
+  description: "Pandora client with multiple control interfaces",
+  url: "https://deviousfish.com/pianod/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -65,6 +65,12 @@ import "cmake" as i0
 pkg(
   name: "libsoxr",
   version: "0.1.3",
+  description: "High quality, one-dimensional sample-rate conversion library",
+  url: "https://sourceforge.net/projects/soxr/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

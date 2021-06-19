@@ -59,6 +59,12 @@ import "mongo-c-driver" as i0, "qt" as i1
 pkg(
   name: "treefrog",
   version: "2.0.1",
+  description: "High-speed C++ MVC Framework for Web Application",
+  url: "https://www.treefrogframework.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

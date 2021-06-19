@@ -123,6 +123,12 @@ import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "eigen" as i3, "glpk" 
 pkg(
   name: "shogun",
   version: "6.1.4",
+  description: "Large scale machine learning toolbox",
+  url: "https://www.shogun-toolbox.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

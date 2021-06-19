@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libpointing",
   version: "1.0.8",
+  description: "Provides direct access to HID pointing devices",
+  url: "https://github.com/INRIA/libpointing",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

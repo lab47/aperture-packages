@@ -53,6 +53,12 @@ import "cmake" as i0, "libomp" as i1, "tlx" as i2
 pkg(
   name: "libnetworkit",
   version: "8.1",
+  description: "NetworKit is an OS-toolkit for large-scale network analysis",
+  url: "https://networkit.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

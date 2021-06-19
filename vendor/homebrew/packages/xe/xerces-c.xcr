@@ -65,6 +65,12 @@ import "cmake" as i0, "curl" as i1
 pkg(
   name: "xerces-c",
   version: "3.2.3",
+  description: "Validating XML parser",
+  url: "https://xerces.apache.org/xerces-c/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

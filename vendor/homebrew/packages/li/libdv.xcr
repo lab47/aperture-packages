@@ -49,6 +49,12 @@ import "popt" as i0
 pkg(
   name: "libdv",
   version: "1.0.0",
+  description: "Codec for DV video encoding format",
+  url: "https://libdv.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

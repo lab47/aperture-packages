@@ -42,6 +42,12 @@ import "pkg-config" as i0, "swig" as i1, "vala" as i2, "bison" as i3, "flex" as 
 pkg(
   name: "valabind",
   version: "1.8.0",
+  description: "Vala bindings for radare, reverse engineering framework",
+  url: "https://github.com/radare/valabind",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

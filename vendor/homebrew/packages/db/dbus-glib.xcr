@@ -43,6 +43,12 @@ import "pkg-config" as i0, "dbus" as i1, "gettext" as i2, "glib" as i3
 pkg(
   name: "dbus-glib",
   version: "0.112",
+  description: "GLib bindings for the D-Bus message bus system",
+  url: "https://wiki.freedesktop.org/www/Software/DBusBindings/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

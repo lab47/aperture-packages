@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shpotify",
   version: "2.1",
+  description: "Command-line interface for Spotify on a Mac",
+  url: "https://harishnarayanan.org/projects/shpotify/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

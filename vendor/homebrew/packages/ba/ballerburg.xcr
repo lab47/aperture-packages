@@ -37,6 +37,12 @@ import "cmake" as i0, "sdl" as i1
 pkg(
   name: "ballerburg",
   version: "1.2.0",
+  description: "Castle combat game",
+  url: "https://baller.tuxfamily.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

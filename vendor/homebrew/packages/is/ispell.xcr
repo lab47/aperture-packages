@@ -60,6 +60,12 @@ import "bison" as i0, "ncurses" as i1
 pkg(
   name: "ispell",
   version: "3.4.04",
+  description: "International Ispell",
+  url: "https://www.cs.hmc.edu/~geoff/ispell.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

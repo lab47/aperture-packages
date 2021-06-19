@@ -44,6 +44,12 @@ import "go" as i0, "mage" as i1
 pkg(
   name: "cartridge-cli",
   version: "2.9.1",
+  description: "Tarantool Cartridge command-line utility",
+  url: "https://tarantool.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

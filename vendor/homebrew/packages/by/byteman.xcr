@@ -73,6 +73,12 @@ import "openjdk" as i0
 pkg(
   name: "byteman",
   version: "4.0.15",
+  description: "Java bytecode manipulation tool for testing, monitoring and tracing",
+  url: "https://byteman.jboss.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

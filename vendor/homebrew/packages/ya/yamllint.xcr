@@ -54,12 +54,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libtool" as i7, "libyaml" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "perl" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libyaml" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "yamllint",
   version: "1.26.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  description: "Linter for YAML files",
+  url: "https://github.com/adrienverge/yamllint",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "yamllint.rb"), formula)

@@ -59,6 +59,12 @@ import "go" as i0
 pkg(
   name: "snag",
   version: "1.2.0",
+  description: "Automatic build tool for all your needs",
+  url: "https://github.com/Tonkpils/snag",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mksh",
   version: "59c",
+  description: "MirBSD Korn Shell",
+  url: "https://www.mirbsd.org/mksh.htm",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

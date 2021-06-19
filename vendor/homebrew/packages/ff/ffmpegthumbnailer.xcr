@@ -51,6 +51,12 @@ import "cmake" as i0, "pkg-config" as i1, "ffmpeg" as i2, "jpeg" as i3, "libpng"
 pkg(
   name: "ffmpegthumbnailer",
   version: "2.2.2",
+  description: "Create thumbnails for your video files",
+  url: "https://github.com/dirkvdb/ffmpegthumbnailer",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

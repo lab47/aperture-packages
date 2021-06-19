@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "gotags",
   version: "1.4.1",
+  description: "Tag generator for Go, compatible with ctags",
+  url: "https://github.com/jstemmer/gotags",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

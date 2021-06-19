@@ -32,6 +32,12 @@ import "tmux" as i0
 pkg(
   name: "tmux-xpanes",
   version: "4.1.3",
+  description: "Ultimate terminal divider powered by tmux",
+  url: "https://github.com/greymd/tmux-xpanes",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

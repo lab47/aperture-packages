@@ -39,7 +39,7 @@ class Pyinstaller < Formula
 
   test do
     (testpath/"easy_install.py").write <<~EOS
-      """Run the EasyInstall command"""
+      \"\"\"Run the EasyInstall command\"\"\"
 
       if __name__ == '__main__':
           from setuptools.command.easy_install import main
@@ -60,6 +60,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "pyinstaller",
   version: "4.3",
+  description: "Bundle a Python application and all its dependencies",
+  url: "https://www.pyinstaller.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

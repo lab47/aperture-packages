@@ -47,6 +47,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "bitchx",
   version: "1.2.1",
+  description: "Text-based, scriptable IRC client",
+  url: "https://bitchx.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

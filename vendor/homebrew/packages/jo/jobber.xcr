@@ -76,6 +76,12 @@ import "go" as i0
 pkg(
   name: "jobber",
   version: "1.4.4",
+  description: "Alternative to cron, with better status-reporting and error-handling",
+  url: "https://dshearer.github.io/jobber/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

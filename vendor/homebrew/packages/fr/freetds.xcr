@@ -73,6 +73,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "unixodbc" as i2
 pkg(
   name: "freetds",
   version: "1.2.21",
+  description: "Libraries to talk to Microsoft SQL Server and Sybase databases",
+  url: "https://www.freetds.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

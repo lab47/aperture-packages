@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dbacl",
   version: "1.14.1",
+  description: "Digramic Bayesian classifier",
+  url: "https://dbacl.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

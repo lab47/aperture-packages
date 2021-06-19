@@ -52,6 +52,12 @@ import "texinfo" as i0
 pkg(
   name: "arm-linux-gnueabihf-binutils",
   version: "2.36.1",
+  description: "FSF/GNU binutils for cross-compiling to arm-linux",
+  url: "https://www.gnu.org/software/binutils/binutils.html",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

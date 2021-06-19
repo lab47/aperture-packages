@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wp-cli-completion",
   version: "2.5.0",
+  description: "Bash completion for Wpcli",
+  url: "https://github.com/wp-cli/wp-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

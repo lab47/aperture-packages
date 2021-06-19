@@ -46,6 +46,12 @@ import "gettext" as i0
 pkg(
   name: "tin",
   version: "2.4.5",
+  description: "Threaded, NNTP-, and spool-based UseNet newsreader",
+  url: "http://www.tin.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

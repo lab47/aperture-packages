@@ -43,12 +43,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "jpeg" as i7, "libedit" as i8, "libffi" as i9, "libpng" as i10, "libtool" as i11, "libxml2" as i12, "libyaml" as i13, "llvm" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "pcre" as i19, "perl" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "ruby" as i24, "sphinx-doc" as i25, "sqlite" as i26, "swig" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
+import "cmake" as i0, "jpeg" as i1, "libpng" as i2, "llvm" as i3, "python@3.9" as i4
 
 pkg(
   name: "halide",
   version: "12.0.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "Language for fast, portable data-parallel computation",
+  url: "https://halide-lang.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "halide.rb"), formula)

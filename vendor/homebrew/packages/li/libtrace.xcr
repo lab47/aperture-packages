@@ -256,6 +256,12 @@ import "openssl@1.1" as i0, "wandio" as i1
 pkg(
   name: "libtrace",
   version: "4.0.15",
+  description: "Library for trace processing supporting multiple inputs",
+  url: "https://research.wand.net.nz/software/libtrace.php",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

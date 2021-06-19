@@ -424,6 +424,12 @@ import "cmake" as i0, "libffi" as i1, "swig" as i2
 pkg(
   name: "llvm@8",
   version: "8.0.1",
+  description: "Next-gen compiler infrastructure",
+  url: "https://llvm.org/",
+  metadata: %{
+    "license": "NCSA",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

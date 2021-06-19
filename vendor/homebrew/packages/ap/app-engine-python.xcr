@@ -73,6 +73,12 @@ import "homebrew-install" as hi
 pkg(
   name: "app-engine-python",
   version: "1.9.86",
+  description: "Google App Engine",
+  url: "https://cloud.google.com/appengine/docs",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

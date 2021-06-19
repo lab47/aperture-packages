@@ -48,6 +48,12 @@ import "rust" as i0, "openssl@1.1" as i1
 pkg(
   name: "duckscript",
   version: "0.8.2",
+  description: "Simple, extendable and embeddable scripting language",
+  url: "https://sagiegurari.github.io/duckscript",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

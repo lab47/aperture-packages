@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "brainfuck",
   version: "2.7.1",
+  description: "Interpreter for the brainfuck language",
+  url: "https://github.com/fabianishere/brainfuck",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

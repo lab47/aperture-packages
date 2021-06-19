@@ -48,6 +48,12 @@ import "gsl" as i0, "xmlrpc-c" as i1
 pkg(
   name: "flowgrind",
   version: "0.8.0",
+  description: "TCP measurement tool, similar to iperf or netperf",
+  url: "https://launchpad.net/flowgrind",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

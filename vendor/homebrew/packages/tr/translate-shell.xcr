@@ -54,6 +54,12 @@ import "fribidi" as i0, "gawk" as i1, "rlwrap" as i2
 pkg(
   name: "translate-shell",
   version: "0.9.6.12",
+  description: "Command-line translator using Google Translate and more",
+  url: "https://www.soimort.org/translate-shell",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

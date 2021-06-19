@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zinc",
   version: "0.3.15",
+  description: "Stand-alone version of sbt's Scala incremental compiler",
+  url: "https://github.com/typesafehub/zinc",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

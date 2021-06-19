@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "whatmask",
   version: "1.2",
+  description: "Network settings helper",
+  url: "http://www.laffeycomputer.com/whatmask.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "csvtk",
   version: "0.23.0",
+  description: "Cross-platform, efficient and practical CSV/TSV toolkit in Golang",
+  url: "https://bioinf.shenwei.me/csvtk",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

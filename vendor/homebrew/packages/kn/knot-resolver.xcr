@@ -86,6 +86,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gnutls" as i3, "knot" 
 pkg(
   name: "knot-resolver",
   version: "5.3.2",
+  description: "Minimalistic, caching, DNSSEC-validating DNS resolver",
+  url: "https://www.knot-resolver.cz",
+  metadata: %{
+    "license": "CC0-1.0 and GPL-3.0-or-later and LGPL-2.1-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "v8@3.15",
   version: "3.15.11.18",
+  description: "Google's open source JavaScript engine",
+  url: "https://github.com/v8/v8/wiki",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

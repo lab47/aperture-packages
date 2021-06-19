@@ -52,6 +52,12 @@ import "gettext" as i0
 pkg(
   name: "yash",
   version: "2.51",
+  description: "Yet another shell: a POSIX-compliant command-line shell",
+  url: "https://yash.osdn.jp/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

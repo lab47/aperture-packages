@@ -30,6 +30,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-aliases",
   version: "1.1.0",
+  description: "Make aliases for Ruby versions",
+  url: "https://github.com/tpope/rbenv-aliases",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

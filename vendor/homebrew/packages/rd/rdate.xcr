@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rdate",
   version: "1.5",
+  description: "Set the system's date from a remote host",
+  url: "https://www.aelius.com/njh/rdate/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

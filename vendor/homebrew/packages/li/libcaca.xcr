@@ -77,6 +77,12 @@ import "pkg-config" as i0, "imlib2" as i1
 pkg(
   name: "libcaca",
   version: "0.99b19",
+  description: "Convert pixel information into colored ASCII art",
+  url: "http://caca.zoy.org/wiki/libcaca",
+  metadata: %{
+    "license": "WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

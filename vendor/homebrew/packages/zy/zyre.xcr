@@ -64,6 +64,12 @@ import "pkg-config" as i0, "czmq" as i1, "zeromq" as i2
 pkg(
   name: "zyre",
   version: "2.0.1",
+  description: "Local Area Clustering for Peer-to-Peer Applications",
+  url: "https://github.com/zeromq/zyre",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

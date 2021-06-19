@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dsvpn",
   version: "0.1.4",
+  description: "Dead Simple VPN",
+  url: "https://github.com/jedisct1/dsvpn",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

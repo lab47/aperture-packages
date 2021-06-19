@@ -99,12 +99,18 @@ end
 
 import "homebrew-install" as hi
 
-import "aften" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flac" as i7, "gdbm" as i8, "libffi" as i9, "libogg" as i10, "libsamplerate" as i11, "libsndfile" as i12, "libtool" as i13, "libvorbis" as i14, "m4" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "opus" as i19, "perl" as i20, "pkg-config" as i21, "python@3.9" as i22, "readline" as i23, "sphinx-doc" as i24, "sqlite" as i25, "unzip" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "aften" as i4, "berkeley-db" as i5, "libsamplerate" as i6, "libsndfile" as i7, "python@3.9" as i8
 
 pkg(
   name: "jack",
   version: "1.9.18",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  description: "Audio Connection Kit",
+  url: "https://jackaudio.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jack.rb"), formula)

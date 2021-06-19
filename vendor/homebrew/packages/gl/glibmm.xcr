@@ -83,6 +83,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "libsigc+
 pkg(
   name: "glibmm",
   version: "2.68.1",
+  description: "C++ interface to glib",
+  url: "https://www.gtkmm.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

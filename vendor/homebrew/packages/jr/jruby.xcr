@@ -48,6 +48,12 @@ import "openjdk" as i0
 pkg(
   name: "jruby",
   version: "9.2.18.0",
+  description: "Ruby implementation in pure Java",
+  url: "https://www.jruby.org/",
+  metadata: %{
+    "license": "EPL-2.0 or GPL-2.0-only or LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

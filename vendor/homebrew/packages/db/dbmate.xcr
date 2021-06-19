@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "dbmate",
   version: "1.12.0",
+  description: "Lightweight, framework-agnostic database migration tool",
+  url: "https://github.com/amacneil/dbmate",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

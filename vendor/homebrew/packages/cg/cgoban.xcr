@@ -45,6 +45,12 @@ import "libice" as i0, "libsm" as i1, "libx11" as i2
 pkg(
   name: "cgoban",
   version: "1.9.14",
+  description: "Go-related services",
+  url: "https://cgoban1.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

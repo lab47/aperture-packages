@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "triton",
   version: "7.15.0",
+  description: "Joyent Triton CLI",
+  url: "https://www.npmjs.com/package/triton",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

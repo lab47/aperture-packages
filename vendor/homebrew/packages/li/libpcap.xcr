@@ -46,6 +46,12 @@ import "bison" as i0, "flex" as i1
 pkg(
   name: "libpcap",
   version: "1.10.1",
+  description: "Portable library for network traffic capture",
+  url: "https://www.tcpdump.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

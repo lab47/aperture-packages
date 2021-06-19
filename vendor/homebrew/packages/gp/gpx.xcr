@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gpx",
   version: "2.6.8",
+  description: "Gcode to x3g converter for 3D printers running Sailfish",
+  url: "https://github.com/markwal/GPX/blob/HEAD/README.md",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

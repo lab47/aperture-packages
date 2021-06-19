@@ -68,6 +68,12 @@ import "go" as i0
 pkg(
   name: "container-structure-test",
   version: "1.10.0",
+  description: "Validate the structure of your container images",
+  url: "https://github.com/GoogleContainerTools/container-structure-test",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

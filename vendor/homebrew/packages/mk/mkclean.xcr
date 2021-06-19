@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "mkclean",
   version: "0.9.0",
+  description: "Optimizes Matroska and WebM files",
+  url: "https://www.matroska.org/downloads/mkclean.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

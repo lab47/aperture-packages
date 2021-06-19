@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "remind",
   version: "03.03.07",
+  description: "Sophisticated calendar and alarm",
+  url: "https://dianne.skoll.ca/projects/remind/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

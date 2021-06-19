@@ -51,6 +51,12 @@ import "readline" as i0, "tcl-tk" as i1
 pkg(
   name: "x3270",
   version: "4.0ga14",
+  description: "IBM 3270 terminal emulator for the X Window System and Windows",
+  url: "http://x3270.bgp.nu/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

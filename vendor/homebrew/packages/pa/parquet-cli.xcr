@@ -56,6 +56,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "parquet-cli",
   version: "1.12.0",
+  description: "Apache Parquet command-line tools and utilities",
+  url: "https://parquet.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

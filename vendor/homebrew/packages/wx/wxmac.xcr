@@ -88,6 +88,12 @@ import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
 pkg(
   name: "wxmac",
   version: "3.0.5.1",
+  description: "Cross-platform C++ GUI toolkit (wxWidgets for macOS)",
+  url: "https://www.wxwidgets.org",
+  metadata: %{
+    "license": "wxWindows",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

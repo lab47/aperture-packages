@@ -40,6 +40,12 @@ import "bsdmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "spiped",
   version: "1.6.1",
+  description: "Secure pipe daemon",
+  url: "https://www.tarsnap.com/spiped.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

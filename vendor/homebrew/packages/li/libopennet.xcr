@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libopennet",
   version: "0.9.9",
+  description: "Provides open_net() (similar to open())",
+  url: "https://www.rkeene.org/oss/libopennet",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

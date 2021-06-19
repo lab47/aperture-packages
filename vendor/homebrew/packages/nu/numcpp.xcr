@@ -45,6 +45,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "numcpp",
   version: "2.4.2",
+  description: "C++ implementation of the Python Numpy library",
+  url: "https://dpilger26.github.io/NumCpp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

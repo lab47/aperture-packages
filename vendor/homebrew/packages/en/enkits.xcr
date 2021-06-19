@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "enkits",
   version: "1.9",
+  description: "C and C++ Task Scheduler for creating parallel programs",
+  url: "https://github.com/dougbinks/enkiTS",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

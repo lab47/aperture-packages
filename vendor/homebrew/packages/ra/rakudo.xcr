@@ -43,6 +43,12 @@ import "nqp" as i0
 pkg(
   name: "rakudo",
   version: "2021.05",
+  description: "Perl 6 compiler targeting MoarVM",
+  url: "https://rakudo.org",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

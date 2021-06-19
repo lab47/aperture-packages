@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ncompress",
   version: "5.0",
+  description: "Fast, simple LZW file compressor",
+  url: "https://github.com/vapier/ncompress",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

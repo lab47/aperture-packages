@@ -52,6 +52,12 @@ import "texinfo" as i0
 pkg(
   name: "gengetopt",
   version: "2.23",
+  description: "Generate C code to parse command-line arguments via getopt_long",
+  url: "https://www.gnu.org/software/gengetopt/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

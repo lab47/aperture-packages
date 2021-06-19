@@ -41,6 +41,12 @@ import "cabal-install" as i0, "ghc" as i1, "ncurses" as i2, "zlib" as i3
 pkg(
   name: "dhall",
   version: "1.39.0",
+  description: "Interpreter for the Dhall language",
+  url: "https://dhall-lang.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

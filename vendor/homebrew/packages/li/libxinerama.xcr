@@ -57,6 +57,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "xorgproto" as i3
 pkg(
   name: "libxinerama",
   version: "1.1.4",
+  description: "X.Org: API for Xinerama extension to X11 Protocol",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

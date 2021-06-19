@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "liblzf",
   version: "3.6",
+  description: "Very small, very fast data compression library",
+  url: "http://oldhome.schmorp.de/marc/liblzf.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

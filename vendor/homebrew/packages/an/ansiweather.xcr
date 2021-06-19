@@ -27,6 +27,12 @@ import "jq" as i0
 pkg(
   name: "ansiweather",
   version: "1.17.0",
+  description: "Weather in your terminal, with ANSI colors and Unicode symbols",
+  url: "https://github.com/fcambus/ansiweather",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

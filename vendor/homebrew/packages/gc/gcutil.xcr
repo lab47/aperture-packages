@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gcutil",
   version: "1.16.1",
+  description: "Manage your Google Compute Engine resources",
+  url: "https://cloud.google.com/compute/docs/gcutil/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

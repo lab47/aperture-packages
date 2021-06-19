@@ -46,6 +46,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "gqview",
   version: "2.0.4",
+  description: "Image browser",
+  url: "https://gqview.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "argtable",
   version: "2.13",
+  description: "ANSI C library for parsing GNU-style command-line options",
+  url: "https://argtable.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

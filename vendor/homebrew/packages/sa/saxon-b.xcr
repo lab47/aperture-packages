@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "saxon-b",
   version: "9.1.0.8",
+  description: "XSLT and XQuery processor",
+  url: "https://saxon.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "dmd" as i0
 pkg(
   name: "dcd",
   version: "0.13.4",
+  description: "Auto-complete program for the D programming language",
+  url: "https://github.com/dlang-community/DCD",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

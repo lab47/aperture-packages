@@ -82,6 +82,12 @@ import "intltool" as i0, "itstool" as i1, "meson" as i2, "ninja" as i3, "pkg-con
 pkg(
   name: "shared-mime-info",
   version: "2.1",
+  description: "Database of common MIME types",
+  url: "https://wiki.freedesktop.org/www/Software/shared-mime-info",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

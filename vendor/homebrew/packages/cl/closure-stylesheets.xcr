@@ -41,6 +41,12 @@ import "openjdk" as i0
 pkg(
   name: "closure-stylesheets",
   version: "1.5.0",
+  description: "Extended CSS preprocessor, linter, and internationalizer",
+  url: "https://github.com/google/closure-stylesheets",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

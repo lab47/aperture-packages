@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "vault-cli",
   version: "3.5.0",
+  description: "Subversion-like utility to work with Jackrabbit FileVault",
+  url: "https://jackrabbit.apache.org/filevault/index.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

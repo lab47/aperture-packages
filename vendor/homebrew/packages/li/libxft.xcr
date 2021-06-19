@@ -59,6 +59,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "libxrender" as i2, "bzip2" as i3
 pkg(
   name: "libxft",
   version: "2.3.3",
+  description: "X.Org: X FreeType library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

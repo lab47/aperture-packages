@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sponge",
   version: "0.65",
+  description: "Soak up standard input and write to a file",
+  url: "https://joeyh.name/code/moreutils/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

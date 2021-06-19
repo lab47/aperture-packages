@@ -46,6 +46,12 @@ import "cmake" as i0, "json-c" as i1, "libevent" as i2, "libuv" as i3, "libwebso
 pkg(
   name: "ttyd",
   version: "1.6.3",
+  description: "Command-line tool for sharing terminal over the web",
+  url: "https://tsl0922.github.io/ttyd/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

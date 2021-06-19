@@ -36,6 +36,12 @@ import "flex" as i0
 pkg(
   name: "shakespeare",
   version: "1.2.1",
+  description: "Write programs in Shakespearean English",
+  url: "https://shakespearelang.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

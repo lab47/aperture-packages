@@ -35,6 +35,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "h264bitstream",
   version: "0.2.0",
+  description: "Library for reading and writing H264 video streams",
+  url: "https://h264bitstream.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

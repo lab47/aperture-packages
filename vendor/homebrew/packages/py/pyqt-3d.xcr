@@ -50,12 +50,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "assimp" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "cmake" as i8, "cups" as i9, "dbus" as i10, "docbook" as i11, "docbook-xsl" as i12, "double-conversion" as i13, "expat" as i14, "freetype" as i15, "gdbm" as i16, "gettext" as i17, "glib" as i18, "gnu-getopt" as i19, "icu4c" as i20, "jasper" as i21, "jpeg" as i22, "krb5" as i23, "libb2" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libpng" as i28, "libproxy" as i29, "libtiff" as i30, "libtool" as i31, "libxml2" as i32, "libxslt" as i33, "m4" as i34, "meson" as i35, "mpdecimal" as i36, "ncurses" as i37, "ninja" as i38, "openssl@1.1" as i39, "pcre" as i40, "pcre2" as i41, "perl" as i42, "pkg-config" as i43, "pyqt" as i44, "pyqt-builder" as i45, "python@3.9" as i46, "qt" as i47, "readline" as i48, "sip" as i49, "sphinx-doc" as i50, "sqlite" as i51, "unzip" as i52, "webp" as i53, "xmlto" as i54, "xz" as i55, "zip" as i56, "zlib" as i57, "zstd" as i58
+import "pyqt-builder" as i0, "sip" as i1, "pyqt" as i2, "python@3.9" as i3, "qt" as i4
 
 pkg(
   name: "pyqt-3d",
   version: "6.1.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58],
+  description: "Python bindings for The Qt Company’s Qt 3D framework",
+  url: "https://www.riverbankcomputing.com/software/pyqt3d/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pyqt-3d.rb"), formula)

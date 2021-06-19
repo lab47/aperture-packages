@@ -38,6 +38,12 @@ import "cmake" as i0, "popt" as i1
 pkg(
   name: "librsync",
   version: "2.3.2",
+  description: "Library that implements the rsync remote-delta algorithm",
+  url: "https://librsync.github.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dvanalyzer",
   version: "1.4.2",
+  description: "Quality control tool for examining tape-to-file DV streams",
+  url: "https://mediaarea.net/DVAnalyzer",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

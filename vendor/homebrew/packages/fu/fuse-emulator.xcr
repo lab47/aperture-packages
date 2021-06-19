@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libpng" as i1, "libspectrum" as i2, "sdl" as i3
 pkg(
   name: "fuse-emulator",
   version: "1.6.0",
+  description: "Free Unix Spectrum Emulator",
+  url: "https://fuse-emulator.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

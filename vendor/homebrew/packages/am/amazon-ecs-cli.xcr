@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "amazon-ecs-cli",
   version: "1.21.0",
+  description: "CLI for Amazon ECS to manage clusters and tasks for development",
+  url: "https://aws.amazon.com/ecs",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

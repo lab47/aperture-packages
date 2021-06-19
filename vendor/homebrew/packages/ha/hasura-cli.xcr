@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "hasura-cli",
   version: "1.3.3-patch.1",
+  description: "Command-Line Interface for Hasura GraphQL Engine",
+  url: "https://hasura.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

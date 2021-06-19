@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dex2jar",
   version: "2.0",
+  description: "Tools to work with Android .dex and Java .class files",
+  url: "https://github.com/pxb1988/dex2jar",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

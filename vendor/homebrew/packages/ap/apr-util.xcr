@@ -64,6 +64,12 @@ import "apr" as i0, "openssl@1.1" as i1, "expat" as i2, "sqlite" as i3
 pkg(
   name: "apr-util",
   version: "1.6.1",
+  description: "Companion library to apr, the Apache Portable Runtime library",
+  url: "https://apr.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

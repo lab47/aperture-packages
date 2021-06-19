@@ -58,6 +58,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "game-music-emu",
   version: "0.6.3",
+  description: "Videogame music file emulator collection",
+  url: "https://bitbucket.org/mpyne/game-music-emu",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

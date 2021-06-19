@@ -145,12 +145,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "doxygen" as i9, "emacs" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gdbm" as i15, "gettext" as i16, "glib" as i17, "gmime" as i18, "gmp" as i19, "gnu-sed" as i20, "gnupg" as i21, "gnutls" as i22, "gobject-introspection" as i23, "gperf" as i24, "gpgme" as i25, "guile" as i26, "help2man" as i27, "jansson" as i28, "jemalloc" as i29, "libassuan" as i30, "libatomic_ops" as i31, "libev" as i32, "libevent" as i33, "libffi" as i34, "libgcrypt" as i35, "libgpg-error" as i36, "libidn2" as i37, "libksba" as i38, "libmagic" as i39, "libpng" as i40, "libpthread-stubs" as i41, "libtasn1" as i42, "libtool" as i43, "libunistring" as i44, "libusb" as i45, "libx11" as i46, "libxau" as i47, "libxcb" as i48, "libxdmcp" as i49, "libxext" as i50, "libxml2" as i51, "libxrender" as i52, "libyaml" as i53, "lzo" as i54, "m4" as i55, "meson" as i56, "mpdecimal" as i57, "ncurses" as i58, "nettle" as i59, "nghttp2" as i60, "ninja" as i61, "notmuch" as i62, "npth" as i63, "openssl@1.1" as i64, "p11-kit" as i65, "pcre" as i66, "perl" as i67, "pinentry" as i68, "pixman" as i69, "pkg-config" as i70, "python@3.9" as i71, "readline" as i72, "ruby" as i73, "sphinx-doc" as i74, "sqlite" as i75, "swig" as i76, "talloc" as i77, "unbound" as i78, "unzip" as i79, "util-macros" as i80, "xapian" as i81, "xcb-proto" as i82, "xorgproto" as i83, "xtrans" as i84, "xz" as i85, "zip" as i86, "zlib" as i87
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpgme" as i3, "libffi" as i4, "libmagic" as i5, "mpdecimal" as i6, "ncurses" as i7, "notmuch" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "swig" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "alot",
   version: "0.9.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87],
+  description: "Text mode MUA using notmuch mail",
+  url: "https://github.com/pazz/alot",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "alot.rb"), formula)

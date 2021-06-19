@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "stm32flash",
   version: "0.6",
+  description: "Open source flash program for STM32 using the ST serial bootloader",
+  url: "https://sourceforge.net/projects/stm32flash/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

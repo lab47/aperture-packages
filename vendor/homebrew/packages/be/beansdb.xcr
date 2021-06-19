@@ -87,6 +87,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "beansdb",
   version: "0.7.1.4",
+  description: "Yet another distributed key-value storage system",
+  url: "https://github.com/douban/beansdb",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

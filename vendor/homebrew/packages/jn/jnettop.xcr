@@ -48,6 +48,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "jnettop",
   version: "0.13.0",
+  description: "View hosts/ports taking up the most network traffic",
+  url: "https://web.archive.org/web/20161127214942/jnettop.kubs.info/wiki/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

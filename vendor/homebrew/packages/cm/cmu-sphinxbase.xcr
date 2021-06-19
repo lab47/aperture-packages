@@ -74,6 +74,12 @@ import "pkg-config" as i0, "libsamplerate" as i1, "libsndfile" as i2
 pkg(
   name: "cmu-sphinxbase",
   version: "0.8",
+  description: "Lightweight speech recognition engine for mobile devices",
+  url: "https://cmusphinx.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

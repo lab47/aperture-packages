@@ -38,6 +38,12 @@ import "cmake" as i0
 pkg(
   name: "slurm",
   version: "0.4.3",
+  description: "Yet another network load monitor",
+  url: "https://github.com/mattthias/slurm",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "eureka",
   version: "1.8.1",
+  description: "CLI tool to input and store your ideas without leaving the terminal",
+  url: "https://github.com/simeg/eureka",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

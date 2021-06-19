@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "malbolge",
   version: "0.1.0",
+  description: "Deliberately difficult to program esoteric programming language",
+  url: "https://esoteric.sange.fi/orphaned/malbolge/README.txt",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

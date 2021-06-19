@@ -189,6 +189,12 @@ import "pkg-config" as i0, "gdbm" as i1, "openssl@1.1" as i2, "sqlite" as i3, "t
 pkg(
   name: "pypy",
   version: "7.3.4",
+  description: "Highly performant implementation of Python 2 in Python",
+  url: "https://pypy.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "cmake" as i0, "doxygen" as i1
 pkg(
   name: "partio",
   version: "1.10.1",
+  description: "Particle library for 3D graphics",
+  url: "https://github.com/wdas/partio",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

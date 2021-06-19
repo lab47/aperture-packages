@@ -51,6 +51,12 @@ import "libpng" as i0, "sdl" as i1, "sdl_net" as i2
 pkg(
   name: "neopop-sdl",
   version: "0.2",
+  description: "NeoGeo Pocket emulator",
+  url: "https://nih.at/NeoPop-SDL/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

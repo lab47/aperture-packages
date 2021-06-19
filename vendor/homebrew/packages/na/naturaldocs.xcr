@@ -40,6 +40,12 @@ import "mono" as i0
 pkg(
   name: "naturaldocs",
   version: "2.1.1",
+  description: "Extensible, multi-language documentation generator",
+  url: "https://www.naturaldocs.org/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

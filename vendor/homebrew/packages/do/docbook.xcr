@@ -120,6 +120,12 @@ import "libxml2" as i0
 pkg(
   name: "docbook",
   version: "5.1",
+  description: "Standard SGML representation system for technical documents",
+  url: "https://docbook.org/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

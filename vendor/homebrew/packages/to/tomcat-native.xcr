@@ -61,6 +61,12 @@ import "libtool" as i0, "apr" as i1, "openjdk" as i2, "openssl@1.1" as i3
 pkg(
   name: "tomcat-native",
   version: "1.2.30",
+  description: "Lets Tomcat use some native resources for performance",
+  url: "https://tomcat.apache.org/native-doc/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -65,6 +65,12 @@ import "go" as i0, "ruby" as i1
 pkg(
   name: "git-lfs",
   version: "2.13.3",
+  description: "Git extension for versioning large files",
+  url: "https://github.com/git-lfs/git-lfs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "go-jira",
   version: "1.0.27",
+  description: "Simple jira command-line client in Go",
+  url: "https://github.com/go-jira/jira",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

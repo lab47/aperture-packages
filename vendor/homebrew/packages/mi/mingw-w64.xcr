@@ -247,6 +247,12 @@ import "texinfo" as i0, "gmp" as i1, "isl" as i2, "libmpc" as i3, "mpfr" as i4
 pkg(
   name: "mingw-w64",
   version: "9.0.0",
+  description: "Minimalist GNU for Windows and GCC cross-compilers",
+  url: "https://sourceforge.net/projects/mingw-w64/",
+  metadata: %{
+    "license": "ZPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

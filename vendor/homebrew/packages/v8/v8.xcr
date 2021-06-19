@@ -151,6 +151,12 @@ import "llvm" as i0, "ninja" as i1
 pkg(
   name: "v8",
   version: "9.1.269.36",
+  description: "Google's JavaScript engine",
+  url: "https://github.com/v8/v8/wiki",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "rke",
   version: "1.2.8",
+  description: "Rancher Kubernetes Engine, a Kubernetes installer that works everywhere",
+  url: "https://rancher.com/docs/rke/latest/en/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

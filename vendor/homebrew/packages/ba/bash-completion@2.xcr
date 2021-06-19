@@ -65,6 +65,12 @@ import "bash" as i0
 pkg(
   name: "bash-completion@2",
   version: "2.11",
+  description: "Programmable completion for Bash 4.2+",
+  url: "https://github.com/scop/bash-completion",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

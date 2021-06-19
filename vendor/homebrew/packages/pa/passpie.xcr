@@ -69,6 +69,12 @@ import "gnupg" as i0, "libyaml" as i1, "python@3.8" as i2
 pkg(
   name: "passpie",
   version: "1.6.1",
+  description: "Manage login credentials from the terminal",
+  url: "https://github.com/marcwebbie/passpie",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

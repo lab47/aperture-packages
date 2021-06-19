@@ -57,6 +57,12 @@ import "readline" as i0
 pkg(
   name: "remake",
   version: "4.3-1.5",
+  description: "GNU Make with improved error handling, tracing, and a debugger",
+  url: "https://bashdb.sourceforge.io/remake",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

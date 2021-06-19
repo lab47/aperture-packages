@@ -55,6 +55,12 @@ import "go" as i0
 pkg(
   name: "qrcp",
   version: "0.8.4",
+  description: "Transfer files to and from your computer by scanning a QR code",
+  url: "https://claudiodangelis.com/qrcp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

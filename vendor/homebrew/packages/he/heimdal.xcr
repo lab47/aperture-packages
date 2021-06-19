@@ -85,6 +85,12 @@ import "bison" as i0, "berkeley-db" as i1, "flex" as i2, "lmdb" as i3, "openldap
 pkg(
   name: "heimdal",
   version: "7.7.0",
+  description: "Free Kerberos 5 implementation",
+  url: "https://www.h5l.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

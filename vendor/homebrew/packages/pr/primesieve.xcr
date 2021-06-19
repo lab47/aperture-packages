@@ -36,6 +36,12 @@ import "cmake" as i0
 pkg(
   name: "primesieve",
   version: "7.6",
+  description: "Fast C/C++ prime number generator",
+  url: "https://github.com/kimwalisch/primesieve",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "rust" as i0
 pkg(
   name: "atuin",
   version: "0.7.1",
+  description: "Improved shell history for zsh and bash",
+  url: "https://github.com/ellie/atuin",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

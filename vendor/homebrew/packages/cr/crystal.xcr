@@ -129,6 +129,12 @@ import "bdw-gc" as i0, "gmp" as i1, "libevent" as i2, "libyaml" as i3, "llvm@9" 
 pkg(
   name: "crystal",
   version: "1.0.0",
+  description: "Fast and statically typed, compiled language with Ruby-like syntax",
+  url: "https://crystal-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

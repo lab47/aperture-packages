@@ -40,6 +40,12 @@ import "boost" as i0, "expat" as i1
 pkg(
   name: "exempi",
   version: "2.5.2",
+  description: "Library to parse XMP metadata",
+  url: "https://wiki.freedesktop.org/libopenraw/Exempi/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

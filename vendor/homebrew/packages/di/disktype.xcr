@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "disktype",
   version: "9",
+  description: "Detect content format of a disk or disk image",
+  url: "https://disktype.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

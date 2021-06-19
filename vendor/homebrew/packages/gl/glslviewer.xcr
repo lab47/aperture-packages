@@ -45,6 +45,12 @@ import "pkg-config" as i0, "ffmpeg" as i1, "glfw" as i2
 pkg(
   name: "glslviewer",
   version: "1.7.0",
+  description: "Live-coding console tool that renders GLSL Shaders",
+  url: "http://patriciogonzalezvivo.com/2015/glslViewer/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

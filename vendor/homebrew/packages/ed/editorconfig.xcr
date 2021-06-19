@@ -37,6 +37,12 @@ import "cmake" as i0, "pcre2" as i1
 pkg(
   name: "editorconfig",
   version: "0.12.4",
+  description: "Maintain consistent coding style between multiple editors",
+  url: "https://editorconfig.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

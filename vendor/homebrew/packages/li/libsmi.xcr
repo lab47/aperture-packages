@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libsmi",
   version: "0.5.0",
+  description: "Library to Access SMI MIB Information",
+  url: "https://www.ibr.cs.tu-bs.de/projects/libsmi/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

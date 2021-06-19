@@ -70,6 +70,12 @@ import "pkg-config" as i0, "cgl" as i1, "clp" as i2, "coinutils" as i3, "osi" as
 pkg(
   name: "cbc",
   version: "2.10.5",
+  description: "Mixed integer linear programming solver",
+  url: "https://github.com/coin-or/Cbc",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

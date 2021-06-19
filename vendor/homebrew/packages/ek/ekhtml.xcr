@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ekhtml",
   version: "0.3.2",
+  description: "Forgiving SAX-style HTML parser",
+  url: "https://ekhtml.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

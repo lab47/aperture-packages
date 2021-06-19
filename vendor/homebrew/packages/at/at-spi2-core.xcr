@@ -78,12 +78,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "cairo" as i6, "dbus" as i7, "docbook" as i8, "docbook-xsl" as i9, "expat" as i10, "flex" as i11, "fontconfig" as i12, "freetype" as i13, "gdbm" as i14, "gettext" as i15, "glib" as i16, "gnu-getopt" as i17, "gobject-introspection" as i18, "gperf" as i19, "help2man" as i20, "intltool" as i21, "libffi" as i22, "libgcrypt" as i23, "libgpg-error" as i24, "libpng" as i25, "libpthread-stubs" as i26, "libtool" as i27, "libx11" as i28, "libxau" as i29, "libxcb" as i30, "libxdmcp" as i31, "libxext" as i32, "libxfixes" as i33, "libxi" as i34, "libxml2" as i35, "libxrender" as i36, "libxslt" as i37, "libxtst" as i38, "lzo" as i39, "m4" as i40, "meson" as i41, "mpdecimal" as i42, "ncurses" as i43, "ninja" as i44, "openssl@1.1" as i45, "pcre" as i46, "perl" as i47, "pixman" as i48, "pkg-config" as i49, "python@3.9" as i50, "readline" as i51, "sqlite" as i52, "unzip" as i53, "util-macros" as i54, "xcb-proto" as i55, "xmlto" as i56, "xorgproto" as i57, "xtrans" as i58, "xz" as i59, "zip" as i60, "zlib" as i61
+import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "python@3.9" as i5, "dbus" as i6, "gettext" as i7, "glib" as i8, "libx11" as i9, "libxtst" as i10, "xorgproto" as i11
 
 pkg(
   name: "at-spi2-core",
   version: "2.36.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61],
+  description: "Protocol definitions and daemon for D-Bus at-spi",
+  url: "https://www.freedesktop.org/wiki/Accessibility/AT-SPI2",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "at-spi2-core.rb"), formula)

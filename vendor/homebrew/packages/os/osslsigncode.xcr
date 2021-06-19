@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "osslsigncode",
   version: "2.1",
+  description: "OpenSSL based Authenticode signing for PE/MSI/Java CAB files",
+  url: "https://github.com/mtrojnar/osslsigncode",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

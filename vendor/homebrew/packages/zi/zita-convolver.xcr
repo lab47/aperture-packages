@@ -54,6 +54,12 @@ import "fftw" as i0
 pkg(
   name: "zita-convolver",
   version: "4.0.3",
+  description: "Fast, partitioned convolution engine library",
+  url: "https://kokkinizita.linuxaudio.org/linuxaudio/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

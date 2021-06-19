@@ -38,6 +38,12 @@ import "jpeg" as i0, "zlib" as i1
 pkg(
   name: "qpdf",
   version: "10.3.2",
+  description: "Tools for and transforming and inspecting PDF files",
+  url: "https://github.com/qpdf/qpdf",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

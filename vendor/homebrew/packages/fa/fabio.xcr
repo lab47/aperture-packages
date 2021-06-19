@@ -71,6 +71,12 @@ import "go" as i0, "consul" as i1
 pkg(
   name: "fabio",
   version: "1.5.15",
+  description: "Zero-conf load balancing HTTP(S) router",
+  url: "https://github.com/fabiolb/fabio",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

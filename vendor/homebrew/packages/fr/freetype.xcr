@@ -52,6 +52,12 @@ import "libpng" as i0, "bzip2" as i1, "zlib" as i2
 pkg(
   name: "freetype",
   version: "2.10.4",
+  description: "Software library to render fonts",
+  url: "https://www.freetype.org/",
+  metadata: %{
+    "license": "FTL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

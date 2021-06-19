@@ -46,6 +46,12 @@ import "pkg-config" as i0, "libusb" as i1, "srecord" as i2
 pkg(
   name: "minipro",
   version: "0.5",
+  description: "Open controller for the MiniPRO TL866xx series of chip programmers",
+  url: "https://gitlab.com/DavidGriffith/minipro/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

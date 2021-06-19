@@ -70,6 +70,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "libx11" as i3,
 pkg(
   name: "rxvt-unicode",
   version: "9.26",
+  description: "Rxvt fork with Unicode support",
+  url: "http://software.schmorp.de/pkg/rxvt-unicode.html",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

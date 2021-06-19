@@ -81,6 +81,12 @@ import "cmake" as i0, "doxygen" as i1, "flac" as i2, "freetype" as i3, "jpeg" as
 pkg(
   name: "sfml",
   version: "2.5.1",
+  description: "Multi-media library with bindings for multiple languages",
+  url: "https://www.sfml-dev.org/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

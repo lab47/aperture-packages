@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lzlib",
   version: "1.12",
+  description: "Data compression library",
+  url: "https://www.nongnu.org/lzip/lzlib.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

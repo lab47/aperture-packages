@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "igv",
   version: "2.9.4",
+  description: "Interactive Genomics Viewer",
+  url: "https://www.broadinstitute.org/software/igv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

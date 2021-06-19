@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "fleet-cli",
   version: "0.3.5",
+  description: "Manage large fleets of Kubernetes clusters",
+  url: "https://github.com/rancher/fleet",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pdftohtml",
   version: "0.40a",
+  description: "Utility which converts PDF files into HTML and XML formats",
+  url: "https://pdftohtml.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

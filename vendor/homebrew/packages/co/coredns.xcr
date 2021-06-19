@@ -77,6 +77,12 @@ import "go" as i0
 pkg(
   name: "coredns",
   version: "1.8.4",
+  description: "DNS server that chains plugins",
+  url: "https://coredns.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

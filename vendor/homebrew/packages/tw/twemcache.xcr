@@ -43,6 +43,12 @@ import "autoconf" as i0, "automake" as i1, "libevent" as i2
 pkg(
   name: "twemcache",
   version: "2.6.3",
+  description: "Twitter fork of memcached",
+  url: "https://github.com/twitter/twemcache",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -119,6 +119,12 @@ import "pkg-config" as i0, "librsync" as i1, "openssl@1.1" as i2, "zlib" as i3
 pkg(
   name: "burp",
   version: "2.2.18",
+  description: "Network backup and restore",
+  url: "https://burp.grke.org/",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "node" as i0
 pkg(
   name: "node-sass",
   version: "1.34.1",
+  description: "JavaScript implementation of a Sass compiler",
+  url: "https://github.com/sass/dart-sass",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

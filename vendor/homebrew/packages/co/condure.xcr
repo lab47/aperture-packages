@@ -107,6 +107,12 @@ import "pkg-config" as i0, "rust" as i1, "openssl@1.1" as i2, "zeromq" as i3
 pkg(
   name: "condure",
   version: "1.2.0",
+  description: "HTTP/WebSocket connection manager",
+  url: "https://github.com/fanout/condure",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

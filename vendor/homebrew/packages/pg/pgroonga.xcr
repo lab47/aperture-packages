@@ -41,6 +41,12 @@ import "pkg-config" as i0, "groonga" as i1, "postgresql" as i2
 pkg(
   name: "pgroonga",
   version: "2.3.0",
+  description: "PostgreSQL plugin to use Groonga as index",
+  url: "https://pgroonga.github.io/",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

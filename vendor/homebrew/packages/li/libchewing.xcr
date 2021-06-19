@@ -66,6 +66,12 @@ import "texinfo" as i0
 pkg(
   name: "libchewing",
   version: "0.5.1",
+  description: "Intelligent phonetic input method library",
+  url: "http://chewing.im/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

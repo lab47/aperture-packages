@@ -58,6 +58,12 @@ import "berkeley-db@4" as i0, "gpgme" as i1, "libarchive" as i2, "xz" as i3, "gc
 pkg(
   name: "reprepro",
   version: "5.3.0",
+  description: "Debian package repository manager",
+  url: "https://salsa.debian.org/brlink/reprepro",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

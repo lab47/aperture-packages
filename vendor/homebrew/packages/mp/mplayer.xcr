@@ -83,6 +83,12 @@ import "pkg-config" as i0, "yasm" as i1, "fontconfig" as i2, "freetype" as i3, "
 pkg(
   name: "mplayer",
   version: "1.4",
+  description: "UNIX movie player",
+  url: "https://mplayerhq.hu/",
+  metadata: %{
+    "license": "GPL-2.0-only and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

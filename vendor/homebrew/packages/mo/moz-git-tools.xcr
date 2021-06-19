@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "moz-git-tools",
   version: "0.1",
+  description: "Tools for working with Git at Mozilla",
+  url: "https://github.com/mozilla/moz-git-tools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

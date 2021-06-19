@@ -86,6 +86,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libsigsegv",
   version: "2.13",
+  description: "Library for handling page faults in user mode",
+  url: "https://www.gnu.org/software/libsigsegv/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

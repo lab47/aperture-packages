@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "grap",
   version: "1.46",
+  description: "Language for typesetting graphs",
+  url: "https://www.lunabase.org/~faber/Vault/software/grap/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

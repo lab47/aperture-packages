@@ -60,6 +60,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "gambit-scheme",
   version: "4.9.3",
+  description: "Implementation of the Scheme Language",
+  url: "https://github.com/gambit/gambit",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

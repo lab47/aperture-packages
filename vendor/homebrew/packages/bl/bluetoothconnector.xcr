@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bluetoothconnector",
   version: "2.0.0",
+  description: "Connect and disconnect Bluetooth devices",
+  url: "https://github.com/lapfelix/BluetoothConnector",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

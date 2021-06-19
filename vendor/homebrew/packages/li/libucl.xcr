@@ -67,6 +67,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
 pkg(
   name: "libucl",
   version: "0.8.1",
+  description: "Universal configuration library parser",
+  url: "https://github.com/vstakhov/libucl",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

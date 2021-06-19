@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ren",
   version: "1.0",
+  description: "Rename multiple files in a directory",
+  url: "https://pdb.finkproject.org/pdb/package.php/ren",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "cmake" as i0
 pkg(
   name: "libolm",
   version: "3.2.4",
+  description: "Implementation of the Double Ratchet cryptographic ratchet",
+  url: "https://gitlab.matrix.org/matrix-org/olm",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

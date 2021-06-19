@@ -50,6 +50,12 @@ import "pkg-config" as i0
 pkg(
   name: "afuse",
   version: "0.4.1",
+  description: "Automounting file system implemented in userspace with FUSE",
+  url: "https://github.com/pcarrier/afuse/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

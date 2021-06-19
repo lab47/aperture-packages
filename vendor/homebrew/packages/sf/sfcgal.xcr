@@ -39,6 +39,12 @@ import "cmake" as i0, "boost" as i1, "cgal" as i2, "gmp" as i3, "mpfr" as i4
 pkg(
   name: "sfcgal",
   version: "1.3.10",
+  description: "C++ wrapper library around CGAL",
+  url: "http://sfcgal.org/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "pkg-config" as i0, "wayland" as i1
 pkg(
   name: "wayland-protocols",
   version: "1.21",
+  description: "Additional Wayland protocols",
+  url: "https://wayland.freedesktop.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

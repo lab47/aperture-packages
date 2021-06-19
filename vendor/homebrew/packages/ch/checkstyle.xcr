@@ -35,6 +35,12 @@ import "openjdk" as i0
 pkg(
   name: "checkstyle",
   version: "8.43",
+  description: "Check Java source against a coding standard",
+  url: "https://checkstyle.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

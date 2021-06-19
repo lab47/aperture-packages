@@ -81,6 +81,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "libsoup",
   version: "2.72.0",
+  description: "HTTP client/server library for GNOME",
+  url: "https://wiki.gnome.org/Projects/libsoup",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

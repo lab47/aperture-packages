@@ -39,6 +39,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-default-gems",
   version: "1.0.0",
+  description: "Auto-installs gems for Ruby installs",
+  url: "https://github.com/sstephenson/rbenv-default-gems",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

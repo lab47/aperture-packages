@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fzy",
   version: "1.0",
+  description: "Fast, simple fuzzy text selector with an advanced scoring algorithm",
+  url: "https://github.com/jhawthorn/fzy",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

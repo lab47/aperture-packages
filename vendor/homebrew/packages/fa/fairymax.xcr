@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fairymax",
   version: "5.0b",
+  description: "AI for playing Chess variants",
+  url: "https://www.chessvariants.com/index/msdisplay.php?itemid=MSfairy-max",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "consul-template",
   version: "0.26.0",
+  description: "Generic template rendering and notifications with Consul",
+  url: "https://github.com/hashicorp/consul-template",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

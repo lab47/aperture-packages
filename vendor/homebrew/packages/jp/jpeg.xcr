@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jpeg",
   version: "9d",
+  description: "Image manipulation library",
+  url: "https://www.ijg.org/",
+  metadata: %{
+    "license": "IJG",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

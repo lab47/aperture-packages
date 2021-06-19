@@ -38,6 +38,12 @@ import "node" as i0
 pkg(
   name: "balena-cli",
   version: "12.25.0",
+  description: "Command-line tool for interacting with the balenaCloud and balena API",
+  url: "https://www.balena.io/docs/reference/cli/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

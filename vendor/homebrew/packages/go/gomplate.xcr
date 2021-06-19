@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "gomplate",
   version: "3.9.0",
+  description: "Command-line Golang template processor",
+  url: "https://gomplate.hairyhenderson.ca/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

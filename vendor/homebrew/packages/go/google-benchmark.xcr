@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "google-benchmark",
   version: "1.5.5",
+  description: "C++ microbenchmark support library",
+  url: "https://github.com/google/benchmark",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -73,6 +73,12 @@ import "pkg-config" as i0, "libusb" as i1, "qt@5" as i2, "shapelib" as i3, "zlib
 pkg(
   name: "gpsbabel",
   version: "1.7.0",
+  description: "Converts/uploads GPS waypoints, tracks, and routes",
+  url: "https://www.gpsbabel.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

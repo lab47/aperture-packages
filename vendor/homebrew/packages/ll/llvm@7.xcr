@@ -404,6 +404,12 @@ import "cmake" as i0, "libffi" as i1
 pkg(
   name: "llvm@7",
   version: "7.1.0",
+  description: "Next-gen compiler infrastructure",
+  url: "https://llvm.org/",
+  metadata: %{
+    "license": "NCSA",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

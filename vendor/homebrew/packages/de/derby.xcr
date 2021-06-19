@@ -80,6 +80,12 @@ import "openjdk" as i0
 pkg(
   name: "derby",
   version: "10.15.2.0",
+  description: "Apache Derby is an embedded relational database running on JVM",
+  url: "https://db.apache.org/derby/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

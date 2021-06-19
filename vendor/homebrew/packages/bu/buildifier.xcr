@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "buildifier",
   version: "4.0.1",
+  description: "Format bazel BUILD files with a standard convention",
+  url: "https://github.com/bazelbuild/buildtools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

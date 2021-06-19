@@ -83,6 +83,12 @@ import "cmake" as i0, "boost" as i1, "cmark-gfm" as i2, "llvm" as i3
 pkg(
   name: "standardese",
   version: "0.5.2",
+  description: "Next-gen documentation generator for C++",
+  url: "https://standardese.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

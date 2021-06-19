@@ -96,6 +96,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "libgxps",
   version: "0.3.2",
+  description: "GObject based library for handling and rendering XPS documents",
+  url: "https://wiki.gnome.org/Projects/libgxps",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

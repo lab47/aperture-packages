@@ -60,6 +60,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "gpac",
   version: "1.0.1",
+  description: "Multimedia framework for research and academic purposes",
+  url: "https://gpac.wp.mines-telecom.fr/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

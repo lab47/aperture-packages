@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "smu",
   version: "1.5",
+  description: "Simple markup with markdown-like syntax",
+  url: "https://github.com/Gottox/smu",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

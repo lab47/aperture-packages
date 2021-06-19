@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "patchelf",
   version: "0.12",
+  description: "Modify dynamic ELF executables",
+  url: "https://github.com/NixOS/patchelf",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

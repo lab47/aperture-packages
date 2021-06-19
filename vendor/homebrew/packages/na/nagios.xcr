@@ -158,6 +158,12 @@ import "gd" as i0, "libpng" as i1, "nagios-plugins" as i2
 pkg(
   name: "nagios",
   version: "4.4.6",
+  description: "Network monitoring and management system",
+  url: "https://www.nagios.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "evernote2md",
   version: "0.16.1",
+  description: "Convert Evernote .enex file to Markdown",
+  url: "https://github.com/wormi4ok/evernote2md",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

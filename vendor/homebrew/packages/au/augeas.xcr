@@ -68,6 +68,12 @@ import "pkg-config" as i0, "readline" as i1, "libxml2" as i2
 pkg(
   name: "augeas",
   version: "1.12.0",
+  description: "Configuration editing tool and API",
+  url: "https://augeas.net/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

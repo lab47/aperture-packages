@@ -61,6 +61,12 @@ import "boost" as i0, "pkg-config" as i1, "librevenge" as i2
 pkg(
   name: "libpagemaker",
   version: "0.0.4",
+  description: "Imports file format of Aldus/Adobe PageMaker documents",
+  url: "https://wiki.documentfoundation.org/DLP/Libraries/libpagemaker",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

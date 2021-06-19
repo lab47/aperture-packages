@@ -89,6 +89,12 @@ import "libomp" as i0, "ncurses" as i1
 pkg(
   name: "speech-tools",
   version: "2.5.0",
+  description: "C++ speech software library from the University of Edinburgh",
+  url: "http://festvox.org/docs/speech_tools-2.4.0/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

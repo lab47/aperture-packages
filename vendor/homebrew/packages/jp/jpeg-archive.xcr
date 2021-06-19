@@ -34,6 +34,12 @@ import "mozjpeg" as i0
 pkg(
   name: "jpeg-archive",
   version: "2.2.0",
+  description: "Utilities for archiving JPEGs for long term storage",
+  url: "https://github.com/danielgtaylor/jpeg-archive",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

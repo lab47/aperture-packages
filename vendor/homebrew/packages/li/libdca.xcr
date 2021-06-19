@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libdca",
   version: "0.0.7",
+  description: "Library for decoding DTS Coherent Acoustics streams",
+  url: "https://www.videolan.org/developers/libdca.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

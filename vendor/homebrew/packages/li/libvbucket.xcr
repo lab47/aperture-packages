@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libvbucket",
   version: "1.8.0.4",
+  description: "Utility library providing mapping to virtual buckets",
+  url: "https://couchbase.com/develop/c/current",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

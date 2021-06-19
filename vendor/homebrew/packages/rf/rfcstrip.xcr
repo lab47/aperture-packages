@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rfcstrip",
   version: "1.03",
+  description: "Strips headers and footers from RFCs and Internet-Drafts",
+  url: "https://trac.tools.ietf.org/tools/rfcstrip/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

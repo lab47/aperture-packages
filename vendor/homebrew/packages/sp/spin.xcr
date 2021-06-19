@@ -56,6 +56,12 @@ import "bison" as i0
 pkg(
   name: "spin",
   version: "6.5.2",
+  description: "Efficient verification tool of multi-threaded software",
+  url: "https://spinroot.com/spin/whatispin.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

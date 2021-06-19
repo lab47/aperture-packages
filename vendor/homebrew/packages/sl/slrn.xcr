@@ -60,6 +60,12 @@ import "openssl@1.1" as i0, "s-lang" as i1
 pkg(
   name: "slrn",
   version: "1.0.3a",
+  description: "Powerful console-based newsreader",
+  url: "https://slrn.info/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

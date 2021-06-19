@@ -51,6 +51,12 @@ import "lzip" as i0
 pkg(
   name: "ocrad",
   version: "0.27",
+  description: "Optical character recognition (OCR) program",
+  url: "https://www.gnu.org/software/ocrad/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

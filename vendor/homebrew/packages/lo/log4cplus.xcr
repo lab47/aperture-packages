@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "log4cplus",
   version: "2.0.6",
+  description: "Logging Framework for C++",
+  url: "https://sourceforge.net/p/log4cplus/wiki/Home/",
+  metadata: %{
+    "license": "Apache-2.0 and BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

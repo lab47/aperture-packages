@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "avra",
   version: "1.4.2",
+  description: "Assembler for the Atmel AVR microcontroller family",
+  url: "https://github.com/hsoft/avra",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

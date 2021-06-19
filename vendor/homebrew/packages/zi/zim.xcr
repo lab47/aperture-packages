@@ -66,12 +66,18 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "atk" as i3, "autoconf" as i4, "automake" as i5, "berkeley-db" as i6, "bison" as i7, "brotli" as i8, "bzip2" as i9, "c-ares" as i10, "cairo" as i11, "cmake" as i12, "curl" as i13, "docbook" as i14, "docbook-xsl" as i15, "doxygen" as i16, "expat" as i17, "flex" as i18, "fontconfig" as i19, "freetype" as i20, "fribidi" as i21, "gd" as i22, "gdbm" as i23, "gdk-pixbuf" as i24, "gettext" as i25, "ghostscript" as i26, "glib" as i27, "gobject-introspection" as i28, "gperf" as i29, "graphite2" as i30, "graphviz" as i31, "groff" as i32, "gsettings-desktop-schemas" as i33, "gtk+3" as i34, "gtksourceview3" as i35, "gts" as i36, "harfbuzz" as i37, "help2man" as i38, "hicolor-icon-theme" as i39, "icu4c" as i40, "intltool" as i41, "jasper" as i42, "jbig2dec" as i43, "jemalloc" as i44, "jpeg" as i45, "krb5" as i46, "libepoxy" as i47, "libev" as i48, "libffi" as i49, "libgcrypt" as i50, "libgpg-error" as i51, "libidn" as i52, "libidn2" as i53, "libpng" as i54, "libpthread-stubs" as i55, "librsvg" as i56, "libssh2" as i57, "libtiff" as i58, "libtool" as i59, "libunistring" as i60, "libx11" as i61, "libxau" as i62, "libxcb" as i63, "libxdmcp" as i64, "libxext" as i65, "libxml2" as i66, "libxrender" as i67, "libxslt" as i68, "libyaml" as i69, "little-cms2" as i70, "lz4" as i71, "lzo" as i72, "m4" as i73, "meson" as i74, "mpdecimal" as i75, "ncurses" as i76, "netpbm" as i77, "nghttp2" as i78, "ninja" as i79, "openjdk" as i80, "openjpeg" as i81, "openldap" as i82, "openssl@1.1" as i83, "pango" as i84, "pcre" as i85, "perl" as i86, "pixman" as i87, "pkg-config" as i88, "psutils" as i89, "py3cairo" as i90, "pygobject3" as i91, "python@3.9" as i92, "readline" as i93, "rtmpdump" as i94, "ruby" as i95, "rust" as i96, "scons" as i97, "sphinx-doc" as i98, "sqlite" as i99, "subversion" as i100, "swig" as i101, "texinfo" as i102, "uchardet" as i103, "unzip" as i104, "utf8proc" as i105, "util-macros" as i106, "vala" as i107, "webp" as i108, "xcb-proto" as i109, "xorgproto" as i110, "xtrans" as i111, "xz" as i112, "zip" as i113, "zlib" as i114, "zstd" as i115
+import "pkg-config" as i0, "adwaita-icon-theme" as i1, "graphviz" as i2, "gtk+3" as i3, "gtksourceview3" as i4, "pygobject3" as i5, "python@3.9" as i6
 
 pkg(
   name: "zim",
   version: "0.73.5",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115],
+  description: "Graphical text editor used to maintain a collection of wiki pages",
+  url: "https://zim-wiki.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zim.rb"), formula)

@@ -68,6 +68,12 @@ import "perl" as i0
 pkg(
   name: "xmltoman",
   version: "0.4",
+  description: "XML to manpage converter",
+  url: "https://sourceforge.net/projects/xmltoman/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

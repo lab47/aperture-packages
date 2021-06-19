@@ -65,6 +65,12 @@ import "jpeg" as i0
 pkg(
   name: "vncsnapshot",
   version: "1.2a",
+  description: "Command-line utility for taking VNC snapshots",
+  url: "https://sourceforge.net/projects/vncsnapshot/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

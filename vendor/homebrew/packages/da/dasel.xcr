@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "dasel",
   version: "1.15.0",
+  description: "JSON, YAML, TOML, XML, and CSV query and modification tool",
+  url: "https://github.com/TomWright/dasel",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

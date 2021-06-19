@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "hayai",
   version: "1.0.2",
+  description: "C++ benchmarking framework inspired by the googletest framework",
+  url: "https://bruun.co/2012/02/07/easy-cpp-benchmarking",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

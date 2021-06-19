@@ -72,6 +72,12 @@ import "pcre" as i0
 pkg(
   name: "swig@3",
   version: "3.0.12",
+  description: "Generate scripting interfaces to C/C++ code",
+  url: "http://www.swig.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

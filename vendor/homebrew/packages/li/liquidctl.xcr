@@ -62,6 +62,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libusb" as i
 pkg(
   name: "liquidctl",
   version: "1.6.1",
+  description: "Cross-platform tool and drivers for liquid coolers and other devices",
+  url: "https://github.com/jonasmalacofilho/liquidctl",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {

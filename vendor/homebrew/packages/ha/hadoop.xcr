@@ -43,6 +43,12 @@ import "openjdk" as i0
 pkg(
   name: "hadoop",
   version: "3.3.0",
+  description: "Framework for distributed processing of large data sets",
+  url: "https://hadoop.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

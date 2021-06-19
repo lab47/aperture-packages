@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-tf",
   version: "2.0.3.20131219",
+  description: "Share changes between TFS and git",
+  url: "https://archive.codeplex.com/?p=gittf",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

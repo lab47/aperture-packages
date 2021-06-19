@@ -66,12 +66,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "aspell" as i1, "autoconf" as i2, "automake" as i3, "bdw-gc" as i4, "berkeley-db" as i5, "bison" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cmake" as i10, "curl" as i11, "expat" as i12, "gdbm" as i13, "gettext" as i14, "gmp" as i15, "gnu-sed" as i16, "gnutls" as i17, "gperf" as i18, "guile" as i19, "jemalloc" as i20, "krb5" as i21, "libatomic_ops" as i22, "libev" as i23, "libevent" as i24, "libffi" as i25, "libgcrypt" as i26, "libgpg-error" as i27, "libiconv" as i28, "libidn2" as i29, "libssh2" as i30, "libtasn1" as i31, "libtool" as i32, "libunistring" as i33, "libxml2" as i34, "libyaml" as i35, "lua" as i36, "m4" as i37, "mpdecimal" as i38, "ncurses" as i39, "nettle" as i40, "nghttp2" as i41, "ninja" as i42, "openldap" as i43, "openssl@1.1" as i44, "p11-kit" as i45, "perl" as i46, "pkg-config" as i47, "python@3.9" as i48, "readline" as i49, "rtmpdump" as i50, "ruby" as i51, "sphinx-doc" as i52, "sqlite" as i53, "tcl-tk" as i54, "unbound" as i55, "unzip" as i56, "xz" as i57, "zip" as i58, "zlib" as i59, "zstd" as i60
+import "asciidoctor" as i0, "cmake" as i1, "pkg-config" as i2, "aspell" as i3, "gettext" as i4, "gnutls" as i5, "libgcrypt" as i6, "lua" as i7, "ncurses" as i8, "perl" as i9, "python@3.9" as i10, "ruby" as i11, "curl" as i12, "tcl-tk" as i13, "libiconv" as i14
 
 pkg(
   name: "weechat",
   version: "3.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60],
+  description: "Extensible IRC client",
+  url: "https://www.weechat.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "weechat.rb"), formula)

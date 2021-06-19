@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bzip2",
   version: "1.0.8",
+  description: "Freely available high-quality data compressor",
+  url: "https://sourceware.org/bzip2/",
+  metadata: %{
+    "license": "bzip2-1.0.6",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

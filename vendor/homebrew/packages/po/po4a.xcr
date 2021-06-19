@@ -119,6 +119,12 @@ import "docbook-xsl" as i0, "gettext" as i1, "perl" as i2, "libxslt" as i3
 pkg(
   name: "po4a",
   version: "0.63",
+  description: "Documentation translation maintenance tool",
+  url: "https://po4a.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

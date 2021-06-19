@@ -37,6 +37,12 @@ import "cabal-install" as i0, "ghc" as i1
 pkg(
   name: "dhall-bash",
   version: "1.0.37",
+  description: "Compile Dhall to Bash",
+  url: "https://github.com/dhall-lang/dhall-haskell/tree/master/dhall-bash",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

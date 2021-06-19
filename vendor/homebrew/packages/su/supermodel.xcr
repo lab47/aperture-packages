@@ -64,6 +64,12 @@ import "sdl" as i0
 pkg(
   name: "supermodel",
   version: "0.2a",
+  description: "Sega Model 3 arcade emulator",
+  url: "https://www.supermodel3.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

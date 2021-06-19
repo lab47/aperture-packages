@@ -59,6 +59,12 @@ import "eccodes" as i0, "hdf5" as i1, "netcdf" as i2, "proj" as i3, "szip" as i4
 pkg(
   name: "cdo",
   version: "1.9.10",
+  description: "Climate Data Operators",
+  url: "https://code.mpimet.mpg.de/projects/cdo",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

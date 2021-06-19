@@ -60,6 +60,12 @@ import "pkg-config" as i0, "rust" as i1, "freetype" as i2, "graphite2" as i3, "h
 pkg(
   name: "tectonic",
   version: "0.5.2",
+  description: "Modernized, complete, self-contained TeX/LaTeX engine",
+  url: "https://tectonic-typesetting.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

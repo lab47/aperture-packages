@@ -60,6 +60,12 @@ import "boost" as i0, "cmake" as i1, "mysql-client" as i2, "openssl@1.1" as i3
 pkg(
   name: "mysql-connector-c++",
   version: "8.0.25",
+  description: "MySQL database connector for C++ applications",
+  url: "https://dev.mysql.com/downloads/connector/cpp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

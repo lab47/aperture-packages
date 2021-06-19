@@ -63,6 +63,12 @@ import "ocaml" as i0, "coq" as i1
 pkg(
   name: "math-comp",
   version: "1.12.0",
+  description: "Mathematical Components for the Coq proof assistant",
+  url: "https://math-comp.github.io/math-comp/",
+  metadata: %{
+    "license": "CECILL-B",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

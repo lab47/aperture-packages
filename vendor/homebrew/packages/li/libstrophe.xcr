@@ -70,6 +70,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libstrophe",
   version: "0.10.1",
+  description: "XMPP library for C",
+  url: "https://strophe.im/libstrophe/",
+  metadata: %{
+    "license": "GPL-3.0 or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

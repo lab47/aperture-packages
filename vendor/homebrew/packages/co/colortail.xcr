@@ -49,6 +49,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "colortail",
   version: "0.3.4",
+  description: "Like tail(1), but with various colors for specified output",
+  url: "https://github.com/joakim666/colortail",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

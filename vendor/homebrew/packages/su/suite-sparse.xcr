@@ -76,6 +76,12 @@ import "cmake" as i0, "metis" as i1, "openblas" as i2, "tbb" as i3, "m4" as i4
 pkg(
   name: "suite-sparse",
   version: "5.10.1",
+  description: "Suite of Sparse Matrix Software",
+  url: "https://people.engr.tamu.edu/davis/suitesparse.html",
+  metadata: %{
+    "license": "BSD-3-Clause and LGPL-2.1-or-later and GPL-2.0-or-later and Apache-2.0 and GPL-3.0-only and (LGPL-3.0-or-later or GPL-2.0-or-later)",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

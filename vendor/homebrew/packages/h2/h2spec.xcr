@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "h2spec",
   version: "2.6.0",
+  description: "Fast website link checker in Go",
+  url: "https://github.com/summerwind/h2spec",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

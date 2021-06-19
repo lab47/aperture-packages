@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libspatialite" as i1, "proj@7" as i2, "readosm" as i
 pkg(
   name: "spatialite-tools",
   version: "5.0.1",
+  description: "CLI tools supporting SpatiaLite",
+  url: "https://www.gaia-gis.it/fossil/spatialite-tools/index",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

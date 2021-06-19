@@ -40,6 +40,12 @@ import "binutils" as i0, "gawk" as i1, "wdiff" as i2
 pkg(
   name: "pkgdiff",
   version: "1.7.2",
+  description: "Tool for analyzing changes in software packages (e.g. RPM, DEB, TAR.GZ)",
+  url: "https://lvc.github.io/pkgdiff/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

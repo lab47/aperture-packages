@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hostdb",
   version: "1.004",
+  description: "Generate DNS zones and DHCP configuration from hostlist.txt",
+  url: "https://code.google.com/archive/p/hostdb/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

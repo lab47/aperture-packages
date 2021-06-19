@@ -58,6 +58,12 @@ import "sbcl" as i0
 pkg(
   name: "acl2",
   version: "8.3",
+  description: "Logic and programming language in which you can model computer systems",
+  url: "https://www.cs.utexas.edu/users/moore/acl2/index.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

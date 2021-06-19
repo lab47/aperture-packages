@@ -407,6 +407,12 @@ import "cmake" as i0, "libffi" as i1, "swig" as i2
 pkg(
   name: "llvm@9",
   version: "9.0.1",
+  description: "Next-gen compiler infrastructure",
+  url: "https://llvm.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

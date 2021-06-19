@@ -77,6 +77,12 @@ import "libtool" as i0, "pkg-config" as i1, "mesa" as i2
 pkg(
   name: "mesa-glu",
   version: "9.0.1",
+  description: "Mesa OpenGL Utility library",
+  url: "https://cgit.freedesktop.org/mesa/glu",
+  metadata: %{
+    "license": "GPL-3.0-or-later or GPL-2.0-or-later or MIT or SGI-B-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

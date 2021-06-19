@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "masscan",
   version: "1.3.2",
+  description: "TCP port scanner, scans entire Internet in under 5 minutes",
+  url: "https://github.com/robertdavidgraham/masscan/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

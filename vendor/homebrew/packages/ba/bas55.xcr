@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bas55",
   version: "1.19",
+  description: "Minimal BASIC programming language interpreter as defined by ECMA-55",
+  url: "https://jorgicor.niobe.org/bas55/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

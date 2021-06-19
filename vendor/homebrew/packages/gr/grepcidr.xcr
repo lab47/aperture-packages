@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "grepcidr",
   version: "2.0",
+  description: "Filter IP addresses matching IPv4 CIDR/network specification",
+  url: "http://www.pc-tools.net/unix/grepcidr/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "ndpi",
   version: "3.4",
+  description: "Deep Packet Inspection (DPI) library",
+  url: "https://www.ntop.org/products/deep-packet-inspection/ndpi/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "icu4c",
   version: "69.1",
+  description: "C/C++ and Java libraries for Unicode and globalization",
+  url: "http://site.icu-project.org/home",
+  metadata: %{
+    "license": "ICU",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

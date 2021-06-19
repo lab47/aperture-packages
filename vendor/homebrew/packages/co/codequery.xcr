@@ -53,6 +53,12 @@ import "cmake" as i0, "qt@5" as i1
 pkg(
   name: "codequery",
   version: "0.24.0",
+  description: "Code-understanding, code-browsing or code-search tool",
+  url: "https://github.com/ruben2020/codequery",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

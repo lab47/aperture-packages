@@ -80,6 +80,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libghthash",
   version: "0.6.2",
+  description: "Generic hash table for C++",
+  url: "https://web.archive.org/web/20170824230514/www.bth.se/people/ska/sim_home/libghthash.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "woof",
   version: "20120531",
+  description: "Ad-hoc single-file webserver",
+  url: "http://www.home.unix-ag.org/simon/woof.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -79,6 +79,12 @@ import "homebrew-install" as hi
 pkg(
   name: "h2",
   version: "1.4.200",
+  description: "Java SQL database",
+  url: "https://www.h2database.com/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

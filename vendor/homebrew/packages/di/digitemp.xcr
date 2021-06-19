@@ -54,6 +54,12 @@ import "libusb-compat" as i0
 pkg(
   name: "digitemp",
   version: "3.7.2",
+  description: "Read temperature sensors in a 1-Wire net",
+  url: "https://www.digitemp.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

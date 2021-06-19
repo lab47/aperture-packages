@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "webify",
   version: "1.5.0",
+  description: "Wrapper for shell commands as web services",
+  url: "https://github.com/beefsack/webify",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

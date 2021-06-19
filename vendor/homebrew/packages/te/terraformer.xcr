@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "terraformer",
   version: "0.8.14",
+  description: "CLI tool to generate terraform files from existing infrastructure",
+  url: "https://github.com/GoogleCloudPlatform/terraformer",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

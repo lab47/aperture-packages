@@ -48,6 +48,12 @@ import "cmake" as i0, "libev" as i1, "libevent" as i2, "libuv" as i3, "openssl@1
 pkg(
   name: "libcouchbase@2",
   version: "2.10.9",
+  description: "C library for Couchbase",
+  url: "https://docs.couchbase.com/c-sdk/2.10/start-using-sdk.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

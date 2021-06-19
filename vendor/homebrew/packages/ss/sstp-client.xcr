@@ -59,6 +59,12 @@ import "pkg-config" as i0, "libevent" as i1, "openssl@1.1" as i2
 pkg(
   name: "sstp-client",
   version: "1.0.15",
+  description: "SSTP (Microsofts Remote Access Solution for PPP over SSL) client",
+  url: "https://sstp-client.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

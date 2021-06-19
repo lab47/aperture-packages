@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "freeimage",
   version: "3.18.0",
+  description: "Library for FreeImage, a dependency-free graphics library",
+  url: "https://sourceforge.net/projects/freeimage",
+  metadata: %{
+    "license": "FreeImage",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

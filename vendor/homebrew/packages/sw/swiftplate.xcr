@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swiftplate",
   version: "1.4.0",
+  description: "Cross-platform Swift framework templates from the command-line",
+  url: "https://github.com/JohnSundell/SwiftPlate",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

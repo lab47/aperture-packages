@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bchunk",
   version: "1.2.2",
+  description: "Convert CD images from .bin/.cue to .iso/.cdr",
+  url: "http://he.fi/bchunk/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

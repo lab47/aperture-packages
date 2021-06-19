@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vttest",
   version: "20210210",
+  description: "Test compatibility of VT100-compatible terminals",
+  url: "https://invisible-island.net/vttest/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

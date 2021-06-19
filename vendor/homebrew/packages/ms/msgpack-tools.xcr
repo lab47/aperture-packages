@@ -41,6 +41,12 @@ import "cmake" as i0
 pkg(
   name: "msgpack-tools",
   version: "0.6",
+  description: "Command-line tools for converting between MessagePack and JSON",
+  url: "https://github.com/ludocode/msgpack-tools",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

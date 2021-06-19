@@ -59,6 +59,12 @@ import "ncurses" as i0
 pkg(
   name: "cscope",
   version: "15.9",
+  description: "Tool for browsing source code",
+  url: "https://cscope.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "pkg-config" as i0, "libogg" as i1
 pkg(
   name: "flac",
   version: "1.3.3",
+  description: "Free lossless audio codec",
+  url: "https://xiph.org/flac/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

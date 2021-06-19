@@ -76,6 +76,12 @@ import "coreutils" as i0
 pkg(
   name: "olsrd",
   version: "0.9.8",
+  description: "Implementation of the optimized link state routing protocol",
+  url: "http://www.olsr.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

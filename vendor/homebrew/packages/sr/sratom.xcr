@@ -56,6 +56,12 @@ import "pkg-config" as i0, "lv2" as i1, "serd" as i2, "sord" as i3
 pkg(
   name: "sratom",
   version: "0.6.8",
+  description: "Library for serializing LV2 atoms to/from RDF",
+  url: "https://drobilla.net/software/sratom/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

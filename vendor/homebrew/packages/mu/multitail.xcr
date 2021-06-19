@@ -46,6 +46,12 @@ import "pkg-config" as i0, "ncurses" as i1
 pkg(
   name: "multitail",
   version: "6.5.0",
+  description: "Tail multiple files in one terminal simultaneously",
+  url: "https://vanheusden.com/multitail/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

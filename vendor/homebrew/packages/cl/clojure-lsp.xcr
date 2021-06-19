@@ -58,6 +58,12 @@ import "clojure" as i0, "openjdk@11" as i1
 pkg(
   name: "clojure-lsp",
   version: "20210601T161944",
+  description: "Language Server (LSP) for Clojure",
+  url: "https://github.com/clojure-lsp/clojure-lsp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

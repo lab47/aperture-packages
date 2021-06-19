@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "ghz-web",
   version: "0.95.0",
+  description: "Web interface for ghz",
+  url: "https://ghz.sh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

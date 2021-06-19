@@ -39,6 +39,12 @@ import "cmake" as i0
 pkg(
   name: "opentracing-cpp",
   version: "1.6.0",
+  description: "OpenTracing API for C++",
+  url: "https://opentracing.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

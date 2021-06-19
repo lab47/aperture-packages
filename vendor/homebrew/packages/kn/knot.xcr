@@ -128,6 +128,12 @@ import "pkg-config" as i0, "sphinx-doc" as i1, "fstrm" as i2, "gnutls" as i3, "l
 pkg(
   name: "knot",
   version: "3.0.6",
+  description: "High-performance authoritative-only DNS server",
+  url: "https://www.knot-dns.cz/",
+  metadata: %{
+    "license": "GPL-3.0-or-later and 0BSD and BSD-3-Clause and LGPL-2.0-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

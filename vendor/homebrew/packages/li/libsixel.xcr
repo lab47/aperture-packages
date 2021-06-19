@@ -40,6 +40,12 @@ import "jpeg" as i0
 pkg(
   name: "libsixel",
   version: "1.8.6",
+  description: "SIXEL encoder/decoder implementation",
+  url: "https://github.com/saitoha/sixel",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
+import "openssl@1.1" as i0, "python@3.9" as i1
 
 pkg(
   name: "hashpump",
   version: "1.2.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  description: "Tool to exploit hash length extension attack",
+  url: "https://github.com/bwall/HashPump",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hashpump.rb"), formula)

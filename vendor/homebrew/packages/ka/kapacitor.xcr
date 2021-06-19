@@ -114,6 +114,12 @@ import "go" as i0
 pkg(
   name: "kapacitor",
   version: "1.5.9",
+  description: "Open source time series data processor",
+  url: "https://github.com/influxdata/kapacitor",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

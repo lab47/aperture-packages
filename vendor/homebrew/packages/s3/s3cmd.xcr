@@ -55,6 +55,12 @@ import "python@3.8" as i0, "six" as i1
 pkg(
   name: "s3cmd",
   version: "2.1.0",
+  description: "Command-line tool for the Amazon S3 service",
+  url: "https://s3tools.org/s3cmd",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

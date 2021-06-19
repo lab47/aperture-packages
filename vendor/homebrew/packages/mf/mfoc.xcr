@@ -41,6 +41,12 @@ import "pkg-config" as i0, "libnfc" as i1, "libusb" as i2
 pkg(
   name: "mfoc",
   version: "0.10.7",
+  description: "Implementation of 'offline nested' attack by Nethemba",
+  url: "https://github.com/nfc-tools/mfoc",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

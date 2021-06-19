@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cspice",
   version: "66",
+  description: "Observation geometry system for robotic space science missions",
+  url: "https://naif.jpl.nasa.gov/naif/toolkit.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

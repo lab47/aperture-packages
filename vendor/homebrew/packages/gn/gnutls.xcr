@@ -168,6 +168,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gmp" as i3, "gui
 pkg(
   name: "gnutls",
   version: "3.6.16",
+  description: "GNU Transport Layer Security (TLS) Library",
+  url: "https://gnutls.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

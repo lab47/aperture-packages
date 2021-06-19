@@ -58,6 +58,12 @@ import "openjdk" as i0
 pkg(
   name: "jetty",
   version: "9.4.41.v20210516",
+  description: "Java servlet engine and webserver",
+  url: "https://www.eclipse.org/jetty/",
+  metadata: %{
+    "license": "Apache-2.0 or EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

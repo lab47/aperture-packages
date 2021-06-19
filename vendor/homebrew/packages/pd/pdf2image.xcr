@@ -51,6 +51,12 @@ import "libx11" as i0, "freetype" as i1, "ghostscript" as i2
 pkg(
   name: "pdf2image",
   version: "0.53",
+  description: "Convert PDFs to images",
+  url: "https://code.google.com/p/pdf2image/",
+  metadata: %{
+    "license": "FSFUL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

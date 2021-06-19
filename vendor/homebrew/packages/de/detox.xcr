@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "detox",
   version: "1.4.2",
+  description: "Utility to replace problematic characters in filenames",
+  url: "https://detox.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

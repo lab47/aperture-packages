@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dockutil",
   version: "2.0.5",
+  description: "Tool for managing dock items",
+  url: "https://github.com/kcrawford/dockutil",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

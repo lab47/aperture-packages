@@ -56,6 +56,12 @@ import "freetype" as i0
 pkg(
   name: "otf2bdf",
   version: "3.1",
+  description: "OpenType to BDF font converter",
+  url: "http://sofia.nmsu.edu/~mleisher/Software/otf2bdf/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

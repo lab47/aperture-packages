@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnome-common",
   version: "3.18.0",
+  description: "Core files for GNOME",
+  url: "https://gitlab.gnome.org/GNOME/gnome-common",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "go" as i0
 pkg(
   name: "k3d",
   version: "4.4.5",
+  description: "Little helper to run Rancher Lab's k3s in Docker",
+  url: "https://k3d.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

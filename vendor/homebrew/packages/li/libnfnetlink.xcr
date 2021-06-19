@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libnfnetlink",
   version: "1.0.1",
+  description: "Low-level library for netfilter related communication",
+  url: "https://www.netfilter.org/projects/libnfnetlink",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

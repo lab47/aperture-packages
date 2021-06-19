@@ -95,6 +95,12 @@ import "krb5" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "libpq",
   version: "13.3",
+  description: "Postgres C API library",
+  url: "https://www.postgresql.org/docs/12/libpq.html",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

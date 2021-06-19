@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mysql-search-replace",
   version: "4.1.2",
+  description: "Database search and replace script in PHP",
+  url: "https://interconnectit.com/products/search-and-replace-for-wordpress-databases/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

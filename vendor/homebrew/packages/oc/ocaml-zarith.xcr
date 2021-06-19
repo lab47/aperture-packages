@@ -60,6 +60,12 @@ import "ocaml-findlib" as i0, "gmp" as i1, "ocaml" as i2
 pkg(
   name: "ocaml-zarith",
   version: "1.12",
+  description: "OCaml library for arbitrary-precision arithmetic",
+  url: "https://github.com/ocaml/Zarith",
+  metadata: %{
+    "license": "LGPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

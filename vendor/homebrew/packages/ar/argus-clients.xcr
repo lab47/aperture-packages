@@ -45,6 +45,12 @@ import "geoip" as i0, "readline" as i1, "rrdtool" as i2
 pkg(
   name: "argus-clients",
   version: "3.0.8.2",
+  description: "Audit Record Generation and Utilization System clients",
+  url: "https://openargus.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

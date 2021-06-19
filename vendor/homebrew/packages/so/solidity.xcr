@@ -61,6 +61,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "solidity",
   version: "0.8.5",
+  description: "Contract-oriented programming language",
+  url: "https://soliditylang.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later and MIT and BSD-3-Clause and Apache-2.0 and CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

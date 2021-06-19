@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dateutils",
   version: "0.4.8",
+  description: "Tools to manipulate dates with a focus on financial data",
+  url: "https://www.fresse.org/dateutils/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

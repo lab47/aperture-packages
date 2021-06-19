@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "container-diff",
   version: "0.17.0",
+  description: "Diff your Docker containers",
+  url: "https://github.com/GoogleContainerTools/container-diff",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

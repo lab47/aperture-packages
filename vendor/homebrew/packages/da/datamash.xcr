@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "datamash",
   version: "1.7",
+  description: "Tool to perform numerical, textual & statistical operations",
+  url: "https://www.gnu.org/software/datamash",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

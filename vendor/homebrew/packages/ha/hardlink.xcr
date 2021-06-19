@@ -51,6 +51,12 @@ import "pkg-config" as i0, "gnu-getopt" as i1, "pcre" as i2
 pkg(
   name: "hardlink",
   version: "0.3.0",
+  description: "Replace file copies using hardlinks",
+  url: "https://jak-linux.org/projects/hardlink/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

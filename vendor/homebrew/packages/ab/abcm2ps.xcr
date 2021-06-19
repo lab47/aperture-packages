@@ -57,6 +57,12 @@ import "pkg-config" as i0
 pkg(
   name: "abcm2ps",
   version: "8.14.11",
+  description: "ABC music notation software",
+  url: "http://moinejf.free.fr",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

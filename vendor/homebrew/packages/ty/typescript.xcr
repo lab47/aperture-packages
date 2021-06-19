@@ -45,6 +45,12 @@ import "node" as i0
 pkg(
   name: "typescript",
   version: "4.3.2",
+  description: "Language for application scale JavaScript development",
+  url: "https://www.typescriptlang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

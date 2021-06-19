@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "roll",
   version: "2.5.0",
+  description: "CLI program for rolling a dice sequence",
+  url: "https://matteocorti.github.io/roll/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

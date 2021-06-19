@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clac",
   version: "0.3.3",
+  description: "Command-line, stack-based calculator with postfix notation",
+  url: "https://github.com/soveran/clac",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

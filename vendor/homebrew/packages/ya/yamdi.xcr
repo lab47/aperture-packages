@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yamdi",
   version: "1.9",
+  description: "Add metadata to Flash video",
+  url: "https://yamdi.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -29,6 +29,12 @@ import "ffmpeg" as i0, "imagemagick" as i1
 pkg(
   name: "gifify",
   version: "4.0",
+  description: "Turn movies into GIFs",
+  url: "https://github.com/jclem/gifify",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

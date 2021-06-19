@@ -41,6 +41,12 @@ import "maven" as i0, "openjdk@11" as i1
 pkg(
   name: "ki",
   version: "0.3.3",
+  description: "Kotlin Language Interactive Shell",
+  url: "https://github.com/Kotlin/kotlin-interactive-shell",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

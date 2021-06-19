@@ -29,6 +29,12 @@ import "pyenv" as i0
 pkg(
   name: "pyenv-pip-migrate",
   version: "20181205",
+  description: "Migrate pip packages from one Python version to another",
+  url: "https://github.com/pyenv/pyenv-pip-migrate",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

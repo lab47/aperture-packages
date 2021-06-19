@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shunit2",
   version: "2.1.8",
+  description: "Unit testing framework for Bourne-based shell scripts",
+  url: "https://github.com/kward/shunit2",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

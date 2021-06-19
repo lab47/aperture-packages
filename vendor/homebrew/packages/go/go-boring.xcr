@@ -75,6 +75,12 @@ import "go" as i0
 pkg(
   name: "go-boring",
   version: "1.16.5b7",
+  description: "Go programming language with BoringCrypto",
+  url: "https://go.googlesource.com/go/+/dev.boringcrypto/README.boringcrypto.md",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

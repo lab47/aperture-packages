@@ -39,6 +39,12 @@ import "node" as i0, "terraform" as i1
 pkg(
   name: "cdktf",
   version: "0.4.1",
+  description: "Cloud Development Kit for Terraform",
+  url: "https://github.com/hashicorp/terraform-cdk",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "pkg-config" as i0, "raptor" as i1, "rasqal" as i2, "sqlite" as i3, "unix
 pkg(
   name: "redland",
   version: "1.0.17",
+  description: "RDF Library",
+  url: "http://librdf.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

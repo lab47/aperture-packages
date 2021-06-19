@@ -165,12 +165,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "doxygen" as i12, "expat" as i13, "flex" as i14, "fontconfig" as i15, "freetype" as i16, "fribidi" as i17, "gd" as i18, "gdbm" as i19, "gdk-pixbuf" as i20, "gettext" as i21, "ghostscript" as i22, "glib" as i23, "gobject-introspection" as i24, "gperf" as i25, "graphite2" as i26, "graphviz" as i27, "groff" as i28, "gts" as i29, "harfbuzz" as i30, "help2man" as i31, "icu4c" as i32, "jasper" as i33, "jbig2dec" as i34, "jemalloc" as i35, "jpeg" as i36, "krb5" as i37, "libev" as i38, "libffi" as i39, "libgcrypt" as i40, "libgpg-error" as i41, "libidn" as i42, "libidn2" as i43, "libpng" as i44, "libpthread-stubs" as i45, "librsvg" as i46, "libssh2" as i47, "libtiff" as i48, "libtool" as i49, "libunistring" as i50, "libx11" as i51, "libxau" as i52, "libxcb" as i53, "libxdmcp" as i54, "libxext" as i55, "libxml2" as i56, "libxrender" as i57, "libxslt" as i58, "libyaml" as i59, "little-cms2" as i60, "lz4" as i61, "lzo" as i62, "m4" as i63, "meson" as i64, "mpdecimal" as i65, "ncurses" as i66, "netpbm" as i67, "nghttp2" as i68, "ninja" as i69, "openjdk" as i70, "openjpeg" as i71, "openldap" as i72, "openssl@1.1" as i73, "pango" as i74, "pcre" as i75, "perl" as i76, "pixman" as i77, "pkg-config" as i78, "psutils" as i79, "python@3.9" as i80, "readline" as i81, "rtmpdump" as i82, "ruby" as i83, "rust" as i84, "scons" as i85, "sphinx-doc" as i86, "sqlite" as i87, "subversion" as i88, "swig" as i89, "texinfo" as i90, "uchardet" as i91, "unzip" as i92, "utf8proc" as i93, "util-macros" as i94, "webp" as i95, "xcb-proto" as i96, "xorgproto" as i97, "xtrans" as i98, "xz" as i99, "zip" as i100, "zlib" as i101, "zstd" as i102
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "graphviz" as i3, "libffi" as i4, "libxml2" as i5, "libxslt" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "ford",
   version: "6.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102],
+  description: "Automatic documentation generator for modern Fortran programs",
+  url: "https://github.com/cmacmackin/ford/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ford.rb"), formula)

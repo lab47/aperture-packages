@@ -74,6 +74,12 @@ import "cmake" as i0, "doxygen" as i1, "libevent" as i2, "openssl@1.1" as i3
 pkg(
   name: "libevhtp",
   version: "1.2.18",
+  description: "Create extremely-fast and secure embedded HTTP servers with ease",
+  url: "https://github.com/criticalstack/libevhtp/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

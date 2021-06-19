@@ -54,6 +54,12 @@ import "ocaml" as i0, "sdl" as i1, "sdl_gfx" as i2, "sdl_image" as i3, "sdl_mixe
 pkg(
   name: "ocamlsdl",
   version: "0.9.1",
+  description: "OCaml interface with the SDL C library",
+  url: "https://ocamlsdl.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

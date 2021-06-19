@@ -41,6 +41,12 @@ import "ncurses" as i0
 pkg(
   name: "sl",
   version: "5.02",
+  description: "Prints a steam locomotive if you type sl instead of ls",
+  url: "https://github.com/mtoyoda/sl",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

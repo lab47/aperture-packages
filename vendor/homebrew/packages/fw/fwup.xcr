@@ -39,6 +39,12 @@ import "pkg-config" as i0, "confuse" as i1, "libarchive" as i2
 pkg(
   name: "fwup",
   version: "1.8.4",
+  description: "Configurable embedded Linux firmware update creator and runner",
+  url: "https://github.com/fhunleth/fwup",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

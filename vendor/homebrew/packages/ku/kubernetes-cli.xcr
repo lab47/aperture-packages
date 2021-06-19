@@ -75,6 +75,12 @@ import "bash" as i0, "coreutils" as i1, "go" as i2, "rsync" as i3
 pkg(
   name: "kubernetes-cli",
   version: "1.21.1",
+  description: "Kubernetes command-line interface",
+  url: "https://kubernetes.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

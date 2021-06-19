@@ -60,6 +60,12 @@ import "rust" as i0
 pkg(
   name: "wapm",
   version: "0.5.1",
+  description: "WebAssembly Package Manager (CLI)",
+  url: "https://wapm.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

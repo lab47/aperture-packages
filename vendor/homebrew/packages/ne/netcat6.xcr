@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "netcat6",
   version: "1.0",
+  description: "Rewrite of netcat that supports IPv6, plus other improvements",
+  url: "https://www.deepspace6.net/projects/netcat6.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "openjdk" as i0
 pkg(
   name: "jadx",
   version: "1.2.0",
+  description: "Dex to Java decompiler",
+  url: "https://github.com/skylot/jadx",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

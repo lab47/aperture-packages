@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "naabu",
   version: "2.0.3",
+  description: "Fast port scanner",
+  url: "https://github.com/projectdiscovery/naabu",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

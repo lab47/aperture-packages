@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "curlftpfs",
   version: "0.9.2",
+  description: "Filesystem for accessing FTP hosts based on FUSE and libcurl",
+  url: "https://curlftpfs.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -69,6 +69,12 @@ import "exiftool" as i0, "ghostscript" as i1, "imagemagick" as i2, "libwpd" as i
 pkg(
   name: "nuxeo",
   version: "10.10",
+  description: "Enterprise Content Management",
+  url: "https://nuxeo.github.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

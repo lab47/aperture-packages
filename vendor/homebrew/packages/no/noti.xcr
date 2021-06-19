@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "noti",
   version: "3.5.0",
+  description: "Trigger notifications when a process completes",
+  url: "https://github.com/variadico/noti",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

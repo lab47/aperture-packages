@@ -54,6 +54,12 @@ import "pkg-config" as i0, "gnutls" as i1
 pkg(
   name: "msmtp",
   version: "1.8.15",
+  description: "SMTP client that can be used as an SMTP plugin for Mutt",
+  url: "https://marlam.de/msmtp/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

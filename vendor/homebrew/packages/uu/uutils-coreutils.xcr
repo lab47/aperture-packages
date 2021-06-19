@@ -91,6 +91,12 @@ import "make" as i0, "rust" as i1, "sphinx-doc" as i2
 pkg(
   name: "uutils-coreutils",
   version: "0.0.6",
+  description: "Cross-platform Rust rewrite of the GNU coreutils",
+  url: "https://github.com/uutils/coreutils",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

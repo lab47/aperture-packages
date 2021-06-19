@@ -82,6 +82,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "openldap",
   version: "2.5.5",
+  description: "Open source suite of directory software",
+  url: "https://www.openldap.org/software/",
+  metadata: %{
+    "license": "OLDAP-2.8",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

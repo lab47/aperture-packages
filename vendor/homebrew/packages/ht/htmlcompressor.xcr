@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "htmlcompressor",
   version: "1.5.3",
+  description: "Minify HTML or XML",
+  url: "https://code.google.com/archive/p/htmlcompressor/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

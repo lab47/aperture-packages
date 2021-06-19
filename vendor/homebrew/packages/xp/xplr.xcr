@@ -44,6 +44,12 @@ import "rust" as i0
 pkg(
   name: "xplr",
   version: "0.14.1",
+  description: "Hackable, minimal, fast TUI file explorer",
+  url: "https://github.com/sayanarijit/xplr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

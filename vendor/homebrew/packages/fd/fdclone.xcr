@@ -61,6 +61,12 @@ import "nkf" as i0, "ncurses" as i1
 pkg(
   name: "fdclone",
   version: "3.01j",
+  description: "Console-based file manager",
+  url: "https://hp.vector.co.jp/authors/VA012337/soft/fd/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "libre" as i0
 pkg(
   name: "restund",
   version: "0.4.12",
+  description: "Modular STUN/TURN server",
+  url: "https://web.archive.org/web/20200427184619/www.creytiv.com/restund.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

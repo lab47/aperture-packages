@@ -82,6 +82,12 @@ import "cmake" as i0, "boost" as i1, "icu4c" as i2
 pkg(
   name: "freeling",
   version: "4.2",
+  description: "Suite of language analyzers",
+  url: "http://nlp.lsi.upc.edu/freeling/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

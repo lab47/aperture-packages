@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "m4",
   version: "1.4.18",
+  description: "Macro processing language",
+  url: "https://www.gnu.org/software/m4",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "leaf",
   version: "1.3.0",
+  description: "General purpose reloader for all projects",
+  url: "https://pkg.go.dev/github.com/vrongmeal/leaf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

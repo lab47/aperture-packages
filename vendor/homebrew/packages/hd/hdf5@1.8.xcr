@@ -109,6 +109,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gcc" as i3, "szip" 
 pkg(
   name: "hdf5@1.8",
   version: "1.8.22",
+  description: "File format designed to store large amounts of data",
+  url: "https://www.hdfgroup.org/HDF5",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

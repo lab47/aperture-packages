@@ -62,6 +62,12 @@ import "go" as i0
 pkg(
   name: "wego",
   version: "2.0",
+  description: "Weather app for the terminal",
+  url: "https://github.com/schachmat/wego",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

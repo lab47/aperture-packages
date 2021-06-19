@@ -114,6 +114,12 @@ import "docbook" as i0
 pkg(
   name: "docbook-xsl",
   version: "1.79.2",
+  description: "XML vocabulary to create presentation-neutral documents",
+  url: "https://github.com/docbook/xslt10-stylesheets",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

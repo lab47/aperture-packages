@@ -46,6 +46,12 @@ import "pkg-config" as i0, "libftdi0" as i1, "libhid" as i2, "libusb" as i3
 pkg(
   name: "lcdproc",
   version: "0.5.9",
+  description: "Display real-time system information on a LCD",
+  url: "http://www.lcdproc.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

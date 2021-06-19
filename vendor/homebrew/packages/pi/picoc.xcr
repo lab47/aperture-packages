@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "picoc",
   version: "2.1",
+  description: "C interpreter for scripting",
+  url: "https://gitlab.com/zsaleeba/picoc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

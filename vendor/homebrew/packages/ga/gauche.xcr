@@ -47,6 +47,12 @@ import "mbedtls" as i0, "zlib" as i1
 pkg(
   name: "gauche",
   version: "0.9.10",
+  description: "R7RS Scheme implementation, developed to be a handy script interpreter",
+  url: "https://practical-scheme.net/gauche/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

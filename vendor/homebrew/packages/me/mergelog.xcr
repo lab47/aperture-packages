@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mergelog",
   version: "4.5",
+  description: "Merges httpd logs from web servers behind round-robin DNS",
+  url: "https://mergelog.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

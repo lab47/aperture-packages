@@ -46,6 +46,12 @@ import "readline" as i0
 pkg(
   name: "oil",
   version: "0.8.11",
+  description: "Bash-compatible Unix shell with more consistent syntax and semantics",
+  url: "https://www.oilshell.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

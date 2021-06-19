@@ -127,6 +127,12 @@ import "cmake" as i0
 pkg(
   name: "libgraphqlparser",
   version: "0.7.0",
+  description: "GraphQL query parser in C++ with C and C++ APIs",
+  url: "https://github.com/graphql/libgraphqlparser",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

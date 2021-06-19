@@ -80,6 +80,12 @@ import "openjdk@8" as i0
 pkg(
   name: "kettle",
   version: "9.1.0.0-324",
+  description: "Pentaho Data Integration software",
+  url: "https://www.hitachivantara.com/en-us/products/data-management-analytics.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

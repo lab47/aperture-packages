@@ -58,6 +58,12 @@ import "gettext" as i0, "pkg-config" as i1, "gettext" as i2, "libx11" as i3
 pkg(
   name: "libxpm",
   version: "3.5.13",
+  description: "X.Org: X Pixmap (XPM) image file format library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

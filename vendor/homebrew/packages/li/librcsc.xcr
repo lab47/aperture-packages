@@ -49,6 +49,12 @@ import "boost" as i0
 pkg(
   name: "librcsc",
   version: "4.1.0",
+  description: "RoboCup Soccer Simulator library",
+  url: "https://osdn.net/projects/rctools/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

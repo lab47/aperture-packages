@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "luit",
   version: "20210218",
+  description: "Filter run between arbitrary application and UTF-8 terminal emulator",
+  url: "https://invisible-island.net/luit/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

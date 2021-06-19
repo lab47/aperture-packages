@@ -46,6 +46,12 @@ import "sbt" as i0, "openjdk@8" as i1
 pkg(
   name: "pillar",
   version: "2.3.0",
+  description: "Manage migrations for Cassandra data stores",
+  url: "https://github.com/comeara/pillar",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

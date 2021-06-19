@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "frugal",
   version: "3.14.4",
+  description: "Cross language code generator for creating scalable microservices",
+  url: "https://github.com/Workiva/frugal",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

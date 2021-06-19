@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pidcat",
   version: "2.1.0",
+  description: "Colored logcat script to show entries only for specified app",
+  url: "https://github.com/JakeWharton/pidcat",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

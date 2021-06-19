@@ -49,12 +49,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libxml2" as i7, "m4" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "perl" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "autoconf" as i0, "automake" as i1, "libxml2" as i2, "python@3.9" as i3
 
 pkg(
   name: "itstool",
   version: "2.0.6",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "Make XML documents translatable through PO files",
+  url: "http://itstool.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "itstool.rb"), formula)

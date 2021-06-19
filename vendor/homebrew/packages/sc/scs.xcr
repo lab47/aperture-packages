@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scs",
   version: "2.1.3",
+  description: "Conic optimization via operator splitting",
+  url: "https://web.stanford.edu/~boyd/papers/scs.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

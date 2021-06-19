@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "create-dmg",
   version: "1.0.8",
+  description: "Shell script to build fancy DMGs",
+  url: "https://github.com/create-dmg/create-dmg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

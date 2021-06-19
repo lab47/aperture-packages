@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hoedown",
   version: "3.0.7",
+  description: "Secure Markdown processing (a revived fork of Sundown)",
+  url: "https://github.com/hoedown/hoedown",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

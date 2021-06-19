@@ -56,6 +56,12 @@ import "cmake" as i0
 pkg(
   name: "libuecc",
   version: "7",
+  description: "Very small Elliptic Curve Cryptography library",
+  url: "https://git.universe-factory.net/libuecc/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

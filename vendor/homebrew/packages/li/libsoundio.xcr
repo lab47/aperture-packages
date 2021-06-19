@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "libsoundio",
   version: "2.0.0",
+  description: "Cross-platform audio input and output",
+  url: "http://libsound.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

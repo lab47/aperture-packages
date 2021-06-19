@@ -50,6 +50,12 @@ import "just" as i0, "pandoc" as i1, "rust" as i2
 pkg(
   name: "dog",
   version: "0.1.0",
+  description: "Command-line DNS client",
+  url: "https://dns.lookup.dog/",
+  metadata: %{
+    "license": "EUPL-1.2",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

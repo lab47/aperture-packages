@@ -56,6 +56,12 @@ import "pkg-config" as i0, "xorgproto" as i1, "libx11" as i2, "libxext" as i3
 pkg(
   name: "libxres",
   version: "1.2.1",
+  description: "X.Org: X-Resource extension client library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "md5sha1sum",
   version: "0.9.5",
+  description: "Hash utilities",
+  url: "http://microbrew.org/tools/md5sha1sum/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aggregate",
   version: "1.6",
+  description: "Optimizes lists of prefixes to reduce list lengths",
+  url: "https://web.archive.org/web/20160716192438/freecode.com/projects/aggregate/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "pkg-config" as i0, "ffmpeg" as i1, "json-c" as i2, "libao" as i3, "libgc
 pkg(
   name: "pianobar",
   version: "2020.11.28",
+  description: "Command-line player for https://pandora.com",
+  url: "https://github.com/PromyLOPh/pianobar/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

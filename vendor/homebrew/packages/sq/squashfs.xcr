@@ -103,6 +103,12 @@ import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3, "zlib" as i4
 pkg(
   name: "squashfs",
   version: "4.4",
+  description: "Compressed read-only file system for Linux",
+  url: "https://github.com/plougher/squashfs-tools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

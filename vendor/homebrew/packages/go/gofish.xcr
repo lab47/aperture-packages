@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "gofish",
   version: "0.14.0",
+  description: "Cross-platform systems package manager",
+  url: "https://gofi.sh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

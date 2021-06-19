@@ -50,6 +50,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "eiffelstudio",
   version: "19.05.10.3187",
+  description: "Development environment for the Eiffel language",
+  url: "https://www.eiffel.com",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -62,6 +62,12 @@ import "go" as i0
 pkg(
   name: "keptn",
   version: "0.8.3",
+  description: "Is the CLI for keptn.sh a message-driven control-plane for application delivery",
+  url: "https://keptn.sh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

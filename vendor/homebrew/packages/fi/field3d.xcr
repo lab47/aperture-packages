@@ -53,6 +53,12 @@ import "cmake" as i0, "boost" as i1, "hdf5" as i2, "ilmbase" as i3
 pkg(
   name: "field3d",
   version: "1.7.3",
+  description: "Library for storing voxel data on disk and in memory",
+  url: "https://sites.google.com/site/field3d/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

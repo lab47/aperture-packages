@@ -91,6 +91,12 @@ import "homebrew-install" as hi
 pkg(
   name: "irrlicht",
   version: "1.8.4",
+  description: "Realtime 3D engine",
+  url: "https://irrlicht.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -83,6 +83,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "gnutls" 
 pkg(
   name: "glib-networking",
   version: "2.68.1",
+  description: "Network related modules for glib",
+  url: "https://gitlab.gnome.org/GNOME/glib-networking",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libdaemon",
   version: "0.14",
+  description: "C library that eases writing UNIX daemons",
+  url: "http://0pointer.de/lennart/projects/libdaemon/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

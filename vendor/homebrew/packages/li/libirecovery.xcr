@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libirecovery",
   version: "1.0.0",
+  description: "Library and utility to talk to iBoot/iBSS via USB",
+  url: "https://www.libimobiledevice.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

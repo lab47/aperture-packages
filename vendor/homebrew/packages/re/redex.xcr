@@ -91,12 +91,18 @@ index b042070f..5e492e3f 100644
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "boost" as i3, "bzip2" as i4, "expat" as i5, "gdbm" as i6, "icu4c" as i7, "jsoncpp" as i8, "libevent" as i9, "libffi" as i10, "libtool" as i11, "m4" as i12, "meson" as i13, "mpdecimal" as i14, "ncurses" as i15, "ninja" as i16, "openssl@1.1" as i17, "perl" as i18, "pkg-config" as i19, "python@3.9" as i20, "readline" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
+import "autoconf" as i0, "automake" as i1, "libevent" as i2, "libtool" as i3, "boost" as i4, "jsoncpp" as i5, "python@3.9" as i6
 
 pkg(
   name: "redex",
   version: "2017.10.31",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  description: "Bytecode optimizer for Android apps",
+  url: "https://fbredex.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "redex.rb"), formula)

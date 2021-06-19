@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "figlet",
   version: "2.2.5",
+  description: "Banner-like program prints strings as ASCII art",
+  url: "http://www.figlet.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

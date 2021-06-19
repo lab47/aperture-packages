@@ -51,6 +51,12 @@ import "lua" as i0, "openssl@1.1" as i1, "pcre2" as i2
 pkg(
   name: "imapfilter",
   version: "2.7.5",
+  description: "IMAP message processor/filter",
+  url: "https://github.com/lefcha/imapfilter/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

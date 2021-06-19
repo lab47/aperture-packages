@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "launch",
   version: "1.2.5",
+  description: "Command-line launcher for macOS, in the spirit of `open`",
+  url: "https://sabi.net/nriley/software/#launch",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

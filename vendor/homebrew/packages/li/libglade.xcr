@@ -104,6 +104,12 @@ import "pkg-config" as i0, "gtk+" as i1, "libxml2" as i2
 pkg(
   name: "libglade",
   version: "2.6.4",
+  description: "RAD tool to help build GTK+ interfaces",
+  url: "https://glade.gnome.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

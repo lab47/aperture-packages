@@ -59,6 +59,12 @@ import "openjdk" as i0
 pkg(
   name: "antlr",
   version: "4.9.2",
+  description: "ANother Tool for Language Recognition",
+  url: "https://www.antlr.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

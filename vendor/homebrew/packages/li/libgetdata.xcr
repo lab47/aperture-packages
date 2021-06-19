@@ -49,6 +49,12 @@ import "libtool" as i0, "perl" as i1, "zlib" as i2
 pkg(
   name: "libgetdata",
   version: "0.10.0",
+  description: "Reference implementation of the Dirfile Standards",
+  url: "https://getdata.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -106,6 +106,12 @@ import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "hidapi" as i3, "libsod
 pkg(
   name: "monero",
   version: "0.17.2.0",
+  description: "Official Monero wallet and CPU miner",
+  url: "https://www.getmonero.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libnfs",
   version: "4.0.0",
+  description: "C client library for NFS",
+  url: "https://github.com/sahlberg/libnfs",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

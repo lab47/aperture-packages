@@ -67,6 +67,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3
 pkg(
   name: "desktop-file-utils",
   version: "0.26",
+  description: "Command-line utilities for working with desktop entries",
+  url: "https://wiki.freedesktop.org/www/Software/desktop-file-utils/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

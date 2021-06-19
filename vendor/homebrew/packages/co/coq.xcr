@@ -76,6 +76,12 @@ import "ocaml-findlib" as i0, "ocaml" as i1, "ocaml-zarith" as i2, "m4" as i3, "
 pkg(
   name: "coq",
   version: "8.13.2",
+  description: "Proof assistant for higher-order logic",
+  url: "https://coq.inria.fr/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

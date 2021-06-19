@@ -51,6 +51,12 @@ import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "curl" as i3, 
 pkg(
   name: "saldl",
   version: "41",
+  description: "CLI downloader optimized for speed and early preview",
+  url: "https://saldl.github.io/",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

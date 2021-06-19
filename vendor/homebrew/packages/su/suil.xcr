@@ -64,6 +64,12 @@ import "pkg-config" as i0, "gtk+" as i1, "gtk+3" as i2, "lv2" as i3, "qt@5" as i
 pkg(
   name: "suil",
   version: "0.10.10",
+  description: "Lightweight C library for loading and wrapping LV2 plugin UIs",
+  url: "https://drobilla.net/software/suil/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -56,6 +56,12 @@ import "pkg-config" as i0, "lua@5.1" as i1, "curl" as i2
 pkg(
   name: "libquvi",
   version: "0.4.1",
+  description: "C library to parse flash media stream properties",
+  url: "https://quvi.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

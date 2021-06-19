@@ -73,6 +73,12 @@ import "homebrew-install" as hi
 pkg(
   name: "haste-client",
   version: "0.2.3",
+  description: "CLI client for haste-server",
+  url: "https://hastebin.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "terminal-notifier",
   version: "2.0.0",
+  description: "Send macOS User Notifications from the command-line",
+  url: "https://github.com/julienXX/terminal-notifier",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "pkg-config" as i0, "concurrencykit" as i1, "ldns" as i2, "openssl@1.1" a
 pkg(
   name: "dnsperf",
   version: "2.6.0",
+  description: "Measure DNS performance by simulating network conditions",
+  url: "https://www.dns-oarc.net/tools/dnsperf",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcinfo",
   version: "0.7.0",
+  description: "Tool to get information about and install available Xcode versions",
+  url: "https://github.com/xcodereleases/xcinfo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "go" as i0, "go-bindata" as i1, "kubernetes-cli" as i2
 pkg(
   name: "minikube",
   version: "1.21.0",
+  description: "Run a Kubernetes cluster locally",
+  url: "https://minikube.sigs.k8s.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

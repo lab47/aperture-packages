@@ -38,6 +38,12 @@ import "openjdk@8" as i0
 pkg(
   name: "bee",
   version: "1.80",
+  description: "Tool for managing database changes",
+  url: "https://github.com/bluesoft/bee",
+  metadata: %{
+    "license": "MPL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

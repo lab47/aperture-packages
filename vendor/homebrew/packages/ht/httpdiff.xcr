@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "httpdiff",
   version: "1.0.0",
+  description: "Compare two HTTP(S) responses",
+  url: "https://github.com/jgrahamc/httpdiff",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

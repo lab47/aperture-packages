@@ -59,6 +59,12 @@ import "cmake" as i0, "vtk" as i1
 pkg(
   name: "f3d",
   version: "1.1.0",
+  description: "Fast and minimalist 3D viewer",
+  url: "https://kitware.github.io/F3D/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

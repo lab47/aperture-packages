@@ -47,6 +47,12 @@ import "cmake" as i0, "curl" as i1, "zlib" as i2
 pkg(
   name: "prometheus-cpp",
   version: "0.12.3",
+  description: "Prometheus Client Library for Modern C++",
+  url: "https://github.com/jupp0r/prometheus-cpp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

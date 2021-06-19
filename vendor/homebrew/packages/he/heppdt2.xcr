@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "heppdt2",
   version: "2.06.01",
+  description: "Translation for particle ID's to and from various MC generators and PDG standard",
+  url: "https://cdcvs.fnal.gov/redmine/projects/heppdt/wiki",
+  metadata: %{
+    "license": "AFL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

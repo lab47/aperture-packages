@@ -110,6 +110,12 @@ import "go" as i0, "node" as i1, "yarn" as i2
 pkg(
   name: "prometheus",
   version: "2.27.1",
+  description: "Service monitoring system and time series database",
+  url: "https://prometheus.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "json-c" as i0, "libsodium" as i1, "ncurses" as i2
 pkg(
   name: "mpw",
   version: "2.7-cli-1",
+  description: "Stateless/deterministic password and identity manager",
+  url: "https://masterpassword.app/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "cfitsio" as i0
 pkg(
   name: "wcslib",
   version: "7.6",
+  description: "Library and utilities for the FITS World Coordinate System",
+  url: "https://www.atnf.csiro.au/people/mcalabre/WCS/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

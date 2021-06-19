@@ -39,6 +39,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "btpd",
   version: "0.16",
+  description: "BitTorrent Protocol Daemon",
+  url: "https://github.com/btpd/btpd",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

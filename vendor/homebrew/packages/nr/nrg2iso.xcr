@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nrg2iso",
   version: "0.4",
+  description: "Extract ISO9660 data from Nero nrg files",
+  url: "http://gregory.kokanosky.free.fr/v4/linux/nrg2iso.en.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

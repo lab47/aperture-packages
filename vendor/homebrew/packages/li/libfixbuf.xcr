@@ -43,6 +43,12 @@ import "pkg-config" as i0, "glib" as i1, "openssl@1.1" as i2
 pkg(
   name: "libfixbuf",
   version: "2.4.1",
+  description: "Implements the IPFIX Protocol as a C library",
+  url: "https://tools.netsa.cert.org/fixbuf/",
+  metadata: %{
+    "license": "LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

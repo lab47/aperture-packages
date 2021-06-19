@@ -52,6 +52,12 @@ import "ncurses" as i0
 pkg(
   name: "rmw",
   version: "0.7.09",
+  description: "Safe-remove utility for the command-line",
+  url: "https://remove-to-waste.info/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "stanford-corenlp",
   version: "4.2.0",
+  description: "Java suite of core NLP tools",
+  url: "https://stanfordnlp.github.io/CoreNLP/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

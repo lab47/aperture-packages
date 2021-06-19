@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "efm-langserver",
   version: "0.0.31",
+  description: "General purpose Language Server",
+  url: "https://github.com/mattn/efm-langserver",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

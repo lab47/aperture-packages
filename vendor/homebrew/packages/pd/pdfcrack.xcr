@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pdfcrack",
   version: "0.19",
+  description: "PDF files password cracker",
+  url: "https://pdfcrack.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

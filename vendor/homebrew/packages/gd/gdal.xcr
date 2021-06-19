@@ -187,12 +187,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cfitsio" as i8, "cmake" as i9, "curl" as i10, "cython" as i11, "doxygen" as i12, "epsilon" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "freexl" as i18, "gcc" as i19, "gdbm" as i20, "geos" as i21, "gettext" as i22, "giflib" as i23, "glib" as i24, "gmp" as i25, "gobject-introspection" as i26, "gperf" as i27, "hdf5" as i28, "help2man" as i29, "isl" as i30, "jemalloc" as i31, "jpeg" as i32, "json-c" as i33, "krb5" as i34, "libdap" as i35, "libev" as i36, "libffi" as i37, "libgeotiff" as i38, "libidn2" as i39, "libmpc" as i40, "libpng" as i41, "libpq" as i42, "libpthread-stubs" as i43, "librttopo" as i44, "libspatialite" as i45, "libssh2" as i46, "libtiff" as i47, "libtool" as i48, "libunistring" as i49, "libx11" as i50, "libxau" as i51, "libxcb" as i52, "libxdmcp" as i53, "libxext" as i54, "libxml2" as i55, "libxrender" as i56, "libyaml" as i57, "little-cms2" as i58, "lzo" as i59, "m4" as i60, "meson" as i61, "minizip" as i62, "mpdecimal" as i63, "mpfr" as i64, "ncurses" as i65, "netcdf" as i66, "nghttp2" as i67, "ninja" as i68, "nspr" as i69, "nss" as i70, "numpy" as i71, "openblas" as i72, "openjpeg" as i73, "openldap" as i74, "openssl@1.1" as i75, "pcre" as i76, "perl" as i77, "pixman" as i78, "pkg-config" as i79, "poppler" as i80, "popt" as i81, "proj@7" as i82, "python@3.9" as i83, "qt@5" as i84, "readline" as i85, "rtmpdump" as i86, "ruby" as i87, "sphinx-doc" as i88, "sqlite" as i89, "swig" as i90, "szip" as i91, "unixodbc" as i92, "unzip" as i93, "util-macros" as i94, "webp" as i95, "xcb-proto" as i96, "xerces-c" as i97, "xorgproto" as i98, "xtrans" as i99, "xz" as i100, "zip" as i101, "zlib" as i102, "zstd" as i103
+import "pkg-config" as i0, "cfitsio" as i1, "epsilon" as i2, "expat" as i3, "freexl" as i4, "geos" as i5, "giflib" as i6, "hdf5" as i7, "jpeg" as i8, "json-c" as i9, "libdap" as i10, "libgeotiff" as i11, "libpng" as i12, "libpq" as i13, "libspatialite" as i14, "libtiff" as i15, "libxml2" as i16, "netcdf" as i17, "numpy" as i18, "openjpeg" as i19, "pcre" as i20, "poppler" as i21, "proj@7" as i22, "python@3.9" as i23, "sqlite" as i24, "unixodbc" as i25, "webp" as i26, "xerces-c" as i27, "xz" as i28, "zstd" as i29, "curl" as i30
 
 pkg(
   name: "gdal",
   version: "3.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103],
+  description: "Geospatial Data Abstraction Library",
+  url: "https://www.gdal.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdal.rb"), formula)

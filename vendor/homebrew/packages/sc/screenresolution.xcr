@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "screenresolution",
   version: "1.6",
+  description: "Get, set, and list display resolution",
+  url: "https://github.com/jhford/screenresolution",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

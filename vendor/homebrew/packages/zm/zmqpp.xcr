@@ -52,6 +52,12 @@ import "doxygen" as i0, "zeromq" as i1
 pkg(
   name: "zmqpp",
   version: "4.2.0",
+  description: "High-level C++ binding for zeromq",
+  url: "https://zeromq.github.io/zmqpp/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libngspice",
   version: "34",
+  description: "Spice circuit simulator as shared library",
+  url: "https://ngspice.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

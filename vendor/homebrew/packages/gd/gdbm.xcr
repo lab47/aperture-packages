@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gdbm",
   version: "1.19",
+  description: "GNU database manager",
+  url: "https://www.gnu.org/software/gdbm/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

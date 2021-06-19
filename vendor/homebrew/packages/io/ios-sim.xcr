@@ -39,6 +39,12 @@ import "node" as i0
 pkg(
   name: "ios-sim",
   version: "9.0.0",
+  description: "Command-line application launcher for the iOS Simulator",
+  url: "https://github.com/ios-control/ios-sim",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

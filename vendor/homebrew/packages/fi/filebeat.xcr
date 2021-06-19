@@ -115,12 +115,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "go" as i4, "libffi" as i5, "lz4" as i6, "mage" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "popt" as i12, "python@3.9" as i13, "readline" as i14, "rsync" as i15, "sphinx-doc" as i16, "sqlite" as i17, "unzip" as i18, "xxhash" as i19, "xz" as i20, "zip" as i21, "zlib" as i22, "zstd" as i23
+import "go" as i0, "mage" as i1, "python@3.9" as i2, "rsync" as i3
 
 pkg(
   name: "filebeat",
   version: "7.13.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  description: "File harvester to ship log files to Elasticsearch or Logstash",
+  url: "https://www.elastic.co/products/beats/filebeat",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "filebeat.rb"), formula)

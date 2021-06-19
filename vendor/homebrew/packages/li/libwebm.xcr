@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "libwebm",
   version: "1.0.0.28",
+  description: "WebM container",
+  url: "https://www.webmproject.org/code/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

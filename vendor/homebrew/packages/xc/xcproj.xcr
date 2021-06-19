@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcproj",
   version: "0.2.1",
+  description: "Manipulate Xcode project files",
+  url: "https://github.com/0xced/xcproj",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

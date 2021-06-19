@@ -59,6 +59,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "meson" as i3, "ninj
 pkg(
   name: "libfuse",
   version: "3.10.4",
+  description: "Reference implementation of the Linux FUSE interface",
+  url: "https://github.com/libfuse/libfuse",
+  metadata: %{
+    "license": "LGPL-2.1-only or GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

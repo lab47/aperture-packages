@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libbind",
   version: "6.0",
+  description: "Original resolver library from ISC",
+  url: "https://www.isc.org/software/libbind",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

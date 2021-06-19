@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "repl",
   version: "1.0.0",
+  description: "Wrap non-interactive programs with a REPL",
+  url: "https://github.com/defunkt/repl",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

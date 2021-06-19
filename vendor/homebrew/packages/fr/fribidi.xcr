@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fribidi",
   version: "1.0.10",
+  description: "Implementation of the Unicode BiDi algorithm",
+  url: "https://github.com/fribidi/fribidi",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -93,12 +93,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "c-ares" as i6, "cairo" as i7, "cmake" as i8, "doxygen" as i9, "emacs" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gdbm" as i15, "gettext" as i16, "glib" as i17, "gmime" as i18, "gmp" as i19, "gnu-sed" as i20, "gnupg" as i21, "gnutls" as i22, "gobject-introspection" as i23, "gperf" as i24, "gpgme" as i25, "guile" as i26, "help2man" as i27, "jansson" as i28, "jemalloc" as i29, "libassuan" as i30, "libatomic_ops" as i31, "libev" as i32, "libevent" as i33, "libffi" as i34, "libgcrypt" as i35, "libgpg-error" as i36, "libidn2" as i37, "libksba" as i38, "libpng" as i39, "libpthread-stubs" as i40, "libtasn1" as i41, "libtool" as i42, "libunistring" as i43, "libusb" as i44, "libx11" as i45, "libxau" as i46, "libxcb" as i47, "libxdmcp" as i48, "libxext" as i49, "libxml2" as i50, "libxrender" as i51, "libyaml" as i52, "lzo" as i53, "m4" as i54, "meson" as i55, "mpdecimal" as i56, "ncurses" as i57, "nettle" as i58, "nghttp2" as i59, "ninja" as i60, "npth" as i61, "openssl@1.1" as i62, "p11-kit" as i63, "pcre" as i64, "perl" as i65, "pinentry" as i66, "pixman" as i67, "pkg-config" as i68, "python@3.9" as i69, "readline" as i70, "ruby" as i71, "sphinx-doc" as i72, "sqlite" as i73, "swig" as i74, "talloc" as i75, "unbound" as i76, "unzip" as i77, "util-macros" as i78, "xapian" as i79, "xcb-proto" as i80, "xorgproto" as i81, "xtrans" as i82, "xz" as i83, "zip" as i84, "zlib" as i85
+import "doxygen" as i0, "emacs" as i1, "libgpg-error" as i2, "pkg-config" as i3, "sphinx-doc" as i4, "glib" as i5, "gmime" as i6, "python@3.9" as i7, "talloc" as i8, "xapian" as i9, "zlib" as i10
 
 pkg(
   name: "notmuch",
   version: "0.32.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85],
+  description: "Thread-based email index, search, and tagging",
+  url: "https://notmuchmail.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "notmuch.rb"), formula)

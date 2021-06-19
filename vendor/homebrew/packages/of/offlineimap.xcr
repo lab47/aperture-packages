@@ -122,6 +122,12 @@ import "asciidoc" as i0, "docbook-xsl" as i1, "sphinx-doc" as i2, "libxml2" as i
 pkg(
   name: "offlineimap",
   version: "7.3.3",
+  description: "Synchronizes emails between two repositories",
+  url: "https://www.offlineimap.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

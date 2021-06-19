@@ -50,6 +50,12 @@ import "openssl@1.1" as i0, "expat" as i1
 pkg(
   name: "ophcrack",
   version: "3.8.0",
+  description: "Microsoft Windows password cracker using rainbow tables",
+  url: "https://ophcrack.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

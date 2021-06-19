@@ -39,6 +39,12 @@ import "psc-package" as i0, "pulp" as i1, "purescript" as i2, "node" as i3
 pkg(
   name: "insect",
   version: "5.6.0",
+  description: "High precision scientific calculator with support for physical units",
+  url: "https://insect.sh/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

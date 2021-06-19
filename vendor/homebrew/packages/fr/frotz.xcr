@@ -65,6 +65,12 @@ import "pkg-config" as i0, "freetype" as i1, "jpeg" as i2, "libao" as i3, "libmo
 pkg(
   name: "frotz",
   version: "2.53",
+  description: "Infocom-style interactive fiction player",
+  url: "https://661.org/proj/if/frotz/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

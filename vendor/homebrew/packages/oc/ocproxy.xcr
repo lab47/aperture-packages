@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "libevent" as i2
 pkg(
   name: "ocproxy",
   version: "1.60",
+  description: "User-level SOCKS and port forwarding proxy",
+  url: "https://github.com/cernekee/ocproxy",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

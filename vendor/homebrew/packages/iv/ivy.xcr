@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ivy",
   version: "2.5.0",
+  description: "Agile dependency manager",
+  url: "https://ant.apache.org/ivy/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

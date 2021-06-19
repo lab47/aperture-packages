@@ -80,12 +80,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "libedit" as i11, "libffi" as i12, "libtool" as i13, "libxml2" as i14, "libyaml" as i15, "llvm" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "openssl@1.1" as i20, "pcre" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "ruby" as i26, "sphinx-doc" as i27, "sqlite" as i28, "swig" as i29, "unzip" as i30, "xz" as i31, "zip" as i32, "zlib" as i33
+import "bison" as i0, "cmake" as i1, "flex" as i2, "python@3.9" as i3, "llvm" as i4
 
 pkg(
   name: "ispc",
   version: "1.16.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33],
+  description: "Compiler for SIMD programming on the CPU",
+  url: "https://ispc.github.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ispc.rb"), formula)

@@ -58,6 +58,12 @@ import "autoconf" as i0, "libdsk" as i1
 pkg(
   name: "cpmtools",
   version: "2.21",
+  description: "Tools to access CP/M file systems",
+  url: "http://www.moria.de/~michael/cpmtools/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

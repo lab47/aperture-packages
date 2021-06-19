@@ -39,6 +39,12 @@ import "m4" as i0
 pkg(
   name: "sgrep",
   version: "1.94a",
+  description: "Search SGML, XML, and HTML",
+  url: "https://www.cs.helsinki.fi/u/jjaakkol/sgrep.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

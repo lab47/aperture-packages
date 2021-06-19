@@ -106,6 +106,12 @@ import "pkg-config" as i0, "glibmm@2.66" as i1, "gst-plugins-base" as i2, "gstre
 pkg(
   name: "gstreamermm",
   version: "1.10.0",
+  description: "GStreamer C++ bindings",
+  url: "https://gstreamer.freedesktop.org/bindings/cplusplus.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

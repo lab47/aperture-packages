@@ -35,6 +35,12 @@ import "gnu-prolog" as i0
 pkg(
   name: "logtalk",
   version: "3.47.0",
+  description: "Declarative object-oriented logic programming language",
+  url: "https://logtalk.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

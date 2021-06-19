@@ -54,6 +54,12 @@ import "pkg-config" as i0, "util-macros" as i1
 pkg(
   name: "font-util",
   version: "1.3.2",
+  description: "X.Org: Font package creation/installation utilities",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

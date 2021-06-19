@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "heatshrink",
   version: "0.4.1",
+  description: "Data compression library for embedded/real-time systems",
+  url: "https://github.com/atomicobject/heatshrink",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

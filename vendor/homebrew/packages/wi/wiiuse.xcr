@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "wiiuse",
   version: "0.15.5",
+  description: "Connect Nintendo Wii Remotes",
+  url: "https://github.com/wiiuse/wiiuse",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "gnuplot" as i0
 pkg(
   name: "feedgnuplot",
   version: "1.58",
+  description: "Tool to plot realtime and stored data from the command-line",
+  url: "https://github.com/dkogan/feedgnuplot",
+  metadata: %{
+    "license": "GPL-1.0-or-later or Artistic-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

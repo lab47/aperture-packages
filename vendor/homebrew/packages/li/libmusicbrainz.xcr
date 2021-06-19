@@ -38,6 +38,12 @@ import "cmake" as i0, "neon" as i1
 pkg(
   name: "libmusicbrainz",
   version: "5.1.0",
+  description: "MusicBrainz Client Library",
+  url: "https://musicbrainz.org/doc/libmusicbrainz",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

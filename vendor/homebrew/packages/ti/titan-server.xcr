@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "titan-server",
   version: "1",
+  description: "Distributed graph database",
+  url: "https://thinkaurelius.github.io/titan/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

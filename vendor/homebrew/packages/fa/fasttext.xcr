@@ -39,6 +39,12 @@ import "cmake" as i0
 pkg(
   name: "fasttext",
   version: "0.9.2",
+  description: "Library for fast text representation and classification",
+  url: "https://fasttext.cc",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

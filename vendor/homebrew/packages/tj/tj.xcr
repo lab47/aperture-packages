@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "tj",
   version: "7.0.0",
+  description: "Line timestamping tool",
+  url: "https://github.com/sgreben/tj",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -70,6 +70,12 @@ import "readline" as i0
 pkg(
   name: "devtodo",
   version: "0.1.20",
+  description: "Command-line task lists",
+  url: "https://swapoff.org/devtodo.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

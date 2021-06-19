@@ -56,6 +56,12 @@ import "pkg-config" as i0, "libnfc" as i1, "openssl@1.1" as i2
 pkg(
   name: "libfreefare",
   version: "0.4.0",
+  description: "API for MIFARE card manipulations",
+  url: "https://github.com/nfc-tools/libfreefare",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

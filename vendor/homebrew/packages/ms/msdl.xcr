@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "msdl",
   version: "1.2.7-r2",
+  description: "Downloader for various streaming protocols",
+  url: "https://msdl.sourceforge.io",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

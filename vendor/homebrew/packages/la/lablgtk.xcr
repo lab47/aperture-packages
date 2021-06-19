@@ -67,6 +67,12 @@ import "pkg-config" as i0, "gtk+" as i1, "gtksourceview" as i2, "librsvg" as i3,
 pkg(
   name: "lablgtk",
   version: "2.18.11",
+  description: "Objective Caml interface to gtk+",
+  url: "http://lablgtk.forge.ocamlcore.org",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

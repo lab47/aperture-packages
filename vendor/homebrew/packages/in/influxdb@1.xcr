@@ -111,6 +111,12 @@ import "go" as i0
 pkg(
   name: "influxdb@1",
   version: "1.8.5",
+  description: "Time series, events, and metrics database",
+  url: "https://influxdata.com/time-series-platform/influxdb/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

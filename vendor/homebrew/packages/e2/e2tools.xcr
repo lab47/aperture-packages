@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "e2fsprogs" as i3
 pkg(
   name: "e2tools",
   version: "0.1.0",
+  description: "Utilities to read, write, and manipulate files in ext2/3/4 filesystems",
+  url: "https://e2tools.github.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

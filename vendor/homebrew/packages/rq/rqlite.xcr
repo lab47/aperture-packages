@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "rqlite",
   version: "5.12.1",
+  description: "Lightweight, distributed relational database built on SQLite",
+  url: "http://www.rqlite.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

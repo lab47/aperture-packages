@@ -59,6 +59,12 @@ import "openssl@1.1" as i0, "ncurses" as i1
 pkg(
   name: "lynx",
   version: "2.8.9rel.1",
+  description: "Text-based web browser",
+  url: "https://invisible-island.net/lynx/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

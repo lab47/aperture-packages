@@ -44,6 +44,12 @@ import "subversion" as i0, "autoconf" as i1, "automake" as i2
 pkg(
   name: "lcs",
   version: "4.07.4b",
+  description: "Satirical console-based political role-playing/strategy game",
+  url: "https://sourceforge.net/projects/lcsgame/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

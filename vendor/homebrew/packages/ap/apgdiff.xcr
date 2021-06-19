@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "apgdiff",
   version: "2.4",
+  description: "Another PostgreSQL diff tool",
+  url: "https://www.apgdiff.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

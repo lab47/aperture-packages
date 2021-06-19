@@ -57,6 +57,12 @@ import "libsodium" as i0
 pkg(
   name: "reop",
   version: "2.1.1",
+  description: "Encrypted keypair management",
+  url: "https://flak.tedunangst.com/post/reop",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

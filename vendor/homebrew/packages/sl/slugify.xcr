@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "slugify",
   version: "1.0.1",
+  description: "Convert filenames and directories to a web friendly format",
+  url: "https://github.com/benlinton/slugify",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

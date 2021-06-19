@@ -62,6 +62,12 @@ import "pkg-config" as i0, "libmnl" as i1, "libnfnetlink" as i2
 pkg(
   name: "libnetfilter-queue",
   version: "1.0.5",
+  description: "Userspace API to packets queued by the kernel packet filter",
+  url: "https://www.netfilter.org/projects/libnetfilter_queue",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

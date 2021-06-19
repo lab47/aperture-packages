@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "l-smash",
   version: "2.9.1",
+  description: "Tool for working with MP4 files",
+  url: "https://l-smash.github.io/l-smash/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

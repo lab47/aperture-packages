@@ -43,6 +43,12 @@ import "pcre2" as i0, "xz" as i1
 pkg(
   name: "ugrep",
   version: "3.3.2",
+  description: "Ultra fast grep with query UI, fuzzy search, archive search, and more",
+  url: "https://github.com/Genivia/ugrep",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

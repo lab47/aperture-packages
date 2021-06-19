@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "latino",
   version: "1.4.1",
+  description: "Lenguaje de programación de código abierto para latinos y de habla hispana",
+  url: "https://www.lenguajelatino.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

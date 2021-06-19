@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "cunit" as i3
 pkg(
   name: "libiscsi",
   version: "1.19.0",
+  description: "Client library and utilities for iscsi",
+  url: "https://github.com/sahlberg/libiscsi",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

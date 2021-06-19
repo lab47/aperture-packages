@@ -40,6 +40,12 @@ import "ponyc" as i0
 pkg(
   name: "corral",
   version: "0.5.0",
+  description: "Dependency manager for the Pony language",
+  url: "https://github.com/ponylang/corral",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

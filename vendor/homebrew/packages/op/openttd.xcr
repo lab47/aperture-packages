@@ -68,6 +68,12 @@ import "cmake" as i0, "libpng" as i1, "lzo" as i2, "xz" as i3
 pkg(
   name: "openttd",
   version: "1.11.2",
+  description: "Simulation game based upon Transport Tycoon Deluxe",
+  url: "https://www.openttd.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

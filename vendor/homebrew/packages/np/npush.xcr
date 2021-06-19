@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "npush",
   version: "0.7",
+  description: "Logic game similar to Sokoban and Boulder Dash",
+  url: "https://npush.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

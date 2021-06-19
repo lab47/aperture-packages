@@ -36,6 +36,12 @@ import "ncurses" as i0
 pkg(
   name: "tweak",
   version: "3.02",
+  description: "Command-line, ncurses library based hex editor",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/tweak/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

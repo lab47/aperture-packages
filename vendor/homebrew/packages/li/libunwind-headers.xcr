@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libunwind-headers",
   version: "201",
+  description: "C API for determining the call-chain of a program",
+  url: "https://opensource.apple.com/",
+  metadata: %{
+    "license": "APSL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

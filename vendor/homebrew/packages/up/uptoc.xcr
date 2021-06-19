@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "uptoc",
   version: "1.4.3",
+  description: "Convenient static file deployment tool that supports multiple platforms",
+  url: "https://github.com/saltbo/uptoc",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

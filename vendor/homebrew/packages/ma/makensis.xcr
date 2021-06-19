@@ -50,6 +50,12 @@ import "mingw-w64" as i0, "scons" as i1
 pkg(
   name: "makensis",
   version: "3.06.1",
+  description: "System to create Windows installers",
+  url: "https://nsis.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

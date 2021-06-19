@@ -54,6 +54,12 @@ import "ghc" as i0, "haskell-stack" as i1, "ncurses" as i2, "zlib" as i3
 pkg(
   name: "purescript",
   version: "0.14.2",
+  description: "Strongly typed programming language that compiles to JavaScript",
+  url: "https://www.purescript.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

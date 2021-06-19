@@ -52,6 +52,12 @@ import "pkg-config" as i0
 pkg(
   name: "libestr",
   version: "0.1.11",
+  description: "C library for string handling (and a bit more)",
+  url: "https://libestr.adiscon.com/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

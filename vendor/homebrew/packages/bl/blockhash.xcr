@@ -63,12 +63,18 @@ end
 
 import "homebrew-install" as hi
 
-import "aom" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "bzip2" as i6, "cmake" as i7, "docbook" as i8, "docbook-xsl" as i9, "doxygen" as i10, "expat" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "gdbm" as i15, "gettext" as i16, "ghostscript" as i17, "glib" as i18, "gnu-getopt" as i19, "gperf" as i20, "help2man" as i21, "imagemagick" as i22, "imath" as i23, "intltool" as i24, "itstool" as i25, "jbig2dec" as i26, "jpeg" as i27, "libde265" as i28, "libffi" as i29, "libgcrypt" as i30, "libgpg-error" as i31, "libheif" as i32, "libidn" as i33, "liblqr" as i34, "libomp" as i35, "libpng" as i36, "libtiff" as i37, "libtool" as i38, "libxml2" as i39, "libxslt" as i40, "little-cms2" as i41, "m4" as i42, "meson" as i43, "mpdecimal" as i44, "nasm" as i45, "ncurses" as i46, "ninja" as i47, "openexr" as i48, "openjpeg" as i49, "openssl@1.1" as i50, "pcre" as i51, "perl" as i52, "pkg-config" as i53, "python@3.9" as i54, "readline" as i55, "shared-mime-info" as i56, "sphinx-doc" as i57, "sqlite" as i58, "unzip" as i59, "webp" as i60, "x265" as i61, "xmlto" as i62, "xz" as i63, "yasm" as i64, "zip" as i65, "zlib" as i66
+import "pkg-config" as i0, "python@3.9" as i1, "imagemagick" as i2
 
 pkg(
   name: "blockhash",
   version: "0.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66],
+  description: "Perceptual image hash calculation tool",
+  url: "https://github.com/commonsmachinery/blockhash",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "blockhash.rb"), formula)

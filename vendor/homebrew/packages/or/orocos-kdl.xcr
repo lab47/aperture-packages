@@ -52,6 +52,12 @@ import "cmake" as i0, "eigen" as i1
 pkg(
   name: "orocos-kdl",
   version: "1.5.0",
+  description: "Orocos Kinematics and Dynamics C++ library",
+  url: "https://orocos.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

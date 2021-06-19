@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "lsd",
   version: "0.20.1",
+  description: "Clone of ls with colorful output, file type icons, and more",
+  url: "https://github.com/Peltoche/lsd",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

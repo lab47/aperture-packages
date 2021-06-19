@@ -75,6 +75,12 @@ import "openjdk" as i0
 pkg(
   name: "maven@3.2",
   version: "3.2.5",
+  description: "Java-based project management",
+  url: "https://maven.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -67,12 +67,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bash" as i2, "berkeley-db" as i3, "binutils" as i4, "bison" as i5, "bzip2" as i6, "coreutils" as i7, "expat" as i8, "flex" as i9, "gawk" as i10, "gdbm" as i11, "gettext" as i12, "gmp" as i13, "gnu-sed" as i14, "gperf" as i15, "grep" as i16, "help2man" as i17, "libffi" as i18, "libtool" as i19, "libxml2" as i20, "lzip" as i21, "m4" as i22, "make" as i23, "mpdecimal" as i24, "mpfr" as i25, "ncurses" as i26, "openssl@1.1" as i27, "pcre" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "sqlite" as i33, "texinfo" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38
+import "help2man" as i0, "autoconf" as i1, "automake" as i2, "bash" as i3, "binutils" as i4, "bison" as i5, "coreutils" as i6, "flex" as i7, "gawk" as i8, "gettext" as i9, "gnu-sed" as i10, "grep" as i11, "libtool" as i12, "lzip" as i13, "m4" as i14, "make" as i15, "ncurses" as i16, "python@3.9" as i17, "xz" as i18, "flex" as i19, "gperf" as i20, "texinfo" as i21, "unzip" as i22
 
 pkg(
   name: "crosstool-ng",
   version: "1.24.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38],
+  description: "Tool for building toolchains",
+  url: "https://crosstool-ng.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "crosstool-ng.rb"), formula)

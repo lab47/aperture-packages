@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zopfli",
   version: "1.0.3",
+  description: "New zlib (gzip, deflate) compatible compressor",
+  url: "https://github.com/google/zopfli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

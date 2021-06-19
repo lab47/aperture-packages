@@ -48,6 +48,12 @@ import "rust" as i0
 pkg(
   name: "tokei",
   version: "12.1.2",
+  description: "Program that allows you to count code, quickly",
+  url: "https://github.com/XAMPPRocky/tokei",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

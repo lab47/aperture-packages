@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rpl",
   version: "1.4.1",
+  description: "Text replacement utility",
+  url: "http://www.laffeycomputer.com/rpl.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "kops",
   version: "1.20.1",
+  description: "Production Grade K8s Installation, Upgrades, and Management",
+  url: "https://github.com/kubernetes/kops",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

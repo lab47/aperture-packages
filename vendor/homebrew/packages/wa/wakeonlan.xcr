@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wakeonlan",
   version: "0.41",
+  description: "Sends magic packets to wake up network-devices",
+  url: "https://github.com/jpoliv/wakeonlan",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

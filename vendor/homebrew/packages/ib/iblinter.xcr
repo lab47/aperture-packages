@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "iblinter",
   version: "0.4.27",
+  description: "Linter tool for Interface Builder",
+  url: "https://github.com/IBDecodable/IBLinter",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

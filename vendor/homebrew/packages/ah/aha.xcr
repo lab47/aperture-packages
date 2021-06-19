@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aha",
   version: "0.5.1",
+  description: "ANSI HTML adapter",
+  url: "https://github.com/theZiz/aha",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

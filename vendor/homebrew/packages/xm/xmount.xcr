@@ -48,6 +48,12 @@ import "cmake" as i0, "pkg-config" as i1, "afflib" as i2, "libewf" as i3, "opens
 pkg(
   name: "xmount",
   version: "0.7.6",
+  description: "Convert between multiple input & output disk image types",
+  url: "https://www.pinguin.lu/xmount/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

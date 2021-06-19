@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "dnsprobe",
   version: "1.0.3",
+  description: "DNS query and resolution tool",
+  url: "https://github.com/projectdiscovery/dnsprobe",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

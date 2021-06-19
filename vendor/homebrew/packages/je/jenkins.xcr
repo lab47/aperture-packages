@@ -89,6 +89,12 @@ import "openjdk@11" as i0
 pkg(
   name: "jenkins",
   version: "2.297",
+  description: "Extendable open source continuous integration server",
+  url: "https://jenkins.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

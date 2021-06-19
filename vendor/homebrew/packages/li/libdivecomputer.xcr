@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libdivecomputer",
   version: "0.7.0",
+  description: "Library for communication with various dive computers",
+  url: "https://www.libdivecomputer.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

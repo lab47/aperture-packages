@@ -52,6 +52,12 @@ import "curl" as i0
 pkg(
   name: "powerman",
   version: "2.3.26",
+  description: "Control (remotely and in parallel) switched power distribution units",
+  url: "https://code.google.com/p/powerman/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

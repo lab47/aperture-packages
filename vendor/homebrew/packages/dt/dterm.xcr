@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dterm",
   version: "0.5",
+  description: "Terminal emulator for use with xterm and friends",
+  url: "http://www.knossos.net.nz/resources/free-software/dterm/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

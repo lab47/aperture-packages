@@ -36,6 +36,12 @@ import "intltool" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3
 pkg(
   name: "liblunar",
   version: "2.2.5",
+  description: "Lunar date calendar",
+  url: "https://code.google.com/archive/p/liblunar/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cubelib",
   version: "4.6",
+  description: "Cube, is a performance report explorer for Scalasca and Score-P",
+  url: "https://scalasca.org/software/cube-4.x/download.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

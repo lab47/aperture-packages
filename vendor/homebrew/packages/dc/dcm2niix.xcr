@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "dcm2niix",
   version: "1.0.20210317",
+  description: "DICOM to NIfTI converter",
+  url: "https://www.nitrc.org/plugins/mwiki/index.php/dcm2nii:MainPage",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

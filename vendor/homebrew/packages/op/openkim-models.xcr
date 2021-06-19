@@ -44,6 +44,12 @@ import "cmake" as i0, "kim-api" as i1
 pkg(
   name: "openkim-models",
   version: "2021-01-28",
+  description: "All OpenKIM Models compatible with kim-api",
+  url: "https://openkim.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

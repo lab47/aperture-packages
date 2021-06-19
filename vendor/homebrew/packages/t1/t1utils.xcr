@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "t1utils",
   version: "1.42",
+  description: "Command-line tools for dealing with Type 1 fonts",
+  url: "https://www.lcdf.org/type/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

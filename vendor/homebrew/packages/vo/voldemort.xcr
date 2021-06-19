@@ -49,6 +49,12 @@ import "gradle" as i0, "openjdk@8" as i1
 pkg(
   name: "voldemort",
   version: "1.10.26",
+  description: "Distributed key-value storage system",
+  url: "https://www.project-voldemort.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

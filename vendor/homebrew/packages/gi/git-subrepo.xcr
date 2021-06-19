@@ -61,6 +61,12 @@ import "bash" as i0
 pkg(
   name: "git-subrepo",
   version: "0.4.3",
+  description: "Git Submodule Alternative",
+  url: "https://github.com/ingydotnet/git-subrepo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "cmake" as i0, "libcuefile" as i1, "libreplaygain" as i2
 pkg(
   name: "musepack",
   version: "r475",
+  description: "Audio compression format and tools",
+  url: "https://www.musepack.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

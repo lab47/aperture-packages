@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scalariform",
   version: "0.2.10",
+  description: "Scala source code formatter",
+  url: "https://github.com/scala-ide/scalariform",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

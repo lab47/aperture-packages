@@ -39,6 +39,12 @@ import "cmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "unshield",
   version: "1.4.3",
+  description: "Extract files from InstallShield cabinet files",
+  url: "https://github.com/twogood/unshield",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

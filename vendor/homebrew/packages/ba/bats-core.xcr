@@ -42,6 +42,12 @@ import "coreutils" as i0
 pkg(
   name: "bats-core",
   version: "1.3.0",
+  description: "Bash Automated Testing System",
+  url: "https://github.com/bats-core/bats-core",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

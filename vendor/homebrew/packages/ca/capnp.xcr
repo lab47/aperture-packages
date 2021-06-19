@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "capnp",
   version: "0.8.0",
+  description: "Data interchange format and capability-based RPC system",
+  url: "https://capnproto.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

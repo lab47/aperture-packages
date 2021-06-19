@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chgems",
   version: "0.3.2",
+  description: "Chroot for Ruby gems",
+  url: "https://github.com/postmodern/chgems#readme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

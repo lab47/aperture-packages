@@ -51,6 +51,12 @@ import "go" as i0
 pkg(
   name: "scc",
   version: "3.0.0",
+  description: "Fast and accurate code counter with complexity and COCOMO estimates",
+  url: "https://github.com/boyter/scc/",
+  metadata: %{
+    "license": "MIT or Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

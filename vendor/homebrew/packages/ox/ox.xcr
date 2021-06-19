@@ -47,6 +47,12 @@ import "rust" as i0
 pkg(
   name: "ox",
   version: "0.2.5",
+  description: "Independent Rust text editor that runs in your terminal",
+  url: "https://github.com/curlpipe/ox",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

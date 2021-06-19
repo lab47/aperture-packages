@@ -86,6 +86,12 @@ import "bison" as i0, "boost" as i1, "openssl@1.1" as i2
 pkg(
   name: "thrift",
   version: "0.14.1",
+  description: "Framework for scalable cross-language services development",
+  url: "https://thrift.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

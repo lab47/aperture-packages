@@ -66,6 +66,12 @@ import "cmake" as i0, "ninja" as i1
 pkg(
   name: "vcpkg",
   version: "2021.05.12",
+  description: "C++ Library Manager",
+  url: "https://github.com/microsoft/vcpkg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

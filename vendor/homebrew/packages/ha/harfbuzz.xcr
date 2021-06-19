@@ -66,6 +66,12 @@ import "meson" as i0, "ninja" as i1, "cairo" as i2, "freetype" as i3, "glib" as 
 pkg(
   name: "harfbuzz",
   version: "2.8.1",
+  description: "OpenType text shaping engine",
+  url: "https://github.com/harfbuzz/harfbuzz",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

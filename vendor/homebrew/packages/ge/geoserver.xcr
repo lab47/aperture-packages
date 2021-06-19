@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "geoserver",
   version: "2.19.1",
+  description: "Java server to share and edit geospatial data",
+  url: "http://geoserver.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

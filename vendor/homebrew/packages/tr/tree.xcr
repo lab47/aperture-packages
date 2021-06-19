@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tree",
   version: "1.8.0",
+  description: "Display directories as trees (with optional color/HTML output)",
+  url: "http://mama.indstate.edu/users/ice/tree/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

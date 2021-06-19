@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "apparix",
   version: "11-062",
+  description: "File system navigation via bookmarking directories",
+  url: "https://micans.org/apparix/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

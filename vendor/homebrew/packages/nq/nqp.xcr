@@ -43,6 +43,12 @@ import "libtommath" as i0, "moarvm" as i1
 pkg(
   name: "nqp",
   version: "2021.05",
+  description: "Lightweight Perl 6-like environment for virtual machines",
+  url: "https://github.com/perl6/nqp",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

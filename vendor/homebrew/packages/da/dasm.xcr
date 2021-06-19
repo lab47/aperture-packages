@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dasm",
   version: "2.20.14.1",
+  description: "Macro assembler with support for several 8-bit microprocessors",
+  url: "https://dasm-assembler.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

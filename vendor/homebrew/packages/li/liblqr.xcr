@@ -37,6 +37,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "liblqr",
   version: "0.4.2",
+  description: "C/C++ seam carving library",
+  url: "https://liblqr.wikidot.com/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

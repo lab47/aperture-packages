@@ -63,6 +63,12 @@ import "mysql-client" as i0
 pkg(
   name: "mysql++",
   version: "3.3.0",
+  description: "C++ wrapper for MySQL's C API",
+  url: "https://tangentsoft.com/mysqlpp/home",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

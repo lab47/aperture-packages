@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "density",
   version: "0.14.2",
+  description: "Superfast compression library",
+  url: "https://github.com/centaurean/density",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

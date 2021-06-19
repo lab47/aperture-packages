@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ascii",
   version: "3.18",
+  description: "List ASCII idiomatic names and octal/decimal code-point forms",
+  url: "http://www.catb.org/~esr/ascii/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

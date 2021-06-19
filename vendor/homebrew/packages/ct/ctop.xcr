@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "ctop",
   version: "0.7.6",
+  description: "Top-like interface for container metrics",
+  url: "https://bcicen.github.io/ctop/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

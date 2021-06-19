@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "i686-elf-binutils",
   version: "2.36.1",
+  description: "GNU Binutils for i686-elf cross development",
+  url: "https://www.gnu.org/software/binutils/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

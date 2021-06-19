@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "homeshick",
   version: "2.0.0",
+  description: "Git dotfiles synchronizer written in bash",
+  url: "https://github.com/andsens/homeshick",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

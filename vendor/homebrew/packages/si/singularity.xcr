@@ -39,6 +39,12 @@ import "go" as i0, "openssl@1.1" as i1, "libarchive" as i2, "pkg-config" as i3, 
 pkg(
   name: "singularity",
   version: "3.6.2",
+  description: "Application containers for Linux",
+  url: "https://www.sylabs.io/singularity/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -65,6 +65,12 @@ import "pkg-config" as i0, "gd" as i1, "libtool" as i2, "libusb-compat" as i3
 pkg(
   name: "libgphoto2",
   version: "2.5.27",
+  description: "Gphoto2 digital camera library",
+  url: "http://www.gphoto.org/proj/libgphoto2/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

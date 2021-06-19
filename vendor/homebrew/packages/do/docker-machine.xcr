@@ -54,6 +54,12 @@ import "automake" as i0, "go" as i1
 pkg(
   name: "docker-machine",
   version: "0.16.2",
+  description: "Create Docker hosts locally and on cloud providers",
+  url: "https://docs.docker.com/machine",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

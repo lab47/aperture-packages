@@ -62,6 +62,12 @@ import "docbook" as i0, "gettext" as i1, "libxslt" as i2, "perl" as i3
 pkg(
   name: "scrollkeeper",
   version: "0.3.14",
+  description: "Transitional package for scrollkeeper",
+  url: "https://scrollkeeper.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

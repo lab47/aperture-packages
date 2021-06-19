@@ -53,6 +53,12 @@ import "cmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "caf",
   version: "0.18.3",
+  description: "Implementation of the Actor Model for C++",
+  url: "https://www.actor-framework.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

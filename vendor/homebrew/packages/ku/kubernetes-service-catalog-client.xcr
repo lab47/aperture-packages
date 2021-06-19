@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "kubernetes-service-catalog-client",
   version: "0.3.1",
+  description: "Consume Services in k8s using the OSB API",
+  url: "https://svc-cat.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

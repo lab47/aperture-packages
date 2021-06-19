@@ -99,6 +99,12 @@ import "pkg-config" as i0, "libestr" as i1, "curl" as i2, "zlib" as i3
 pkg(
   name: "rsyslog",
   version: "8.2104.0",
+  description: "Enhanced, multi-threaded syslogd",
+  url: "https://www.rsyslog.com/",
+  metadata: %{
+    "license": "Apache-2.0 and GPL-3.0-or-later and LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

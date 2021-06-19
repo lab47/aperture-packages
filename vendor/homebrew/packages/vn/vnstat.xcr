@@ -103,6 +103,12 @@ import "gd" as i0, "sqlite" as i1
 pkg(
   name: "vnstat",
   version: "2.7",
+  description: "Console-based network traffic monitor",
+  url: "https://humdi.net/vnstat/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

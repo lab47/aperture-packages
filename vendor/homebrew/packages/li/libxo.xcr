@@ -46,6 +46,12 @@ import "libtool" as i0
 pkg(
   name: "libxo",
   version: "1.6.0",
+  description: "Allows an application to generate text, XML, JSON, and HTML output",
+  url: "https://juniper.github.io/libxo/libxo-manual.html",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

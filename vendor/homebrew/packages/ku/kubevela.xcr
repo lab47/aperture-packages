@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "kubevela",
   version: "1.0.6",
+  description: "Application Platform based on Kubernetes and Open Application Model",
+  url: "https://kubevela.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

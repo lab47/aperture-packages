@@ -40,6 +40,12 @@ import "ncurses" as i0
 pkg(
   name: "cdk",
   version: "5.0-20210324",
+  description: "Curses development kit provides predefined curses widget for apps",
+  url: "https://invisible-island.net/cdk/",
+  metadata: %{
+    "license": "BSD-4-Clause-UC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

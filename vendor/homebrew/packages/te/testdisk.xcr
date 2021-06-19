@@ -51,6 +51,12 @@ import "ncurses" as i0
 pkg(
   name: "testdisk",
   version: "7.1",
+  description: "Powerful free data recovery utility",
+  url: "https://www.cgsecurity.org/wiki/TestDisk",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

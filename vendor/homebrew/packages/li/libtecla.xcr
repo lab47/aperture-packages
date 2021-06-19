@@ -67,6 +67,12 @@ import "automake" as i0, "ncurses" as i1
 pkg(
   name: "libtecla",
   version: "1.6.3",
+  description: "Command-line editing facilities similar to the tcsh shell",
+  url: "https://sites.astro.caltech.edu/~mcs/tecla/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

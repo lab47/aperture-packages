@@ -47,6 +47,12 @@ import "cmake" as i0, "libomp" as i1
 pkg(
   name: "ngt",
   version: "1.13.5",
+  description: "Neighborhood graph and tree for indexing high-dimensional data",
+  url: "https://github.com/yahoojapan/NGT",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

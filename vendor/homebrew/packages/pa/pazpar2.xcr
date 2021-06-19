@@ -61,6 +61,12 @@ import "pkg-config" as i0, "icu4c" as i1, "yaz" as i2
 pkg(
   name: "pazpar2",
   version: "1.14.0",
+  description: "Metasearching middleware webservice",
+  url: "https://www.indexdata.com/pazpar2",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "libgcrypt" as i0
 pkg(
   name: "libbdplus",
   version: "0.1.2",
+  description: "Implements the BD+ System Specifications",
+  url: "https://www.videolan.org/developers/libbdplus.html",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

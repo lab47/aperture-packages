@@ -60,6 +60,12 @@ import "cmake" as i0, "gcc" as i1, "jasper" as i2, "libpng" as i3, "netcdf" as i
 pkg(
   name: "eccodes",
   version: "2.22.0",
+  description: "Decode and encode messages in the GRIB 1/2 and BUFR 3/4 formats",
+  url: "https://confluence.ecmwf.int/display/ECC",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcenv",
   version: "1.2.0",
+  description: "Xcode version manager",
+  url: "https://github.com/xcenv/xcenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

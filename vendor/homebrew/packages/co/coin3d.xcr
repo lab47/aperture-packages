@@ -98,12 +98,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "boost" as i4, "bzip2" as i5, "cmake" as i6, "doxygen" as i7, "expat" as i8, "flex" as i9, "gdbm" as i10, "gettext" as i11, "gperf" as i12, "help2man" as i13, "icu4c" as i14, "libedit" as i15, "libffi" as i16, "libtool" as i17, "libxml2" as i18, "libyaml" as i19, "llvm" as i20, "m4" as i21, "mpdecimal" as i22, "ncurses" as i23, "ninja" as i24, "openssl@1.1" as i25, "pcre" as i26, "perl" as i27, "pkg-config" as i28, "pyside@2" as i29, "python@3.9" as i30, "qt@5" as i31, "readline" as i32, "ruby" as i33, "sphinx-doc" as i34, "sqlite" as i35, "swig" as i36, "unzip" as i37, "xz" as i38, "zip" as i39, "zlib" as i40
+import "cmake" as i0, "doxygen" as i1, "ninja" as i2, "swig" as i3, "boost" as i4, "pyside@2" as i5, "python@3.9" as i6
 
 pkg(
   name: "coin3d",
   version: "4.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40],
+  description: "Open Inventor 2.1 API implementation (Coin) with Python bindings (Pivy)",
+  url: "https://coin3d.github.io/",
+  metadata: %{
+    "license": "BSD-3-Clause and ISC",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coin3d.rb"), formula)

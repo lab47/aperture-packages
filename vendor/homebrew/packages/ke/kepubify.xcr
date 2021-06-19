@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "kepubify",
   version: "3.1.6",
+  description: "Convert ebooks from epub to kepub",
+  url: "https://pgaskin.net/kepubify/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

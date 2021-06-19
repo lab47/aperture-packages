@@ -66,6 +66,12 @@ import "cmake" as i0, "halibut" as i1
 pkg(
   name: "puzzles",
   version: "20210526",
+  description: "Collection of one-player puzzle games",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "oauth2l",
   version: "1.2.0",
+  description: "Simple CLI for interacting with Google oauth tokens",
+  url: "https://github.com/google/oauth2l",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

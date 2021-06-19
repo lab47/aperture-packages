@@ -178,6 +178,12 @@ import "openssl@1.1" as i0, "readline" as i1, "krb5" as i2, "libxslt" as i3, "op
 pkg(
   name: "postgresql@9.5",
   version: "9.5.25",
+  description: "Object-relational database system",
+  url: "https://www.postgresql.org/",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

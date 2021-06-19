@@ -40,6 +40,12 @@ import "php" as i0
 pkg(
   name: "php-cs-fixer",
   version: "3.0.0",
+  description: "Tool to automatically fix PHP coding standards issues",
+  url: "https://cs.symfony.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

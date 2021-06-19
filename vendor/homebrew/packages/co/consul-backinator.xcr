@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "consul-backinator",
   version: "1.6.6",
+  description: "Consul backup and restoration application",
+  url: "https://github.com/myENA/consul-backinator",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

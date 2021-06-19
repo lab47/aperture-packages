@@ -72,6 +72,12 @@ import "go" as i0
 pkg(
   name: "gateway-go",
   version: "0.1.97",
+  description: "GateWay Client for OpenIoTHub",
+  url: "https://github.com/OpenIoTHub",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

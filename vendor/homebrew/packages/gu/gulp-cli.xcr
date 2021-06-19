@@ -51,6 +51,12 @@ import "node" as i0
 pkg(
   name: "gulp-cli",
   version: "2.3.0",
+  description: "Command-line utility for Gulp",
+  url: "https://github.com/gulpjs/gulp-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

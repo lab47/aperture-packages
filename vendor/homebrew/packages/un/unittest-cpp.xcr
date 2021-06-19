@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "unittest-cpp",
   version: "2.0.0",
+  description: "Unit testing framework for C++",
+  url: "https://github.com/unittest-cpp/unittest-cpp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

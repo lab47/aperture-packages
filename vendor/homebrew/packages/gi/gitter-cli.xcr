@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "gitter-cli",
   version: "0.8.5",
+  description: "Extremely simple Gitter client for terminals",
+  url: "https://github.com/RodrigoEspinosa/gitter-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

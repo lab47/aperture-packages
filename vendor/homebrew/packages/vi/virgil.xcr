@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "virgil",
   version: "5.2.9",
+  description: "CLI tool to manage your Virgil account and applications",
+  url: "https://github.com/VirgilSecurity/virgil-cli",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

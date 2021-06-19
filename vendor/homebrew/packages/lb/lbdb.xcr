@@ -41,6 +41,12 @@ import "abook" as i0
 pkg(
   name: "lbdb",
   version: "0.49",
+  description: "Little brother's database for the mutt mail reader",
+  url: "https://www.spinnaker.de/lbdb/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

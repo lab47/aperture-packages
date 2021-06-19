@@ -40,6 +40,12 @@ import "cmake" as i0, "libzip" as i1
 pkg(
   name: "ebook-tools",
   version: "0.2.2",
+  description: "Access and convert several ebook formats",
+  url: "https://sourceforge.net/projects/ebook-tools/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

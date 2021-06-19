@@ -49,6 +49,12 @@ import "go" as i0, "govendor" as i1
 pkg(
   name: "cwlogs",
   version: "1.2.0",
+  description: "CLI tool for reading logs from Cloudwatch Logs",
+  url: "https://github.com/segmentio/cwlogs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

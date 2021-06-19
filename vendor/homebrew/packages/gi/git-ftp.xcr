@@ -66,6 +66,12 @@ import "pandoc" as i0, "libssh2" as i1, "zlib" as i2
 pkg(
   name: "git-ftp",
   version: "1.6.0",
+  description: "Git-powered FTP client",
+  url: "https://git-ftp.github.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

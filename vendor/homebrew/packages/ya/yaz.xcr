@@ -87,6 +87,12 @@ import "pkg-config" as i0, "icu4c" as i1, "libxml2" as i2
 pkg(
   name: "yaz",
   version: "5.31.0",
+  description: "Toolkit for Z39.50/SRW/SRU clients/servers",
+  url: "https://www.indexdata.com/yaz",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

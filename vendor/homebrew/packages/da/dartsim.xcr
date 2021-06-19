@@ -73,6 +73,12 @@ import "cmake" as i0, "pkg-config" as i1, "assimp" as i2, "boost" as i3, "bullet
 pkg(
   name: "dartsim",
   version: "6.10.1",
+  description: "Dynamic Animation and Robotics Toolkit",
+  url: "https://dartsim.github.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

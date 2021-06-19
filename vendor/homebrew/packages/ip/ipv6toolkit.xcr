@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ipv6toolkit",
   version: "2.0",
+  description: "Security assessment and troubleshooting tool for IPv6",
+  url: "https://www.si6networks.com/research/tools/ipv6toolkit/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

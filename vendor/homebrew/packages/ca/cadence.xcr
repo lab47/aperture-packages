@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "cadence",
   version: "0.17.0",
+  description: "Resource-oriented smart contract programming language",
+  url: "https://github.com/onflow/cadence",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

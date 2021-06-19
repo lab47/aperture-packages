@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "seqkit",
   version: "0.16.1",
+  description: "Cross-platform and ultrafast toolkit for FASTA/Q file manipulation in Golang",
+  url: "https://bioinf.shenwei.me/seqkit",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

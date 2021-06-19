@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "intltool" as i2, "pkg-config" as i3,
 pkg(
   name: "paps",
   version: "0.7.1",
+  description: "Pango to PostScript converter",
+  url: "https://github.com/dov/paps",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

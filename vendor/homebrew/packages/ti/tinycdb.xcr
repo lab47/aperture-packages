@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tinycdb",
   version: "0.78",
+  description: "Create and read constant databases",
+  url: "https://www.corpit.ru/mjt/tinycdb.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

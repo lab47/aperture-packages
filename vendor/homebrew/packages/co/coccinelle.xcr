@@ -89,6 +89,12 @@ import "autoconf" as i0, "automake" as i1, "hevea" as i2, "ocaml-findlib" as i3,
 pkg(
   name: "coccinelle",
   version: "1.1.0",
+  description: "Program matching and transformation engine for C code",
+  url: "http://coccinelle.lip6.fr/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

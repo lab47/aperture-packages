@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "draco",
   version: "1.4.1",
+  description: "3D geometric mesh and point cloud compression library",
+  url: "https://google.github.io/draco/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

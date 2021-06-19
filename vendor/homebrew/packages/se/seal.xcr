@@ -113,6 +113,12 @@ import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3
 pkg(
   name: "seal",
   version: "3.6.5",
+  description: "Easy-to-use homomorphic encryption library",
+  url: "https://github.com/microsoft/SEAL",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

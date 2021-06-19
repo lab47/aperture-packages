@@ -90,6 +90,12 @@ import "nkf" as i0, "bison" as i1, "flex" as i2
 pkg(
   name: "jnethack",
   version: "3.6.6-0.2",
+  description: "Japanese localization of NetHack",
+  url: "https://jnethack.osdn.jp/",
+  metadata: %{
+    "license": "NGPL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

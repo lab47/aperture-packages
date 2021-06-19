@@ -44,6 +44,12 @@ import "ant" as i0
 pkg(
   name: "ant-contrib",
   version: "1.0b3",
+  description: "Collection of tasks for Apache Ant",
+  url: "https://ant-contrib.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

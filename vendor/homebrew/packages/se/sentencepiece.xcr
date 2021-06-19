@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "sentencepiece",
   version: "0.1.95",
+  description: "Unsupervised text tokenizer and detokenizer",
+  url: "https://github.com/google/sentencepiece",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

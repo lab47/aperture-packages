@@ -121,6 +121,12 @@ import "autoconf" as i0, "automake" as i1, "boost" as i2, "libtool" as i3, "pkg-
 pkg(
   name: "libbitcoin-consensus",
   version: "3.6.0",
+  description: "Bitcoin Consensus Library (optional)",
+  url: "https://github.com/libbitcoin/libbitcoin-consensus",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

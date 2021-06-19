@@ -85,6 +85,12 @@ import "scons" as i0, "boost" as i1, "libidn" as i2, "lua@5.1" as i3
 pkg(
   name: "libswiften",
   version: "4.0",
+  description: "C++ library for implementing XMPP applications",
+  url: "https://swift.im/swiften",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

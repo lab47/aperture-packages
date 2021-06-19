@@ -53,6 +53,12 @@ import "pkg-config" as i0, "libxcb" as i1, "m4" as i2
 pkg(
   name: "xcb-util-wm",
   version: "0.4.1",
+  description: "Client and window-manager helpers for EWMH and ICCCM",
+  url: "https://xcb.freedesktop.org",
+  metadata: %{
+    "license": "X11",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

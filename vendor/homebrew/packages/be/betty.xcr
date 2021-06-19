@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "betty",
   version: "0.1.7",
+  description: "English-like interface for the command-line",
+  url: "https://github.com/pickhardt/betty",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

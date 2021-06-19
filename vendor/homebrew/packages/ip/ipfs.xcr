@@ -70,6 +70,12 @@ import "go" as i0
 pkg(
   name: "ipfs",
   version: "0.8.0",
+  description: "Peer-to-peer hypermedia protocol",
+  url: "https://ipfs.io/",
+  metadata: %{
+    "license": "MIT and (MIT or Apache-2.0)",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

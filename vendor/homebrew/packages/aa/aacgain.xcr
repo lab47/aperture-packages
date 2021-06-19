@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aacgain",
   version: "1.8",
+  description: "AAC-supporting version of mp3gain",
+  url: "https://aacgain.altosdesign.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

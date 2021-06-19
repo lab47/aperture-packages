@@ -52,6 +52,12 @@ import "pcre" as i0, "ncurses" as i1
 pkg(
   name: "ccze",
   version: "0.2.1",
+  description: "Robust and modular log colorizer",
+  url: "https://packages.debian.org/wheezy/ccze",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

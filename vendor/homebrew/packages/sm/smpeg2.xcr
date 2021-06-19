@@ -57,6 +57,12 @@ import "subversion" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, 
 pkg(
   name: "smpeg2",
   version: "2.0.0",
+  description: "SDL MPEG Player Library",
+  url: "https://icculus.org/smpeg/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

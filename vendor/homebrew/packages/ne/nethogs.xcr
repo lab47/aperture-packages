@@ -37,6 +37,12 @@ import "libpcap" as i0, "ncurses" as i1
 pkg(
   name: "nethogs",
   version: "0.8.6",
+  description: "Net top tool grouping bandwidth per process",
+  url: "https://raboof.github.io/nethogs/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

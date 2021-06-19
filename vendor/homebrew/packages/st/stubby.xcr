@@ -89,6 +89,12 @@ import "cmake" as i0, "libtool" as i1, "getdns" as i2, "libyaml" as i3
 pkg(
   name: "stubby",
   version: "0.4.0",
+  description: "DNS privacy enabled stub resolver service based on getdns",
+  url: "https://dnsprivacy.org/wiki/display/DP/DNS+Privacy+Daemon+-+Stubby",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

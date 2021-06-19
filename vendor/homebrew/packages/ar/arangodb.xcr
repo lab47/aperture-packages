@@ -123,12 +123,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "ccache" as i1, "cmake" as i2, "expat" as i3, "gdbm" as i4, "go@1.13" as i5, "libffi" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18, "zstd" as i19
+import "ccache" as i0, "cmake" as i1, "go@1.13" as i2, "python@3.9" as i3, "openssl@1.1" as i4
 
 pkg(
   name: "arangodb",
   version: "3.7.11",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Multi-Model NoSQL Database",
+  url: "https://www.arangodb.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arangodb.rb"), formula)

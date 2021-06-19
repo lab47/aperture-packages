@@ -45,6 +45,12 @@ import "pkg-config" as i0, "libquvi" as i1
 pkg(
   name: "quvi",
   version: "0.4.2",
+  description: "Parse video download URLs",
+  url: "https://quvi.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

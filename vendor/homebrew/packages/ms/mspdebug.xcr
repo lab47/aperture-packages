@@ -49,6 +49,12 @@ import "hidapi" as i0, "libusb-compat" as i1
 pkg(
   name: "mspdebug",
   version: "0.25",
+  description: "Debugger for use with MSP430 MCUs",
+  url: "https://dlbeer.co.nz/mspdebug/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

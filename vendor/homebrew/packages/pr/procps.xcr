@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pk
 pkg(
   name: "procps",
   version: "3.3.16",
+  description: "Utilities for browsing procfs",
+  url: "https://gitlab.com/procps-ng/procps",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

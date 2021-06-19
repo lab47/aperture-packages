@@ -100,12 +100,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "cython" as i5, "expat" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "gsl" as i10, "isl" as i11, "libffi" as i12, "libmpc" as i13, "libomp" as i14, "libtool" as i15, "libyaml" as i16, "m4" as i17, "mpdecimal" as i18, "mpfr" as i19, "ncurses" as i20, "numpy" as i21, "openblas" as i22, "openssl@1.1" as i23, "pcre" as i24, "perl" as i25, "pkg-config" as i26, "pybind11" as i27, "python@3.9" as i28, "readline" as i29, "ruby" as i30, "scipy" as i31, "sphinx-doc" as i32, "sqlite" as i33, "swig" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38, "zstd" as i39
+import "cmake" as i0, "cython" as i1, "gsl" as i2, "libomp" as i3, "libtool" as i4, "numpy" as i5, "python@3.9" as i6, "readline" as i7, "scipy" as i8
 
 pkg(
   name: "nest",
   version: "2.20.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+  description: "Neural Simulation Tool (NEST) with Python3 bindings (PyNEST)",
+  url: "https://www.nest-simulator.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nest.rb"), formula)

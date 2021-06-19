@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
 pkg(
   name: "ike-scan",
   version: "1.9.4",
+  description: "Discover and fingerprint IKE hosts",
+  url: "https://github.com/royhills/ike-scan",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

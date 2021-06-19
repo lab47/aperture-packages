@@ -102,6 +102,12 @@ import "wget" as i0, "fontconfig" as i1, "libice" as i2, "libsm" as i3, "libx11"
 pkg(
   name: "texlive",
   version: "20200715",
+  description: "Free software distribution for the TeX typesetting system",
+  url: "https://www.tug.org/texlive/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

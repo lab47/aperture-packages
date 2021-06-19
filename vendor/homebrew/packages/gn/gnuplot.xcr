@@ -71,6 +71,12 @@ import "pkg-config" as i0, "gd" as i1, "libcerf" as i2, "lua" as i3, "pango" as 
 pkg(
   name: "gnuplot",
   version: "5.4.2",
+  description: "Command-driven, interactive function plotting",
+  url: "http://www.gnuplot.info/",
+  metadata: %{
+    "license": "gnuplot",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

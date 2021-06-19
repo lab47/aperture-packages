@@ -43,6 +43,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "dash",
   version: "0.5.11.4",
+  description: "POSIX-compliant descendant of NetBSD's ash (the Almquist SHell)",
+  url: "http://gondor.apana.org.au/~herbert/dash/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

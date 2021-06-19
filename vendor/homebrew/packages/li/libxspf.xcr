@@ -51,6 +51,12 @@ import "pkg-config" as i0, "cpptest" as i1, "uriparser" as i2
 pkg(
   name: "libxspf",
   version: "1.2.0",
+  description: "C++ library for XSPF playlist reading and writing",
+  url: "https://libspiff.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

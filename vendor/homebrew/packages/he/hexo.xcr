@@ -44,6 +44,12 @@ import "node" as i0
 pkg(
   name: "hexo",
   version: "5.4.0",
+  description: "Fast, simple & powerful blog framework",
+  url: "https://hexo.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fff",
   version: "2.2",
+  description: "Simple file manager written in bash",
+  url: "https://github.com/dylanaraps/fff",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

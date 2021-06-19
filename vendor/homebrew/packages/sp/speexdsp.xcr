@@ -40,6 +40,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
 pkg(
   name: "speexdsp",
   version: "1.2.0",
+  description: "Speex audio processing library",
+  url: "https://github.com/xiph/speexdsp",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

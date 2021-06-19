@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pipebench",
   version: "0.40",
+  description: "Measure the speed of STDIN/STDOUT communication",
+  url: "http://www.habets.pp.se/synscan/programs.php?prog=pipebench",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "coreutils" as i0
 pkg(
   name: "colordiff",
   version: "1.0.19",
+  description: "Color-highlighted diff(1) output",
+  url: "https://www.colordiff.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

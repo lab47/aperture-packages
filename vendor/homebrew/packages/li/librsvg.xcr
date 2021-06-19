@@ -111,6 +111,12 @@ import "gobject-introspection" as i0, "pkg-config" as i1, "rust" as i2, "cairo" 
 pkg(
   name: "librsvg",
   version: "2.50.7",
+  description: "Library to render SVG files using Cairo",
+  url: "https://wiki.gnome.org/Projects/LibRsvg",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

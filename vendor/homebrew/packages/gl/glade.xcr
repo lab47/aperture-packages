@@ -135,6 +135,12 @@ import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "lib
 pkg(
   name: "glade",
   version: "3.38.2",
+  description: "RAD tool for the GTK+ and GNOME environment",
+  url: "https://glade.gnome.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

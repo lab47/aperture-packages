@@ -42,6 +42,12 @@ import "node" as i0
 pkg(
   name: "vercel-cli",
   version: "23.0.0",
+  description: "Command-line interface for Vercel",
+  url: "https://vercel.com/home",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

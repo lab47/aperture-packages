@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "argocd-autopilot",
   version: "0.2.1",
+  description: "Opinionated way of installing Argo CD and managing GitOps repositories",
+  url: "https://argoproj.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

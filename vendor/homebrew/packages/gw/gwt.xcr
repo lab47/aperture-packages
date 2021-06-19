@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gwt",
   version: "2.9.0",
+  description: "Google web toolkit",
+  url: "http://www.gwtproject.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -84,6 +84,12 @@ import "go" as i0, "pinentry-mac" as i1
 pkg(
   name: "yubikey-agent",
   version: "0.1.4",
+  description: "Seamless ssh-agent for YubiKeys and other PIV tokens",
+  url: "https://filippo.io/yubikey-agent",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

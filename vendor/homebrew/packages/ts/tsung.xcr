@@ -43,6 +43,12 @@ import "erlang" as i0, "gnuplot" as i1
 pkg(
   name: "tsung",
   version: "1.7.0",
+  description: "Load testing for HTTP, PostgreSQL, Jabber, and others",
+  url: "http://tsung.erlang-projects.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

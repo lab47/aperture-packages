@@ -28,6 +28,12 @@ import "pyenv" as i0
 pkg(
   name: "pyenv-which-ext",
   version: "0.0.2",
+  description: "Integrate pyenv and system commands",
+  url: "https://github.com/pyenv/pyenv-which-ext",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

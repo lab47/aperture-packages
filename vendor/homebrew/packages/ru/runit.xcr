@@ -109,6 +109,12 @@ import "homebrew-install" as hi
 pkg(
   name: "runit",
   version: "2.1.2",
+  description: "Collection of tools for managing UNIX services",
+  url: "http://smarden.org/runit",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

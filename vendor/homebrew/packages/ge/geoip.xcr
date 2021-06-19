@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "geoip",
   version: "1.6.12",
+  description: "This library is for the GeoIP Legacy format (dat)",
+  url: "https://github.com/maxmind/geoip-api-c",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

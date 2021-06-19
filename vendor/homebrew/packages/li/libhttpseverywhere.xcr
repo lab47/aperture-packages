@@ -113,6 +113,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "libhttpseverywhere",
   version: "0.8.3",
+  description: "Bring HTTPSEverywhere to desktop apps",
+  url: "https://github.com/gnome/libhttpseverywhere",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

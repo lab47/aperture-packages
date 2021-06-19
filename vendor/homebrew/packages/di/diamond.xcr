@@ -58,6 +58,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "diamond",
   version: "2.0.9",
+  description: "Accelerated BLAST compatible local sequence aligner",
+  url: "https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/diamond/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "rust" as i0
 pkg(
   name: "cmdshelf",
   version: "2.0.2",
+  description: "Better scripting life with cmdshelf",
+  url: "https://github.com/toshi0383/cmdshelf",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

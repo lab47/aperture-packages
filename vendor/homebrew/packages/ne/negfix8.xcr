@@ -32,6 +32,12 @@ import "imagemagick" as i0
 pkg(
   name: "negfix8",
   version: "8.3",
+  description: "Turn scanned negative images into positives",
+  url: "https://sites.google.com/site/negfix",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "openjdk" as i0
 pkg(
   name: "cloud-watch",
   version: "1.0.20.0",
+  description: "Amazon CloudWatch command-line Tool",
+  url: "https://aws.amazon.com/developertools/2534",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

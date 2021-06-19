@@ -71,6 +71,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "jerasure" as i3, "z
 pkg(
   name: "liberasurecode",
   version: "1.6.2",
+  description: "Erasure Code API library written in C with pluggable backends",
+  url: "https://github.com/openstack/liberasurecode",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

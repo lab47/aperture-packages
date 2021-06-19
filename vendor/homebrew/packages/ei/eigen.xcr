@@ -63,6 +63,12 @@ import "cmake" as i0
 pkg(
   name: "eigen",
   version: "3.3.9",
+  description: "C++ template library for linear algebra",
+  url: "https://eigen.tuxfamily.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

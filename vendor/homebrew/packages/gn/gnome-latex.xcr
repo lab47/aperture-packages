@@ -70,6 +70,12 @@ import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-d
 pkg(
   name: "gnome-latex",
   version: "3.38.0",
+  description: "LaTeX editor for the GNOME desktop",
+  url: "https://wiki.gnome.org/Apps/GNOME-LaTeX",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "boost" as i0, "ffmpeg" as i1, "taglib" as i2
 pkg(
   name: "echoprint-codegen",
   version: "4.12",
+  description: "Codegen for Echoprint",
+  url: "https://github.com/spotify/echoprint-codegen",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

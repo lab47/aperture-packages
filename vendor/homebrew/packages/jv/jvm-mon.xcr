@@ -39,6 +39,12 @@ import "openjdk@8" as i0
 pkg(
   name: "jvm-mon",
   version: "0.3",
+  description: "Console-based JVM monitoring",
+  url: "https://github.com/ajermakovics/jvm-mon",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

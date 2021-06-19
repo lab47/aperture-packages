@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yaze-ag",
   version: "2.40.5",
+  description: "Yet Another Z80 Emulator (by AG)",
+  url: "http://www.mathematik.uni-ulm.de/users/ag/yaze-ag/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -115,6 +115,12 @@ import "go" as i0
 pkg(
   name: "cosi",
   version: "0.8.6",
+  description: "Implementation of scalable collective signing",
+  url: "https://github.com/dedis/cosi",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

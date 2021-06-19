@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "lz4" as i5, "lzlib" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18, "zstd" as i19
+import "pkg-config" as i0, "python@3.9" as i1, "lz4" as i2, "lzlib" as i3, "openssl@1.1" as i4, "zstd" as i5
 
 pkg(
   name: "librdkafka",
   version: "1.7.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Apache Kafka C/C++ library",
+  url: "https://github.com/edenhill/librdkafka",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "librdkafka.rb"), formula)

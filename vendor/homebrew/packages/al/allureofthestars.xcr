@@ -45,6 +45,12 @@ import "cabal-install" as i0, "pkg-config" as i1, "ghc" as i2, "gmp" as i3, "sdl
 pkg(
   name: "allureofthestars",
   version: "0.10.2.0",
+  description: "Near-future Sci-Fi roguelike and tactical squad combat game",
+  url: "https://www.allureofthestars.com/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later and GPL-2.0-or-later and OFL-1.1 and MIT and Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

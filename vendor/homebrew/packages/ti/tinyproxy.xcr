@@ -101,6 +101,12 @@ import "asciidoc" as i0, "docbook-xsl" as i1
 pkg(
   name: "tinyproxy",
   version: "1.11.0",
+  description: "HTTP/HTTPS proxy for POSIX systems",
+  url: "https://tinyproxy.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

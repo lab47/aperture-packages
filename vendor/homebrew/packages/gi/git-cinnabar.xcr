@@ -44,6 +44,12 @@ import "mercurial" as i0, "curl" as i1
 pkg(
   name: "git-cinnabar",
   version: "0.5.7",
+  description: "Git remote helper to interact with mercurial repositories",
+  url: "https://github.com/glandium/git-cinnabar",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

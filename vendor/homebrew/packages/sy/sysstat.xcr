@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sysstat",
   version: "12.5.4",
+  description: "Performance monitoring tools for Linux",
+  url: "https://github.com/sysstat/sysstat",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

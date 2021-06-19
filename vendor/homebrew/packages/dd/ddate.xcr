@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ddate",
   version: "0.2.2",
+  description: "Converts boring normal dates to fun Discordian Date",
+  url: "https://github.com/bo0ts/ddate",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

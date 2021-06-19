@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "kyma-cli",
   version: "1.23.0",
+  description: "Kyma command-line interface",
+  url: "https://kyma-project.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

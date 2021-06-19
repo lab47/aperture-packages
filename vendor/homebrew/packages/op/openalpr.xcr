@@ -47,6 +47,12 @@ import "cmake" as i0, "leptonica" as i1, "libtiff" as i2, "log4cplus" as i3, "op
 pkg(
   name: "openalpr",
   version: "2.3.0",
+  description: "Automatic License Plate Recognition library",
+  url: "https://www.openalpr.com",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

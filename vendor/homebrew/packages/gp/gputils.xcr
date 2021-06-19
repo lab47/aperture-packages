@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gputils",
   version: "1.5.0-1",
+  description: "GNU PIC Utilities",
+  url: "https://gputils.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

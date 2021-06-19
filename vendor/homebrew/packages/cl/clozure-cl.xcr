@@ -94,6 +94,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clozure-cl",
   version: "1.12.1",
+  description: "Common Lisp implementation with a long history",
+  url: "https://ccl.clozure.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

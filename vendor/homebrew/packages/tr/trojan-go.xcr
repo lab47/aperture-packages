@@ -153,6 +153,12 @@ import "go" as i0
 pkg(
   name: "trojan-go",
   version: "0.10.4",
+  description: "Trojan proxy in Go",
+  url: "https://p4gefau1t.github.io/trojan-go/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

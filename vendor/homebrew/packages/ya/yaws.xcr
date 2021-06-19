@@ -114,6 +114,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "erlang" as i3
 pkg(
   name: "yaws",
   version: "2.0.9",
+  description: "Webserver for dynamic content (written in Erlang)",
+  url: "http://yaws.hyber.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -148,6 +148,12 @@ import "cabal-install" as i0, "ghc" as i1, "sphinx-doc" as i2
 pkg(
   name: "bnfc",
   version: "2.9.1",
+  description: "BNF Converter",
+  url: "https://bnfc.digitalgrammars.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

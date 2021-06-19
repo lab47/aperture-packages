@@ -84,6 +84,12 @@ import "cmake" as i0, "boost" as i1, "gflags" as i2, "glog" as i3, "hdf5" as i4,
 pkg(
   name: "caffe",
   version: "1.0",
+  description: "Fast open framework for deep learning",
+  url: "https://caffe.berkeleyvision.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

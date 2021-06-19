@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "aws-console",
   version: "1.2.0",
+  description: "Command-line to use AWS CLI credentials to launch the AWS console in a browser",
+  url: "https://github.com/aws-cloudformation/rain",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

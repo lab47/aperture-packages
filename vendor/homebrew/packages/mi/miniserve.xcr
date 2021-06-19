@@ -54,6 +54,12 @@ import "rust" as i0
 pkg(
   name: "miniserve",
   version: "0.14.0",
+  description: "High performance static file server",
+  url: "https://github.com/svenstaro/miniserve",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "jasper" as i0, "libpng" as i1
 pkg(
   name: "libicns",
   version: "0.8.1",
+  description: "Library for manipulation of the macOS .icns resource format",
+  url: "https://icns.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

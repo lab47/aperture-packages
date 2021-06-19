@@ -60,6 +60,12 @@ import "sdl2" as i0
 pkg(
   name: "sdl2_gfx",
   version: "1.0.4",
+  description: "SDL2 graphics drawing primitives and other support functions",
+  url: "https://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

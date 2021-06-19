@@ -44,6 +44,12 @@ import "xz" as i0, "zlib" as i1
 pkg(
   name: "libunwind",
   version: "1.5.0",
+  description: "C API for determining the call-chain of a program",
+  url: "https://www.nongnu.org/libunwind/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

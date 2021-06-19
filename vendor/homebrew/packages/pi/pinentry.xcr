@@ -61,6 +61,12 @@ import "pkg-config" as i0, "libassuan" as i1, "libgpg-error" as i2
 pkg(
   name: "pinentry",
   version: "1.1.1",
+  description: "Passphrase entry dialog utilizing the Assuan protocol",
+  url: "https://www.gnupg.org/related_software/pinentry/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "cmake" as i0, "bison" as i1, "flex" as i2
 pkg(
   name: "libcue",
   version: "2.2.1",
+  description: "Cue sheet parser library for C",
+  url: "https://github.com/lipnitsk/libcue",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

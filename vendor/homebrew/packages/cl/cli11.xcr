@@ -54,6 +54,12 @@ import "cmake" as i0
 pkg(
   name: "cli11",
   version: "1.9.1",
+  description: "Simple and intuitive command-line parser for C++11",
+  url: "https://cliutils.github.io/CLI11/book/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

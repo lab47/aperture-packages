@@ -39,6 +39,12 @@ import "sdl" as i0
 pkg(
   name: "xrick",
   version: "021212",
+  description: "Clone of Rick Dangerous",
+  url: "https://www.bigorno.net/xrick/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

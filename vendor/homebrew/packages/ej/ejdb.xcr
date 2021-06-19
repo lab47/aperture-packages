@@ -112,6 +112,12 @@ import "cmake" as i0
 pkg(
   name: "ejdb",
   version: "2.0.60",
+  description: "Embeddable JSON Database engine C11 library",
+  url: "https://ejdb.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

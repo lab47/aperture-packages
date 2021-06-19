@@ -68,6 +68,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnu-time",
   version: "1.9",
+  description: "GNU implementation of time utility",
+  url: "https://www.gnu.org/software/time/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

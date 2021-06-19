@@ -39,6 +39,12 @@ import "pkg-config" as i0
 pkg(
   name: "libidn",
   version: "1.37",
+  description: "International domain name library",
+  url: "https://www.gnu.org/software/libidn/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

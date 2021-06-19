@@ -46,6 +46,12 @@ import "go" as i0, "terraform" as i1
 pkg(
   name: "atlantis",
   version: "0.17.0",
+  description: "Terraform Pull Request Automation tool",
+  url: "https://www.runatlantis.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "qdbm" as i0
 pkg(
   name: "hyperestraier",
   version: "1.4.13",
+  description: "Full-text search system for communities",
+  url: "https://fallabs.com/hyperestraier/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

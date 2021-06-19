@@ -49,6 +49,12 @@ import "camlp5" as i0, "ocaml" as i1
 pkg(
   name: "ledit",
   version: "2.05",
+  description: "Line editor for interactive commands",
+  url: "http://pauillac.inria.fr/~ddr/ledit/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

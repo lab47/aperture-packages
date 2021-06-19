@@ -67,6 +67,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "tarsnap",
   version: "1.0.39",
+  description: "Online backups for the truly paranoid",
+  url: "https://www.tarsnap.com/",
+  metadata: %{
+    "license": "0BSD",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

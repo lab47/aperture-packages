@@ -65,6 +65,12 @@ import "cmake" as i0, "dumb" as i1, "flac" as i2, "freetype" as i3, "libogg" as 
 pkg(
   name: "allegro",
   version: "5.2.7.0",
+  description: "C/C++ multimedia library for cross-platform game development",
+  url: "https://liballeg.org/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

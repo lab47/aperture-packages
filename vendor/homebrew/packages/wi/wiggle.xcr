@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wiggle",
   version: "1.2",
+  description: "Program for applying patches with conflicting changes",
+  url: "https://neil.brown.name/blog/20100324064620",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

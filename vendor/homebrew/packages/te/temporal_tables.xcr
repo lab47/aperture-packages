@@ -59,6 +59,12 @@ import "postgresql" as i0
 pkg(
   name: "temporal_tables",
   version: "1.2.0",
+  description: "Temporal Tables PostgreSQL Extension",
+  url: "https://pgxn.org/dist/temporal_tables/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

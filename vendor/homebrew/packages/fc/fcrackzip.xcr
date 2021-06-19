@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fcrackzip",
   version: "1.0",
+  description: "Zip password cracker",
+  url: "http://oldhome.schmorp.de/marc/fcrackzip.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

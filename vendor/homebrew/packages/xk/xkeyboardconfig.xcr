@@ -44,12 +44,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "gettext" as i6, "intltool" as i7, "libffi" as i8, "libgcrypt" as i9, "libgpg-error" as i10, "libtool" as i11, "libxml2" as i12, "libxslt" as i13, "m4" as i14, "mpdecimal" as i15, "ncurses" as i16, "openssl@1.1" as i17, "perl" as i18, "pkg-config" as i19, "python@3.9" as i20, "readline" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
+import "gettext" as i0, "intltool" as i1, "pkg-config" as i2, "python@3.9" as i3, "libxslt" as i4
 
 pkg(
   name: "xkeyboardconfig",
   version: "2.33",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  description: "Keyboard configuration database for the X Window System",
+  url: "https://www.freedesktop.org/wiki/Software/XKeyboardConfig/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xkeyboardconfig.rb"), formula)

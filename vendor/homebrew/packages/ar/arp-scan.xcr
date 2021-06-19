@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "libpcap" as i2
 pkg(
   name: "arp-scan",
   version: "1.9.7",
+  description: "ARP scanning and fingerprinting tool",
+  url: "https://github.com/royhills/arp-scan",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

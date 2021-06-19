@@ -117,6 +117,12 @@ import "pkg-config" as i0, "qt@5" as i1, "zeromq" as i2, "curl" as i3
 pkg(
   name: "zurl",
   version: "1.11.0",
+  description: "HTTP and WebSocket client worker with ZeroMQ interface",
+  url: "https://github.com/fanout/zurl",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

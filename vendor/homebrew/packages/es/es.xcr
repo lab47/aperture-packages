@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "es",
   version: "0.9.1",
+  description: "Extensible shell with first class functions, lexical scoping, and more",
+  url: "https://wryun.github.io/es-shell/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

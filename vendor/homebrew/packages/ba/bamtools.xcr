@@ -52,6 +52,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "bamtools",
   version: "2.5.1",
+  description: "C++ API and command-line toolkit for BAM data",
+  url: "https://github.com/pezmaster31/bamtools",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

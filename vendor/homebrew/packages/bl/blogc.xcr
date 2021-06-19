@@ -75,6 +75,12 @@ import "homebrew-install" as hi
 pkg(
   name: "blogc",
   version: "0.20.1",
+  description: "Blog compiler with template engine and markup language",
+  url: "https://blogc.rgm.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

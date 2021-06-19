@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "jvgrep",
   version: "5.8.9",
+  description: "Grep for Japanese users of Vim",
+  url: "https://github.com/mattn/jvgrep",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

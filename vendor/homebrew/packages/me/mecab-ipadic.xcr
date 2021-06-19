@@ -69,6 +69,12 @@ import "mecab" as i0
 pkg(
   name: "mecab-ipadic",
   version: "2.7.0-20070801",
+  description: "IPA dictionary compiled for MeCab",
+  url: "https://taku910.github.io/mecab/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

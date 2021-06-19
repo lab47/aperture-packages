@@ -59,6 +59,12 @@ import "ant" as i0, "afflib" as i1, "libewf" as i2, "libpq" as i3, "openjdk" as 
 pkg(
   name: "sleuthkit",
   version: "4.10.2",
+  description: "Forensic toolkit",
+  url: "https://www.sleuthkit.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

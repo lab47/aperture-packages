@@ -61,6 +61,12 @@ import "pkg-config" as i0
 pkg(
   name: "pixman",
   version: "0.40.0",
+  description: "Low-level library for pixel manipulation",
+  url: "https://cairographics.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

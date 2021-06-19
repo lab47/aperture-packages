@@ -43,6 +43,12 @@ import "ruby@2.7" as i0
 pkg(
   name: "dory",
   version: "1.1.1",
+  description: "Development proxy for docker",
+  url: "https://github.com/freedomben/dory",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

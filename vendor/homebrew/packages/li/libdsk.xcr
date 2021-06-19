@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libdsk",
   version: "1.4.2",
+  description: "Library for accessing discs and disc image files",
+  url: "https://www.seasip.info/Unix/LibDsk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

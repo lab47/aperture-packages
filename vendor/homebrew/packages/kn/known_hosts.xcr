@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "known_hosts",
   version: "1.0.0",
+  description: "Command-line manager for known hosts",
+  url: "https://github.com/markmcconachie/known_hosts",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

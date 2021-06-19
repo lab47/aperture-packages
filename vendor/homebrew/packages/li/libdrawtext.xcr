@@ -49,6 +49,12 @@ import "pkg-config" as i0, "freetype" as i1
 pkg(
   name: "libdrawtext",
   version: "0.5",
+  description: "Library for anti-aliased text rendering in OpenGL",
+  url: "http://nuclear.mutantstargoat.com/sw/libdrawtext/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

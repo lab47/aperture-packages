@@ -46,6 +46,12 @@ import "lua" as i0, "ninja" as i1, "pkg-config" as i2, "ncurses" as i3, "zlib" a
 pkg(
   name: "wordgrinder",
   version: "0.8",
+  description: "Unicode-aware word processor that runs in a terminal",
+  url: "https://cowlark.com/wordgrinder",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

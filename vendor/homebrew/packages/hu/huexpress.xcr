@@ -44,6 +44,12 @@ import "pkg-config" as i0, "scons" as i1, "libvorbis" as i2, "libzip" as i3, "sd
 pkg(
   name: "huexpress",
   version: "3.0.4",
+  description: "PC Engine emulator",
+  url: "https://github.com/kallisti5/huexpress",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

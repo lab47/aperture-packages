@@ -59,6 +59,12 @@ import "cmake" as i0, "mariadb-connector-c" as i1, "openssl@1.1" as i2, "unixodb
 pkg(
   name: "mariadb-connector-odbc",
   version: "3.1.13",
+  description: "Database driver using the industry standard ODBC API",
+  url: "https://downloads.mariadb.org/connector-odbc/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

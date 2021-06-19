@@ -101,6 +101,12 @@ import "go" as i0
 pkg(
   name: "tm",
   version: "1.6.0",
+  description: "TriggerMesh CLI to work with knative objects",
+  url: "https://triggermesh.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnuski",
   version: "0.3",
+  description: "Open source clone of Skifree",
+  url: "https://gnuski.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

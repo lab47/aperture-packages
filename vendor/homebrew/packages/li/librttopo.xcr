@@ -57,6 +57,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "geos" as i3
 pkg(
   name: "librttopo",
   version: "1.1.0",
+  description: "RT Topology Library",
+  url: "https://git.osgeo.org/gitea/rttopo/librttopo",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

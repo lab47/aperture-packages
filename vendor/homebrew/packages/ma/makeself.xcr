@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "makeself",
   version: "2.4.4",
+  description: "Generates a self-extracting compressed tar archive",
+  url: "https://makeself.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "cuetools",
   version: "1.4.1",
+  description: "Utilities for .cue and .toc files",
+  url: "https://github.com/svend/cuetools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

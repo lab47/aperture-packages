@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tth",
   version: "4.15",
+  description: "TeX/LaTeX to HTML converter",
+  url: "http://hutchinson.belmont.ma.us/tth/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

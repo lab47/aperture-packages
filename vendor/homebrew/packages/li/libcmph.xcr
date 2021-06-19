@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libcmph",
   version: "2.0.2",
+  description: "C minimal perfect hashing library",
+  url: "https://cmph.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

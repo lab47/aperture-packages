@@ -47,6 +47,12 @@ import "openjdk@8" as i0
 pkg(
   name: "drip",
   version: "0.2.4",
+  description: "JVM launching without the hassle of persistent JVMs",
+  url: "https://github.com/flatland/drip",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "rust" as i0
 pkg(
   name: "oakc",
   version: "0.6.1",
+  description: "Portable programming language with a compact intermediate representation",
+  url: "https://github.com/adam-mcdaniel/oakc",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

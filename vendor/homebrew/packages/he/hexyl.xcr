@@ -37,6 +37,12 @@ import "rust" as i0
 pkg(
   name: "hexyl",
   version: "0.8.0",
+  description: "Command-line hex viewer",
+  url: "https://github.com/sharkdp/hexyl",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

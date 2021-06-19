@@ -72,6 +72,12 @@ import "readline" as i0, "zlib" as i1
 pkg(
   name: "sqlite",
   version: "3.35.5",
+  description: "Command-line interface for SQLite",
+  url: "https://sqlite.org/",
+  metadata: %{
+    "license": "blessing",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

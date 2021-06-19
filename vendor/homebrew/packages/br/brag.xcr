@@ -28,6 +28,12 @@ import "uudeview" as i0
 pkg(
   name: "brag",
   version: "1.4.3",
+  description: "Download and assemble multipart binaries from newsgroups",
+  url: "https://brag.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -75,12 +75,18 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "aspell" as i3, "atk" as i4, "autoconf" as i5, "automake" as i6, "berkeley-db" as i7, "bison" as i8, "brotli" as i9, "bzip2" as i10, "c-ares" as i11, "cairo" as i12, "cmake" as i13, "curl" as i14, "djvulibre" as i15, "docbook" as i16, "docbook-xsl" as i17, "doxygen" as i18, "enchant" as i19, "expat" as i20, "flex" as i21, "fontconfig" as i22, "freetype" as i23, "fribidi" as i24, "gd" as i25, "gdbm" as i26, "gdk-pixbuf" as i27, "gettext" as i28, "ghostscript" as i29, "glib" as i30, "gobject-introspection" as i31, "gperf" as i32, "graphite2" as i33, "graphviz" as i34, "groff" as i35, "gsettings-desktop-schemas" as i36, "gspell" as i37, "gtk+" as i38, "gtk+3" as i39, "gtk-doc" as i40, "gtk-mac-integration" as i41, "gts" as i42, "harfbuzz" as i43, "help2man" as i44, "hicolor-icon-theme" as i45, "icu4c" as i46, "intltool" as i47, "iso-codes" as i48, "itstool" as i49, "jasper" as i50, "jbig2dec" as i51, "jemalloc" as i52, "jpeg" as i53, "krb5" as i54, "libarchive" as i55, "libb2" as i56, "libepoxy" as i57, "libev" as i58, "libffi" as i59, "libgcrypt" as i60, "libgpg-error" as i61, "libgxps" as i62, "libhandy" as i63, "libidn" as i64, "libidn2" as i65, "libpng" as i66, "libpthread-stubs" as i67, "librsvg" as i68, "libsecret" as i69, "libspectre" as i70, "libssh2" as i71, "libtiff" as i72, "libtool" as i73, "libunistring" as i74, "libx11" as i75, "libxau" as i76, "libxcb" as i77, "libxdmcp" as i78, "libxext" as i79, "libxml2" as i80, "libxrender" as i81, "libxslt" as i82, "libyaml" as i83, "little-cms2" as i84, "lz4" as i85, "lzo" as i86, "m4" as i87, "meson" as i88, "mpdecimal" as i89, "ncurses" as i90, "netpbm" as i91, "nghttp2" as i92, "ninja" as i93, "nspr" as i94, "nss" as i95, "openjdk" as i96, "openjpeg" as i97, "openldap" as i98, "openssl@1.1" as i99, "pango" as i100, "pcre" as i101, "perl" as i102, "pixman" as i103, "pkg-config" as i104, "poppler" as i105, "psutils" as i106, "python@3.9" as i107, "qt@5" as i108, "readline" as i109, "rtmpdump" as i110, "ruby" as i111, "rust" as i112, "scons" as i113, "sphinx-doc" as i114, "sqlite" as i115, "subversion" as i116, "swig" as i117, "texinfo" as i118, "uchardet" as i119, "unzip" as i120, "utf8proc" as i121, "util-macros" as i122, "vala" as i123, "webp" as i124, "xcb-proto" as i125, "xorgproto" as i126, "xtrans" as i127, "xz" as i128, "zip" as i129, "zlib" as i130, "zstd" as i131
+import "gobject-introspection" as i0, "itstool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "djvulibre" as i6, "gspell" as i7, "gtk+3" as i8, "hicolor-icon-theme" as i9, "libarchive" as i10, "libgxps" as i11, "libhandy" as i12, "libsecret" as i13, "libspectre" as i14, "poppler" as i15, "python@3.9" as i16
 
 pkg(
   name: "evince",
   version: "40.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130, i131],
+  description: "GNOME document viewer",
+  url: "https://wiki.gnome.org/Apps/Evince",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "evince.rb"), formula)

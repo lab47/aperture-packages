@@ -32,6 +32,12 @@ import "openjdk@11" as i0
 pkg(
   name: "nifi",
   version: "1.13.2",
+  description: "Easy to use, powerful, and reliable system to process and distribute data",
+  url: "https://nifi.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

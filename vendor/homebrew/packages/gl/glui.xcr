@@ -81,6 +81,12 @@ import "homebrew-install" as hi
 pkg(
   name: "glui",
   version: "2.37",
+  description: "C++ user interface library",
+  url: "https://glui.sourceforge.io/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -42,6 +42,12 @@ import "openjdk@8" as i0
 pkg(
   name: "embulk",
   version: "0.9.23",
+  description: "Data transfer between various databases, file formats and services",
+  url: "https://www.embulk.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

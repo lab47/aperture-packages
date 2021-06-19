@@ -104,6 +104,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libao" as i3, "l
 pkg(
   name: "shairport-sync",
   version: "3.3.8",
+  description: "AirTunes emulator that adds multi-room capability",
+  url: "https://github.com/mikebrady/shairport-sync",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "markdown",
   version: "1.0.1",
+  description: "Text-to-HTML conversion tool",
+  url: "https://daringfireball.net/projects/markdown/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fondu",
   version: "060102",
+  description: "Tools to convert between different font formats",
+  url: "https://fondu.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

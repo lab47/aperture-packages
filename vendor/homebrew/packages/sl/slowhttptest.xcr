@@ -47,6 +47,12 @@ import "autoconf" as i0, "automake" as i1, "openssl@1.1" as i2
 pkg(
   name: "slowhttptest",
   version: "1.8.2",
+  description: "Simulates application layer denial of service attacks",
+  url: "https://github.com/shekyan/slowhttptest",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -66,6 +66,12 @@ import "ncurses" as i0
 pkg(
   name: "brogue",
   version: "1.7.5",
+  description: "Roguelike game",
+  url: "https://sites.google.com/site/broguegame/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

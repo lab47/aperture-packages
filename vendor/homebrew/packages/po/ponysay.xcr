@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bzip2" as i1, "coreutils" as i2, "expat" as i3, "gdbm" as i4, "gperf" as i5, "gzip" as i6, "libffi" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "perl" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "texinfo" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "gzip" as i0, "coreutils" as i1, "python@3.9" as i2, "texinfo" as i3
 
 pkg(
   name: "ponysay",
   version: "3.0.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "Cowsay but with ponies",
+  url: "https://github.com/erkin/ponysay/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ponysay.rb"), formula)

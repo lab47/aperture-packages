@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bib-tool",
   version: "2.68",
+  description: "Manipulates BibTeX databases",
+  url: "http://www.gerd-neugebauer.de/software/TeX/BibTool/en/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

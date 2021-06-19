@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sfk",
   version: "1.9.8.0",
+  description: "Command-line tools collection",
+  url: "http://stahlworks.com/dev/swiss-file-knife.html",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

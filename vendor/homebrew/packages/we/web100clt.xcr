@@ -54,6 +54,12 @@ import "i2util" as i0, "jansson" as i1, "openssl@1.1" as i2
 pkg(
   name: "web100clt",
   version: "3.7.0.2",
+  description: "Command-line version of NDT diagnostic client",
+  url: "https://software.internet2.edu/ndt/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

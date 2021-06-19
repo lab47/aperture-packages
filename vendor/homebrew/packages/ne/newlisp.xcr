@@ -53,6 +53,12 @@ import "readline" as i0
 pkg(
   name: "newlisp",
   version: "10.7.5",
+  description: "Lisp-like, general-purpose scripting language",
+  url: "http://www.newlisp.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

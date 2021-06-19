@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libvncserver" as
 pkg(
   name: "x11vnc",
   version: "0.9.16",
+  description: "VNC server for real X displays",
+  url: "https://github.com/LibVNC/x11vnc",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

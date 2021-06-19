@@ -78,6 +78,12 @@ import "openssl@1.1" as i0, "readline" as i1, "zlib" as i2
 pkg(
   name: "bacula-fd",
   version: "11.0.5",
+  description: "Network backup solution",
+  url: "https://www.bacula.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

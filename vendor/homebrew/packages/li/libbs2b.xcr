@@ -57,6 +57,12 @@ import "pkg-config" as i0, "libsndfile" as i1
 pkg(
   name: "libbs2b",
   version: "3.1.0",
+  description: "Bauer stereophonic-to-binaural DSP",
+  url: "https://bs2b.sourceforge.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

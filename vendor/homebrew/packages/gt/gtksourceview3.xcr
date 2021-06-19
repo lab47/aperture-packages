@@ -119,6 +119,12 @@ import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "intlt
 pkg(
   name: "gtksourceview3",
   version: "3.24.11",
+  description: "Text view with syntax, undo/redo, and text marks",
+  url: "https://projects.gnome.org/gtksourceview/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

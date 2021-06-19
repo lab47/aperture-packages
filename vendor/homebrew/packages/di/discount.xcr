@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "discount",
   version: "2.2.7",
+  description: "C implementation of Markdown",
+  url: "https://www.pell.portland.or.us/~orc/Code/discount/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

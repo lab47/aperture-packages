@@ -81,6 +81,12 @@ import "ghc" as i0, "haskell-stack" as i1, "ncurses" as i2, "zlib" as i3
 pkg(
   name: "hledger",
   version: "1.21",
+  description: "Easy plain text accounting with command-line, terminal and web UIs",
+  url: "https://hledger.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "node" as i0
 pkg(
   name: "babel",
   version: "7.14.5",
+  description: "Compiler for writing next generation JavaScript",
+  url: "https://babeljs.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

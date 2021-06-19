@@ -54,6 +54,12 @@ import "cmake" as i0
 pkg(
   name: "json11",
   version: "1.0.0",
+  description: "Tiny JSON library for C++11",
+  url: "https://github.com/dropbox/json11",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

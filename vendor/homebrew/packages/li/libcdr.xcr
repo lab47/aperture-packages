@@ -61,6 +61,12 @@ import "cppunit" as i0, "pkg-config" as i1, "boost" as i2, "icu4c" as i3, "libre
 pkg(
   name: "libcdr",
   version: "0.1.7",
+  description: "C++ library to parse the file format of CorelDRAW documents",
+  url: "https://wiki.documentfoundation.org/DLP/Libraries/libcdr",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

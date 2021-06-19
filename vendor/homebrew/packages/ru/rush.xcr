@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rush",
   version: "2.1",
+  description: "GNU's Restricted User SHell",
+  url: "https://www.gnu.org/software/rush/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -62,6 +62,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "atkmm@2.28" as i3, "ca
 pkg(
   name: "gtkmm3",
   version: "3.24.5",
+  description: "C++ interfaces for GTK+ and GNOME",
+  url: "https://www.gtkmm.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

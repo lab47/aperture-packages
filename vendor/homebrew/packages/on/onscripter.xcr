@@ -75,6 +75,12 @@ import "pkg-config" as i0, "jpeg" as i1, "lua" as i2, "sdl" as i3, "sdl_image" a
 pkg(
   name: "onscripter",
   version: "20200722",
+  description: "NScripter-compatible visual novel engine",
+  url: "https://onscripter.osdn.jp/onscripter.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

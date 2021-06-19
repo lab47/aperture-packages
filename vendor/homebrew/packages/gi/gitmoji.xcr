@@ -37,6 +37,12 @@ import "node" as i0
 pkg(
   name: "gitmoji",
   version: "4.1.0",
+  description: "Emoji guide for your commit messages",
+  url: "https://gitmoji.carloscuesta.me",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

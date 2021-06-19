@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "hey",
   version: "0.1.4",
+  description: "HTTP load generator, ApacheBench (ab) replacement",
+  url: "https://github.com/rakyll/hey",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "rust" as i0
 pkg(
   name: "bandwhich",
   version: "0.20.0",
+  description: "Terminal bandwidth utilization tool",
+  url: "https://github.com/imsnif/bandwhich",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

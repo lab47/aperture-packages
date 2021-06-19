@@ -44,6 +44,12 @@ import "httperf" as i0
 pkg(
   name: "autobench",
   version: "2.1.2",
+  description: "Automatic webserver benchmark tool",
+  url: "http://www.xenoclast.org/autobench/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

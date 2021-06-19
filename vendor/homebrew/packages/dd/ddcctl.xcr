@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ddcctl",
   version: "0",
+  description: "DDC monitor controls (brightness) for Mac OSX command-line",
+  url: "https://github.com/kfix/ddcctl",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

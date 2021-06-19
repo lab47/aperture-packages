@@ -165,6 +165,12 @@ import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "faac" as i3, "fdk-a
 pkg(
   name: "libav",
   version: "12.3",
+  description: "Audio and video processing tools",
+  url: "https://libav.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {

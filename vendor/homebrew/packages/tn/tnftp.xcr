@@ -54,6 +54,12 @@ import "bison" as i0, "ncurses" as i1
 pkg(
   name: "tnftp",
   version: "20200705",
+  description: "NetBSD's FTP client",
+  url: "https://ftp.netbsd.org/pub/NetBSD/misc/tnftp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

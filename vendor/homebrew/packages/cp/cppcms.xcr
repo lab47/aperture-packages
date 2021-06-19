@@ -111,6 +111,12 @@ import "cmake" as i0, "openssl@1.1" as i1, "pcre" as i2
 pkg(
   name: "cppcms",
   version: "1.2.1",
+  description: "Free High Performance Web Development Framework",
+  url: "http://cppcms.com/wikipp/en/page/main",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -71,6 +71,12 @@ import "cmake" as i0, "lzo" as i1, "openssl@1.1" as i2, "protobuf" as i3, "xz" a
 pkg(
   name: "zbackup",
   version: "1.4.4",
+  description: "Globally-deduplicating backup tool (based on ideas in rsync)",
+  url: "http://zbackup.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

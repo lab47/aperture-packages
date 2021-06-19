@@ -68,6 +68,12 @@ import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
 pkg(
   name: "pandoc-plot",
   version: "1.2.3",
+  description: "Render and include figures in Pandoc documents using many plotting toolkits",
+  url: "https://github.com/LaurentRDC/pandoc-plot",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

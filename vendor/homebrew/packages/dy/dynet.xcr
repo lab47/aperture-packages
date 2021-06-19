@@ -47,6 +47,12 @@ import "cmake" as i0, "eigen" as i1
 pkg(
   name: "dynet",
   version: "2.1.2",
+  description: "Dynamic Neural Network Toolkit",
+  url: "https://github.com/clab/dynet",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

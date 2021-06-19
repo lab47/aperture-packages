@@ -53,6 +53,12 @@ import "meson" as i0, "nasm" as i1, "ninja" as i2
 pkg(
   name: "libvmaf",
   version: "2.1.1",
+  description: "Perceptual video quality assessment based on multi-method fusion",
+  url: "https://github.com/Netflix/vmaf",
+  metadata: %{
+    "license": "BSD-2-Clause-Patent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

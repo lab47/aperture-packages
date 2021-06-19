@@ -53,6 +53,12 @@ import "cargo-c" as i0, "nasm" as i1, "rust" as i2
 pkg(
   name: "rav1e",
   version: "0.4.1",
+  description: "Fastest and safest AV1 video encoder",
+  url: "https://github.com/xiph/rav1e",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

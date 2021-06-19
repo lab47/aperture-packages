@@ -46,6 +46,12 @@ import "pkg-config" as i0, "gtk+" as i1
 pkg(
   name: "gtk-gnutella",
   version: "1.2.0",
+  description: "Share files in a peer-to-peer (P2P) network",
+  url: "https://gtk-gnutella.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

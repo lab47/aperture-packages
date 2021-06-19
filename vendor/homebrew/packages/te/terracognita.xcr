@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "terracognita",
   version: "0.6.4",
+  description: "Reads from existing Cloud Providers and generates Terraform code",
+  url: "https://github.com/cycloidio/terracognita",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

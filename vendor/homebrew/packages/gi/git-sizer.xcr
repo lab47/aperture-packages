@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "git-sizer",
   version: "1.4.0",
+  description: "Compute various size metrics for a Git repository",
+  url: "https://github.com/github/git-sizer",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

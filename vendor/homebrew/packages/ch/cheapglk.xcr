@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cheapglk",
   version: "1.0.6",
+  description: "Extremely minimal Glk library",
+  url: "https://www.eblong.com/zarf/glk/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

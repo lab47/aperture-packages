@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ipinfo",
   version: "1.2",
+  description: "Tool for calculation of IP networks",
+  url: "https://kyberdigi.cz/projects/ipinfo/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

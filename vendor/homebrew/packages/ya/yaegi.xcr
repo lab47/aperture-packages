@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "yaegi",
   version: "0.9.18",
+  description: "Yet another elegant Go interpreter",
+  url: "https://github.com/containous/yaegi",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

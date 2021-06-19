@@ -40,6 +40,12 @@ import "dialog" as i0
 pkg(
   name: "bashish",
   version: "2.2.4",
+  description: "Theme environment for text terminals",
+  url: "https://bashish.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

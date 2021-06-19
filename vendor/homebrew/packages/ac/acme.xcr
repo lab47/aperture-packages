@@ -49,6 +49,12 @@ import "subversion" as i0
 pkg(
   name: "acme",
   version: "0.97",
+  description: "Crossassembler for multiple environments",
+  url: "https://sourceforge.net/projects/acme-crossass/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

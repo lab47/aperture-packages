@@ -43,6 +43,12 @@ import "taktuk" as i0
 pkg(
   name: "kanif",
   version: "1.2.2",
+  description: "Cluster management and administration tool",
+  url: "http://taktuk.gforge.inria.fr/kanif/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

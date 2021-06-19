@@ -56,6 +56,12 @@ import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3, "lib
 pkg(
   name: "ezstream",
   version: "1.0.2",
+  description: "Client for Icecast streaming servers",
+  url: "https://icecast.org/ezstream/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

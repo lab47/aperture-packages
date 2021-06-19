@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vip",
   version: "19971113",
+  description: "Program that provides for interactive editing in a pipeline",
+  url: "https://www.cs.duke.edu/~des/vip.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

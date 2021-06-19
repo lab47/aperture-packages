@@ -95,6 +95,12 @@ import "libyaml" as i0
 pkg(
   name: "ser2net",
   version: "4.2.3",
+  description: "Allow network connections to serial ports",
+  url: "https://ser2net.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

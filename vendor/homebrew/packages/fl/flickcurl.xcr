@@ -44,6 +44,12 @@ import "pkg-config" as i0, "curl" as i1, "libxml2" as i2
 pkg(
   name: "flickcurl",
   version: "1.26",
+  description: "Library for the Flickr API",
+  url: "http://librdf.org/flickcurl/",
+  metadata: %{
+    "license": "GPL-2.0-or-later or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

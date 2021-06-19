@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "makepp",
   version: "2.0",
+  description: "Drop-in replacement for GNU make",
+  url: "https://makepp.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

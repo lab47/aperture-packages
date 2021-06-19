@@ -46,6 +46,12 @@ import "gmp" as i0, "xmltoman" as i1
 pkg(
   name: "ssss",
   version: "0.5",
+  description: "Shamir's secret sharing scheme implementation",
+  url: "http://point-at-infinity.org/ssss/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

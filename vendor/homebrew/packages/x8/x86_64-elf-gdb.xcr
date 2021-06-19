@@ -64,12 +64,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gmp" as i4, "libffi" as i5, "libmpc" as i6, "m4" as i7, "mpdecimal" as i8, "mpfr" as i9, "ncurses" as i10, "openssl@1.1" as i11, "perl" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "texinfo" as i17, "unzip" as i18, "x86_64-elf-binutils" as i19, "x86_64-elf-gcc" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
+import "python@3.9" as i0, "xz" as i1, "zlib" as i2
 
 pkg(
   name: "x86_64-elf-gdb",
   version: "10.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  description: "GNU debugger for x86_64-elf cross development",
+  url: "https://www.gnu.org/software/gdb/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "x86_64-elf-gdb.rb"), formula)

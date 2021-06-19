@@ -67,12 +67,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "bzip2" as i6, "cmake" as i7, "doxygen" as i8, "expat" as i9, "flex" as i10, "fontconfig" as i11, "freetype" as i12, "gdbm" as i13, "gettext" as i14, "ghostscript" as i15, "gperf" as i16, "groff" as i17, "help2man" as i18, "jasper" as i19, "jbig2dec" as i20, "jpeg" as i21, "krb5" as i22, "libffi" as i23, "libidn" as i24, "libpng" as i25, "libtiff" as i26, "libtool" as i27, "libxml2" as i28, "libyaml" as i29, "little-cms2" as i30, "lz4" as i31, "m4" as i32, "mpdecimal" as i33, "ncurses" as i34, "netpbm" as i35, "openjdk" as i36, "openjpeg" as i37, "openssl@1.1" as i38, "pcre" as i39, "perl" as i40, "pkg-config" as i41, "psutils" as i42, "python@3.9" as i43, "readline" as i44, "ruby" as i45, "scons" as i46, "sphinx-doc" as i47, "sqlite" as i48, "subversion" as i49, "swig" as i50, "texinfo" as i51, "uchardet" as i52, "unzip" as i53, "utf8proc" as i54, "xz" as i55, "zip" as i56, "zlib" as i57
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "groff" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "awscli@1",
   version: "1.19.90",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57],
+  description: "Official Amazon AWS command-line interface",
+  url: "https://aws.amazon.com/cli/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "awscli@1.rb"), formula)

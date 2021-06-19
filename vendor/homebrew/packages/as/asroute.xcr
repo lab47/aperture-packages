@@ -37,6 +37,12 @@ import "rust" as i0
 pkg(
   name: "asroute",
   version: "0.1.0",
+  description: "CLI to interpret traceroute -a output to show AS names traversed",
+  url: "https://github.com/stevenpack/asroute",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

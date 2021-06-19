@@ -34,6 +34,12 @@ import "gettext" as i0
 pkg(
   name: "libiptcdata",
   version: "1.0.4",
+  description: "Virtual package provided by libiptcdata0",
+  url: "https://libiptcdata.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

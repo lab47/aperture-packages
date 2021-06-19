@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "concurrencykit",
   version: "0.7.0",
+  description: "Aid design and implementation of concurrent systems",
+  url: "http://concurrencykit.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -68,6 +68,12 @@ import "cmake" as i0, "brotli" as i1
 pkg(
   name: "woff2",
   version: "1.0.2",
+  description: "Utilities to create and convert Web Open Font File (WOFF) files",
+  url: "https://github.com/google/woff2",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sha2",
   version: "1.0.1",
+  description: "Implementation of SHA-256, SHA-384, and SHA-512 hash algorithms",
+  url: "https://aarongifford.com/computers/sha.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

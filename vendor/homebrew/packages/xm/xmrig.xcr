@@ -64,6 +64,12 @@ import "cmake" as i0, "hwloc" as i1, "libmicrohttpd" as i2, "libuv" as i3, "open
 pkg(
   name: "xmrig",
   version: "6.12.2",
+  description: "Monero (XMR) CPU miner",
+  url: "https://github.com/xmrig/xmrig",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "go" as i0
 pkg(
   name: "minio-mc",
   version: "20210608012937",
+  description: "Replacement for ls, cp and other commands for object storage",
+  url: "https://github.com/minio/mc",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

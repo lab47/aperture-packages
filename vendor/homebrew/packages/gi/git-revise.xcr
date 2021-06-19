@@ -50,6 +50,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "git-revise",
   version: "0.6.0",
+  description: "Rebase alternative for easy & efficient in-memory rebases and fixups",
+  url: "https://github.com/mystor/git-revise",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

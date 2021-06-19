@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pgdbf",
   version: "0.6.2",
+  description: "Converter of XBase/FoxPro tables to PostgreSQL",
+  url: "https://github.com/kstrauser/pgdbf",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

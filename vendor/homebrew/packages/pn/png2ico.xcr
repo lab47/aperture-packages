@@ -64,6 +64,12 @@ import "libpng" as i0
 pkg(
   name: "png2ico",
   version: "2002-12-08",
+  description: "PNG to icon converter",
+  url: "https://www.winterdrache.de/freeware/png2ico/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zsh-lovers",
   version: "0.9.1",
+  description: "Tips, tricks, and examples for zsh",
+  url: "https://grml.org/zsh/#zshlovers",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

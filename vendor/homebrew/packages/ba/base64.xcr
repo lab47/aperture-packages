@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "base64",
   version: "1.5",
+  description: "Encode and decode base64 files",
+  url: "https://www.fourmilab.ch/webtools/base64/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

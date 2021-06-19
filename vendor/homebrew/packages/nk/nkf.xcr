@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nkf",
   version: "2.1.5",
+  description: "Network Kanji code conversion Filter (NKF)",
+  url: "https://osdn.net/projects/nkf/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

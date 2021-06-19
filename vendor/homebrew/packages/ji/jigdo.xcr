@@ -52,6 +52,12 @@ import "pkg-config" as i0, "berkeley-db" as i1, "wget" as i2
 pkg(
   name: "jigdo",
   version: "0.7.3",
+  description: "Tool to distribute very large files over the internet",
+  url: "http://atterer.org/jigdo/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

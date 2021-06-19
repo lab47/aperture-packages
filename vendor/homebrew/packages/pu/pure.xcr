@@ -30,6 +30,12 @@ import "zsh-async" as i0
 pkg(
   name: "pure",
   version: "1.16.0",
+  description: "Pretty, minimal and fast ZSH prompt",
+  url: "https://github.com/sindresorhus/pure",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

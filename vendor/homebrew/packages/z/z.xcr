@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "z",
   version: "1.9",
+  description: "Tracks most-used directories to make cd smarter",
+  url: "https://github.com/rupa/z",
+  metadata: %{
+    "license": "WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "valgrind",
   version: "3.17.0",
+  description: "Dynamic analysis tools (memory, debug, profiling)",
+  url: "https://www.valgrind.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

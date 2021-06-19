@@ -49,6 +49,12 @@ import "gawk" as i0, "ocaml" as i1, "exact-image" as i2, "ghostscript" as i3, "i
 pkg(
   name: "pdfsandwich",
   version: "0.1.7",
+  description: "Generate sandwich OCR PDFs from scanned file",
+  url: "http://www.tobias-elze.de/pdfsandwich/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

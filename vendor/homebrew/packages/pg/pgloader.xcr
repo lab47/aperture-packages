@@ -58,6 +58,12 @@ import "buildapp" as i0, "freetds" as i1, "openssl@1.1" as i2, "postgresql" as i
 pkg(
   name: "pgloader",
   version: "3.6.2",
+  description: "Data loading tool for PostgreSQL",
+  url: "https://github.com/dimitri/pgloader",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

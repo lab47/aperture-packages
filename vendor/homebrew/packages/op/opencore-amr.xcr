@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "opencore-amr",
   version: "0.1.5",
+  description: "Audio codecs extracted from Android open source project",
+  url: "https://opencore-amr.sourceforge.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

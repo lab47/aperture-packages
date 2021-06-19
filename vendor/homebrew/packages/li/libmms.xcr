@@ -37,6 +37,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "libmms",
   version: "0.6.4",
+  description: "Library for parsing mms:// and mmsh:// network streams",
+  url: "https://sourceforge.net/projects/libmms/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

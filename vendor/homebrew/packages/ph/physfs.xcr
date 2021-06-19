@@ -64,6 +64,12 @@ import "cmake" as i0
 pkg(
   name: "physfs",
   version: "3.0.2",
+  description: "Library to provide abstract access to various archives",
+  url: "https://icculus.org/physfs/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

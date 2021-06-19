@@ -57,6 +57,12 @@ import "openjdk@11" as i0
 pkg(
   name: "golo",
   version: "3.3.0",
+  description: "Lightweight dynamic language for the JVM",
+  url: "https://golo-lang.org/",
+  metadata: %{
+    "license": "EPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

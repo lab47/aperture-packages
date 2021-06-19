@@ -50,6 +50,12 @@ import "cmake" as i0, "open-mpi" as i1, "gcc" as i2
 pkg(
   name: "kahip",
   version: "3.10",
+  description: "Karlsruhe High Quality Partitioning",
+  url: "https://algo2.iti.kit.edu/documents/kahip/index.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

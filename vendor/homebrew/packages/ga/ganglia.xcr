@@ -93,6 +93,12 @@ import "pkg-config" as i0, "apr" as i1, "confuse" as i2, "pcre" as i3, "rrdtool"
 pkg(
   name: "ganglia",
   version: "3.7.2",
+  description: "Scalable distributed monitoring system",
+  url: "https://ganglia.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

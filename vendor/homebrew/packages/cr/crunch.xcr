@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "crunch",
   version: "3.6",
+  description: "Wordlist generator",
+  url: "https://sourceforge.net/projects/crunch-wordlist/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

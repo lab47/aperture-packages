@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "minica",
   version: "1.0.2",
+  description: "Small, simple certificate authority",
+  url: "https://github.com/jsha/minica",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

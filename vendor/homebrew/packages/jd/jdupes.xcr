@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jdupes",
   version: "1.20.0",
+  description: "Duplicate file finder and an enhanced fork of 'fdupes'",
+  url: "https://github.com/jbruchon/jdupes",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

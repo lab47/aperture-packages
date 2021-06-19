@@ -54,6 +54,12 @@ import "libx11" as i0, "xterm" as i1, "ncurses" as i2
 pkg(
   name: "chezscheme",
   version: "9.5.4",
+  description: "Implementation of the Chez Scheme language",
+  url: "https://cisco.github.io/ChezScheme/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "benthos",
   version: "3.46.1",
+  description: "Stream processor for mundane tasks written in Go",
+  url: "https://www.benthos.dev",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

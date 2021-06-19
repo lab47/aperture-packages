@@ -71,6 +71,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libsass",
   version: "3.6.5",
+  description: "C implementation of a Sass compiler",
+  url: "https://github.com/sass/libsass",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

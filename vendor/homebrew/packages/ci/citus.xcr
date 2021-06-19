@@ -48,6 +48,12 @@ import "lz4" as i0, "postgresql" as i1, "readline" as i2, "zstd" as i3
 pkg(
   name: "citus",
   version: "10.0.3",
+  description: "PostgreSQL-based distributed RDBMS",
+  url: "https://www.citusdata.com",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "rust" as i0, "nmap" as i1
 pkg(
   name: "rustscan",
   version: "2.0.1",
+  description: "Modern Day Portscanner",
+  url: "https://github.com/rustscan/rustscan",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

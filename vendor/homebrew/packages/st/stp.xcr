@@ -86,12 +86,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "boost" as i2, "bzip2" as i3, "cmake" as i4, "cryptominisat" as i5, "expat" as i6, "flex" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "icu4c" as i11, "libffi" as i12, "libxml2" as i13, "m4" as i14, "minisat" as i15, "mpdecimal" as i16, "ncurses" as i17, "openssl@1.1" as i18, "perl" as i19, "pkg-config" as i20, "python@3.9" as i21, "readline" as i22, "sphinx-doc" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
+import "bison" as i0, "cmake" as i1, "flex" as i2, "boost" as i3, "cryptominisat" as i4, "minisat" as i5, "python@3.9" as i6, "perl" as i7
 
 pkg(
   name: "stp",
   version: "2.3.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
+  description: "Simple Theorem Prover, an efficient SMT solver for bitvectors",
+  url: "https://stp.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stp.rb"), formula)

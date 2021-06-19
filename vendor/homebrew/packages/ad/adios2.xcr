@@ -88,12 +88,18 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "asciidoctor" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "boost" as i5, "bzip2" as i6, "c-blosc" as i7, "cmake" as i8, "cython" as i9, "docbook" as i10, "docbook-xsl" as i11, "expat" as i12, "gcc" as i13, "gdbm" as i14, "gmp" as i15, "gnu-getopt" as i16, "hwloc" as i17, "icu4c" as i18, "isl" as i19, "libevent" as i20, "libfabric" as i21, "libffi" as i22, "libgcrypt" as i23, "libgpg-error" as i24, "libmpc" as i25, "libpng" as i26, "libsodium" as i27, "libtool" as i28, "libxml2" as i29, "libxslt" as i30, "m4" as i31, "mpdecimal" as i32, "mpfr" as i33, "mpi4py" as i34, "ncurses" as i35, "numpy" as i36, "open-mpi" as i37, "openblas" as i38, "openssl@1.1" as i39, "perl" as i40, "pkg-config" as i41, "python@3.9" as i42, "readline" as i43, "source-highlight" as i44, "sphinx-doc" as i45, "sqlite" as i46, "unzip" as i47, "xmlto" as i48, "xz" as i49, "zeromq" as i50, "zip" as i51, "zlib" as i52, "zstd" as i53
+import "cmake" as i0, "gcc" as i1, "c-blosc" as i2, "libfabric" as i3, "libpng" as i4, "mpi4py" as i5, "numpy" as i6, "open-mpi" as i7, "python@3.9" as i8, "zeromq" as i9, "bzip2" as i10
 
 pkg(
   name: "adios2",
   version: "2.7.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53],
+  description: "Next generation of ADIOS developed in the Exascale Computing Program",
+  url: "https://adios2.readthedocs.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "adios2.rb"), formula)

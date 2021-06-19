@@ -33,6 +33,12 @@ import "openjdk" as i0
 pkg(
   name: "ammonite-repl",
   version: "2.3.8",
+  description: "Ammonite is a cleanroom re-implementation of the Scala REPL",
+  url: "https://ammonite.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

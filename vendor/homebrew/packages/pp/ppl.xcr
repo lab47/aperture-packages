@@ -93,6 +93,12 @@ import "gmp" as i0
 pkg(
   name: "ppl",
   version: "1.2",
+  description: "Parma Polyhedra Library: numerical abstractions for analysis, verification",
+  url: "https://www.bugseng.com/ppl",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -72,6 +72,12 @@ import "homebrew-install" as hi
 pkg(
   name: "luajit-openresty",
   version: "20210510",
+  description: "OpenResty's Branch of LuaJIT 2",
+  url: "https://github.com/openresty/luajit2",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

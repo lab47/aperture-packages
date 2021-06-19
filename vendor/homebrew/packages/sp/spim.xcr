@@ -39,6 +39,12 @@ import "subversion" as i0
 pkg(
   name: "spim",
   version: "9.1.22",
+  description: "MIPS32 simulator",
+  url: "https://spimsimulator.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

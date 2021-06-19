@@ -47,6 +47,12 @@ import "libevent" as i0, "pcre" as i1, "tokyo-cabinet" as i2
 pkg(
   name: "grok",
   version: "0.9.2",
+  description: "Powerful pattern-matching/reacting too",
+  url: "https://github.com/jordansissel/grok",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

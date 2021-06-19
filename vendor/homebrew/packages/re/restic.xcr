@@ -60,6 +60,12 @@ import "go" as i0
 pkg(
   name: "restic",
   version: "0.12.0",
+  description: "Fast, efficient and secure backup program",
+  url: "https://restic.github.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "node@10" as i0, "yarn" as i1
 pkg(
   name: "imageoptim-cli",
   version: "3.0.2",
+  description: "CLI for ImageOptim, ImageAlpha and JPEGmini",
+  url: "https://jamiemason.github.io/ImageOptim-CLI/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

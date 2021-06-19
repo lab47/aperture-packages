@@ -58,6 +58,12 @@ import "perl" as i0
 pkg(
   name: "perltidy",
   version: "20210402",
+  description: "Indents and reformats Perl scripts to make them easier to read",
+  url: "https://perltidy.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

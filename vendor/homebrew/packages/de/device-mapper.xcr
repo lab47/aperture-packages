@@ -55,6 +55,12 @@ import "libaio" as i0
 pkg(
   name: "device-mapper",
   version: "2.03.12",
+  description: "Userspace library and tools for logical volume management",
+  url: "https://sourceware.org/dm",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

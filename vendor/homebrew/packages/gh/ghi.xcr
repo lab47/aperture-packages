@@ -57,6 +57,12 @@ import "ruby" as i0
 pkg(
   name: "ghi",
   version: "1.2.0",
+  description: "Work on GitHub issues on the command-line",
+  url: "https://github.com/stephencelis/ghi",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

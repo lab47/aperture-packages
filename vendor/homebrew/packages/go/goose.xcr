@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "goose",
   version: "2.7.0",
+  description: "Go Language's command-line interface for database migrations",
+  url: "https://github.com/pressly/goose",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

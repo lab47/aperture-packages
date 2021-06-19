@@ -83,6 +83,12 @@ import "cmake" as i0, "bzip2" as i1, "zlib" as i2
 pkg(
   name: "stormlib",
   version: "9.23",
+  description: "Library for handling Blizzard MPQ archives",
+  url: "http://www.zezula.net/en/mpq/stormlib.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -29,6 +29,12 @@ import "ctags" as i0, "rbenv" as i1
 pkg(
   name: "rbenv-ctags",
   version: "1.0.2",
+  description: "Automatically generate ctags for rbenv Ruby stdlibs",
+  url: "https://github.com/tpope/rbenv-ctags",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

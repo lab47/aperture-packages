@@ -83,6 +83,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "assimp",
   version: "5.0.1",
+  description: "Portable library for importing many well-known 3D model formats",
+  url: "https://www.assimp.org/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "gobject-introspection" as i0, "gtk-doc" as i1, "meson" as i2, "ninja" as
 pkg(
   name: "aravis",
   version: "0.8.10",
+  description: "Vision library for genicam based cameras",
+  url: "https://wiki.gnome.org/Projects/Aravis",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

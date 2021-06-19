@@ -47,6 +47,12 @@ import "rust" as i0
 pkg(
   name: "gluon",
   version: "0.17.2",
+  description: "Static, type inferred and embeddable language written in Rust",
+  url: "https://gluon-lang.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

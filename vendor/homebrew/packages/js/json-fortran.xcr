@@ -65,6 +65,12 @@ import "cmake" as i0, "ford" as i1, "gcc" as i2
 pkg(
   name: "json-fortran",
   version: "8.2.3",
+  description: "Fortran 2008 JSON API",
+  url: "https://github.com/jacobwilliams/json-fortran",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmnl",
   version: "1.0.4",
+  description: "Minimalistic user-space library oriented to Netlink developers",
+  url: "https://www.netfilter.org/projects/libmnl",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

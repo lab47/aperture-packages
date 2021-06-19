@@ -32,6 +32,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-bundle-exec",
   version: "1.0.0",
+  description: "Integrate rbenv and bundler",
+  url: "https://github.com/maljub01/rbenv-bundle-exec",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

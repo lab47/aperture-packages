@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcptrace",
   version: "6.6.7",
+  description: "Analyze tcpdump output",
+  url: "http://www.tcptrace.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

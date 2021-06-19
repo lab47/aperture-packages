@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "peg",
   version: "0.1.18",
+  description: "Program to perform pattern matching on text",
+  url: "https://www.piumarta.com/software/peg/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

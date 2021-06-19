@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "github-keygen",
   version: "1.305",
+  description: "Bootstrap GitHub SSH configuration",
+  url: "https://github.com/dolmen/github-keygen",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

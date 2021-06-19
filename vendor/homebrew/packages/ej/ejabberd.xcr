@@ -119,6 +119,12 @@ import "erlang@22" as i0, "gd" as i1, "libyaml" as i2, "openssl@1.1" as i3
 pkg(
   name: "ejabberd",
   version: "21.04",
+  description: "XMPP application server",
+  url: "https://www.ejabberd.im",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

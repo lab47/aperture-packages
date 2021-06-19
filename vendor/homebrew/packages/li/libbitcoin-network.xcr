@@ -61,6 +61,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libbitcoin-network",
   version: "3.6.0",
+  description: "Bitcoin P2P Network Library",
+  url: "https://github.com/libbitcoin/libbitcoin-network",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

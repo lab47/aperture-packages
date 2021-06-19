@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "etsh",
   version: "5.4.0",
+  description: "Two ports of /bin/sh from V6 UNIX (circa 1975)",
+  url: "https://etsh.nl/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

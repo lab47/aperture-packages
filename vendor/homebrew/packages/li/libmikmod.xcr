@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmikmod",
   version: "3.3.11.1",
+  description: "Portable sound library",
+  url: "https://mikmod.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

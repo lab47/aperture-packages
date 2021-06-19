@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "serveit",
   version: "0.0.3",
+  description: "Synchronous server and rebuilder of static content",
+  url: "https://github.com/garybernhardt/serveit",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

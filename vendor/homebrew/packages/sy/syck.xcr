@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "syck",
   version: "0.70",
+  description: "Extension for reading and writing YAML",
+  url: "https://github.com/indeyets/syck",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

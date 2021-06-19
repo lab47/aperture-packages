@@ -90,6 +90,12 @@ import "pkg-config" as i0, "hiredis" as i1, "libevent" as i2, "libpq" as i3, "op
 pkg(
   name: "coturn",
   version: "4.5.2",
+  description: "Free open source implementation of TURN and STUN Server",
+  url: "https://github.com/coturn/coturn",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

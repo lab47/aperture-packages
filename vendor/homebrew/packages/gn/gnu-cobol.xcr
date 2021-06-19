@@ -63,6 +63,12 @@ import "berkeley-db" as i0, "gmp" as i1
 pkg(
   name: "gnu-cobol",
   version: "3.1.2",
+  description: "Implements much of the COBOL 85 and COBOL 2002 standards",
+  url: "https://sourceforge.net/projects/gnucobol/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

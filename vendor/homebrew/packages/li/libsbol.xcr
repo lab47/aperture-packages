@@ -61,6 +61,12 @@ import "cmake" as i0, "pkg-config" as i1, "jsoncpp" as i2, "raptor" as i3
 pkg(
   name: "libsbol",
   version: "2.3.2",
+  description: "Read and write files in the Synthetic Biology Open Language (SBOL)",
+  url: "https://synbiodex.github.io/libSBOL",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

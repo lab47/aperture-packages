@@ -61,6 +61,12 @@ import "go" as i0
 pkg(
   name: "linkerd",
   version: "2.10.2",
+  description: "Command-line utility to interact with linkerd",
+  url: "https://linkerd.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

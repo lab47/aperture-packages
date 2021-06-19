@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libspnav",
   version: "0.2.3",
+  description: "Client library for connecting to 3Dconnexion's 3D input devices",
+  url: "https://spacenav.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

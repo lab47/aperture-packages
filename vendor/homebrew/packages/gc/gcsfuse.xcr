@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "gcsfuse",
   version: "0.32.0",
+  description: "User-space file system for interacting with Google Cloud",
+  url: "https://github.com/googlecloudplatform/gcsfuse",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

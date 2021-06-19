@@ -58,6 +58,12 @@ import "cmake" as i0, "aces_container" as i1, "ilmbase" as i2, "libtiff" as i3, 
 pkg(
   name: "ctl",
   version: "1.5.2",
+  description: "Programming language for digital color management",
+  url: "https://github.com/ampas/CTL",
+  metadata: %{
+    "license": "AMPAS",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

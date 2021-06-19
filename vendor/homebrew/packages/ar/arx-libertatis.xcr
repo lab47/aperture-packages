@@ -104,6 +104,12 @@ import "boost" as i0, "cmake" as i1, "glm" as i2, "freetype" as i3, "glew" as i4
 pkg(
   name: "arx-libertatis",
   version: "1.1.2",
+  description: "Cross-platform, open source port of Arx Fatalis",
+  url: "https://arx-libertatis.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "ccheck",
   version: "1.0.1",
+  description: "Check X509 certificate expiration from the command-line, with TAP output",
+  url: "https://github.com/nerdlem/ccheck",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

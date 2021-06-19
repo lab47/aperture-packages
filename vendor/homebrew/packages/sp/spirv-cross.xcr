@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "spirv-cross",
   version: "2021-01-15",
+  description: "Performing reflection and disassembling SPIR-V",
+  url: "https://github.com/KhronosGroup/SPIRV-Cross",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

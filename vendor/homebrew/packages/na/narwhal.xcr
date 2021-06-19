@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "narwhal",
   version: "0.3.2",
+  description: "General purpose JavaScript platform for building applications",
+  url: "https://github.com/280north/narwhal",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mailcheck",
   version: "1.91.2",
+  description: "Check multiple mailboxes/maildirs for mail",
+  url: "https://mailcheck.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

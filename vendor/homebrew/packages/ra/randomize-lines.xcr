@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "randomize-lines",
   version: "0.2.7",
+  description: "Reads and randomize lines from a file (or STDIN)",
+  url: "https://arthurdejong.org/rl/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "linklint",
   version: "2.3.5",
+  description: "Link checker and web site maintenance tool",
+  url: "http://linklint.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

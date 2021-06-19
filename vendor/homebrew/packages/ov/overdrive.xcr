@@ -31,6 +31,12 @@ import "tidy-html5" as i0, "curl" as i1, "libressl" as i2, "libxml2" as i3
 pkg(
   name: "overdrive",
   version: "2.1.1",
+  description: "Bash script to download mp3s from the OverDrive audiobook service",
+  url: "https://github.com/chbrown/overdrive",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

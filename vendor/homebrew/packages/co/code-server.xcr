@@ -79,12 +79,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "brotli" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "icu4c" as i9, "jemalloc" as i10, "libev" as i11, "libffi" as i12, "libtool" as i13, "libuv" as i14, "libxml2" as i15, "m4" as i16, "mpdecimal" as i17, "ncurses" as i18, "nghttp2" as i19, "ninja" as i20, "node" as i21, "node@14" as i22, "openssl@1.1" as i23, "perl" as i24, "pkg-config" as i25, "python@3.9" as i26, "readline" as i27, "sphinx-doc" as i28, "sqlite" as i29, "unzip" as i30, "xz" as i31, "yarn" as i32, "zip" as i33, "zlib" as i34
+import "python@3.9" as i0, "yarn" as i1, "node@14" as i2
 
 pkg(
   name: "code-server",
   version: "3.10.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
+  description: "Access VS Code through the browser",
+  url: "https://github.com/cdr/code-server",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "code-server.rb"), formula)

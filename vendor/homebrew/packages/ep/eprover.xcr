@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "eprover",
   version: "2.5",
+  description: "Theorem prover for full first-order logic with equality",
+  url: "https://eprover.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

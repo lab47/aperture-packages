@@ -37,6 +37,12 @@ import "node" as i0
 pkg(
   name: "nativefier",
   version: "44.0.2",
+  description: "Wrap web apps natively",
+  url: "https://github.com/nativefier/nativefier",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

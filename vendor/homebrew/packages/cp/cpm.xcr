@@ -219,6 +219,12 @@ import "perl" as i0
 pkg(
   name: "cpm",
   version: "0.997003",
+  description: "Fast CPAN module installer",
+  url: "https://metacpan.org/pod/cpm",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

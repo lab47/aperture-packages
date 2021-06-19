@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "gawk" as i2, "pkg-config" as i3, "gd
 pkg(
   name: "gnu-smalltalk",
   version: "3.2.5",
+  description: "Implementation of the Smalltalk language",
+  url: "https://www.gnu.org/software/smalltalk/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

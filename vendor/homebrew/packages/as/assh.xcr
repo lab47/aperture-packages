@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "assh",
   version: "2.11.3",
+  description: "Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts",
+  url: "https://manfred.life/assh",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chuck",
   version: "1.4.0.1",
+  description: "Concurrent, on-the-fly audio programming language",
+  url: "https://chuck.cs.princeton.edu/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

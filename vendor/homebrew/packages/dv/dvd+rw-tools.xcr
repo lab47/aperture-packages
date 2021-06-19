@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dvd+rw-tools",
   version: "7.1",
+  description: "DVD+-RW/R tools",
+  url: "http://fy.chalmers.se/~appro/linux/DVD+RW/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

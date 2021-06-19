@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "miniupnpc",
   version: "2.2.2",
+  description: "UPnP IGD client library and daemon",
+  url: "https://miniupnp.tuxfamily.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

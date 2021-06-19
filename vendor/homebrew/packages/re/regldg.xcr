@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "regldg",
   version: "1.0.0",
+  description: "Regular expression grammar language dictionary generator",
+  url: "https://regldg.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

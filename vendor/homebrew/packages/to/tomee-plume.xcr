@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tomee-plume",
   version: "8.0.4",
+  description: "Apache TomEE Plume",
+  url: "https://tomee.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

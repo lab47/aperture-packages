@@ -41,6 +41,12 @@ import "cabal-install" as i0, "ghc" as i1, "zlib" as i2
 pkg(
   name: "mighttpd2",
   version: "3.4.6",
+  description: "HTTP server",
+  url: "https://www.mew.org/~kazu/proj/mighttpd/en/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "avanor",
   version: "0.5.8",
+  description: "Quick-growing roguelike game with easy ADOM-like UI",
+  url: "https://avanor.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

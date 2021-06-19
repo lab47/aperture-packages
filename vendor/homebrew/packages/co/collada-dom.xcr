@@ -55,6 +55,12 @@ import "cmake" as i0, "boost" as i1, "pcre" as i2
 pkg(
   name: "collada-dom",
   version: "2.5.0",
+  description: "C++ library for loading and saving COLLADA data",
+  url: "https://www.khronos.org/collada/wiki/Portal:COLLADA_DOM",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

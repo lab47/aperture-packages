@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vitetris",
   version: "0.59.1",
+  description: "Terminal-based Tetris clone",
+  url: "https://www.victornils.net/tetris/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

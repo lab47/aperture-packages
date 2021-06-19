@@ -113,6 +113,12 @@ import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3
 pkg(
   name: "traefik@1",
   version: "1.7.30",
+  description: "Modern reverse proxy (v1.7)",
+  url: "https://traefik.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

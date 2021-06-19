@@ -45,6 +45,12 @@ import "autoconf" as i0, "automake" as i1, "halibut" as i2
 pkg(
   name: "agedu",
   version: "20200705",
+  description: "Unix utility for tracking down wasted disk space",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/agedu/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

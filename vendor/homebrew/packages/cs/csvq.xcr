@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "csvq",
   version: "1.15.1",
+  description: "SQL-like query language for csv",
+  url: "https://mithrandie.github.io/csvq",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

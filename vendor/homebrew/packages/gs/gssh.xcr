@@ -39,6 +39,12 @@ import "openjdk@11" as i0
 pkg(
   name: "gssh",
   version: "2.10.1",
+  description: "SSH automation tool based on Groovy DSL",
+  url: "https://github.com/int128/groovy-ssh",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

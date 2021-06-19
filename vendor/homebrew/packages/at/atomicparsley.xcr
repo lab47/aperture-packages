@@ -52,6 +52,12 @@ import "cmake" as i0, "zlib" as i1
 pkg(
   name: "atomicparsley",
   version: "20210124.204813.840499f",
+  description: "MPEG-4 command-line tool",
+  url: "https://github.com/wez/atomicparsley",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

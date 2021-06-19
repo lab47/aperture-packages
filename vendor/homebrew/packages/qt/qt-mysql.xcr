@@ -99,6 +99,12 @@ import "cmake" as i0, "mysql" as i1, "qt" as i2
 pkg(
   name: "qt-mysql",
   version: "6.1.0",
+  description: "Qt SQL Database Driver",
+  url: "https://www.qt.io/",
+  metadata: %{
+    "license": "LGPL-2.1-only and LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

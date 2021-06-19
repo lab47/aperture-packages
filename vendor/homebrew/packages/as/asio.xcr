@@ -68,6 +68,12 @@ import "autoconf" as i0, "automake" as i1, "openssl@1.1" as i2
 pkg(
   name: "asio",
   version: "1.18.2",
+  description: "Cross-platform C++ Library for asynchronous programming",
+  url: "https://think-async.com/Asio",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

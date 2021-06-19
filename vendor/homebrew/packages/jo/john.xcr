@@ -68,6 +68,12 @@ import "homebrew-install" as hi
 pkg(
   name: "john",
   version: "1.9.0",
+  description: "Featureful UNIX password cracker",
+  url: "https://www.openwall.com/john/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

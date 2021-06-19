@@ -50,6 +50,12 @@ import "subversion" as i0, "autoconf" as i1, "automake" as i2, "boost" as i3
 pkg(
   name: "fuego",
   version: "1.1.SVN",
+  description: "Collection of C++ libraries for the game of Go",
+  url: "https://fuego.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

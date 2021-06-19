@@ -54,6 +54,12 @@ import "cmake" as i0, "doxygen" as i1, "boost" as i2, "rabbitmq-c" as i3
 pkg(
   name: "simple-amqp-client",
   version: "2.5.1",
+  description: "C++ interface to rabbitmq-c",
+  url: "https://github.com/alanxz/SimpleAmqpClient",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

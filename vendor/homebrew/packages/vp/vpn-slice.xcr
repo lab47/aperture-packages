@@ -50,6 +50,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "vpn-slice",
   version: "0.15",
+  description: "Vpnc-script replacement for easy and secure split-tunnel VPN setup",
+  url: "https://github.com/dlenski/vpn-slice",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "fleetctl",
   version: "1.0.0",
+  description: "Distributed init system",
+  url: "https://github.com/coreos/fleet",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

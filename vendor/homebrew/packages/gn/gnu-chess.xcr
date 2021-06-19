@@ -75,6 +75,12 @@ import "readline" as i0
 pkg(
   name: "gnu-chess",
   version: "6.2.8",
+  description: "Chess-playing program",
+  url: "https://www.gnu.org/software/chess/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

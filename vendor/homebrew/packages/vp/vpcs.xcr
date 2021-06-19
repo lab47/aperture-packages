@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vpcs",
   version: "0.8",
+  description: "Virtual PC simulator for testing IP routing",
+  url: "https://vpcs.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

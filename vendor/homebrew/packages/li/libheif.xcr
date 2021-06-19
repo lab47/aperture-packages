@@ -62,6 +62,12 @@ import "pkg-config" as i0, "aom" as i1, "jpeg" as i2, "libde265" as i3, "libpng"
 pkg(
   name: "libheif",
   version: "1.12.0",
+  description: "ISO/IEC 23008-12:2017 HEIF file format decoder and encoder",
+  url: "https://www.libde265.org/",
+  metadata: %{
+    "license": "LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

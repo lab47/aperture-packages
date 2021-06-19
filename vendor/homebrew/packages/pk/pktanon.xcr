@@ -44,6 +44,12 @@ import "boost" as i0, "xerces-c" as i1
 pkg(
   name: "pktanon",
   version: "1.4.0",
+  description: "Packet trace anonymization",
+  url: "https://www.tm.uka.de/software/pktanon/index.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

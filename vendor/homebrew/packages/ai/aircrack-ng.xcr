@@ -89,6 +89,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "aircrack-ng",
   version: "1.6",
+  description: "Next-generation aircrack with lots of new features",
+  url: "https://aircrack-ng.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and BSD-3-Clause and OpenSSL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

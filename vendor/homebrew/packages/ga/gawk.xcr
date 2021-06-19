@@ -56,6 +56,12 @@ import "gettext" as i0, "mpfr" as i1, "readline" as i2
 pkg(
   name: "gawk",
   version: "5.1.0",
+  description: "GNU awk utility",
+  url: "https://www.gnu.org/software/gawk/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

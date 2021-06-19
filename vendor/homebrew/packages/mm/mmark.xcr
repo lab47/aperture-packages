@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "mmark",
   version: "2.2.10",
+  description: "Powerful markdown processor in Go geared towards the IETF",
+  url: "https://mmark.miek.nl/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libxdiff",
   version: "0.23",
+  description: "Implements diff functions for binary and text files",
+  url: "http://www.xmailserver.org/xdiff-lib.html",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -139,6 +139,12 @@ import "autoconf" as i0, "automake" as i1, "cppunit" as i2, "libtool" as i3, "ma
 pkg(
   name: "zookeeper",
   version: "3.7.0",
+  description: "Centralized server for distributed coordination of services",
+  url: "https://zookeeper.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

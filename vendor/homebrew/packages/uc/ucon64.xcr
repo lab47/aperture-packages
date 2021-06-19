@@ -74,6 +74,12 @@ import "unzip" as i0, "zlib" as i1
 pkg(
   name: "ucon64",
   version: "2.2.1",
+  description: "ROM backup tool and emulator's Swiss Army knife program",
+  url: "https://ucon64.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

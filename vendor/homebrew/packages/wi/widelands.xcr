@@ -71,6 +71,12 @@ import "cmake" as i0, "boost" as i1, "doxygen" as i2, "gettext" as i3, "glew" as
 pkg(
   name: "widelands",
   version: "21",
+  description: "Free real-time strategy game like Settlers II",
+  url: "https://www.widelands.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

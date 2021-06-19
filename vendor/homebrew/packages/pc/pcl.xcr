@@ -136,6 +136,12 @@ import "vtk@8.2" as i0, "cmake" as i1, "pkg-config" as i2, "boost" as i3, "cminp
 pkg(
   name: "pcl",
   version: "1.11.1",
+  description: "Library for 2D/3D image and point cloud processing",
+  url: "https://pointclouds.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

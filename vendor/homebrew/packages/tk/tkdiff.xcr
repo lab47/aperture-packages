@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tkdiff",
   version: "5.2.1",
+  description: "Graphical side by side diff utility",
+  url: "https://tkdiff.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

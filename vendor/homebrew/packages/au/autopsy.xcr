@@ -95,6 +95,12 @@ import "sleuthkit" as i0
 pkg(
   name: "autopsy",
   version: "2.24",
+  description: "Graphical interface to Sleuth Kit investigation tools",
+  url: "https://www.sleuthkit.org/autopsy/index.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

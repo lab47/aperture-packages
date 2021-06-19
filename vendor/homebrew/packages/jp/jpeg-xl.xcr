@@ -71,6 +71,12 @@ import "cmake" as i0, "pkg-config" as i1, "brotli" as i2, "giflib" as i3, "ilmba
 pkg(
   name: "jpeg-xl",
   version: "0.3.7",
+  description: "New file format for still image compression",
+  url: "https://jpeg.org/jpegxl/index.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

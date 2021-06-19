@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ccextractor",
   version: "0.88",
+  description: "Free, GPL licensed closed caption tool",
+  url: "https://www.ccextractor.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "sbcl" as i0
 pkg(
   name: "cafeobj",
   version: "1.6.0",
+  description: "New generation algebraic specification and programming language",
+  url: "https://cafeobj.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

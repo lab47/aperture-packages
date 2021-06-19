@@ -37,6 +37,12 @@ import "openjdk" as i0
 pkg(
   name: "flyway",
   version: "7.10.0",
+  description: "Database version control to control migrations",
+  url: "https://flywaydb.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -121,6 +121,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gtksourceview4",
   version: "4.8.1",
+  description: "Text view with syntax, undo/redo, and text marks",
+  url: "https://projects.gnome.org/gtksourceview/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

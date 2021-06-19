@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "topgit",
   version: "0.19.12",
+  description: "Git patch queue manager",
+  url: "https://github.com/mackyle/topgit",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

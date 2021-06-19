@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "minimesos",
   version: "0.13.0",
+  description: "Testing infrastructure for Mesos frameworks",
+  url: "https://minimesos.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

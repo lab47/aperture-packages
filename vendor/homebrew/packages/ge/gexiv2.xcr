@@ -57,12 +57,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "doxygen" as i12, "exiv2" as i13, "expat" as i14, "flex" as i15, "fontconfig" as i16, "freetype" as i17, "fribidi" as i18, "gd" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "ghostscript" as i23, "glib" as i24, "gobject-introspection" as i25, "gperf" as i26, "graphite2" as i27, "graphviz" as i28, "groff" as i29, "gts" as i30, "harfbuzz" as i31, "help2man" as i32, "icu4c" as i33, "jasper" as i34, "jbig2dec" as i35, "jemalloc" as i36, "jpeg" as i37, "krb5" as i38, "libev" as i39, "libffi" as i40, "libidn" as i41, "libidn2" as i42, "libpng" as i43, "libpthread-stubs" as i44, "librsvg" as i45, "libssh" as i46, "libssh2" as i47, "libtiff" as i48, "libtool" as i49, "libunistring" as i50, "libx11" as i51, "libxau" as i52, "libxcb" as i53, "libxdmcp" as i54, "libxext" as i55, "libxml2" as i56, "libxrender" as i57, "libyaml" as i58, "little-cms2" as i59, "lz4" as i60, "lzo" as i61, "m4" as i62, "meson" as i63, "mpdecimal" as i64, "ncurses" as i65, "netpbm" as i66, "nghttp2" as i67, "ninja" as i68, "openjdk" as i69, "openjpeg" as i70, "openldap" as i71, "openssl@1.1" as i72, "pango" as i73, "pcre" as i74, "perl" as i75, "pixman" as i76, "pkg-config" as i77, "psutils" as i78, "python@3.9" as i79, "readline" as i80, "rtmpdump" as i81, "ruby" as i82, "rust" as i83, "scons" as i84, "sphinx-doc" as i85, "sqlite" as i86, "subversion" as i87, "swig" as i88, "texinfo" as i89, "uchardet" as i90, "unzip" as i91, "utf8proc" as i92, "util-macros" as i93, "vala" as i94, "webp" as i95, "xcb-proto" as i96, "xorgproto" as i97, "xtrans" as i98, "xz" as i99, "zip" as i100, "zlib" as i101, "zstd" as i102
+import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.9" as i4, "vala" as i5, "exiv2" as i6, "glib" as i7
 
 pkg(
   name: "gexiv2",
   version: "0.12.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102],
+  description: "GObject wrapper around the Exiv2 photo metadata library",
+  url: "https://wiki.gnome.org/Projects/gexiv2",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gexiv2.rb"), formula)

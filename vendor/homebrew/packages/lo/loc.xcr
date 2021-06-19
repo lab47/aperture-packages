@@ -43,6 +43,12 @@ import "rust" as i0
 pkg(
   name: "loc",
   version: "0.4.1",
+  description: "Count lines of code quickly",
+  url: "https://github.com/cgag/loc",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

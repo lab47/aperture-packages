@@ -57,6 +57,12 @@ import "hadoop" as i0, "openjdk@8" as i1
 pkg(
   name: "hive",
   version: "3.1.2",
+  description: "Hadoop-based data summarization, query, and analysis",
+  url: "https://hive.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

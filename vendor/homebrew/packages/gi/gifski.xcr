@@ -43,6 +43,12 @@ import "pkg-config" as i0, "rust" as i1, "ffmpeg" as i2
 pkg(
   name: "gifski",
   version: "1.2.6",
+  description: "Highest-quality GIF encoder based on pngquant",
+  url: "https://gif.ski/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

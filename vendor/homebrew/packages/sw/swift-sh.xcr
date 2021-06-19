@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swift-sh",
   version: "2.3.0",
+  description: "Scripting with easy zero-conf dependency imports",
+  url: "https://github.com/mxcl/swift-sh",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

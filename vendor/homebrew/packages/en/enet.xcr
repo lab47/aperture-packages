@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "enet",
   version: "1.3.17",
+  description: "Provides a network communication layer on top of UDP",
+  url: "http://enet.bespin.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

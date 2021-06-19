@@ -67,6 +67,12 @@ import "autoconf" as i0, "automake" as i1, "docbook-xsl" as i2, "libtool" as i3,
 pkg(
   name: "opensc",
   version: "0.21.0",
+  description: "Tools and libraries for smart cards",
+  url: "https://github.com/OpenSC/OpenSC/wiki",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -86,6 +86,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ahcpd",
   version: "0.53",
+  description: "Autoconfiguration protocol for IPv6 and IPv6/IPv4 networks",
+  url: "https://www.irif.univ-paris-diderot.fr/~jch/software/ahcp/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

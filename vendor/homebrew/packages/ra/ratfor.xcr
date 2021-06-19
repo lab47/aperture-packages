@@ -67,6 +67,12 @@ import "gcc" as i0
 pkg(
   name: "ratfor",
   version: "1.05",
+  description: "Rational Fortran",
+  url: "http://www.dgate.org/ratfor/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

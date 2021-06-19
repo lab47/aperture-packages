@@ -49,6 +49,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libsndfile",
   version: "1.0.31",
+  description: "C library for files containing sampled sound",
+  url: "https://libsndfile.github.io/libsndfile/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

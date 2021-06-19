@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "qpm",
   version: "0.11.0",
+  description: "Package manager for Qt applications",
+  url: "https://www.qpm.io",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

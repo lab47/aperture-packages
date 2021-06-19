@@ -52,6 +52,12 @@ import "libflowmanager" as i0, "libtrace" as i1
 pkg(
   name: "libprotoident",
   version: "2.0.13",
+  description: "Performs application layer protocol identification for flows",
+  url: "https://research.wand.net.nz/software/libprotoident.php",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

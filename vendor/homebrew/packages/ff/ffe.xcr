@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ffe",
   version: "0.3.9a",
+  description: "Parse flat file structures and print them in different formats",
+  url: "https://ff-extractor.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

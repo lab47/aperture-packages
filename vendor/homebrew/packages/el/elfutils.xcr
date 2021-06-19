@@ -45,6 +45,12 @@ import "m4" as i0, "bzip2" as i1, "xz" as i2, "zlib" as i3
 pkg(
   name: "elfutils",
   version: "0.185",
+  description: "Libraries and utilities for handling ELF objects",
+  url: "https://fedorahosted.org/elfutils/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and GPL-3.0-or-later and LGPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

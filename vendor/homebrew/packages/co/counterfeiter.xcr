@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "counterfeiter",
   version: "6.4.1",
+  description: "Tool for generating self-contained, type-safe test doubles in go",
+  url: "https://github.com/maxbrunsfeld/counterfeiter",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

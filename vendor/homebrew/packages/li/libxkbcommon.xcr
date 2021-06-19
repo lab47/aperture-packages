@@ -63,6 +63,12 @@ import "bison" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "libx11"
 pkg(
   name: "libxkbcommon",
   version: "1.3.0",
+  description: "Keyboard handling library",
+  url: "https://xkbcommon.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "jpeg" as i0
 pkg(
   name: "jp2a",
   version: "1.0.6",
+  description: "Convert JPG images to ASCII",
+  url: "https://csl.name/jp2a/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "thrulay",
   version: "0.9",
+  description: "Measure performance of a network",
+  url: "https://sourceforge.net/projects/thrulay/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

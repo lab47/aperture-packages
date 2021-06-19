@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rig",
   version: "1.11",
+  description: "Provides fake name and address data",
+  url: "https://rig.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

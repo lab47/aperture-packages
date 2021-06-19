@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "xlearn",
   version: "0.4.4",
+  description: "High performance, easy-to-use, and scalable machine learning package",
+  url: "https://xlearn-doc.readthedocs.io/en/latest/index.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

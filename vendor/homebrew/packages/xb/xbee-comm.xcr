@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "xbee-comm",
   version: "1.5",
+  description: "XBee communication libraries and utilities",
+  url: "https://github.com/guyzmo/xbee-comm",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

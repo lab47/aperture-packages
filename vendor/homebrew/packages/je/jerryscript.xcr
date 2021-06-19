@@ -69,6 +69,12 @@ import "cmake" as i0
 pkg(
   name: "jerryscript",
   version: "2.4.0",
+  description: "Ultra-lightweight JavaScript engine for the Internet of Things",
+  url: "https://jerryscript.net",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

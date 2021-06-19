@@ -39,6 +39,12 @@ import "pkg-config" as i0, "libmp3splt" as i1
 pkg(
   name: "mp3splt",
   version: "2.6.2",
+  description: "Command-line interface to split MP3 and Ogg Vorbis files",
+  url: "https://mp3splt.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

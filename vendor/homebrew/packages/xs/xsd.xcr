@@ -89,6 +89,12 @@ import "pkg-config" as i0, "xerces-c" as i1
 pkg(
   name: "xsd",
   version: "4.0.0",
+  description: "XML Data Binding for C++",
+  url: "https://www.codesynthesis.com/products/xsd/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

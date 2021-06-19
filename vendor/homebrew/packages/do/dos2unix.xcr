@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dos2unix",
   version: "7.4.2",
+  description: "Convert text between DOS, UNIX, and Mac formats",
+  url: "https://waterlan.home.xs4all.nl/dos2unix.html",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

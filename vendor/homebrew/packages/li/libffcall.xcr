@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libffcall",
   version: "2.3",
+  description: "GNU Foreign Function Interface library",
+  url: "https://www.gnu.org/software/libffcall/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

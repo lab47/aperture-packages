@@ -68,6 +68,12 @@ import "openssl@1.1" as i0, "talloc" as i1, "perl" as i2, "sqlite" as i3
 pkg(
   name: "freeradius-server",
   version: "3.0.23",
+  description: "High-performance and highly configurable RADIUS server",
+  url: "https://freeradius.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -69,6 +69,12 @@ import "cabal-install" as i0, "ghc@8.8" as i1, "pandoc" as i2, "unzip" as i3
 pkg(
   name: "pandoc-citeproc",
   version: "0.17.0.2",
+  description: "Library and executable for using citeproc with pandoc",
+  url: "https://github.com/jgm/pandoc-citeproc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

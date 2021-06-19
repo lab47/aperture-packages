@@ -55,6 +55,12 @@ import "pkg-config" as i0, "cairo" as i1, "fairymax" as i2, "gettext" as i3, "gt
 pkg(
   name: "xboard",
   version: "4.9.1",
+  description: "Graphical user interface for chess",
+  url: "https://www.gnu.org/software/xboard/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

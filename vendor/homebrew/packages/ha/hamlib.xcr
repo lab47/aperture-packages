@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libtool" as i3, 
 pkg(
   name: "hamlib",
   version: "4.2",
+  description: "Ham radio control libraries",
+  url: "http://www.hamlib.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

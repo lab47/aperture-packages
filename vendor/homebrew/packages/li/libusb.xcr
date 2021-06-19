@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libusb",
   version: "1.0.24",
+  description: "Library for USB device access",
+  url: "https://libusb.info/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

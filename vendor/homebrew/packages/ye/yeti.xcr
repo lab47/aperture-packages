@@ -43,6 +43,12 @@ import "ant" as i0, "openjdk@8" as i1
 pkg(
   name: "yeti",
   version: "1.0",
+  description: "ML-style functional programming language that runs on the JVM",
+  url: "https://mth.github.io/yeti/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "cmake" as i0, "armadillo" as i1
 pkg(
   name: "ensmallen",
   version: "2.16.2",
+  description: "Flexible C++ library for efficient mathematical optimization",
+  url: "https://ensmallen.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

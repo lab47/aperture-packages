@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-ssh",
   version: "0.2.0",
+  description: "Proxy for serving git repositories over SSH",
+  url: "https://github.com/lemarsu/git-ssh",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

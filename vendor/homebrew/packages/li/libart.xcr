@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libart",
   version: "2.3.21",
+  description: "Library for high-performance 2D graphics",
+  url: "https://people.gnome.org/~mathieu/libart/libart.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

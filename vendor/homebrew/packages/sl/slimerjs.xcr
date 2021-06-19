@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "slimerjs",
   version: "1.0.0",
+  description: "Scriptable browser for Web developers",
+  url: "https://slimerjs.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "cmake" as i0
 pkg(
   name: "frei0r",
   version: "1.7.0",
+  description: "Minimalistic plugin API for video effects",
+  url: "https://frei0r.dyne.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

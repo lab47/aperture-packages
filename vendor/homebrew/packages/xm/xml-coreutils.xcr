@@ -48,6 +48,12 @@ import "s-lang" as i0
 pkg(
   name: "xml-coreutils",
   version: "0.8.1",
+  description: "Powerful interactive system for text processing",
+  url: "https://www.lbreyer.com/xml-coreutils.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

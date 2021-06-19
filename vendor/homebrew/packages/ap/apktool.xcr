@@ -39,6 +39,12 @@ import "openjdk@8" as i0
 pkg(
   name: "apktool",
   version: "2.5.0",
+  description: "Tool for reverse engineering 3rd party, closed, binary Android apps",
+  url: "https://github.com/iBotPeaches/Apktool",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

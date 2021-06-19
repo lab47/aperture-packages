@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "savana",
   version: "1.2",
+  description: "Transactional workspaces for SVN",
+  url: "https://github.com/codehaus/savana",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

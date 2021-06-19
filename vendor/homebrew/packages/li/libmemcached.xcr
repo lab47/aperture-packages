@@ -85,6 +85,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmemcached",
   version: "1.0.18",
+  description: "C and C++ client library to the memcached server",
+  url: "https://libmemcached.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "pkg-config" as i0, "freetype" as i1, "harfbuzz" as i2, "libpng" as i3
 pkg(
   name: "ttfautohint",
   version: "1.8.3",
+  description: "Auto-hinter for TrueType fonts",
+  url: "https://www.freetype.org/ttfautohint/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

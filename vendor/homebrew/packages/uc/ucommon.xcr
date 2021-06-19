@@ -51,6 +51,12 @@ import "pkg-config" as i0, "gnutls" as i1
 pkg(
   name: "ucommon",
   version: "7.0.0",
+  description: "GNU C++ runtime library for threads, sockets, and parsing",
+  url: "https://www.gnu.org/software/commoncpp/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

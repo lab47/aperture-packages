@@ -56,6 +56,12 @@ import "rust" as i0, "gnupg" as i1, "gpgme" as i2, "libgpg-error" as i3, "libxcb
 pkg(
   name: "gpg-tui",
   version: "0.4.1",
+  description: "Manage your GnuPG keys with ease! 🔐",
+  url: "https://github.com/orhun/gpg-tui",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

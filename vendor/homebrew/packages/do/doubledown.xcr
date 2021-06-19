@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "doubledown",
   version: "0.0.2",
+  description: "Sync local changes to a remote directory",
+  url: "https://github.com/devstructure/doubledown",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

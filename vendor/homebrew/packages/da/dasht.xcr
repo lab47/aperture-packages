@@ -33,6 +33,12 @@ import "socat" as i0, "sqlite" as i1, "w3m" as i2, "wget" as i3
 pkg(
   name: "dasht",
   version: "2.4.0",
+  description: "Search API docs offline, in your terminal or browser",
+  url: "https://sunaku.github.io/dasht",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

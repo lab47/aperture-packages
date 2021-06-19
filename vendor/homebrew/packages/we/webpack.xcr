@@ -70,6 +70,12 @@ import "node" as i0
 pkg(
   name: "webpack",
   version: "5.38.1",
+  description: "Bundler for JavaScript and friends",
+  url: "https://webpack.js.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

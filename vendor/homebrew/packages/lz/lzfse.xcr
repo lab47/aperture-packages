@@ -47,6 +47,12 @@ import "cmake" as i0
 pkg(
   name: "lzfse",
   version: "1.0",
+  description: "Apple LZFSE compression library and command-line tool",
+  url: "https://github.com/lzfse/lzfse",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

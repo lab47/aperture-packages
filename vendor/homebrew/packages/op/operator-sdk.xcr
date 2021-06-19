@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "operator-sdk",
   version: "1.8.0",
+  description: "SDK for building Kubernetes applications",
+  url: "https://coreos.com/operators/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

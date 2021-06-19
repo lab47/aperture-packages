@@ -53,6 +53,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "gcab",
   version: "1.4",
+  description: "Windows installer (.MSI) tool",
+  url: "https://wiki.gnome.org/msitools",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "go" as i0
 pkg(
   name: "cadence-workflow",
   version: "0.21.0",
+  description: "Distributed, scalable, durable, and highly available orchestration engine",
+  url: "https://cadenceworkflow.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

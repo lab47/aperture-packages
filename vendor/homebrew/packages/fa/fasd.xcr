@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fasd",
   version: "1.0.1",
+  description: "CLI tool for quick access to files and directories",
+  url: "https://github.com/clvv/fasd",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

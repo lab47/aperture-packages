@@ -75,6 +75,12 @@ import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" a
 pkg(
   name: "cfn-flip",
   version: "1.2.3",
+  description: "Convert AWS CloudFormation templates between JSON and YAML formats",
+  url: "https://github.com/awslabs/aws-cfn-template-flip",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

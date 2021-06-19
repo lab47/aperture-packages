@@ -61,6 +61,12 @@ import "cmake" as i0, "doxygen" as i1, "boost" as i2, "c-blosc" as i3, "glfw" as
 pkg(
   name: "openvdb",
   version: "8.0.1",
+  description: "Sparse volume processing toolkit",
+  url: "https://www.openvdb.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

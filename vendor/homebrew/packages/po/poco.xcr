@@ -46,6 +46,12 @@ import "cmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "poco",
   version: "1.10.1",
+  description: "C++ class libraries for building network and internet-based applications",
+  url: "https://pocoproject.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

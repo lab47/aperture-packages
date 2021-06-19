@@ -131,6 +131,12 @@ import "berkeley-db@4" as i0, "openssl@1.1" as i1, "pcre" as i2
 pkg(
   name: "exim",
   version: "4.94.2",
+  description: "Complete replacement for sendmail",
+  url: "https://exim.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -45,6 +45,12 @@ import "openjdk" as i0
 pkg(
   name: "picard-tools",
   version: "2.25.5",
+  description: "Tools for manipulating HTS data and formats",
+  url: "https://broadinstitute.github.io/picard/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

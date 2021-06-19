@@ -67,6 +67,12 @@ import "m4" as i0, "perl" as i1
 pkg(
   name: "autoconf@2.69",
   version: "2.69",
+  description: "Automatic configure script builder",
+  url: "https://www.gnu.org/software/autoconf",
+  metadata: %{
+    "license": "GPL-3.0-or-later and (GPL-3.0-or-later with Autoconf-exception-3.0)",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

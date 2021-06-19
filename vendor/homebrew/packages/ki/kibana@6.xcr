@@ -97,6 +97,12 @@ import "yarn" as i0, "node@10" as i1
 pkg(
   name: "kibana@6",
   version: "6.8.12",
+  description: "Analytics and search dashboard for Elasticsearch",
+  url: "https://www.elastic.co/products/kibana",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

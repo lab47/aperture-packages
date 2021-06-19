@@ -47,6 +47,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "fnm",
   version: "1.25.0",
+  description: "Fast and simple Node.js version manager",
+  url: "https://fnm.vercel.app",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

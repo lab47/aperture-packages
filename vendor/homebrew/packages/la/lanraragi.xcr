@@ -131,6 +131,12 @@ import "pkg-config" as i0, "cpanminus" as i1, "ghostscript" as i2, "giflib" as i
 pkg(
   name: "lanraragi",
   version: "0.7.9",
+  description: "Web application for archival and reading of manga/doujinshi",
+  url: "https://github.com/Difegue/LANraragi",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {

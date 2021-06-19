@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libdiscid",
   version: "0.6.2",
+  description: "C library for creating MusicBrainz and freedb disc IDs",
+  url: "https://musicbrainz.org/doc/libdiscid",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

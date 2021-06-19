@@ -48,6 +48,12 @@ import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "glib" as i3, "mys
 pkg(
   name: "mydumper",
   version: "0.10.5",
+  description: "How MySQL DBA & support engineer would imagine 'mysqldump' ;-)",
+  url: "https://launchpad.net/mydumper",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

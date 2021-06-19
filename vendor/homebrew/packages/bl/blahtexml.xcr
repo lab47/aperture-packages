@@ -62,6 +62,12 @@ import "xerces-c" as i0
 pkg(
   name: "blahtexml",
   version: "0.9",
+  description: "Converts equations into Math ML",
+  url: "http://gva.noekeon.org/blahtexml/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

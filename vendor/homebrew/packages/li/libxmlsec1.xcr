@@ -72,6 +72,12 @@ import "pkg-config" as i0, "gnutls" as i1, "libgcrypt" as i2, "libxml2" as i3, "
 pkg(
   name: "libxmlsec1",
   version: "1.2.32",
+  description: "XML security library",
+  url: "https://www.aleksey.com/xmlsec/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

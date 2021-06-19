@@ -60,6 +60,12 @@ import "avro-c" as i0, "jansson" as i1, "curl" as i2
 pkg(
   name: "libserdes",
   version: "6.2.0",
+  description: "Schema ser/deserializer lib for Avro + Confluent Schema Registry",
+  url: "https://github.com/confluentinc/libserdes",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

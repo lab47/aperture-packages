@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cronolog",
   version: "1.6.2",
+  description: "Web log rotation",
+  url: "https://web.archive.org/web/20140209202032/cronolog.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

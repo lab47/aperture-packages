@@ -37,6 +37,12 @@ import "node@14" as i0
 pkg(
   name: "mongosh",
   version: "0.15.0",
+  description: "MongoDB Shell to connect, configure, query, and work with your MongoDB database",
+  url: "https://github.com/mongodb-js/mongosh#readme",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

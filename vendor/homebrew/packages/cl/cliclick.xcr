@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cliclick",
   version: "5.0",
+  description: "Tool for emulating mouse and keyboard events",
+  url: "https://www.bluem.net/jump/cliclick/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

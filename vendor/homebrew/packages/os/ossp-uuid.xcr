@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ossp-uuid",
   version: "1.6.2",
+  description: "ISO-C API and CLI for generating UUIDs",
+  url: "https://web.archive.org/web/www.ossp.org/pkg/lib/uuid/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

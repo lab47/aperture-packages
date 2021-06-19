@@ -62,6 +62,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "graphene",
   version: "1.10.6",
+  description: "Thin layer of graphic data types",
+  url: "https://ebassi.github.io/graphene/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

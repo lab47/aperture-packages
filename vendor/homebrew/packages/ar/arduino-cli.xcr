@@ -65,6 +65,12 @@ import "go" as i0
 pkg(
   name: "arduino-cli",
   version: "0.18.3",
+  description: "Arduino command-line interface",
+  url: "https://github.com/arduino/arduino-cli",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

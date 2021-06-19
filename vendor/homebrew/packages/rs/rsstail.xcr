@@ -52,6 +52,12 @@ import "libmrss" as i0
 pkg(
   name: "rsstail",
   version: "2.1",
+  description: "Monitors an RSS feed and emits new entries when detected",
+  url: "https://www.vanheusden.com/rsstail/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

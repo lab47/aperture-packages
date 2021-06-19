@@ -62,6 +62,12 @@ import "portaudio" as i0
 pkg(
   name: "espeak",
   version: "1.48.04",
+  description: "Text to speech, software speech synthesizer",
+  url: "https://espeak.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

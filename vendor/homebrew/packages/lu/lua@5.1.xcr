@@ -182,6 +182,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lua@5.1",
   version: "5.1.5",
+  description: "Powerful, lightweight programming language (v5.1.5)",
+  url: "https://www.lua.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

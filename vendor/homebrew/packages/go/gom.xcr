@@ -69,12 +69,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "expat" as i4, "flex" as i5, "fontconfig" as i6, "freetype" as i7, "gdbm" as i8, "gdk-pixbuf" as i9, "gettext" as i10, "glib" as i11, "gobject-introspection" as i12, "gperf" as i13, "help2man" as i14, "jpeg" as i15, "libffi" as i16, "libpng" as i17, "libpthread-stubs" as i18, "libtiff" as i19, "libx11" as i20, "libxau" as i21, "libxcb" as i22, "libxdmcp" as i23, "libxext" as i24, "libxml2" as i25, "libxrender" as i26, "lzo" as i27, "m4" as i28, "meson" as i29, "mpdecimal" as i30, "ncurses" as i31, "ninja" as i32, "openssl@1.1" as i33, "pcre" as i34, "perl" as i35, "pixman" as i36, "pkg-config" as i37, "python@3.9" as i38, "readline" as i39, "sqlite" as i40, "unzip" as i41, "util-macros" as i42, "xcb-proto" as i43, "xorgproto" as i44, "xtrans" as i45, "xz" as i46, "zip" as i47, "zlib" as i48
+import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.9" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7
 
 pkg(
   name: "gom",
   version: "0.4",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48],
+  description: "GObject wrapper around SQLite",
+  url: "https://wiki.gnome.org/Projects/Gom",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gom.rb"), formula)

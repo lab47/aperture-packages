@@ -39,6 +39,12 @@ import "jack" as i0, "liblo" as i1
 pkg(
   name: "dirt",
   version: "1.1",
+  description: "Experimental sample playback",
+  url: "https://github.com/tidalcycles/Dirt",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

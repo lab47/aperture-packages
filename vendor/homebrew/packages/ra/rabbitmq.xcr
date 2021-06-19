@@ -123,12 +123,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "erlang" as i1, "expat" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libpng" as i6, "libtiff" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "wxmac" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "python@3.9" as i0, "erlang" as i1, "unzip" as i2
 
 pkg(
   name: "rabbitmq",
   version: "3.8.17",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Messaging broker",
+  url: "https://www.rabbitmq.com",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rabbitmq.rb"), formula)

@@ -48,6 +48,12 @@ import "pkg-config" as i0, "libftdi" as i1, "libusb" as i2
 pkg(
   name: "owfs",
   version: "3.2p4",
+  description: "Monitor and control physical environment using Dallas/Maxim 1-wire system",
+  url: "https://owfs.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

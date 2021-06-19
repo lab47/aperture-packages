@@ -48,6 +48,12 @@ import "rust" as i0, "openssl@1.1" as i1
 pkg(
   name: "cargo-audit",
   version: "0.14.1",
+  description: "Audit Cargo.lock files for crates with security vulnerabilities",
+  url: "https://rustsec.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

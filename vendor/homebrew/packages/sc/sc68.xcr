@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sc68",
   version: "2.2.1",
+  description: "Play music originally designed for Atari ST and Amiga computers",
+  url: "http://sc68.atari.org/project.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

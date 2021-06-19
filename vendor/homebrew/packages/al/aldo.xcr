@@ -52,6 +52,12 @@ import "libao" as i0
 pkg(
   name: "aldo",
   version: "0.7.7",
+  description: "Morse code learning tool released under GPL",
+  url: "https://www.nongnu.org/aldo/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

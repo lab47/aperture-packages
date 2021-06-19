@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "brook",
   version: "20210401",
+  description: "Cross-platform strong encryption and not detectable proxy. Zero-Configuration",
+  url: "https://txthinking.github.io/brook/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

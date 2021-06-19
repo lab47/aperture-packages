@@ -60,6 +60,12 @@ import "s-lang" as i0
 pkg(
   name: "jed",
   version: "0.99-19",
+  description: "Powerful editor for programmers",
+  url: "https://www.jedsoft.org/jed/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

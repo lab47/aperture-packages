@@ -46,6 +46,12 @@ import "meson" as i0, "nasm" as i1, "ninja" as i2
 pkg(
   name: "dav1d",
   version: "0.9.0",
+  description: "AV1 decoder targeted to be small and fast",
+  url: "https://code.videolan.org/videolan/dav1d",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "stk",
   version: "4.6.1",
+  description: "Sound Synthesis Toolkit",
+  url: "https://ccrma.stanford.edu/software/stk/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -49,6 +49,12 @@ import "openjdk" as i0, "z3" as i1
 pkg(
   name: "civl",
   version: "1.20-5259",
+  description: "Concurrency Intermediate Verification Language",
+  url: "https://vsl.cis.udel.edu/civl/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -96,6 +96,12 @@ import "glib" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3
 pkg(
   name: "gegl",
   version: "0.4.30",
+  description: "Graph based image processing framework",
+  url: "https://www.gegl.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later and GPL-3.0-or-later and BSD-3-Clause and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

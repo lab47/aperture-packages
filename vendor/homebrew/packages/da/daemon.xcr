@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "daemon",
   version: "0.8",
+  description: "Turn other processes into daemons",
+  url: "http://libslack.org/daemon/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

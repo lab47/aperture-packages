@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "netperf",
   version: "2.7.0",
+  description: "Benchmarks performance of many different types of networking",
+  url: "https://hewlettpackard.github.io/netperf/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

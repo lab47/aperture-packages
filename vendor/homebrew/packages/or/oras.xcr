@@ -59,6 +59,12 @@ import "go" as i0
 pkg(
   name: "oras",
   version: "0.12.0",
+  description: "OCI Registry As Storage",
+  url: "https://github.com/oras-project/oras",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

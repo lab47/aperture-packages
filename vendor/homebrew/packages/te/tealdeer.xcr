@@ -48,6 +48,12 @@ import "rust" as i0
 pkg(
   name: "tealdeer",
   version: "1.4.1",
+  description: "Very fast implementation of tldr in Rust",
+  url: "https://github.com/dbrgn/tealdeer",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

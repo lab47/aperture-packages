@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gitslave",
   version: "2.0.2",
+  description: "Create group of related repos with one as superproject",
+  url: "https://gitslave.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -75,6 +75,12 @@ import "pkg-config" as i0, "libogg" as i1, "openssl@1.1" as i2, "opus" as i3
 pkg(
   name: "opusfile",
   version: "0.12",
+  description: "API for decoding and seeking in .opus files",
+  url: "https://www.opus-codec.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -74,6 +74,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "fdk-aac-encoder",
   version: "1.0.2",
+  description: "Command-line encoder frontend for libfdk-aac",
+  url: "https://github.com/nu774/fdkaac",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

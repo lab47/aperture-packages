@@ -57,6 +57,12 @@ import "sdl" as i0
 pkg(
   name: "quasi88",
   version: "0.6.4",
+  description: "PC-8801 emulator",
+  url: "https://www.eonet.ne.jp/~showtime/quasi88/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

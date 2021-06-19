@@ -58,6 +58,12 @@ import "cmake" as i0, "mysql@5.7" as i1, "pcre" as i2
 pkg(
   name: "falcon",
   version: "0.9.6.8",
+  description: "Multi-paradigm programming language and scripting engine",
+  url: "http://www.falconpl.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

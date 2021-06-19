@@ -154,18 +154,24 @@ index 5c42f21..9e40bac 100755
 +        self.write = open(name, 'w', encoding='utf-8').write
          sys.stderr.write("Writing %s\n" % name)
          if not noheader:
-             self.write("""\
+             self.write(\"\"\"\
 
 """
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gettext" as i3, "libffi" as i4, "libtool" as i5, "libxml2" as i6, "m4" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "libtool" as i0, "python@3.9" as i1, "gettext" as i2
 
 pkg(
   name: "recode",
   version: "3.7.9",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  description: "Convert character set (charsets)",
+  url: "https://github.com/rrthomas/recode",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "recode.rb"), formula)

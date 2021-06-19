@@ -77,6 +77,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "maven" as i3, "apr-
 pkg(
   name: "mesos",
   version: "1.11.0",
+  description: "Apache cluster manager",
+  url: "https://mesos.apache.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "iperf3",
   version: "3.10.1",
+  description: "Update of iperf: measures TCP, UDP, and SCTP bandwidth",
+  url: "https://github.com/esnet/iperf",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

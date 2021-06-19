@@ -38,6 +38,12 @@ import "unzip" as i0
 pkg(
   name: "tfenv",
   version: "2.2.2",
+  description: "Terraform version manager inspired by rbenv",
+  url: "https://github.com/tfutils/tfenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

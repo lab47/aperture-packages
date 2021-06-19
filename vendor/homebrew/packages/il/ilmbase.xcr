@@ -68,6 +68,12 @@ import "cmake" as i0
 pkg(
   name: "ilmbase",
   version: "2.5.5",
+  description: "OpenEXR ILM Base libraries (high dynamic-range image file format)",
+  url: "https://www.openexr.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

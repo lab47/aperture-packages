@@ -61,6 +61,12 @@ import "pkg-config" as i0, "boost" as i1, "yazpp" as i2
 pkg(
   name: "metaproxy",
   version: "1.19.1",
+  description: "Z39.50 proxy and router utilizing Yaz toolkit",
+  url: "https://www.indexdata.com/resources/software/metaproxy",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

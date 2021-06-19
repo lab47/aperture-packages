@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnustep-make",
   version: "2.9.0",
+  description: "Basic GNUstep Makefiles",
+  url: "http://gnustep.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "webarchiver",
   version: "0.10",
+  description: "Allows you to create Safari .webarchive files",
+  url: "https://github.com/newzealandpaul/webarchiver",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nasm",
   version: "2.15.05",
+  description: "Netwide Assembler (NASM) is an 80x86 assembler",
+  url: "https://www.nasm.us/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

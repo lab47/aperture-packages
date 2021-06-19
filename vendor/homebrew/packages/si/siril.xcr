@@ -70,6 +70,12 @@ import "autoconf" as i0, "automake" as i1, "cmake" as i2, "intltool" as i3, "lib
 pkg(
   name: "siril",
   version: "0.99.8.1",
+  description: "Astronomical image processing tool",
+  url: "https://www.siril.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
 
   def install(ctx) {

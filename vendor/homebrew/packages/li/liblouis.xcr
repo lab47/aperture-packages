@@ -53,12 +53,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gettext" as i4, "help2man" as i5, "libffi" as i6, "libxml2" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "perl" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "help2man" as i0, "pkg-config" as i1, "python@3.9" as i2
 
 pkg(
   name: "liblouis",
   version: "3.18.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Open-source braille translator and back-translator",
+  url: "http://liblouis.org",
+  metadata: %{
+    "license": "GPL-3.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "liblouis.rb"), formula)

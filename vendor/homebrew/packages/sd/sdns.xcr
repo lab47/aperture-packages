@@ -71,6 +71,12 @@ import "go" as i0
 pkg(
   name: "sdns",
   version: "1.1.7",
+  description: "Privacy important, fast, recursive dns resolver server with dnssec support",
+  url: "https://sdns.dev",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

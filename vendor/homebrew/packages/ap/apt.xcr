@@ -180,6 +180,12 @@ import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "libxslt" as i3, "pe
 pkg(
   name: "apt",
   version: "1.9.3",
+  description: "Advanced Package Tool",
+  url: "https://wiki.debian.org/apt",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

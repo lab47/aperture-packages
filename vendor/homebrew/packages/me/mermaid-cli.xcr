@@ -58,6 +58,12 @@ import "node" as i0
 pkg(
   name: "mermaid-cli",
   version: "8.10.2",
+  description: "Command-line interface (CLI) for mermaid",
+  url: "https://github.com/mermaid-js/mermaid-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

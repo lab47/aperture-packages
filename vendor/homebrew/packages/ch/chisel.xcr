@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chisel",
   version: "2.0.1",
+  description: "Collection of LLDB commands to assist debugging iOS apps",
+  url: "https://github.com/facebook/chisel",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

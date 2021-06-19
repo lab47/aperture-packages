@@ -59,6 +59,12 @@ import "pkg-config" as i0, "util-macros" as i1, "libx11" as i2, "libxext" as i3,
 pkg(
   name: "libxv",
   version: "1.0.11",
+  description: "X.Org: X Video (Xv) extension",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rake-completion",
   version: "1.0.1",
+  description: "Bash completion for Rake",
+  url: "https://github.com/JoeNyland/rake-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

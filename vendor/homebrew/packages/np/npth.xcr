@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "npth",
   version: "1.6",
+  description: "New GNU portable threads library",
+  url: "https://gnupg.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

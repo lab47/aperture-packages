@@ -40,6 +40,12 @@ import "libsndfile" as i0
 pkg(
   name: "soundpipe",
   version: "1.7.0",
+  description: "Lightweight music DSP library",
+  url: "https://paulbatchelor.github.io/proj/soundpipe.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bbe",
   version: "0.2.2",
+  description: "Sed-like editor for binary files",
+  url: "https://sourceforge.net/projects/bbe-/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

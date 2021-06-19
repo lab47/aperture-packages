@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "wskdeploy",
   version: "1.2.0",
+  description: "Apache OpenWhisk project deployment utility",
+  url: "https://openwhisk.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

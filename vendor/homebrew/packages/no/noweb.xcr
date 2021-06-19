@@ -104,6 +104,12 @@ import "icon" as i0
 pkg(
   name: "noweb",
   version: "2.11b",
+  description: "WEB-like literate-programming tool",
+  url: "https://www.cs.tufts.edu/~nr/noweb/",
+  metadata: %{
+    "license": "Noweb",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

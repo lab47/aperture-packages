@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gdub",
   version: "0.2.0",
+  description: "Gradlew/gradle wrapper",
+  url: "https://www.gdub.rocks/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

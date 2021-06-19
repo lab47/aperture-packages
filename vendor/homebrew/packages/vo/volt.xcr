@@ -51,6 +51,12 @@ import "go" as i0
 pkg(
   name: "volt",
   version: "0.3.7",
+  description: "Meta-level vim package manager",
+  url: "https://github.com/vim-volt/volt",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

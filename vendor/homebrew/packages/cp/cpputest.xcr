@@ -57,6 +57,12 @@ import "cmake" as i0
 pkg(
   name: "cpputest",
   version: "4.0",
+  description: "C /C++ based unit xUnit test framework",
+  url: "https://www.cpputest.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

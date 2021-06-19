@@ -37,6 +37,12 @@ import "rust" as i0
 pkg(
   name: "mdbook",
   version: "0.4.10",
+  description: "Create modern online books from Markdown files",
+  url: "https://rust-lang.github.io/mdBook/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

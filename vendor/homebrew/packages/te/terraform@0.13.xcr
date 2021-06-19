@@ -75,6 +75,12 @@ import "go@1.14" as i0
 pkg(
   name: "terraform@0.13",
   version: "0.13.7",
+  description: "Tool to build, change, and version infrastructure",
+  url: "https://www.terraform.io/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

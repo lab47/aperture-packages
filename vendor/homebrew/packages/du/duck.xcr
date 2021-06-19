@@ -52,6 +52,12 @@ import "ant" as i0, "maven" as i1
 pkg(
   name: "duck",
   version: "7.9.3.35019",
+  description: "Command-line interface for Cyberduck (a multi-protocol file transfer tool)",
+  url: "https://duck.sh/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

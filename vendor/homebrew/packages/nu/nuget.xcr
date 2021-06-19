@@ -36,6 +36,12 @@ import "mono" as i0
 pkg(
   name: "nuget",
   version: "5.9.1",
+  description: "Package manager for Microsoft development platform including .NET",
+  url: "https://www.nuget.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

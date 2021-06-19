@@ -53,6 +53,12 @@ import "asciidoc" as i0, "libxml2" as i1, "libxslt" as i2
 pkg(
   name: "git-remote-hg",
   version: "0.4",
+  description: "Transparent bidirectional bridge between Git and Mercurial",
+  url: "https://github.com/felipec/git-remote-hg",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -74,6 +74,12 @@ import "help2man" as i0
 pkg(
   name: "nim",
   version: "1.4.8",
+  description: "Statically typed compiled systems programming language",
+  url: "https://nim-lang.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

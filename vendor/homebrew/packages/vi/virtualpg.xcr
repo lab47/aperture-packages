@@ -52,6 +52,12 @@ import "libspatialite" as i0, "postgis" as i1
 pkg(
   name: "virtualpg",
   version: "2.0.1",
+  description: "Loadable dynamic extension for SQLite and SpatiaLite",
+  url: "https://www.gaia-gis.it/fossil/virtualpg/index",
+  metadata: %{
+    "license": "MPL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

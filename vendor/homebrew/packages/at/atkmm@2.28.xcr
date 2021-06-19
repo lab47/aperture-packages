@@ -90,6 +90,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "atk" as i3, "glibmm@2.
 pkg(
   name: "atkmm@2.28",
   version: "2.28.2",
+  description: "Official C++ interface for the ATK accessibility toolkit library",
+  url: "https://www.gtkmm.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "cmake" as i0
 pkg(
   name: "fruit",
   version: "3.6.0",
+  description: "Dependency injection framework for C++",
+  url: "https://github.com/google/fruit/wiki",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

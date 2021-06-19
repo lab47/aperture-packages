@@ -19,6 +19,12 @@ import "homebrew-install" as hi
 pkg(
   name: "memcache-top",
   version: "0.6",
+  description: "Grab real-time stats from memcache",
+  url: "https://code.google.com/archive/p/memcache-top/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

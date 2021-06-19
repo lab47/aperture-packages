@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "stdman",
   version: "2020.11.17",
+  description: "Formatted C++11/14/17 stdlib man pages from cppreference.com",
+  url: "https://github.com/jeaye/stdman",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

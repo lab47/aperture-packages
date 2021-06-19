@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "roundup",
   version: "0.0.6",
+  description: "Unit testing tool",
+  url: "https://bmizerany.github.io/roundup",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

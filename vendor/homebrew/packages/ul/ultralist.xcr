@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "ultralist",
   version: "1.7.0",
+  description: "Simple GTD-style task management for the command-line",
+  url: "https://ultralist.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

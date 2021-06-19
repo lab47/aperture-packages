@@ -151,6 +151,12 @@ import "bzip2" as i0, "zlib" as i1
 pkg(
   name: "boost@1.60",
   version: "1.60.0",
+  description: "Collection of portable C++ source libraries",
+  url: "https://www.boost.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lpc21isp",
   version: "1.97",
+  description: "In-circuit programming (ISP) tool for several NXP microcontrollers",
+  url: "https://lpc21isp.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "bash" as i0
 pkg(
   name: "funcoeszz",
   version: "21.1",
+  description: "Dozens of command-line mini-applications (Portuguese)",
+  url: "https://funcoeszz.net/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

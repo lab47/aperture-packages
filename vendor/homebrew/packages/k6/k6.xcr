@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "k6",
   version: "0.32.0",
+  description: "Modern load testing tool, using Go and JavaScript",
+  url: "https://k6.io",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

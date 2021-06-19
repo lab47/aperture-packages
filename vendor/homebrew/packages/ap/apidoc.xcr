@@ -60,6 +60,12 @@ import "node" as i0
 pkg(
   name: "apidoc",
   version: "0.28.1",
+  description: "RESTful web API Documentation Generator",
+  url: "https://apidocjs.com",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

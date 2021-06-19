@@ -39,6 +39,12 @@ import "pkg-config" as i0, "lua" as i1
 pkg(
   name: "lutok",
   version: "0.4",
+  description: "Lightweight C++ API for Lua",
+  url: "https://github.com/jmmv/lutok",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

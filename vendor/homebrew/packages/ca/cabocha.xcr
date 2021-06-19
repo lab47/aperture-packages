@@ -52,6 +52,12 @@ import "crf++" as i0, "mecab" as i1, "mecab-ipadic" as i2
 pkg(
   name: "cabocha",
   version: "0.69",
+  description: "Yet Another Japanese Dependency Structure Analyzer",
+  url: "https://taku910.github.io/cabocha/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

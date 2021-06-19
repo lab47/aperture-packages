@@ -42,6 +42,12 @@ import "snappy" as i0
 pkg(
   name: "snzip",
   version: "1.0.4",
+  description: "Compression/decompression tool based on snappy",
+  url: "https://github.com/kubo/snzip",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

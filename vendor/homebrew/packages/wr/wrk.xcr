@@ -46,6 +46,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "wrk",
   version: "4.1.0",
+  description: "HTTP benchmarking tool",
+  url: "https://github.com/wg/wrk",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

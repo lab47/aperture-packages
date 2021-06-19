@@ -63,6 +63,12 @@ import "ghc" as i0, "haskell-stack" as i1, "xz" as i2
 pkg(
   name: "hadolint",
   version: "2.4.1",
+  description: "Smarter Dockerfile linter to validate best practices",
+  url: "https://github.com/hadolint/hadolint",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

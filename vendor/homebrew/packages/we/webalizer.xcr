@@ -48,6 +48,12 @@ import "berkeley-db" as i0, "gd" as i1, "libpng" as i2
 pkg(
   name: "webalizer",
   version: "2.23-08",
+  description: "Web server log file analysis",
+  url: "https://web.archive.org/web/20200622121953/www.webalizer.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

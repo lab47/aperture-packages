@@ -82,6 +82,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gperftools",
   version: "2.9.1",
+  description: "Multi-threaded malloc() and performance analysis tools",
+  url: "https://github.com/gperftools/gperftools",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

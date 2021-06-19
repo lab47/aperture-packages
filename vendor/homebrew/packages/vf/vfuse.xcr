@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vfuse",
   version: "2.2.6",
+  description: "Convert bootable DMG images for use in VMware Fusion",
+  url: "https://github.com/chilcote/vfuse",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

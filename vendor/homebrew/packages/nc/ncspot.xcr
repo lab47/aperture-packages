@@ -43,12 +43,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "brotli" as i1, "bzip2" as i2, "c-ares" as i3, "cmake" as i4, "curl" as i5, "expat" as i6, "gdbm" as i7, "gettext" as i8, "jemalloc" as i9, "krb5" as i10, "libev" as i11, "libffi" as i12, "libidn2" as i13, "libssh2" as i14, "libunistring" as i15, "libxml2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "nghttp2" as i20, "ninja" as i21, "openldap" as i22, "openssl@1.1" as i23, "pkg-config" as i24, "portaudio" as i25, "python@3.9" as i26, "readline" as i27, "rtmpdump" as i28, "rust" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
+import "python@3.9" as i0, "rust" as i1, "portaudio" as i2
 
 pkg(
   name: "ncspot",
   version: "0.7.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+  description: "Cross-platform ncurses Spotify client written in Rust",
+  url: "https://github.com/hrkfdn/ncspot",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncspot.rb"), formula)

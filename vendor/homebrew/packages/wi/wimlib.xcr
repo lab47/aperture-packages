@@ -70,6 +70,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "libxml2" as i2
 pkg(
   name: "wimlib",
   version: "1.13.4",
+  description: "Library to create, extract, and modify Windows Imaging files",
+  url: "https://wimlib.net/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -54,6 +54,12 @@ import "pkg-config" as i0, "libsndfile" as i1
 pkg(
   name: "libgig",
   version: "4.3.0",
+  description: "Library for Gigasampler and DLS (Downloadable Sounds) Level 1/2 files",
+  url: "https://www.linuxsampler.org/libgig/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

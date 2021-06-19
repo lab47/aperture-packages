@@ -75,6 +75,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lrzsz",
   version: "0.12.20",
+  description: "Tools for zmodem/xmodem/ymodem file transfer",
+  url: "https://www.ohse.de/uwe/software/lrzsz.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

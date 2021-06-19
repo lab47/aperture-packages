@@ -60,6 +60,12 @@ import "openjdk" as i0
 pkg(
   name: "scala@2.12",
   version: "2.12.13",
+  description: "JVM-based programming language",
+  url: "https://www.scala-lang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

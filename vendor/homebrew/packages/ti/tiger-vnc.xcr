@@ -63,6 +63,12 @@ import "cmake" as i0, "fltk" as i1, "gettext" as i2, "gnutls" as i3, "jpeg-turbo
 pkg(
   name: "tiger-vnc",
   version: "1.11.0",
+  description: "High-performance, platform-neutral implementation of VNC",
+  url: "https://tigervnc.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

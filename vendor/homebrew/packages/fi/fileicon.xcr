@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fileicon",
   version: "0.2.4",
+  description: "macOS CLI for managing custom icons for files and folders",
+  url: "https://github.com/mklement0/fileicon",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

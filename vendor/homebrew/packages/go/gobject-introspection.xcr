@@ -60,12 +60,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "expat" as i4, "flex" as i5, "fontconfig" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "glib" as i10, "gperf" as i11, "help2man" as i12, "libffi" as i13, "libpng" as i14, "libpthread-stubs" as i15, "libx11" as i16, "libxau" as i17, "libxcb" as i18, "libxdmcp" as i19, "libxext" as i20, "libxml2" as i21, "libxrender" as i22, "lzo" as i23, "m4" as i24, "meson" as i25, "mpdecimal" as i26, "ncurses" as i27, "ninja" as i28, "openssl@1.1" as i29, "pcre" as i30, "perl" as i31, "pixman" as i32, "pkg-config" as i33, "python@3.9" as i34, "readline" as i35, "sqlite" as i36, "unzip" as i37, "util-macros" as i38, "xcb-proto" as i39, "xorgproto" as i40, "xtrans" as i41, "xz" as i42, "zip" as i43, "zlib" as i44
+import "bison" as i0, "meson" as i1, "ninja" as i2, "cairo" as i3, "glib" as i4, "libffi" as i5, "pkg-config" as i6, "python@3.9" as i7, "flex" as i8
 
 pkg(
   name: "gobject-introspection",
   version: "1.68.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44],
+  description: "Generate introspection data for GObject libraries",
+  url: "https://gi.readthedocs.io/en/latest/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-or-later and MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gobject-introspection.rb"), formula)

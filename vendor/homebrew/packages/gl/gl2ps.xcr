@@ -92,6 +92,12 @@ import "cmake" as i0, "libpng" as i1
 pkg(
   name: "gl2ps",
   version: "1.4.2",
+  description: "OpenGL to PostScript printing library",
+  url: "https://www.geuz.org/gl2ps/",
+  metadata: %{
+    "license": "GL2PS",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

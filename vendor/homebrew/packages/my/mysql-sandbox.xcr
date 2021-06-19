@@ -49,6 +49,12 @@ import "perl" as i0
 pkg(
   name: "mysql-sandbox",
   version: "3.2.17",
+  description: "Install one or more MySQL servers",
+  url: "https://mysqlsandbox.net",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

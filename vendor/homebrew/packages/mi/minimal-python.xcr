@@ -265,6 +265,12 @@ import "pkg-config" as i0, "bzip2" as i1, "libffi" as i2, "zlib" as i3
 pkg(
   name: "minimal-python",
   version: "3.7.2",
+  description: "Interpreted, interactive, object-oriented programming language",
+  url: "https://www.python.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

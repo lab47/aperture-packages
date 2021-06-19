@@ -44,6 +44,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "bat",
   version: "0.18.1",
+  description: "Clone of cat(1) with syntax highlighting and Git integration",
+  url: "https://github.com/sharkdp/bat",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

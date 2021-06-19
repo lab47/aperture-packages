@@ -78,6 +78,12 @@ import "cmake" as i0, "jasper" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as
 pkg(
   name: "devil",
   version: "1.8.0",
+  description: "Cross-platform image library",
+  url: "https://sourceforge.net/projects/openil/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

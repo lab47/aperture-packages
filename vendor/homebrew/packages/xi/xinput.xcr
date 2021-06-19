@@ -52,6 +52,12 @@ import "pkg-config" as i0, "xorgproto" as i1, "libx11" as i2, "libxext" as i3, "
 pkg(
   name: "xinput",
   version: "1.6.3",
+  description: "Utility to configure and test X input devices",
+  url: "https://gitlab.freedesktop.org/xorg/app/xinput",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

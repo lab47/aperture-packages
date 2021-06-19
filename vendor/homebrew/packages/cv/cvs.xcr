@@ -151,6 +151,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "zlib" as i3
 pkg(
   name: "cvs",
   version: "1.12.13",
+  description: "Version control system",
+  url: "https://www.nongnu.org/cvs/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

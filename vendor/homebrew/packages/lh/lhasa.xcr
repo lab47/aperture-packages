@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
 pkg(
   name: "lhasa",
   version: "0.3.1",
+  description: "LHA implementation to decompress .lzh and .lzs archives",
+  url: "https://fragglet.github.io/lhasa/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

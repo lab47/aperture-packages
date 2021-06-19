@@ -42,6 +42,12 @@ import "cmake" as i0
 pkg(
   name: "nu-smv",
   version: "2.6.0",
+  description: "Reimplementation and extension of SMV symbolic model checker",
+  url: "https://nusmv.fbk.eu",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

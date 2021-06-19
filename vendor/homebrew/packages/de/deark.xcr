@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "deark",
   version: "1.5.8",
+  description: "File conversion utility for older formats",
+  url: "https://entropymine.com/deark/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

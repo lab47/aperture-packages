@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pmccabe",
   version: "2.6",
+  description: "Calculate McCabe-style cyclomatic complexity for C/C++ code",
+  url: "https://packages.debian.org/sid/pmccabe",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

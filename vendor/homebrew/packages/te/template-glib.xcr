@@ -75,6 +75,12 @@ import "bison" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" a
 pkg(
   name: "template-glib",
   version: "3.34.0",
+  description: "GNOME templating library for GLib",
+  url: "https://gitlab.gnome.org/GNOME/template-glib",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

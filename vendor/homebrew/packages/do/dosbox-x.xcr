@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "fluid-synth" as 
 pkg(
   name: "dosbox-x",
   version: "0.83.14",
+  description: "DOSBox with accurate emulation and wide testing",
+  url: "https://dosbox-x.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

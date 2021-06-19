@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "timelimit",
   version: "1.9.2",
+  description: "Limit a process's absolute execution time",
+  url: "https://devel.ringlet.net/sysutils/timelimit/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

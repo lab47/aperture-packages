@@ -41,6 +41,12 @@ import "asciidoctor" as i0, "cmake" as i1
 pkg(
   name: "timewarrior",
   version: "1.4.3",
+  description: "Command-line time tracking application",
+  url: "https://timewarrior.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

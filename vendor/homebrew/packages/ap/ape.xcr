@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ape",
   version: "1.1.2",
+  description: "Ajax Push Engine",
+  url: "https://web.archive.org/web/20200810042306/www.ape-project.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

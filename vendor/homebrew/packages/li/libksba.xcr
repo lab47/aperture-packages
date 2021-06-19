@@ -45,6 +45,12 @@ import "libgpg-error" as i0
 pkg(
   name: "libksba",
   version: "1.6.0",
+  description: "X.509 and CMS library",
+  url: "https://www.gnupg.org/related_software/libksba/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later or GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

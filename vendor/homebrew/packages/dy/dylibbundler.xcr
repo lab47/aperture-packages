@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dylibbundler",
   version: "1.0.0",
+  description: "Utility to bundle libraries into executables for macOS",
+  url: "https://github.com/auriamg/macdylibbundler",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

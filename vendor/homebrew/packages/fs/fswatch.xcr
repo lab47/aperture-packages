@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fswatch",
   version: "1.16.0",
+  description: "Monitor a directory for changes and run a shell command",
+  url: "https://github.com/emcrisostomo/fswatch",
+  metadata: %{
+    "license": "GPL-3.0-or-later and Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

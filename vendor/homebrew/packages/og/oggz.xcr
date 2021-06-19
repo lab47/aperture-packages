@@ -42,6 +42,12 @@ import "pkg-config" as i0, "libogg" as i1
 pkg(
   name: "oggz",
   version: "1.1.1",
+  description: "Command-line tool for manipulating Ogg files",
+  url: "https://www.xiph.org/oggz/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

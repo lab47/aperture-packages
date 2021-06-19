@@ -40,6 +40,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1
 pkg(
   name: "shairport",
   version: "1.1.1",
+  description: "Airtunes emulator",
+  url: "https://github.com/abrasive/shairport",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

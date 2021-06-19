@@ -37,6 +37,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "getxbook",
   version: "1.2",
+  description: "Tools to download ebooks from various sources",
+  url: "https://njw.name/getxbook",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

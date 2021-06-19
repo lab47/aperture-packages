@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "esniper",
   version: "2.35.0",
+  description: "Snipe eBay auctions from the command-line",
+  url: "https://sourceforge.net/projects/esniper/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

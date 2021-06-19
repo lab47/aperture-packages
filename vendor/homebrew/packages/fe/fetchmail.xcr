@@ -48,6 +48,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "fetchmail",
   version: "6.4.19",
+  description: "Client for fetching mail from POP, IMAP, ETRN or ODMR-capable servers",
+  url: "https://www.fetchmail.info/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and ISC and BSD-3-Clause and Public Domain and (GPL-2.0-or-later with openvpn-openssl-exception)",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

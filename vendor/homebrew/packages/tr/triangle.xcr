@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "triangle",
   version: "1.2.3",
+  description: "Convert images to computer generated art using Delaunay triangulation",
+  url: "https://github.com/esimov/triangle",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

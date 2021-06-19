@@ -72,6 +72,12 @@ import "cmake" as i0
 pkg(
   name: "msgpuck",
   version: "2.0",
+  description: "Simple and efficient MsgPack binary serialization library",
+  url: "https://rtsisyk.github.io/msgpuck/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

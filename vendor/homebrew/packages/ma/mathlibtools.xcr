@@ -150,12 +150,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "coreutils" as i2, "expat" as i3, "gdbm" as i4, "gmp" as i5, "gperf" as i6, "jemalloc" as i7, "lean" as i8, "libffi" as i9, "m4" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.7" as i15, "python@3.8" as i16, "python@3.9" as i17, "readline" as i18, "six" as i19, "sphinx-doc" as i20, "sqlite" as i21, "tcl-tk" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "six" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
 
 pkg(
   name: "mathlibtools",
   version: "1.0.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  description: "Lean prover mathlib supporting tools",
+  url: "https://pypi.org/project/mathlibtools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mathlibtools.rb"), formula)

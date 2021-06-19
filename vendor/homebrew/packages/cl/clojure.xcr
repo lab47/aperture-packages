@@ -44,6 +44,12 @@ import "openjdk" as i0, "rlwrap" as i1, "ruby" as i2
 pkg(
   name: "clojure",
   version: "1.10.3.855",
+  description: "Dynamic, general-purpose programming language",
+  url: "https://clojure.org",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

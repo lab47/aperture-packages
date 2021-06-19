@@ -61,6 +61,12 @@ import "gmp" as i0
 pkg(
   name: "glpk",
   version: "5.0",
+  description: "Library for Linear and Mixed-Integer Programming",
+  url: "https://www.gnu.org/software/glpk/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

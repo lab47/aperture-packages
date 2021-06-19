@@ -23,6 +23,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mix-completion",
   version: "0.8.2",
+  description: "Elixir Mix completion plus shortcuts/colors",
+  url: "https://github.com/davidhq/mix-power-completion",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

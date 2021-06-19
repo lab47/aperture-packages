@@ -89,12 +89,18 @@ index 0d3f464bc..b9f210cde 100644
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cairo" as i3, "cmake" as i4, "expat" as i5, "flex" as i6, "fontconfig" as i7, "freetype" as i8, "fribidi" as i9, "gdbm" as i10, "gettext" as i11, "giflib" as i12, "glib" as i13, "gobject-introspection" as i14, "gperf" as i15, "graphite2" as i16, "harfbuzz" as i17, "help2man" as i18, "icu4c" as i19, "jpeg" as i20, "libffi" as i21, "libpng" as i22, "libpthread-stubs" as i23, "libspiro" as i24, "libtiff" as i25, "libtool" as i26, "libuninameslist" as i27, "libx11" as i28, "libxau" as i29, "libxcb" as i30, "libxdmcp" as i31, "libxext" as i32, "libxml2" as i33, "libxrender" as i34, "lzo" as i35, "m4" as i36, "meson" as i37, "mpdecimal" as i38, "ncurses" as i39, "ninja" as i40, "openssl@1.1" as i41, "pango" as i42, "pcre" as i43, "perl" as i44, "pixman" as i45, "pkg-config" as i46, "python@3.9" as i47, "readline" as i48, "sphinx-doc" as i49, "sqlite" as i50, "unzip" as i51, "util-macros" as i52, "xcb-proto" as i53, "xorgproto" as i54, "xtrans" as i55, "xz" as i56, "zip" as i57, "zlib" as i58
+import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "giflib" as i7, "glib" as i8, "jpeg" as i9, "libpng" as i10, "libspiro" as i11, "libtiff" as i12, "libtool" as i13, "libuninameslist" as i14, "pango" as i15, "python@3.9" as i16, "readline" as i17, "libxml2" as i18
 
 pkg(
   name: "fontforge",
   version: "20201107",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58],
+  description: "Command-line outline and bitmap font editor/converter",
+  url: "https://fontforge.github.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fontforge.rb"), formula)

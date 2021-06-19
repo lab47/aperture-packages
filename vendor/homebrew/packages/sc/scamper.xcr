@@ -38,6 +38,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1
 pkg(
   name: "scamper",
   version: "20210324",
+  description: "Advanced traceroute and network measurement utility",
+  url: "https://www.caida.org/tools/measurement/scamper/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

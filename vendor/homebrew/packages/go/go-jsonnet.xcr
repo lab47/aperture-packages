@@ -63,6 +63,12 @@ import "go" as i0
 pkg(
   name: "go-jsonnet",
   version: "0.17.0",
+  description: "Go implementation of configuration language for defining JSON data",
+  url: "https://jsonnet.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -58,6 +58,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "freealut",
   version: "1.1.0",
+  description: "Implementation of OpenAL's ALUT standard",
+  url: "https://github.com/vancegroup/freealut",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

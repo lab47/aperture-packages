@@ -70,6 +70,12 @@ import "readline" as i0
 pkg(
   name: "gnu-apl",
   version: "1.8",
+  description: "GNU implementation of the programming language APL",
+  url: "https://www.gnu.org/software/apl/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -74,6 +74,12 @@ import "homebrew-install" as hi
 pkg(
   name: "parrot",
   version: "8.1.0",
+  description: "Open source virtual machine (for Perl6, et al.)",
+  url: "http://www.parrot.org/",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

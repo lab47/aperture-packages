@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "openhmd",
   version: "0.3.0",
+  description: "Free and open source API and drivers for immersive technology",
+  url: "http://openhmd.net",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

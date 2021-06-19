@@ -68,6 +68,12 @@ import "rust" as i0
 pkg(
   name: "dprint",
   version: "0.15.0",
+  description: "Pluggable and configurable code formatting platform written in Rust",
+  url: "https://dprint.dev/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

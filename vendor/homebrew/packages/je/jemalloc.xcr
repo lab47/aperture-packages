@@ -79,6 +79,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jemalloc",
   version: "5.2.1",
+  description: "Implementation of malloc emphasizing fragmentation avoidance",
+  url: "http://jemalloc.net/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

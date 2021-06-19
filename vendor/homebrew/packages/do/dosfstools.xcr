@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "pkg-config" as i3
 pkg(
   name: "dosfstools",
   version: "4.2",
+  description: "Tools to create, check and label file systems of the FAT family",
+  url: "https://github.com/dosfstools",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

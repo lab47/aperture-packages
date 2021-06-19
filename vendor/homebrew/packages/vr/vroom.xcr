@@ -43,6 +43,12 @@ import "pkg-config" as i0, "asio" as i1, "openssl@1.1" as i2
 pkg(
   name: "vroom",
   version: "1.10.0",
+  description: "Vehicle Routing Open-Source Optimization Machine",
+  url: "http://vroom-project.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

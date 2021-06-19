@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libyubikey",
   version: "1.13",
+  description: "C library for manipulating Yubico one-time passwords",
+  url: "https://yubico.github.io/yubico-c/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

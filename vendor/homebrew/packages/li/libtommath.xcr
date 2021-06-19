@@ -50,6 +50,12 @@ import "libtool" as i0
 pkg(
   name: "libtommath",
   version: "1.2.0",
+  description: "C library for number theoretic multiple-precision integers",
+  url: "https://www.libtom.net/LibTomMath/",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

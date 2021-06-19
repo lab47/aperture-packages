@@ -42,6 +42,12 @@ import "gd" as i0
 pkg(
   name: "libpuzzle",
   version: "0.11",
+  description: "Library to find visually similar images",
+  url: "https://www.pureftpd.org/project/libpuzzle",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

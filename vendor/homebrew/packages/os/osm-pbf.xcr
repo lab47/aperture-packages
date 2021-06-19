@@ -40,6 +40,12 @@ import "cmake" as i0, "protobuf" as i1, "zlib" as i2
 pkg(
   name: "osm-pbf",
   version: "1.5.0",
+  description: "Tools related to PBF (an alternative to XML format)",
+  url: "https://wiki.openstreetmap.org/wiki/PBF_Format",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

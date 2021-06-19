@@ -65,6 +65,12 @@ import "go" as i0
 pkg(
   name: "confd",
   version: "0.16.0",
+  description: "Manage local application configuration files using templates",
+  url: "https://github.com/kelseyhightower/confd",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

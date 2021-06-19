@@ -43,12 +43,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "bzip2" as i4, "cmake" as i5, "expat" as i6, "flac" as i7, "flex" as i8, "fluid-synth" as i9, "gdbm" as i10, "gettext" as i11, "glib" as i12, "gperf" as i13, "help2man" as i14, "libffi" as i15, "liblo" as i16, "libmagic" as i17, "libogg" as i18, "libsndfile" as i19, "libtool" as i20, "libvorbis" as i21, "libxml2" as i22, "m4" as i23, "meson" as i24, "mpdecimal" as i25, "ncurses" as i26, "ninja" as i27, "openssl@1.1" as i28, "opus" as i29, "pcre" as i30, "perl" as i31, "pkg-config" as i32, "portaudio" as i33, "pyqt-builder" as i34, "pyqt@5" as i35, "python@3.9" as i36, "qt@5" as i37, "readline" as i38, "sip" as i39, "sphinx-doc" as i40, "sqlite" as i41, "unzip" as i42, "xz" as i43, "zip" as i44, "zlib" as i45
+import "pkg-config" as i0, "fluid-synth" as i1, "liblo" as i2, "libmagic" as i3, "pyqt@5" as i4, "python@3.9" as i5
 
 pkg(
   name: "carla",
   version: "2.3.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45],
+  description: "Audio plugin host supporting LADSPA, LV2, VST2/3, SF2 and more",
+  url: "https://kxstudio.linuxaudio.org/Applications:Carla",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "carla.rb"), formula)

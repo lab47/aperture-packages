@@ -35,6 +35,12 @@ import "numactl" as i0, "userspace-rcu" as i1
 pkg(
   name: "lttng-ust",
   version: "2.12.2",
+  description: "Linux Trace Toolkit Next Generation Userspace Tracer",
+  url: "https://lttng.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only and MIT and GPL-2.0-only and BSD-3-Clause and BSD-2-Clause and GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

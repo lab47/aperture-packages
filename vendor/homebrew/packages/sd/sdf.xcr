@@ -222,6 +222,12 @@ import "pkg-config" as i0, "aterm" as i1
 pkg(
   name: "sdf",
   version: "2.6.3",
+  description: "Syntax Definition Formalism: high-level description of grammars",
+  url: "https://strategoxt.org/Sdf/WebHome",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

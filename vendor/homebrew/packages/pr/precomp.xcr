@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "precomp",
   version: "0.4.7",
+  description: "Command-line precompressor to achieve better compression",
+  url: "http://schnaader.info/precomp.php",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "pkg-config" as i0, "serd" as i1, "zlib" as i2
 pkg(
   name: "hdt",
   version: "1.3.3",
+  description: "Header Dictionary Triples (HDT) is a compression format for RDF data",
+  url: "https://github.com/rdfhdt/hdt-cpp",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

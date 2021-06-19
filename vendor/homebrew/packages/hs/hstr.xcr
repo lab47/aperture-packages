@@ -43,6 +43,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "hstr",
   version: "2.3",
+  description: "Bash and zsh history suggest box",
+  url: "https://github.com/dvorka/hstr",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

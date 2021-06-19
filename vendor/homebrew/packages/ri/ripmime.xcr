@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ripmime",
   version: "1.4.0.10",
+  description: "Extract attachments out of MIME encoded email packages",
+  url: "https://pldaniels.com/ripmime/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

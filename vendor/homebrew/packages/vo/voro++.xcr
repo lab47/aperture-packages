@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "voro++",
   version: "0.4.6",
+  description: "3D Voronoi cell software library",
+  url: "http://math.lbl.gov/voro++",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

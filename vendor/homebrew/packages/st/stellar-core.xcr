@@ -63,6 +63,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pandoc" as i3, "pkg
 pkg(
   name: "stellar-core",
   version: "17.1.0",
+  description: "Backbone of the Stellar (XLM) network",
+  url: "https://www.stellar.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "xz" as i3, "zlib" a
 pkg(
   name: "termrec",
   version: "0.19",
+  description: "Record videos of terminal output",
+  url: "https://angband.pl/termrec.html",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -86,6 +86,12 @@ import "go" as i0
 pkg(
   name: "piknik",
   version: "0.10.1",
+  description: "Copy/paste anything over the network",
+  url: "https://github.com/jedisct1/piknik",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

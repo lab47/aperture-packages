@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gsar",
   version: "1.21",
+  description: "General Search And Replace on files",
+  url: "http://tjaberg.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

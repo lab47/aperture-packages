@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "wireguard-go",
   version: "0.0.20210424",
+  description: "Userspace Go implementation of WireGuard",
+  url: "https://www.wireguard.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "cmake" as i0, "openssl@1.1" as i1
 pkg(
   name: "amqp-cpp",
   version: "4.3.12",
+  description: "C++ library for communicating with a RabbitMQ message broker",
+  url: "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "openjdk@8" as i0
 pkg(
   name: "blazegraph",
   version: "2.1.5",
+  description: "Graph database supporting RDF data model, Sesame, and Blueprint APIs",
+  url: "https://www.blazegraph.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

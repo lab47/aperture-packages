@@ -62,6 +62,12 @@ import "cmake" as i0
 pkg(
   name: "cmocka",
   version: "1.1.5",
+  description: "Unit testing framework for C",
+  url: "https://cmocka.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

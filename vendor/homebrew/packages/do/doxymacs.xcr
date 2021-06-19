@@ -67,6 +67,12 @@ import "doxygen" as i0, "emacs" as i1
 pkg(
   name: "doxymacs",
   version: "1.8.0",
+  description: "Elisp package for using doxygen under Emacs",
+  url: "https://doxymacs.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

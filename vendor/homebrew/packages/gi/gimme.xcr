@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gimme",
   version: "1.5.4",
+  description: "Shell script to install any Go version",
+  url: "https://github.com/travis-ci/gimme",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

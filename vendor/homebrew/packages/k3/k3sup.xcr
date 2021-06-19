@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "k3sup",
   version: "0.11.0",
+  description: "Utility to create k3s clusters on any local or remote VM",
+  url: "https://k3sup.dev",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

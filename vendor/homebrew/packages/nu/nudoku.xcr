@@ -44,6 +44,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gettext" as i3, 
 pkg(
   name: "nudoku",
   version: "2.1.0",
+  description: "Ncurses based sudoku game",
+  url: "https://jubalh.github.io/nudoku/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -78,6 +78,12 @@ import "go" as i0
 pkg(
   name: "dockward",
   version: "0.0.4",
+  description: "Port forwarding tool for Docker containers",
+  url: "https://github.com/abiosoft/dockward",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

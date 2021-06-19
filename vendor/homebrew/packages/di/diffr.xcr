@@ -40,6 +40,12 @@ import "rust" as i0
 pkg(
   name: "diffr",
   version: "0.1.4",
+  description: "LCS based diff highlighting tool to ease code review from your terminal",
+  url: "https://github.com/mookid/diffr",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

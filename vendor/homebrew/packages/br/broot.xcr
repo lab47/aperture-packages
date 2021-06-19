@@ -68,6 +68,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "broot",
   version: "1.5.1",
+  description: "New way to see and navigate directory trees",
+  url: "https://dystroy.org/broot/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

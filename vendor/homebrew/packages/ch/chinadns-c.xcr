@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chinadns-c",
   version: "1.3.2",
+  description: "Port of ChinaDNS to C: fix irregularities with DNS in China",
+  url: "https://github.com/shadowsocks/ChinaDNS",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

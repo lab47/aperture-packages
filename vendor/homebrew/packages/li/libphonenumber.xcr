@@ -70,6 +70,12 @@ import "cmake" as i0, "googletest" as i1, "boost" as i2, "icu4c" as i3, "protobu
 pkg(
   name: "libphonenumber",
   version: "8.12.24",
+  description: "C++ Phone Number library by Google",
+  url: "https://github.com/google/libphonenumber",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

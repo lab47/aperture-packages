@@ -38,6 +38,12 @@ import "libgcrypt" as i0
 pkg(
   name: "gsasl",
   version: "1.10.0",
+  description: "SASL library command-line interface",
+  url: "https://www.gnu.org/software/gsasl/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

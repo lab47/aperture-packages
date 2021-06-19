@@ -62,6 +62,12 @@ import "zeromq" as i0, "sqlite" as i1
 pkg(
   name: "mongrel2",
   version: "1.11.0",
+  description: "Application, language, and network architecture agnostic web server",
+  url: "https://mongrel2.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

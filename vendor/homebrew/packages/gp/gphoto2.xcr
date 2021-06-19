@@ -45,6 +45,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libgphoto2" as i2, "popt" as i3, "read
 pkg(
   name: "gphoto2",
   version: "2.5.27",
+  description: "Command-line interface to libgphoto2",
+  url: "http://www.gphoto.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

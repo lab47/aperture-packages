@@ -56,12 +56,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libssh2" as i17, "libtool" as i18, "libunistring" as i19, "libxml2" as i20, "m4" as i21, "mpdecimal" as i22, "ncurses" as i23, "nghttp2" as i24, "ninja" as i25, "openldap" as i26, "openssl@1.1" as i27, "perl" as i28, "pkg-config" as i29, "python@3.9" as i30, "readline" as i31, "rtmpdump" as i32, "sphinx-doc" as i33, "sqlite" as i34, "unzip" as i35, "xz" as i36, "zip" as i37, "zlib" as i38, "zstd" as i39
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "openssl@1.1" as i4, "python@3.9" as i5, "curl" as i6, "expat" as i7
 
 pkg(
   name: "afflib",
   version: "3.7.19",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
+  description: "Advanced Forensic Format",
+  url: "https://github.com/sshock/AFFLIBv3",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "afflib.rb"), formula)

@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "drake",
   version: "1.0.3",
+  description: "Data workflow tool meant to be 'make for data'",
+  url: "https://github.com/Factual/drake",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

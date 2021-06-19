@@ -39,6 +39,12 @@ import "asciidoc" as i0, "docbook" as i1
 pkg(
   name: "cvsps",
   version: "3.13",
+  description: "Create patchset information from CVS",
+  url: "http://www.catb.org/~esr/cvsps/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

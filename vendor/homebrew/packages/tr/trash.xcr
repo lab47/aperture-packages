@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "trash",
   version: "0.9.2",
+  description: "CLI tool that moves files or folder to the trash",
+  url: "https://hasseg.org/trash/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

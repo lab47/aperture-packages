@@ -114,6 +114,12 @@ import "pkg-config" as i0, "ldns" as i1, "libfido2" as i2, "openssl@1.1" as i3, 
 pkg(
   name: "openssh",
   version: "8.6p1",
+  description: "OpenBSD freely-licensed SSH connectivity tools",
+  url: "https://www.openssh.com/",
+  metadata: %{
+    "license": "SSH-OpenSSH",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

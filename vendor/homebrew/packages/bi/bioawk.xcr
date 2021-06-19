@@ -48,6 +48,12 @@ import "bison" as i0, "zlib" as i1
 pkg(
   name: "bioawk",
   version: "1.0",
+  description: "AWK modified for biological data",
+  url: "https://github.com/lh3/bioawk",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

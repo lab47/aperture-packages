@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "entityx",
   version: "1.3.0",
+  description: "Fast, type-safe C++ Entity Component System",
+  url: "https://github.com/alecthomas/entityx",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

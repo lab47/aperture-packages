@@ -68,6 +68,12 @@ import "pkg-config" as i0, "bdw-gc" as i1, "openssl@1.1" as i2, "ncurses" as i3,
 pkg(
   name: "w3m",
   version: "0.5.3",
+  description: "Pager/text based browser",
+  url: "https://w3m.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

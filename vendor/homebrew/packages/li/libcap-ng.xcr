@@ -49,12 +49,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libtool" as i7, "libyaml" as i8, "m4" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pcre" as i13, "perl" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "ruby" as i18, "sqlite" as i19, "swig" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "python@3.9" as i3, "swig" as i4, "m4" as i5
 
 pkg(
   name: "libcap-ng",
   version: "0.8.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
+  description: "Library for Linux that makes using posix capabilities easy",
+  url: "https://people.redhat.com/sgrubb/libcap-ng",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libcap-ng.rb"), formula)

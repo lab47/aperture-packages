@@ -42,6 +42,12 @@ import "node" as i0
 pkg(
   name: "jsonlint",
   version: "1.6.0",
+  description: "JSON parser and validator with a CLI",
+  url: "https://github.com/zaach/jsonlint",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

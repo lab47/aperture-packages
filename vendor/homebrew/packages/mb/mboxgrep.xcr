@@ -42,6 +42,12 @@ import "pcre" as i0
 pkg(
   name: "mboxgrep",
   version: "0.7.9",
+  description: "Scan a mailbox for messages matching a regular expression",
+  url: "https://datatipp.se/mboxgrep/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

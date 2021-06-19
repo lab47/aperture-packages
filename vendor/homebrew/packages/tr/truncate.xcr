@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "truncate",
   version: "0.9",
+  description: "Truncates a file to a given size",
+  url: "https://www.vanheusden.com/truncate/",
+  metadata: %{
+    "license": "AGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

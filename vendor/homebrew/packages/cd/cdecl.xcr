@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cdecl",
   version: "2.5",
+  description: "Turn English phrases to C or C++ declarations",
+  url: "https://cdecl.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

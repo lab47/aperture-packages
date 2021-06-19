@@ -37,6 +37,12 @@ import "cmake" as i0, "ffmpeg" as i1
 pkg(
   name: "chromaprint",
   version: "1.5.0",
+  description: "Core component of the AcoustID project (Audio fingerprinting)",
+  url: "https://acoustid.org/chromaprint",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

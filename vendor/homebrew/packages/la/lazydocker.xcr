@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "lazydocker",
   version: "0.12",
+  description: "Lazier way to manage everything docker",
+  url: "https://github.com/jesseduffield/lazydocker",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

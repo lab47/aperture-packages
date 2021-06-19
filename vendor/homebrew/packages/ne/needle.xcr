@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "needle",
   version: "0.17.2",
+  description: "Compile-time safe Swift dependency injection framework with real code",
+  url: "https://github.com/uber/needle",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

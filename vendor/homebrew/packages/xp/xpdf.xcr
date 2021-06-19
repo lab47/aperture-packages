@@ -48,6 +48,12 @@ import "cmake" as i0, "fontconfig" as i1, "freetype" as i2, "qt@5" as i3
 pkg(
   name: "xpdf",
   version: "4.03",
+  description: "PDF viewer",
+  url: "https://www.xpdfreader.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

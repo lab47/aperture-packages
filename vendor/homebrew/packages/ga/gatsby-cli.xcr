@@ -41,6 +41,12 @@ import "node" as i0
 pkg(
   name: "gatsby-cli",
   version: "3.7.0",
+  description: "Gatsby command-line interface",
+  url: "https://www.gatsbyjs.org/docs/gatsby-cli/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

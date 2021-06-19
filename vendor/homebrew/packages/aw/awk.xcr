@@ -47,6 +47,12 @@ import "bison" as i0
 pkg(
   name: "awk",
   version: "20180827",
+  description: "Text processing scripting language",
+  url: "https://www.cs.princeton.edu/~bwk/btl.mirror/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

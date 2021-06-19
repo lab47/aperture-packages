@@ -26,6 +26,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mussh",
   version: "1.0",
+  description: "Multi-host SSH wrapper",
+  url: "https://mussh.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ace",
   version: "7.0.2",
+  description: "ADAPTIVE Communication Environment: OO network programming in C++",
+  url: "https://www.dre.vanderbilt.edu/~schmidt/ACE.html",
+  metadata: %{
+    "license": "DOC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

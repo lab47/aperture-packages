@@ -106,6 +106,12 @@ import "rtmpdump" as i0, "perl" as i1
 pkg(
   name: "get-flash-videos",
   version: "1.25.99.03",
+  description: "Download or play videos from various Flash-based websites",
+  url: "https://github.com/monsieurvideo/get-flash-videos",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

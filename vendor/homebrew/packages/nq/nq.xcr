@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nq",
   version: "0.4",
+  description: "Unix command-line queue utility",
+  url: "https://github.com/chneukirchen/nq",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

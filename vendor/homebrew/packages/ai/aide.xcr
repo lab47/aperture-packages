@@ -79,6 +79,12 @@ import "pkg-config" as i0, "libgcrypt" as i1, "libgpg-error" as i2, "pcre" as i3
 pkg(
   name: "aide",
   version: "0.17.3",
+  description: "File and directory integrity checker",
+  url: "https://aide.github.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

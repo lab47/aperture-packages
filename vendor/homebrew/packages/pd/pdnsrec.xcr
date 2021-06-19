@@ -78,6 +78,12 @@ import "pkg-config" as i0, "boost" as i1, "lua" as i2, "openssl@1.1" as i3
 pkg(
   name: "pdnsrec",
   version: "4.5.2",
+  description: "Non-authoritative/recursing DNS server",
+  url: "https://www.powerdns.com/recursor.html",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

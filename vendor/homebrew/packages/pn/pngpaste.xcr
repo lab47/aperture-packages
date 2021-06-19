@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pngpaste",
   version: "0.2.3",
+  description: "Paste PNG into files",
+  url: "https://github.com/jcsalterego/pngpaste",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

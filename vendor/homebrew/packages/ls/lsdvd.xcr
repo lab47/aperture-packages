@@ -39,6 +39,12 @@ import "pkg-config" as i0, "libdvdcss" as i1, "libdvdread" as i2
 pkg(
   name: "lsdvd",
   version: "0.17",
+  description: "Read the content info of a DVD",
+  url: "https://sourceforge.net/projects/lsdvd",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

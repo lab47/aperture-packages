@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "git-bug",
   version: "0.7.2",
+  description: "Distributed, offline-first bug tracker embedded in git, with bridges",
+  url: "https://github.com/MichaelMure/git-bug",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

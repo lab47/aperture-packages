@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "lab",
   version: "0.22.0",
+  description: "Git wrapper for GitLab",
+  url: "https://zaquestion.github.io/lab",
+  metadata: %{
+    "license": "CC0-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

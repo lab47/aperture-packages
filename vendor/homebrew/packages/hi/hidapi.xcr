@@ -63,6 +63,12 @@ import "autoconf@2.69" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as
 pkg(
   name: "hidapi",
   version: "0.10.1",
+  description: "Library for communicating with USB and Bluetooth HID devices",
+  url: "https://github.com/libusb/hidapi",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -348,6 +348,12 @@ import "cmake" as i0, "gcc" as i1, "openblas" as i2
 pkg(
   name: "openfast",
   version: "2.6.0",
+  description: "NREL-supported OpenFAST whole-turbine simulation code",
+  url: "https://openfast.readthedocs.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

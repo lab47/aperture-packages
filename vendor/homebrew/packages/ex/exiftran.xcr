@@ -51,6 +51,12 @@ import "pkg-config" as i0, "jpeg" as i1, "libexif" as i2, "pixman" as i3
 pkg(
   name: "exiftran",
   version: "2.14",
+  description: "Transform digital camera jpegs and their EXIF data",
+  url: "https://www.kraxel.org/blog/linux/fbida/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

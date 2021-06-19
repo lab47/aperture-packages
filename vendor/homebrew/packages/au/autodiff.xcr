@@ -42,6 +42,12 @@ import "cmake" as i0, "eigen" as i1
 pkg(
   name: "autodiff",
   version: "0.5.13",
+  description: "Automatic differentiation made easier for C++",
+  url: "https://autodiff.github.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

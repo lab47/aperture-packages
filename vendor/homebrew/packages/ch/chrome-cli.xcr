@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chrome-cli",
   version: "1.7.1",
+  description: "Control Google Chrome from the command-line",
+  url: "https://github.com/prasmussen/chrome-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

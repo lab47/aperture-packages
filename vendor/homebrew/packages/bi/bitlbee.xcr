@@ -116,6 +116,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "gnutls" as i3, "libgc
 pkg(
   name: "bitlbee",
   version: "3.6",
+  description: "IRC to other chat networks gateway",
+  url: "https://www.bitlbee.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

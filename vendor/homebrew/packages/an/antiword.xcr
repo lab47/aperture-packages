@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "antiword",
   version: "0.37",
+  description: "Utility to read Word (.doc) files",
+  url: "http://www.winfield.demon.nl/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

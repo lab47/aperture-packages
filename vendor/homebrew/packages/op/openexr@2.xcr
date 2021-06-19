@@ -53,6 +53,12 @@ import "cmake" as i0, "pkg-config" as i1, "ilmbase" as i2, "zlib" as i3
 pkg(
   name: "openexr@2",
   version: "2.5.5",
+  description: "High dynamic-range image file format",
+  url: "https://www.openexr.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

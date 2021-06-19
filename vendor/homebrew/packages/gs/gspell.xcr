@@ -158,6 +158,12 @@ import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pk
 pkg(
   name: "gspell",
   version: "1.8.4",
+  description: "Flexible API to implement spellchecking in GTK+ applications",
+  url: "https://wiki.gnome.org/Projects/gspell",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

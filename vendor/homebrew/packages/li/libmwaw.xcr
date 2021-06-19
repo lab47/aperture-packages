@@ -50,6 +50,12 @@ import "pkg-config" as i0, "librevenge" as i1
 pkg(
   name: "libmwaw",
   version: "0.3.19",
+  description: "Library for converting legacy Mac document formats",
+  url: "https://sourceforge.net/p/libmwaw/wiki/Home/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later or MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

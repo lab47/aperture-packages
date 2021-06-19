@@ -42,6 +42,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "robotfindskitten",
   version: "2.8284271.702",
+  description: "Zen Simulation of robot finding kitten",
+  url: "http://robotfindskitten.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

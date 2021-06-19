@@ -77,6 +77,12 @@ import "boost" as i0, "google-sparsehash" as i1, "open-mpi" as i2, "gcc" as i3
 pkg(
   name: "abyss",
   version: "2.3.1",
+  description: "Genome sequence assembler for short reads",
+  url: "https://www.bcgsc.ca/resources/software/abyss",
+  metadata: %{
+    "license": "GPL-3.0-only and LGPL-2.1-or-later and MIT and BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

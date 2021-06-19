@@ -56,6 +56,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "nasm" as i3, "pkg-c
 pkg(
   name: "vapoursynth-imwri",
   version: "53",
+  description: "VapourSynth filters - ImageMagick HDRI writer/reader",
+  url: "http://www.vapoursynth.com",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

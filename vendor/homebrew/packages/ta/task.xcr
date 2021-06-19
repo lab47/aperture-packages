@@ -53,6 +53,12 @@ import "cmake" as i0, "gnutls" as i1
 pkg(
   name: "task",
   version: "2.5.3",
+  description: "Feature-rich console based todo list manager",
+  url: "https://taskwarrior.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

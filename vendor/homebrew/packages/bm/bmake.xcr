@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bmake",
   version: "20200902",
+  description: "Portable version of NetBSD make(1)",
+  url: "http://www.crufty.net/help/sjg/bmake.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

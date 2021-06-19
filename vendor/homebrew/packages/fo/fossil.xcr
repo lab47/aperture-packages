@@ -57,6 +57,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "fossil",
   version: "2.15.1",
+  description: "Distributed software configuration management",
+  url: "https://www.fossil-scm.org/home/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

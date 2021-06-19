@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcpkali",
   version: "1.1.1",
+  description: "High performance TCP and WebSocket load generator and sink",
+  url: "https://github.com/machinezone/tcpkali",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

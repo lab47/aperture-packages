@@ -286,6 +286,12 @@ import "gmp" as i0, "isl@0.18" as i1, "libmpc" as i2, "mpfr" as i3, "zlib" as i4
 pkg(
   name: "gcc@5",
   version: "5.5.0",
+  description: "GNU Compiler Collection",
+  url: "https://gcc.gnu.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

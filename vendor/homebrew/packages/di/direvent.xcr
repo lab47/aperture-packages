@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "direvent",
   version: "5.2",
+  description: "Monitors events in the file system directories",
+  url: "https://www.gnu.org.ua/software/direvent/direvent.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

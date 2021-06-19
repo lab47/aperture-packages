@@ -49,6 +49,12 @@ import "ucl" as i0, "zlib" as i1
 pkg(
   name: "upx",
   version: "3.96",
+  description: "Compress/expand executable files",
+  url: "https://upx.github.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "google-sparsehash",
   version: "2.0.4",
+  description: "Extremely memory-efficient hash_map implementation",
+  url: "https://github.com/sparsehash/sparsehash",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

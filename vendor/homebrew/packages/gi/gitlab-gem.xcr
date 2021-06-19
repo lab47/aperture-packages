@@ -75,6 +75,12 @@ import "ruby" as i0
 pkg(
   name: "gitlab-gem",
   version: "4.17.0",
+  description: "Ruby client and CLI for GitLab API",
+  url: "https://github.com/NARKOZ/gitlab",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

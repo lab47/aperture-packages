@@ -56,6 +56,12 @@ import "pandoc" as i0, "rust" as i1, "task" as i2
 pkg(
   name: "taskwarrior-tui",
   version: "0.13.24",
+  description: "Terminal user interface for taskwarrior",
+  url: "https://github.com/kdheepak/taskwarrior-tui",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

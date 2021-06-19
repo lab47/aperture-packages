@@ -84,6 +84,12 @@ import "pkg-config" as i0, "fftw" as i1, "gcc" as i2, "jpeg" as i3, "kim-api" as
 pkg(
   name: "lammps",
   version: "2020-10-29",
+  description: "Molecular Dynamics Simulator",
+  url: "https://lammps.sandia.gov/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

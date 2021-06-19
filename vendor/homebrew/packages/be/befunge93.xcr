@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "befunge93",
   version: "2.25",
+  description: "Esoteric programming language",
+  url: "https://catseye.tc/article/Languages.md#befunge-93",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

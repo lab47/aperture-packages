@@ -40,6 +40,12 @@ import "bison" as i0, "flex" as i1
 pkg(
   name: "lm-sensors",
   version: "3.6.0",
+  description: "Tools for monitoring the temperatures, voltages, and fans",
+  url: "https://github.com/groeck/lm-sensors",
+  metadata: %{
+    "license": "GPL-2.0-or-later or LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

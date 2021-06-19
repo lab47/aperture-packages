@@ -36,6 +36,12 @@ import "lzip" as i0, "ncurses" as i1
 pkg(
   name: "moe",
   version: "1.11",
+  description: "Console text editor for ISO-8859 and ASCII",
+  url: "https://www.gnu.org/software/moe/moe.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

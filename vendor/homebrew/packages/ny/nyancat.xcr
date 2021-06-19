@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nyancat",
   version: "1.5.2",
+  description: "Renders an animated, color, ANSI-text loop of the Poptart Cat",
+  url: "https://github.com/klange/nyancat",
+  metadata: %{
+    "license": "NCSA",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

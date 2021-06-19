@@ -39,6 +39,12 @@ import "rust" as i0, "openssl@1.1" as i1
 pkg(
   name: "lychee",
   version: "0.7.0",
+  description: "Fast, async, resource-friendly link checker",
+  url: "https://github.com/lycheeverse/lychee",
+  metadata: %{
+    "license": "Apache-2.0 or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

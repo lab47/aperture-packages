@@ -42,6 +42,12 @@ import "rust" as i0
 pkg(
   name: "toast",
   version: "0.32.0",
+  description: "Tool for running tasks in containers",
+  url: "https://github.com/stepchowfun/toast",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

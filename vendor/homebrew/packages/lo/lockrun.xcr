@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lockrun",
   version: "1.1.3",
+  description: "Run cron jobs with overrun protection",
+  url: "http://unixwiz.net/tools/lockrun.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

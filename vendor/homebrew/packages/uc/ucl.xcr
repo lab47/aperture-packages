@@ -86,6 +86,12 @@ import "automake" as i0
 pkg(
   name: "ucl",
   version: "1.03",
+  description: "Data compression library with small memory footprint",
+  url: "https://www.oberhumer.com/opensource/ucl/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

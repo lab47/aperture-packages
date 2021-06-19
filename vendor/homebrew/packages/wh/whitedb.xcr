@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "whitedb",
   version: "0.7.3",
+  description: "Lightweight in-memory NoSQL database library",
+  url: "https://www.whitedb.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

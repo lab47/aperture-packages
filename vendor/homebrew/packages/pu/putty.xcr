@@ -85,6 +85,12 @@ import "pkg-config" as i0
 pkg(
   name: "putty",
   version: "0.75",
+  description: "Implementation of Telnet and SSH",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

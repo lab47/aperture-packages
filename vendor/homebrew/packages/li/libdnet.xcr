@@ -49,6 +49,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libdnet",
   version: "1.14",
+  description: "Portable low-level networking library",
+  url: "https://github.com/ofalk/libdnet",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

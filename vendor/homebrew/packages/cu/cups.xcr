@@ -56,6 +56,12 @@ import "krb5" as i0, "zlib" as i1
 pkg(
   name: "cups",
   version: "2.3.3op2",
+  description: "Common UNIX Printing System",
+  url: "https://github.com/OpenPrinting/cups",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "enca",
   version: "1.19",
+  description: "Charset analyzer and converter",
+  url: "https://cihar.com/software/enca/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

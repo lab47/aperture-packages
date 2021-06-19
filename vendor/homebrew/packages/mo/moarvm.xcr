@@ -66,6 +66,12 @@ import "libatomic_ops" as i0, "libffi" as i1, "libtommath" as i2, "libuv" as i3
 pkg(
   name: "moarvm",
   version: "2021.05",
+  description: "Virtual machine for NQP and Rakudo Perl 6",
+  url: "https://moarvm.org",
+  metadata: %{
+    "license": "Artistic-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

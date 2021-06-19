@@ -60,6 +60,12 @@ import "gmp" as i0, "readline" as i1
 pkg(
   name: "pari",
   version: "2.13.1",
+  description: "Computer algebra system designed for fast computations in number theory",
+  url: "https://pari.math.u-bordeaux.fr/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "wordplay",
   version: "7.22",
+  description: "Anagram generator",
+  url: "http://hsvmovies.com/static_subpages/personal_orig/wordplay/index.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

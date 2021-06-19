@@ -86,6 +86,12 @@ import "libsodium" as i0, "openssl@1.1" as i1
 pkg(
   name: "pure-ftpd",
   version: "1.0.49",
+  description: "Secure and efficient FTP server",
+  url: "https://www.pureftpd.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

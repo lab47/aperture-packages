@@ -112,6 +112,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libffi",
   version: "3.3",
+  description: "Portable Foreign Function Interface library",
+  url: "https://sourceware.org/libffi/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

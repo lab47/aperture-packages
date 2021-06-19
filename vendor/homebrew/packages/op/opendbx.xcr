@@ -53,6 +53,12 @@ import "readline" as i0, "sqlite" as i1
 pkg(
   name: "opendbx",
   version: "1.4.6",
+  description: "Lightweight but extensible database access library in C",
+  url: "https://linuxnetworks.de/doc/index.php/OpenDBX",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

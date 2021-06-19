@@ -56,6 +56,12 @@ import "pkg-config" as i0, "librevenge" as i1, "libwpd" as i2
 pkg(
   name: "libwpg",
   version: "0.3.3",
+  description: "Library for reading and parsing Word Perfect Graphics format",
+  url: "https://libwpg.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

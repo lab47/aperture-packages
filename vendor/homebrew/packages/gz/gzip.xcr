@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gzip",
   version: "1.10",
+  description: "Popular GNU data compression program",
+  url: "https://www.gnu.org/software/gzip",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

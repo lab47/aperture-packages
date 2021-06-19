@@ -48,6 +48,12 @@ import "rust" as i0
 pkg(
   name: "spotify-tui",
   version: "0.24.0",
+  description: "Terminal-based client for Spotify",
+  url: "https://github.com/Rigellute/spotify-tui",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

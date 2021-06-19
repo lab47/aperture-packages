@@ -65,6 +65,12 @@ import "go" as i0
 pkg(
   name: "fn",
   version: "0.6.7",
+  description: "Command-line tool for the fn project",
+  url: "https://fnproject.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

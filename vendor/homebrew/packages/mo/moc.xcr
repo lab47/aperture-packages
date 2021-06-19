@@ -92,6 +92,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "pkg-config" as i3, 
 pkg(
   name: "moc",
   version: "2.5.2",
+  description: "Terminal-based music player",
+  url: "https://moc.daper.net/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

@@ -74,12 +74,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "bzip2" as i1, "cmake" as i2, "expat" as i3, "gdbm" as i4, "libffi" as i5, "lz4" as i6, "m4" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pcre" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sphinx-doc" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "bison" as i0, "cmake" as i1, "pkg-config" as i2, "python@3.9" as i3, "lz4" as i4, "openssl@1.1" as i5, "pcre" as i6, "readline" as i7, "xz" as i8
 
 pkg(
   name: "monetdb",
   version: "11.39.17",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  description: "Column-store database",
+  url: "https://www.monetdb.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "monetdb.rb"), formula)

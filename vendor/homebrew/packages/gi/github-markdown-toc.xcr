@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "github-markdown-toc",
   version: "1.2.0",
+  description: "Easy TOC creation for GitHub README.md (in go)",
+  url: "https://github.com/ekalinin/github-markdown-toc.go",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

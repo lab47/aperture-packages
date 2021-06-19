@@ -37,6 +37,12 @@ import "pkg-config" as i0, "lv2" as i1
 pkg(
   name: "mda-lv2",
   version: "1.2.6",
+  description: "LV2 port of the MDA plugins",
+  url: "https://drobilla.net/software/mda-lv2/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

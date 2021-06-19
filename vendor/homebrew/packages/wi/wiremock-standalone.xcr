@@ -45,6 +45,12 @@ import "openjdk" as i0
 pkg(
   name: "wiremock-standalone",
   version: "2.28.1",
+  description: "Simulator for HTTP-based APIs",
+  url: "http://wiremock.org/docs/running-standalone/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

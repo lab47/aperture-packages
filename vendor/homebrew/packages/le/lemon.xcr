@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lemon",
   version: "3.35.5",
+  description: "LALR(1) parser generator like yacc or bison",
+  url: "https://www.hwaci.com/sw/lemon/",
+  metadata: %{
+    "license": "blessing",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "openssl@1.1" as i
 pkg(
   name: "mongo-c-driver",
   version: "1.17.6",
+  description: "C driver for MongoDB",
+  url: "https://github.com/mongodb/mongo-c-driver",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

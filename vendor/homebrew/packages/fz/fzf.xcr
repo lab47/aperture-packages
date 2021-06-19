@@ -55,6 +55,12 @@ import "go" as i0, "ncurses" as i1
 pkg(
   name: "fzf",
   version: "0.27.2",
+  description: "Command-line fuzzy finder written in Go",
+  url: "https://github.com/junegunn/fzf",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

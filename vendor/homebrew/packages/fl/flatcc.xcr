@@ -71,6 +71,12 @@ import "cmake" as i0
 pkg(
   name: "flatcc",
   version: "0.6.0",
+  description: "FlatBuffers Compiler and Library in C for C",
+  url: "https://github.com/dvidelabs/flatcc",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

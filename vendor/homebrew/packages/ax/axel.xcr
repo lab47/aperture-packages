@@ -46,6 +46,12 @@ import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config
 pkg(
   name: "axel",
   version: "2.17.10",
+  description: "Light UNIX download accelerator",
+  url: "https://github.com/eribertomota/axel",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

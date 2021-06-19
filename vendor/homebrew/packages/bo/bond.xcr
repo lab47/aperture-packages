@@ -50,6 +50,12 @@ import "cmake" as i0, "ghc@8.6" as i1, "haskell-stack" as i2, "boost" as i3, "ra
 pkg(
   name: "bond",
   version: "9.0.5",
+  description: "Cross-platform framework for working with schematized data",
+  url: "https://github.com/microsoft/bond",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "rust" as i0, "zlib" as i1
 pkg(
   name: "git-interactive-rebase-tool",
   version: "2.1.0",
+  description: "Native sequence editor for Git interactive rebase",
+  url: "https://gitrebasetool.mitmaro.ca/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

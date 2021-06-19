@@ -42,6 +42,12 @@ import "go" as i0
 pkg(
   name: "mkcert",
   version: "1.4.3",
+  description: "Simple tool to make locally trusted development certificates",
+  url: "https://github.com/FiloSottile/mkcert",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

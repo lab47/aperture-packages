@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scalaenv",
   version: "0.1.14",
+  description: "Command-line tool to manage Scala environments",
+  url: "https://github.com/scalaenv/scalaenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

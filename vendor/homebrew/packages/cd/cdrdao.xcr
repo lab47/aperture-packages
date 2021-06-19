@@ -73,6 +73,12 @@ import "pkg-config" as i0, "lame" as i1, "libao" as i2, "libvorbis" as i3, "mad"
 pkg(
   name: "cdrdao",
   version: "1.2.4",
+  description: "Record CDs in Disk-At-Once mode",
+  url: "https://cdrdao.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -63,6 +63,12 @@ import "asciidoc" as i0, "docbook-xsl" as i1, "libxml2" as i2, "libxslt" as i3
 pkg(
   name: "cvs-fast-export",
   version: "1.57",
+  description: "Export an RCS or CVS history as a fast-import stream",
+  url: "http://www.catb.org/~esr/cvs-fast-export/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

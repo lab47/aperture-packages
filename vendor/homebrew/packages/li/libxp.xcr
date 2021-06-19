@@ -65,6 +65,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "util-macros" as i3,
 pkg(
   name: "libxp",
   version: "1.0.3",
+  description: "X Print Client Library",
+  url: "https://gitlab.freedesktop.org/xorg/lib/libxp",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

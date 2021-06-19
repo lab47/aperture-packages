@@ -57,6 +57,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "itstool" as i2, "pkg-co
 pkg(
   name: "libgda",
   version: "5.2.10",
+  description: "Provides unified data access to the GNOME project",
+  url: "https://www.gnome-db.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

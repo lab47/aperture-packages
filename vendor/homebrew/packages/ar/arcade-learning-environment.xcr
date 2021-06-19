@@ -47,12 +47,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "cython" as i2, "expat" as i3, "gcc" as i4, "gdbm" as i5, "gmp" as i6, "isl" as i7, "libffi" as i8, "libmpc" as i9, "m4" as i10, "mpdecimal" as i11, "mpfr" as i12, "ncurses" as i13, "numpy" as i14, "openblas" as i15, "openssl@1.1" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "sdl" as i20, "sphinx-doc" as i21, "sqlite" as i22, "unzip" as i23, "xz" as i24, "zip" as i25, "zlib" as i26, "zstd" as i27
+import "cmake" as i0, "numpy" as i1, "python@3.9" as i2, "sdl" as i3
 
 pkg(
   name: "arcade-learning-environment",
   version: "0.6.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27],
+  description: "Platform for AI research",
+  url: "https://github.com/mgbellemare/Arcade-Learning-Environment",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arcade-learning-environment.rb"), formula)

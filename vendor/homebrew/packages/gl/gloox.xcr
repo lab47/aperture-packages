@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libidn" as i1, "openssl@1.1" as i2, "zlib" as i3
 pkg(
   name: "gloox",
   version: "1.0.24",
+  description: "C++ Jabber/XMPP library that handles the low-level protocol",
+  url: "https://camaya.net/gloox/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bash-preexec",
   version: "0.4.1",
+  description: "Preexec and precmd functions for Bash (like Zsh)",
+  url: "https://github.com/rcaloras/bash-preexec",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

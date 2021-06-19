@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pipemeter",
   version: "1.1.5",
+  description: "Shows speed of data moving from input to output",
+  url: "https://launchpad.net/pipemeter",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

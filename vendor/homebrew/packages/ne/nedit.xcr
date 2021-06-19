@@ -52,6 +52,12 @@ import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxext" as i3, "libxp" a
 pkg(
   name: "nedit",
   version: "5.7",
+  description: "Fast, compact Motif/X11 plain text editor",
+  url: "https://sourceforge.net/projects/nedit/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

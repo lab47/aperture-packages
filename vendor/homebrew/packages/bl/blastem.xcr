@@ -115,6 +115,12 @@ import "freetype" as i0, "gettext" as i1, "jpeg" as i2, "libpng" as i3, "openjpe
 pkg(
   name: "blastem",
   version: "0.6.2",
+  description: "Fast and accurate Genesis emulator",
+  url: "https://www.retrodev.com/blastem/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

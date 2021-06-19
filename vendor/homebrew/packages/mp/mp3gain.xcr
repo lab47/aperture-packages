@@ -38,6 +38,12 @@ import "mpg123" as i0
 pkg(
   name: "mp3gain",
   version: "1.6.2",
+  description: "Lossless mp3 normalizer with statistical analysis",
+  url: "https://mp3gain.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

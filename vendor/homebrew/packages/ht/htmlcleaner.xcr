@@ -52,6 +52,12 @@ import "maven" as i0, "openjdk" as i1
 pkg(
   name: "htmlcleaner",
   version: "2.24",
+  description: "HTML parser written in Java",
+  url: "https://htmlcleaner.sourceforge.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

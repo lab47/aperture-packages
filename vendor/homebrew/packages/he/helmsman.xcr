@@ -40,6 +40,12 @@ import "go" as i0, "helm" as i1, "kubernetes-cli" as i2
 pkg(
   name: "helmsman",
   version: "3.7.1",
+  description: "Helm Charts as Code tool",
+  url: "https://github.com/Praqma/helmsman",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

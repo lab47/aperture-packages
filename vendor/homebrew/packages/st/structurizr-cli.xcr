@@ -36,6 +36,12 @@ import "openjdk" as i0
 pkg(
   name: "structurizr-cli",
   version: "1.11.0",
+  description: "Command-line utility for Structurizr",
+  url: "https://structurizr.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

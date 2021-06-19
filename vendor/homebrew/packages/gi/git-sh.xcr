@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-sh",
   version: "1.3",
+  description: "Customized Bash environment for git work",
+  url: "https://github.com/rtomayko/git-sh",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

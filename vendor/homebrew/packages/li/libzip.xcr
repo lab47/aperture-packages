@@ -54,6 +54,12 @@ import "cmake" as i0, "bzip2" as i1, "openssl@1.1" as i2, "xz" as i3, "zlib" as 
 pkg(
   name: "libzip",
   version: "1.7.3",
+  description: "C library for reading, creating, and modifying zip archives",
+  url: "https://libzip.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

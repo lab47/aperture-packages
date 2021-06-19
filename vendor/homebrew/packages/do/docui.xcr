@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "docui",
   version: "2.0.4",
+  description: "TUI Client for Docker",
+  url: "https://github.com/skanehira/docui",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

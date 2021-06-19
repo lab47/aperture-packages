@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "cheat",
   version: "4.2.2",
+  description: "Create and view interactive cheat sheets for *nix commands",
+  url: "https://github.com/cheat/cheat",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -73,6 +73,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "readline" as i2
 pkg(
   name: "ekg2",
   version: "0.3.1",
+  description: "Multiplatform, multiprotocol, plugin-based instant messenger",
+  url: "https://github.com/ekg2/ekg2",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

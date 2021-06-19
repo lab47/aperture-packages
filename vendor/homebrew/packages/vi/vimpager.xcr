@@ -50,6 +50,12 @@ import "pandoc" as i0
 pkg(
   name: "vimpager",
   version: "2.06",
+  description: "Use ViM as PAGER",
+  url: "https://github.com/rkitover/vimpager",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

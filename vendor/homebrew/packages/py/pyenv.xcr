@@ -85,6 +85,12 @@ import "autoconf" as i0, "openssl@1.1" as i1, "pkg-config" as i2, "readline" as 
 pkg(
   name: "pyenv",
   version: "2.0.1",
+  description: "Python version management",
+  url: "https://github.com/pyenv/pyenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

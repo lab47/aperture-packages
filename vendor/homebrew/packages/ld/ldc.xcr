@@ -103,6 +103,12 @@ import "cmake" as i0, "libconfig" as i1, "pkg-config" as i2, "llvm" as i3, "libx
 pkg(
   name: "ldc",
   version: "1.26.0",
+  description: "Portable D programming language compiler",
+  url: "https://wiki.dlang.org/LDC",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

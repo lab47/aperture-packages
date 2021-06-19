@@ -53,6 +53,12 @@ import "erlang@22" as i0
 pkg(
   name: "wrangler",
   version: "1.2",
+  description: "Refactoring tool for Erlang with emacs and Eclipse integration",
+  url: "https://www.cs.kent.ac.uk/projects/wrangler/Wrangler/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

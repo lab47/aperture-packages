@@ -64,6 +64,12 @@ import "cmake" as i0, "ispc" as i1, "tbb" as i2
 pkg(
   name: "embree",
   version: "3.13.0",
+  description: "High-performance ray tracing kernels",
+  url: "https://embree.github.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

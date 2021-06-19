@@ -72,6 +72,12 @@ import "cmake" as i0
 pkg(
   name: "libswiftnav",
   version: "2.4.2",
+  description: "C library implementing GNSS related functions and algorithms",
+  url: "https://github.com/swift-nav/libswiftnav",
+  metadata: %{
+    "license": "LGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

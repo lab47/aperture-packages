@@ -76,6 +76,12 @@ import "homebrew-install" as hi
 pkg(
   name: "p7zip",
   version: "17.04",
+  description: "7-Zip (high compression file archiver) implementation",
+  url: "https://github.com/jinfeihan57/p7zip",
+  metadata: %{
+    "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

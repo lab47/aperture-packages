@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lout",
   version: "3.40",
+  description: "Text formatting like TeX, but simpler",
+  url: "https://savannah.nongnu.org/projects/lout",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

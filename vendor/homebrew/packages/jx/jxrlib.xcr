@@ -48,6 +48,12 @@ import "cmake" as i0
 pkg(
   name: "jxrlib",
   version: "1.1",
+  description: "Tools for JPEG-XR image encoding/decoding",
+  url: "https://archive.codeplex.com/?p=jxrlib",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

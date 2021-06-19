@@ -75,6 +75,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libiconv",
   version: "1.16",
+  description: "Conversion library",
+  url: "https://www.gnu.org/software/libiconv/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

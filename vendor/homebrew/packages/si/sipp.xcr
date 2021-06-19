@@ -35,6 +35,12 @@ import "cmake" as i0
 pkg(
   name: "sipp",
   version: "3.6.1",
+  description: "Traffic generator for the SIP protocol",
+  url: "https://sipp.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

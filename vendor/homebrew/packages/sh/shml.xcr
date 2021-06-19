@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "shml",
   version: "1.1.0",
+  description: "Style Framework for The Terminal",
+  url: "https://odb.github.io/shml/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -59,12 +59,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bison" as i4, "brotli" as i5, "bzip2" as i6, "c-ares" as i7, "check" as i8, "cmake" as i9, "curl" as i10, "expat" as i11, "gdbm" as i12, "gettext" as i13, "glib" as i14, "gmp" as i15, "gnu-sed" as i16, "gnupg" as i17, "gnutls" as i18, "gperf" as i19, "gpgme" as i20, "guile" as i21, "jemalloc" as i22, "krb5" as i23, "libassuan" as i24, "libatomic_ops" as i25, "libev" as i26, "libevent" as i27, "libffi" as i28, "libgcrypt" as i29, "libgpg-error" as i30, "libidn2" as i31, "libksba" as i32, "libotr" as i33, "libsignal-protocol-c" as i34, "libssh2" as i35, "libstrophe" as i36, "libtasn1" as i37, "libtool" as i38, "libunistring" as i39, "libusb" as i40, "libxml2" as i41, "libyaml" as i42, "m4" as i43, "meson" as i44, "mpdecimal" as i45, "ncurses" as i46, "nettle" as i47, "nghttp2" as i48, "ninja" as i49, "npth" as i50, "openldap" as i51, "openssl@1.1" as i52, "p11-kit" as i53, "pcre" as i54, "perl" as i55, "pinentry" as i56, "pkg-config" as i57, "python@3.9" as i58, "readline" as i59, "rtmpdump" as i60, "ruby" as i61, "sphinx-doc" as i62, "sqlite" as i63, "swig" as i64, "terminal-notifier" as i65, "unbound" as i66, "unzip" as i67, "xz" as i68, "zip" as i69, "zlib" as i70, "zstd" as i71
+import "pkg-config" as i0, "python@3.9" as i1, "glib" as i2, "gnutls" as i3, "gpgme" as i4, "libotr" as i5, "libsignal-protocol-c" as i6, "libstrophe" as i7, "openssl@1.1" as i8, "readline" as i9, "curl" as i10, "terminal-notifier" as i11
 
 pkg(
   name: "profanity",
   version: "0.10.0",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71],
+  description: "Console based XMPP client",
+  url: "https://profanity-im.github.io",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "profanity.rb"), formula)

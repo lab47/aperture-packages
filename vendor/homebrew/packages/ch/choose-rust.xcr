@@ -39,6 +39,12 @@ import "rust" as i0
 pkg(
   name: "choose-rust",
   version: "1.3.1",
+  description: "Human-friendly and fast alternative to cut and (sometimes) awk",
+  url: "https://github.com/theryangeary/choose",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

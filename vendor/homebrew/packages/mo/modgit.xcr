@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "modgit",
   version: "1.1.0",
+  description: "Tool for git repo deploy with filters. Used for magento development",
+  url: "https://github.com/jreinke/modgit",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

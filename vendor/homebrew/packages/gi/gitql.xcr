@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "gitql",
   version: "2.2.0",
+  description: "Git query language",
+  url: "https://github.com/filhodanuvem/gitql",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

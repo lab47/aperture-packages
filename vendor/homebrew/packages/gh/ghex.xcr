@@ -81,6 +81,12 @@ import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gtk+3
 pkg(
   name: "ghex",
   version: "3.18.4",
+  description: "GNOME hex editor",
+  url: "https://wiki.gnome.org/Apps/Ghex",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

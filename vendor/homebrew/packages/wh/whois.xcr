@@ -51,6 +51,12 @@ import "pkg-config" as i0, "libidn2" as i1
 pkg(
   name: "whois",
   version: "5.5.10",
+  description: "Lookup tool for domain names and other internet resources",
+  url: "https://packages.debian.org/sid/whois",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

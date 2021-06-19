@@ -70,6 +70,12 @@ import "go" as i0, "node" as i1
 pkg(
   name: "octant",
   version: "0.20.0",
+  description: "Kubernetes introspection tool for developers",
+  url: "https://octant.dev",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

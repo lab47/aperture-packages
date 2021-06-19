@@ -236,6 +236,12 @@ import "perl" as i0
 pkg(
   name: "latexindent",
   version: "3.9.3",
+  description: "Add indentation to LaTeX files",
+  url: "https://ctan.org/pkg/latexindent",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

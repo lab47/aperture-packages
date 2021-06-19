@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vilistextum",
   version: "2.6.9",
+  description: "HTML to text converter",
+  url: "https://bhaak.net/vilistextum/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

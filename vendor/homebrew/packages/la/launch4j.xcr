@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "launch4j",
   version: "3.14",
+  description: "Cross-platform Java executable wrapper",
+  url: "https://launch4j.sourceforge.io/",
+  metadata: %{
+    "license": "BSD-3-Clause and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

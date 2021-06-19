@@ -41,6 +41,12 @@ import "zlib" as i0
 pkg(
   name: "fio",
   version: "3.27",
+  description: "I/O benchmark and stress test",
+  url: "https://github.com/axboe/fio",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

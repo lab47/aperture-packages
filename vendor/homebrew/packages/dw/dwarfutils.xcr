@@ -80,6 +80,12 @@ import "zlib" as i0, "libelf" as i1
 pkg(
   name: "dwarfutils",
   version: "20210528",
+  description: "Dump and produce DWARF debug information in ELF objects",
+  url: "https://www.prevanders.net/dwarf.html",
+  metadata: %{
+    "license": "BSD-2-Clause and LGPL-2.1-or-later and GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -84,6 +84,12 @@ import "cmake" as i0
 pkg(
   name: "open-mesh",
   version: "8.1",
+  description: "Generic data structure to represent and manipulate polygonal meshes",
+  url: "https://openmesh.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

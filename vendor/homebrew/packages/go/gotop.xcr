@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "gotop",
   version: "4.1.1",
+  description: "Terminal based graphical activity monitor inspired by gtop and vtop",
+  url: "https://github.com/xxxserxxx/gotop",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

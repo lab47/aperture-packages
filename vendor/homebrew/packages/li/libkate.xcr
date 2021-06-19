@@ -47,6 +47,12 @@ import "pkg-config" as i0, "libogg" as i1, "libpng" as i2
 pkg(
   name: "libkate",
   version: "0.4.1",
+  description: "Overlay codec for multiplexed audio/video in Ogg",
+  url: "https://code.google.com/archive/p/libkate/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

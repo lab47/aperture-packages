@@ -58,6 +58,12 @@ import "node" as i0
 pkg(
   name: "generate-json-schema",
   version: "2.6.0",
+  description: "Generate a JSON Schema from Sample JSON",
+  url: "https://github.com/Nijikokun/generate-schema",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

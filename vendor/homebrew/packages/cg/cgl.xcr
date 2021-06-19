@@ -69,6 +69,12 @@ import "pkg-config" as i0, "clp" as i1, "coinutils" as i2, "osi" as i3
 pkg(
   name: "cgl",
   version: "0.60.3",
+  description: "Cut Generation Library",
+  url: "https://github.com/coin-or/Cgl",
+  metadata: %{
+    "license": "EPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gifsicle",
   version: "1.92",
+  description: "GIF image/animation creator/editor",
+  url: "https://www.lcdf.org/gifsicle/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vmdktool",
   version: "1.4",
+  description: "Converts raw filesystems to VMDK files and vice versa",
+  url: "https://manned.org/vmdktool",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

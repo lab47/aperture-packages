@@ -201,6 +201,12 @@ import "pkg-config" as i0, "libyaml" as i1, "openssl@1.1" as i2, "readline" as i
 pkg(
   name: "ruby@2.6",
   version: "2.6.7",
+  description: "Powerful, clean, object-oriented scripting language",
+  url: "https://www.ruby-lang.org/",
+  metadata: %{
+    "license": "Ruby",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

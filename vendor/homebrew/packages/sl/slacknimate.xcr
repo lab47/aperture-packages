@@ -38,6 +38,12 @@ import "go" as i0
 pkg(
   name: "slacknimate",
   version: "1.1.0",
+  description: "Text animation for Slack messages",
+  url: "https://github.com/mroth/slacknimate",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

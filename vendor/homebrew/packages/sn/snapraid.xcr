@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "snapraid",
   version: "11.5",
+  description: "Backup program for disk arrays",
+  url: "https://snapraid.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

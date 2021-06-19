@@ -71,6 +71,12 @@ import "ruby" as i0
 pkg(
   name: "lunchy",
   version: "0.10.4",
+  description: "Friendly wrapper for launchctl",
+  url: "https://github.com/eddiezane/lunchy",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

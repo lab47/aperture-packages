@@ -58,6 +58,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "ivykis",
   version: "0.42.4",
+  description: "Async I/O-assisting library",
+  url: "https://sourceforge.net/projects/libivykis/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

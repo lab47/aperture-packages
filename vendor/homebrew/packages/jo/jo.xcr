@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jo",
   version: "1.4",
+  description: "JSON output from a shell",
+  url: "https://github.com/jpmens/jo",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

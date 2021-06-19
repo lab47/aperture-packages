@@ -53,6 +53,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "readline" as i3
 pkg(
   name: "abook",
   version: "0.6.1",
+  description: "Address book with mutt support",
+  url: "https://abook.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

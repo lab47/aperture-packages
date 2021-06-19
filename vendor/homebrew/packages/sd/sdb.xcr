@@ -39,6 +39,12 @@ import "pkg-config" as i0, "vala" as i1, "glib" as i2
 pkg(
   name: "sdb",
   version: "1.8.0",
+  description: "Ondisk/memory hashtable based on CDB",
+  url: "https://github.com/radare/sdb",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

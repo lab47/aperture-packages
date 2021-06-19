@@ -88,6 +88,12 @@ import "homebrew-install" as hi
 pkg(
   name: "aescrypt-packetizer",
   version: "3.14",
+  description: "Encrypt and decrypt using 256-bit AES encryption",
+  url: "https://www.aescrypt.com",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

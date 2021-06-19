@@ -44,6 +44,12 @@ import "openjdk" as i0
 pkg(
   name: "umlet",
   version: "14.3.0",
+  description: "This UML tool aimed at providing a fast way of creating UML diagrams",
+  url: "https://www.umlet.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

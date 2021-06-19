@@ -65,6 +65,12 @@ import "rust" as i0
 pkg(
   name: "shadowenv",
   version: "2.0.3",
+  description: "Reversible directory-local environment variable manipulations",
+  url: "https://shopify.github.io/shadowenv/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

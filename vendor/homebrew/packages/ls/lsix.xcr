@@ -28,6 +28,12 @@ import "bash" as i0, "imagemagick" as i1
 pkg(
   name: "lsix",
   version: "1.7.4",
+  description: "Shows thumbnails in terminal using sixel graphics",
+  url: "https://github.com/hackerb9/lsix",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

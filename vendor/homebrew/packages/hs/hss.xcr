@@ -55,6 +55,12 @@ import "readline" as i0
 pkg(
   name: "hss",
   version: "1.8",
+  description: "Interactive parallel SSH client",
+  url: "https://github.com/six-ddc/hss",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

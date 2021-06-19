@@ -50,6 +50,12 @@ import "pkg-config" as i0, "libxcb" as i1
 pkg(
   name: "xcb-util-keysyms",
   version: "0.4.0",
+  description: "Standard X constants and conversion to/from keycodes",
+  url: "https://xcb.freedesktop.org",
+  metadata: %{
+    "license": "X11",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

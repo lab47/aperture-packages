@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "oha",
   version: "0.4.5",
+  description: "HTTP load generator, inspired by rakyll/hey with tui animation",
+  url: "https://github.com/hatoo/oha/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

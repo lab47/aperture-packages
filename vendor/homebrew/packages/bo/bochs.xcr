@@ -104,6 +104,12 @@ import "pkg-config" as i0, "libtool" as i1, "sdl2" as i2, "ncurses" as i3
 pkg(
   name: "bochs",
   version: "2.6.11",
+  description: "Open source IA-32 (x86) PC emulator written in C++",
+  url: "https://bochs.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

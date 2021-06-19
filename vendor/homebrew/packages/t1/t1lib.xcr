@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "t1lib",
   version: "5.1.2",
+  description: "C library to generate/rasterize bitmaps from Type 1 fonts",
+  url: "https://www.t1lib.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

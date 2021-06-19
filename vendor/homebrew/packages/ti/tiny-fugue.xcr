@@ -55,6 +55,12 @@ import "libnet" as i0, "openssl@1.1" as i1, "pcre" as i2, "ncurses" as i3
 pkg(
   name: "tiny-fugue",
   version: "5.0b8",
+  description: "Programmable MUD client",
+  url: "https://tinyfugue.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

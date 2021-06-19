@@ -69,6 +69,12 @@ import "automake" as i0, "fplll" as i1, "gmp" as i2, "mpfi" as i3, "mpfr" as i4,
 pkg(
   name: "sollya",
   version: "7.0",
+  description: "Library for safe floating-point code development",
+  url: "https://www.sollya.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

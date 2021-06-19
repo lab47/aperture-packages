@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "autoenv",
   version: "0.2.1",
+  description: "Per-project, per-directory shell environments",
+  url: "https://github.com/kennethreitz/autoenv",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

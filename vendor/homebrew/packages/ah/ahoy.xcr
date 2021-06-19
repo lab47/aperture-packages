@@ -63,6 +63,12 @@ import "go" as i0
 pkg(
   name: "ahoy",
   version: "2.0.0",
+  description: "Creates self documenting CLI programs from commands in YAML files",
+  url: "https://ahoy-cli.readthedocs.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

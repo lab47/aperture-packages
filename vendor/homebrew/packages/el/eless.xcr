@@ -33,6 +33,12 @@ import "emacs" as i0
 pkg(
   name: "eless",
   version: "0.7",
+  description: "Better `less` using Emacs view-mode and Bash",
+  url: "https://eless.scripter.co/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

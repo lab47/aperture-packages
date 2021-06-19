@@ -107,6 +107,12 @@ import "perl" as i0
 pkg(
   name: "cloc",
   version: "1.90",
+  description: "Statistics utility to count lines of code",
+  url: "https://github.com/AlDanial/cloc/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "tcping",
   version: "1.3.6",
+  description: "TCP connect to the given IP/port combo",
+  url: "https://github.com/mkirchner/tcping",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

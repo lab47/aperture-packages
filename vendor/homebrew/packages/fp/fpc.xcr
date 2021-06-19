@@ -70,6 +70,12 @@ import "homebrew-install" as hi
 pkg(
   name: "fpc",
   version: "3.2.2",
+  description: "Free Pascal: multi-architecture Pascal compiler",
+  url: "https://www.freepascal.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

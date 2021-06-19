@@ -68,6 +68,12 @@ import "cmake" as i0, "rust" as i1, "libiconv" as i2
 pkg(
   name: "amp",
   version: "0.6.2",
+  description: "Text editor for your terminal",
+  url: "https://amp.rs",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

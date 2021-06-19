@@ -42,6 +42,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "git-crypt",
   version: "0.6.0",
+  description: "Enable transparent encryption/decryption of files in a git repo",
+  url: "https://www.agwa.name/projects/git-crypt/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

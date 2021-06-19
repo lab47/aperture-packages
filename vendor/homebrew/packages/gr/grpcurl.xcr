@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "grpcurl",
   version: "1.8.1",
+  description: "Like cURL, but for gRPC",
+  url: "https://github.com/fullstorydev/grpcurl",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

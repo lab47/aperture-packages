@@ -40,6 +40,12 @@ import "libunistring" as i0, "pcre2" as i1
 pkg(
   name: "boxes",
   version: "2.0.0",
+  description: "Draw boxes around text",
+  url: "https://boxes.thomasjensen.com/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

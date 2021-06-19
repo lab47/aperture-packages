@@ -51,6 +51,12 @@ import "pkg-config" as i0, "libusb-compat" as i1, "pcsc-lite" as i2
 pkg(
   name: "libnfc",
   version: "1.8.0",
+  description: "Low level NFC SDK and Programmers API",
+  url: "https://github.com/nfc-tools/libnfc",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

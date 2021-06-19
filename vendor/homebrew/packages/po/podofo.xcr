@@ -62,6 +62,12 @@ import "cmake" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libid
 pkg(
   name: "podofo",
   version: "0.9.7",
+  description: "Library to work with the PDF file format",
+  url: "https://podofo.sourceforge.io",
+  metadata: %{
+    "license": "LGPL-2.0-only and GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

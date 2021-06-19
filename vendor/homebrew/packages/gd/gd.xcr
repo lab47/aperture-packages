@@ -55,6 +55,12 @@ import "fontconfig" as i0, "freetype" as i1, "jpeg" as i2, "libpng" as i3, "libt
 pkg(
   name: "gd",
   version: "2.3.2",
+  description: "Graphics library to dynamically manipulate images",
+  url: "https://libgd.github.io/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

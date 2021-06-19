@@ -59,6 +59,12 @@ import "zsh" as i0
 pkg(
   name: "zshdb",
   version: "1.1.2",
+  description: "Debugger for zsh",
+  url: "https://github.com/rocky/zshdb",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

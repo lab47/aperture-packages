@@ -49,6 +49,12 @@ import "jack" as i0, "libsamplerate" as i1, "libsndfile" as i2
 pkg(
   name: "ecasound",
   version: "2.9.3",
+  description: "Multitrack-capable audio recorder and effect processor",
+  url: "https://www.eca.cx/ecasound/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

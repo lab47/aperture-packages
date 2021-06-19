@@ -44,6 +44,12 @@ import "boost" as i0, "pkg-config" as i1, "libodfgen" as i2, "libwpd" as i3, "li
 pkg(
   name: "writerperfect",
   version: "0.9.6",
+  description: "Library for importing WordPerfect documents",
+  url: "https://sourceforge.net/p/libwpd/wiki/writerperfect/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

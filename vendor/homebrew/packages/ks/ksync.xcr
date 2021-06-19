@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "ksync",
   version: "0.4.7",
+  description: "Sync files between your local system and a kubernetes cluster",
+  url: "https://ksync.github.io/ksync/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "nasm" as i0
 pkg(
   name: "openh264",
   version: "2.1.1",
+  description: "H.264 codec from Cisco",
+  url: "https://www.openh264.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

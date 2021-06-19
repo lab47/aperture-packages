@@ -57,6 +57,12 @@ import "cmake" as i0, "libosmium" as i1, "boost" as i2, "expat" as i3
 pkg(
   name: "osmium-tool",
   version: "1.13.1",
+  description: "Libosmium-based command-line tool for processing OpenStreetMap data",
+  url: "https://osmcode.org/osmium-tool/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

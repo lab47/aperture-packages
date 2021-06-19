@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "wagyu",
   version: "0.6.1",
+  description: "Rust library for generating cryptocurrency wallets",
+  url: "https://github.com/AleoHQ/wagyu",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

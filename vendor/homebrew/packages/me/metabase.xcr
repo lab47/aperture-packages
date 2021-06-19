@@ -81,6 +81,12 @@ import "openjdk@11" as i0
 pkg(
   name: "metabase",
   version: "0.39.3",
+  description: "Business intelligence report server",
+  url: "https://www.metabase.com/",
+  metadata: %{
+    "license": "AGPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

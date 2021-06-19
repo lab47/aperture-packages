@@ -54,6 +54,12 @@ import "ncurses" as i0, "perl" as i1
 pkg(
   name: "texinfo",
   version: "6.7",
+  description: "Official documentation format of the GNU project",
+  url: "https://www.gnu.org/software/texinfo/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

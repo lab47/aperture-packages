@@ -71,6 +71,12 @@ import "cmake" as i0, "libevent" as i1, "libuv" as i2, "openssl@1.1" as i3, "zli
 pkg(
   name: "libwebsockets",
   version: "4.2.0",
+  description: "C websockets server library",
+  url: "https://libwebsockets.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

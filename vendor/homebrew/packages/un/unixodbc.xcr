@@ -85,6 +85,12 @@ import "libtool" as i0
 pkg(
   name: "unixodbc",
   version: "2.3.9",
+  description: "ODBC 3 connectivity for UNIX",
+  url: "http://www.unixodbc.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

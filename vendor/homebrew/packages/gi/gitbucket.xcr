@@ -76,6 +76,12 @@ import "openjdk" as i0
 pkg(
   name: "gitbucket",
   version: "4.35.3",
+  description: "Git platform powered by Scala offering",
+  url: "https://github.com/gitbucket/gitbucket",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

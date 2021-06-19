@@ -49,6 +49,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "zlib" as i3
 pkg(
   name: "libspng",
   version: "0.6.3",
+  description: "C library for reading and writing PNG format files",
+  url: "https://libspng.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

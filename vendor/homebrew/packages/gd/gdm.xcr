@@ -60,6 +60,12 @@ import "go" as i0
 pkg(
   name: "gdm",
   version: "1.4",
+  description: "Go Dependency Manager (gdm)",
+  url: "https://github.com/sparrc/gdm",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

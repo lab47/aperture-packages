@@ -56,6 +56,12 @@ import "pkg-config" as i0, "libsvg-cairo" as i1
 pkg(
   name: "svg2pdf",
   version: "0.1.3",
+  description: "Renders SVG images to a PDF file (using Cairo)",
+  url: "https://cairographics.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

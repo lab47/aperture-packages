@@ -52,6 +52,12 @@ import "cmake" as i0, "pkg-config" as i1
 pkg(
   name: "alure",
   version: "1.2",
+  description: "Manage common tasks with OpenAL applications",
+  url: "https://kcat.tomasu.net/alure.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

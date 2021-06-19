@@ -75,6 +75,12 @@ import "node" as i0
 pkg(
   name: "newman",
   version: "5.2.3",
+  description: "Command-line collection runner for Postman",
+  url: "https://www.getpostman.com",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "carthage",
   version: "0.38.0",
+  description: "Decentralized dependency manager for Cocoa",
+  url: "https://github.com/Carthage/Carthage",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

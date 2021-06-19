@@ -76,6 +76,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "libssh2",
   version: "1.9.0",
+  description: "C library implementing the SSH2 protocol",
+  url: "https://libssh2.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

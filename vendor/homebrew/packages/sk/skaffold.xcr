@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "skaffold",
   version: "1.26.0",
+  description: "Easy and Repeatable Kubernetes Development",
+  url: "https://skaffold.dev/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

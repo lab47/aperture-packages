@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "keydb",
   version: "6.0.16",
+  description: "Multithreaded fork of Redis",
+  url: "https://keydb.dev",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

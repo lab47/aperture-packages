@@ -45,6 +45,12 @@ import "cmake" as i0
 pkg(
   name: "box2d",
   version: "2.4.1",
+  description: "2D physics engine for games",
+  url: "https://box2d.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

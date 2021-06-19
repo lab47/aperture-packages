@@ -43,6 +43,12 @@ import "avro-c" as i0, "librdkafka" as i1, "libserdes" as i2, "yajl" as i3
 pkg(
   name: "kafkacat",
   version: "1.6.0",
+  description: "Generic command-line non-JVM Apache Kafka producer and consumer",
+  url: "https://github.com/edenhill/kafkacat",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

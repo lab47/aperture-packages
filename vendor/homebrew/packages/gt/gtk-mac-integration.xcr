@@ -124,6 +124,12 @@ import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-d
 pkg(
   name: "gtk-mac-integration",
   version: "3.0.0",
+  description: "Integrates GTK macOS applications with the Mac desktop",
+  url: "https://wiki.gnome.org/Projects/GTK+/OSX/Integration",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

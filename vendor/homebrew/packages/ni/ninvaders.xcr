@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ninvaders",
   version: "0.1.1",
+  description: "Space Invaders in the terminal",
+  url: "https://ninvaders.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

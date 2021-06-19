@@ -48,6 +48,12 @@ import "gettext" as i0, "intltool" as i1, "pkg-config" as i2, "gtk+" as i3
 pkg(
   name: "gnome-themes-standard",
   version: "3.22.3",
+  description: "Default themes for the GNOME desktop environment",
+  url: "https://gitlab.gnome.org/GNOME/gnome-themes-extra",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

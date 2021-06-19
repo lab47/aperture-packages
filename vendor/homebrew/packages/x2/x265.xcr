@@ -85,6 +85,12 @@ import "cmake" as i0, "nasm" as i1
 pkg(
   name: "x265",
   version: "3.5",
+  description: "H.265/HEVC encoder",
+  url: "https://bitbucket.org/multicoreware/x265_git",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

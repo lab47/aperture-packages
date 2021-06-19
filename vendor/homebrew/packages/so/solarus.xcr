@@ -51,6 +51,12 @@ import "cmake" as i0, "glm" as i1, "libmodplug" as i2, "libogg" as i3, "libvorbi
 pkg(
   name: "solarus",
   version: "1.6.5",
+  description: "Action-RPG game engine",
+  url: "https://www.solarus-games.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

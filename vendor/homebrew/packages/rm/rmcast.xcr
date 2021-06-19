@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rmcast",
   version: "2.0.0",
+  description: "IP Multicast library",
+  url: "http://www.land.ufrj.br/tools/rmcast/rmcast.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

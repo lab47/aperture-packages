@@ -44,6 +44,12 @@ import "go" as i0
 pkg(
   name: "td",
   version: "1.4.2",
+  description: "Your todo list in your terminal",
+  url: "https://github.com/Swatto/td",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

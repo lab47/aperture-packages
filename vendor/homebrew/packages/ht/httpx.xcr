@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "httpx",
   version: "1.0.9",
+  description: "Fast and multi-purpose HTTP toolkit",
+  url: "https://github.com/projectdiscovery/httpx",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

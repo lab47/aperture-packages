@@ -35,6 +35,12 @@ import "ncurses" as i0
 pkg(
   name: "pcalc",
   version: "2.1",
+  description: "Calculator for those working with multiple bases, sizes, and close to the bits",
+  url: "https://github.com/alt-romes/programmer-calculator",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

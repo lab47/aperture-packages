@@ -41,6 +41,12 @@ import "pkg-config" as i0, "atf" as i1, "lua" as i2, "lutok" as i3, "sqlite" as 
 pkg(
   name: "kyua",
   version: "0.13",
+  description: "Testing framework for infrastructure software",
+  url: "https://github.com/jmmv/kyua",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

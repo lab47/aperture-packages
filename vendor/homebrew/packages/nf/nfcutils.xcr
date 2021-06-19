@@ -38,6 +38,12 @@ import "pkg-config" as i0, "libnfc" as i1, "libusb" as i2
 pkg(
   name: "nfcutils",
   version: "0.3.2",
+  description: "Near Field Communication (NFC) tools under POSIX systems",
+  url: "https://github.com/nfc-tools/nfcutils",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -116,6 +116,12 @@ import "boost" as i0, "open-mpi" as i1
 pkg(
   name: "boost-mpi",
   version: "1.76.0",
+  description: "C++ library for C++/MPI interoperability",
+  url: "https://www.boost.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -47,6 +47,12 @@ import "go" as i0, "govendor" as i1
 pkg(
   name: "dockviz",
   version: "0.6.3",
+  description: "Visualizing docker data",
+  url: "https://github.com/justone/dockviz",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

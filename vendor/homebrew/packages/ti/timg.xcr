@@ -46,6 +46,12 @@ import "cmake" as i0, "ffmpeg" as i1, "graphicsmagick" as i2, "jpeg-turbo" as i3
 pkg(
   name: "timg",
   version: "1.4.2",
+  description: "Terminal image and video viewer",
+  url: "https://timg.sh/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

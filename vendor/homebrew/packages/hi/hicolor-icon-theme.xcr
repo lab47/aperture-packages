@@ -46,6 +46,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hicolor-icon-theme",
   version: "0.17",
+  description: "Fallback theme for FreeDesktop.org icon themes",
+  url: "https://wiki.freedesktop.org/www/Software/icon-theme/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

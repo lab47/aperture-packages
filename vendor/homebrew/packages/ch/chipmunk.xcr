@@ -56,6 +56,12 @@ import "cmake" as i0
 pkg(
   name: "chipmunk",
   version: "7.0.3",
+  description: "2D rigid body physics library written in C",
+  url: "https://chipmunk-physics.net/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

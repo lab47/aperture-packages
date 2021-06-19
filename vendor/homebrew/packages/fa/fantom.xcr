@@ -41,6 +41,12 @@ import "openjdk" as i0
 pkg(
   name: "fantom",
   version: "1.0.76",
+  description: "Object oriented, portable programming language",
+  url: "https://fantom.org/",
+  metadata: %{
+    "license": "AFL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

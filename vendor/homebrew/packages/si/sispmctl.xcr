@@ -37,6 +37,12 @@ import "pkg-config" as i0, "libusb-compat" as i1
 pkg(
   name: "sispmctl",
   version: "4.9",
+  description: "Control Gembird SIS-PM programmable power outlet strips",
+  url: "https://sispmctl.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "fontconfig" as i0, "libx11" as i1, "libxft" as i2, "libxinerama" as i3
 pkg(
   name: "dmenu",
   version: "5.0",
+  description: "Dynamic menu for X11",
+  url: "https://tools.suckless.org/dmenu/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

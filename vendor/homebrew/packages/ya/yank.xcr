@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "yank",
   version: "1.2.0",
+  description: "Copy terminal output to clipboard",
+  url: "https://github.com/mptre/yank",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

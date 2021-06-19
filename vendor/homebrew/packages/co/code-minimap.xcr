@@ -38,6 +38,12 @@ import "rust" as i0
 pkg(
   name: "code-minimap",
   version: "0.6.0",
+  description: "High performance code minimap generator",
+  url: "https://github.com/wfxr/code-minimap",
+  metadata: %{
+    "license": "Apache-2.0 or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

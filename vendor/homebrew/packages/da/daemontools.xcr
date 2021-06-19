@@ -81,6 +81,12 @@ import "homebrew-install" as hi
 pkg(
   name: "daemontools",
   version: "0.76",
+  description: "Collection of tools for managing UNIX services",
+  url: "https://cr.yp.to/daemontools.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gmail-backup",
   version: "20110307",
+  description: "Backup and restore the content of your Gmail account",
+  url: "https://code.google.com/archive/p/gmail-backup-com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

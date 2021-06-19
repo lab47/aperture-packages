@@ -74,6 +74,12 @@ import "cmake" as i0, "pkg-config" as i1, "jpeg" as i2, "libusb" as i3, "libx11"
 pkg(
   name: "freerdp",
   version: "2.3.2",
+  description: "X11 implementation of the Remote Desktop Protocol (RDP)",
+  url: "https://www.freerdp.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2
 pkg(
   name: "mtr",
   version: "0.94",
+  description: "'traceroute' and 'ping' in a single tool",
+  url: "https://www.bitwizard.nl/mtr/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

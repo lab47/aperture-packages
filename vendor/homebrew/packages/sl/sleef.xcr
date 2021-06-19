@@ -49,6 +49,12 @@ import "cmake" as i0
 pkg(
   name: "sleef",
   version: "3.5.1",
+  description: "SIMD library for evaluating elementary functions",
+  url: "https://sleef.org",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

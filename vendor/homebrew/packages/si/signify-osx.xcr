@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "signify-osx",
   version: "1.4",
+  description: "Cryptographically sign and verify files",
+  url: "https://man.openbsd.org/signify.1",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

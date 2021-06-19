@@ -66,6 +66,12 @@ import "zlib" as i0
 pkg(
   name: "libmagic",
   version: "5.40",
+  description: "Implementation of the file(1) command",
+  url: "https://www.darwinsys.com/file/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

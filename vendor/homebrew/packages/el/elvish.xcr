@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "elvish",
   version: "0.15.0",
+  description: "Friendly and expressive shell",
+  url: "https://github.com/elves/elvish",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

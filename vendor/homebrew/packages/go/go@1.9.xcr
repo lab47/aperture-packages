@@ -113,6 +113,12 @@ import "homebrew-install" as hi
 pkg(
   name: "go@1.9",
   version: "1.9.7",
+  description: "Go programming environment (1.9)",
+  url: "https://golang.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "namazu",
   version: "2.0.21",
+  description: "Full-text search engine",
+  url: "http://www.namazu.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cbmbasic",
   version: "1.0",
+  description: "Commodore BASIC V2 as a scripting language",
+  url: "https://github.com/mist64/cbmbasic",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -65,6 +65,12 @@ import "openjdk@11" as i0
 pkg(
   name: "glassfish",
   version: "6.1.0",
+  description: "Java EE application server",
+  url: "https://glassfish.org/",
+  metadata: %{
+    "license": "EPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

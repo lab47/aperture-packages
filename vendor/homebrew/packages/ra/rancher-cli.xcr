@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "rancher-cli",
   version: "2.4.11",
+  description: "Unified tool to manage your Rancher server",
+  url: "https://github.com/rancher/cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "cmake" as i0, "ncurses" as i1
 pkg(
   name: "libcec",
   version: "6.0.2",
+  description: "Control devices with TV remote control and HDMI cabling",
+  url: "http://libcec.pulse-eight.com/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

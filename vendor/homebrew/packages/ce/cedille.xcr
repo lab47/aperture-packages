@@ -137,6 +137,12 @@ import "agda" as i0, "haskell-stack" as i1, "ghc@8.8" as i2
 pkg(
   name: "cedille",
   version: "1.1.2",
+  description: "Language based on the Calculus of Dependent Lambda Eliminations",
+  url: "https://cedille.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

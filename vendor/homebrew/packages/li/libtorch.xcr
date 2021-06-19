@@ -94,12 +94,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "eigen" as i5, "expat" as i6, "gdbm" as i7, "libffi" as i8, "libomp" as i9, "libtool" as i10, "libyaml" as i11, "m4" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "perl" as i16, "pkg-config" as i17, "protobuf" as i18, "pybind11" as i19, "python@3.7" as i20, "python@3.8" as i21, "python@3.9" as i22, "readline" as i23, "six" as i24, "sphinx-doc" as i25, "sqlite" as i26, "tcl-tk" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
+import "bzip2" as i0, "cmake" as i1, "eigen" as i2, "expat" as i3, "gdbm" as i4, "libffi" as i5, "libomp" as i6, "libyaml" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "protobuf" as i12, "pybind11" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "libtorch",
   version: "1.8.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "Tensors and dynamic neural networks",
+  url: "https://pytorch.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtorch.rb"), formula)

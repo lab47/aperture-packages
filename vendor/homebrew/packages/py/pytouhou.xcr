@@ -130,12 +130,18 @@ __END__
 
 import "homebrew-install" as hi
 
-import "atk" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "bzip2" as i5, "cairo" as i6, "cmake" as i7, "docbook" as i8, "docbook-xsl" as i9, "expat" as i10, "flac" as i11, "flex" as i12, "fontconfig" as i13, "freetype" as i14, "fribidi" as i15, "gdbm" as i16, "gdk-pixbuf" as i17, "gettext" as i18, "glfw" as i19, "glib" as i20, "gobject-introspection" as i21, "gperf" as i22, "graphite2" as i23, "gsettings-desktop-schemas" as i24, "gtk+3" as i25, "harfbuzz" as i26, "help2man" as i27, "hicolor-icon-theme" as i28, "icu4c" as i29, "jpeg" as i30, "libepoxy" as i31, "libffi" as i32, "libgcrypt" as i33, "libgpg-error" as i34, "libmodplug" as i35, "libogg" as i36, "libpng" as i37, "libpthread-stubs" as i38, "libtiff" as i39, "libtool" as i40, "libvorbis" as i41, "libx11" as i42, "libxau" as i43, "libxcb" as i44, "libxdmcp" as i45, "libxext" as i46, "libxml2" as i47, "libxrender" as i48, "libxslt" as i49, "lzo" as i50, "m4" as i51, "mercurial" as i52, "meson" as i53, "mpdecimal" as i54, "ncurses" as i55, "ninja" as i56, "openssl@1.1" as i57, "pango" as i58, "pcre" as i59, "perl" as i60, "pixman" as i61, "pkg-config" as i62, "py3cairo" as i63, "pygobject3" as i64, "python@3.9" as i65, "readline" as i66, "sdl2" as i67, "sdl2_image" as i68, "sdl2_mixer" as i69, "sdl2_ttf" as i70, "sphinx-doc" as i71, "sqlite" as i72, "unzip" as i73, "util-macros" as i74, "webp" as i75, "xcb-proto" as i76, "xorgproto" as i77, "xtrans" as i78, "xz" as i79, "zip" as i80, "zlib" as i81
+import "mercurial" as i0, "pkg-config" as i1, "glfw" as i2, "gtk+3" as i3, "libepoxy" as i4, "py3cairo" as i5, "pygobject3" as i6, "python@3.9" as i7, "sdl2" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
 
 pkg(
   name: "pytouhou",
   version: "634",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81],
+  description: "Libre implementation of Touhou 6 engine",
+  url: "https://pytouhou.linkmauve.fr/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pytouhou.rb"), formula)

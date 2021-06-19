@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-utils",
   version: "1.0",
+  description: "Various Git helper utilities",
+  url: "https://github.com/ddollar/git-utils",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

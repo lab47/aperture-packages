@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-test",
   version: "1.0.4",
+  description: "Run tests on each distinct tree in a revision list",
+  url: "https://github.com/spotify/git-test",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

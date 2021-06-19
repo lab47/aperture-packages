@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sourcedocs",
   version: "1.2.1",
+  description: "Generate Markdown files from inline source code documentation",
+  url: "https://github.com/eneko/SourceDocs",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

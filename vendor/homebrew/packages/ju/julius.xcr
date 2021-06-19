@@ -39,6 +39,12 @@ import "libsndfile" as i0
 pkg(
   name: "julius",
   version: "4.6",
+  description: "Two-pass large vocabulary continuous speech recognition engine",
+  url: "https://github.com/julius-speech/julius",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -30,6 +30,12 @@ import "openjdk@8" as i0
 pkg(
   name: "jmxterm",
   version: "1.0.2",
+  description: "Open source, command-line based interactive JMX client",
+  url: "https://docs.cyclopsgroup.org/jmxterm",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

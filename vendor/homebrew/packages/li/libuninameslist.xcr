@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libuninameslist",
   version: "20200413",
+  description: "Library of Unicode names and annotation data",
+  url: "https://github.com/fontforge/libuninameslist",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

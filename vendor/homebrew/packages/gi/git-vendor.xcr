@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-vendor",
   version: "1.2.1",
+  description: "Command for managing git vendored dependencies",
+  url: "https://brettlangdon.github.io/git-vendor",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

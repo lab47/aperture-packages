@@ -99,6 +99,12 @@ import "homebrew-install" as hi
 pkg(
   name: "prover9",
   version: "2009-11A",
+  description: "Automated theorem prover for first-order and equational logic",
+  url: "https://www.cs.unm.edu/~mccune/prover9/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

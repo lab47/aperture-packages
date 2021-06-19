@@ -38,6 +38,12 @@ import "mono" as i0
 pkg(
   name: "docfx",
   version: "2.58",
+  description: "Tools for building and publishing API documentation for .NET projects",
+  url: "https://dotnet.github.io/docfx/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

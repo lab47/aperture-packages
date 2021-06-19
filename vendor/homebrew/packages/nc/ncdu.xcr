@@ -45,6 +45,12 @@ import "ncurses" as i0
 pkg(
   name: "ncdu",
   version: "1.15.1",
+  description: "NCurses Disk Usage",
+  url: "https://dev.yorhel.nl/ncdu",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

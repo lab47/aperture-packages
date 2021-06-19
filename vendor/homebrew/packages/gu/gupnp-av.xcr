@@ -40,6 +40,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "pkg-config" as i2, "get
 pkg(
   name: "gupnp-av",
   version: "0.12.11",
+  description: "Library to help implement UPnP A/V profiles",
+  url: "https://wiki.gnome.org/GUPnP/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

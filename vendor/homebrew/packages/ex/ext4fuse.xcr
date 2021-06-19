@@ -41,6 +41,12 @@ import "pkg-config" as i0
 pkg(
   name: "ext4fuse",
   version: "0.1.3",
+  description: "Read-only implementation of ext4 for FUSE",
+  url: "https://github.com/gerard/ext4fuse",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

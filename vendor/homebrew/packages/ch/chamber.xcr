@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "chamber",
   version: "2.10.1",
+  description: "CLI for managing secrets through AWS SSM Parameter Store",
+  url: "https://github.com/segmentio/chamber",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -96,6 +96,12 @@ import "libsigsegv" as i0, "readline" as i1
 pkg(
   name: "clisp",
   version: "2.49",
+  description: "GNU CLISP, a Common Lisp implementation",
+  url: "https://clisp.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

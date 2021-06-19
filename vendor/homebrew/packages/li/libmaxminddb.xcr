@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmaxminddb",
   version: "1.6.0",
+  description: "C library for the MaxMind DB file format",
+  url: "https://github.com/maxmind/libmaxminddb",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

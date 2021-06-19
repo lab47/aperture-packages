@@ -39,6 +39,12 @@ import "pkg-config" as i0
 pkg(
   name: "libcdio",
   version: "2.1.0",
+  description: "Compact Disc Input and Control Library",
+  url: "https://www.gnu.org/software/libcdio/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

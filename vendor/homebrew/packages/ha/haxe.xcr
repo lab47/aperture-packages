@@ -123,6 +123,12 @@ import "cmake" as i0, "ocaml" as i1, "opam" as i2, "pkg-config" as i3, "mbedtls"
 pkg(
   name: "haxe",
   version: "4.2.2",
+  description: "Multi-platform programming language",
+  url: "https://haxe.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

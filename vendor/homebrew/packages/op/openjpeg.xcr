@@ -56,6 +56,12 @@ import "cmake" as i0, "doxygen" as i1, "libpng" as i2, "libtiff" as i3, "little-
 pkg(
   name: "openjpeg",
   version: "2.4.0",
+  description: "Library for JPEG-2000 image manipulation",
+  url: "https://www.openjpeg.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

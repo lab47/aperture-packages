@@ -44,6 +44,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "ncrack",
   version: "0.7",
+  description: "Network authentication cracking tool",
+  url: "https://nmap.org/ncrack/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

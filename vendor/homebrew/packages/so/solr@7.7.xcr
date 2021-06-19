@@ -97,6 +97,12 @@ import "openjdk@11" as i0
 pkg(
   name: "solr@7.7",
   version: "7.7.3",
+  description: "Enterprise search platform from the Apache Lucene project",
+  url: "https://lucene.apache.org/solr/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

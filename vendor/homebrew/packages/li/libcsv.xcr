@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libcsv",
   version: "3.0.3",
+  description: "CSV library in ANSI C89",
+  url: "https://sourceforge.net/projects/libcsv/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

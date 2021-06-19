@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "greed",
   version: "4.2",
+  description: "Game of consumption",
+  url: "http://www.catb.org/~esr/greed/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

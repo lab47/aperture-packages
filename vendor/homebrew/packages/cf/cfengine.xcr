@@ -52,6 +52,12 @@ import "lmdb" as i0, "openssl@1.1" as i1, "pcre" as i2
 pkg(
   name: "cfengine",
   version: "3.17.0",
+  description: "Help manage and understand IT infrastructure",
+  url: "https://cfengine.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

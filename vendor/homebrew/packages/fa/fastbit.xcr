@@ -61,6 +61,12 @@ import "openjdk" as i0
 pkg(
   name: "fastbit",
   version: "2.0.3",
+  description: "Open-source data processing library in NoSQL spirit",
+  url: "https://sdm.lbl.gov/fastbit/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

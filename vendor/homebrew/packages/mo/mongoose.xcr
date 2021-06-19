@@ -72,6 +72,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "mongoose",
   version: "7.2",
+  description: "Web server build on top of Libmongoose embedded library",
+  url: "https://github.com/cesanta/mongoose",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

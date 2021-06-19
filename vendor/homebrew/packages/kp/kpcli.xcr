@@ -139,6 +139,12 @@ import "readline" as i0, "perl" as i1
 pkg(
   name: "kpcli",
   version: "3.6",
+  description: "Command-line interface to KeePass database files",
+  url: "https://kpcli.sourceforge.io/",
+  metadata: %{
+    "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "pkg-config" as i0, "util-macros" as i1, "xorgproto" as i2
 pkg(
   name: "xorgrgb",
   version: "1.0.6",
+  description: "X.Org: color names database",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

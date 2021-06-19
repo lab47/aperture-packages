@@ -45,6 +45,12 @@ import "cmake" as i0, "ntl" as i1
 pkg(
   name: "helib",
   version: "2.1.0",
+  description: "Implementation of homomorphic encryption",
+  url: "https://github.com/homenc/HElib",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

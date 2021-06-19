@@ -41,6 +41,12 @@ import "cmake" as i0, "libev" as i1, "openssl@1.1" as i2
 pkg(
   name: "apib",
   version: "1.2.1",
+  description: "HTTP performance-testing tool",
+  url: "https://github.com/apigee/apib",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

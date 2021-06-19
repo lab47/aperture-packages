@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "teensy_loader_cli",
   version: "2.1",
+  description: "Command-line integration for Teensy USB development boards",
+  url: "https://www.pjrc.com/teensy/loader_cli.html",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

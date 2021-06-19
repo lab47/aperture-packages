@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "neatvi",
   version: "08",
+  description: "Clone of ex/vi for editing bidirectional utf-8 text",
+  url: "https://repo.or.cz/neatvi.git",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

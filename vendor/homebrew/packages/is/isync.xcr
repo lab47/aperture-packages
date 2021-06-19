@@ -89,6 +89,12 @@ import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "openssl@1.1" as
 pkg(
   name: "isync",
   version: "1.4.2",
+  description: "Synchronize a maildir with an IMAP server",
+  url: "https://isync.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

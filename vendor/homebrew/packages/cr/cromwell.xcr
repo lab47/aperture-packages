@@ -83,6 +83,12 @@ import "openjdk" as i0
 pkg(
   name: "cromwell",
   version: "64",
+  description: "Workflow Execution Engine using Workflow Description Language",
+  url: "https://github.com/broadinstitute/cromwell",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

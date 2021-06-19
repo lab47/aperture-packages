@@ -74,6 +74,12 @@ import "autoconf" as i0, "automake" as i1, "libnet" as i2, "libpcap" as i3
 pkg(
   name: "tcptraceroute",
   version: "1.5beta7",
+  description: "Traceroute implementation using TCP packets",
+  url: "https://github.com/mct/tcptraceroute",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

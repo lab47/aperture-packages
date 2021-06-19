@@ -116,6 +116,12 @@ import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-d
 pkg(
   name: "gtkspell3",
   version: "3.0.10",
+  description: "Gtk widget for highlighting and replacing misspelled words",
+  url: "https://gtkspell.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {

@@ -70,6 +70,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "json-glib",
   version: "1.6.2",
+  description: "Library for JSON, based on GLib",
+  url: "https://wiki.gnome.org/Projects/JsonGlib",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

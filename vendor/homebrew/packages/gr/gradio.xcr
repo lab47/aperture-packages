@@ -60,6 +60,12 @@ import "meson" as i0, "ninja" as i1, "adwaita-icon-theme" as i2, "cairo" as i3, 
 pkg(
   name: "gradio",
   version: "7.3",
+  description: "GTK3 app for finding and listening to internet radio stations",
+  url: "https://github.com/haecker-felix/Gradio",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {

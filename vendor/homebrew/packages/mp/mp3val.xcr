@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp3val",
   version: "0.1.8",
+  description: "Program for MPEG audio stream validation",
+  url: "https://mp3val.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

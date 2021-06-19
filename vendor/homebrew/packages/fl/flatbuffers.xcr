@@ -83,6 +83,12 @@ import "cmake" as i0
 pkg(
   name: "flatbuffers",
   version: "2.0.0",
+  description: "Serialization library for C++, supporting Java, C#, and Go",
+  url: "https://google.github.io/flatbuffers",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

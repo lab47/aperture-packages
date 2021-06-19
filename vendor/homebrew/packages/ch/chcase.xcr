@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "chcase",
   version: "2.0",
+  description: "Perl file-renaming script",
+  url: "http://www.primaledge.ca/chcase.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

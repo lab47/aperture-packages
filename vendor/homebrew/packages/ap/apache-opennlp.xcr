@@ -30,6 +30,12 @@ import "openjdk" as i0
 pkg(
   name: "apache-opennlp",
   version: "1.9.3",
+  description: "Machine learning toolkit for processing natural language text",
+  url: "https://opennlp.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

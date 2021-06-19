@@ -60,6 +60,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nacl",
   version: "20110221",
+  description: "Network communication, encryption, decryption, signatures library",
+  url: "https://nacl.cr.yp.to/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

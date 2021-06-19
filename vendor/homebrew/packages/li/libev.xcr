@@ -71,6 +71,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libev",
   version: "4.33",
+  description: "Asynchronous event library",
+  url: "http://software.schmorp.de/pkg/libev.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

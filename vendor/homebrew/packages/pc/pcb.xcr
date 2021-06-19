@@ -62,6 +62,12 @@ import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "gd" as i3, "gettext"
 pkg(
   name: "pcb",
   version: "4.3.0",
+  description: "Interactive printed circuit board editor",
+  url: "http://pcb.geda-project.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

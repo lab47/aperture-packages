@@ -48,6 +48,12 @@ import "pkg-config" as i0, "glib" as i1, "curl" as i2
 pkg(
   name: "dopewars",
   version: "1.6.1",
+  description: "Free rewrite of a game originally based on \"Drug Wars\"",
+  url: "https://dopewars.sourceforge.io",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

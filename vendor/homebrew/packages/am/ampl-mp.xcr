@@ -74,6 +74,12 @@ import "cmake" as i0
 pkg(
   name: "ampl-mp",
   version: "3.1.0",
+  description: "Open-source library for mathematical programming",
+  url: "https://www.ampl.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

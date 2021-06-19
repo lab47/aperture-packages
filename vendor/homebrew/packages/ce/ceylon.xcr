@@ -42,6 +42,12 @@ import "openjdk@8" as i0
 pkg(
   name: "ceylon",
   version: "1.3.3",
+  description: "Programming language for writing large programs in teams",
+  url: "https://ceylon-lang.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

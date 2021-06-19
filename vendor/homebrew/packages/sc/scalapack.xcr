@@ -68,6 +68,12 @@ import "cmake" as i0, "gcc" as i1, "open-mpi" as i2, "openblas" as i3
 pkg(
   name: "scalapack",
   version: "2.1.0",
+  description: "High-performance linear algebra for distributed memory machines",
+  url: "https://www.netlib.org/scalapack/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

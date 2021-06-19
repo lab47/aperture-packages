@@ -44,6 +44,12 @@ import "ocaml" as i0
 pkg(
   name: "ocamlbuild",
   version: "0.14.0",
+  description: "Generic build tool for OCaml",
+  url: "https://github.com/ocaml/ocamlbuild",
+  metadata: %{
+    "license": "LGPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

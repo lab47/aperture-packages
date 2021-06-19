@@ -43,6 +43,12 @@ import "boost" as i0, "pkg-config" as i1, "lua" as i2
 pkg(
   name: "highlight",
   version: "4.1",
+  description: "Convert source code to formatted text with syntax highlighting",
+  url: "http://www.andre-simon.de/doku/highlight/en/highlight.php",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

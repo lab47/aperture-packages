@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "mockery",
   version: "2.7.5",
+  description: "Mock code autogenerator for Golang",
+  url: "https://github.com/vektra/mockery",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

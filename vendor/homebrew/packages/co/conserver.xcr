@@ -46,6 +46,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "conserver",
   version: "8.2.6",
+  description: "Allows multiple users to watch a serial console at the same time",
+  url: "https://www.conserver.com/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -46,6 +46,12 @@ import "libpng" as i0, "sdl" as i1
 pkg(
   name: "atari800",
   version: "4.2.0",
+  description: "Atari 8-bit machine emulator",
+  url: "https://atari800.github.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

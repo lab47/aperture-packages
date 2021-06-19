@@ -60,6 +60,12 @@ import "pkg-config" as i0, "freeglut" as i1, "mesa" as i2, "openssl@1.1" as i3
 pkg(
   name: "mupdf",
   version: "1.18.0",
+  description: "Lightweight PDF and XPS viewer",
+  url: "https://mupdf.com/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "yacas",
   version: "1.9.1",
+  description: "General purpose computer algebra system",
+  url: "https://www.yacas.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

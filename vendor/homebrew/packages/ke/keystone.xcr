@@ -37,6 +37,12 @@ import "cmake" as i0
 pkg(
   name: "keystone",
   version: "0.9.2",
+  description: "Assembler framework: Core + bindings",
+  url: "https://www.keystone-engine.org/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

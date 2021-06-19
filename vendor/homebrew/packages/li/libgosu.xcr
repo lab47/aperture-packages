@@ -82,6 +82,12 @@ import "cmake" as i0, "pkg-config" as i1, "sdl2" as i2
 pkg(
   name: "libgosu",
   version: "1.2.0",
+  description: "2D game development library",
+  url: "https://libgosu.org",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -53,6 +53,12 @@ import "asciidoctor" as i0, "cmake" as i1, "ninja" as i2
 pkg(
   name: "nng",
   version: "1.4.0",
+  description: "Nanomsg-next-generation -- light-weight brokerless messaging",
+  url: "https://nanomsg.github.io/nng/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

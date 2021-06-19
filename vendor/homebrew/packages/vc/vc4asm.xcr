@@ -46,6 +46,12 @@ import "cmake" as i0
 pkg(
   name: "vc4asm",
   version: "0.3",
+  description: "Macro assembler for Broadcom VideoCore IV aka Raspberry Pi GPU",
+  url: "http://maazl.de/project/vc4asm/doc/index.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

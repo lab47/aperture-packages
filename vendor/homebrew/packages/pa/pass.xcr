@@ -67,6 +67,12 @@ import "gnu-getopt" as i0, "gnupg" as i1, "qrencode" as i2, "tree" as i3
 pkg(
   name: "pass",
   version: "1.7.4",
+  description: "Password manager",
+  url: "https://www.passwordstore.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

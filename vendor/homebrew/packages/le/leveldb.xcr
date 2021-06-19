@@ -52,6 +52,12 @@ import "cmake" as i0, "gperftools" as i1, "snappy" as i2
 pkg(
   name: "leveldb",
   version: "1.23",
+  description: "Key-value storage library with ordered mapping",
+  url: "https://github.com/google/leveldb/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

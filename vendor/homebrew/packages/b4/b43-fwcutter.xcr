@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "b43-fwcutter",
   version: "019",
+  description: "Extract firmware from Braodcom 43xx driver files",
+  url: "https://wireless.wiki.kernel.org/en/users/drivers/b43",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

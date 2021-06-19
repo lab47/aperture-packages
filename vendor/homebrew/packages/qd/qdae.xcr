@@ -48,6 +48,12 @@ import "libxml2" as i0, "sdl" as i1
 pkg(
   name: "qdae",
   version: "0.0.10",
+  description: "Quick and Dirty Apricot Emulator",
+  url: "https://www.seasip.info/Unix/QDAE/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -116,6 +116,12 @@ import "pkg-config" as i0, "gnutls" as i1, "jansson" as i2, "libxml2" as i3, "nc
 pkg(
   name: "emacs",
   version: "27.2",
+  description: "GNU Emacs text editor",
+  url: "https://www.gnu.org/software/emacs/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

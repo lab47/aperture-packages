@@ -81,6 +81,12 @@ import "go" as i0
 pkg(
   name: "launch_socket_server",
   version: "2.0.0",
+  description: "Bind to privileged ports without running a server as root",
+  url: "https://github.com/mistydemeo/launch_socket_server",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

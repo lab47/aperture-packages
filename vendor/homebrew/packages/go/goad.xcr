@@ -48,6 +48,12 @@ import "go" as i0, "go-bindata" as i1, "zip" as i2
 pkg(
   name: "goad",
   version: "2.0.4",
+  description: "AWS Lambda powered, highly distributed, load testing tool built in Go",
+  url: "https://goad.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

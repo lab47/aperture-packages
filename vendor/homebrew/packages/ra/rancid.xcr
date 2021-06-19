@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rancid",
   version: "3.13",
+  description: "Really Awesome New Cisco confIg Differ",
+  url: "https://www.shrubbery.net/rancid/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

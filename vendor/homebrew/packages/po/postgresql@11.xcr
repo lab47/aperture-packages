@@ -169,6 +169,12 @@ import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3,
 pkg(
   name: "postgresql@11",
   version: "11.12",
+  description: "Object-relational database system",
+  url: "https://www.postgresql.org/",
+  metadata: %{
+    "license": "PostgreSQL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

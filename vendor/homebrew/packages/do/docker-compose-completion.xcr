@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "docker-compose-completion",
   version: "1.29.2",
+  description: "Completion script for docker-compose",
+  url: "https://docs.docker.com/compose/completion/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

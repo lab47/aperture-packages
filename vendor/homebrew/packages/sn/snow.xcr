@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "snow",
   version: "20130616",
+  description: "Whitespace steganography: coded messages using whitespace",
+  url: "https://web.archive.org/web/20200701063014/www.darkside.com.au/snow/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

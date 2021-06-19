@@ -42,6 +42,12 @@ import "homebrew-install" as hi
 pkg(
   name: "parallel",
   version: "20210422",
+  description: "Shell command parallelization utility",
+  url: "https://savannah.gnu.org/projects/parallel/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

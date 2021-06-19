@@ -66,6 +66,12 @@ import "homebrew-install" as hi
 pkg(
   name: "colorsvn",
   version: "0.3.3",
+  description: "Subversion output colorizer",
+  url: "https://web.archive.org/web/20170725092001/colorsvn.tigris.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

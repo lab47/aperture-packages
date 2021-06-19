@@ -108,6 +108,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gobo",
   version: "20.05",
+  description: "Free and portable Eiffel tools and libraries",
+  url: "http://www.gobosoft.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

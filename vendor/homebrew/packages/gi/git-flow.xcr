@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-flow",
   version: "0.4.1",
+  description: "Extensions to follow Vincent Driessen's branching model",
+  url: "https://github.com/nvie/gitflow",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

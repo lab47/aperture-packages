@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nikto",
   version: "2.1.6",
+  description: "Web server scanner",
+  url: "https://cirt.net/nikto2",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "openjdk" as i0
 pkg(
   name: "stanford-parser",
   version: "4.2.0",
+  description: "Statistical NLP parser",
+  url: "https://nlp.stanford.edu/software/lex-parser.shtml",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

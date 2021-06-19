@@ -84,6 +84,12 @@ import "docbook-xsl" as i0, "gobject-introspection" as i1, "gtk-doc" as i2, "mes
 pkg(
   name: "libnotify",
   version: "0.7.9",
+  description: "Library that sends desktop notifications to a notification daemon",
+  url: "https://developer.gnome.org/libnotify",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

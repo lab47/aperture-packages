@@ -68,6 +68,12 @@ import "pkg-config" as i0, "libtool" as i1, "libvorbis" as i2
 pkg(
   name: "libcanberra",
   version: "0.30",
+  description: "Implementation of XDG Sound Theme and Name Specifications",
+  url: "http://0pointer.de/lennart/projects/libcanberra/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "boost" as i0, "cmake" as i1, "doxygen" as i2, "fftw" as i3, "freeimage" 
 pkg(
   name: "arrayfire",
   version: "3.8.0",
+  description: "General purpose GPU library",
+  url: "https://arrayfire.com",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

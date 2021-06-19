@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "idnits",
   version: "2.16.05",
+  description: "Looks for problems in internet draft formatting",
+  url: "https://tools.ietf.org/tools/idnits/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

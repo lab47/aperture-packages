@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gnutls" as i3, "
 pkg(
   name: "s3fs",
   version: "1.87",
+  description: "FUSE-based file system backed by Amazon S3",
+  url: "https://github.com/s3fs-fuse/s3fs-fuse/wiki",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

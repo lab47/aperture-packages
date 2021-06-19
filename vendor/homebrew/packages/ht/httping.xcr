@@ -44,6 +44,12 @@ import "gettext" as i0, "openssl@1.1" as i1
 pkg(
   name: "httping",
   version: "2.5",
+  description: "Ping-like tool for HTTP requests",
+  url: "https://www.vanheusden.com/httping/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

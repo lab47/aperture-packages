@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hiredis",
   version: "1.0.0",
+  description: "Minimalistic client for Redis",
+  url: "https://github.com/redis/hiredis",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

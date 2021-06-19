@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rcs",
   version: "5.10.0",
+  description: "GNU revision control system",
+  url: "https://www.gnu.org/software/rcs/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

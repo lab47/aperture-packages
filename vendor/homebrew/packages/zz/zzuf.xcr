@@ -47,6 +47,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zzuf",
   version: "0.15",
+  description: "Transparent application input fuzzer",
+  url: "http://caca.zoy.org/wiki/zzuf",
+  metadata: %{
+    "license": "WTFPL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -126,12 +126,18 @@ end
 
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "bison" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "flex" as i6, "freetype" as i7, "gdbm" as i8, "gettext" as i9, "help2man" as i10, "jpeg" as i11, "libffi" as i12, "libpng" as i13, "libtiff" as i14, "libxml2" as i15, "little-cms2" as i16, "m4" as i17, "mpdecimal" as i18, "ncurses" as i19, "openjpeg" as i20, "openssl@1.1" as i21, "perl" as i22, "pkg-config" as i23, "python@3.9" as i24, "readline" as i25, "sphinx-doc" as i26, "sqlite" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
+import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openjpeg" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "organize-tool",
   version: "1.10.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  description: "File management automation tool",
+  url: "https://github.com/tfeldmann/organize",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "organize-tool.rb"), formula)

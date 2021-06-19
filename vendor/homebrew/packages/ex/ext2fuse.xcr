@@ -44,6 +44,12 @@ import "e2fsprogs" as i0
 pkg(
   name: "ext2fuse",
   version: "0.8.1",
+  description: "Compact implementation of ext2 file system using FUSE",
+  url: "https://sourceforge.net/projects/ext2fuse",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

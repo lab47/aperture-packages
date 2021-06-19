@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "perl@5.18",
   version: "5.18.4",
+  description: "Highly capable, feature-rich programming language",
+  url: "https://www.perl.org/",
+  metadata: %{
+    "license": "Artistic-1.0-Perl",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

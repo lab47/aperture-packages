@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "intltool",
   version: "0.51.0",
+  description: "String tool",
+  url: "https://wiki.freedesktop.org/www/Software/intltool",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

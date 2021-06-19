@@ -36,6 +36,12 @@ import "ncurses" as i0
 pkg(
   name: "bvi",
   version: "1.4.1",
+  description: "Vi-like binary file (hex) editor",
+  url: "https://bvi.sourceforge.io",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

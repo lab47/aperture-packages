@@ -23,6 +23,12 @@ import "unar" as i0
 pkg(
   name: "ievms",
   version: "0.3.3",
+  description: "Automated installation of Microsoft IE AppCompat virtual machines",
+  url: "https://xdissent.github.io/ievms/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

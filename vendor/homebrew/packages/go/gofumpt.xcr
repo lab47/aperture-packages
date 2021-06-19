@@ -53,6 +53,12 @@ import "go" as i0
 pkg(
   name: "gofumpt",
   version: "0.1.1",
+  description: "Stricter gofmt",
+  url: "https://github.com/mvdan/gofumpt",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

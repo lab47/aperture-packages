@@ -79,6 +79,12 @@ import "perl" as i0
 pkg(
   name: "flamegraph",
   version: "1.0",
+  description: "Stack trace visualizer",
+  url: "https://github.com/brendangregg/FlameGraph",
+  metadata: %{
+    "license": "CDDL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

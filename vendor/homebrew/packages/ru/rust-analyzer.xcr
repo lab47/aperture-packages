@@ -83,6 +83,12 @@ import "rust" as i0
 pkg(
   name: "rust-analyzer",
   version: "2021-06-07",
+  description: "Experimental Rust compiler front-end for IDEs",
+  url: "https://rust-analyzer.github.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

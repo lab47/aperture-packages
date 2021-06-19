@@ -79,6 +79,12 @@ import "ant" as i0, "openjdk@11" as i1
 pkg(
   name: "jing-trang",
   version: "20181222",
+  description: "Schema validation and conversion based on RELAX NG",
+  url: "http://www.thaiopensource.com/relaxng/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

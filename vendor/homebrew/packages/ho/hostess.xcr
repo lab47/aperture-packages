@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "hostess",
   version: "0.5.2",
+  description: "Idempotent command-line utility for managing your /etc/hosts file",
+  url: "https://github.com/cbednarski/hostess",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

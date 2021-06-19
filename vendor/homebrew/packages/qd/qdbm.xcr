@@ -75,6 +75,12 @@ import "homebrew-install" as hi
 pkg(
   name: "qdbm",
   version: "1.8.78",
+  description: "Library of routines for managing a database",
+  url: "https://fallabs.com/qdbm/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

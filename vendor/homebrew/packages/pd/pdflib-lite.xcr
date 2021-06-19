@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pdflib-lite",
   version: "7.0.5p3",
+  description: "Subset of the functionality of PDFlib 7",
+  url: "https://www.pdflib.com/download/free-software/pdflib-lite-7/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

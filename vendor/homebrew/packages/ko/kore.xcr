@@ -55,6 +55,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "kore",
   version: "4.1.0",
+  description: "Web application framework for writing web APIs in C",
+  url: "https://kore.io/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

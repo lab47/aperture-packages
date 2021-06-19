@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "scdoc",
   version: "1.11.1",
+  description: "Small man page generator",
+  url: "https://sr.ht/~sircmpwn/scdoc/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

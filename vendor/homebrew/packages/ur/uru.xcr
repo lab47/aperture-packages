@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "uru",
   version: "0.8.5",
+  description: "Use multiple rubies on multiple platforms",
+  url: "https://bitbucket.org/jonforums/uru",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

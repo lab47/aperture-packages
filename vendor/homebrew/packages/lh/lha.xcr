@@ -62,6 +62,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lha",
   version: "1.14i-ac20050924p1",
+  description: "Utility for creating and opening lzh archives",
+  url: "https://lha.osdn.jp/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

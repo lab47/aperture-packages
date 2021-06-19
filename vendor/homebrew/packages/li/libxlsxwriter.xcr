@@ -52,6 +52,12 @@ import "zlib" as i0
 pkg(
   name: "libxlsxwriter",
   version: "1.0.6",
+  description: "C library for creating Excel XLSX files",
+  url: "https://libxlsxwriter.github.io/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

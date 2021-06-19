@@ -39,6 +39,12 @@ import "cmake" as i0, "pkg-config" as i1, "libusb" as i2
 pkg(
   name: "libuvc",
   version: "0.0.6",
+  description: "Cross-platform library for USB video devices",
+  url: "https://github.com/ktossell/libuvc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

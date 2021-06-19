@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "base91",
   version: "0.6.0",
+  description: "Utility to encode and decode base91 files",
+  url: "https://base91.sourceforge.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

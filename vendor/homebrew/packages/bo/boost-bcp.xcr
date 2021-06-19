@@ -41,6 +41,12 @@ import "boost-build" as i0
 pkg(
   name: "boost-bcp",
   version: "1.76.0",
+  description: "Utility for extracting subsets of the Boost library",
+  url: "https://www.boost.org/doc/tools/bcp/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

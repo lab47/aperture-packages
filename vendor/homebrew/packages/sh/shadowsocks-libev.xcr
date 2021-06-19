@@ -116,6 +116,12 @@ import "asciidoc" as i0, "xmlto" as i1, "c-ares" as i2, "libev" as i3, "libsodiu
 pkg(
   name: "shadowsocks-libev",
   version: "3.3.5",
+  description: "Libev port of shadowsocks",
+  url: "https://github.com/shadowsocks/shadowsocks-libev",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

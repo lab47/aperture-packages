@@ -58,6 +58,12 @@ import "rust" as i0
 pkg(
   name: "kickstart",
   version: "0.2.1",
+  description: "Scaffolding tool to get new projects up and running quickly",
+  url: "https://github.com/Keats/kickstart",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

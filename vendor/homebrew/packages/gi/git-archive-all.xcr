@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-archive-all",
   version: "1.23.0",
+  description: "Archive a project and its submodules",
+  url: "https://github.com/Kentzo/git-archive-all",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

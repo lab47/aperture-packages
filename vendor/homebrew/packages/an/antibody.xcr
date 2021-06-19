@@ -37,6 +37,12 @@ import "go" as i0
 pkg(
   name: "antibody",
   version: "6.1.1",
+  description: "Shell plugin manager",
+  url: "https://getantibody.github.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

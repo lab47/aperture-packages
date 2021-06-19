@@ -43,6 +43,12 @@ import "rust" as i0, "erlang" as i1, "rebar3" as i2
 pkg(
   name: "gleam",
   version: "0.15.1",
+  description: "✨ A statically typed language for the Erlang VM",
+  url: "https://gleam.run",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

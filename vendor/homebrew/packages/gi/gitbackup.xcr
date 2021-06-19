@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "gitbackup",
   version: "0.6",
+  description: "Tool to backup your Bitbucket, GitHub and GitLab repositories",
+  url: "https://github.com/amitsaha/gitbackup",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

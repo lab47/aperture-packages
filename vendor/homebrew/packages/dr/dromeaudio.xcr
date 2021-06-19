@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "dromeaudio",
   version: "0.3.0",
+  description: "Small C++ audio manipulation and playback library",
+  url: "https://github.com/joshb/dromeaudio/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

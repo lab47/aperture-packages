@@ -54,6 +54,12 @@ import "rust" as i0
 pkg(
   name: "leaf-proxy",
   version: "0.3.1",
+  description: "Lightweight and fast proxy utility",
+  url: "https://github.com/eycorsican/leaf",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

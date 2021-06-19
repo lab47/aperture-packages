@@ -49,6 +49,12 @@ import "openjdk" as i0
 pkg(
   name: "tee-clc",
   version: "14.135.0",
+  description: "Microsoft Team Explorer Everywhere command-line Client",
+  url: "https://github.com/Microsoft/team-explorer-everywhere",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

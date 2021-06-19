@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "flasm",
   version: "1.62",
+  description: "Flash command-line assembler and disassembler",
+  url: "https://www.nowrap.de/flasm.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

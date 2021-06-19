@@ -62,6 +62,12 @@ import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "libusb" 
 pkg(
   name: "usbredir",
   version: "0.10.0",
+  description: "USB traffic redirection library",
+  url: "https://www.spice-space.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

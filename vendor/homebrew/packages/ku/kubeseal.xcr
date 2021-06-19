@@ -89,6 +89,12 @@ import "go" as i0
 pkg(
   name: "kubeseal",
   version: "0.16.0",
+  description: "Kubernetes controller and tool for one-way encrypted Secrets",
+  url: "https://github.com/bitnami-labs/sealed-secrets",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -34,6 +34,12 @@ import "go" as i0
 pkg(
   name: "slackcat",
   version: "1.7.2",
+  description: "Command-line utility for posting snippets to Slack",
+  url: "https://github.com/vektorlab/slackcat",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

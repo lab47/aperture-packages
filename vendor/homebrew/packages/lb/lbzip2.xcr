@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lbzip2",
   version: "2.5",
+  description: "Parallel bzip2 utility",
+  url: "https://github.com/kjn/lbzip2",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

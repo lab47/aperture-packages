@@ -91,6 +91,12 @@ import "cmake" as i0
 pkg(
   name: "spatialindex",
   version: "1.9.3",
+  description: "General framework for developing spatial indices",
+  url: "https://libspatialindex.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

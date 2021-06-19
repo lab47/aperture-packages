@@ -59,6 +59,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmxml",
   version: "3.2",
+  description: "Mini-XML library",
+  url: "https://michaelrsweet.github.io/mxml/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

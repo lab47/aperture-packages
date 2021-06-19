@@ -44,6 +44,12 @@ import "bison" as i0, "flex" as i1, "m4" as i2
 pkg(
   name: "acpica",
   version: "20210331",
+  description: "OS-independent implementation of the ACPI specification",
+  url: "https://www.acpica.org/",
+  metadata: %{
+    "license": "Intel-ACPI or GPL-2.0-only or BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

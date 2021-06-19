@@ -49,12 +49,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bdw-gc" as i2, "berkeley-db" as i3, "bzip2" as i4, "c-ares" as i5, "cmake" as i6, "expat" as i7, "gdbm" as i8, "gettext" as i9, "gmp" as i10, "gnu-sed" as i11, "gnupg" as i12, "gnutls" as i13, "gperf" as i14, "guile" as i15, "jemalloc" as i16, "libassuan" as i17, "libatomic_ops" as i18, "libev" as i19, "libevent" as i20, "libffi" as i21, "libgcrypt" as i22, "libgpg-error" as i23, "libidn2" as i24, "libksba" as i25, "libtasn1" as i26, "libtool" as i27, "libunistring" as i28, "libusb" as i29, "libxml2" as i30, "libyaml" as i31, "m4" as i32, "mpdecimal" as i33, "ncurses" as i34, "nettle" as i35, "nghttp2" as i36, "ninja" as i37, "npth" as i38, "openssl@1.1" as i39, "p11-kit" as i40, "pcre" as i41, "perl" as i42, "pinentry" as i43, "pkg-config" as i44, "python@3.9" as i45, "readline" as i46, "ruby" as i47, "sphinx-doc" as i48, "sqlite" as i49, "swig" as i50, "unbound" as i51, "unzip" as i52, "xz" as i53, "zip" as i54, "zlib" as i55
+import "python@3.9" as i0, "swig" as i1, "gnupg" as i2, "libassuan" as i3, "libgpg-error" as i4
 
 pkg(
   name: "gpgme",
   version: "1.15.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55],
+  description: "Library access to GnuPG",
+  url: "https://www.gnupg.org/related_software/gpgme/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpgme.rb"), formula)

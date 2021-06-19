@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rfcmarkup",
   version: "1.119",
+  description: "Add HTML markup and links to internet-drafts and RFCs",
+  url: "https://tools.ietf.org/tools/rfcmarkup/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "ncurses" as i0, "bison" as i1
 pkg(
   name: "sc-im",
   version: "0.8.1",
+  description: "Spreadsheet program for the terminal, using ncurses",
+  url: "https://github.com/andmarti1424/sc-im",
+  metadata: %{
+    "license": "BSD-4-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

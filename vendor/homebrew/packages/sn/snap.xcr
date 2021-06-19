@@ -62,6 +62,12 @@ import "go" as i0, "squashfs" as i1
 pkg(
   name: "snap",
   version: "2.46",
+  description: "Tool to work with .snap files",
+  url: "https://snapcraft.io/",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

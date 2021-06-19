@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "byacc",
   version: "20210520",
+  description: "(Arguably) the best yacc variant",
+  url: "https://invisible-island.net/byacc/",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

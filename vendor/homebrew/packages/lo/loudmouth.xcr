@@ -58,6 +58,12 @@ import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "gnutls" as i3, "libid
 pkg(
   name: "loudmouth",
   version: "1.5.4",
+  description: "Lightweight C library for the Jabber protocol",
+  url: "https://mcabber.com",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

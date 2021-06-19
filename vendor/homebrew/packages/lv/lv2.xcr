@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "lv2",
   version: "1.18.2",
+  description: "Portable plugin standard for audio systems",
+  url: "https://lv2plug.in/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

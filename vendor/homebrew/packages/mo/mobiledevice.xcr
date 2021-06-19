@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mobiledevice",
   version: "2.0.0",
+  description: "CLI for Apple's Private (Closed) Mobile Device Framework",
+  url: "https://github.com/imkira/mobiledevice",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -62,6 +62,12 @@ import "cmake" as i0, "rust" as i1, "libgit2" as i2, "libssh2" as i3, "openssl@1
 pkg(
   name: "git-series",
   version: "0.9.1",
+  description: "Track changes to a patch series over time",
+  url: "https://github.com/git-series/git-series",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

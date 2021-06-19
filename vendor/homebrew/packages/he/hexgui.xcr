@@ -37,6 +37,12 @@ import "ant" as i0, "openjdk@8" as i1
 pkg(
   name: "hexgui",
   version: "0.9.3",
+  description: "GUI for playing Hex over Hex Text Protocol",
+  url: "https://sourceforge.net/p/benzene/hexgui/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

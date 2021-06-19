@@ -35,6 +35,12 @@ import "duplicity" as i0
 pkg(
   name: "duply",
   version: "2.3.1",
+  description: "Frontend to the duplicity backup system",
+  url: "https://sourceforge.net/projects/ftplicity/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

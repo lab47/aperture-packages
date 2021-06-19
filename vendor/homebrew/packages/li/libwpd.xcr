@@ -57,6 +57,12 @@ import "pkg-config" as i0, "glib" as i1, "libgsf" as i2, "librevenge" as i3
 pkg(
   name: "libwpd",
   version: "0.10.3",
+  description: "General purpose library for reading WordPerfect files",
+  url: "https://libwpd.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

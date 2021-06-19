@@ -98,6 +98,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
 pkg(
   name: "cubeb",
   version: "0.2",
+  description: "Cross-platform audio library",
+  url: "https://github.com/kinetiknz/cubeb",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

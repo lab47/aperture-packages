@@ -71,6 +71,12 @@ import "cmake" as i0
 pkg(
   name: "msgpack",
   version: "3.3.0",
+  description: "Library for a binary-based efficient data interchange format",
+  url: "https://msgpack.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -182,6 +182,12 @@ import "pkg-config" as i0, "pypy" as i1, "gdbm" as i2, "openssl@1.1" as i3, "sql
 pkg(
   name: "pypy3",
   version: "7.3.4",
+  description: "Implementation of Python 3 in Python",
+  url: "https://pypy.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

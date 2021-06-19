@@ -171,6 +171,12 @@ import "pkg-config" as i0, "openssl@1.1" as i1, "python@3.8" as i2, "libffi" as 
 pkg(
   name: "s3ql",
   version: "3.3.2",
+  description: "POSIX-compliant FUSE filesystem using object store as block storage",
+  url: "https://github.com/s3ql/s3ql",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

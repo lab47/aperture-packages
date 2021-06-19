@@ -43,6 +43,12 @@ import "homebrew-install" as hi
 pkg(
   name: "flvstreamer",
   version: "2.1c1",
+  description: "Stream audio and video from flash & RTMP Servers",
+  url: "https://www.nongnu.org/flvstreamer/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

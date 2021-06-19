@@ -57,6 +57,12 @@ import "pkg-config" as i0, "libx11" as i1
 pkg(
   name: "libxkbfile",
   version: "1.1.0",
+  description: "X.Org: XKB file handling routines",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -31,6 +31,12 @@ import "ffmpeg" as i0
 pkg(
   name: "gifcap",
   version: "1.0.4",
+  description: "Capture video from an Android device and make a gif",
+  url: "https://github.com/outlook/gifcap",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

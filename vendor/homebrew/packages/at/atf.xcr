@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "atf",
   version: "0.21",
+  description: "Automated testing framework",
+  url: "https://github.com/jmmv/atf",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

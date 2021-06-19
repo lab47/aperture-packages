@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-tracker",
   version: "2.0.0",
+  description: "Integrate Pivotal Tracker into your Git workflow",
+  url: "https://github.com/stevenharman/git_tracker",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

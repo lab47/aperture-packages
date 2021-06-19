@@ -45,6 +45,12 @@ import "bison" as i0, "cmake" as i1, "flex" as i2
 pkg(
   name: "doxygen",
   version: "1.9.1",
+  description: "Generate documentation for several programming languages",
+  url: "https://www.doxygen.org/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

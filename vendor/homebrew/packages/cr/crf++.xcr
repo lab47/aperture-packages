@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "crf++",
   version: "0.58",
+  description: "Conditional random fields for segmenting/labeling sequential data",
+  url: "https://taku910.github.io/crfpp/",
+  metadata: %{
+    "license": "LGPL-2.1-only or BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

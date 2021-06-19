@@ -53,6 +53,12 @@ import "cmake" as i0, "pkg-config" as i1, "jthread" as i2
 pkg(
   name: "jrtplib",
   version: "3.11.2",
+  description: "Fully featured C++ Library for RTP (Real-time Transport Protocol)",
+  url: "https://research.edm.uhasselt.be/jori/jrtplib",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

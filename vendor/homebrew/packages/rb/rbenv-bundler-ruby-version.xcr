@@ -31,6 +31,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-bundler-ruby-version",
   version: "1.0.0",
+  description: "Pick a ruby version from bundler's Gemfile",
+  url: "https://github.com/aripollak/rbenv-bundler-ruby-version",
+  metadata: %{
+    "license": "Unlicense",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

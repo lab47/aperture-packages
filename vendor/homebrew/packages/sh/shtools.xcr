@@ -56,6 +56,12 @@ import "fftw" as i0, "gcc" as i1, "openblas" as i2
 pkg(
   name: "shtools",
   version: "4.8",
+  description: "Spherical Harmonic Tools",
+  url: "https://shtools.github.io/SHTOOLS/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

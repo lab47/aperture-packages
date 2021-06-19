@@ -42,6 +42,12 @@ import "argp-standalone" as i0
 pkg(
   name: "pk",
   version: "1.0.2",
+  description: "Field extractor command-line utility",
+  url: "https://github.com/johnmorrow/pk",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

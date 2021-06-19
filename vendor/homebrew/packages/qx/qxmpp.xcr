@@ -61,6 +61,12 @@ import "cmake" as i0, "qt@5" as i1
 pkg(
   name: "qxmpp",
   version: "1.4.0",
+  description: "Cross-platform C++ XMPP client and server library",
+  url: "https://github.com/qxmpp-project/qxmpp/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

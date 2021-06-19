@@ -47,6 +47,12 @@ import "lrzsz" as i0
 pkg(
   name: "zssh",
   version: "1.5c",
+  description: "Interactive file transfers over SSH",
+  url: "https://zssh.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -38,6 +38,12 @@ import "pkg-config" as i0, "libvorbis" as i1
 pkg(
   name: "libfishsound",
   version: "1.0.0",
+  description: "Decode and encode audio data using the Xiph.org codecs",
+  url: "https://xiph.org/fishsound/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

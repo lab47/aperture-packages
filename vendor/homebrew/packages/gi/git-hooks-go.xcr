@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "git-hooks-go",
   version: "1.3.1",
+  description: "Git hooks manager",
+  url: "https://git-hooks.github.io/git-hooks",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "darksky-weather",
   version: "0.15.7",
+  description: "Command-line weather from the darksky.net API",
+  url: "https://github.com/genuinetools/weather",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -80,6 +80,12 @@ import "pkg-config" as i0, "gettext" as i1, "neon" as i2, "openssl@1.1" as i3, "
 pkg(
   name: "cadaver",
   version: "0.23.3",
+  description: "Command-line client for DAV",
+  url: "https://directory.fsf.org/wiki/Cadaver",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

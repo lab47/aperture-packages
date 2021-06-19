@@ -41,6 +41,12 @@ import "libdshconfig" as i0
 pkg(
   name: "dsh",
   version: "0.25.10",
+  description: "Dancer's shell, or distributed shell",
+  url: "https://www.netfort.gr.jp/~dancer/software/dsh.html.en",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

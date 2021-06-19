@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mp3info",
   version: "0.8.5a",
+  description: "MP3 technical info viewer and ID3 1.x tag editor",
+  url: "https://www.ibiblio.org/mp3info/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

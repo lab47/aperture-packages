@@ -54,6 +54,12 @@ import "xz" as i0, "bzip2" as i1, "curl" as i2, "zlib" as i3
 pkg(
   name: "htslib",
   version: "1.12",
+  description: "C library for high-throughput sequencing data formats",
+  url: "https://www.htslib.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

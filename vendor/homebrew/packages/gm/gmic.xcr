@@ -54,6 +54,12 @@ import "cmake" as i0, "fftw" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i
 pkg(
   name: "gmic",
   version: "2.9.7",
+  description: "Full-Featured Open-Source Framework for Image Processing",
+  url: "https://gmic.eu/",
+  metadata: %{
+    "license": "CECILL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

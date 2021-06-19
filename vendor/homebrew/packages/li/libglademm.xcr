@@ -55,6 +55,12 @@ import "pkg-config" as i0, "gtkmm" as i1, "libglade" as i2
 pkg(
   name: "libglademm",
   version: "2.6.7",
+  description: "C++ wrapper around libglade",
+  url: "https://gnome.org",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

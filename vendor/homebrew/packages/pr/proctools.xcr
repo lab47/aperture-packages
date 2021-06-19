@@ -58,6 +58,12 @@ import "bsdmake" as i0
 pkg(
   name: "proctools",
   version: "0.4pre1",
+  description: "OpenBSD and Darwin versions of pgrep, pkill, and pfind",
+  url: "https://proctools.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

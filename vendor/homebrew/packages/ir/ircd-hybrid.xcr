@@ -86,6 +86,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "ircd-hybrid",
   version: "8.2.38",
+  description: "High-performance secure IRC server",
+  url: "https://www.ircd-hybrid.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

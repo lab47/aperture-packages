@@ -47,6 +47,12 @@ import "concurrencykit" as i0, "jlog" as i1, "openssl@1.1" as i2
 pkg(
   name: "fq",
   version: "0.13.10",
+  description: "Brokered message queue optimized for performance",
+  url: "https://github.com/circonus-labs/fq",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

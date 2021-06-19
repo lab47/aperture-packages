@@ -51,6 +51,12 @@ import "glide" as i0, "go" as i1
 pkg(
   name: "jabba",
   version: "0.11.2",
+  description: "Cross-platform Java Version Manager",
+  url: "https://github.com/shyiko/jabba",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

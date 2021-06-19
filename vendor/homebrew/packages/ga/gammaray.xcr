@@ -43,6 +43,12 @@ import "cmake" as i0, "graphviz" as i1, "qt@5" as i2
 pkg(
   name: "gammaray",
   version: "2.11.2",
+  description: "Examine and manipulate Qt application internals at runtime",
+  url: "https://www.kdab.com/gammaray",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

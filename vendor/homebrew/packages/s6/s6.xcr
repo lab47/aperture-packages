@@ -87,6 +87,12 @@ import "homebrew-install" as hi
 pkg(
   name: "s6",
   version: "2.9.2.0",
+  description: "Small & secure supervision software suite",
+  url: "https://skarnet.org/software/s6/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

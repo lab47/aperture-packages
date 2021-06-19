@@ -73,6 +73,12 @@ import "node" as i0
 pkg(
   name: "graphql-cli",
   version: "4.1.0",
+  description: "Command-line tool for common GraphQL development workflows",
+  url: "https://github.com/Urigo/graphql-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

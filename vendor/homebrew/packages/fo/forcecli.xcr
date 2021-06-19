@@ -36,6 +36,12 @@ import "go" as i0
 pkg(
   name: "forcecli",
   version: "0.31.0",
+  description: "Command-line interface to Force.com",
+  url: "https://force-cli.herokuapp.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

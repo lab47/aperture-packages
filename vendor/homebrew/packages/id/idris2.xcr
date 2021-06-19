@@ -50,6 +50,12 @@ import "chezscheme" as i0, "coreutils" as i1
 pkg(
   name: "idris2",
   version: "0.3.0",
+  description: "Pure functional programming language with dependent types",
+  url: "https://www.idris-lang.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

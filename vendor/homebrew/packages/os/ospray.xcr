@@ -89,6 +89,12 @@ import "cmake" as i0, "ispc" as i1, "embree" as i2, "tbb" as i3
 pkg(
   name: "ospray",
   version: "2.6.0",
+  description: "Ray-tracing-based rendering engine for high-fidelity visualization",
+  url: "https://www.ospray.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

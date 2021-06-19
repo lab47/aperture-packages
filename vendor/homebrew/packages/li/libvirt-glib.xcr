@@ -73,6 +73,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" a
 pkg(
   name: "libvirt-glib",
   version: "4.0.0",
+  description: "Libvirt API for glib-based programs",
+  url: "https://libvirt.org/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

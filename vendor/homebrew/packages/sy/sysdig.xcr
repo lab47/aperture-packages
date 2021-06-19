@@ -69,6 +69,12 @@ import "cmake" as i0, "c-ares" as i1, "jsoncpp" as i2, "luajit" as i3, "tbb" as 
 pkg(
   name: "sysdig",
   version: "0.27.1",
+  description: "System-level exploration and troubleshooting tool",
+  url: "https://sysdig.com/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

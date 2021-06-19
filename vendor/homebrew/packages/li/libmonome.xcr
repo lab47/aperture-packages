@@ -37,6 +37,12 @@ import "liblo" as i0
 pkg(
   name: "libmonome",
   version: "1.4.4",
+  description: "Interact with monome devices via C, Python, or FFI",
+  url: "https://monome.org/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

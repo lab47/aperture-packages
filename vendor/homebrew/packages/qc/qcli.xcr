@@ -55,6 +55,12 @@ import "pkg-config" as i0, "ffmpeg" as i1, "qt@5" as i2, "qwt" as i3
 pkg(
   name: "qcli",
   version: "1.2",
+  description: "Report audiovisual metrics via libavfilter",
+  url: "https://bavc.org/preserve-media/preservation-tools",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

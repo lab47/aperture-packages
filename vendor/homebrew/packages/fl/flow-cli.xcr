@@ -46,6 +46,12 @@ import "go" as i0
 pkg(
   name: "flow-cli",
   version: "0.21.0",
+  description: "Command-line interface that provides utilities for building Flow applications",
+  url: "https://onflow.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

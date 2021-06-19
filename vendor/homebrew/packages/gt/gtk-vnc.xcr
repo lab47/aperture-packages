@@ -72,6 +72,12 @@ import "gettext" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as
 pkg(
   name: "gtk-vnc",
   version: "1.2.0",
+  description: "VNC viewer widget for GTK",
+  url: "https://wiki.gnome.org/Projects/gtk-vnc",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

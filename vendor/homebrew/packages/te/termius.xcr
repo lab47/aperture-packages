@@ -196,12 +196,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bison" as i3, "brotli" as i4, "bzip2" as i5, "c-ares" as i6, "cmake" as i7, "curl" as i8, "expat" as i9, "gdbm" as i10, "gettext" as i11, "jemalloc" as i12, "krb5" as i13, "libev" as i14, "libffi" as i15, "libidn2" as i16, "libssh2" as i17, "libtool" as i18, "libunistring" as i19, "libxml2" as i20, "libyaml" as i21, "m4" as i22, "mpdecimal" as i23, "ncurses" as i24, "nghttp2" as i25, "ninja" as i26, "openldap" as i27, "openssl@1.1" as i28, "perl" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "rtmpdump" as i33, "rust" as i34, "sphinx-doc" as i35, "sqlite" as i36, "unzip" as i37, "xz" as i38, "zip" as i39, "zlib" as i40, "zstd" as i41
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libyaml" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "rust" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "termius",
   version: "1.2.15",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41],
+  description: "CLI tool for termius.com (aka serverauditor.com)",
+  url: "https://termius.com",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "termius.rb"), formula)

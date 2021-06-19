@@ -46,6 +46,12 @@ import "pkg-config" as i0, "libpng" as i1
 pkg(
   name: "guetzli",
   version: "1.0.1",
+  description: "Perceptual JPEG encoder",
+  url: "https://github.com/google/guetzli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

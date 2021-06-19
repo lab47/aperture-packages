@@ -54,6 +54,12 @@ import "pkg-config" as i0, "jpeg" as i1, "librsvg" as i2, "libtiff" as i3, "open
 pkg(
   name: "links",
   version: "2.23",
+  description: "Lynx-like WWW browser that supports tables, menus, etc.",
+  url: "http://links.twibright.com/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

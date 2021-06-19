@@ -50,6 +50,12 @@ import "cmake" as i0
 pkg(
   name: "libilbc",
   version: "3.0.4",
+  description: "Packaged version of iLBC codec from the WebRTC project",
+  url: "https://github.com/TimothyGu/libilbc",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

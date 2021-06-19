@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gravity",
   version: "0.8.2",
+  description: "Embeddable programming language",
+  url: "https://marcobambini.github.io/gravity/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

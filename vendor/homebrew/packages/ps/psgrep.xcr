@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "psgrep",
   version: "1.0.9",
+  description: "Shortcut for the 'ps aux | grep' idiom",
+  url: "https://github.com/jvz/psgrep",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

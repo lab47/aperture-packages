@@ -48,6 +48,12 @@ import "cabal-install" as i0, "ghc" as i1, "sphinx-doc" as i2, "ncurses" as i3, 
 pkg(
   name: "futhark",
   version: "0.19.6",
+  description: "Data-parallel functional programming language",
+  url: "https://futhark-lang.org/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

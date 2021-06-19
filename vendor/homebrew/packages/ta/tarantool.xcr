@@ -95,6 +95,12 @@ import "cmake" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3, "cur
 pkg(
   name: "tarantool",
   version: "2.7.2.0",
+  description: "In-memory database and Lua application server",
+  url: "https://tarantool.org/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

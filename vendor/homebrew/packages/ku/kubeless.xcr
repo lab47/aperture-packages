@@ -120,6 +120,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "kubeless",
   version: "1.0.8",
+  description: "Kubernetes Native Serverless Framework",
+  url: "https://kubeless.io",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

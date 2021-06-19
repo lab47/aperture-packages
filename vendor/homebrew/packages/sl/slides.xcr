@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "slides",
   version: "0.1.2",
+  description: "Terminal based presentation tool",
+  url: "https://github.com/maaslalani/slides",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

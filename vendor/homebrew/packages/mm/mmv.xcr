@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mmv",
   version: "1.01b",
+  description: "Move, copy, append, and link multiple files",
+  url: "https://packages.debian.org/unstable/utils/mmv",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

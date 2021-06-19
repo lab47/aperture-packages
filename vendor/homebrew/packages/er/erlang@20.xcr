@@ -97,6 +97,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3,
 pkg(
   name: "erlang@20",
   version: "20.3.8.26",
+  description: "Programming language for highly scalable real-time systems",
+  url: "https://www.erlang.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

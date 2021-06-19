@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pprint",
   version: "0.9.1",
+  description: "Pretty printer for modern C++",
+  url: "https://github.com/p-ranav/pprint",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

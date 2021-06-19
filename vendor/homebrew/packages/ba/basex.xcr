@@ -41,6 +41,12 @@ import "openjdk" as i0
 pkg(
   name: "basex",
   version: "9.5.2",
+  description: "Light-weight XML database and XPath/XQuery processor",
+  url: "https://basex.org",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

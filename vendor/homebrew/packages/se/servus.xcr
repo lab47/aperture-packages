@@ -133,6 +133,12 @@ import "cmake" as i0, "boost" as i1
 pkg(
   name: "servus",
   version: "1.5.2",
+  description: "Library and Utilities for zeroconf networking",
+  url: "https://github.com/HBPVIS/Servus",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

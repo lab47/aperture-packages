@@ -30,6 +30,12 @@ import "rbenv" as i0
 pkg(
   name: "rbenv-gemset",
   version: "0.5.9",
+  description: "Adds basic gemset support to rbenv",
+  url: "https://github.com/jf/rbenv-gemset",
+  metadata: %{
+    "license": "Public Domain",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

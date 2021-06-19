@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mhash",
   version: "0.9.9.9",
+  description: "Uniform interface to a large number of hash algorithms",
+  url: "https://mhash.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

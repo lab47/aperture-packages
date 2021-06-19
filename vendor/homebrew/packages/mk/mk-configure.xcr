@@ -44,6 +44,12 @@ import "bmake" as i0, "makedepend" as i1
 pkg(
   name: "mk-configure",
   version: "0.37.0",
+  description: "Lightweight replacement for GNU autotools",
+  url: "https://github.com/cheusov/mk-configure",
+  metadata: %{
+    "license": "BSD-2-Clause and BSD-3-Clause and MIT and MIT-CMU",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -59,6 +59,12 @@ import "cmake" as i0, "libarchive" as i1, "yaml-cpp" as i2
 pkg(
   name: "skafos",
   version: "1.7.7",
+  description: "CLI for the Metis Machine A.I. and machine learning deployment platform",
+  url: "https://skafos.ai/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

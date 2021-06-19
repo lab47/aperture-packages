@@ -69,6 +69,12 @@ import "cmake" as i0, "libxml2" as i1, "ncurses" as i2, "zlib" as i3
 pkg(
   name: "cling",
   version: "0.9",
+  description: "C++ interpreter",
+  url: "https://root.cern.ch/cling",
+  metadata: %{
+    "license": "LGPL-2.1-only or NCSA",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -61,6 +61,12 @@ import "autoconf" as i0
 pkg(
   name: "hspell",
   version: "1.4",
+  description: "Free Hebrew linguistic project",
+  url: "http://hspell.ivrix.org.il/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "apr" as i3, "apr-ut
 pkg(
   name: "ctail",
   version: "0.1.0",
+  description: "Tool for operating tail across large clusters of machines",
+  url: "https://github.com/pquerna/ctail",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

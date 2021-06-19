@@ -792,6 +792,12 @@ import "openssl@1.1" as i0, "python@3.8" as i1, "libffi" as i2
 pkg(
   name: "azure-cli",
   version: "2.24.2",
+  description: "Microsoft Azure CLI 2.0",
+  url: "https://docs.microsoft.com/cli/azure/overview",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

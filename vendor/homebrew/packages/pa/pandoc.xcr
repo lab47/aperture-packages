@@ -52,6 +52,12 @@ import "cabal-install" as i0, "ghc" as i1, "unzip" as i2, "zlib" as i3
 pkg(
   name: "pandoc",
   version: "2.14.0.1",
+  description: "Swiss-army knife of markup format conversion",
+  url: "https://pandoc.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "jcal",
   version: "0.4.1",
+  description: "UNIX-cal-like tool to display Jalali calendar",
+  url: "https://savannah.nongnu.org/projects/jcal/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

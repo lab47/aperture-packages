@@ -52,12 +52,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "libpng" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "portaudio" as i10, "python@3.9" as i11, "readline" as i12, "sdl2" as i13, "sphinx-doc" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "cmake" as i0, "libpng" as i1, "portaudio" as i2, "python@3.9" as i3, "sdl2" as i4
 
 pkg(
   name: "hatari",
   version: "2.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  description: "Atari ST/STE/TT/Falcon emulator",
+  url: "https://hatari.tuxfamily.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hatari.rb"), formula)

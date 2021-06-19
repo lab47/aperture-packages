@@ -48,6 +48,12 @@ import "zsh" as i0
 pkg(
   name: "fizsh",
   version: "1.0.9",
+  description: "Fish-like front end for ZSH",
+  url: "https://github.com/zsh-users/fizsh",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

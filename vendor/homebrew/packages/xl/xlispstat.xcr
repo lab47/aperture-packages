@@ -39,6 +39,12 @@ import "libx11" as i0
 pkg(
   name: "xlispstat",
   version: "3.52.23",
+  description: "Statistical data science environment based on Lisp",
+  url: "https://homepage.stat.uiowa.edu/~luke/xls/xlsinfo/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

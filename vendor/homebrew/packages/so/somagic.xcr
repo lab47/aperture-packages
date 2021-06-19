@@ -43,6 +43,12 @@ import "libgcrypt" as i0, "libusb" as i1, "somagic-tools" as i2
 pkg(
   name: "somagic",
   version: "1.1",
+  description: "Linux capture program for the Somagic variants of EasyCAP",
+  url: "https://code.google.com/archive/p/easycap-somagic-linux/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

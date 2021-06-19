@@ -94,6 +94,12 @@ import "autoconf" as i0, "automake" as i1, "gettext" as i2, "gnutls" as i3, "lib
 pkg(
   name: "gwenhywfar",
   version: "5.6.0",
+  description: "Utility library required by aqbanking and related software",
+  url: "https://www.aquamaniac.de/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

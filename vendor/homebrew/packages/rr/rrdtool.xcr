@@ -67,6 +67,12 @@ import "pkg-config" as i0, "glib" as i1, "pango" as i2, "groff" as i3
 pkg(
   name: "rrdtool",
   version: "1.7.2",
+  description: "Round Robin Database",
+  url: "https://oss.oetiker.ch/rrdtool/index.en.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

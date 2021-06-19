@@ -32,6 +32,12 @@ import "homebrew-install" as hi
 pkg(
   name: "pip-completion",
   version: "20190723",
+  description: "Bash completion for Pip",
+  url: "https://github.com/ekalinin/pip-bash-completion",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

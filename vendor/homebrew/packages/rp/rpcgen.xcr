@@ -45,6 +45,12 @@ import "homebrew-install" as hi
 pkg(
   name: "rpcgen",
   version: "66",
+  description: "Protocol Compiler",
+  url: "https://opensource.apple.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

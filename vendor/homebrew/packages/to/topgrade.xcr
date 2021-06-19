@@ -48,6 +48,12 @@ import "rust" as i0
 pkg(
   name: "topgrade",
   version: "7.0.1",
+  description: "Upgrade all the things",
+  url: "https://github.com/r-darwish/topgrade",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

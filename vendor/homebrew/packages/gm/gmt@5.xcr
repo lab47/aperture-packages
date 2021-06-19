@@ -115,6 +115,12 @@ import "cmake" as i0, "fftw" as i1, "gdal" as i2, "netcdf" as i3, "pcre" as i4
 pkg(
   name: "gmt@5",
   version: "5.4.5",
+  description: "Tools for manipulating and plotting geographic and Cartesian data",
+  url: "https://www.generic-mapping-tools.org/",
+  metadata: %{
+    "license": "LGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "pkg-config" as i0, "jack" as i1, "qt@5" as i2
 pkg(
   name: "qjackctl",
   version: "0.9.3",
+  description: "Simple Qt application to control the JACK sound server daemon",
+  url: "https://qjackctl.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

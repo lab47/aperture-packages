@@ -53,6 +53,12 @@ import "node" as i0
 pkg(
   name: "pow",
   version: "0.6.0",
+  description: "Zero-config Rack server for local apps on macOS",
+  url: "http://pow.cx/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

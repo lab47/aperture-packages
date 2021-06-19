@@ -51,6 +51,12 @@ import "cmake" as i0
 pkg(
   name: "googletest",
   version: "1.11.0",
+  description: "Google Testing and Mocking Framework",
+  url: "https://github.com/google/googletest",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -129,6 +129,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libressl",
   version: "3.3.3",
+  description: "Version of the SSL/TLS protocol forked from OpenSSL",
+  url: "https://www.libressl.org/",
+  metadata: %{
+    "license": "OpenSSL",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

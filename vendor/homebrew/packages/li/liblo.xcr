@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "liblo",
   version: "0.31",
+  description: "Lightweight Open Sound Control implementation",
+  url: "https://liblo.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

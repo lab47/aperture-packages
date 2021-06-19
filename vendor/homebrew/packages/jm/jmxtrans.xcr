@@ -63,6 +63,12 @@ import "maven" as i0, "openjdk@8" as i1
 pkg(
   name: "jmxtrans",
   version: "272",
+  description: "Tool to connect to JVMs and query their attributes",
+  url: "https://github.com/jmxtrans/jmxtrans",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

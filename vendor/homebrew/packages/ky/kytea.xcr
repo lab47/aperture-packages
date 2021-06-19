@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kytea",
   version: "0.4.7",
+  description: "Toolkit for analyzing text, especially Japanese and Chinese",
+  url: "http://www.phontron.com/kytea/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

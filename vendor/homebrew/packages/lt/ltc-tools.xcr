@@ -40,6 +40,12 @@ import "help2man" as i0, "pkg-config" as i1, "jack" as i2, "libltc" as i3, "libs
 pkg(
   name: "ltc-tools",
   version: "0.7.0",
+  description: "Tools to deal with linear-timecode (LTC)",
+  url: "https://github.com/x42/ltc-tools",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

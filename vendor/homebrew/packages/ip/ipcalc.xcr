@@ -28,6 +28,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ipcalc",
   version: "0.41",
+  description: "Calculate various network masks, etc. from a given IP address",
+  url: "http://jodies.de/ipcalc",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

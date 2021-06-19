@@ -38,6 +38,12 @@ import "homebrew-install" as hi
 pkg(
   name: "macosvpn",
   version: "1.0.3",
+  description: "Create Mac OS VPNs programmatically",
+  url: "https://github.com/halo/macosvpn",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

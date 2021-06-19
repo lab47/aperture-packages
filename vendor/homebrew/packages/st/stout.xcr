@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "stout",
   version: "1.3.2",
+  description: "Reliable static website deploy tool",
+  url: "https://github.com/cloudflare/Stout",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

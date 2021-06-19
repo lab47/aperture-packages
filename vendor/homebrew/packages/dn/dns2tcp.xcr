@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dns2tcp",
   version: "0.5.2",
+  description: "TCP over DNS tunnel",
+  url: "https://packages.debian.org/sid/dns2tcp",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

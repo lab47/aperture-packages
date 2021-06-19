@@ -84,6 +84,12 @@ import "cmake" as i0, "cmake" as i1, "libomp" as i2, "wget" as i3, "bzip2" as i4
 pkg(
   name: "mmseqs2",
   version: "13-45111",
+  description: "Software suite for very fast sequence search and clustering",
+  url: "https://mmseqs.com/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

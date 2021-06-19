@@ -46,6 +46,12 @@ import "go" as i0, "node@14" as i1, "yarn" as i2
 pkg(
   name: "ship",
   version: "0.55.0",
+  description: "Reducing the overhead of maintaining 3rd-party applications in Kubernetes",
+  url: "https://www.replicated.com/ship",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -35,6 +35,12 @@ import "rust" as i0
 pkg(
   name: "vivid",
   version: "0.6.0",
+  description: "Generator for LS_COLORS with support for multiple color themes",
+  url: "https://github.com/sharkdp/vivid",
+  metadata: %{
+    "license": "MIT or Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

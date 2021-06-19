@@ -56,6 +56,12 @@ import "go" as i0, "rpm" as i1, "xz" as i2
 pkg(
   name: "clair",
   version: "4.0.5",
+  description: "Vulnerability Static Analysis for Containers",
+  url: "https://github.com/quay/clair",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

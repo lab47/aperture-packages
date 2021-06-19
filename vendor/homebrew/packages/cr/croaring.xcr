@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "croaring",
   version: "0.3.1",
+  description: "Roaring bitmaps in C (and C++)",
+  url: "https://roaringbitmap.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

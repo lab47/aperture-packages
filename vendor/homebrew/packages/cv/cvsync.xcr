@@ -60,6 +60,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "cvsync",
   version: "0.24.19",
+  description: "Portable CVS repository synchronization utility",
+  url: "https://www.cvsync.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

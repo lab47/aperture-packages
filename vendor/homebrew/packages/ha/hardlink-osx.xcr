@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hardlink-osx",
   version: "0.1.1",
+  description: "Command-line utility that implements hardlinks on macOS",
+  url: "https://github.com/selkhateeb/hardlink",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

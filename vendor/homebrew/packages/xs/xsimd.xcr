@@ -63,6 +63,12 @@ import "cmake" as i0
 pkg(
   name: "xsimd",
   version: "7.5.0",
+  description: "Modern, portable C++ wrappers for SIMD intrinsics",
+  url: "https://xsimd.readthedocs.io/en/latest/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

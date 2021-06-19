@@ -43,6 +43,12 @@ import "dep" as i0, "go" as i1
 pkg(
   name: "ironcli",
   version: "0.1.6",
+  description: "Go version of the Iron.io command-line tools",
+  url: "https://github.com/iron-io/ironcli",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

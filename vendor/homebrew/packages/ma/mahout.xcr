@@ -60,6 +60,12 @@ import "hadoop" as i0, "openjdk" as i1
 pkg(
   name: "mahout",
   version: "0.13.0",
+  description: "Library to help build scalable machine learning libraries",
+  url: "https://mahout.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

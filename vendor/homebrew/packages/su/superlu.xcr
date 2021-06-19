@@ -60,6 +60,12 @@ import "cmake" as i0, "gcc" as i1, "openblas" as i2
 pkg(
   name: "superlu",
   version: "5.2.2",
+  description: "Solve large, sparse nonsymmetric systems of equations",
+  url: "https://portal.nersc.gov/project/sparse/superlu/",
+  metadata: %{
+    "license": "BSD-3-Clause-LBNL",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

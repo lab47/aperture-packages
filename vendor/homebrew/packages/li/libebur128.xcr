@@ -45,6 +45,12 @@ import "cmake" as i0, "pkg-config" as i1, "speex" as i2
 pkg(
   name: "libebur128",
   version: "1.2.6",
+  description: "Library implementing the EBU R128 loudness standard",
+  url: "https://github.com/jiixyj/libebur128",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -74,6 +74,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cflow",
   version: "1.6",
+  description: "Generate call graphs from C code",
+  url: "https://www.gnu.org/software/cflow/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

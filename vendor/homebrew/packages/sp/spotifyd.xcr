@@ -75,6 +75,12 @@ import "pkg-config" as i0, "rust" as i1, "dbus" as i2, "portaudio" as i3
 pkg(
   name: "spotifyd",
   version: "0.3.2",
+  description: "Spotify daemon",
+  url: "https://github.com/Spotifyd/spotifyd",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

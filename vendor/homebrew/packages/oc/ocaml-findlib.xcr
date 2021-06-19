@@ -59,6 +59,12 @@ import "ocaml" as i0, "m4" as i1
 pkg(
   name: "ocaml-findlib",
   version: "1.9.1",
+  description: "OCaml library manager",
+  url: "http://projects.camlcity.org/projects/findlib.html",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "openjdk" as i0
 pkg(
   name: "kawa",
   version: "3.1.1",
+  description: "Programming language for Java (implementation of Scheme)",
+  url: "https://www.gnu.org/software/kawa/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

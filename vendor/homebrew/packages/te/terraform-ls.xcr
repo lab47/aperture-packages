@@ -58,6 +58,12 @@ import "go" as i0
 pkg(
   name: "terraform-ls",
   version: "0.18.0",
+  description: "Terraform Language Server",
+  url: "https://github.com/hashicorp/terraform-ls",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

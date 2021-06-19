@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "logcli",
   version: "2.2.1",
+  description: "Run LogQL queries against a Loki server",
+  url: "https://grafana.com/loki",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

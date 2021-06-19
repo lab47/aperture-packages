@@ -156,6 +156,12 @@ import "cmake" as i0, "ninja" as i1, "icu4c" as i2
 pkg(
   name: "swift",
   version: "5.2.5",
+  description: "High-performance system programming language",
+  url: "https://swift.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

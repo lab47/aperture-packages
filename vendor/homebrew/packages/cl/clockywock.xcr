@@ -34,6 +34,12 @@ import "homebrew-install" as hi
 pkg(
   name: "clockywock",
   version: "0.3.1a",
+  description: "Ncurses analog clock",
+  url: "https://soomka.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

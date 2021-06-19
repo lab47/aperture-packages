@@ -68,6 +68,12 @@ import "boost" as i0, "pkg-config" as i1, "icu4c" as i2, "librevenge" as i3, "li
 pkg(
   name: "libfreehand",
   version: "0.1.2",
+  description: "Interpret and import Aldus/Macromedia/Adobe FreeHand documents",
+  url: "https://wiki.documentfoundation.org/DLP/Libraries/libfreehand",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

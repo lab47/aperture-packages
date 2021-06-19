@@ -48,6 +48,12 @@ import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "li
 pkg(
   name: "gnunet",
   version: "0.14.1",
+  description: "Framework for distributed, secure and privacy-preserving applications",
+  url: "https://gnunet.org/",
+  metadata: %{
+    "license": "AGPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {

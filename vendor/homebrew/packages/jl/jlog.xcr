@@ -76,6 +76,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "jlog",
   version: "2.5.3",
+  description: "Pure C message queue with subscribers and publishers for logs",
+  url: "https://labs.omniti.com/labs/jlog",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

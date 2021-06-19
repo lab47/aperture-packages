@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "jpeg" as i3, "libex
 pkg(
   name: "epeg",
   version: "0.9.2",
+  description: "JPEG/JPG thumbnail scaling",
+  url: "https://github.com/mattes/epeg",
+  metadata: %{
+    "license": "MIT-enna",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

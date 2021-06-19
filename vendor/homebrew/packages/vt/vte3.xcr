@@ -159,6 +159,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "vte3",
   version: "0.64.1",
+  description: "Terminal emulator widget used by GNOME terminal",
+  url: "https://developer.gnome.org/vte/",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

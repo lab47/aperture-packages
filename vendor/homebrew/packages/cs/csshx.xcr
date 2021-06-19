@@ -27,6 +27,12 @@ import "homebrew-install" as hi
 pkg(
   name: "csshx",
   version: "0.74",
+  description: "Cluster ssh tool for Terminal.app",
+  url: "https://github.com/brockgr/csshx",
+  metadata: %{
+    "license": "GPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

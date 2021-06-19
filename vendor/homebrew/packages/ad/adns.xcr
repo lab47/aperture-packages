@@ -43,6 +43,12 @@ import "m4" as i0
 pkg(
   name: "adns",
   version: "1.6.0",
+  description: "C/C++ resolver library and DNS resolver utilities",
+  url: "https://www.chiark.greenend.org.uk/~ian/adns/",
+  metadata: %{
+    "license": "GPL-3.0-or-later and LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

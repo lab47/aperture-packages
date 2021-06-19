@@ -126,12 +126,18 @@ end
 
 import "homebrew-install" as hi
 
-import "atk" as i0, "autoconf" as i1, "automake" as i2, "berkeley-db" as i3, "bison" as i4, "boost" as i5, "boost-python3" as i6, "brotli" as i7, "bzip2" as i8, "c-ares" as i9, "cairo" as i10, "cairomm@1.14" as i11, "cgal" as i12, "cmake" as i13, "curl" as i14, "cython" as i15, "docbook" as i16, "docbook-xsl" as i17, "eigen" as i18, "expat" as i19, "flex" as i20, "fontconfig" as i21, "freetype" as i22, "fribidi" as i23, "gcc" as i24, "gdbm" as i25, "gdk-pixbuf" as i26, "gettext" as i27, "glib" as i28, "gmp" as i29, "gobject-introspection" as i30, "google-sparsehash" as i31, "gperf" as i32, "graphite2" as i33, "gsettings-desktop-schemas" as i34, "gtk+3" as i35, "harfbuzz" as i36, "help2man" as i37, "hicolor-icon-theme" as i38, "icu4c" as i39, "isl" as i40, "jemalloc" as i41, "jpeg" as i42, "krb5" as i43, "libepoxy" as i44, "libev" as i45, "libffi" as i46, "libgcrypt" as i47, "libgpg-error" as i48, "libidn2" as i49, "libmpc" as i50, "libpng" as i51, "libpthread-stubs" as i52, "librsvg" as i53, "libsigc++@2" as i54, "libssh2" as i55, "libtiff" as i56, "libtool" as i57, "libunistring" as i58, "libx11" as i59, "libxau" as i60, "libxcb" as i61, "libxdmcp" as i62, "libxext" as i63, "libxml2" as i64, "libxrender" as i65, "libxslt" as i66, "libyaml" as i67, "lzo" as i68, "m4" as i69, "meson" as i70, "mpdecimal" as i71, "mpfr" as i72, "ncurses" as i73, "nghttp2" as i74, "ninja" as i75, "numpy" as i76, "openblas" as i77, "openldap" as i78, "openssl@1.1" as i79, "pango" as i80, "pcre" as i81, "perl" as i82, "pixman" as i83, "pkg-config" as i84, "py3cairo" as i85, "pybind11" as i86, "pygobject3" as i87, "python@3.9" as i88, "qt@5" as i89, "readline" as i90, "rtmpdump" as i91, "ruby" as i92, "rust" as i93, "scipy" as i94, "sphinx-doc" as i95, "sqlite" as i96, "swig" as i97, "unzip" as i98, "util-macros" as i99, "xcb-proto" as i100, "xorgproto" as i101, "xtrans" as i102, "xz" as i103, "zip" as i104, "zlib" as i105, "zstd" as i106
+import "autoconf" as i0, "automake" as i1, "boost" as i2, "boost-python3" as i3, "bzip2" as i4, "cairomm@1.14" as i5, "cgal" as i6, "expat" as i7, "gdbm" as i8, "google-sparsehash" as i9, "gtk+3" as i10, "libffi" as i11, "librsvg" as i12, "libtool" as i13, "mpdecimal" as i14, "ncurses" as i15, "numpy" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "py3cairo" as i19, "pygobject3" as i20, "python@3.9" as i21, "readline" as i22, "scipy" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
 
 pkg(
   name: "graph-tool",
   version: "2.37",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106],
+  description: "Efficient network analysis for Python 3",
+  url: "https://graph-tool.skewed.de/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "graph-tool.rb"), formula)

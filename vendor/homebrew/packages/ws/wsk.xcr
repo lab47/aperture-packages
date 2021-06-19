@@ -38,6 +38,12 @@ import "go" as i0, "go-bindata" as i1
 pkg(
   name: "wsk",
   version: "1.2.0",
+  description: "OpenWhisk Command-Line Interface (CLI)",
+  url: "https://openwhisk.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -94,6 +94,12 @@ import "homebrew-install" as hi
 pkg(
   name: "gnu-tar",
   version: "1.34",
+  description: "GNU version of the tar archiving utility",
+  url: "https://www.gnu.org/software/tar/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

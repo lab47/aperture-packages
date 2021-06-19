@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "polyml",
   version: "5.8.2",
+  description: "Standard ML implementation",
+  url: "https://www.polyml.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

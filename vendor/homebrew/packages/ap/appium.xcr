@@ -66,6 +66,12 @@ import "node" as i0
 pkg(
   name: "appium",
   version: "1.21.0",
+  description: "Automation for Apps",
+  url: "https://appium.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

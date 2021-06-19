@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "liblinear",
   version: "2.43",
+  description: "Library for large linear classification",
+  url: "https://www.csie.ntu.edu.tw/~cjlin/liblinear/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

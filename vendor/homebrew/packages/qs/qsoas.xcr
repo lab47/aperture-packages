@@ -49,6 +49,12 @@ import "gsl" as i0, "mruby" as i1, "qt@5" as i2
 pkg(
   name: "qsoas",
   version: "3.0",
+  description: "Versatile software for data analysis",
+  url: "https://bip.cnrs.fr/groups/bip06/software/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

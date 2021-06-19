@@ -38,6 +38,12 @@ import "openjdk@11" as i0
 pkg(
   name: "ringojs",
   version: "2.0.0",
+  description: "CommonJS-based JavaScript runtime",
+  url: "https://ringojs.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

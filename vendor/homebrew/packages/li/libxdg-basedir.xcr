@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "libxdg-basedir",
   version: "1.2.3",
+  description: "C implementation of the XDG Base Directory specifications",
+  url: "https://github.com/devnev/libxdg-basedir",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "rust" as i0
 pkg(
   name: "dust",
   version: "0.5.4",
+  description: "More intuitive version of du in rust",
+  url: "https://github.com/bootandy/dust",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

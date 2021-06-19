@@ -53,6 +53,12 @@ import "cmake" as i0
 pkg(
   name: "metis",
   version: "5.1.0",
+  description: "Programs that partition graphs and order matrices",
+  url: "http://glaros.dtc.umn.edu/gkhome/views/metis",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

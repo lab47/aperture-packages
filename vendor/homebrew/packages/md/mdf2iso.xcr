@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mdf2iso",
   version: "0.3.1",
+  description: "Tool to convert MDF (Alcohol 120% images) images to ISO images",
+  url: "https://packages.debian.org/sid/mdf2iso",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

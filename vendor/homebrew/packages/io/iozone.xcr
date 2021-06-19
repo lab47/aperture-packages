@@ -51,6 +51,12 @@ import "homebrew-install" as hi
 pkg(
   name: "iozone",
   version: "3.492",
+  description: "File system benchmark tool",
+  url: "https://www.iozone.org/",
+  metadata: %{
+    "license": "Cannot Represent",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

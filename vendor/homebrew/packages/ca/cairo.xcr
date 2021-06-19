@@ -119,6 +119,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "glib" as i3, "
 pkg(
   name: "cairo",
   version: "1.16.0",
+  description: "Vector graphics library with cross-device output support",
+  url: "https://cairographics.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only or MPL-1.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {

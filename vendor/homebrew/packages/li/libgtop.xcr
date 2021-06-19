@@ -71,6 +71,12 @@ import "gobject-introspection" as i0, "intltool" as i1, "pkg-config" as i2, "get
 pkg(
   name: "libgtop",
   version: "2.40.0",
+  description: "Library for portably obtaining information about processes",
+  url: "https://library.gnome.org/devel/libgtop/stable/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

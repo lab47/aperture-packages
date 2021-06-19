@@ -51,6 +51,12 @@ import "cmake" as i0, "glbinding" as i1, "glm" as i2
 pkg(
   name: "globjects",
   version: "1.1.0",
+  description: "C++ library strictly wrapping OpenGL objects",
+  url: "https://github.com/cginternals/globjects",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

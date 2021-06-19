@@ -103,6 +103,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ircd-irc2",
   version: "2.11.2p3",
+  description: "Original IRC server daemon",
+  url: "http://www.irc.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

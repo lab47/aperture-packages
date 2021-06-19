@@ -44,6 +44,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "tanka",
   version: "0.16.0",
+  description: "Flexible, reusable and concise configuration for Kubernetes using Jsonnet",
+  url: "https://tanka.dev",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

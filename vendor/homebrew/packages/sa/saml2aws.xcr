@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "saml2aws",
   version: "2.30.0",
+  description: "Login and retrieve AWS temporary credentials using a SAML IDP",
+  url: "https://github.com/Versent/saml2aws",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

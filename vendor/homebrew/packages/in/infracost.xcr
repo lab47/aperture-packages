@@ -41,6 +41,12 @@ import "go" as i0
 pkg(
   name: "infracost",
   version: "0.9.1",
+  description: "Cost estimates for Terraform",
+  url: "https://www.infracost.io/docs/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

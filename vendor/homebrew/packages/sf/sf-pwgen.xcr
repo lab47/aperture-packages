@@ -33,6 +33,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sf-pwgen",
   version: "1.5",
+  description: "Generate passwords using SecurityFoundation framework",
+  url: "https://github.com/anders/pwgen/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

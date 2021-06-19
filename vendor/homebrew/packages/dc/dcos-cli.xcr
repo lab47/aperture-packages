@@ -52,6 +52,12 @@ import "go" as i0
 pkg(
   name: "dcos-cli",
   version: "1.2.0",
+  description: "Command-line interface for managing DC/OS clusters",
+  url: "https://docs.d2iq.com/mesosphere/dcos/latest/cli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

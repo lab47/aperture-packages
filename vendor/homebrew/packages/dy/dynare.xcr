@@ -129,6 +129,12 @@ import "boost" as i0, "cweb" as i1, "fftw" as i2, "gcc" as i3, "gsl" as i4, "hdf
 pkg(
   name: "dynare",
   version: "4.6.4",
+  description: "Platform for economic models, particularly DSGE and OLG models",
+  url: "https://www.dynare.org/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {

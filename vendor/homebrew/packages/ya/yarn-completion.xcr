@@ -31,6 +31,12 @@ import "bash" as i0
 pkg(
   name: "yarn-completion",
   version: "0.17.0",
+  description: "Bash completion for Yarn",
+  url: "https://github.com/dsifford/yarn-completion",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

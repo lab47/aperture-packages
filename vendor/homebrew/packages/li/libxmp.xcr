@@ -73,6 +73,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libxmp",
   version: "4.4.1",
+  description: "C library for playback of module music (MOD, S3M, IT, etc)",
+  url: "https://xmp.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

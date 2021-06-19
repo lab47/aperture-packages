@@ -57,6 +57,12 @@ import "autoconf" as i0, "automake" as i1, "gperf" as i2, "libtool" as i3
 pkg(
   name: "libseccomp",
   version: "2.5.1",
+  description: "Interface to the Linux Kernel's syscall filtering mechanism",
+  url: "https://github.com/seccomp/libseccomp",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

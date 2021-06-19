@@ -29,6 +29,12 @@ import "homebrew-install" as hi
 pkg(
   name: "git-svn-abandon",
   version: "0.0.1",
+  description: "History-preserving svn-to-git migration",
+  url: "https://github.com/nothingmuch/git-svn-abandon",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

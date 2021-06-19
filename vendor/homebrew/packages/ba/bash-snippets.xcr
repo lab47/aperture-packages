@@ -30,6 +30,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bash-snippets",
   version: "1.23.0",
+  description: "Collection of small bash scripts for heavy terminal users",
+  url: "https://github.com/alexanderepstein/Bash-Snippets",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -121,6 +121,12 @@ import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config"
 pkg(
   name: "libgweather",
   version: "40.0",
+  description: "GNOME library for weather, locations and timezones",
+  url: "https://wiki.gnome.org/Projects/LibGWeather",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

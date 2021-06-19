@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "mongocli",
   version: "1.16.0",
+  description: "MongoDB CLI enables you to manage your MongoDB in the Cloud",
+  url: "https://github.com/mongodb/mongocli",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

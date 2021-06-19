@@ -185,6 +185,12 @@ import "sdl_image" as i0
 pkg(
   name: "guichan",
   version: "0.8.2",
+  description: "Small, efficient C++ GUI library designed for games",
+  url: "https://guichan.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

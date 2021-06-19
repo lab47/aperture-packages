@@ -46,6 +46,12 @@ import "pkg-config" as i0, "libbinio" as i1
 pkg(
   name: "adplug",
   version: "2.3.3",
+  description: "Free, hardware independent AdLib sound player library",
+  url: "https://adplug.github.io",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

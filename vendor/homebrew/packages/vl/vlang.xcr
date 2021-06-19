@@ -52,6 +52,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vlang",
   version: "0.2.2",
+  description: "V programming language",
+  url: "https://vlang.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -69,6 +69,12 @@ import "cmake" as i0, "pkg-config" as i1, "libsodium" as i2
 pkg(
   name: "minisign",
   version: "0.9",
+  description: "Sign files & verify signatures. Works with signify in OpenBSD",
+  url: "https://jedisct1.github.io/minisign/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

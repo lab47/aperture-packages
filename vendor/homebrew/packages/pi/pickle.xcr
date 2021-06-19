@@ -28,6 +28,12 @@ import "php" as i0
 pkg(
   name: "pickle",
   version: "0.7.2",
+  description: "PHP Extension installer",
+  url: "https://github.com/FriendsOfPHP/pickle",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

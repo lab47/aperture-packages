@@ -60,6 +60,12 @@ import "cmake" as i0, "glfw" as i1
 pkg(
   name: "opensubdiv",
   version: "3.4.4",
+  description: "Open-source subdivision surface library",
+  url: "https://graphics.pixar.com/opensubdiv/docs/intro.html",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

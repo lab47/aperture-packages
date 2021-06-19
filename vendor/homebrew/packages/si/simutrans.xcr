@@ -81,6 +81,12 @@ import "subversion" as i0, "autoconf" as i1, "automake" as i2, "pkg-config" as i
 pkg(
   name: "simutrans",
   version: "122.0",
+  description: "Transport simulator",
+  url: "https://www.simutrans.com/",
+  metadata: %{
+    "license": "Artistic-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

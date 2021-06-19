@@ -101,6 +101,12 @@ import "go" as i0
 pkg(
   name: "faas-cli",
   version: "0.13.11",
+  description: "CLI for templating and/or deploying FaaS functions",
+  url: "https://www.openfaas.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

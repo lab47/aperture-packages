@@ -85,6 +85,12 @@ import "pcre" as i0
 pkg(
   name: "harbour",
   version: "3.0.0",
+  description: "Portable, xBase-compatible programming language and environment",
+  url: "https://harbour.github.io",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

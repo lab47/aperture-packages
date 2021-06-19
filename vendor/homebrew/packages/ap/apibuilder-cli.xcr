@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "apibuilder-cli",
   version: "0.1.41",
+  description: "Command-line interface to generate clients for api builder",
+  url: "https://www.apibuilder.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

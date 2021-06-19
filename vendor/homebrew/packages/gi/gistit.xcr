@@ -40,6 +40,12 @@ import "autoconf" as i0, "automake" as i1, "jansson" as i2
 pkg(
   name: "gistit",
   version: "0.1.4",
+  description: "Command-line utility for creating Gists",
+  url: "https://gistit.herokuapp.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "nim" as i0, "gmp" as i1, "mysql" as i2
 pkg(
   name: "arturo",
   version: "0.9.77",
+  description: "Simple, modern and portable programming language for efficient scripting",
+  url: "https://github.com/arturo-lang/arturo",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

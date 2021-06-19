@@ -58,6 +58,12 @@ import "go" as i0
 pkg(
   name: "terrascan",
   version: "1.7.0",
+  description: "Detect compliance and security violations across Infrastructure as Code",
+  url: "https://github.com/accurics/terrascan",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

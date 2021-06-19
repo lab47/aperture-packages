@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cuba",
   version: "4.2.1",
+  description: "Library for multidimensional numerical integration",
+  url: "http://www.feynarts.de/cuba/",
+  metadata: %{
+    "license": "LGPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

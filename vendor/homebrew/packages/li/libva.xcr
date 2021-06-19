@@ -64,6 +64,12 @@ import "pkg-config" as i0, "libdrm" as i1, "libx11" as i2, "libxext" as i3, "lib
 pkg(
   name: "libva",
   version: "2.11.0",
+  description: "Hardware accelerated video processing library",
+  url: "https://github.com/intel/libva",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

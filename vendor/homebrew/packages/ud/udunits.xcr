@@ -54,6 +54,12 @@ import "cmake" as i0, "bison" as i1, "texinfo" as i2, "expat" as i3, "flex" as i
 pkg(
   name: "udunits",
   version: "2.2.27.6",
+  description: "Unidata unit conversion library",
+  url: "https://www.unidata.ucar.edu/software/udunits/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

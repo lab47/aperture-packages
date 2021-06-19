@@ -58,6 +58,12 @@ import "homebrew-install" as hi
 pkg(
   name: "redir",
   version: "2.2.1-9",
+  description: "Port redirector",
+  url: "https://web.archive.org/web/20190817033513/sammy.net/~sammy/hacks/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

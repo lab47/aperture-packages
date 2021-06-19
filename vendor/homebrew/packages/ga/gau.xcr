@@ -35,6 +35,12 @@ import "go" as i0
 pkg(
   name: "gau",
   version: "1.2.0",
+  description: "Open Threat Exchange, Wayback Machine, and Common Crawl URL fetcher",
+  url: "https://github.com/lc/gau",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

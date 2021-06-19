@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "makeicns",
   version: "1.4.10a",
+  description: "Create icns files from the command-line",
+  url: "https://bitbucket.org/mkae/makeicns",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

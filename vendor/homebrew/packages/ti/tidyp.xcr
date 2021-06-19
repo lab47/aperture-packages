@@ -51,6 +51,12 @@ import "libxslt" as i0
 pkg(
   name: "tidyp",
   version: "1.04",
+  description: "Validate and modify HTML",
+  url: "https://github.com/petdance/tidyp",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

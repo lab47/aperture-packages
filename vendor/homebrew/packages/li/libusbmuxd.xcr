@@ -52,6 +52,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libusbmuxd",
   version: "2.0.2",
+  description: "USB multiplexor library for iOS devices",
+  url: "https://www.libimobiledevice.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

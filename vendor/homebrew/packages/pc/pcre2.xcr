@@ -55,6 +55,12 @@ import "bzip2" as i0, "zlib" as i1
 pkg(
   name: "pcre2",
   version: "10.37",
+  description: "Perl compatible regular expressions library with a new API",
+  url: "https://www.pcre.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

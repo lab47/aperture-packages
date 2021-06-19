@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "calicoctl",
   version: "3.19.1",
+  description: "Calico CLI tool",
+  url: "https://www.projectcalico.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

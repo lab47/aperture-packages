@@ -22,6 +22,12 @@ import "homebrew-install" as hi
 pkg(
   name: "selecta",
   version: "0.0.7",
+  description: "Fuzzy text selector for files and anything else you need to select",
+  url: "https://github.com/garybernhardt/selecta",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

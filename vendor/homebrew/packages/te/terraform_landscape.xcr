@@ -80,6 +80,12 @@ import "ruby" as i0
 pkg(
   name: "terraform_landscape",
   version: "0.3.4",
+  description: "Improve Terraform's plan output",
+  url: "https://github.com/coinbase/terraform-landscape",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

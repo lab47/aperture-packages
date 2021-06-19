@@ -73,6 +73,12 @@ import "autoconf" as i0, "bison" as i1, "flex" as i2, "gperf" as i3, "bzip2" as 
 pkg(
   name: "icarus-verilog",
   version: "11.0",
+  description: "Verilog simulation and synthesis tool",
+  url: "http://iverilog.icarus.com/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -50,6 +50,12 @@ import "pkg-config" as i0, "flac" as i1, "lame" as i2, "libpng" as i3, "libsndfi
 pkg(
   name: "sox",
   version: "14.4.2",
+  description: "SOund eXchange: universal sound sample translator",
+  url: "https://sox.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

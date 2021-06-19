@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "dark-mode",
   version: "3.0.2",
+  description: "Control the macOS dark mode from the command-line",
+  url: "https://github.com/sindresorhus/dark-mode",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

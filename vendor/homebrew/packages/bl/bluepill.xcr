@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bluepill",
   version: "5.8.1",
+  description: "Testing tool for iOS that runs UI tests using multiple simulators",
+  url: "https://github.com/linkedin/bluepill",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

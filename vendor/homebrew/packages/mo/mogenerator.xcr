@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "mogenerator",
   version: "1.32",
+  description: "Generate Objective-C & Swift classes from your Core Data model",
+  url: "https://rentzsch.github.io/mogenerator/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

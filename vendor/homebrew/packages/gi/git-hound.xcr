@@ -67,6 +67,12 @@ import "go" as i0
 pkg(
   name: "git-hound",
   version: "1.0.0",
+  description: "Git plugin that prevents sensitive data from being committed",
+  url: "https://github.com/ezekg/git-hound",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

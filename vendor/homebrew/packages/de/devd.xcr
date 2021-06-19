@@ -50,6 +50,12 @@ import "go" as i0
 pkg(
   name: "devd",
   version: "0.9",
+  description: "Local webserver for developers",
+  url: "https://github.com/cortesi/devd",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

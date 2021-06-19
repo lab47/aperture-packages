@@ -49,6 +49,12 @@ import "pkg-config" as i0, "freetype" as i1, "sdl" as i2, "expat" as i3, "ncurse
 pkg(
   name: "advancemame",
   version: "3.9",
+  description: "MAME with advanced video support",
+  url: "https://www.advancemame.it/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

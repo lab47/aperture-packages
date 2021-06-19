@@ -35,6 +35,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ioke",
   version: "0.4.0",
+  description: "Dynamic language targeted at virtual machines",
+  url: "https://ioke.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

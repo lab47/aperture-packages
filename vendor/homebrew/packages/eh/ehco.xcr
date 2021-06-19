@@ -54,6 +54,12 @@ import "go" as i0
 pkg(
   name: "ehco",
   version: "1.0.6",
+  description: "Network relay tool and a typo :)",
+  url: "https://github.com/Ehco1996/ehco",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

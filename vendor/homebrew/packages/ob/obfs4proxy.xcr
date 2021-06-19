@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "obfs4proxy",
   version: "0.0.11",
+  description: "Pluggable transport proxy for Tor, implementing obfs4",
+  url: "https://gitlab.com/yawning/obfs4",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

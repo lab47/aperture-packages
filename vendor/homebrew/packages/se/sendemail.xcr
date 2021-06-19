@@ -31,6 +31,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sendemail",
   version: "1.56",
+  description: "Email program for sending SMTP mail",
+  url: "https://web.archive.org/web/20191013154932/caspian.dotconf.net/menu/Software/SendEmail/",
+  metadata: %{
+    "license": "GPL-2.0+",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -64,6 +64,12 @@ import "homebrew-install" as hi
 pkg(
   name: "bazaar",
   version: "2.7.0",
+  description: "Friendly powerful distributed version control system",
+  url: "https://bazaar.canonical.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

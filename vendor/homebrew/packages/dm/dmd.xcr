@@ -141,6 +141,12 @@ import "unzip" as i0, "xz" as i1
 pkg(
   name: "dmd",
   version: "2.097.0",
+  description: "D programming language compiler for macOS",
+  url: "https://dlang.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

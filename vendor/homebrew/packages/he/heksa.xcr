@@ -45,6 +45,12 @@ import "go" as i0
 pkg(
   name: "heksa",
   version: "1.14.0",
+  description: "CLI hex dumper with colors",
+  url: "https://github.com/raspi/heksa",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

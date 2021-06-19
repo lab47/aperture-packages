@@ -39,6 +39,12 @@ import "go" as i0
 pkg(
   name: "muffet",
   version: "2.4.2",
+  description: "Fast website link checker in Go",
+  url: "https://github.com/raviqqe/muffet",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

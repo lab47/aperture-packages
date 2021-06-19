@@ -70,6 +70,12 @@ import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "eigen" as i3, "flann" 
 pkg(
   name: "ompl",
   version: "1.5.2",
+  description: "Open Motion Planning Library consists of many motion planning algorithms",
+  url: "https://ompl.kavrakilab.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

@@ -72,6 +72,12 @@ import "cmake" as i0, "pkg-config" as i1, "libssh2" as i2
 pkg(
   name: "libgit2",
   version: "1.1.0",
+  description: "C library of Git core methods that is re-entrant and linkable",
+  url: "https://libgit2.github.com/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

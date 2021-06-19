@@ -55,6 +55,12 @@ import "pkg-config" as i0, "taglib" as i1
 pkg(
   name: "mp3unicode",
   version: "1.2.1",
+  description: "Command-line utility to convert mp3 tags between different encodings",
+  url: "https://mp3unicode.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

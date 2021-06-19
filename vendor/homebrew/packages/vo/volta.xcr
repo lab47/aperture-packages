@@ -55,6 +55,12 @@ import "rust" as i0, "openssl@1.1" as i1
 pkg(
   name: "volta",
   version: "1.0.4",
+  description: "JavaScript toolchain manager for reproducible environments",
+  url: "https://volta.sh",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "swift-format",
   version: "0.50400.0",
+  description: "Formatting technology for Swift source code",
+  url: "https://github.com/apple/swift-format",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

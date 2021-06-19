@@ -40,6 +40,12 @@ import "go" as i0
 pkg(
   name: "opa",
   version: "0.29.4",
+  description: "Open source, general-purpose policy engine",
+  url: "https://www.openpolicyagent.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

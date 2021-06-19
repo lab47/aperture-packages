@@ -83,12 +83,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "fftw" as i6, "gcc" as i7, "gdbm" as i8, "gmp" as i9, "hwloc" as i10, "isl" as i11, "libevent" as i12, "libffi" as i13, "libmpc" as i14, "libtool" as i15, "libxc" as i16, "libxml2" as i17, "m4" as i18, "mpdecimal" as i19, "mpfr" as i20, "ncurses" as i21, "open-mpi" as i22, "openblas" as i23, "openssl@1.1" as i24, "perl" as i25, "pkg-config" as i26, "python@3.9" as i27, "readline" as i28, "scalapack" as i29, "sphinx-doc" as i30, "sqlite" as i31, "unzip" as i32, "xz" as i33, "zip" as i34, "zlib" as i35, "zstd" as i36
+import "python@3.9" as i0, "fftw" as i1, "gcc" as i2, "libxc" as i3, "open-mpi" as i4, "scalapack" as i5
 
 pkg(
   name: "cp2k",
   version: "8.2",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
+  description: "Quantum chemistry and solid state physics software package",
+  url: "https://www.cp2k.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cp2k.rb"), formula)

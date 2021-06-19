@@ -43,6 +43,12 @@ import "go" as i0
 pkg(
   name: "glab",
   version: "1.18.1",
+  description: "Open-source GitLab command-line tool",
+  url: "https://glab.readthedocs.io/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

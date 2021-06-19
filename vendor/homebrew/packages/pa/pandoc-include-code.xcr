@@ -84,6 +84,12 @@ import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
 pkg(
   name: "pandoc-include-code",
   version: "1.5.0.0",
+  description: "Pandoc filter for including code from source files",
+  url: "https://github.com/owickstrom/pandoc-include-code",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

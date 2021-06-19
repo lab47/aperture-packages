@@ -45,6 +45,12 @@ import "rust" as i0
 pkg(
   name: "dua-cli",
   version: "2.13.1",
+  description: "View disk space usage and delete unwanted data, fast",
+  url: "https://lib.rs/crates/dua-cli",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

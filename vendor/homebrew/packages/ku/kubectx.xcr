@@ -35,6 +35,12 @@ import "kubernetes-cli" as i0
 pkg(
   name: "kubectx",
   version: "0.9.3",
+  description: "Tool that can switch between kubectl contexts easily and create aliases",
+  url: "https://github.com/ahmetb/kubectx",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

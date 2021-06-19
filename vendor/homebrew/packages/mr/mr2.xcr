@@ -57,6 +57,12 @@ import "go" as i0
 pkg(
   name: "mr2",
   version: "20210401",
+  description: "Expose local server to external network",
+  url: "https://github.com/txthinking/mr2",
+  metadata: %{
+    "license": "GPL-3.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

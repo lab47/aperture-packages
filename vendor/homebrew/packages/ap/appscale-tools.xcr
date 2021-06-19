@@ -365,6 +365,12 @@ import "libyaml" as i0, "openssl@1.1" as i1, "libffi" as i2, "ssh-copy-id" as i3
 pkg(
   name: "appscale-tools",
   version: "3.5.3",
+  description: "Command-line tools for working with AppScale",
+  url: "https://github.com/AppScale/appscale-tools",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

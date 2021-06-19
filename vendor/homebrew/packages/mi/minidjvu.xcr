@@ -49,6 +49,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "djvulibre" as i3, "
 pkg(
   name: "minidjvu",
   version: "0.8",
+  description: "DjVu multipage encoder, single page encoder/decoder",
+  url: "https://minidjvu.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

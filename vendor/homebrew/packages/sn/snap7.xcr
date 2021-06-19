@@ -37,6 +37,12 @@ import "p7zip" as i0
 pkg(
   name: "snap7",
   version: "1.4.2",
+  description: "Ethernet communication suite that works natively with Siemens S7 PLCs",
+  url: "https://snap7.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

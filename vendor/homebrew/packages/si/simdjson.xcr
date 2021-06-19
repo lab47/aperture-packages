@@ -52,6 +52,12 @@ import "cmake" as i0
 pkg(
   name: "simdjson",
   version: "0.9.6",
+  description: "SIMD-accelerated C++ JSON parser",
+  url: "https://simdjson.org",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

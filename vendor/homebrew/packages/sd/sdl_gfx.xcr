@@ -44,6 +44,12 @@ import "sdl" as i0
 pkg(
   name: "sdl_gfx",
   version: "2.0.26",
+  description: "Graphics drawing primitives and other support functions",
+  url: "https://www.ferzkopp.net/joomla/content/view/19/14/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

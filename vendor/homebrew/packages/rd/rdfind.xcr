@@ -50,6 +50,12 @@ import "nettle" as i0
 pkg(
   name: "rdfind",
   version: "1.4.1",
+  description: "Find duplicate files based on content (NOT file names)",
+  url: "https://rdfind.pauldreik.se/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

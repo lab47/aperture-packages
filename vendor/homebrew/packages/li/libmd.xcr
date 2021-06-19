@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmd",
   version: "1.0.3",
+  description: "BSD Message Digest library",
+  url: "https://www.hadrons.org/software/libmd/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "zlib" as i3
 pkg(
   name: "minizip",
   version: "1.2.11",
+  description: "C library for zip/unzip via zLib",
+  url: "https://www.winimage.com/zLibDll/minizip.html",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

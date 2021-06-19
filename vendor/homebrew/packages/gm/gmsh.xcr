@@ -63,6 +63,12 @@ import "cmake" as i0, "cairo" as i1, "fltk" as i2, "gcc" as i3, "open-mpi" as i4
 pkg(
   name: "gmsh",
   version: "4.8.4",
+  description: "3D finite element grid generator with CAD engine",
+  url: "https://gmsh.info/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

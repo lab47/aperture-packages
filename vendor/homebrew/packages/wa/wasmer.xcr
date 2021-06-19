@@ -42,6 +42,12 @@ import "cmake" as i0, "rust" as i1, "wabt" as i2
 pkg(
   name: "wasmer",
   version: "1.0.2",
+  description: "🚀 The Universal WebAssembly Runtime",
+  url: "https://wasmer.io",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

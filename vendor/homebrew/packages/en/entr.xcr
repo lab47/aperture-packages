@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "entr",
   version: "4.9",
+  description: "Run arbitrary commands when files change",
+  url: "https://eradman.com/entrproject/",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

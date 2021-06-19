@@ -91,6 +91,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sdl2",
   version: "2.0.14",
+  description: "Low-level access to audio, keyboard, mouse, joystick, and graphics",
+  url: "https://www.libsdl.org/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

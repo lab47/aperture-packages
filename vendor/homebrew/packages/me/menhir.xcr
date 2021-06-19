@@ -56,6 +56,12 @@ import "dune" as i0, "ocamlbuild" as i1, "ocaml" as i2
 pkg(
   name: "menhir",
   version: "20210419",
+  description: "LR(1) parser generator for the OCaml programming language",
+  url: "http://cristal.inria.fr/~fpottier/menhir",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "cmake" as i0, "pkg-config" as i1, "glib" as i2, "icu4c" as i3, "libxml2"
 pkg(
   name: "libical",
   version: "3.0.10",
+  description: "Implementation of iCalendar protocols and data formats",
+  url: "https://libical.github.io/libical/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later or MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

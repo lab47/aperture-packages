@@ -54,6 +54,12 @@ import "bash-completion" as i0, "ruby-build" as i1
 pkg(
   name: "ry",
   version: "0.5.2",
+  description: "Ruby virtual env tool",
+  url: "https://github.com/jayferd/ry",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

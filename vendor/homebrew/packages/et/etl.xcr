@@ -54,6 +54,12 @@ import "pkg-config" as i0, "glibmm@2.66" as i1
 pkg(
   name: "etl",
   version: "1.4.1",
+  description: "Extensible Template Library",
+  url: "https://synfig.org",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

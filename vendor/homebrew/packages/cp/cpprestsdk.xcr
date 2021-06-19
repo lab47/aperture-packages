@@ -59,6 +59,12 @@ import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "openssl@1.1" as i3
 pkg(
   name: "cpprestsdk",
   version: "2.10.18",
+  description: "C++ libraries for cloud-based client-server communication",
+  url: "https://github.com/Microsoft/cpprestsdk",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

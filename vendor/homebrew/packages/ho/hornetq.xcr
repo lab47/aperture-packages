@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "hornetq",
   version: "2.4.0",
+  description: "Multi-protocol, embeddable, clustered, asynchronous messaging system",
+  url: "https://hornetq.jboss.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

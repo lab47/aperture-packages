@@ -75,6 +75,12 @@ import "pkg-config" as i0, "fontconfig" as i1, "gd" as i2, "jpeg" as i3, "libpng
 pkg(
   name: "gnuplot@4",
   version: "4.6.7",
+  description: "Command-driven, interactive function plotting",
+  url: "http://www.gnuplot.info",
+  metadata: %{
+    "license": "gnuplot",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {

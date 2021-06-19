@@ -68,6 +68,12 @@ import "cmake" as i0, "jpeg-turbo" as i1, "libgcrypt" as i2, "libpng" as i3, "op
 pkg(
   name: "libvncserver",
   version: "0.9.13",
+  description: "VNC server and client libraries",
+  url: "https://libvnc.github.io",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

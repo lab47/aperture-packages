@@ -69,6 +69,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
 pkg(
   name: "libplist",
   version: "2.2.0",
+  description: "Library for Apple Binary- and XML-Property Lists",
+  url: "https://www.libimobiledevice.org/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

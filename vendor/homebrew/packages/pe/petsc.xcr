@@ -78,6 +78,12 @@ import "hdf5" as i0, "hwloc" as i1, "metis" as i2, "netcdf" as i3, "open-mpi" as
 pkg(
   name: "petsc",
   version: "3.15.0",
+  description: "Portable, Extensible Toolkit for Scientific Computation (real)",
+  url: "https://www.mcs.anl.gov/petsc/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

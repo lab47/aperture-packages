@@ -55,6 +55,12 @@ import "bazaar" as i0
 pkg(
   name: "bzr-colo",
   version: "0.4.0",
+  description: "Git style colocated branches for Bazaar",
+  url: "https://launchpad.net/bzr-colo",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

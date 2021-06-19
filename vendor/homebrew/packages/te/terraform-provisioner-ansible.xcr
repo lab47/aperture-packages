@@ -83,6 +83,12 @@ import "go" as i0, "terraform" as i1
 pkg(
   name: "terraform-provisioner-ansible",
   version: "0.0.2",
+  description: "Ansible provisioner for Terraform",
+  url: "https://github.com/jonmorehouse/terraform-provisioner-ansible",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

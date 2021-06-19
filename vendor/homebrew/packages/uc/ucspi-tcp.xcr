@@ -53,6 +53,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ucspi-tcp",
   version: "0.88",
+  description: "Tools for building TCP client-server applications",
+  url: "https://cr.yp.to/ucspi-tcp.html",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

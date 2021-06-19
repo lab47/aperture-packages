@@ -47,6 +47,12 @@ import "go" as i0
 pkg(
   name: "the_platinum_searcher",
   version: "2.2.0",
+  description: "Multi-platform code-search similar to ack and ag",
+  url: "https://github.com/monochromegane/the_platinum_searcher",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

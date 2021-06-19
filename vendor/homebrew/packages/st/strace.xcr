@@ -45,6 +45,12 @@ import "linux-headers" as i0
 pkg(
   name: "strace",
   version: "5.12",
+  description: "Diagnostic, instructional, and debugging tool for the Linux kernel",
+  url: "https://strace.io/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

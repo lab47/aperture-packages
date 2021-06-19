@@ -48,6 +48,12 @@ import "tcl-tk" as i0
 pkg(
   name: "dbhash",
   version: "3.35.5",
+  description: "Computes the SHA1 hash of schema and content of a SQLite database",
+  url: "https://www.sqlite.org/dbhash.html",
+  metadata: %{
+    "license": "blessing",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

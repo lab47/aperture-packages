@@ -40,6 +40,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xhyve",
   version: "0.2.0",
+  description: "Lightweight macOS virtualization solution based on FreeBSD's bhyve",
+  url: "https://github.com/machyve/xhyve",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

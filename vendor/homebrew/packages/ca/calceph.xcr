@@ -59,6 +59,12 @@ import "gcc" as i0
 pkg(
   name: "calceph",
   version: "3.4.7",
+  description: "C library to access the binary planetary ephemeris files",
+  url: "https://www.imcce.fr/inpop/calceph",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

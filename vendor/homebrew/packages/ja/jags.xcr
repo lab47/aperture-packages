@@ -63,6 +63,12 @@ import "gcc" as i0
 pkg(
   name: "jags",
   version: "4.3.0",
+  description: "Just Another Gibbs Sampler for Bayesian MCMC simulation",
+  url: "https://mcmc-jags.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -52,6 +52,12 @@ import "cweb" as i0
 pkg(
   name: "mmix",
   version: "20160804",
+  description: "64-bit RISC architecture designed by Donald Knuth",
+  url: "https://mmix.cs.hm.edu/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

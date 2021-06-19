@@ -67,6 +67,12 @@ import "perl" as i0
 pkg(
   name: "fpdns",
   version: "20190131",
+  description: "Fingerprint DNS server versions",
+  url: "https://github.com/kirei/fpdns",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

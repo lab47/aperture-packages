@@ -86,6 +86,12 @@ import "pkg-config" as i0, "gtk+3" as i1, "libarchive" as i2
 pkg(
   name: "gnome-autoar",
   version: "0.3.3",
+  description: "GNOME library for archive handling",
+  url: "https://github.com/GNOME/gnome-autoar",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

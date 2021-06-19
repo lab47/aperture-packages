@@ -40,6 +40,12 @@ import "libpng" as i0, "xorgrgb" as i1
 pkg(
   name: "sng",
   version: "1.1.0",
+  description: "Enable lossless editing of PNGs via a textual representation",
+  url: "https://sng.sourceforge.io/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

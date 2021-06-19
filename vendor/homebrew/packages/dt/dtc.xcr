@@ -49,6 +49,12 @@ import "pkg-config" as i0, "bison" as i1, "flex" as i2
 pkg(
   name: "dtc",
   version: "1.6.1",
+  description: "Device tree compiler",
+  url: "https://www.devicetree.org/",
+  metadata: %{
+    "license": "GPL-2.0-or-later or BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

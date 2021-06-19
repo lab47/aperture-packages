@@ -93,6 +93,12 @@ import "zlib" as i0
 pkg(
   name: "mandoc",
   version: "1.14.5",
+  description: "UNIX manpage compiler toolset",
+  url: "https://mandoc.bsd.lv/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "gumbo-parser",
   version: "0.10.1",
+  description: "C99 library for parsing HTML5",
+  url: "https://github.com/google/gumbo-parser",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

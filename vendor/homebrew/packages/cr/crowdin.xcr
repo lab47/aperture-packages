@@ -56,6 +56,12 @@ import "openjdk" as i0
 pkg(
   name: "crowdin",
   version: "3.6.1",
+  description: "Command-line tool that allows to manage your resources with crowdin.com",
+  url: "https://support.crowdin.com/cli-tool/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

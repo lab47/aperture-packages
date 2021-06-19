@@ -34,6 +34,12 @@ import "openjdk" as i0
 pkg(
   name: "xmlsectool",
   version: "3.0.0",
+  description: "Check schema validity and signature of an XML document",
+  url: "https://wiki.shibboleth.net/confluence/display/XSTJ3/xmlsectool+V3+Home",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

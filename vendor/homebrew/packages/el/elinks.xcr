@@ -76,6 +76,12 @@ import "openssl@1.1" as i0, "zlib" as i1
 pkg(
   name: "elinks",
   version: "0.11.7",
+  description: "Text mode web browser",
+  url: "http://elinks.or.cz/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

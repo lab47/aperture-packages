@@ -47,6 +47,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2
 pkg(
   name: "torsocks",
   version: "2.3.0",
+  description: "Use SOCKS-friendly applications with Tor",
+  url: "https://gitweb.torproject.org/torsocks.git/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

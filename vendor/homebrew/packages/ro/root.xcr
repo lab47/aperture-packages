@@ -168,12 +168,18 @@ end
 
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cfitsio" as i10, "cmake" as i11, "curl" as i12, "cython" as i13, "davix" as i14, "doxygen" as i15, "expat" as i16, "fftw" as i17, "flex" as i18, "fontconfig" as i19, "freetype" as i20, "fribidi" as i21, "gcc" as i22, "gd" as i23, "gdbm" as i24, "gdk-pixbuf" as i25, "gettext" as i26, "ghostscript" as i27, "gl2ps" as i28, "glib" as i29, "gmp" as i30, "gobject-introspection" as i31, "gperf" as i32, "graphite2" as i33, "graphviz" as i34, "groff" as i35, "gsl" as i36, "gts" as i37, "harfbuzz" as i38, "help2man" as i39, "hwloc" as i40, "icu4c" as i41, "isl" as i42, "jasper" as i43, "jbig2dec" as i44, "jemalloc" as i45, "jpeg" as i46, "krb5" as i47, "libev" as i48, "libevent" as i49, "libffi" as i50, "libidn" as i51, "libidn2" as i52, "libmpc" as i53, "libpng" as i54, "libpthread-stubs" as i55, "librsvg" as i56, "libssh2" as i57, "libtiff" as i58, "libtool" as i59, "libunistring" as i60, "libx11" as i61, "libxau" as i62, "libxcb" as i63, "libxdmcp" as i64, "libxext" as i65, "libxml2" as i66, "libxrender" as i67, "libyaml" as i68, "little-cms2" as i69, "lz4" as i70, "lzo" as i71, "m4" as i72, "meson" as i73, "mpdecimal" as i74, "mpfr" as i75, "ncurses" as i76, "netpbm" as i77, "nghttp2" as i78, "ninja" as i79, "numpy" as i80, "open-mpi" as i81, "openblas" as i82, "openjdk" as i83, "openjpeg" as i84, "openldap" as i85, "openssl@1.1" as i86, "pango" as i87, "pcre" as i88, "perl" as i89, "pixman" as i90, "pkg-config" as i91, "psutils" as i92, "python@3.9" as i93, "readline" as i94, "rtmpdump" as i95, "ruby" as i96, "rust" as i97, "scons" as i98, "sphinx-doc" as i99, "sqlite" as i100, "subversion" as i101, "swig" as i102, "tbb" as i103, "texinfo" as i104, "uchardet" as i105, "unzip" as i106, "utf8proc" as i107, "util-macros" as i108, "webp" as i109, "xcb-proto" as i110, "xorgproto" as i111, "xrootd" as i112, "xtrans" as i113, "xz" as i114, "zip" as i115, "zlib" as i116, "zstd" as i117
+import "cmake" as i0, "ninja" as i1, "cfitsio" as i2, "davix" as i3, "fftw" as i4, "gcc" as i5, "gl2ps" as i6, "graphviz" as i7, "gsl" as i8, "lz4" as i9, "numpy" as i10, "openssl@1.1" as i11, "pcre" as i12, "python@3.9" as i13, "tbb" as i14, "xrootd" as i15, "xz" as i16, "zstd" as i17, "libxml2" as i18
 
 pkg(
   name: "root",
   version: "6.22.08",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117],
+  description: "Object oriented framework for large scale data analysis",
+  url: "https://root.cern.ch/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "root.rb"), formula)

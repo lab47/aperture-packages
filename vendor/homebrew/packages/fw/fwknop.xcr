@@ -51,6 +51,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "gpgme" as i3
 pkg(
   name: "fwknop",
   version: "2.6.10",
+  description: "Single Packet Authorization and Port Knocking",
+  url: "https://www.cipherdyne.org/fwknop/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "nbimg",
   version: "1.2.1",
+  description: "Smartphone boot splash screen converter for Android and winCE",
+  url: "https://github.com/poliva/nbimg",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

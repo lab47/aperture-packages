@@ -24,6 +24,12 @@ import "homebrew-install" as hi
 pkg(
   name: "sisc-scheme",
   version: "1.16.6",
+  description: "Extensive Java based Scheme interpreter",
+  url: "http://sisc-scheme.org/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

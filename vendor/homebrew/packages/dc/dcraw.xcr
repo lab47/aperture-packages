@@ -47,6 +47,12 @@ import "jasper" as i0, "jpeg" as i1, "little-cms2" as i2
 pkg(
   name: "dcraw",
   version: "9.28.0",
+  description: "Digital camera RAW photo decoding software",
+  url: "https://www.dechifro.org/dcraw/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

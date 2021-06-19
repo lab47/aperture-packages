@@ -91,6 +91,12 @@ import "gmp" as i0
 pkg(
   name: "cddlib",
   version: "0.94m",
+  description: "Double description method for general polyhedral cones",
+  url: "https://www.inf.ethz.ch/personal/fukudak/cdd_home/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

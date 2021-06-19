@@ -41,6 +41,12 @@ import "homebrew-install" as hi
 pkg(
   name: "log4c",
   version: "1.2.4",
+  description: "Logging Framework for C",
+  url: "https://log4c.sourceforge.io/",
+  metadata: %{
+    "license": "LGPL-2.1",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

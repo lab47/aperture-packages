@@ -34,6 +34,12 @@ import "pkg-config" as i0, "glib" as i1, "gsl" as i2
 pkg(
   name: "oscats",
   version: "0.6",
+  description: "Computerized adaptive testing system",
+  url: "https://code.google.com/archive/p/oscats/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

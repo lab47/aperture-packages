@@ -61,6 +61,12 @@ import "homebrew-install" as hi
 pkg(
   name: "jsonnet",
   version: "0.17.0",
+  description: "Domain specific configuration language for defining JSON data",
+  url: "https://jsonnet.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

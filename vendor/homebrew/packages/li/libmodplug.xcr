@@ -91,6 +91,12 @@ import "homebrew-install" as hi
 pkg(
   name: "libmodplug",
   version: "0.8.9.0",
+  description: "Library from the Modplug-XMMS project",
+  url: "https://modplug-xmms.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

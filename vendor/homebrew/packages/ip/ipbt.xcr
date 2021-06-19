@@ -41,6 +41,12 @@ import "ncurses" as i0
 pkg(
   name: "ipbt",
   version: "20210215",
+  description: "Program for recording a UNIX terminal session",
+  url: "https://www.chiark.greenend.org.uk/~sgtatham/ipbt/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

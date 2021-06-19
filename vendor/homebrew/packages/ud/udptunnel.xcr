@@ -48,6 +48,12 @@ import "autoconf" as i0, "automake" as i1
 pkg(
   name: "udptunnel",
   version: "1.1",
+  description: "Tunnel UDP packets over a TCP connection",
+  url: "https://web.archive.org/web/20161224191851/www.cs.columbia.edu/~lennox/udptunnel/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "openjdk@11" as i0
 pkg(
   name: "apache-spark",
   version: "3.1.2",
+  description: "Engine for large-scale data processing",
+  url: "https://spark.apache.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -40,6 +40,12 @@ import "ncurses" as i0
 pkg(
   name: "dialog",
   version: "1.3-20210530",
+  description: "Display user-friendly message boxes from shell scripts",
+  url: "https://invisible-island.net/dialog/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

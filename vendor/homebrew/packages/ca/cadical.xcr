@@ -65,6 +65,12 @@ import "homebrew-install" as hi
 pkg(
   name: "cadical",
   version: "1.4.0",
+  description: "Clean and efficient state-of-the-art SAT solver",
+  url: "http://fmv.jku.at/cadical/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "rust" as i0
 pkg(
   name: "fselect",
   version: "0.7.5",
+  description: "Find files with SQL-like queries",
+  url: "https://github.com/jhspetersson/fselect",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

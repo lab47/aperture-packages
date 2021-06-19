@@ -36,6 +36,12 @@ import "openjdk" as i0
 pkg(
   name: "apache-ctakes",
   version: "4.0.0",
+  description: "NLP system for extraction of information from EMR clinical text",
+  url: "https://ctakes.apache.org",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

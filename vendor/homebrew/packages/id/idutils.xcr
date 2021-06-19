@@ -54,6 +54,12 @@ import "homebrew-install" as hi
 pkg(
   name: "idutils",
   version: "4.6",
+  description: "ID database and query tools",
+  url: "https://www.gnu.org/s/idutils/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -36,6 +36,12 @@ import "lzip" as i0
 pkg(
   name: "ddrescue",
   version: "1.25",
+  description: "GNU data recovery tool",
+  url: "https://www.gnu.org/software/ddrescue/ddrescue.html",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

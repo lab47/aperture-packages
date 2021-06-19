@@ -52,6 +52,12 @@ import "cmake" as i0, "cbc" as i1, "gecode" as i2
 pkg(
   name: "minizinc",
   version: "2.5.5",
+  description: "Medium-level constraint modeling language",
+  url: "https://www.minizinc.org/",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

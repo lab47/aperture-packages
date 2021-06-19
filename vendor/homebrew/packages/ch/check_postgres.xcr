@@ -49,6 +49,12 @@ import "postgresql" as i0
 pkg(
   name: "check_postgres",
   version: "2.25.0",
+  description: "Monitor Postgres databases",
+  url: "https://bucardo.org/wiki/Check_postgres",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

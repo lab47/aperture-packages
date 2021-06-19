@@ -64,6 +64,12 @@ import "cmake" as i0
 pkg(
   name: "cppad",
   version: "20210000.6",
+  description: "Differentiation of C++ Algorithms",
+  url: "https://www.coin-or.org/CppAD",
+  metadata: %{
+    "license": "EPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -57,6 +57,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zlib",
   version: "1.2.11",
+  description: "General-purpose lossless data-compression library",
+  url: "https://zlib.net/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

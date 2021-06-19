@@ -70,6 +70,12 @@ import "cmake" as i0, "gcc" as i1, "hdf5" as i2, "szip" as i3, "zlib" as i4
 pkg(
   name: "cgns",
   version: "4.2.0",
+  description: "CFD General Notation System",
+  url: "http://cgns.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

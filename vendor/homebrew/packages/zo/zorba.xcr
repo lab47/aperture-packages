@@ -61,6 +61,12 @@ import "cmake" as i0, "openjdk" as i1, "flex" as i2, "icu4c" as i3, "xerces-c" a
 pkg(
   name: "zorba",
   version: "3.1",
+  description: "NoSQL query processor",
+  url: "http://www.zorba.io/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

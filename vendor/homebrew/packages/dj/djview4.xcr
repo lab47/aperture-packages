@@ -68,6 +68,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "djview4",
   version: "4.12",
+  description: "Viewer for the DjVu image format",
+  url: "https://djvu.sourceforge.io/djview4.html",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

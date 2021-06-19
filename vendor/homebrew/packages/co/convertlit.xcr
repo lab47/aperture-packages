@@ -48,6 +48,12 @@ import "libtommath" as i0
 pkg(
   name: "convertlit",
   version: "1.8",
+  description: "Convert Microsoft Reader format eBooks into open format",
+  url: "http://www.convertlit.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -179,12 +179,18 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cmake" as i1, "coreutils" as i2, "dune" as i3, "expat" as i4, "gdbm" as i5, "gpatch" as i6, "gperf" as i7, "libffi" as i8, "mpdecimal" as i9, "ncurses" as i10, "ocaml" as i11, "opam" as i12, "openssl@1.1" as i13, "pcre" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sphinx-doc" as i18, "sqlite" as i19, "unzip" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
+import "bzip2" as i0, "cmake" as i1, "coreutils" as i2, "dune" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "mpdecimal" as i7, "ncurses" as i8, "ocaml" as i9, "opam" as i10, "openssl@1.1" as i11, "pcre" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "semgrep",
   version: "0.55.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  description: "Easily detect and prevent bugs and anti-patterns in your codebase",
+  url: "https://semgrep.dev",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "semgrep.rb"), formula)

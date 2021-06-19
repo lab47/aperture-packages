@@ -66,12 +66,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "expat" as i4, "gdbm" as i5, "libffi" as i6, "libtool" as i7, "m4" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "perl" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "sdl2" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "python@3.9" as i4, "sdl2" as i5
 
 pkg(
   name: "libtcod",
   version: "1.18.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  description: "API for roguelike developers",
+  url: "https://github.com/libtcod/libtcod",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtcod.rb"), formula)

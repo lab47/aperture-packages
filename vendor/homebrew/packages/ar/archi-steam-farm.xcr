@@ -55,6 +55,12 @@ import "dotnet" as i0
 pkg(
   name: "archi-steam-farm",
   version: "5.1.0.9",
+  description: "Application for idling Steam cards from multiple accounts simultaneously",
+  url: "https://github.com/JustArchiNET/ArchiSteamFarm",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

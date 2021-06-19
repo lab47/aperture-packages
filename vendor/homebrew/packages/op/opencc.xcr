@@ -39,6 +39,12 @@ import "cmake" as i0
 pkg(
   name: "opencc",
   version: "1.1.2",
+  description: "Simplified-traditional Chinese conversion tool",
+  url: "https://github.com/BYVoid/OpenCC",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

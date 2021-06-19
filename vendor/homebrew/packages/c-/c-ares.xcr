@@ -57,6 +57,12 @@ import "cmake" as i0, "ninja" as i1
 pkg(
   name: "c-ares",
   version: "1.17.1",
+  description: "Asynchronous DNS library",
+  url: "https://c-ares.haxx.se/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

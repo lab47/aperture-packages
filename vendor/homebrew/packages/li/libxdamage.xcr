@@ -57,6 +57,12 @@ import "pkg-config" as i0, "libx11" as i1, "libxfixes" as i2, "xorgproto" as i3
 pkg(
   name: "libxdamage",
   version: "1.1.5",
+  description: "X.Org: X Damage Extension library",
+  url: "https://www.x.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

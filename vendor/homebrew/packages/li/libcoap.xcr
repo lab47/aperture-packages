@@ -41,6 +41,12 @@ import "autoconf" as i0, "automake" as i1, "doxygen" as i2, "libtool" as i3, "pk
 pkg(
   name: "libcoap",
   version: "4.2.1",
+  description: "Lightweight application-protocol for resource-constrained devices",
+  url: "https://github.com/obgm/libcoap",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

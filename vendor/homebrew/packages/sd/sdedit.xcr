@@ -40,6 +40,12 @@ import "openjdk" as i0
 pkg(
   name: "sdedit",
   version: "4.2.1",
+  description: "Tool for generating sequence diagrams very quickly",
+  url: "https://sdedit.sourceforge.io",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

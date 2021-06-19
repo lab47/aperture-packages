@@ -52,6 +52,12 @@ import "cmake" as i0, "doxygen" as i1, "extra-cmake-modules" as i2, "graphviz" a
 pkg(
   name: "threadweaver",
   version: "5.83.0",
+  description: "Helper for multithreaded programming",
+  url: "https://api.kde.org/frameworks/threadweaver/html/index.html",
+  metadata: %{
+    "license": "LGPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

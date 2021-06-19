@@ -56,6 +56,12 @@ import "pkg-config" as i0, "glib" as i1, "libidl" as i2
 pkg(
   name: "orbit",
   version: "2.14.19",
+  description: "CORBA 2.4-compliant object request broker (ORB)",
+  url: "https://web.archive.org/web/20191222075841/projects-old.gnome.org/ORBit2/",
+  metadata: %{
+    "license": "GPL-2.0-or-later and LGPL-2.0-only",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

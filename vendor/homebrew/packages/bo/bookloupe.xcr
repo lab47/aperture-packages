@@ -50,6 +50,12 @@ import "pkg-config" as i0, "glib" as i1
 pkg(
   name: "bookloupe",
   version: "2.0",
+  description: "List common formatting errors in a Project Gutenberg candidate file",
+  url: "http://www.juiblex.co.uk/pgdp/bookloupe/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

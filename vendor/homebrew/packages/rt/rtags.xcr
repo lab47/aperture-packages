@@ -113,6 +113,12 @@ import "cmake" as i0, "emacs" as i1, "llvm" as i2, "openssl@1.1" as i3
 pkg(
   name: "rtags",
   version: "2.38",
+  description: "Source code cross-referencer like ctags with a clang frontend",
+  url: "https://github.com/Andersbakken/rtags",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

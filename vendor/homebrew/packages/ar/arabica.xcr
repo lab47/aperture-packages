@@ -57,6 +57,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "boost" as i3, "expa
 pkg(
   name: "arabica",
   version: "20200425",
+  description: "XML toolkit written in C++",
+  url: "https://www.jezuk.co.uk/tags/arabica.html",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {

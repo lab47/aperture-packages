@@ -62,6 +62,12 @@ import "cmake" as i0, "ninja" as i1
 pkg(
   name: "bde",
   version: "3.61.0.0",
+  description: "Basic Development Environment: foundational C++ libraries used at Bloomberg",
+  url: "https://github.com/bloomberg/bde",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

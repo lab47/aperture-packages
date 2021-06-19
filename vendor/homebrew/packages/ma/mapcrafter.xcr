@@ -48,6 +48,12 @@ import "cmake" as i0, "boost" as i1, "jpeg-turbo" as i2, "libpng" as i3
 pkg(
   name: "mapcrafter",
   version: "2.4",
+  description: "Minecraft map renderer",
+  url: "https://mapcrafter.org",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

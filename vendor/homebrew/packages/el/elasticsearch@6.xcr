@@ -153,6 +153,12 @@ import "openjdk@8" as i0
 pkg(
   name: "elasticsearch@6",
   version: "6.8.13",
+  description: "Distributed search & analytics engine",
+  url: "https://www.elastic.co/products/elasticsearch",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

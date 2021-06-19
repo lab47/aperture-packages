@@ -102,6 +102,12 @@ import "perl" as i0
 pkg(
   name: "extract_url",
   version: "1.6.2",
+  description: "Perl script to extracts URLs from emails or plain text",
+  url: "https://www.memoryhole.net/~kyle/extract_url/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

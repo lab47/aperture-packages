@@ -50,6 +50,12 @@ import "homebrew-install" as hi
 pkg(
   name: "kobalt",
   version: "1.0.129",
+  description: "Build system",
+  url: "https://beust.com/kobalt/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

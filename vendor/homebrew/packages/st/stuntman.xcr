@@ -43,6 +43,12 @@ import "boost" as i0, "openssl@1.1" as i1
 pkg(
   name: "stuntman",
   version: "1.2.16",
+  description: "Implementation of the STUN protocol",
+  url: "http://www.stunprotocol.org/",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

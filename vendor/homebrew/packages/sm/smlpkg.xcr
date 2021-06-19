@@ -43,6 +43,12 @@ import "mlkit" as i0
 pkg(
   name: "smlpkg",
   version: "0.1.5",
+  description: "Package manager for Standard ML libraries and programs",
+  url: "https://github.com/diku-dk/smlpkg",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -82,6 +82,12 @@ import "cmake" as i0, "freetype" as i1, "gettext" as i2, "irrlicht" as i3, "jpeg
 pkg(
   name: "minetest",
   version: "5.4.0",
+  description: "Free, open source voxel game engine and game",
+  url: "https://www.minetest.net/",
+  metadata: %{
+    "license": "LGPL-2.1-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

@@ -51,6 +51,12 @@ import "cmake" as i0, "nasm" as i1, "libpng" as i2
 pkg(
   name: "mozjpeg",
   version: "4.0.3",
+  description: "Improved JPEG encoder",
+  url: "https://github.com/mozilla/mozjpeg",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

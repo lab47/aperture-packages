@@ -53,6 +53,12 @@ import "pkg-config" as i0, "faac" as i1, "jack" as i2, "lame" as i3, "libsampler
 pkg(
   name: "darkice",
   version: "1.4",
+  description: "Live audio streamer",
+  url: "http://www.darkice.org/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

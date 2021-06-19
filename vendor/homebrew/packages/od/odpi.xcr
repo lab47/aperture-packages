@@ -49,6 +49,12 @@ import "homebrew-install" as hi
 pkg(
   name: "odpi",
   version: "4.2.1",
+  description: "Oracle Database Programming Interface for Drivers and Applications",
+  url: "https://oracle.github.io/odpi/",
+  metadata: %{
+    "license": "Apache-2.0 or UPL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

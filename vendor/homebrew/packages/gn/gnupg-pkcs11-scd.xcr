@@ -58,6 +58,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "gnupg-pkcs11-scd",
   version: "0.9.2",
+  description: "Enable the use of PKCS#11 tokens with GnuPG",
+  url: "https://gnupg-pkcs11.sourceforge.io",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

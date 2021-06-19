@@ -57,6 +57,12 @@ import "gputils" as i0, "pkg-config" as i1, "gettext" as i2, "glib" as i3, "popt
 pkg(
   name: "gpsim",
   version: "0.31.0",
+  description: "Simulator for Microchip's PIC microcontrollers",
+  url: "https://gpsim.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

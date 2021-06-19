@@ -73,12 +73,18 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "apr" as i1, "apr-util" as i2, "aspell" as i3, "atk" as i4, "atkmm@2.28" as i5, "autoconf" as i6, "automake" as i7, "berkeley-db" as i8, "bison" as i9, "brotli" as i10, "bzip2" as i11, "c-ares" as i12, "cairo" as i13, "cairomm@1.14" as i14, "cmake" as i15, "curl" as i16, "docbook" as i17, "docbook-xsl" as i18, "doxygen" as i19, "enchant" as i20, "expat" as i21, "flex" as i22, "fmt" as i23, "fontconfig" as i24, "freetype" as i25, "fribidi" as i26, "gd" as i27, "gdbm" as i28, "gdk-pixbuf" as i29, "gettext" as i30, "ghostscript" as i31, "glib" as i32, "glibmm@2.66" as i33, "gobject-introspection" as i34, "gperf" as i35, "graphite2" as i36, "graphviz" as i37, "groff" as i38, "gsettings-desktop-schemas" as i39, "gspell" as i40, "gtk+" as i41, "gtk+3" as i42, "gtk-doc" as i43, "gtk-mac-integration" as i44, "gtkmm3" as i45, "gtksourceview3" as i46, "gtksourceviewmm3" as i47, "gts" as i48, "harfbuzz" as i49, "help2man" as i50, "hicolor-icon-theme" as i51, "icu4c" as i52, "intltool" as i53, "iso-codes" as i54, "jasper" as i55, "jbig2dec" as i56, "jemalloc" as i57, "jpeg" as i58, "krb5" as i59, "libepoxy" as i60, "libev" as i61, "libffi" as i62, "libgcrypt" as i63, "libgpg-error" as i64, "libidn" as i65, "libidn2" as i66, "libpng" as i67, "libpthread-stubs" as i68, "librsvg" as i69, "libsigc++@2" as i70, "libssh2" as i71, "libtiff" as i72, "libtool" as i73, "libunistring" as i74, "libx11" as i75, "libxau" as i76, "libxcb" as i77, "libxdmcp" as i78, "libxext" as i79, "libxml++" as i80, "libxml2" as i81, "libxrender" as i82, "libxslt" as i83, "libyaml" as i84, "little-cms2" as i85, "lz4" as i86, "lzo" as i87, "m4" as i88, "meson" as i89, "mpdecimal" as i90, "ncurses" as i91, "netpbm" as i92, "nghttp2" as i93, "ninja" as i94, "openjdk" as i95, "openjpeg" as i96, "openldap" as i97, "openssl@1.1" as i98, "pango" as i99, "pangomm@2.46" as i100, "pcre" as i101, "perl" as i102, "pixman" as i103, "pkg-config" as i104, "psutils" as i105, "python@3.9" as i106, "readline" as i107, "rtmpdump" as i108, "ruby" as i109, "rust" as i110, "scons" as i111, "spdlog" as i112, "sphinx-doc" as i113, "sqlite" as i114, "subversion" as i115, "swig" as i116, "texinfo" as i117, "uchardet" as i118, "unzip" as i119, "utf8proc" as i120, "util-macros" as i121, "vala" as i122, "webp" as i123, "xcb-proto" as i124, "xorgproto" as i125, "xtrans" as i126, "xz" as i127, "zip" as i128, "zlib" as i129, "zstd" as i130
+import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "python@3.9" as i3, "adwaita-icon-theme" as i4, "fmt" as i5, "gspell" as i6, "gtksourceviewmm3" as i7, "libxml++" as i8, "spdlog" as i9, "uchardet" as i10, "curl" as i11
 
 pkg(
   name: "cherrytree",
   version: "0.99.38",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94, i95, i96, i97, i98, i99, i100, i101, i102, i103, i104, i105, i106, i107, i108, i109, i110, i111, i112, i113, i114, i115, i116, i117, i118, i119, i120, i121, i122, i123, i124, i125, i126, i127, i128, i129, i130],
+  description: "Hierarchical note taking application featuring rich text and syntax highlighting",
+  url: "https://www.giuspen.com/cherrytree/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cherrytree.rb"), formula)

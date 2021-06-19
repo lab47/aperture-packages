@@ -48,6 +48,12 @@ import "go" as i0
 pkg(
   name: "dockerize",
   version: "0.6.1",
+  description: "Utility to simplify running applications in docker containers",
+  url: "https://github.com/jwilder/dockerize",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

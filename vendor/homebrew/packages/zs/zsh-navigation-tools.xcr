@@ -51,6 +51,12 @@ import "zsh" as i0
 pkg(
   name: "zsh-navigation-tools",
   version: "2.2.7",
+  description: "Zsh curses-based tools, e.g. multi-word history searcher",
+  url: "https://github.com/psprint/zsh-navigation-tools",
+  metadata: %{
+    "license": "GPL-3.0-only or MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "ficy",
   version: "1.0.21",
+  description: "Icecast/Shoutcast stream grabber suite",
+  url: "https://www.thregr.org/~wavexx/software/fIcy/",
+  metadata: %{
+    "license": "LGPL-2.1-only",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

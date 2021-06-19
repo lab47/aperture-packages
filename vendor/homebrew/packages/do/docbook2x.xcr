@@ -101,6 +101,12 @@ import "docbook" as i0, "libxslt" as i1, "perl" as i2
 pkg(
   name: "docbook2x",
   version: "0.8.8",
+  description: "Convert DocBook to UNIX manpages and GNU TeXinfo",
+  url: "https://docbook2x.sourceforge.io/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

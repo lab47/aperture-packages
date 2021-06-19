@@ -92,6 +92,12 @@ import "boost" as i0
 pkg(
   name: "boost-python",
   version: "1.74.0",
+  description: "C++ library for C++/Python2 interoperability",
+  url: "https://www.boost.org/",
+  metadata: %{
+    "license": "BSL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

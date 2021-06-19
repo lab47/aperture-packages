@@ -72,6 +72,12 @@ import "pkg-config" as i0, "json-c" as i1, "libyubikey" as i2
 pkg(
   name: "ykpers",
   version: "1.20.0",
+  description: "YubiKey personalization library and tool",
+  url: "https://developers.yubico.com/yubikey-personalization/",
+  metadata: %{
+    "license": "BSD-2-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

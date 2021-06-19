@@ -55,6 +55,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libjwt",
   version: "1.13.1",
+  description: "JSON Web Token C library",
+  url: "https://github.com/benmcollins/libjwt",
+  metadata: %{
+    "license": "MPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {

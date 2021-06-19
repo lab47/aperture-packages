@@ -45,6 +45,12 @@ import "sdl2" as i0
 pkg(
   name: "zboy",
   version: "0.71",
+  description: "GameBoy emulator",
+  url: "https://zboy.sourceforge.io/",
+  metadata: %{
+    "license": "GPL-3.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

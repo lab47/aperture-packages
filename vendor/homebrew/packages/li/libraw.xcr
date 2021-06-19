@@ -65,6 +65,12 @@ import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, 
 pkg(
   name: "libraw",
   version: "0.20.2",
+  description: "Library for reading RAW files from digital photo cameras",
+  url: "https://www.libraw.org/",
+  metadata: %{
+    "license": "LGPL-2.1-only or CDDL-1.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

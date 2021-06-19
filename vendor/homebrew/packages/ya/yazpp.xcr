@@ -58,6 +58,12 @@ import "yaz" as i0
 pkg(
   name: "yazpp",
   version: "1.7.1",
+  description: "C++ API for the Yaz toolkit",
+  url: "https://www.indexdata.com/yazpp",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

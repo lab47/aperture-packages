@@ -53,6 +53,12 @@ import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2
 pkg(
   name: "starship",
   version: "0.54.0",
+  description: "Cross-shell prompt for astronauts",
+  url: "https://starship.rs",
+  metadata: %{
+    "license": "ISC",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

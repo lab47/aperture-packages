@@ -51,6 +51,12 @@ import "go" as i0, "kubernetes-cli" as i1
 pkg(
   name: "devspace",
   version: "5.14.0",
+  description: "CLI helps develop/deploy/debug apps with Docker and k8s",
+  url: "https://devspace.cloud/docs",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

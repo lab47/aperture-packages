@@ -71,6 +71,12 @@ import "pkg-config" as i0, "flac" as i1, "libogg" as i2, "libsndfile" as i3, "li
 pkg(
   name: "libopenmpt",
   version: "0.5.9",
+  description: "Software library to decode tracked music files",
+  url: "https://lib.openmpt.org/libopenmpt/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {

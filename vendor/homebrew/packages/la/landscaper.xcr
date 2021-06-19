@@ -57,6 +57,12 @@ import "dep" as i0, "go" as i1, "helm@2" as i2, "kubernetes-cli" as i3
 pkg(
   name: "landscaper",
   version: "1.0.24",
+  description: "Manage the application landscape in a Kubernetes cluster",
+  url: "https://github.com/Eneco/landscaper",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

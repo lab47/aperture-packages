@@ -68,6 +68,12 @@ import "m4" as i0
 pkg(
   name: "bison",
   version: "3.7.6",
+  description: "Parser generator",
+  url: "https://www.gnu.org/software/bison/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

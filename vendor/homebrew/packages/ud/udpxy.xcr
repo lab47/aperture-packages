@@ -63,6 +63,12 @@ import "homebrew-install" as hi
 pkg(
   name: "udpxy",
   version: "1.0.23-12",
+  description: "UDP-to-HTTP multicast traffic relay daemon",
+  url: "http://www.udpxy.com/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

@@ -74,12 +74,18 @@ index 9dbde5f..4ffe52e 100644
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "atk" as i1, "autoconf" as i2, "automake" as i3, "berkeley-db" as i4, "bison" as i5, "brotli" as i6, "bzip2" as i7, "c-ares" as i8, "cairo" as i9, "cmake" as i10, "curl" as i11, "docbook" as i12, "docbook-xsl" as i13, "expat" as i14, "flac" as i15, "flex" as i16, "fontconfig" as i17, "freetype" as i18, "fribidi" as i19, "gdbm" as i20, "gdk-pixbuf" as i21, "gettext" as i22, "glib" as i23, "gobject-introspection" as i24, "gperf" as i25, "graphite2" as i26, "gsettings-desktop-schemas" as i27, "gtk+3" as i28, "harfbuzz" as i29, "help2man" as i30, "hicolor-icon-theme" as i31, "icu4c" as i32, "id3lib" as i33, "intltool" as i34, "itstool" as i35, "jemalloc" as i36, "jpeg" as i37, "krb5" as i38, "libepoxy" as i39, "libev" as i40, "libffi" as i41, "libgcrypt" as i42, "libgpg-error" as i43, "libid3tag" as i44, "libidn2" as i45, "libogg" as i46, "libpng" as i47, "libpthread-stubs" as i48, "librsvg" as i49, "libssh2" as i50, "libtiff" as i51, "libtool" as i52, "libunistring" as i53, "libvorbis" as i54, "libx11" as i55, "libxau" as i56, "libxcb" as i57, "libxdmcp" as i58, "libxext" as i59, "libxml2" as i60, "libxrender" as i61, "libxslt" as i62, "lzo" as i63, "m4" as i64, "meson" as i65, "mpdecimal" as i66, "ncurses" as i67, "nghttp2" as i68, "ninja" as i69, "openldap" as i70, "openssl@1.1" as i71, "pango" as i72, "pcre" as i73, "perl" as i74, "pixman" as i75, "pkg-config" as i76, "python@3.9" as i77, "readline" as i78, "rtmpdump" as i79, "rust" as i80, "speex" as i81, "sphinx-doc" as i82, "sqlite" as i83, "taglib" as i84, "unzip" as i85, "util-macros" as i86, "wavpack" as i87, "xcb-proto" as i88, "xorgproto" as i89, "xtrans" as i90, "xz" as i91, "zip" as i92, "zlib" as i93, "zstd" as i94
+import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "python@3.9" as i3, "adwaita-icon-theme" as i4, "flac" as i5, "gtk+3" as i6, "hicolor-icon-theme" as i7, "id3lib" as i8, "libid3tag" as i9, "libogg" as i10, "libvorbis" as i11, "speex" as i12, "taglib" as i13, "wavpack" as i14
 
 pkg(
   name: "easy-tag",
   version: "2.4.3",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i64, i65, i66, i67, i68, i69, i70, i71, i72, i73, i74, i75, i76, i77, i78, i79, i80, i81, i82, i83, i84, i85, i86, i87, i88, i89, i90, i91, i92, i93, i94],
+  description: "Application for viewing and editing audio file tags",
+  url: "https://projects.gnome.org/easytag",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "easy-tag.rb"), formula)

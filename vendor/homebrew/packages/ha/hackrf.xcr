@@ -53,6 +53,12 @@ import "cmake" as i0, "pkg-config" as i1, "fftw" as i2, "libusb" as i3
 pkg(
   name: "hackrf",
   version: "2021.03.1",
+  description: "Low cost software radio platform",
+  url: "https://github.com/mossmann/hackrf",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {

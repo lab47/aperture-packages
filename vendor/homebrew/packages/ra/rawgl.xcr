@@ -43,6 +43,12 @@ import "sdl2" as i0, "sdl2_mixer" as i1
 pkg(
   name: "rawgl",
   version: "0.2.1",
+  description: "Rewritten engine for Another World",
+  url: "https://github.com/cyxx/rawgl",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -67,6 +67,12 @@ import "go" as i0
 pkg(
   name: "ooniprobe",
   version: "3.10.0",
+  description: "Network interference detection tool",
+  url: "https://ooni.org/",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

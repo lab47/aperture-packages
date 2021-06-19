@@ -56,6 +56,12 @@ import "homebrew-install" as hi
 pkg(
   name: "zlib-ng",
   version: "2.0.4",
+  description: "Zlib replacement with optimizations for next generation systems",
+  url: "https://github.com/zlib-ng/zlib-ng",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

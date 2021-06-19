@@ -41,6 +41,12 @@ import "cmake" as i0, "vala" as i1, "gst-plugins-good" as i2, "gtk+3" as i3, "li
 pkg(
   name: "pdfpc",
   version: "4.4.1",
+  description: "Presenter console with multi-monitor support for PDF files",
+  url: "https://pdfpc.github.io/",
+  metadata: %{
+    "license": "GPL-3.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

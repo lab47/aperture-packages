@@ -110,6 +110,12 @@ import "gradle@6" as i0, "openjdk" as i1
 pkg(
   name: "opensearch",
   version: "1.0.0-rc1",
+  description: "Open source distributed and RESTful search engine",
+  url: "https://github.com/opensearch-project/OpenSearch",
+  metadata: %{
+    "license": "Apache-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

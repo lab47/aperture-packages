@@ -25,6 +25,12 @@ import "homebrew-install" as hi
 pkg(
   name: "vassh",
   version: "0.2",
+  description: "Vagrant Host-Guest SSH Command Wrapper/Proxy/Forwarder",
+  url: "https://github.com/x-team/vassh",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

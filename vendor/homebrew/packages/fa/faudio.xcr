@@ -51,6 +51,12 @@ import "cmake" as i0, "sdl2" as i1
 pkg(
   name: "faudio",
   version: "21.06",
+  description: "Accuracy-focused XAudio reimplementation for open platforms",
+  url: "https://fna-xna.github.io/",
+  metadata: %{
+    "license": "Zlib",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1],
 
   def install(ctx) {

@@ -60,6 +60,12 @@ import "openssl@1.1" as i0
 pkg(
   name: "httperf",
   version: "0.9.0",
+  description: "Tool for measuring webserver performance",
+  url: "https://github.com/httperf/httperf",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

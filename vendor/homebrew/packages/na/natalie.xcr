@@ -39,6 +39,12 @@ import "homebrew-install" as hi
 pkg(
   name: "natalie",
   version: "0.7.0",
+  description: "Storyboard Code Generator (for Swift)",
+  url: "https://github.com/krzyzanowskim/Natalie",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

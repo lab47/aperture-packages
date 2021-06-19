@@ -211,6 +211,12 @@ import "freetype" as i0, "jpeg" as i1, "yara" as i2
 pkg(
   name: "volatility",
   version: "2.6.1",
+  description: "Advanced memory forensics framework",
+  url: "https://github.com/volatilityfoundation/volatility",
+  metadata: %{
+    "license": "GPL-2.0",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {

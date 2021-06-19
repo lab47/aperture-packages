@@ -44,6 +44,12 @@ import "homebrew-install" as hi
 pkg(
   name: "babeld",
   version: "1.10",
+  description: "Loop-avoiding distance-vector routing protocol",
+  url: "https://www.irif.fr/~jch/software/babel/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

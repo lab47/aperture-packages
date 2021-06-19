@@ -33,6 +33,12 @@ import "bash-completion" as i0
 pkg(
   name: "gradle-completion",
   version: "1.4.1",
+  description: "Bash and Zsh completion for Gradle",
+  url: "https://gradle.org/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

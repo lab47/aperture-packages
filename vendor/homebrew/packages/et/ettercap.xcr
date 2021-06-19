@@ -61,6 +61,12 @@ import "cmake" as i0, "geoip" as i1, "gtk+3" as i2, "libnet" as i3, "ncurses" as
 pkg(
   name: "ettercap",
   version: "0.8.3.1",
+  description: "Multipurpose sniffer/interceptor/logger for switched LAN",
+  url: "https://ettercap.github.io/ettercap/",
+  metadata: %{
+    "license": "GPL-2.0-or-later",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {

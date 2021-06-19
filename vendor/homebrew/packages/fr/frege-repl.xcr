@@ -32,6 +32,12 @@ import "openjdk" as i0
 pkg(
   name: "frege-repl",
   version: "1.4-SNAPSHOT",
+  description: "REPL (read-eval-print loop) for Frege",
+  url: "https://github.com/Frege/frege-repl",
+  metadata: %{
+    "license": "BSD-3-Clause",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

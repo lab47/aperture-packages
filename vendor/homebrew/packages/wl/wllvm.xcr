@@ -42,12 +42,18 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "berkeley-db" as i2, "bzip2" as i3, "cmake" as i4, "expat" as i5, "gdbm" as i6, "libedit" as i7, "libffi" as i8, "libtool" as i9, "libxml2" as i10, "libyaml" as i11, "llvm" as i12, "m4" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "pcre" as i17, "perl" as i18, "pkg-config" as i19, "python@3.9" as i20, "readline" as i21, "ruby" as i22, "sphinx-doc" as i23, "sqlite" as i24, "swig" as i25, "unzip" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "sqlite" as i10, "unzip" as i11, "xz" as i12, "zip" as i13, "zlib" as i14
 
 pkg(
   name: "wllvm",
   version: "1.3.1",
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  description: "Toolkit for building whole-program LLVM bitcode files",
+  url: "https://pypi.org/project/wllvm/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wllvm.rb"), formula)

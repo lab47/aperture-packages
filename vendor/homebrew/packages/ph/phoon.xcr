@@ -36,6 +36,12 @@ import "homebrew-install" as hi
 pkg(
   name: "phoon",
   version: "04A",
+  description: "Displays current or specified phase of the moon via ASCII art",
+  url: "https://www.acme.com/software/phoon/",
+  metadata: %{
+    "license": "",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

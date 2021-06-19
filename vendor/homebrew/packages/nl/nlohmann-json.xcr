@@ -64,6 +64,12 @@ import "cmake" as i0
 pkg(
   name: "nlohmann-json",
   version: "3.9.1",
+  description: "JSON for modern C++",
+  url: "https://github.com/nlohmann/json",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi, i0],
 
   def install(ctx) {

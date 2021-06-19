@@ -37,6 +37,12 @@ import "homebrew-install" as hi
 pkg(
   name: "xcbeautify",
   version: "0.9.1",
+  description: "Little beautifier tool for xcodebuild",
+  url: "https://github.com/thii/xcbeautify",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {

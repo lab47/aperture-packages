@@ -48,6 +48,12 @@ import "homebrew-install" as hi
 pkg(
   name: "simh",
   version: "3.11.1",
+  description: "Portable, multi-system simulator",
+  url: "http://simh.trailing-edge.com/",
+  metadata: %{
+    "license": "MIT",
+    "source": "homebrew",
+  },
   dependencies: [hi],
 
   def install(ctx) {
