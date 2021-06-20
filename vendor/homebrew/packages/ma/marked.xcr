@@ -4,12 +4,12 @@ require "language/node"
 class Marked < Formula
   desc "Markdown parser and compiler built for speed"
   homepage "https://marked.js.org/"
-  url "https://registry.npmjs.org/marked/-/marked-2.0.7.tgz"
-  sha256 "d9793800df8d6a2b719af7d5ebbd6782eb89d7d05afe5a589a584d254f6a49af"
+  url "https://registry.npmjs.org/marked/-/marked-2.1.1.tgz"
+  sha256 "8812a33e236a35f7d48829c3e3ccfa42c765beec67c07af42e7febe66ebeb09b"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "69d4ba062f76142c143957e54551feeb1d6485f72da97b938b8cb8823ecdc913"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fff8e250f38e19e5dc4439d4f8dd0aa695148b13a94904b36ce48d64a77a855e"
   end
 
   depends_on "node"
@@ -32,7 +32,7 @@ import "node" as i0
 
 pkg(
   name: "marked",
-  version: "2.0.7",
+  version: "2.1.1",
   description: "Markdown parser and compiler built for speed",
   url: "https://marked.js.org/",
   metadata: %{

@@ -3,9 +3,9 @@ class Minio < Formula
   desc "High Performance, Kubernetes Native Object Storage"
   homepage "https://min.io"
   url "https://github.com/minio/minio.git",
-      tag:      "RELEASE.2021-06-09T18-51-39Z",
-      revision: "098055472540c0d9f8399e99f397957c6cff5ec6"
-  version "20210609185139"
+      tag:      "RELEASE.2021-06-17T00-10-46Z",
+      revision: "180eabaa8eb105bdfdf67f988d4bef3a8339074e"
+  version "20210617001046"
   license "AGPL-3.0-or-later"
   head "https://github.com/minio/minio.git"
 
@@ -18,11 +18,11 @@ class Minio < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "184d1dac50ff927c7d8fa8404b0d5c2e576c3bb4a34298fa492c992331887609"
-    sha256 cellar: :any_skip_relocation, big_sur:       "d9b0547c14883b63ecfaf3d4cc3c56e84dbbd75d160bb287b864218993a29978"
-    sha256 cellar: :any_skip_relocation, catalina:      "d93b05fac5ff74aa38aa6204ced29f5a83baf1341bf371a90d824e7551f03ad1"
-    sha256 cellar: :any_skip_relocation, mojave:        "87f60beeaf3248ddc7dc1c68ee68a411c20711eb114df697534755202612436b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "35b2af4a62d44865d75564f1a907a9e3a8e9e0fc0cbd42e2b4c49a196dcec610"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b62c449e316bd31c850b161b1a5556b438480662f3f3a30b3a45b5a8fad8ba57"
+    sha256 cellar: :any_skip_relocation, big_sur:       "522bb7e86c67f1a08422c0eadb2510987e27fffd6a78eb0d74adbc8ba29d76a5"
+    sha256 cellar: :any_skip_relocation, catalina:      "2fd7ec227d01756bece4bc5cf681a241147f776a12dd97ba05e747120d8e9c89"
+    sha256 cellar: :any_skip_relocation, mojave:        "cc1cd3d5f37dc632bcc94cf6e141448040372d7982ce6ad11baa1599eca20150"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "4cc645fc716891f963c593f762721476ba00bf7441619b089414ff91ce380434"
   end
 
   depends_on "go" => :build
@@ -106,7 +106,7 @@ import "go" as i0
 
 pkg(
   name: "minio",
-  version: "20210609185139",
+  version: "20210617001046",
   description: "High Performance, Kubernetes Native Object Storage",
   url: "https://min.io",
   metadata: %{
