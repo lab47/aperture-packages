@@ -108,7 +108,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libvorbis" as i4, "sdl" as i5, "sdl_mixer" as i6
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libvorbis" as i4, "sdl" as i5, "sdl_mixer" as i6, "mesa" as i7, "mesa-glu" as i8
 
 pkg(
   name: "abuse",
@@ -119,7 +119,7 @@ pkg(
     "license": "Public Domain and GPL-2.0-or-later and WTFPL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "abuse.rb"), formula)

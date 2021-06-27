@@ -89,7 +89,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "gperf" as i2, "bzip2" as i3, "expat" as i4
+import "pkg-config" as i0, "freetype" as i1, "gperf" as i2, "bzip2" as i3, "expat" as i4, "gettext" as i5, "json-c" as i6, "util-linux" as i7
 
 pkg(
   name: "fontconfig",
@@ -100,7 +100,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fontconfig.rb"), formula)

@@ -71,7 +71,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "libx11" as i1, "libxcursor" as i2, "libxi" as i3, "libxinerama" as i4, "libxrandr" as i5, "mesa" as i6, "mesa-glu" as i7
 
 pkg(
   name: "raylib",
@@ -82,7 +82,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "raylib.rb"), formula)

@@ -102,6 +102,8 @@ index 15fdd1d..29d738d 100644
 
 import "homebrew-install" as hi
 
+import "libcap" as i0
+
 pkg(
   name: "fakeroot",
   version: "1.24",
@@ -111,7 +113,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fakeroot.rb"), formula)

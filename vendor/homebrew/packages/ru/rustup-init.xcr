@@ -47,7 +47,7 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "curl" as i1, "xz" as i2
+import "rust" as i0, "curl" as i1, "xz" as i2, "pkg-config" as i3, "openssl@1.1" as i4
 
 pkg(
   name: "rustup-init",
@@ -58,7 +58,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rustup-init.rb"), formula)

@@ -38,6 +38,8 @@ end
 
 import "homebrew-install" as hi
 
+import "pkg-config" as i0, "libsecret" as i1, "readline" as i2
+
 pkg(
   name: "envchain",
   version: "1.0.1",
@@ -47,7 +49,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "envchain.rb"), formula)

@@ -101,6 +101,8 @@ end
 
 import "homebrew-install" as hi
 
+import "alsa-lib" as i0
+
 pkg(
   name: "audiofile",
   version: "0.3.6",
@@ -110,7 +112,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "audiofile.rb"), formula)

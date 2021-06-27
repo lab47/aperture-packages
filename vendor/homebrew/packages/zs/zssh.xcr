@@ -42,7 +42,7 @@ end
 
 import "homebrew-install" as hi
 
-import "lrzsz" as i0
+import "lrzsz" as i0, "pkg-config" as i1, "readline" as i2
 
 pkg(
   name: "zssh",
@@ -53,7 +53,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zssh.rb"), formula)

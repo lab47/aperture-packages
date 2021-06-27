@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0, "gpgme" as i1, "pkg-config" as i2
+import "go" as i0, "gpgme" as i1, "pkg-config" as i2, "gpgme" as i3, "pkg-config" as i4, "device-mapper" as i5
 
 pkg(
   name: "dive",
@@ -57,7 +57,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dive.rb"), formula)

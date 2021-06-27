@@ -54,7 +54,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cairo" as i1, "pango" as i2, "python@3.9" as i3
+import "pkg-config" as i0, "cairo" as i1, "pango" as i2, "python@3.9" as i3, "libpthread-stubs" as i4
 
 pkg(
   name: "genometools",
@@ -65,7 +65,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "genometools.rb"), formula)

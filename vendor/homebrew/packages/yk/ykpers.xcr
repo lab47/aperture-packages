@@ -67,7 +67,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "json-c" as i1, "libyubikey" as i2
+import "pkg-config" as i0, "json-c" as i1, "libyubikey" as i2, "libusb" as i3
 
 pkg(
   name: "ykpers",
@@ -78,7 +78,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ykpers.rb"), formula)

@@ -69,7 +69,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "jpeg" as i2, "libusb" as i3, "libx11" as i4, "libxcursor" as i5, "libxext" as i6, "libxfixes" as i7, "libxi" as i8, "libxinerama" as i9, "libxrandr" as i10, "libxrender" as i11, "libxv" as i12, "openssl@1.1" as i13, "cups" as i14
+import "cmake" as i0, "pkg-config" as i1, "jpeg" as i2, "libusb" as i3, "libx11" as i4, "libxcursor" as i5, "libxext" as i6, "libxfixes" as i7, "libxi" as i8, "libxinerama" as i9, "libxrandr" as i10, "libxrender" as i11, "libxv" as i12, "openssl@1.1" as i13, "cups" as i14, "alsa-lib" as i15, "ffmpeg" as i16, "glib" as i17, "systemd" as i18, "wayland" as i19
 
 pkg(
   name: "freerdp",
@@ -80,7 +80,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freerdp.rb"), formula)

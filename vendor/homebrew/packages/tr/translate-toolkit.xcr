@@ -41,7 +41,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libxml2" as i4, "libxslt" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpatch" as i3, "libffi" as i4, "libxml2" as i5, "libxslt" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
 
 pkg(
   name: "translate-toolkit",
@@ -52,7 +52,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "translate-toolkit.rb"), formula)

@@ -66,7 +66,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "mpdecimal" as i4, "ncurses" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "python@3.9" as i8, "readline" as i9, "six" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpatch" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "six" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
 
 pkg(
   name: "principalmapper",
@@ -77,7 +77,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "principalmapper.rb"), formula)

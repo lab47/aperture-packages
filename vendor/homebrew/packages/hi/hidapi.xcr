@@ -58,7 +58,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf@2.69" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3
+import "autoconf@2.69" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libusb" as i4, "systemd" as i5
 
 pkg(
   name: "hidapi",
@@ -69,7 +69,7 @@ pkg(
     "license": "Cannot Represent",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hidapi.rb"), formula)

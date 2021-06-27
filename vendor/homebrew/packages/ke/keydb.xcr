@@ -33,6 +33,8 @@ end
 
 import "homebrew-install" as hi
 
+import "curl" as i0, "util-linux" as i1
+
 pkg(
   name: "keydb",
   version: "6.0.16",
@@ -42,7 +44,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "keydb.rb"), formula)

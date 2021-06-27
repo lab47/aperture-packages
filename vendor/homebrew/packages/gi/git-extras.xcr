@@ -44,6 +44,8 @@ end
 
 import "homebrew-install" as hi
 
+import "util-linux" as i0
+
 pkg(
   name: "git-extras",
   version: "6.2.0",
@@ -53,7 +55,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-extras.rb"), formula)

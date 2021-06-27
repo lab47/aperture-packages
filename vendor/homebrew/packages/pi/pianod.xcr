@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "json-c" as i1, "libao" as i2, "libgcrypt" as i3
+import "pkg-config" as i0, "json-c" as i1, "libao" as i2, "libgcrypt" as i3, "ffmpeg" as i4, "gnutls" as i5, "libbsd" as i6
 
 pkg(
   name: "pianod",
@@ -57,7 +57,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pianod.rb"), formula)

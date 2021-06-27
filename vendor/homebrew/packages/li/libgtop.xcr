@@ -66,7 +66,7 @@ end
 
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "intltool" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4
+import "gobject-introspection" as i0, "intltool" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4, "libxau" as i5
 
 pkg(
   name: "libgtop",
@@ -77,7 +77,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libgtop.rb"), formula)

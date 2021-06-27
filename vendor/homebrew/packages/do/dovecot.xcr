@@ -117,7 +117,7 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "bzip2" as i1, "sqlite" as i2
+import "openssl@1.1" as i0, "bzip2" as i1, "sqlite" as i2, "linux-pam" as i3
 
 pkg(
   name: "dovecot",
@@ -128,7 +128,7 @@ pkg(
     "license": "BSD-3-Clause and LGPL-2.1-or-later and MIT and Unicode-DFS-2016 and Public Domain",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dovecot.rb"), formula)

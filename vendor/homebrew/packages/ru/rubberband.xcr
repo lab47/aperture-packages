@@ -51,7 +51,7 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "libsamplerate" as i3, "libsndfile" as i4
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "libsamplerate" as i3, "libsndfile" as i4, "fftw" as i5, "ladspa-sdk" as i6, "openjdk" as i7, "vamp-plugin-sdk" as i8
 
 pkg(
   name: "rubberband",
@@ -62,7 +62,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rubberband.rb"), formula)

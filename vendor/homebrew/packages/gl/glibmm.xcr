@@ -78,7 +78,7 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "libsigc++" as i4
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glib" as i3, "libsigc++" as i4, "gcc" as i5
 
 pkg(
   name: "glibmm",
@@ -89,7 +89,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glibmm.rb"), formula)

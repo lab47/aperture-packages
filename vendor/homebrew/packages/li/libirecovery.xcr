@@ -46,6 +46,8 @@ end
 
 import "homebrew-install" as hi
 
+import "pkg-config" as i0, "libusb" as i1, "readline" as i2
+
 pkg(
   name: "libirecovery",
   version: "1.0.0",
@@ -55,7 +57,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libirecovery.rb"), formula)

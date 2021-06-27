@@ -45,7 +45,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "ghostscript" as i1, "imagemagick" as i2, "plotutils" as i3
+import "pkg-config" as i0, "ghostscript" as i1, "imagemagick" as i2, "plotutils" as i3, "gcc" as i4
 
 pkg(
   name: "pstoedit",
@@ -56,7 +56,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pstoedit.rb"), formula)

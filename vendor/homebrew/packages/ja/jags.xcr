@@ -58,7 +58,7 @@ end
 
 import "homebrew-install" as hi
 
-import "gcc" as i0
+import "gcc" as i0, "openblas" as i1
 
 pkg(
   name: "jags",
@@ -69,7 +69,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jags.rb"), formula)

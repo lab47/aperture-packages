@@ -195,7 +195,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0
+import "autoconf" as i0, "pkg-config" as i1, "alsa-lib" as i2, "cups" as i3, "fontconfig" as i4, "gcc" as i5, "libx11" as i6, "libxext" as i7, "libxrandr" as i8, "libxrender" as i9, "libxt" as i10, "libxtst" as i11, "unzip" as i12, "zip" as i13
 
 pkg(
   name: "openjdk",
@@ -206,7 +206,7 @@ pkg(
     "license": "GPL-2.0-only with Classpath-exception-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openjdk.rb"), formula)

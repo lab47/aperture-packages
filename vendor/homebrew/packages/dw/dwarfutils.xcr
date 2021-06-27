@@ -75,7 +75,7 @@ end
 
 import "homebrew-install" as hi
 
-import "zlib" as i0, "libelf" as i1
+import "zlib" as i0, "libelf" as i1, "libelf" as i2
 
 pkg(
   name: "dwarfutils",
@@ -86,7 +86,7 @@ pkg(
     "license": "BSD-2-Clause and LGPL-2.1-or-later and GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dwarfutils.rb"), formula)

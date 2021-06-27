@@ -109,7 +109,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "ldns" as i1, "libfido2" as i2, "openssl@1.1" as i3, "krb5" as i4, "libedit" as i5, "zlib" as i6
+import "pkg-config" as i0, "ldns" as i1, "libfido2" as i2, "openssl@1.1" as i3, "krb5" as i4, "libedit" as i5, "zlib" as i6, "linux-pam" as i7
 
 pkg(
   name: "openssh",
@@ -120,7 +120,7 @@ pkg(
     "license": "SSH-OpenSSH",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openssh.rb"), formula)

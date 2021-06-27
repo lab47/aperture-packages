@@ -58,7 +58,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pandoc" as i3, "pkg-config" as i4, "libpq" as i5, "libpqxx" as i6, "libsodium" as i7, "bison" as i8, "flex" as i9
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pandoc" as i3, "pkg-config" as i4, "libpq" as i5, "libpqxx" as i6, "libsodium" as i7, "bison" as i8, "flex" as i9, "gcc" as i10
 
 pkg(
   name: "stellar-core",
@@ -69,7 +69,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stellar-core.rb"), formula)

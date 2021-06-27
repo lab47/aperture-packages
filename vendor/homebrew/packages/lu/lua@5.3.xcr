@@ -184,7 +184,7 @@ index 2e7a412..d0c4898 100644
 
 import "homebrew-install" as hi
 
-import "unzip" as i0
+import "unzip" as i0, "readline" as i1
 
 pkg(
   name: "lua@5.3",
@@ -195,7 +195,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lua@5.3.rb"), formula)

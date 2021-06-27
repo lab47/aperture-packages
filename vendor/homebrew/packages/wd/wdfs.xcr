@@ -40,7 +40,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "neon" as i2
+import "pkg-config" as i0, "glib" as i1, "neon" as i2, "libfuse" as i3
 
 pkg(
   name: "wdfs",
@@ -51,7 +51,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wdfs.rb"), formula)

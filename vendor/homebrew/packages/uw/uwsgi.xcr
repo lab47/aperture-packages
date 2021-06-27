@@ -154,7 +154,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "openssl@1.1" as i1, "pcre" as i2, "python@3.9" as i3, "yajl" as i4, "curl" as i5, "libxml2" as i6, "openldap" as i7, "perl" as i8
+import "pkg-config" as i0, "openssl@1.1" as i1, "pcre" as i2, "python@3.9" as i3, "yajl" as i4, "curl" as i5, "libxml2" as i6, "openldap" as i7, "perl" as i8, "linux-pam" as i9
 
 pkg(
   name: "uwsgi",
@@ -165,7 +165,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "uwsgi.rb"), formula)

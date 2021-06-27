@@ -63,7 +63,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pandoc" as i0, "rust" as i1, "zlib" as i2
+import "pandoc" as i0, "rust" as i1, "zlib" as i2, "libgit2" as i3
 
 pkg(
   name: "exa",
@@ -74,7 +74,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "exa.rb"), formula)

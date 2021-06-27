@@ -269,7 +269,7 @@ end
 
 import "homebrew-install" as hi
 
-import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zlib" as i4
+import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zlib" as i4, "binutils" as i5
 
 pkg(
   name: "gcc@8",
@@ -280,7 +280,7 @@ pkg(
     "license": "LGPL-2.1-or-later and (GPL-3.0-or-later with GCC-exception-3.1)",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gcc@8.rb"), formula)

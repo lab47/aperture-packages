@@ -53,7 +53,7 @@ end
 
 import "homebrew-install" as hi
 
-import "xmlto" as i0, "python@3.9" as i1
+import "xmlto" as i0, "python@3.9" as i1, "libarchive" as i2
 
 pkg(
   name: "deheader",
@@ -64,7 +64,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "deheader.rb"), formula)

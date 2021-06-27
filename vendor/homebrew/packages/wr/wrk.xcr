@@ -41,7 +41,7 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+import "openssl@1.1" as i0, "makedepend" as i1, "pkg-config" as i2
 
 pkg(
   name: "wrk",
@@ -52,7 +52,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wrk.rb"), formula)

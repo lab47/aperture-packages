@@ -144,7 +144,7 @@ end
 
 import "homebrew-install" as hi
 
-import "nasm" as i0, "pkg-config" as i1, "aom" as i2, "dav1d" as i3, "fontconfig" as i4, "freetype" as i5, "frei0r" as i6, "gnutls" as i7, "lame" as i8, "libass" as i9, "libbluray" as i10, "libsoxr" as i11, "libvidstab" as i12, "libvorbis" as i13, "libvpx" as i14, "opencore-amr" as i15, "openjpeg" as i16, "opus" as i17, "rav1e" as i18, "rubberband" as i19, "sdl2" as i20, "snappy" as i21, "speex" as i22, "srt" as i23, "tesseract" as i24, "theora" as i25, "webp" as i26, "x264" as i27, "x265" as i28, "xvid" as i29, "xz" as i30, "zeromq" as i31, "zimg" as i32, "bzip2" as i33, "libxml2" as i34, "zlib" as i35
+import "nasm" as i0, "pkg-config" as i1, "aom" as i2, "dav1d" as i3, "fontconfig" as i4, "freetype" as i5, "frei0r" as i6, "gnutls" as i7, "lame" as i8, "libass" as i9, "libbluray" as i10, "libsoxr" as i11, "libvidstab" as i12, "libvorbis" as i13, "libvpx" as i14, "opencore-amr" as i15, "openjpeg" as i16, "opus" as i17, "rav1e" as i18, "rubberband" as i19, "sdl2" as i20, "snappy" as i21, "speex" as i22, "srt" as i23, "tesseract" as i24, "theora" as i25, "webp" as i26, "x264" as i27, "x265" as i28, "xvid" as i29, "xz" as i30, "zeromq" as i31, "zimg" as i32, "bzip2" as i33, "libxml2" as i34, "zlib" as i35, "libxv" as i36
 
 pkg(
   name: "ffmpeg",
@@ -155,7 +155,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ffmpeg.rb"), formula)

@@ -51,7 +51,7 @@ end
 
 import "homebrew-install" as hi
 
-import "mysql-client" as i0, "openssl@1.1" as i1, "postgresql" as i2, "sqlite" as i3
+import "mysql-client" as i0, "openssl@1.1" as i1, "postgresql" as i2, "sqlite" as i3, "gcc" as i4
 
 pkg(
   name: "libzdb",
@@ -62,7 +62,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libzdb.rb"), formula)

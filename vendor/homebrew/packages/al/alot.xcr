@@ -145,7 +145,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpgme" as i3, "libffi" as i4, "libmagic" as i5, "mpdecimal" as i6, "ncurses" as i7, "notmuch" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sphinx-doc" as i13, "sqlite" as i14, "swig" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
+import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpatch" as i3, "gpgme" as i4, "libffi" as i5, "libmagic" as i6, "mpdecimal" as i7, "ncurses" as i8, "notmuch" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sphinx-doc" as i14, "sqlite" as i15, "swig" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
 
 pkg(
   name: "alot",
@@ -156,7 +156,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "alot.rb"), formula)

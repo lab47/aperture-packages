@@ -90,7 +90,7 @@ end
 
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "libpng" as i4, "libsigc++" as i5
+import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "libpng" as i4, "libsigc++" as i5, "gcc" as i6
 
 pkg(
   name: "cairomm",
@@ -101,7 +101,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cairomm.rb"), formula)

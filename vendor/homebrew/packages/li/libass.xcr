@@ -79,7 +79,7 @@ end
 
 import "homebrew-install" as hi
 
-import "nasm" as i0, "pkg-config" as i1, "freetype" as i2, "fribidi" as i3, "harfbuzz" as i4
+import "nasm" as i0, "pkg-config" as i1, "freetype" as i2, "fribidi" as i3, "harfbuzz" as i4, "fontconfig" as i5
 
 pkg(
   name: "libass",
@@ -90,7 +90,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libass.rb"), formula)

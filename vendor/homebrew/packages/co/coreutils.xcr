@@ -116,7 +116,7 @@ end
 
 import "homebrew-install" as hi
 
-import "gperf" as i0
+import "gperf" as i0, "attr" as i1
 
 pkg(
   name: "coreutils",
@@ -127,7 +127,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coreutils.rb"), formula)

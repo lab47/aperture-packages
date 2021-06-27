@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libtorrent-rasterbar" as i3
+import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libtorrent-rasterbar" as i3, "libfuse" as i4
 
 pkg(
   name: "btfs",
@@ -57,7 +57,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "btfs.rb"), formula)

@@ -39,7 +39,7 @@ end
 
 import "homebrew-install" as hi
 
-import "e2fsprogs" as i0
+import "e2fsprogs" as i0, "libfuse" as i1
 
 pkg(
   name: "ext2fuse",
@@ -50,7 +50,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ext2fuse.rb"), formula)

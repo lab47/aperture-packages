@@ -45,7 +45,7 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2
+import "rust" as i0, "openssl@1.1" as i1, "zlib" as i2, "pkg-config" as i3, "libx11" as i4, "libxcb" as i5
 
 pkg(
   name: "nushell",
@@ -56,7 +56,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nushell.rb"), formula)

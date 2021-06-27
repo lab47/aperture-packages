@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "ncurses" as i0, "bison" as i1
+import "ncurses" as i0, "bison" as i1, "pkg-config" as i2
 
 pkg(
   name: "sc-im",
@@ -57,7 +57,7 @@ pkg(
     "license": "BSD-4-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sc-im.rb"), formula)

@@ -111,7 +111,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gnutls" as i1, "jansson" as i2, "libxml2" as i3, "ncurses" as i4
+import "pkg-config" as i0, "gnutls" as i1, "jansson" as i2, "libxml2" as i3, "ncurses" as i4, "jpeg" as i5
 
 pkg(
   name: "emacs",
@@ -122,7 +122,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "emacs.rb"), formula)

@@ -99,7 +99,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libpng" as i6, "libtiff" as i7, "mpdecimal" as i8, "ncurses" as i9, "numpy" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "tcl-tk" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "gpatch" as i4, "gtk+3" as i5, "jpeg" as i6, "libffi" as i7, "libpng" as i8, "libtiff" as i9, "mpdecimal" as i10, "ncurses" as i11, "numpy" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sqlite" as i17, "tcl-tk" as i18, "unzip" as i19, "xz" as i20, "zip" as i21, "zlib" as i22
 
 pkg(
   name: "wxpython",
@@ -110,7 +110,7 @@ pkg(
     "license": "LGPL-2.0-or-later with WxWindows-exception-3.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wxpython.rb"), formula)

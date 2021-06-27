@@ -47,6 +47,8 @@ end
 
 import "homebrew-install" as hi
 
+import "postgresql" as i0
+
 pkg(
   name: "algol68g",
   version: "2.8.5",
@@ -56,7 +58,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "algol68g.rb"), formula)

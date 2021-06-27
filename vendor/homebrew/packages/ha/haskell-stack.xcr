@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1, "zlib" as i2
+import "cabal-install" as i0, "ghc" as i1, "zlib" as i2, "gmp" as i3
 
 pkg(
   name: "haskell-stack",
@@ -57,7 +57,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "haskell-stack.rb"), formula)

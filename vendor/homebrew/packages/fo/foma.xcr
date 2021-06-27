@@ -56,7 +56,7 @@ end
 
 import "homebrew-install" as hi
 
-import "zlib" as i0
+import "zlib" as i0, "readline" as i1
 
 pkg(
   name: "foma",
@@ -67,7 +67,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "foma.rb"), formula)

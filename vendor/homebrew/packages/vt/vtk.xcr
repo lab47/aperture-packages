@@ -144,7 +144,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "eigen" as i3, "fontconfig" as i4, "gl2ps" as i5, "glew" as i6, "hdf5" as i7, "jpeg" as i8, "jsoncpp" as i9, "libogg" as i10, "libpng" as i11, "libtiff" as i12, "lz4" as i13, "netcdf" as i14, "pugixml" as i15, "pyqt@5" as i16, "python@3.9" as i17, "qt@5" as i18, "sqlite" as i19, "theora" as i20, "utf8cpp" as i21, "xz" as i22, "expat" as i23, "libxml2" as i24, "tcl-tk" as i25, "zlib" as i26
+import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "eigen" as i3, "fontconfig" as i4, "gl2ps" as i5, "glew" as i6, "hdf5" as i7, "jpeg" as i8, "jsoncpp" as i9, "libogg" as i10, "libpng" as i11, "libtiff" as i12, "lz4" as i13, "netcdf" as i14, "pugixml" as i15, "pyqt@5" as i16, "python@3.9" as i17, "qt@5" as i18, "sqlite" as i19, "theora" as i20, "utf8cpp" as i21, "xz" as i22, "expat" as i23, "libxml2" as i24, "tcl-tk" as i25, "zlib" as i26, "szip" as i27, "mesa-glu" as i28
 
 pkg(
   name: "vtk",
@@ -155,7 +155,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vtk.rb"), formula)

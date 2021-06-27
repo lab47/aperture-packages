@@ -46,7 +46,7 @@ end
 
 import "homebrew-install" as hi
 
-import "node" as i0
+import "node" as i0, "python@3.9" as i1
 
 pkg(
   name: "serverless",
@@ -57,7 +57,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "serverless.rb"), formula)

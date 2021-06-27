@@ -54,7 +54,7 @@ end
 
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "ncurses" as i1, "openldap" as i2
+import "openssl@1.1" as i0, "ncurses" as i1, "openldap" as i2, "linux-pam" as i3
 
 pkg(
   name: "alpine",
@@ -65,7 +65,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "alpine.rb"), formula)

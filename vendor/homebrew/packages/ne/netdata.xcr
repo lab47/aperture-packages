@@ -133,7 +133,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "json-c" as i3, "libuv" as i4, "lz4" as i5, "openssl@1.1" as i6, "zlib" as i7
+import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "json-c" as i3, "libuv" as i4, "lz4" as i5, "openssl@1.1" as i6, "zlib" as i7, "util-linux" as i8
 
 pkg(
   name: "netdata",
@@ -144,7 +144,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "netdata.rb"), formula)

@@ -196,7 +196,7 @@ __END__
 
 import "homebrew-install" as hi
 
-import "gcc" as i0, "hwloc" as i1
+import "gcc" as i0, "hwloc" as i1, "libfabric" as i2
 
 pkg(
   name: "mpich",
@@ -207,7 +207,7 @@ pkg(
     "license": "mpich2",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mpich.rb"), formula)

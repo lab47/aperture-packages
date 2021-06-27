@@ -57,7 +57,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libx11" as i1, "libxi" as i2, "libxrandr" as i3, "libxxf86vm" as i4, "mesa" as i5
+import "cmake" as i0, "libx11" as i1, "libxi" as i2, "libxrandr" as i3, "libxxf86vm" as i4, "mesa" as i5, "mesa-glu" as i6, "xinput" as i7
 
 pkg(
   name: "freeglut",
@@ -68,7 +68,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freeglut.rb"), formula)

@@ -44,7 +44,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0
+import "cmake" as i0, "freetype" as i1
 
 pkg(
   name: "graphite2",
@@ -55,7 +55,7 @@ pkg(
     "license": "GPL-2.0-or-later or LGPL-2.1-or-later or MPL-1.1+",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "graphite2.rb"), formula)

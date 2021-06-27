@@ -50,7 +50,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "openssl@1.1" as i3
+import "cmake" as i0, "pkg-config" as i1, "gettext" as i2, "openssl@1.1" as i3, "libfuse" as i4
 
 pkg(
   name: "encfs",
@@ -61,7 +61,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "encfs.rb"), formula)

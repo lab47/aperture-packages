@@ -166,7 +166,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "openssl@1.1" as i1, "python@3.8" as i2, "libffi" as i3
+import "pkg-config" as i0, "openssl@1.1" as i1, "python@3.8" as i2, "libffi" as i3, "libfuse" as i4
 
 pkg(
   name: "s3ql",
@@ -177,7 +177,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "s3ql.rb"), formula)

@@ -52,7 +52,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gettext" as i1, "libsndfile" as i2, "sdl2" as i3, "zlib" as i4
+import "pkg-config" as i0, "gettext" as i1, "libsndfile" as i2, "sdl2" as i3, "zlib" as i4, "mesa" as i5, "mesa-glu" as i6
 
 pkg(
   name: "mednafen",
@@ -63,7 +63,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mednafen.rb"), formula)

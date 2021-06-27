@@ -76,7 +76,7 @@ end
 
 import "homebrew-install" as hi
 
-import "sphinx-doc" as i0, "ncurses" as i1
+import "sphinx-doc" as i0, "ncurses" as i1, "openssl@1.1" as i2
 
 pkg(
   name: "cmake",
@@ -87,7 +87,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cmake.rb"), formula)

@@ -42,7 +42,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+import "pkg-config" as i0, "libfuse" as i1
 
 pkg(
   name: "tup",
@@ -53,7 +53,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tup.rb"), formula)

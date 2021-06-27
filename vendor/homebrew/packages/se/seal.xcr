@@ -108,7 +108,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3
+import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3, "gcc" as i4
 
 pkg(
   name: "seal",
@@ -119,7 +119,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "seal.rb"), formula)

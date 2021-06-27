@@ -42,7 +42,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bash" as i0, "wireguard-go" as i1
+import "bash" as i0, "wireguard-go" as i1, "libmnl" as i2
 
 pkg(
   name: "wireguard-tools",
@@ -53,7 +53,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wireguard-tools.rb"), formula)

@@ -401,7 +401,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "swig" as i1, "python@3.9" as i2, "libedit" as i3, "libffi" as i4, "libxml2" as i5, "ncurses" as i6, "zlib" as i7
+import "cmake" as i0, "swig" as i1, "python@3.9" as i2, "libedit" as i3, "libffi" as i4, "libxml2" as i5, "ncurses" as i6, "zlib" as i7, "pkg-config" as i8, "binutils" as i9, "libelf" as i10
 
 pkg(
   name: "llvm",
@@ -412,7 +412,7 @@ pkg(
     "license": "Apache-2.0 with LLVM-exception",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "llvm.rb"), formula)

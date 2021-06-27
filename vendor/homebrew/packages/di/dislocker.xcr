@@ -33,7 +33,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "mbedtls" as i1
+import "cmake" as i0, "mbedtls" as i1, "libfuse" as i2
 
 pkg(
   name: "dislocker",
@@ -44,7 +44,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dislocker.rb"), formula)

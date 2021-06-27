@@ -54,6 +54,8 @@ end
 
 import "homebrew-install" as hi
 
+import "systemd" as i0
+
 pkg(
   name: "libusb",
   version: "1.0.24",
@@ -63,7 +65,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libusb.rb"), formula)

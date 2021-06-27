@@ -58,7 +58,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "berkeley-db@4" as i4, "boost" as i5, "libevent" as i6, "miniupnpc" as i7, "zeromq" as i8
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "berkeley-db@4" as i4, "boost" as i5, "libevent" as i6, "miniupnpc" as i7, "zeromq" as i8, "util-linux" as i9
 
 pkg(
   name: "bitcoin",
@@ -69,7 +69,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bitcoin.rb"), formula)

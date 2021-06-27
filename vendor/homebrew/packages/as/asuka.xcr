@@ -56,7 +56,7 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0, "ncurses" as i1
+import "rust" as i0, "ncurses" as i1, "pkg-config" as i2, "openssl@1.1" as i3
 
 pkg(
   name: "asuka",
@@ -67,7 +67,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "asuka.rb"), formula)

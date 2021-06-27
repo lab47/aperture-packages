@@ -79,7 +79,7 @@ end
 
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "yarn" as i1, "node@14" as i2
+import "python@3.9" as i0, "yarn" as i1, "node@14" as i2, "pkg-config" as i3, "libsecret" as i4, "libx11" as i5, "libxkbfile" as i6
 
 pkg(
   name: "code-server",
@@ -90,7 +90,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "code-server.rb"), formula)

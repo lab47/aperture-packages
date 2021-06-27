@@ -87,7 +87,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "cairo" as i1, "cfitsio" as i2, "expat" as i3, "gdbm" as i4, "gsl" as i5, "jpeg" as i6, "libffi" as i7, "libpng" as i8, "mpdecimal" as i9, "ncurses" as i10, "netpbm" as i11, "numpy" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "sqlite" as i17, "swig" as i18, "unzip" as i19, "wcslib" as i20, "xz" as i21, "zip" as i22, "zlib" as i23
+import "bzip2" as i0, "cairo" as i1, "cfitsio" as i2, "expat" as i3, "gdbm" as i4, "gpatch" as i5, "gsl" as i6, "jpeg" as i7, "libffi" as i8, "libpng" as i9, "mpdecimal" as i10, "ncurses" as i11, "netpbm" as i12, "numpy" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "python@3.9" as i16, "readline" as i17, "sqlite" as i18, "swig" as i19, "unzip" as i20, "wcslib" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
 
 pkg(
   name: "astrometry-net",
@@ -98,7 +98,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "astrometry-net.rb"), formula)

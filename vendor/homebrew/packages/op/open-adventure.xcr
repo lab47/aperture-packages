@@ -47,7 +47,7 @@ end
 
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libedit" as i4, "libffi" as i5, "libxml2" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
+import "asciidoc" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gpatch" as i4, "libedit" as i5, "libffi" as i6, "libxml2" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
 
 pkg(
   name: "open-adventure",
@@ -58,7 +58,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-adventure.rb"), formula)

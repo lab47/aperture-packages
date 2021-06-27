@@ -43,7 +43,7 @@ end
 
 import "homebrew-install" as hi
 
-import "rust" as i0
+import "rust" as i0, "pkg-config" as i1, "libxcb" as i2, "openssl@1.1" as i3
 
 pkg(
   name: "spotify-tui",
@@ -54,7 +54,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "spotify-tui.rb"), formula)

@@ -90,7 +90,7 @@ end
 
 import "homebrew-install" as hi
 
-import "krb5" as i0, "openssl@1.1" as i1, "zlib" as i2
+import "krb5" as i0, "openssl@1.1" as i1, "zlib" as i2, "readline" as i3
 
 pkg(
   name: "libpq",
@@ -101,7 +101,7 @@ pkg(
     "license": "PostgreSQL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpq.rb"), formula)

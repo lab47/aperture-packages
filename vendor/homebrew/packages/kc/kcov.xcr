@@ -57,7 +57,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "python@3.9" as i2, "curl" as i3, "zlib" as i4
+import "cmake" as i0, "pkg-config" as i1, "python@3.9" as i2, "curl" as i3, "zlib" as i4, "elfutils" as i5
 
 pkg(
   name: "kcov",
@@ -68,7 +68,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kcov.rb"), formula)

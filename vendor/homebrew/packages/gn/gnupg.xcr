@@ -110,7 +110,7 @@ index 768d479aa..86d312f82 100644
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "libassuan" as i3, "libgcrypt" as i4, "libgpg-error" as i5, "libksba" as i6, "libusb" as i7, "npth" as i8, "pinentry" as i9, "sqlite" as i10
+import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "libassuan" as i3, "libgcrypt" as i4, "libgpg-error" as i5, "libksba" as i6, "libusb" as i7, "npth" as i8, "pinentry" as i9, "sqlite" as i10, "libidn" as i11
 
 pkg(
   name: "gnupg",
@@ -121,7 +121,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnupg.rb"), formula)

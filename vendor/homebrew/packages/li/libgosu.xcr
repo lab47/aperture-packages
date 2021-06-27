@@ -77,7 +77,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "sdl2" as i2
+import "cmake" as i0, "pkg-config" as i1, "sdl2" as i2, "fontconfig" as i3, "gcc" as i4, "mesa" as i5, "mesa-glu" as i6, "openal-soft" as i7
 
 pkg(
   name: "libgosu",
@@ -88,7 +88,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libgosu.rb"), formula)

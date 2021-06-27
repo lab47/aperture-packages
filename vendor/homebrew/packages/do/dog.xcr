@@ -45,7 +45,7 @@ end
 
 import "homebrew-install" as hi
 
-import "just" as i0, "pandoc" as i1, "rust" as i2
+import "just" as i0, "pandoc" as i1, "rust" as i2, "pkg-config" as i3, "openssl@1.1" as i4
 
 pkg(
   name: "dog",
@@ -56,7 +56,7 @@ pkg(
     "license": "EUPL-1.2",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dog.rb"), formula)

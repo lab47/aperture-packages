@@ -88,6 +88,8 @@ end
 
 import "homebrew-install" as hi
 
+import "libx11" as i0, "libxxf86vm" as i1, "mesa" as i2
+
 pkg(
   name: "irrlicht",
   version: "1.8.4",
@@ -97,7 +99,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "irrlicht.rb"), formula)

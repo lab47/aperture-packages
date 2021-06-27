@@ -49,7 +49,7 @@ end
 
 import "homebrew-install" as hi
 
-import "fribidi" as i0, "gawk" as i1, "rlwrap" as i2
+import "fribidi" as i0, "gawk" as i1, "rlwrap" as i2, "util-linux" as i3
 
 pkg(
   name: "translate-shell",
@@ -60,7 +60,7 @@ pkg(
     "license": "Unlicense",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "translate-shell.rb"), formula)

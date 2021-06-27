@@ -84,7 +84,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0
+import "autoconf" as i0, "util-linux" as i1
 
 pkg(
   name: "apr",
@@ -95,7 +95,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apr.rb"), formula)

@@ -50,7 +50,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "openssl@1.1" as i1, "readline" as i2, "libxml2" as i3, "zlib" as i4
+import "cmake" as i0, "openssl@1.1" as i1, "readline" as i2, "libxml2" as i3, "zlib" as i4, "util-linux" as i5
 
 pkg(
   name: "xrootd",
@@ -61,7 +61,7 @@ pkg(
     "license": "LGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xrootd.rb"), formula)

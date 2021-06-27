@@ -151,7 +151,7 @@ end
 
 import "homebrew-install" as hi
 
-import "boost" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "expat" as i4, "faad2" as i5, "ffmpeg" as i6, "flac" as i7, "fluid-synth" as i8, "glib" as i9, "icu4c" as i10, "lame" as i11, "libao" as i12, "libgcrypt" as i13, "libid3tag" as i14, "libmpdclient" as i15, "libnfs" as i16, "libsamplerate" as i17, "libshout" as i18, "libupnp" as i19, "libvorbis" as i20, "opus" as i21, "sqlite" as i22, "curl" as i23
+import "boost" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "expat" as i4, "faad2" as i5, "ffmpeg" as i6, "flac" as i7, "fluid-synth" as i8, "glib" as i9, "icu4c" as i10, "lame" as i11, "libao" as i12, "libgcrypt" as i13, "libid3tag" as i14, "libmpdclient" as i15, "libnfs" as i16, "libsamplerate" as i17, "libshout" as i18, "libupnp" as i19, "libvorbis" as i20, "opus" as i21, "sqlite" as i22, "curl" as i23, "gcc" as i24
 
 pkg(
   name: "mpd",
@@ -162,7 +162,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mpd.rb"), formula)

@@ -42,6 +42,8 @@ end
 
 import "homebrew-install" as hi
 
+import "gawk" as i0
+
 pkg(
   name: "check",
   version: "0.15.2",
@@ -51,7 +53,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "check.rb"), formula)

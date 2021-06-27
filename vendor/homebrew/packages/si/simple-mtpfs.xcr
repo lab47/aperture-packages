@@ -44,7 +44,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config" as i3, "libmtp" as i4
+import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "pkg-config" as i3, "libmtp" as i4, "libfuse" as i5
 
 pkg(
   name: "simple-mtpfs",
@@ -55,7 +55,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "simple-mtpfs.rb"), formula)

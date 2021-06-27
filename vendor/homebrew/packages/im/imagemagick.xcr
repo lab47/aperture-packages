@@ -102,7 +102,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "ghostscript" as i2, "jpeg" as i3, "libheif" as i4, "liblqr" as i5, "libomp" as i6, "libpng" as i7, "libtiff" as i8, "libtool" as i9, "little-cms2" as i10, "openexr" as i11, "openjpeg" as i12, "webp" as i13, "xz" as i14, "bzip2" as i15, "libxml2" as i16, "zlib" as i17
+import "pkg-config" as i0, "freetype" as i1, "ghostscript" as i2, "jpeg" as i3, "libheif" as i4, "liblqr" as i5, "libomp" as i6, "libpng" as i7, "libtiff" as i8, "libtool" as i9, "little-cms2" as i10, "openexr" as i11, "openjpeg" as i12, "webp" as i13, "xz" as i14, "bzip2" as i15, "libxml2" as i16, "zlib" as i17, "libx11" as i18
 
 pkg(
   name: "imagemagick",
@@ -113,7 +113,7 @@ pkg(
     "license": "ImageMagick",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "imagemagick.rb"), formula)

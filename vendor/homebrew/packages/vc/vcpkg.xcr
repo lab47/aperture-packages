@@ -61,7 +61,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1
+import "cmake" as i0, "ninja" as i1, "gcc" as i2
 
 pkg(
   name: "vcpkg",
@@ -72,7 +72,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: [hi, i0, i1, i2],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vcpkg.rb"), formula)

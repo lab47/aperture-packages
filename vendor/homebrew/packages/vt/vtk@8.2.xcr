@@ -141,7 +141,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "fontconfig" as i2, "hdf5" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "netcdf" as i7, "pyqt@5" as i8, "python@3.9" as i9, "qt@5" as i10, "expat" as i11, "libxml2" as i12, "tcl-tk" as i13, "zlib" as i14
+import "cmake" as i0, "boost" as i1, "fontconfig" as i2, "hdf5" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "netcdf" as i7, "pyqt@5" as i8, "python@3.9" as i9, "qt@5" as i10, "expat" as i11, "libxml2" as i12, "tcl-tk" as i13, "zlib" as i14, "icu4c" as i15, "libxt" as i16, "szip" as i17, "mesa-glu" as i18
 
 pkg(
   name: "vtk@8.2",
@@ -152,7 +152,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vtk@8.2.rb"), formula)

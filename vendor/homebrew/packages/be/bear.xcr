@@ -81,7 +81,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "fmt" as i2, "grpc" as i3, "nlohmann-json" as i4, "python@3.9" as i5, "spdlog" as i6, "sqlite" as i7
+import "cmake" as i0, "pkg-config" as i1, "fmt" as i2, "grpc" as i3, "nlohmann-json" as i4, "python@3.9" as i5, "spdlog" as i6, "sqlite" as i7, "gcc" as i8
 
 pkg(
   name: "bear",
@@ -92,7 +92,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bear.rb"), formula)

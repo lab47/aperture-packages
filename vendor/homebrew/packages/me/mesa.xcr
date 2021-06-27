@@ -141,7 +141,7 @@ end
 
 import "homebrew-install" as hi
 
-import "bison" as i0, "bzip2" as i1, "expat" as i2, "flex" as i3, "gdbm" as i4, "gettext" as i5, "libffi" as i6, "libx11" as i7, "libxcb" as i8, "libxdamage" as i9, "libxext" as i10, "llvm" as i11, "meson" as i12, "mpdecimal" as i13, "ncurses" as i14, "ninja" as i15, "openssl@1.1" as i16, "pkg-config" as i17, "python@3.9" as i18, "readline" as i19, "sqlite" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+import "bison" as i0, "bzip2" as i1, "expat" as i2, "flex" as i3, "gcc" as i4, "gdbm" as i5, "gettext" as i6, "gpatch" as i7, "libdrm" as i8, "libelf" as i9, "libffi" as i10, "libva" as i11, "libvdpau" as i12, "libx11" as i13, "libxcb" as i14, "libxdamage" as i15, "libxext" as i16, "libxfixes" as i17, "libxrandr" as i18, "libxshmfence" as i19, "libxv" as i20, "libxvmc" as i21, "libxxf86vm" as i22, "llvm" as i23, "lm-sensors" as i24, "meson" as i25, "mpdecimal" as i26, "ncurses" as i27, "ninja" as i28, "openssl@1.1" as i29, "pkg-config" as i30, "python@3.9" as i31, "readline" as i32, "sqlite" as i33, "unzip" as i34, "wayland" as i35, "wayland-protocols" as i36, "xz" as i37, "zip" as i38, "zlib" as i39
 
 pkg(
   name: "mesa",
@@ -152,7 +152,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35, i36, i37, i38, i39],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mesa.rb"), formula)

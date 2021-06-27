@@ -77,7 +77,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "gmp" as i1, "ocaml" as i2, "opam" as i3, "pkg-config" as i4, "gmp" as i5, "libev" as i6, "pcre" as i7, "m4" as i8, "sqlite" as i9, "unzip" as i10, "zlib" as i11
+import "autoconf" as i0, "gmp" as i1, "ocaml" as i2, "opam" as i3, "pkg-config" as i4, "gmp" as i5, "libev" as i6, "pcre" as i7, "m4" as i8, "sqlite" as i9, "unzip" as i10, "zlib" as i11, "sqlite" as i12
 
 pkg(
   name: "comby",
@@ -88,7 +88,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "comby.rb"), formula)

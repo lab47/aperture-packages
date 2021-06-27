@@ -93,7 +93,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "cjson" as i2, "libwebsockets" as i3, "openssl@1.1" as i4, "libxslt" as i5
+import "cmake" as i0, "pkg-config" as i1, "cjson" as i2, "libwebsockets" as i3, "openssl@1.1" as i4, "libxslt" as i5, "util-linux" as i6
 
 pkg(
   name: "mosquitto",
@@ -104,7 +104,7 @@ pkg(
     "license": "EPL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mosquitto.rb"), formula)

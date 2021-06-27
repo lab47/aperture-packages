@@ -108,7 +108,7 @@ end
 
 import "homebrew-install" as hi
 
-import "cmake" as i0, "fftw" as i1, "gdcm" as i2, "hdf5" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "vtk@8.2" as i7
+import "cmake" as i0, "fftw" as i1, "gdcm" as i2, "hdf5" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "vtk@8.2" as i7, "alsa-lib" as i8, "unixodbc" as i9
 
 pkg(
   name: "itk",
@@ -119,7 +119,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "itk.rb"), formula)

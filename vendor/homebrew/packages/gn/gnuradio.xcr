@@ -228,7 +228,7 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "boost" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "fftw" as i6, "gdbm" as i7, "gmp" as i8, "gsl" as i9, "gtk+3" as i10, "jack" as i11, "libffi" as i12, "log4cpp" as i13, "mpdecimal" as i14, "ncurses" as i15, "numpy" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "portaudio" as i19, "pybind11" as i20, "pygobject3" as i21, "pyqt@5" as i22, "python@3.9" as i23, "qt@5" as i24, "qwt" as i25, "readline" as i26, "sqlite" as i27, "uhd" as i28, "unzip" as i29, "volk" as i30, "xz" as i31, "zeromq" as i32, "zip" as i33, "zlib" as i34
+import "adwaita-icon-theme" as i0, "boost" as i1, "bzip2" as i2, "cmake" as i3, "doxygen" as i4, "expat" as i5, "fftw" as i6, "gdbm" as i7, "gmp" as i8, "gpatch" as i9, "gsl" as i10, "gtk+3" as i11, "jack" as i12, "libffi" as i13, "log4cpp" as i14, "mpdecimal" as i15, "ncurses" as i16, "numpy" as i17, "openssl@1.1" as i18, "pkg-config" as i19, "portaudio" as i20, "pybind11" as i21, "pygobject3" as i22, "pyqt@5" as i23, "python@3.9" as i24, "qt@5" as i25, "qwt" as i26, "readline" as i27, "sqlite" as i28, "uhd" as i29, "unzip" as i30, "volk" as i31, "xz" as i32, "zeromq" as i33, "zip" as i34, "zlib" as i35
 
 pkg(
   name: "gnuradio",
@@ -239,7 +239,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnuradio.rb"), formula)

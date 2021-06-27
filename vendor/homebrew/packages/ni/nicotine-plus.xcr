@@ -41,7 +41,7 @@ end
 
 import "homebrew-install" as hi
 
-import "adwaita-icon-theme" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gtk+3" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "py3cairo" as i10, "pygobject3" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+import "adwaita-icon-theme" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gpatch" as i4, "gtk+3" as i5, "libffi" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "py3cairo" as i11, "pygobject3" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "unzip" as i16, "xz" as i17, "zip" as i18, "zlib" as i19
 
 pkg(
   name: "nicotine-plus",
@@ -52,7 +52,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nicotine-plus.rb"), formula)

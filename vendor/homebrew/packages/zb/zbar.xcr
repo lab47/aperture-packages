@@ -64,7 +64,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pkg-config" as i4, "xmlto" as i5, "freetype" as i6, "imagemagick" as i7, "jpeg" as i8, "libtool" as i9, "ufraw" as i10, "xz" as i11
+import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pkg-config" as i4, "xmlto" as i5, "freetype" as i6, "imagemagick" as i7, "jpeg" as i8, "libtool" as i9, "ufraw" as i10, "xz" as i11, "dbus" as i12
 
 pkg(
   name: "zbar",
@@ -75,7 +75,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zbar.rb"), formula)

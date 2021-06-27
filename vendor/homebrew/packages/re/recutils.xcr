@@ -49,6 +49,8 @@ end
 
 import "homebrew-install" as hi
 
+import "libgcrypt" as i0
+
 pkg(
   name: "recutils",
   version: "1.8",
@@ -58,7 +60,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "recutils.rb"), formula)

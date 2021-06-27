@@ -146,7 +146,7 @@ end
 
 import "homebrew-install" as hi
 
-import "go" as i0, "node" as i1, "yarn" as i2, "zlib" as i3
+import "go" as i0, "node" as i1, "yarn" as i2, "zlib" as i3, "fontconfig" as i4, "freetype" as i5
 
 pkg(
   name: "grafana",
@@ -157,7 +157,7 @@ pkg(
     "license": "AGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "grafana.rb"), formula)

@@ -224,7 +224,7 @@ __END__
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3, "unbound" as i4
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3, "unbound" as i4, "pkg-config" as i5
 
 pkg(
   name: "libopendkim",
@@ -235,7 +235,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libopendkim.rb"), formula)

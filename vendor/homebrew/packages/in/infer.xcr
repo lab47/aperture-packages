@@ -187,7 +187,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "ninja" as i4, "opam" as i5, "openjdk@11" as i6, "pkg-config" as i7, "python@3.9" as i8, "gmp" as i9, "mpfr" as i10, "sqlite" as i11, "m4" as i12, "unzip" as i13, "ncurses" as i14, "xz" as i15, "zlib" as i16
+import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "ninja" as i4, "opam" as i5, "openjdk@11" as i6, "pkg-config" as i7, "python@3.9" as i8, "gmp" as i9, "mpfr" as i10, "sqlite" as i11, "m4" as i12, "unzip" as i13, "ncurses" as i14, "xz" as i15, "zlib" as i16, "patchelf" as i17
 
 pkg(
   name: "infer",
@@ -198,7 +198,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "infer.rb"), formula)

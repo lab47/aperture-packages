@@ -206,7 +206,7 @@ end
 
 import "homebrew-install" as hi
 
-import "freetype" as i0, "jpeg" as i1, "yara" as i2
+import "freetype" as i0, "jpeg" as i1, "yara" as i2, "gmp" as i3
 
 pkg(
   name: "volatility",
@@ -217,7 +217,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "volatility.rb"), formula)

@@ -82,7 +82,7 @@ end
 
 import "homebrew-install" as hi
 
-import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
+import "jpeg" as i0, "libpng" as i1, "libtiff" as i2, "pkg-config" as i3, "gtk+" as i4, "libsm" as i5, "mesa-glu" as i6
 
 pkg(
   name: "wxmac",
@@ -93,7 +93,7 @@ pkg(
     "license": "wxWindows",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wxmac.rb"), formula)

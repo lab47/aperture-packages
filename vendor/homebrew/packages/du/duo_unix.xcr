@@ -50,7 +50,7 @@ end
 
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
+import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3, "linux-pam" as i4
 
 pkg(
   name: "duo_unix",
@@ -61,7 +61,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: [hi, i0, i1, i2, i3, i4],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "duo_unix.rb"), formula)

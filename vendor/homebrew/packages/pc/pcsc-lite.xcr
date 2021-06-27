@@ -50,6 +50,8 @@ end
 
 import "homebrew-install" as hi
 
+import "pkg-config" as i0, "libusb" as i1
+
 pkg(
   name: "pcsc-lite",
   version: "1.9.1",
@@ -59,7 +61,7 @@ pkg(
     "license": "BSD-3-Clause and GPL-3.0-or-later and ISC",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pcsc-lite.rb"), formula)

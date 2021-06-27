@@ -38,7 +38,7 @@ end
 
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "rust" as i1, "ffmpeg" as i2
+import "pkg-config" as i0, "rust" as i1, "ffmpeg" as i2, "llvm" as i3
 
 pkg(
   name: "gifski",
@@ -49,7 +49,7 @@ pkg(
     "license": "AGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: [hi, i0, i1, i2, i3],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gifski.rb"), formula)

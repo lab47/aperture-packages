@@ -47,7 +47,7 @@ end
 
 import "homebrew-install" as hi
 
-import "libpng" as i0
+import "libpng" as i0, "pcre" as i1
 
 pkg(
   name: "s-lang",
@@ -58,7 +58,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: [hi, i0, i1],
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "s-lang.rb"), formula)
