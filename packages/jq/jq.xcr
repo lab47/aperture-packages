@@ -16,7 +16,7 @@ pkg(
       "--disable-silent-rules",
       "--disable-maintainer-mode",
       "--prefix="+ctx.prefix,
-      "--with-onigurama="+oniguruma.prefix,
+      "--with-oniguruma="+oniguruma.prefix,
       "CFLAGS=-Wno-deprecated-declarations -Wno-implicit-function-declaration")
 
     ctx.system("make", "install")

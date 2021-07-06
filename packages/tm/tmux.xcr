@@ -2,10 +2,10 @@ import fetch, "pkg-config" as pc, libevent, ncurses, utf8proc
 
 pkg(
   name: "tmux"
-  version: "3.2"
+  version: "3.2a"
   input: fetch.archive(
-    url: "https://github.com/tmux/tmux/releases/download/3.2/tmux-3.2.tar.gz",
-    sum: ("sha256", "664d345338c11cbe429d7ff939b92a5191e231a7c1ef42f381cebacb1e08a399"),
+    url: "https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz",
+    sum: ("sha256", "6"),
   )
   dependencies: [pc, libevent, ncurses, utf8proc]
 
