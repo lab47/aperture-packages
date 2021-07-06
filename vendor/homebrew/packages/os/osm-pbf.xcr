@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "protobuf" as i1, "zlib" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "protobuf" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "protobuf" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "osm-pbf",
@@ -46,7 +54,7 @@ pkg(
     "license": "LGPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osm-pbf.rb"), formula)

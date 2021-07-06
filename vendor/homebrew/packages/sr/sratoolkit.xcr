@@ -83,9 +83,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "hdf5" as i0, "libmagic" as i1, "libxml2" as i2, "perl" as i3
+if platform.os == "darwin" {
+    import "hdf5" as i0, "libmagic" as i1, "libxml2" as i2, "perl" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "hdf5" as i0, "libmagic" as i1, "libxml2" as i2, "perl" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "sratoolkit",
@@ -96,7 +104,7 @@ pkg(
     "license": "Public Domain and GPL-3.0-or-later and MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sratoolkit.rb"), formula)

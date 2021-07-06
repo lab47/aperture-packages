@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "llvm" as i0, "ninja" as i1, "rust" as i2, "xz" as i3
+if platform.os == "darwin" {
+    import "llvm" as i0, "ninja" as i1, "rust" as i2, "xz" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "llvm" as i0, "ninja" as i1, "rust" as i2, "xz" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "deno",
@@ -89,7 +97,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "deno.rb"), formula)

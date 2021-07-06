@@ -60,9 +60,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "m4" as i0, "perl" as i1
+if platform.os == "darwin" {
+    import "m4" as i0, "perl" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "m4" as i0, "perl" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "autoconf@2.69",
@@ -73,7 +81,7 @@ pkg(
     "license": "GPL-3.0-or-later and (GPL-3.0-or-later with Autoconf-exception-3.0)",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "autoconf@2.69.rb"), formula)

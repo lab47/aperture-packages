@@ -89,9 +89,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "glib" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "babl" as i5, "gettext" as i6, "glib" as i7, "jpeg" as i8, "json-glib" as i9, "libpng" as i10, "cairo" as i11
+if platform.os == "darwin" {
+    import "glib" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "babl" as i5, "gettext" as i6, "glib" as i7, "jpeg" as i8, "json-glib" as i9, "libpng" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "glib" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "babl" as i5, "gettext" as i6, "glib" as i7, "jpeg" as i8, "json-glib" as i9, "libpng" as i10, "cairo" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "gegl",
@@ -102,7 +110,7 @@ pkg(
     "license": "LGPL-3.0-or-later and GPL-3.0-or-later and BSD-3-Clause and MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gegl.rb"), formula)

@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "eccodes" as i0, "hdf5" as i1, "netcdf" as i2, "proj" as i3, "szip" as i4
+if platform.os == "darwin" {
+    import "eccodes" as i0, "hdf5" as i1, "netcdf" as i2, "proj" as i3, "szip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "eccodes" as i0, "hdf5" as i1, "netcdf" as i2, "proj" as i3, "szip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "cdo",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cdo.rb"), formula)

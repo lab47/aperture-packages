@@ -87,9 +87,17 @@ index 321cede..6497589 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "doxygen" as i1, "graphviz" as i2, "pkg-config" as i3, "freetype" as i4, "gtkglext" as i5, "jpeg-turbo" as i6, "sdl" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "doxygen" as i1, "graphviz" as i2, "pkg-config" as i3, "freetype" as i4, "gtkglext" as i5, "jpeg-turbo" as i6, "sdl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "doxygen" as i1, "graphviz" as i2, "pkg-config" as i3, "freetype" as i4, "gtkglext" as i5, "jpeg-turbo" as i6, "sdl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "open-scene-graph",
@@ -100,7 +108,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-scene-graph.rb"), formula)

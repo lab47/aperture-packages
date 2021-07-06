@@ -67,9 +67,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.9" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.9" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.9" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "gom",
@@ -80,7 +88,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gom.rb"), formula)

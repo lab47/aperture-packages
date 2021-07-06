@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "icu4c" as i4, "pcre2" as i5, "portaudio" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "icu4c" as i4, "pcre2" as i5, "portaudio" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "icu4c" as i4, "pcre2" as i5, "portaudio" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "mimic",
@@ -53,7 +61,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mimic.rb"), formula)

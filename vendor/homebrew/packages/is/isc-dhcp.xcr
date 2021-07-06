@@ -152,7 +152,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "isc-dhcp",
@@ -163,7 +171,7 @@ pkg(
     "license": "MPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "isc-dhcp.rb"), formula)

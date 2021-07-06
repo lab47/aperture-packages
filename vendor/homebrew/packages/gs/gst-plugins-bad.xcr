@@ -63,9 +63,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faac" as i4, "faad2" as i5, "gettext" as i6, "gst-plugins-base" as i7, "jpeg" as i8, "libmms" as i9, "libnice" as i10, "libusrsctp" as i11, "musepack" as i12, "openssl@1.1" as i13, "opus" as i14, "orc" as i15, "rtmpdump" as i16, "srtp" as i17
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faac" as i4, "faad2" as i5, "gettext" as i6, "gst-plugins-base" as i7, "jpeg" as i8, "libmms" as i9, "libnice" as i10, "libusrsctp" as i11, "musepack" as i12, "openssl@1.1" as i13, "opus" as i14, "orc" as i15, "rtmpdump" as i16, "srtp" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faac" as i4, "faad2" as i5, "gettext" as i6, "gst-plugins-base" as i7, "jpeg" as i8, "libmms" as i9, "libnice" as i10, "libusrsctp" as i11, "musepack" as i12, "openssl@1.1" as i13, "opus" as i14, "orc" as i15, "rtmpdump" as i16, "srtp" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "gst-plugins-bad",
@@ -76,7 +84,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-plugins-bad.rb"), formula)

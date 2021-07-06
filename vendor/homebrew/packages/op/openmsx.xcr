@@ -65,9 +65,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "freetype" as i1, "glew" as i2, "libogg" as i3, "libpng" as i4, "libvorbis" as i5, "sdl2" as i6, "sdl2_ttf" as i7, "theora" as i8, "zlib" as i9, "alsa-lib" as i10
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "freetype" as i1, "glew" as i2, "libogg" as i3, "libpng" as i4, "libvorbis" as i5, "sdl2" as i6, "sdl2_ttf" as i7, "theora" as i8, "zlib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "python@3.9" as i0, "freetype" as i1, "glew" as i2, "libogg" as i3, "libpng" as i4, "libvorbis" as i5, "sdl2" as i6, "sdl2_ttf" as i7, "theora" as i8, "zlib" as i9, "alsa-lib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "openmsx",
@@ -78,7 +86,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openmsx.rb"), formula)

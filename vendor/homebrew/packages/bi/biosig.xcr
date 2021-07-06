@@ -53,9 +53,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gawk" as i0, "libarchive" as i1, "dcmtk" as i2, "libb64" as i3, "numpy" as i4, "suite-sparse" as i5, "tinyxml" as i6
+if platform.os == "darwin" {
+    import "gawk" as i0, "libarchive" as i1, "dcmtk" as i2, "libb64" as i3, "numpy" as i4, "suite-sparse" as i5, "tinyxml" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "gawk" as i0, "libarchive" as i1, "dcmtk" as i2, "libb64" as i3, "numpy" as i4, "suite-sparse" as i5, "tinyxml" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "biosig",
@@ -66,7 +74,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "biosig.rb"), formula)

@@ -402,9 +402,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpatch" as i3, "ipython" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "node" as i8, "openssl@1.1" as i9, "pandoc" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zeromq" as i17, "zip" as i18, "zlib" as i19
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "ipython" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "node" as i7, "openssl@1.1" as i8, "pandoc" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zeromq" as i16, "zip" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "ipython" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "node" as i7, "openssl@1.1" as i8, "pandoc" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zeromq" as i16, "zip" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "jupyterlab",
@@ -415,7 +423,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jupyterlab.rb"), formula)

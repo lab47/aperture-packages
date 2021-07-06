@@ -94,7 +94,7 @@ class Gedit < Formula
       -I#{gtksourceview4.opt_include}/gtksourceview-4
       -I#{gtkx3.opt_include}/gtk-3.0
       -I#{harfbuzz.opt_include}/harfbuzz
-      -I#{include}/gedit-40.0
+      -I#{OS.mac? ? include : opt_include}/gedit-40.0
       -I#{libepoxy.opt_include}
       -I#{libffi.opt_lib}/libffi-3.0.13/include
       -I#{libpeas.opt_include}/libpeas-1.0
@@ -105,14 +105,14 @@ class Gedit < Formula
       -L#{atk.opt_lib}
       -L#{cairo.opt_lib}
       -L#{gdk_pixbuf.opt_lib}
-      -L#{lib}/gedit
+      -L#{OS.mac? ? lib : opt_lib}/gedit
       -L#{gettext.opt_lib}
       -L#{glib.opt_lib}
       -L#{gobject_introspection.opt_lib}
       -L#{gtksourceview4.opt_lib}
       -L#{gtkx3.opt_lib}
       -L#{libpeas.opt_lib}
-      -L#{lib}
+      -L#{OS.mac? ? lib : opt_lib}
       -L#{pango.opt_lib}
       -latk-1.0
       -lcairo
@@ -126,7 +126,7 @@ class Gedit < Formula
       -lgmodule-2.0
       -lgobject-2.0
       -lgtk-3
-      -lgtksourceview-4.0
+      -lgtksourceview-#{OS.mac? ? "4.0" : "4"}
       -lpango-1.0
       -lpangocairo-1.0
       -lpeas-1.0
@@ -142,9 +142,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "adwaita-icon-theme" as i5, "atk" as i6, "cairo" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gobject-introspection" as i11, "gsettings-desktop-schemas" as i12, "gspell" as i13, "gtk+3" as i14, "gtksourceview4" as i15, "libpeas" as i16, "libsoup" as i17, "libxml2" as i18, "pango" as i19, "tepl" as i20
+if platform.os == "darwin" {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "adwaita-icon-theme" as i5, "atk" as i6, "cairo" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gobject-introspection" as i11, "gsettings-desktop-schemas" as i12, "gspell" as i13, "gtk+3" as i14, "gtksourceview4" as i15, "libpeas" as i16, "libsoup" as i17, "libxml2" as i18, "pango" as i19, "tepl" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+} else {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "adwaita-icon-theme" as i5, "atk" as i6, "cairo" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gobject-introspection" as i11, "gsettings-desktop-schemas" as i12, "gspell" as i13, "gtk+3" as i14, "gtksourceview4" as i15, "libpeas" as i16, "libsoup" as i17, "libxml2" as i18, "pango" as i19, "tepl" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "gedit",
@@ -155,7 +163,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gedit.rb"), formula)

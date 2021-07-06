@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "flac" as i3, "jpeg" as i4, "libdiscid" as i5, "libmusicbrainz" as i6, "neon" as i7, "s-lang" as i8, "unac" as i9
+if platform.os == "darwin" {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "flac" as i3, "jpeg" as i4, "libdiscid" as i5, "libmusicbrainz" as i6, "neon" as i7, "s-lang" as i8, "unac" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "flac" as i3, "jpeg" as i4, "libdiscid" as i5, "libmusicbrainz" as i6, "neon" as i7, "s-lang" as i8, "unac" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "flactag",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flactag.rb"), formula)

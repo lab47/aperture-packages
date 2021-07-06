@@ -70,9 +70,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "libomp" as i2, "openssl@1.1" as i3, "libfuse" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "libomp" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cmake" as i0, "boost" as i1, "libomp" as i2, "openssl@1.1" as i3, "libfuse" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "cryfs",
@@ -83,7 +91,7 @@ pkg(
     "license": "LGPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cryfs.rb"), formula)

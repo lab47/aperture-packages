@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "rust" as i1, "openssl@1.1" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "rust" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cmake" as i0, "rust" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "zola",
@@ -68,7 +76,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zola.rb"), formula)

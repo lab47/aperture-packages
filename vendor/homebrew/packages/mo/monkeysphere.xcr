@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnu-sed" as i0, "gnupg" as i1, "libassuan" as i2, "libgcrypt" as i3, "libgpg-error" as i4, "openssl@1.1" as i5, "perl" as i6
+if platform.os == "darwin" {
+    import "gnu-sed" as i0, "gnupg" as i1, "libassuan" as i2, "libgcrypt" as i3, "libgpg-error" as i4, "openssl@1.1" as i5, "perl" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "gnu-sed" as i0, "gnupg" as i1, "libassuan" as i2, "libgcrypt" as i3, "libgpg-error" as i4, "openssl@1.1" as i5, "perl" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "monkeysphere",
@@ -74,7 +82,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "monkeysphere.rb"), formula)

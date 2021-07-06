@@ -88,9 +88,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gcc@10" as i3, "gnu-sed" as i4, "libtool" as i5, "openjdk" as i6, "pkg-config" as i7, "boost" as i8, "gettext" as i9, "hdf5" as i10, "hwloc" as i11, "lp_solve" as i12, "omniorb" as i13, "openblas" as i14, "qt@5" as i15, "readline" as i16, "sundials" as i17, "curl" as i18, "expat" as i19, "libffi" as i20, "ncurses" as i21
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gcc@10" as i3, "gnu-sed" as i4, "libtool" as i5, "openjdk" as i6, "pkg-config" as i7, "boost" as i8, "gettext" as i9, "hdf5" as i10, "hwloc" as i11, "lp_solve" as i12, "omniorb" as i13, "openblas" as i14, "qt@5" as i15, "readline" as i16, "sundials" as i17, "curl" as i18, "expat" as i19, "libffi" as i20, "ncurses" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+} else {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "gcc@10" as i3, "gnu-sed" as i4, "libtool" as i5, "openjdk" as i6, "pkg-config" as i7, "boost" as i8, "gettext" as i9, "hdf5" as i10, "hwloc" as i11, "lp_solve" as i12, "omniorb" as i13, "openblas" as i14, "qt@5" as i15, "readline" as i16, "sundials" as i17, "curl" as i18, "expat" as i19, "libffi" as i20, "ncurses" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+}
 
 pkg(
   name: "openmodelica",
@@ -101,7 +109,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openmodelica.rb"), formula)

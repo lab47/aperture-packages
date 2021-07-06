@@ -54,9 +54,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libtool" as i0, "apr" as i1, "openjdk" as i2, "openssl@1.1" as i3
+if platform.os == "darwin" {
+    import "libtool" as i0, "apr" as i1, "openjdk" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "libtool" as i0, "apr" as i1, "openjdk" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "tomcat-native",
@@ -67,7 +75,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tomcat-native.rb"), formula)

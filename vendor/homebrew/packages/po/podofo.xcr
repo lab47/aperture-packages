@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libidn" as i4, "libpng" as i5, "libtiff" as i6, "openssl@1.1" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libidn" as i4, "libpng" as i5, "libtiff" as i6, "openssl@1.1" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "fontconfig" as i1, "freetype" as i2, "jpeg" as i3, "libidn" as i4, "libpng" as i5, "libtiff" as i6, "openssl@1.1" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "podofo",
@@ -68,7 +76,7 @@ pkg(
     "license": "LGPL-2.0-only and GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "podofo.rb"), formula)

@@ -89,9 +89,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "gpatch" as i4, "libffi" as i5, "libpng" as i6, "mpdecimal" as i7, "ncurses" as i8, "numpy" as i9, "openssl@1.1" as i10, "p7zip" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "ssdeep" as i16, "swig" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "libffi" as i4, "libpng" as i5, "mpdecimal" as i6, "ncurses" as i7, "numpy" as i8, "openssl@1.1" as i9, "p7zip" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "ssdeep" as i15, "swig" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+} else {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "libffi" as i4, "libpng" as i5, "mpdecimal" as i6, "ncurses" as i7, "numpy" as i8, "openssl@1.1" as i9, "p7zip" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "ssdeep" as i15, "swig" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "binwalk",
@@ -102,7 +110,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "binwalk.rb"), formula)

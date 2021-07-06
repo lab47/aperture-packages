@@ -106,9 +106,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3, "gcc" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cmake" as i0, "cpp-gsl" as i1, "zstd" as i2, "zlib" as i3, "gcc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "seal",
@@ -119,7 +127,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "seal.rb"), formula)

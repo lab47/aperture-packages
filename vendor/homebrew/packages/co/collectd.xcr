@@ -100,9 +100,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libgcrypt" as i1, "libtool" as i2, "net-snmp" as i3, "riemann-client" as i4, "bison" as i5, "flex" as i6, "perl" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "libgcrypt" as i1, "libtool" as i2, "net-snmp" as i3, "riemann-client" as i4, "bison" as i5, "flex" as i6, "perl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "libgcrypt" as i1, "libtool" as i2, "net-snmp" as i3, "riemann-client" as i4, "bison" as i5, "flex" as i6, "perl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "collectd",
@@ -113,7 +121,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "collectd.rb"), formula)

@@ -97,9 +97,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libao" as i3, "libconfig" as i4, "libdaemon" as i5, "libsoxr" as i6, "openssl@1.1" as i7, "popt" as i8, "pulseaudio" as i9
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libao" as i3, "libconfig" as i4, "libdaemon" as i5, "libsoxr" as i6, "openssl@1.1" as i7, "popt" as i8, "pulseaudio" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "libao" as i3, "libconfig" as i4, "libdaemon" as i5, "libsoxr" as i6, "openssl@1.1" as i7, "popt" as i8, "pulseaudio" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "shairport-sync",
@@ -110,7 +118,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "shairport-sync.rb"), formula)

@@ -106,9 +106,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "emacs" as i1, "llvm" as i2, "openssl@1.1" as i3, "gcc" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "emacs" as i1, "llvm" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cmake" as i0, "emacs" as i1, "llvm" as i2, "openssl@1.1" as i3, "gcc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "rtags",
@@ -119,7 +127,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rtags.rb"), formula)

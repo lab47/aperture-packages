@@ -78,9 +78,17 @@ index 00caaa8..53618ed 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pcre" as i0
+if platform.os == "darwin" {
+    import "pcre" as i0
+    deps = [hi, i0]
+} else {
+    import "pcre" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "harbour",
@@ -91,7 +99,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "harbour.rb"), formula)

@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libevent" as i0, "openssl@1.1" as i1
+if platform.os == "darwin" {
+    import "libevent" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "libevent" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "nsd",
@@ -54,7 +62,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nsd.rb"), formula)

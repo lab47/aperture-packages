@@ -124,9 +124,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "boost" as i2, "boost-python3" as i3, "bzip2" as i4, "cairomm@1.14" as i5, "cgal" as i6, "expat" as i7, "gdbm" as i8, "google-sparsehash" as i9, "gpatch" as i10, "gtk+3" as i11, "libffi" as i12, "librsvg" as i13, "libtool" as i14, "mpdecimal" as i15, "ncurses" as i16, "numpy" as i17, "openssl@1.1" as i18, "pkg-config" as i19, "py3cairo" as i20, "pygobject3" as i21, "python@3.9" as i22, "readline" as i23, "scipy" as i24, "sqlite" as i25, "unzip" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "boost" as i2, "boost-python3" as i3, "bzip2" as i4, "cairomm@1.14" as i5, "cgal" as i6, "expat" as i7, "gdbm" as i8, "google-sparsehash" as i9, "gtk+3" as i10, "libffi" as i11, "librsvg" as i12, "libtool" as i13, "mpdecimal" as i14, "ncurses" as i15, "numpy" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "py3cairo" as i19, "pygobject3" as i20, "python@3.9" as i21, "readline" as i22, "scipy" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28]
+} else {
+    import "autoconf" as i0, "automake" as i1, "boost" as i2, "boost-python3" as i3, "bzip2" as i4, "cairomm@1.14" as i5, "cgal" as i6, "expat" as i7, "gdbm" as i8, "google-sparsehash" as i9, "gtk+3" as i10, "libffi" as i11, "librsvg" as i12, "libtool" as i13, "mpdecimal" as i14, "ncurses" as i15, "numpy" as i16, "openssl@1.1" as i17, "pkg-config" as i18, "py3cairo" as i19, "pygobject3" as i20, "python@3.9" as i21, "readline" as i22, "scipy" as i23, "sqlite" as i24, "unzip" as i25, "xz" as i26, "zip" as i27, "zlib" as i28
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28]
+}
 
 pkg(
   name: "graph-tool",
@@ -137,7 +145,7 @@ pkg(
     "license": "LGPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "graph-tool.rb"), formula)

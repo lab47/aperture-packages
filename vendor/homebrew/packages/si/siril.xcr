@@ -63,9 +63,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "intltool" as i3, "libtool" as i4, "pkg-config" as i5, "adwaita-icon-theme" as i6, "cfitsio" as i7, "exiv2" as i8, "ffms2" as i9, "fftw" as i10, "gnuplot" as i11, "gsl" as i12, "gtk-mac-integration" as i13, "jpeg" as i14, "json-glib" as i15, "libconfig" as i16, "libomp" as i17, "libraw" as i18, "librsvg" as i19, "netpbm" as i20, "opencv" as i21, "openjpeg" as i22
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "intltool" as i3, "libtool" as i4, "pkg-config" as i5, "adwaita-icon-theme" as i6, "cfitsio" as i7, "exiv2" as i8, "ffms2" as i9, "fftw" as i10, "gnuplot" as i11, "gsl" as i12, "gtk-mac-integration" as i13, "jpeg" as i14, "json-glib" as i15, "libconfig" as i16, "libomp" as i17, "libraw" as i18, "librsvg" as i19, "netpbm" as i20, "opencv" as i21, "openjpeg" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+} else {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "intltool" as i3, "libtool" as i4, "pkg-config" as i5, "adwaita-icon-theme" as i6, "cfitsio" as i7, "exiv2" as i8, "ffms2" as i9, "fftw" as i10, "gnuplot" as i11, "gsl" as i12, "gtk-mac-integration" as i13, "jpeg" as i14, "json-glib" as i15, "libconfig" as i16, "libomp" as i17, "libraw" as i18, "librsvg" as i19, "netpbm" as i20, "opencv" as i21, "openjpeg" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+}
 
 pkg(
   name: "siril",
@@ -76,7 +84,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "siril.rb"), formula)

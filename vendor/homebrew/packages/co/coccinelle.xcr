@@ -82,9 +82,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "hevea" as i2, "ocaml-findlib" as i3, "opam" as i4, "pkg-config" as i5, "ocaml" as i6, "pcre" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "hevea" as i2, "ocaml-findlib" as i3, "opam" as i4, "pkg-config" as i5, "ocaml" as i6, "pcre" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "autoconf" as i0, "automake" as i1, "hevea" as i2, "ocaml-findlib" as i3, "opam" as i4, "pkg-config" as i5, "ocaml" as i6, "pcre" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "coccinelle",
@@ -95,7 +103,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "coccinelle.rb"), formula)

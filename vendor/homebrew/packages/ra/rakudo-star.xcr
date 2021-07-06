@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bash" as i0, "gmp" as i1, "icu4c" as i2, "libffi" as i3, "pcre" as i4, "readline" as i5
+if platform.os == "darwin" {
+    import "bash" as i0, "gmp" as i1, "icu4c" as i2, "libffi" as i3, "pcre" as i4, "readline" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "bash" as i0, "gmp" as i1, "icu4c" as i2, "libffi" as i3, "pcre" as i4, "readline" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "rakudo-star",
@@ -74,7 +82,7 @@ pkg(
     "license": "Artistic-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rakudo-star.rb"), formula)

@@ -29,9 +29,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cairo" as i1, "python@3.9" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cairo" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "cairo" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "py3cairo",
@@ -42,7 +50,7 @@ pkg(
     "license": "LGPL-2.1-only or MPL-1.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "py3cairo.rb"), formula)

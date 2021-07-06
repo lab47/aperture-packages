@@ -101,9 +101,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "intltool" as i2, "libtool" as i3, "m4" as i4, "perl" as i5, "pkg-config" as i6, "xmltoman" as i7, "dbus" as i8, "glib" as i9, "libdaemon" as i10
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "intltool" as i2, "libtool" as i3, "m4" as i4, "perl" as i5, "pkg-config" as i6, "xmltoman" as i7, "dbus" as i8, "glib" as i9, "libdaemon" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "autoconf" as i0, "automake" as i1, "intltool" as i2, "libtool" as i3, "m4" as i4, "perl" as i5, "pkg-config" as i6, "xmltoman" as i7, "dbus" as i8, "glib" as i9, "libdaemon" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "avahi",
@@ -114,7 +122,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "avahi.rb"), formula)

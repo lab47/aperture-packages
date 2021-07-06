@@ -196,9 +196,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gperf" as i1, "bison" as i2, "flex" as i3, "sqlite" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gperf" as i1, "bison" as i2, "flex" as i3, "sqlite" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "gperf" as i1, "bison" as i2, "flex" as i3, "sqlite" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "qt@5",
@@ -209,7 +217,7 @@ pkg(
     "license": "GFDL-1.3-only and GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qt@5.rb"), formula)

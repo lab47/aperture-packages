@@ -129,9 +129,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "perl" as i0
+if platform.os == "darwin" {
+    import "perl" as i0
+    deps = [hi, i0]
+} else {
+    import "perl" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "sql-translator",
@@ -142,7 +150,7 @@ pkg(
     "license": "Artistic-1.0-Perl or GPL-1.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sql-translator.rb"), formula)

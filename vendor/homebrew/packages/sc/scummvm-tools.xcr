@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "flac" as i1, "freetype" as i2, "libpng" as i3, "libvorbis" as i4, "mad" as i5, "wxmac" as i6
+if platform.os == "darwin" {
+    import "boost" as i0, "flac" as i1, "freetype" as i2, "libpng" as i3, "libvorbis" as i4, "mad" as i5, "wxmac" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "boost" as i0, "flac" as i1, "freetype" as i2, "libpng" as i3, "libvorbis" as i4, "mad" as i5, "wxmac" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "scummvm-tools",
@@ -53,7 +61,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "scummvm-tools.rb"), formula)

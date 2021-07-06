@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "mingw-w64" as i0, "scons" as i1
+if platform.os == "darwin" {
+    import "mingw-w64" as i0, "scons" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "mingw-w64" as i0, "scons" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "makensis",
@@ -56,7 +64,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "makensis.rb"), formula)

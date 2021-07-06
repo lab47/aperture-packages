@@ -79,9 +79,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libsodium" as i0, "openssl@1.1" as i1
+if platform.os == "darwin" {
+    import "libsodium" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "libsodium" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "pure-ftpd",
@@ -92,7 +100,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pure-ftpd.rb"), formula)

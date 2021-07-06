@@ -42,9 +42,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "util-linux" as i0
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "util-linux" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "git-extras",
@@ -55,7 +62,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-extras.rb"), formula)

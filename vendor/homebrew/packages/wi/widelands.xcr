@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "doxygen" as i2, "gettext" as i3, "glew" as i4, "icu4c" as i5, "libpng" as i6, "lua" as i7, "minizip" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "doxygen" as i2, "gettext" as i3, "glew" as i4, "icu4c" as i5, "libpng" as i6, "lua" as i7, "minizip" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "cmake" as i0, "boost" as i1, "doxygen" as i2, "gettext" as i3, "glew" as i4, "icu4c" as i5, "libpng" as i6, "lua" as i7, "minizip" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "widelands",
@@ -75,7 +83,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "widelands.rb"), formula)

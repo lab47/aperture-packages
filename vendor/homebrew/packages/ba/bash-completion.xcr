@@ -73,7 +73,15 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "bash-completion",
@@ -84,7 +92,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bash-completion.rb"), formula)

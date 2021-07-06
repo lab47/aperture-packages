@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "doxygen" as i1, "extra-cmake-modules" as i2, "graphviz" as i3, "qt@5" as i4, "xz" as i5, "bzip2" as i6, "zlib" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "doxygen" as i1, "extra-cmake-modules" as i2, "graphviz" as i3, "qt@5" as i4, "xz" as i5, "bzip2" as i6, "zlib" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "doxygen" as i1, "extra-cmake-modules" as i2, "graphviz" as i3, "qt@5" as i4, "xz" as i5, "bzip2" as i6, "zlib" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "karchive",
@@ -75,7 +83,7 @@ pkg(
     "license": "BSD-2-Clause and LGPL-2.0-only and LGPL-2.0-or-later and (LGPL-2.0-only or LGPL-3.0-only)",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "karchive.rb"), formula)

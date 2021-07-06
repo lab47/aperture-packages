@@ -166,9 +166,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1, "cfitsio" as i2, "davix" as i3, "fftw" as i4, "gcc" as i5, "gl2ps" as i6, "graphviz" as i7, "gsl" as i8, "lz4" as i9, "numpy" as i10, "openssl@1.1" as i11, "pcre" as i12, "python@3.9" as i13, "tbb" as i14, "xrootd" as i15, "xz" as i16, "zstd" as i17, "libxml2" as i18
+if platform.os == "darwin" {
+    import "cmake" as i0, "ninja" as i1, "cfitsio" as i2, "davix" as i3, "fftw" as i4, "gcc" as i5, "gl2ps" as i6, "graphviz" as i7, "gsl" as i8, "lz4" as i9, "numpy" as i10, "openssl@1.1" as i11, "pcre" as i12, "python@3.9" as i13, "tbb" as i14, "xrootd" as i15, "xz" as i16, "zstd" as i17, "libxml2" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "cmake" as i0, "ninja" as i1, "cfitsio" as i2, "davix" as i3, "fftw" as i4, "gcc" as i5, "gl2ps" as i6, "graphviz" as i7, "gsl" as i8, "lz4" as i9, "numpy" as i10, "openssl@1.1" as i11, "pcre" as i12, "python@3.9" as i13, "tbb" as i14, "xrootd" as i15, "xz" as i16, "zstd" as i17, "libxml2" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "root",
@@ -179,7 +187,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "root.rb"), formula)

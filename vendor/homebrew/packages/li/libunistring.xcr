@@ -50,7 +50,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "libunistring",
@@ -61,7 +69,7 @@ pkg(
     "license": "GPL-2.0-only or LGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libunistring.rb"), formula)

@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnu-getopt" as i0
+if platform.os == "darwin" {
+    import "gnu-getopt" as i0
+    deps = [hi, i0]
+} else {
+    import "gnu-getopt" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "git-flow-avh",
@@ -74,7 +82,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-flow-avh.rb"), formula)

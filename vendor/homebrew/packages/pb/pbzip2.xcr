@@ -33,7 +33,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "pbzip2",
@@ -44,7 +52,7 @@ pkg(
     "license": "bzip2-1.0.6",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pbzip2.rb"), formula)

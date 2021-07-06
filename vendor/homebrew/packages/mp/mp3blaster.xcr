@@ -34,9 +34,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "sdl" as i0
+if platform.os == "darwin" {
+    import "sdl" as i0
+    deps = [hi, i0]
+} else {
+    import "sdl" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "mp3blaster",
@@ -47,7 +55,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mp3blaster.rb"), formula)

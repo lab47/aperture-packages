@@ -90,9 +90,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lmdb" as i0, "mcpp" as i1
+if platform.os == "darwin" {
+    import "lmdb" as i0, "mcpp" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "lmdb" as i0, "mcpp" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "ice",
@@ -103,7 +111,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ice.rb"), formula)

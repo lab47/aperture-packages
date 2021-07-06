@@ -2,10 +2,12 @@ formula = r"""
 class Tomcat < Formula
   desc "Implementation of Java Servlet and JavaServer Pages"
   homepage "https://tomcat.apache.org/"
-  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-10/v10.0.7/bin/apache-tomcat-10.0.7.tar.gz"
-  mirror "https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.7/bin/apache-tomcat-10.0.7.tar.gz"
-  sha256 "771df99fc5dacfe05e98c8c6137a93509733e7ab43fcd3d22b4512ae4a59fcc1"
+  url "https://www.apache.org/dyn/closer.lua?path=tomcat/tomcat-10/v10.0.6/bin/apache-tomcat-10.0.6.tar.gz"
+  mirror "https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.6/bin/apache-tomcat-10.0.6.tar.gz"
+  sha256 "36b52177db4df4516512e302e462d1bb12e04667798f82a7476b68eef4edecae"
   license "Apache-2.0"
+
+  bottle :unneeded
 
   depends_on "openjdk"
 
@@ -63,20 +65,28 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "tomcat",
-  version: "10.0.7",
+  version: "10.0.6",
   description: "Implementation of Java Servlet and JavaServer Pages",
   url: "https://tomcat.apache.org/",
   metadata: %{
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tomcat.rb"), formula)

@@ -599,9 +599,17 @@ index 9c8e81b..2cd00d4 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ncurses" as i0
+if platform.os == "darwin" {
+    import "ncurses" as i0
+    deps = [hi, i0]
+} else {
+    import "ncurses" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "aspell",
@@ -612,7 +620,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aspell.rb"), formula)

@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bash" as i0, "wireguard-go" as i1, "libmnl" as i2
+if platform.os == "darwin" {
+    import "bash" as i0, "wireguard-go" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "bash" as i0, "wireguard-go" as i1, "libmnl" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "wireguard-tools",
@@ -53,7 +61,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wireguard-tools.rb"), formula)

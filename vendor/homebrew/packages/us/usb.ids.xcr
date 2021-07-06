@@ -12,7 +12,7 @@ class UsbIds < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "649c39377ea9f2397832fe716ebd9cce6ab526e0e12c252f4d32127088644750"
+    sha256 cellar: :any_skip_relocation, all: "649c39377ea9f2397832fe716ebd9cce6ab526e0e12c252f4d32127088644750"
   end
 
   def install
@@ -26,7 +26,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "usb.ids",
@@ -37,7 +45,7 @@ pkg(
     "license": "GPL-2.0-or-later or BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "usb.ids.rb"), formula)

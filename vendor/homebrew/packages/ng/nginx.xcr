@@ -30,7 +30,10 @@ class Nginx < Formula
   def install
     # keep clean copy of source for compiling dynamic modules e.g. passenger
     (pkgshare/"src").mkpath
-    system "tar", "-cJf", (pkgshare/"src/src.tar.xz"), "."
+    system "tar", "-cJf",
+           (pkgshare/"src/src.tar.xz"),
+           *("--options" if OS.mac?),
+           *("compression-level=9" if OS.mac?), "."
 
     # Changes default port to 8080
     inreplace "conf/nginx.conf" do |s|
@@ -200,9 +203,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "pcre" as i1, "xz" as i2
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0, "pcre" as i1, "xz" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "openssl@1.1" as i0, "pcre" as i1, "xz" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "nginx",
@@ -213,7 +224,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nginx.rb"), formula)

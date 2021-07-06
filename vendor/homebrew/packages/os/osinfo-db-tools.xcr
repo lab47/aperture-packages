@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4, "json-glib" as i5, "libarchive" as i6, "libsoup" as i7, "python@3.9" as i8, "pod2man" as i9, "libxml2" as i10
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4, "json-glib" as i5, "libarchive" as i6, "libsoup" as i7, "python@3.9" as i8, "pod2man" as i9, "libxml2" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "glib" as i4, "json-glib" as i5, "libarchive" as i6, "libsoup" as i7, "python@3.9" as i8, "pod2man" as i9, "libxml2" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "osinfo-db-tools",
@@ -63,7 +71,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osinfo-db-tools.rb"), formula)

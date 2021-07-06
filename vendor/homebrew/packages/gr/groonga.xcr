@@ -99,9 +99,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "mecab" as i1, "mecab-ipadic" as i2, "msgpack" as i3, "openssl@1.1" as i4, "pcre" as i5, "glib" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "mecab" as i1, "mecab-ipadic" as i2, "msgpack" as i3, "openssl@1.1" as i4, "pcre" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "pkg-config" as i0, "mecab" as i1, "mecab-ipadic" as i2, "msgpack" as i3, "openssl@1.1" as i4, "pcre" as i5, "glib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "groonga",
@@ -112,7 +120,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "groonga.rb"), formula)

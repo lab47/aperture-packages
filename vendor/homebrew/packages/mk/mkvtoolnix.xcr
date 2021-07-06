@@ -95,9 +95,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fmt" as i4, "gettext" as i5, "libebml" as i6, "libmagic" as i7, "libmatroska" as i8, "libogg" as i9, "libvorbis" as i10, "nlohmann-json" as i11, "pcre2" as i12, "pugixml" as i13, "utf8cpp" as i14, "libxslt" as i15, "ruby" as i16, "gcc" as i17
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fmt" as i4, "gettext" as i5, "libebml" as i6, "libmagic" as i7, "libmatroska" as i8, "libogg" as i9, "libvorbis" as i10, "nlohmann-json" as i11, "pcre2" as i12, "pugixml" as i13, "utf8cpp" as i14, "libxslt" as i15, "ruby" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+} else {
+    import "docbook-xsl" as i0, "pkg-config" as i1, "boost" as i2, "flac" as i3, "fmt" as i4, "gettext" as i5, "libebml" as i6, "libmagic" as i7, "libmatroska" as i8, "libogg" as i9, "libvorbis" as i10, "nlohmann-json" as i11, "pcre2" as i12, "pugixml" as i13, "utf8cpp" as i14, "libxslt" as i15, "ruby" as i16, "gcc" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "mkvtoolnix",
@@ -108,7 +116,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mkvtoolnix.rb"), formula)

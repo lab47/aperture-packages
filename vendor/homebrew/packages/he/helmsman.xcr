@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "helm" as i1, "kubernetes-cli" as i2
+if platform.os == "darwin" {
+    import "go" as i0, "helm" as i1, "kubernetes-cli" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "go" as i0, "helm" as i1, "kubernetes-cli" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "helmsman",
@@ -46,7 +54,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "helmsman.rb"), formula)

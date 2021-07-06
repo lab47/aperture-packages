@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libxslt" as i0
+if platform.os == "darwin" {
+    import "libxslt" as i0
+    deps = [hi, i0]
+} else {
+    import "libxslt" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "tidyp",
@@ -57,7 +65,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tidyp.rb"), formula)

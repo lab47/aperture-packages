@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "jpeg-turbo" as i0, "libogg" as i1, "libpng" as i2, "libuv" as i3, "libvorbis" as i4, "mbedtls" as i5, "openal-soft" as i6, "sdl2" as i7
+if platform.os == "darwin" {
+    import "jpeg-turbo" as i0, "libogg" as i1, "libpng" as i2, "libuv" as i3, "libvorbis" as i4, "mbedtls" as i5, "openal-soft" as i6, "sdl2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "jpeg-turbo" as i0, "libogg" as i1, "libpng" as i2, "libuv" as i3, "libvorbis" as i4, "mbedtls" as i5, "openal-soft" as i6, "sdl2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "hashlink",
@@ -89,7 +97,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hashlink.rb"), formula)

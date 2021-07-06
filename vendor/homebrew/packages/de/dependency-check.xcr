@@ -12,7 +12,7 @@ class DependencyCheck < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "c3fa6df573aef90b0a78f6a5adebaf6f8ab132b5254be867880ce1009269eedc"
+    sha256 cellar: :any_skip_relocation, all: "2726b06c6ac05579b7ea5286a0e4020e1993a95db3043bbcb26fe5932cdd90d0"
   end
 
   depends_on "openjdk"
@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "dependency-check",
@@ -65,7 +73,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dependency-check.rb"), formula)

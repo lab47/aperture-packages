@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bison" as i0, "ruby" as i1
+if platform.os == "darwin" {
+    import "bison" as i0, "ruby" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "bison" as i0, "ruby" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "mruby",
@@ -56,7 +64,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mruby.rb"), formula)

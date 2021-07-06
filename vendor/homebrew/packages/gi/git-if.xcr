@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "glktermw" as i0
+if platform.os == "darwin" {
+    import "glktermw" as i0
+    deps = [hi, i0]
+} else {
+    import "glktermw" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "git-if",
@@ -49,7 +57,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-if.rb"), formula)

@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxext" as i3, "libxp" as i4, "libxpm" as i5, "libxt" as i6, "openmotif" as i7
+if platform.os == "darwin" {
+    import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxext" as i3, "libxp" as i4, "libxpm" as i5, "libxt" as i6, "openmotif" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxext" as i3, "libxp" as i4, "libxpm" as i5, "libxt" as i6, "openmotif" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "nedit",
@@ -58,7 +66,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nedit.rb"), formula)

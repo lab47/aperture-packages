@@ -99,9 +99,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairomm" as i3, "glibmm" as i4, "pango" as i5
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairomm" as i3, "glibmm" as i4, "pango" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairomm" as i3, "glibmm" as i4, "pango" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "pangomm",
@@ -112,7 +120,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pangomm.rb"), formula)

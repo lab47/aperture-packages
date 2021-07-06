@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "avro-c" as i0, "librdkafka" as i1, "libserdes" as i2, "yajl" as i3
+if platform.os == "darwin" {
+    import "avro-c" as i0, "librdkafka" as i1, "libserdes" as i2, "yajl" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "avro-c" as i0, "librdkafka" as i1, "libserdes" as i2, "yajl" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "kafkacat",
@@ -49,7 +57,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kafkacat.rb"), formula)

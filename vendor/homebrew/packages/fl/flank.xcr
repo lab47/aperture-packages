@@ -2,8 +2,8 @@ formula = r"""
 class Flank < Formula
   desc "Massively parallel Android and iOS test runner for Firebase Test Lab"
   homepage "https://github.com/Flank/flank"
-  url "https://github.com/Flank/flank/releases/download/v21.06.1/flank.jar"
-  sha256 "d1177b54ecebfd0f93ebf87f4818f03840eabdd13bb581b0e3f947177efce780"
+  url "https://github.com/Flank/flank/releases/download/v21.06.0/flank.jar"
+  sha256 "a0cca02a18378c4745e8013de7312ae6adf1152dffb82877f35d01117c02629c"
   license "Apache-2.0"
 
   livecheck do
@@ -12,7 +12,7 @@ class Flank < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "fff2e2364d18643d4a4b34e2bf2fa63ced1d34cb6718c6928eb1869c94bfd716"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7dd199fc3964d30d1311fe47b46dd62cc98e07da892f2bf6493b19c6815d1c4d"
   end
 
   depends_on "openjdk"
@@ -39,20 +39,28 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "flank",
-  version: "21.06.1",
+  version: "21.06.0",
   description: "Massively parallel Android and iOS test runner for Firebase Test Lab",
   url: "https://github.com/Flank/flank",
   metadata: %{
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flank.rb"), formula)

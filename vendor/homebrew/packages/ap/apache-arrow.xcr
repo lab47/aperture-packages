@@ -79,9 +79,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "llvm" as i2, "brotli" as i3, "glog" as i4, "grpc" as i5, "lz4" as i6, "numpy" as i7, "openssl@1.1" as i8, "protobuf" as i9, "python@3.9" as i10, "rapidjson" as i11, "re2" as i12, "snappy" as i13, "thrift" as i14, "zstd" as i15
+if platform.os == "darwin" {
+    import "boost" as i0, "cmake" as i1, "llvm" as i2, "brotli" as i3, "glog" as i4, "grpc" as i5, "lz4" as i6, "numpy" as i7, "openssl@1.1" as i8, "protobuf" as i9, "python@3.9" as i10, "rapidjson" as i11, "re2" as i12, "snappy" as i13, "thrift" as i14, "zstd" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+} else {
+    import "boost" as i0, "cmake" as i1, "llvm" as i2, "brotli" as i3, "glog" as i4, "grpc" as i5, "lz4" as i6, "numpy" as i7, "openssl@1.1" as i8, "protobuf" as i9, "python@3.9" as i10, "rapidjson" as i11, "re2" as i12, "snappy" as i13, "thrift" as i14, "zstd" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+}
 
 pkg(
   name: "apache-arrow",
@@ -92,7 +100,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apache-arrow.rb"), formula)

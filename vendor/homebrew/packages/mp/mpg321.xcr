@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libao" as i0, "libid3tag" as i1, "mad" as i2
+if platform.os == "darwin" {
+    import "libao" as i0, "libid3tag" as i1, "mad" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "libao" as i0, "libid3tag" as i1, "mad" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "mpg321",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mpg321.rb"), formula)

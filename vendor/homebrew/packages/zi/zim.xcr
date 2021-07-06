@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "adwaita-icon-theme" as i1, "graphviz" as i2, "gtk+3" as i3, "gtksourceview3" as i4, "pygobject3" as i5, "python@3.9" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "adwaita-icon-theme" as i1, "graphviz" as i2, "gtk+3" as i3, "gtksourceview3" as i4, "pygobject3" as i5, "python@3.9" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "adwaita-icon-theme" as i1, "graphviz" as i2, "gtk+3" as i3, "gtksourceview3" as i4, "pygobject3" as i5, "python@3.9" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "zim",
@@ -77,7 +85,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zim.rb"), formula)

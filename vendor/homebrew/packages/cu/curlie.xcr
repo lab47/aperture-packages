@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "curl" as i1
+if platform.os == "darwin" {
+    import "go" as i0, "curl" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "go" as i0, "curl" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "curlie",
@@ -43,7 +51,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "curlie.rb"), formula)

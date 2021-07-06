@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "python@3.9" as i5, "dbus" as i6, "gettext" as i7, "glib" as i8, "libx11" as i9, "libxtst" as i10, "xorgproto" as i11
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "python@3.9" as i5, "dbus" as i6, "gettext" as i7, "glib" as i8, "libx11" as i9, "libxtst" as i10, "xorgproto" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "gobject-introspection" as i0, "intltool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "python@3.9" as i5, "dbus" as i6, "gettext" as i7, "glib" as i8, "libx11" as i9, "libxtst" as i10, "xorgproto" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "at-spi2-core",
@@ -89,7 +97,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "at-spi2-core.rb"), formula)

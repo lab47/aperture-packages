@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "adns" as i3, "ncurses" as i4, "pcre" as i5, "readline" as i6, "readline" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "adns" as i3, "ncurses" as i4, "pcre" as i5, "readline" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "adns" as i3, "ncurses" as i4, "pcre" as i5, "readline" as i6, "readline" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "apachetop",
@@ -64,7 +72,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apachetop.rb"), formula)

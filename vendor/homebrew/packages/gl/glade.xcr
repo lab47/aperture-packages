@@ -128,9 +128,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "libxslt" as i3, "meson" as i4, "ninja" as i5, "pkg-config" as i6, "adwaita-icon-theme" as i7, "gettext" as i8, "gtk+3" as i9, "hicolor-icon-theme" as i10, "libxml2" as i11, "gtk-mac-integration" as i12
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "libxslt" as i3, "meson" as i4, "ninja" as i5, "pkg-config" as i6, "adwaita-icon-theme" as i7, "gettext" as i8, "gtk+3" as i9, "hicolor-icon-theme" as i10, "libxml2" as i11, "gtk-mac-integration" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "itstool" as i2, "libxslt" as i3, "meson" as i4, "ninja" as i5, "pkg-config" as i6, "adwaita-icon-theme" as i7, "gettext" as i8, "gtk+3" as i9, "hicolor-icon-theme" as i10, "libxml2" as i11, "gtk-mac-integration" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "glade",
@@ -141,7 +149,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "glade.rb"), formula)

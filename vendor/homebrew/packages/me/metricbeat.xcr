@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "mage" as i1, "python@3.9" as i2
+if platform.os == "darwin" {
+    import "go" as i0, "mage" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "go" as i0, "mage" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "metricbeat",
@@ -109,7 +117,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "metricbeat.rb"), formula)

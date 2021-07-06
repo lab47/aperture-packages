@@ -105,9 +105,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "extra-cmake-modules" as i3, "gettext" as i4, "ki18n" as i5, "karchive" as i6, "libxml2" as i7, "libxslt" as i8, "perl" as i9
+if platform.os == "darwin" {
+    import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "extra-cmake-modules" as i3, "gettext" as i4, "ki18n" as i5, "karchive" as i6, "libxml2" as i7, "libxslt" as i8, "perl" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "cmake" as i0, "docbook-xsl" as i1, "doxygen" as i2, "extra-cmake-modules" as i3, "gettext" as i4, "ki18n" as i5, "karchive" as i6, "libxml2" as i7, "libxslt" as i8, "perl" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "kdoctools",
@@ -118,7 +126,7 @@ pkg(
     "license": "BSD-3-Clause and GPL-2.0-or-later and LGPL-2.1-or-later and (LGPL-2.1-only or LGPL-3.0-only)",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kdoctools.rb"), formula)

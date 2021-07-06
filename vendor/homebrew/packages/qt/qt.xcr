@@ -244,9 +244,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "assimp" as i3, "brotli" as i4, "dbus" as i5, "double-conversion" as i6, "freetype" as i7, "glib" as i8, "icu4c" as i9, "jasper" as i10, "jpeg" as i11, "libb2" as i12, "libpng" as i13, "libproxy" as i14, "libtiff" as i15, "pcre2" as i16, "python@3.9" as i17, "sqlite" as i18, "webp" as i19, "zstd" as i20, "cups" as i21, "krb5" as i22, "perl" as i23, "zlib" as i24
+if platform.os == "darwin" {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "assimp" as i3, "brotli" as i4, "dbus" as i5, "double-conversion" as i6, "freetype" as i7, "glib" as i8, "icu4c" as i9, "jasper" as i10, "jpeg" as i11, "libb2" as i12, "libpng" as i13, "libproxy" as i14, "libtiff" as i15, "pcre2" as i16, "python@3.9" as i17, "sqlite" as i18, "webp" as i19, "zstd" as i20, "cups" as i21, "krb5" as i22, "perl" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+} else {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "assimp" as i3, "brotli" as i4, "dbus" as i5, "double-conversion" as i6, "freetype" as i7, "glib" as i8, "icu4c" as i9, "jasper" as i10, "jpeg" as i11, "libb2" as i12, "libpng" as i13, "libproxy" as i14, "libtiff" as i15, "pcre2" as i16, "python@3.9" as i17, "sqlite" as i18, "webp" as i19, "zstd" as i20, "cups" as i21, "krb5" as i22, "perl" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+}
 
 pkg(
   name: "qt",
@@ -257,7 +265,7 @@ pkg(
     "license": "GFDL-1.3-only and GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qt.rb"), formula)

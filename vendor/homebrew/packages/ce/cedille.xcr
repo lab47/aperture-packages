@@ -130,9 +130,17 @@ index 2505942..051a2da 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "agda" as i0, "haskell-stack" as i1, "ghc@8.8" as i2
+if platform.os == "darwin" {
+    import "agda" as i0, "haskell-stack" as i1, "ghc@8.8" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "agda" as i0, "haskell-stack" as i1, "ghc@8.8" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "cedille",
@@ -143,7 +151,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cedille.rb"), formula)

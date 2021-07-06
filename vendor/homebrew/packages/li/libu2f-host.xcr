@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "hidapi" as i1, "json-c" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "hidapi" as i1, "json-c" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "hidapi" as i1, "json-c" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "libu2f-host",
@@ -68,7 +76,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libu2f-host.rb"), formula)

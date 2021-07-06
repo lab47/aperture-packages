@@ -115,9 +115,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnome-common" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "clutter" as i5, "clutter-gtk" as i6, "gtk+3" as i7, "libsoup" as i8
+if platform.os == "darwin" {
+    import "gnome-common" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "clutter" as i5, "clutter-gtk" as i6, "gtk+3" as i7, "libsoup" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "gnome-common" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "clutter" as i5, "clutter-gtk" as i6, "gtk+3" as i7, "libsoup" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "libchamplain",
@@ -128,7 +136,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libchamplain.rb"), formula)

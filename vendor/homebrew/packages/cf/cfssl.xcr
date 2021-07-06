@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "libtool" as i1
+if platform.os == "darwin" {
+    import "go" as i0, "libtool" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "go" as i0, "libtool" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "cfssl",
@@ -79,7 +87,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cfssl.rb"), formula)

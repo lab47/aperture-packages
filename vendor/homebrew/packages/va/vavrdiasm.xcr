@@ -59,7 +59,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "vavrdiasm",
@@ -70,7 +78,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vavrdiasm.rb"), formula)

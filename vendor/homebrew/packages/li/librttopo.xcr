@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "geos" as i3
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "geos" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "geos" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "librttopo",
@@ -63,7 +71,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "librttopo.rb"), formula)

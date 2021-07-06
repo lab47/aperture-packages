@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "gtk+3" as i5, "hicolor-icon-theme" as i6, "json-glib" as i7, "libarchive" as i8, "libmagic" as i9
+if platform.os == "darwin" {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "gtk+3" as i5, "hicolor-icon-theme" as i6, "json-glib" as i7, "libarchive" as i8, "libmagic" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "gtk+3" as i5, "hicolor-icon-theme" as i6, "json-glib" as i7, "libarchive" as i8, "libmagic" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "file-roller",
@@ -63,7 +71,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "file-roller.rb"), formula)

@@ -77,9 +77,17 @@ index f587c70..0554824 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cabal-install" as i0, "ghc" as i1, "pandoc" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "pandoc-include-code",
@@ -90,7 +98,7 @@ pkg(
     "license": "MPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pandoc-include-code.rb"), formula)

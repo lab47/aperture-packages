@@ -161,9 +161,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gmp" as i3, "guile" as i4, "libidn2" as i5, "libtasn1" as i6, "libunistring" as i7, "nettle" as i8, "p11-kit" as i9, "unbound" as i10, "autogen" as i11
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gmp" as i3, "guile" as i4, "libidn2" as i5, "libtasn1" as i6, "libunistring" as i7, "nettle" as i8, "p11-kit" as i9, "unbound" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2, "gmp" as i3, "guile" as i4, "libidn2" as i5, "libtasn1" as i6, "libunistring" as i7, "nettle" as i8, "p11-kit" as i9, "unbound" as i10, "autogen" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "gnutls",
@@ -174,7 +182,7 @@ pkg(
     "license": "LGPL-2.1-or-later and GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnutls.rb"), formula)

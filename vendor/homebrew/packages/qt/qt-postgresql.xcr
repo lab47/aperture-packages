@@ -89,9 +89,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "postgresql" as i1, "qt" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "postgresql" as i1, "qt" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "postgresql" as i1, "qt" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "qt-postgresql",
@@ -102,7 +110,7 @@ pkg(
     "license": "GFDL-1.3-only and GPL-2.0-only and GPL-3.0-only and LGPL-2.1-only and LGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qt-postgresql.rb"), formula)

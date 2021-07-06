@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "bison" as i2, "help2man" as i3, "pkg-config" as i4, "cairo" as i5, "glpk" as i6, "graphviz" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "bison" as i2, "help2man" as i3, "pkg-config" as i4, "cairo" as i5, "glpk" as i6, "graphviz" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "autoconf" as i0, "automake" as i1, "bison" as i2, "help2man" as i3, "pkg-config" as i4, "cairo" as i5, "glpk" as i6, "graphviz" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "msc-generator",
@@ -58,7 +66,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "msc-generator.rb"), formula)

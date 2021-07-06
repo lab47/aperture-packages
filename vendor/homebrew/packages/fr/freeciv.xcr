@@ -92,9 +92,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "adwaita-icon-theme" as i1, "atk" as i2, "cairo" as i3, "freetype" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7, "gtk+3" as i8, "harfbuzz" as i9, "icu4c" as i10, "pango" as i11, "readline" as i12, "sdl2" as i13, "sdl2_mixer" as i14, "bzip2" as i15, "curl" as i16, "libiconv" as i17, "zlib" as i18
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "adwaita-icon-theme" as i1, "atk" as i2, "cairo" as i3, "freetype" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7, "gtk+3" as i8, "harfbuzz" as i9, "icu4c" as i10, "pango" as i11, "readline" as i12, "sdl2" as i13, "sdl2_mixer" as i14, "bzip2" as i15, "curl" as i16, "libiconv" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "pkg-config" as i0, "adwaita-icon-theme" as i1, "atk" as i2, "cairo" as i3, "freetype" as i4, "gdk-pixbuf" as i5, "gettext" as i6, "glib" as i7, "gtk+3" as i8, "harfbuzz" as i9, "icu4c" as i10, "pango" as i11, "readline" as i12, "sdl2" as i13, "sdl2_mixer" as i14, "bzip2" as i15, "curl" as i16, "libiconv" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "freeciv",
@@ -105,7 +113,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freeciv.rb"), formula)

@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "talloc" as i1, "perl" as i2, "sqlite" as i3, "readline" as i4
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0, "talloc" as i1, "perl" as i2, "sqlite" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "openssl@1.1" as i0, "talloc" as i1, "perl" as i2, "sqlite" as i3, "readline" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "freeradius-server",
@@ -74,7 +82,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freeradius-server.rb"), formula)

@@ -59,9 +59,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "ffmpeg" as i2, "glew" as i3, "libzip" as i4, "sdl2" as i5, "snappy" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "ffmpeg" as i2, "glew" as i3, "libzip" as i4, "sdl2" as i5, "snappy" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "ffmpeg" as i2, "glew" as i3, "libzip" as i4, "sdl2" as i5, "snappy" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "ppsspp",
@@ -72,7 +80,7 @@ pkg(
     "license": "GPL-2.0-or-later and BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ppsspp.rb"), formula)

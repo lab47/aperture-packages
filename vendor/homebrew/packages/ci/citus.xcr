@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lz4" as i0, "postgresql" as i1, "readline" as i2, "zstd" as i3
+if platform.os == "darwin" {
+    import "lz4" as i0, "postgresql" as i1, "readline" as i2, "zstd" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "lz4" as i0, "postgresql" as i1, "readline" as i2, "zstd" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "citus",
@@ -54,7 +62,7 @@ pkg(
     "license": "AGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "citus.rb"), formula)

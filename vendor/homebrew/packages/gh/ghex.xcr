@@ -74,9 +74,17 @@ index fdcdcc2..ac45c93 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gtk+3" as i4, "hicolor-icon-theme" as i5
+if platform.os == "darwin" {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gtk+3" as i4, "hicolor-icon-theme" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gtk+3" as i4, "hicolor-icon-theme" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "ghex",
@@ -87,7 +95,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ghex.rb"), formula)

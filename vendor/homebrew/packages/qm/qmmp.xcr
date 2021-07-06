@@ -83,9 +83,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "faad2" as i1, "ffmpeg" as i2, "flac" as i3, "libbs2b" as i4, "libmms" as i5, "libogg" as i6, "libsamplerate" as i7, "libsndfile" as i8, "libsoxr" as i9, "libvorbis" as i10, "mad" as i11, "mplayer" as i12, "musepack" as i13, "opus" as i14, "opusfile" as i15, "qt@5" as i16, "taglib" as i17
+if platform.os == "darwin" {
+    import "cmake" as i0, "faad2" as i1, "ffmpeg" as i2, "flac" as i3, "libbs2b" as i4, "libmms" as i5, "libogg" as i6, "libsamplerate" as i7, "libsndfile" as i8, "libsoxr" as i9, "libvorbis" as i10, "mad" as i11, "mplayer" as i12, "musepack" as i13, "opus" as i14, "opusfile" as i15, "qt@5" as i16, "taglib" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "cmake" as i0, "faad2" as i1, "ffmpeg" as i2, "flac" as i3, "libbs2b" as i4, "libmms" as i5, "libogg" as i6, "libsamplerate" as i7, "libsndfile" as i8, "libsoxr" as i9, "libvorbis" as i10, "mad" as i11, "mplayer" as i12, "musepack" as i13, "opus" as i14, "opusfile" as i15, "qt@5" as i16, "taglib" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "qmmp",
@@ -96,7 +104,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qmmp.rb"), formula)

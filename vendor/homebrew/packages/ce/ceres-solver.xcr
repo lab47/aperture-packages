@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "eigen" as i1, "gflags" as i2, "glog" as i3, "metis" as i4, "openblas" as i5, "suite-sparse" as i6, "tbb" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "eigen" as i1, "gflags" as i2, "glog" as i3, "metis" as i4, "openblas" as i5, "suite-sparse" as i6, "tbb" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "eigen" as i1, "gflags" as i2, "glog" as i3, "metis" as i4, "openblas" as i5, "suite-sparse" as i6, "tbb" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "ceres-solver",
@@ -75,7 +83,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ceres-solver.rb"), formula)

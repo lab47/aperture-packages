@@ -48,9 +48,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ant" as i0, "libreadline-java" as i1, "openjdk@8" as i2
+if platform.os == "darwin" {
+    import "ant" as i0, "libreadline-java" as i1, "openjdk@8" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "ant" as i0, "libreadline-java" as i1, "openjdk@8" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "henplus",
@@ -61,7 +69,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "henplus.rb"), formula)

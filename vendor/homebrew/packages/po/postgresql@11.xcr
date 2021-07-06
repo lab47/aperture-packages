@@ -162,9 +162,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3, "krb5" as i4, "libxml2" as i5, "libxslt" as i6, "openldap" as i7, "perl" as i8, "linux-pam" as i9, "util-linux" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3, "krb5" as i4, "libxml2" as i5, "libxslt" as i6, "openldap" as i7, "perl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "icu4c" as i1, "openssl@1.1" as i2, "readline" as i3, "krb5" as i4, "libxml2" as i5, "libxslt" as i6, "openldap" as i7, "perl" as i8, "linux-pam" as i9, "util-linux" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "postgresql@11",
@@ -175,7 +183,7 @@ pkg(
     "license": "PostgreSQL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "postgresql@11.rb"), formula)

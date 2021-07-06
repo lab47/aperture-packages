@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "git-annex" as i0, "rclone" as i1
+if platform.os == "darwin" {
+    import "git-annex" as i0, "rclone" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "git-annex" as i0, "rclone" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "git-annex-remote-rclone",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git-annex-remote-rclone.rb"), formula)

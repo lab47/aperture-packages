@@ -89,9 +89,17 @@ index b042070f..5e492e3f 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libevent" as i2, "libtool" as i3, "boost" as i4, "jsoncpp" as i5, "python@3.9" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libevent" as i2, "libtool" as i3, "boost" as i4, "jsoncpp" as i5, "python@3.9" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libevent" as i2, "libtool" as i3, "boost" as i4, "jsoncpp" as i5, "python@3.9" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "redex",
@@ -102,7 +110,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "redex.rb"), formula)

@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "giflib" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libx11" as i6, "libxcb" as i7, "libxext" as i8
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "freetype" as i1, "giflib" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libx11" as i6, "libxcb" as i7, "libxext" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "freetype" as i1, "giflib" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libx11" as i6, "libxcb" as i7, "libxext" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "imlib2",
@@ -56,7 +64,7 @@ pkg(
     "license": "Imlib2",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "imlib2.rb"), formula)

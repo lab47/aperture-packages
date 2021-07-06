@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gcc" as i0, "open-mpi" as i1
+if platform.os == "darwin" {
+    import "gcc" as i0, "open-mpi" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "gcc" as i0, "open-mpi" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "hypre",
@@ -60,7 +68,7 @@ pkg(
     "license": "MIT or Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hypre.rb"), formula)

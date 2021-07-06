@@ -81,9 +81,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "openssl@1.1" as i1, "pkg-config" as i2, "readline" as i3, "bzip2" as i4, "libffi" as i5, "ncurses" as i6, "xz" as i7, "zlib" as i8
+if platform.os == "darwin" {
+    import "autoconf" as i0, "openssl@1.1" as i1, "pkg-config" as i2, "readline" as i3, "bzip2" as i4, "libffi" as i5, "ncurses" as i6, "xz" as i7, "zlib" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "autoconf" as i0, "openssl@1.1" as i1, "pkg-config" as i2, "readline" as i3, "bzip2" as i4, "libffi" as i5, "ncurses" as i6, "xz" as i7, "zlib" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "pyenv",
@@ -94,7 +102,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pyenv.rb"), formula)

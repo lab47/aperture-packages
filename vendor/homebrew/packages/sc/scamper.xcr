@@ -31,9 +31,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "openssl@1.1" as i1
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "pkg-config" as i0, "openssl@1.1" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "scamper",
@@ -44,7 +52,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "scamper.rb"), formula)

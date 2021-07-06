@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "xz" as i0
+if platform.os == "darwin" {
+    import "xz" as i0
+    deps = [hi, i0]
+} else {
+    import "xz" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "rpm2cpio",
@@ -43,7 +51,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rpm2cpio.rb"), formula)

@@ -143,9 +143,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnu-sed" as i0, "openjdk" as i1, "pkg-config" as i2, "arpack" as i3, "epstool" as i4, "fftw" as i5, "fig2dev" as i6, "fltk" as i7, "fontconfig" as i8, "freetype" as i9, "gcc" as i10, "ghostscript" as i11, "gl2ps" as i12, "glpk" as i13, "gnuplot" as i14, "graphicsmagick" as i15, "hdf5" as i16, "libsndfile" as i17, "libtool" as i18, "openblas" as i19, "pcre" as i20, "portaudio" as i21, "pstoedit" as i22, "qhull" as i23, "qrupdate" as i24, "qscintilla2" as i25, "qt@5" as i26, "readline" as i27, "suite-sparse" as i28, "sundials" as i29, "texinfo" as i30, "curl" as i31, "autoconf" as i32, "automake" as i33, "mesa" as i34, "mesa-glu" as i35
+if platform.os == "darwin" {
+    import "gnu-sed" as i0, "openjdk" as i1, "pkg-config" as i2, "arpack" as i3, "epstool" as i4, "fftw" as i5, "fig2dev" as i6, "fltk" as i7, "fontconfig" as i8, "freetype" as i9, "gcc" as i10, "ghostscript" as i11, "gl2ps" as i12, "glpk" as i13, "gnuplot" as i14, "graphicsmagick" as i15, "hdf5" as i16, "libsndfile" as i17, "libtool" as i18, "openblas" as i19, "pcre" as i20, "portaudio" as i21, "pstoedit" as i22, "qhull" as i23, "qrupdate" as i24, "qscintilla2" as i25, "qt@5" as i26, "readline" as i27, "suite-sparse" as i28, "sundials" as i29, "texinfo" as i30, "curl" as i31
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31]
+} else {
+    import "gnu-sed" as i0, "openjdk" as i1, "pkg-config" as i2, "arpack" as i3, "epstool" as i4, "fftw" as i5, "fig2dev" as i6, "fltk" as i7, "fontconfig" as i8, "freetype" as i9, "gcc" as i10, "ghostscript" as i11, "gl2ps" as i12, "glpk" as i13, "gnuplot" as i14, "graphicsmagick" as i15, "hdf5" as i16, "libsndfile" as i17, "libtool" as i18, "openblas" as i19, "pcre" as i20, "portaudio" as i21, "pstoedit" as i22, "qhull" as i23, "qrupdate" as i24, "qscintilla2" as i25, "qt@5" as i26, "readline" as i27, "suite-sparse" as i28, "sundials" as i29, "texinfo" as i30, "curl" as i31, "autoconf" as i32, "automake" as i33, "mesa" as i34, "mesa-glu" as i35
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35]
+}
 
 pkg(
   name: "octave",
@@ -156,7 +164,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i32, i33, i34, i35],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "octave.rb"), formula)

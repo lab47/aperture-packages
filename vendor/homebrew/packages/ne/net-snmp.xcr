@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+} else {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "net-snmp",
@@ -79,7 +87,7 @@ pkg(
     "license": "Net-SNMP",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "net-snmp.rb"), formula)

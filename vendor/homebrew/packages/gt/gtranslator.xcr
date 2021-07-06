@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "glib" as i4, "gspell" as i5, "gtk+3" as i6, "gtksourceview4" as i7, "iso-codes" as i8, "itstool" as i9, "json-glib" as i10, "libdazzle" as i11, "libgda" as i12, "libhandy" as i13, "libsoup" as i14
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "glib" as i4, "gspell" as i5, "gtk+3" as i6, "gtksourceview4" as i7, "iso-codes" as i8, "itstool" as i9, "json-glib" as i10, "libdazzle" as i11, "libgda" as i12, "libhandy" as i13, "libsoup" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "glib" as i4, "gspell" as i5, "gtk+3" as i6, "gtksourceview4" as i7, "iso-codes" as i8, "itstool" as i9, "json-glib" as i10, "libdazzle" as i11, "libgda" as i12, "libhandy" as i13, "libsoup" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "gtranslator",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gtranslator.rb"), formula)

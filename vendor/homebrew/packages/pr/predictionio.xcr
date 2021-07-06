@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "apache-spark" as i0, "elasticsearch@6" as i1, "hadoop" as i2, "hbase" as i3, "openjdk@8" as i4
+if platform.os == "darwin" {
+    import "apache-spark" as i0, "elasticsearch@6" as i1, "hadoop" as i2, "hbase" as i3, "openjdk@8" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "apache-spark" as i0, "elasticsearch@6" as i1, "hadoop" as i2, "hbase" as i3, "openjdk@8" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "predictionio",
@@ -46,7 +54,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "predictionio.rb"), formula)

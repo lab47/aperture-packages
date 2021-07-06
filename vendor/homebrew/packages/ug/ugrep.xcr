@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pcre2" as i0, "xz" as i1
+if platform.os == "darwin" {
+    import "pcre2" as i0, "xz" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "pcre2" as i0, "xz" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "ugrep",
@@ -49,7 +57,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ugrep.rb"), formula)

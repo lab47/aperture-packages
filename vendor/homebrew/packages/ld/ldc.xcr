@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libconfig" as i1, "pkg-config" as i2, "llvm" as i3, "libxml2" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "libconfig" as i1, "pkg-config" as i2, "llvm" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "libconfig" as i1, "pkg-config" as i2, "llvm" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "ldc",
@@ -109,7 +117,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ldc.rb"), formula)

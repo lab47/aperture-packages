@@ -84,9 +84,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "luarocks" as i1, "ffmpeg" as i2, "freetype" as i3, "lua@5.3" as i4, "sdl2" as i5, "sdl2_mixer" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "luarocks" as i1, "ffmpeg" as i2, "freetype" as i3, "lua@5.3" as i4, "sdl2" as i5, "sdl2_mixer" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "luarocks" as i1, "ffmpeg" as i2, "freetype" as i3, "lua@5.3" as i4, "sdl2" as i5, "sdl2_mixer" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "corsixth",
@@ -97,7 +105,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "corsixth.rb"), formula)

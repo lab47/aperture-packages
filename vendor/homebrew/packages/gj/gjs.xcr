@@ -119,9 +119,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf@2.13" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.8" as i4, "rust" as i5, "gobject-introspection" as i6, "gtk+3" as i7, "llvm" as i8, "nspr" as i9, "readline" as i10
+if platform.os == "darwin" {
+    import "autoconf@2.13" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.8" as i4, "rust" as i5, "gobject-introspection" as i6, "gtk+3" as i7, "llvm" as i8, "nspr" as i9, "readline" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "autoconf@2.13" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "python@3.8" as i4, "rust" as i5, "gobject-introspection" as i6, "gtk+3" as i7, "llvm" as i8, "nspr" as i9, "readline" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "gjs",
@@ -132,7 +140,7 @@ pkg(
     "license": "LGPL-2.0-or-later and MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gjs.rb"), formula)

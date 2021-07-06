@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ponyc" as i0
+if platform.os == "darwin" {
+    import "ponyc" as i0
+    deps = [hi, i0]
+} else {
+    import "ponyc" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "pony-stable",
@@ -51,7 +59,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pony-stable.rb"), formula)

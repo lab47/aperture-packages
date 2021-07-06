@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "jq" as i0, "python@3.9" as i1
+if platform.os == "darwin" {
+    import "jq" as i0, "python@3.9" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "jq" as i0, "python@3.9" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "python-yq",
@@ -90,7 +98,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "python-yq.rb"), formula)

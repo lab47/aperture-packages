@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libice" as i0, "libpng" as i1, "libsm" as i2, "libx11" as i3, "libxaw" as i4, "libxt" as i5, "netcdf" as i6, "udunits" as i7, "libxext" as i8
+if platform.os == "darwin" {
+    import "libice" as i0, "libpng" as i1, "libsm" as i2, "libx11" as i3, "libxaw" as i4, "libxt" as i5, "netcdf" as i6, "udunits" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "libice" as i0, "libpng" as i1, "libsm" as i2, "libx11" as i3, "libxaw" as i4, "libxt" as i5, "netcdf" as i6, "udunits" as i7, "libxext" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "ncview",
@@ -71,7 +79,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncview.rb"), formula)

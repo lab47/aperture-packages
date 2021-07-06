@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "docbook" as i2, "ghostscript" as i3, "libtool" as i4, "xmlto" as i5, "gettext" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "docbook" as i2, "ghostscript" as i3, "libtool" as i4, "xmlto" as i5, "gettext" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "docbook" as i2, "ghostscript" as i3, "libtool" as i4, "xmlto" as i5, "gettext" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "open-sp",
@@ -68,7 +76,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "open-sp.rb"), formula)

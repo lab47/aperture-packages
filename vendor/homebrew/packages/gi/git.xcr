@@ -216,9 +216,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0, "pcre2" as i1, "curl" as i2, "expat" as i3, "openssl@1.1" as i4, "zlib" as i5, "linux-headers" as i6
+if platform.os == "darwin" {
+    import "gettext" as i0, "pcre2" as i1, "curl" as i2, "expat" as i3, "openssl@1.1" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "gettext" as i0, "pcre2" as i1, "curl" as i2, "expat" as i3, "openssl@1.1" as i4, "zlib" as i5, "linux-headers" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "git",
@@ -229,7 +237,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "git.rb"), formula)

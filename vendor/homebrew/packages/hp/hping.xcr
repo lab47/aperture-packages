@@ -87,7 +87,15 @@ index 3d0ea58..a8a9699 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "hping",
@@ -98,7 +106,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hping.rb"), formula)

@@ -106,9 +106,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "json-glib" as i6, "libarchive" as i7, "libgee" as i8, "libsoup" as i9
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "json-glib" as i6, "libarchive" as i7, "libgee" as i8, "libsoup" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "json-glib" as i6, "libarchive" as i7, "libgee" as i8, "libsoup" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "libhttpseverywhere",
@@ -119,7 +127,7 @@ pkg(
     "license": "LGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libhttpseverywhere.rb"), formula)

@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2, "ncurses" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2, "ncurses" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cabal-install" as i0, "ghc@8.8" as i1, "hpack" as i2, "ncurses" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "taskell",
@@ -59,7 +67,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "taskell.rb"), formula)

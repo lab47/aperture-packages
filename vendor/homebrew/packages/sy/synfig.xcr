@@ -128,9 +128,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "pkg-config" as i1, "boost" as i2, "cairo" as i3, "etl" as i4, "fftw" as i5, "freetype" as i6, "gettext" as i7, "libpng" as i8, "libsigc++@2" as i9, "libtool" as i10, "libxml++" as i11, "mlt" as i12, "openexr" as i13, "pango" as i14
+if platform.os == "darwin" {
+    import "intltool" as i0, "pkg-config" as i1, "boost" as i2, "cairo" as i3, "etl" as i4, "fftw" as i5, "freetype" as i6, "gettext" as i7, "libpng" as i8, "libsigc++@2" as i9, "libtool" as i10, "libxml++" as i11, "mlt" as i12, "openexr" as i13, "pango" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "intltool" as i0, "pkg-config" as i1, "boost" as i2, "cairo" as i3, "etl" as i4, "fftw" as i5, "freetype" as i6, "gettext" as i7, "libpng" as i8, "libsigc++@2" as i9, "libtool" as i10, "libxml++" as i11, "mlt" as i12, "openexr" as i13, "pango" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "synfig",
@@ -141,7 +149,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "synfig.rb"), formula)

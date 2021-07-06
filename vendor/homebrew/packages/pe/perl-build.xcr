@@ -140,9 +140,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "perl" as i0
+if platform.os == "darwin" {
+    import "perl" as i0
+    deps = [hi, i0]
+} else {
+    import "perl" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "perl-build",
@@ -153,7 +161,7 @@ pkg(
     "license": "Artistic-1.0 or GPL-1.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "perl-build.rb"), formula)

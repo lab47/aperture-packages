@@ -67,9 +67,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0
+if platform.os == "darwin" {
+    import "gettext" as i0
+    deps = [hi, i0]
+} else {
+    import "gettext" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "dc3dd",
@@ -80,7 +88,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dc3dd.rb"), formula)

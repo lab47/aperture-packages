@@ -46,7 +46,7 @@ class OpenshiftCli < Formula
         system "make", "cross-build-darwin-amd64", "WHAT=staging/src/github.com/openshift/oc/cmd/oc"
       end
 
-      bin.install "_output//bin/darwin_amd64/oc"
+      bin.install "_output//bin/#{OS.mac? ? "darwin" : "linux"}_amd64/oc"
 
       bash_completion.install "contrib/completions/bash/oc"
       zsh_completion.install "contrib/completions/zsh/oc" => "_oc"
@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3, "krb5" as i4
+if platform.os == "darwin" {
+    import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3, "krb5" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "coreutils" as i0, "go" as i1, "heimdal" as i2, "socat" as i3, "krb5" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "openshift-cli",
@@ -77,7 +85,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openshift-cli.rb"), formula)

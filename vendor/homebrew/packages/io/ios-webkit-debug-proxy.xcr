@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libimobiledevice" as i4, "libplist" as i5, "openssl@1.1" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libimobiledevice" as i4, "libplist" as i5, "openssl@1.1" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libimobiledevice" as i4, "libplist" as i5, "openssl@1.1" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "ios-webkit-debug-proxy",
@@ -59,7 +67,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ios-webkit-debug-proxy.rb"), formula)

@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "pkg-config" as i2
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "autoconf" as i0, "automake" as i1, "pkg-config" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "cmusfm",
@@ -90,7 +98,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cmusfm.rb"), formula)

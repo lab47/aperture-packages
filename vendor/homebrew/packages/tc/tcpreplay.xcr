@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libdnet" as i0
+if platform.os == "darwin" {
+    import "libdnet" as i0
+    deps = [hi, i0]
+} else {
+    import "libdnet" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "tcpreplay",
@@ -43,7 +51,7 @@ pkg(
     "license": "BSD-2-Clause and BSD-3-Clause and BSD-4-Clause and GPL-3.0-or-later and ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tcpreplay.rb"), formula)

@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "doxygen" as i0, "zeromq" as i1
+if platform.os == "darwin" {
+    import "doxygen" as i0, "zeromq" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "doxygen" as i0, "zeromq" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "zmqpp",
@@ -58,7 +66,7 @@ pkg(
     "license": "MPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zmqpp.rb"), formula)

@@ -48,9 +48,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "tcl-tk" as i0
+if platform.os == "darwin" {
+    import "tcl-tk" as i0
+    deps = [hi, i0]
+} else {
+    import "tcl-tk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "wordnet",
@@ -61,7 +69,7 @@ pkg(
     "license": "Cannot Represent",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wordnet.rb"), formula)

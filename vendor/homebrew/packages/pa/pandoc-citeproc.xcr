@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc@8.8" as i1, "pandoc" as i2, "unzip" as i3
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "ghc@8.8" as i1, "pandoc" as i2, "unzip" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cabal-install" as i0, "ghc@8.8" as i1, "pandoc" as i2, "unzip" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "pandoc-citeproc",
@@ -75,7 +83,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pandoc-citeproc.rb"), formula)

@@ -106,9 +106,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3
+if platform.os == "darwin" {
+    import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "traefik@1",
@@ -119,7 +127,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "traefik@1.rb"), formula)

@@ -120,9 +120,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "ghc" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cabal-install" as i0, "ghc" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "skylighting",
@@ -133,7 +141,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "skylighting.rb"), formula)

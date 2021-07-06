@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "chezscheme" as i0, "coreutils" as i1
+if platform.os == "darwin" {
+    import "chezscheme" as i0, "coreutils" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "chezscheme" as i0, "coreutils" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "idris2",
@@ -56,7 +64,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "idris2.rb"), formula)

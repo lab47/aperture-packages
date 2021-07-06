@@ -73,9 +73,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "itstool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "djvulibre" as i6, "gspell" as i7, "gtk+3" as i8, "hicolor-icon-theme" as i9, "libarchive" as i10, "libgxps" as i11, "libhandy" as i12, "libsecret" as i13, "libspectre" as i14, "poppler" as i15, "python@3.9" as i16
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "itstool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "djvulibre" as i6, "gspell" as i7, "gtk+3" as i8, "hicolor-icon-theme" as i9, "libarchive" as i10, "libgxps" as i11, "libhandy" as i12, "libsecret" as i13, "libspectre" as i14, "poppler" as i15, "python@3.9" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+} else {
+    import "gobject-introspection" as i0, "itstool" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "djvulibre" as i6, "gspell" as i7, "gtk+3" as i8, "hicolor-icon-theme" as i9, "libarchive" as i10, "libgxps" as i11, "libhandy" as i12, "libsecret" as i13, "libspectre" as i14, "poppler" as i15, "python@3.9" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+}
 
 pkg(
   name: "evince",
@@ -86,7 +94,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "evince.rb"), formula)

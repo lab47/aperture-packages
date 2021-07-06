@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "bison" as i1, "flex" as i2, "gperf" as i3, "bzip2" as i4, "zlib" as i5, "readline" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "bison" as i1, "flex" as i2, "gperf" as i3, "bzip2" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "autoconf" as i0, "bison" as i1, "flex" as i2, "gperf" as i3, "bzip2" as i4, "zlib" as i5, "readline" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "icarus-verilog",
@@ -79,7 +87,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "icarus-verilog.rb"), formula)

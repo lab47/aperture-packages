@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "dcraw" as i1, "gettext" as i2, "glib" as i3, "jasper" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "little-cms2" as i8
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "dcraw" as i1, "gettext" as i2, "glib" as i3, "jasper" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "little-cms2" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "dcraw" as i1, "gettext" as i2, "glib" as i3, "jasper" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "little-cms2" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "ufraw",
@@ -68,7 +76,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ufraw.rb"), formula)

@@ -53,9 +53,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "automake" as i0
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "automake" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "urlview",
@@ -66,7 +73,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "urlview.rb"), formula)

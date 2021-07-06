@@ -125,9 +125,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0, "zookeeper" as i1
+if platform.os == "darwin" {
+    import "openjdk" as i0, "zookeeper" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "openjdk" as i0, "zookeeper" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "kafka",
@@ -138,7 +146,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kafka.rb"), formula)

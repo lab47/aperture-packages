@@ -2,16 +2,16 @@ formula = r"""
 class NewrelicCli < Formula
   desc "Command-line interface for New Relic"
   homepage "https://github.com/newrelic/newrelic-cli"
-  url "https://github.com/newrelic/newrelic-cli/archive/v0.28.11.tar.gz"
-  sha256 "c45a6778bd30254f653f55cb71ec80f730f7b89e836f7a7b9649fa33a4d80de9"
+  url "https://github.com/newrelic/newrelic-cli/archive/v0.28.7.tar.gz"
+  sha256 "da74a6106946119535d8f058485b57becbec0b3af5d5bbbaaab7c773dd8a1e5e"
   license "Apache-2.0"
   head "https://github.com/newrelic/newrelic-cli.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "faadf12938015c63abed631320d8de4664adba1e7499f21128559ec18d82c40e"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e4d3c6b631ee9d0684a4a18f2736502cac7779089a68b7eaaf2f484a0d58055c"
-    sha256 cellar: :any_skip_relocation, catalina:      "19b860435102295e49e4857b4223e7993807b6f4d2f9f2fca3e9f318d4c210b2"
-    sha256 cellar: :any_skip_relocation, mojave:        "5295a32af776ee7e228f8879a3e98f524d6845a929171b90c398237cec6bac74"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "f4b070609bb7e077cb9d33e468d2723127ba5b6fd5fc6dce33d78c5a000887a9"
+    sha256 cellar: :any_skip_relocation, big_sur:       "a18ced0e46975b80d951bdbfdc06bb52eff3a8e31c9f1abe0db06676b3859cea"
+    sha256 cellar: :any_skip_relocation, catalina:      "990ab97e7e78c8eae31fb6925d6ee9daee828f1cf7808dd49b50f107e1b29049"
+    sha256 cellar: :any_skip_relocation, mojave:        "aa4297af8bd3fdfbed8a1bf676d00d0d22d08be054f41e28abc0a5afdfd5ee72"
   end
 
   depends_on "go" => :build
@@ -37,20 +37,28 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0
+if platform.os == "darwin" {
+    import "go" as i0
+    deps = [hi, i0]
+} else {
+    import "go" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "newrelic-cli",
-  version: "0.28.11",
+  version: "0.28.7",
   description: "Command-line interface for New Relic",
   url: "https://github.com/newrelic/newrelic-cli",
   metadata: %{
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "newrelic-cli.rb"), formula)

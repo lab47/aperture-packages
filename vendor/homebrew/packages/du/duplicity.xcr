@@ -590,9 +590,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gnupg" as i3, "gpatch" as i4, "libffi" as i5, "librsync" as i6, "libxslt" as i7, "libyaml" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "rust" as i15, "six" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gnupg" as i3, "libffi" as i4, "librsync" as i5, "libxslt" as i6, "libyaml" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "six" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+} else {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gnupg" as i3, "libffi" as i4, "librsync" as i5, "libxslt" as i6, "libyaml" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "six" as i15, "sqlite" as i16, "unzip" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "duplicity",
@@ -603,7 +611,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "duplicity.rb"), formula)

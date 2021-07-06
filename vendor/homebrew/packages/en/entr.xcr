@@ -60,7 +60,15 @@ index ebe535a2dc18baf1cc58db3d96a20db6822c61e7..e137919d4c11051ffa0b87691bb771f6
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "entr",
@@ -71,7 +79,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "entr.rb"), formula)

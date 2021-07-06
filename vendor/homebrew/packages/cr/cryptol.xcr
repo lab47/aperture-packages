@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "ghc" as i1, "z3" as i2, "ncurses" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "ghc" as i1, "z3" as i2, "ncurses" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cabal-install" as i0, "ghc" as i1, "z3" as i2, "ncurses" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "cryptol",
@@ -51,7 +59,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cryptol.rb"), formula)

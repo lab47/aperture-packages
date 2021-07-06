@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "subversion" as i0, "autoconf" as i1, "automake" as i2, "boost" as i3
+if platform.os == "darwin" {
+    import "subversion" as i0, "autoconf" as i1, "automake" as i2, "boost" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "subversion" as i0, "autoconf" as i1, "automake" as i2, "boost" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "fuego",
@@ -56,7 +64,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fuego.rb"), formula)

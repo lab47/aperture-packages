@@ -93,9 +93,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "open-mpi" as i0, "gcc" as i1
+if platform.os == "darwin" {
+    import "open-mpi" as i0, "gcc" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "open-mpi" as i0, "gcc" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "fftw",
@@ -106,7 +114,7 @@ pkg(
     "license": "GPL-2.0-or-later and BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fftw.rb"), formula)

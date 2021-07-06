@@ -100,9 +100,16 @@ index 15fdd1d..29d738d 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libcap" as i0
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "libcap" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "fakeroot",
@@ -113,7 +120,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fakeroot.rb"), formula)

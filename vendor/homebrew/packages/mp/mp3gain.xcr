@@ -31,9 +31,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "mpg123" as i0
+if platform.os == "darwin" {
+    import "mpg123" as i0
+    deps = [hi, i0]
+} else {
+    import "mpg123" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "mp3gain",
@@ -44,7 +52,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mp3gain.rb"), formula)

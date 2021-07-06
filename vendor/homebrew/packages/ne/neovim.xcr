@@ -124,9 +124,17 @@ index 6b3a8dc..f3370e3 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "luarocks" as i1, "pkg-config" as i2, "gettext" as i3, "libtermkey" as i4, "libuv" as i5, "libvterm" as i6, "luajit-openresty" as i7, "luv" as i8, "msgpack" as i9, "unibilium" as i10, "gperf" as i11, "unzip" as i12, "libnsl" as i13
+if platform.os == "darwin" {
+    import "cmake" as i0, "luarocks" as i1, "pkg-config" as i2, "gettext" as i3, "libtermkey" as i4, "libuv" as i5, "libvterm" as i6, "luajit-openresty" as i7, "luv" as i8, "msgpack" as i9, "unibilium" as i10, "gperf" as i11, "unzip" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "cmake" as i0, "luarocks" as i1, "pkg-config" as i2, "gettext" as i3, "libtermkey" as i4, "libuv" as i5, "libvterm" as i6, "luajit-openresty" as i7, "luv" as i8, "msgpack" as i9, "unibilium" as i10, "gperf" as i11, "unzip" as i12, "libnsl" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "neovim",
@@ -137,7 +145,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neovim.rb"), formula)

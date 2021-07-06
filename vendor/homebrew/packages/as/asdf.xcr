@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "coreutils" as i2, "libtool" as i3, "libyaml" as i4, "openssl@1.1" as i5, "readline" as i6, "unixodbc" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "coreutils" as i2, "libtool" as i3, "libyaml" as i4, "openssl@1.1" as i5, "readline" as i6, "unixodbc" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "autoconf" as i0, "automake" as i1, "coreutils" as i2, "libtool" as i3, "libyaml" as i4, "openssl@1.1" as i5, "readline" as i6, "unixodbc" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "asdf",
@@ -54,7 +62,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "asdf.rb"), formula)

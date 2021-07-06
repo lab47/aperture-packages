@@ -23,9 +23,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pyenv" as i0
+if platform.os == "darwin" {
+    import "pyenv" as i0
+    deps = [hi, i0]
+} else {
+    import "pyenv" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "pyenv-virtualenvwrapper",
@@ -36,7 +44,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pyenv-virtualenvwrapper.rb"), formula)

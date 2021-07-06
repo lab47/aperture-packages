@@ -641,9 +641,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "rust" as i1, "libyaml" as i2, "openssl@1.1" as i3, "python@3.7" as i4, "krb5" as i5, "libffi" as i6, "libxslt" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "rust" as i1, "libyaml" as i2, "openssl@1.1" as i3, "python@3.7" as i4, "krb5" as i5, "libffi" as i6, "libxslt" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "rust" as i1, "libyaml" as i2, "openssl@1.1" as i3, "python@3.7" as i4, "krb5" as i5, "libffi" as i6, "libxslt" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "ansible@2.8",
@@ -654,7 +662,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible@2.8.rb"), formula)

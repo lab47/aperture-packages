@@ -65,9 +65,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "googletest" as i1, "pkg-config" as i2, "rust" as i3, "boost" as i4, "fmt" as i5, "folly" as i6, "gflags" as i7, "glog" as i8, "libevent" as i9, "openssl@1.1" as i10, "pcre" as i11, "python@3.9" as i12, "gcc" as i13
+if platform.os == "darwin" {
+    import "cmake" as i0, "googletest" as i1, "pkg-config" as i2, "rust" as i3, "boost" as i4, "fmt" as i5, "folly" as i6, "gflags" as i7, "glog" as i8, "libevent" as i9, "openssl@1.1" as i10, "pcre" as i11, "python@3.9" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "cmake" as i0, "googletest" as i1, "pkg-config" as i2, "rust" as i3, "boost" as i4, "fmt" as i5, "folly" as i6, "gflags" as i7, "glog" as i8, "libevent" as i9, "openssl@1.1" as i10, "pcre" as i11, "python@3.9" as i12, "gcc" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "watchman",
@@ -78,7 +86,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "watchman.rb"), formula)

@@ -29,9 +29,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lzip" as i0
+if platform.os == "darwin" {
+    import "lzip" as i0
+    deps = [hi, i0]
+} else {
+    import "lzip" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ddrescue",
@@ -42,7 +50,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ddrescue.rb"), formula)

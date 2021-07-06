@@ -102,9 +102,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "nasm" as i0
+if platform.os == "darwin" {
+    import "nasm" as i0
+    deps = [hi, i0]
+} else {
+    import "nasm" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "x264",
@@ -115,7 +123,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "x264.rb"), formula)

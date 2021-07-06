@@ -74,9 +74,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "help2man" as i0, "gettext" as i1, "bison" as i2, "m4" as i3
+if platform.os == "darwin" {
+    import "help2man" as i0, "gettext" as i1, "bison" as i2, "m4" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "help2man" as i0, "gettext" as i1, "bison" as i2, "m4" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "flex",
@@ -87,7 +95,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flex.rb"), formula)

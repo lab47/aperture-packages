@@ -23,9 +23,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libyaml" as i0
+if platform.os == "darwin" {
+    import "libyaml" as i0
+    deps = [hi, i0]
+} else {
+    import "libyaml" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ansible-cmdb",
@@ -36,7 +44,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ansible-cmdb.rb"), formula)

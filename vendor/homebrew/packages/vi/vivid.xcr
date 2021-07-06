@@ -27,9 +27,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "rust" as i0
+if platform.os == "darwin" {
+    import "rust" as i0
+    deps = [hi, i0]
+} else {
+    import "rust" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "vivid",
@@ -40,7 +48,7 @@ pkg(
     "license": "MIT or Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vivid.rb"), formula)

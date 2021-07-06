@@ -116,9 +116,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "scons" as i1, "apr" as i2, "apr-util" as i3, "openssl@1.1" as i4, "sqlite" as i5
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "scons" as i1, "apr" as i2, "apr-util" as i3, "openssl@1.1" as i4, "sqlite" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "pkg-config" as i0, "scons" as i1, "apr" as i2, "apr-util" as i3, "openssl@1.1" as i4, "sqlite" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "subversion@1.8",
@@ -129,7 +137,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "subversion@1.8.rb"), formula)

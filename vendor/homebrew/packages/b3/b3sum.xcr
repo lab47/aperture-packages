@@ -34,9 +34,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "rust" as i0
+if platform.os == "darwin" {
+    import "rust" as i0
+    deps = [hi, i0]
+} else {
+    import "rust" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "b3sum",
@@ -47,7 +55,7 @@ pkg(
     "license": "CC0-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "b3sum.rb"), formula)

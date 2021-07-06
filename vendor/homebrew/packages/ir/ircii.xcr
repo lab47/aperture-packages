@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+} else {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ircii",
@@ -62,7 +70,7 @@ pkg(
     "license": "BSD-3-Clause and BSD-2-Clause and GPL-2.0-or-later and MIT and Public Domain",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ircii.rb"), formula)

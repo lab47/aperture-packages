@@ -270,9 +270,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" as i3, "xz" as i4, "terminal-notifier" as i5
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" as i3, "xz" as i4, "terminal-notifier" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "gobject-introspection" as i0, "gtk+" as i1, "libidn" as i2, "ruby@2.7" as i3, "xz" as i4, "terminal-notifier" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "mikutter",
@@ -283,7 +291,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mikutter.rb"), formula)

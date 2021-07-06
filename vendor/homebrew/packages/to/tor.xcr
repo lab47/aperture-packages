@@ -91,9 +91,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libevent" as i1, "libscrypt" as i2, "openssl@1.1" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "libevent" as i1, "libscrypt" as i2, "openssl@1.1" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "libevent" as i1, "libscrypt" as i2, "openssl@1.1" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "tor",
@@ -104,7 +112,7 @@ pkg(
     "license": "BSD-2-Clause and BSD-3-Clause and MIT and NCSA",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tor.rb"), formula)

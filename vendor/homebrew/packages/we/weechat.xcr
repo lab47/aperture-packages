@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "cmake" as i1, "pkg-config" as i2, "aspell" as i3, "gettext" as i4, "gnutls" as i5, "libgcrypt" as i6, "lua" as i7, "ncurses" as i8, "perl" as i9, "python@3.9" as i10, "ruby" as i11, "curl" as i12, "tcl-tk" as i13, "libiconv" as i14
+if platform.os == "darwin" {
+    import "asciidoctor" as i0, "cmake" as i1, "pkg-config" as i2, "aspell" as i3, "gettext" as i4, "gnutls" as i5, "libgcrypt" as i6, "lua" as i7, "ncurses" as i8, "perl" as i9, "python@3.9" as i10, "ruby" as i11, "curl" as i12, "tcl-tk" as i13, "libiconv" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "asciidoctor" as i0, "cmake" as i1, "pkg-config" as i2, "aspell" as i3, "gettext" as i4, "gnutls" as i5, "libgcrypt" as i6, "lua" as i7, "ncurses" as i8, "perl" as i9, "python@3.9" as i10, "ruby" as i11, "curl" as i12, "tcl-tk" as i13, "libiconv" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "weechat",
@@ -77,7 +85,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "weechat.rb"), formula)

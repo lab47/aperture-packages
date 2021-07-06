@@ -39,9 +39,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ffmpeg" as i1, "graphicsmagick" as i2, "jpeg-turbo" as i3, "libexif" as i4, "libpng" as i5, "openslide" as i6, "webp" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "ffmpeg" as i1, "graphicsmagick" as i2, "jpeg-turbo" as i3, "libexif" as i4, "libpng" as i5, "openslide" as i6, "webp" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "ffmpeg" as i1, "graphicsmagick" as i2, "jpeg-turbo" as i3, "libexif" as i4, "libpng" as i5, "openslide" as i6, "webp" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "timg",
@@ -52,7 +60,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "timg.rb"), formula)

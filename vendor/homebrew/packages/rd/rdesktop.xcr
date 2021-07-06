@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gnutls" as i1, "libao" as i2, "libtasn1" as i3, "libx11" as i4, "libxcursor" as i5, "libxrandr" as i6, "nettle" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gnutls" as i1, "libao" as i2, "libtasn1" as i3, "libx11" as i4, "libxcursor" as i5, "libxrandr" as i6, "nettle" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "gnutls" as i1, "libao" as i2, "libtasn1" as i3, "libx11" as i4, "libxcursor" as i5, "libxrandr" as i6, "nettle" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "rdesktop",
@@ -57,7 +65,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rdesktop.rb"), formula)

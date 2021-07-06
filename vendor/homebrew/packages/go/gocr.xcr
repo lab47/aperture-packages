@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "jpeg" as i0, "netpbm" as i1
+if platform.os == "darwin" {
+    import "jpeg" as i0, "netpbm" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "jpeg" as i0, "netpbm" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "gocr",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gocr.rb"), formula)

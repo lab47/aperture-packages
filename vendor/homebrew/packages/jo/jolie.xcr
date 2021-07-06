@@ -6,6 +6,10 @@ class Jolie < Formula
   sha256 "45f4882b9e78dac8728fe75b7ae827799a441b3298c5d2b585ae0d85c5f07fb7"
   license "LGPL-2.1-only"
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, all: "c924ac39aa0b2efce9222c45cfb9eb82eb261da9425d3454c82cc26199ff03f0"
+  end
+
   depends_on "openjdk"
 
   def install
@@ -61,9 +65,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "jolie",
@@ -74,7 +86,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "jolie.rb"), formula)

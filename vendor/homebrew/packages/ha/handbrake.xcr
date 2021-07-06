@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "meson" as i4, "nasm" as i5, "ninja" as i6, "pkg-config" as i7, "python@3.9" as i8, "yasm" as i9, "m4" as i10, "libxml2" as i11, "jansson" as i12, "numactl" as i13, "opus" as i14
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "meson" as i4, "nasm" as i5, "ninja" as i6, "pkg-config" as i7, "python@3.9" as i8, "yasm" as i9, "m4" as i10, "libxml2" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "meson" as i4, "nasm" as i5, "ninja" as i6, "pkg-config" as i7, "python@3.9" as i8, "yasm" as i9, "m4" as i10, "libxml2" as i11, "jansson" as i12, "numactl" as i13, "opus" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "handbrake",
@@ -69,7 +77,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "handbrake.rb"), formula)

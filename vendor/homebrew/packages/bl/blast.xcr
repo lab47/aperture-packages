@@ -71,9 +71,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lmdb" as i0, "bzip2" as i1, "zlib" as i2, "libarchive" as i3
+if platform.os == "darwin" {
+    import "lmdb" as i0, "bzip2" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "lmdb" as i0, "bzip2" as i1, "zlib" as i2, "libarchive" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "blast",
@@ -84,7 +92,7 @@ pkg(
     "license": "Public Domain",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "blast.rb"), formula)

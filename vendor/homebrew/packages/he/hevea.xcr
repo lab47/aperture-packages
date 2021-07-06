@@ -39,9 +39,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ocamlbuild" as i0, "ocaml" as i1
+if platform.os == "darwin" {
+    import "ocamlbuild" as i0, "ocaml" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "ocamlbuild" as i0, "ocaml" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "hevea",
@@ -52,7 +60,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hevea.rb"), formula)

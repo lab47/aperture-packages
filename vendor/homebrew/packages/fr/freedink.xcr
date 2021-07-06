@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "glm" as i0, "pkg-config" as i1, "check" as i2, "cxxtest" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "libzip" as i7, "sdl2" as i8, "sdl2_gfx" as i9, "sdl2_image" as i10, "sdl2_mixer" as i11, "sdl2_ttf" as i12
+if platform.os == "darwin" {
+    import "glm" as i0, "pkg-config" as i1, "check" as i2, "cxxtest" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "libzip" as i7, "sdl2" as i8, "sdl2_gfx" as i9, "sdl2_image" as i10, "sdl2_mixer" as i11, "sdl2_ttf" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "glm" as i0, "pkg-config" as i1, "check" as i2, "cxxtest" as i3, "fontconfig" as i4, "freetype" as i5, "gettext" as i6, "libzip" as i7, "sdl2" as i8, "sdl2_gfx" as i9, "sdl2_image" as i10, "sdl2_mixer" as i11, "sdl2_ttf" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "freedink",
@@ -75,7 +83,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freedink.rb"), formula)

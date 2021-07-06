@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "json-c" as i1, "libiconv" as i2, "libtool" as i3, "openssl@1.1" as i4, "pcre2" as i5, "yara" as i6, "bzip2" as i7, "curl" as i8, "libxml2" as i9, "zlib" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "json-c" as i1, "libiconv" as i2, "libtool" as i3, "openssl@1.1" as i4, "pcre2" as i5, "yara" as i6, "bzip2" as i7, "curl" as i8, "libxml2" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "pkg-config" as i0, "json-c" as i1, "libiconv" as i2, "libtool" as i3, "openssl@1.1" as i4, "pcre2" as i5, "yara" as i6, "bzip2" as i7, "curl" as i8, "libxml2" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "clamav",
@@ -109,7 +117,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clamav.rb"), formula)

@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3, "libxml2" as i4
+if platform.os == "darwin" {
+    import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "check" as i0, "pkg-config" as i1, "libshout" as i2, "taglib" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "ezstream",
@@ -62,7 +70,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ezstream.rb"), formula)

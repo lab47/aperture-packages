@@ -78,9 +78,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "imagemagick" as i2, "pkg-config" as i3, "enet" as i4, "freetype" as i5, "gettext" as i6, "libpng" as i7, "sdl" as i8, "sdl_image" as i9, "sdl_mixer" as i10, "sdl_ttf" as i11, "xerces-c" as i12
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "imagemagick" as i2, "pkg-config" as i3, "enet" as i4, "freetype" as i5, "gettext" as i6, "libpng" as i7, "sdl" as i8, "sdl_image" as i9, "sdl_mixer" as i10, "sdl_ttf" as i11, "xerces-c" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "autoconf" as i0, "automake" as i1, "imagemagick" as i2, "pkg-config" as i3, "enet" as i4, "freetype" as i5, "gettext" as i6, "libpng" as i7, "sdl" as i8, "sdl_image" as i9, "sdl_mixer" as i10, "sdl_ttf" as i11, "xerces-c" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "enigma",
@@ -91,7 +99,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "enigma.rb"), formula)

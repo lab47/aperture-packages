@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm" as i3, "libxml2" as i4
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "glibmm" as i3, "libxml2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "libxml++@4",
@@ -68,7 +76,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxml++@4.rb"), formula)

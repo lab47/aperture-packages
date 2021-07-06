@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gd" as i1, "libcerf" as i2, "lua" as i3, "pango" as i4, "qt@5" as i5, "readline" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gd" as i1, "libcerf" as i2, "lua" as i3, "pango" as i4, "qt@5" as i5, "readline" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "gd" as i1, "libcerf" as i2, "lua" as i3, "pango" as i4, "qt@5" as i5, "readline" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "gnuplot",
@@ -77,7 +85,7 @@ pkg(
     "license": "gnuplot",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnuplot.rb"), formula)

@@ -121,9 +121,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "erlang" as i1, "unzip" as i2
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "erlang" as i1, "unzip" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "python@3.9" as i0, "erlang" as i1, "unzip" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "rabbitmq",
@@ -134,7 +142,7 @@ pkg(
     "license": "MPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rabbitmq.rb"), formula)

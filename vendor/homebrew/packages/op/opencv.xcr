@@ -149,9 +149,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "ceres-solver" as i2, "eigen" as i3, "ffmpeg" as i4, "glog" as i5, "harfbuzz" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "numpy" as i10, "openblas" as i11, "openexr" as i12, "protobuf" as i13, "python@3.9" as i14, "tbb" as i15, "vtk" as i16, "webp" as i17, "zlib" as i18
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "ceres-solver" as i2, "eigen" as i3, "ffmpeg" as i4, "glog" as i5, "harfbuzz" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "numpy" as i10, "openblas" as i11, "openexr" as i12, "protobuf" as i13, "python@3.9" as i14, "tbb" as i15, "vtk" as i16, "webp" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "ceres-solver" as i2, "eigen" as i3, "ffmpeg" as i4, "glog" as i5, "harfbuzz" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "numpy" as i10, "openblas" as i11, "openexr" as i12, "protobuf" as i13, "python@3.9" as i14, "tbb" as i15, "vtk" as i16, "webp" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "opencv",
@@ -162,7 +170,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opencv.rb"), formula)

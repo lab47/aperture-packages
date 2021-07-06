@@ -71,9 +71,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "libxml2" as i1, "libxslt" as i2, "perl" as i3
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "libxml2" as i1, "libxslt" as i2, "perl" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "docbook-xsl" as i0, "libxml2" as i1, "libxslt" as i2, "perl" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "moreutils",
@@ -84,7 +92,7 @@ pkg(
     "license": "GPL-2.0-or-later and (GPL-2.0-only or Artistic-2.0)",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "moreutils.rb"), formula)

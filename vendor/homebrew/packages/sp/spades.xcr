@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "python@3.9" as i1, "bzip2" as i2, "ncurses" as i3, "zlib" as i4, "libomp" as i5, "jemalloc" as i6, "readline" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "python@3.9" as i1, "bzip2" as i2, "ncurses" as i3, "zlib" as i4, "libomp" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "python@3.9" as i1, "bzip2" as i2, "ncurses" as i3, "zlib" as i4, "libomp" as i5, "jemalloc" as i6, "readline" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "spades",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "spades.rb"), formula)

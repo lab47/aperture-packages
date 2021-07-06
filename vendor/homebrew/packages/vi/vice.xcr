@@ -71,9 +71,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "dos2unix" as i2, "pkg-config" as i3, "texinfo" as i4, "xa" as i5, "yasm" as i6, "adwaita-icon-theme" as i7, "ffmpeg" as i8, "flac" as i9, "giflib" as i10, "glew" as i11, "gtk+3" as i12, "jpeg" as i13, "lame" as i14, "libogg" as i15, "libpng" as i16, "librsvg" as i17, "libvorbis" as i18
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "dos2unix" as i2, "pkg-config" as i3, "texinfo" as i4, "xa" as i5, "yasm" as i6, "adwaita-icon-theme" as i7, "ffmpeg" as i8, "flac" as i9, "giflib" as i10, "glew" as i11, "gtk+3" as i12, "jpeg" as i13, "lame" as i14, "libogg" as i15, "libpng" as i16, "librsvg" as i17, "libvorbis" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "autoconf" as i0, "automake" as i1, "dos2unix" as i2, "pkg-config" as i3, "texinfo" as i4, "xa" as i5, "yasm" as i6, "adwaita-icon-theme" as i7, "ffmpeg" as i8, "flac" as i9, "giflib" as i10, "glew" as i11, "gtk+3" as i12, "jpeg" as i13, "lame" as i14, "libogg" as i15, "libpng" as i16, "librsvg" as i17, "libvorbis" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "vice",
@@ -84,7 +92,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vice.rb"), formula)

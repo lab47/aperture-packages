@@ -397,9 +397,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "tcl-tk" as i6, "xz" as i7, "bzip2" as i8, "libffi" as i9, "ncurses" as i10, "unzip" as i11, "xz" as i12, "zlib" as i13
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "tcl-tk" as i6, "xz" as i7, "bzip2" as i8, "libffi" as i9, "ncurses" as i10, "unzip" as i11, "xz" as i12, "zlib" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "tcl-tk" as i6, "xz" as i7, "bzip2" as i8, "libffi" as i9, "ncurses" as i10, "unzip" as i11, "xz" as i12, "zlib" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "python@3.8",
@@ -410,7 +418,7 @@ pkg(
     "license": "Python-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "python@3.8.rb"), formula)

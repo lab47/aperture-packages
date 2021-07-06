@@ -98,9 +98,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0, "pkg-config" as i1, "ampl-mp" as i2, "gcc" as i3, "openblas" as i4
+if platform.os == "darwin" {
+    import "openjdk" as i0, "pkg-config" as i1, "ampl-mp" as i2, "gcc" as i3, "openblas" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "openjdk" as i0, "pkg-config" as i1, "ampl-mp" as i2, "gcc" as i3, "openblas" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "ipopt",
@@ -111,7 +119,7 @@ pkg(
     "license": "EPL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ipopt.rb"), formula)

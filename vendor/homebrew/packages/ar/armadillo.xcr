@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "hdf5" as i3, "openblas" as i4, "superlu" as i5, "szip" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "hdf5" as i3, "openblas" as i4, "superlu" as i5, "szip" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "hdf5" as i3, "openblas" as i4, "superlu" as i5, "szip" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "armadillo",
@@ -63,7 +71,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "armadillo.rb"), formula)

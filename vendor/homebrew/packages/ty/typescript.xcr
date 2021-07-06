@@ -4,13 +4,13 @@ require "language/node"
 class Typescript < Formula
   desc "Language for application scale JavaScript development"
   homepage "https://www.typescriptlang.org/"
-  url "https://registry.npmjs.org/typescript/-/typescript-4.3.4.tgz"
-  sha256 "124624965249ca4788a1852d10c3001a428952551a7a9d7ebe9c1b6243ab4f11"
+  url "https://registry.npmjs.org/typescript/-/typescript-4.3.2.tgz"
+  sha256 "5563c8ad635a9c96bc531aa215dad7d6770babe6797eff91ae9a174cff986575"
   license "Apache-2.0"
   head "https://github.com/Microsoft/TypeScript.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "50866c4631cb1248d5fcbd95743e78853dd7af716f634ee88bc10740a736a3ef"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "41de917a9f9ff33c72b2bee8f75e684822d91372e635bd2977c373feae2b1ef8"
   end
 
   depends_on "node"
@@ -38,20 +38,28 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "node" as i0
+if platform.os == "darwin" {
+    import "node" as i0
+    deps = [hi, i0]
+} else {
+    import "node" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "typescript",
-  version: "4.3.4",
+  version: "4.3.2",
   description: "Language for application scale JavaScript development",
   url: "https://www.typescriptlang.org/",
   metadata: %{
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "typescript.rb"), formula)

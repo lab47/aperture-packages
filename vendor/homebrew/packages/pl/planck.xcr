@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "clojure" as i0, "cmake" as i1, "pkg-config" as i2, "icu4c" as i3, "libzip" as i4
+if platform.os == "darwin" {
+    import "clojure" as i0, "cmake" as i1, "pkg-config" as i2, "icu4c" as i3, "libzip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "clojure" as i0, "cmake" as i1, "pkg-config" as i2, "icu4c" as i3, "libzip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "planck",
@@ -51,7 +59,7 @@ pkg(
     "license": "EPL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "planck.rb"), formula)

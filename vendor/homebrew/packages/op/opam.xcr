@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ocaml" as i0, "gpatch" as i1, "unzip" as i2
+if platform.os == "darwin" {
+    import "ocaml" as i0, "gpatch" as i1, "unzip" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "ocaml" as i0, "gpatch" as i1, "unzip" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "opam",
@@ -62,7 +70,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opam.rb"), formula)

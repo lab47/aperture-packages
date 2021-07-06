@@ -75,9 +75,17 @@ index 4a4eab6..9f25d50 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "unac",
@@ -88,7 +96,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "unac.rb"), formula)

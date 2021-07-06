@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0
+if platform.os == "darwin" {
+    import "autoconf" as i0
+    deps = [hi, i0]
+} else {
+    import "autoconf" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "cdparanoia",
@@ -69,7 +77,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cdparanoia.rb"), formula)

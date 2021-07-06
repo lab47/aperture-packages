@@ -158,9 +158,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gperftools" as i1, "llvm@11" as i2, "python-tabulate" as i3, "python@3.9" as i4, "sqlite" as i5, "wllvm" as i6, "z3" as i7, "zlib" as i8
+if platform.os == "darwin" {
+    import "cmake" as i0, "gperftools" as i1, "llvm@11" as i2, "python-tabulate" as i3, "python@3.9" as i4, "sqlite" as i5, "wllvm" as i6, "z3" as i7, "zlib" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "gperftools" as i1, "llvm@11" as i2, "python-tabulate" as i3, "python@3.9" as i4, "sqlite" as i5, "wllvm" as i6, "z3" as i7, "zlib" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "klee",
@@ -171,7 +179,7 @@ pkg(
     "license": "NCSA",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "klee.rb"), formula)

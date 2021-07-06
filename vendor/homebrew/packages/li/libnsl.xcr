@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pkg-config" as i4, "libtirpc" as i5, "m4" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pkg-config" as i4, "libtirpc" as i5, "m4" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libtool" as i3, "pkg-config" as i4, "libtirpc" as i5, "m4" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libnsl",
@@ -65,7 +73,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libnsl.rb"), formula)

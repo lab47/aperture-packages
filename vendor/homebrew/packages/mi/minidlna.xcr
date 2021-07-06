@@ -118,9 +118,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ffmpeg" as i0, "flac" as i1, "jpeg" as i2, "libexif" as i3, "libid3tag" as i4, "libogg" as i5, "libvorbis" as i6, "sqlite" as i7
+if platform.os == "darwin" {
+    import "ffmpeg" as i0, "flac" as i1, "jpeg" as i2, "libexif" as i3, "libid3tag" as i4, "libogg" as i5, "libvorbis" as i6, "sqlite" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "ffmpeg" as i0, "flac" as i1, "jpeg" as i2, "libexif" as i3, "libid3tag" as i4, "libogg" as i5, "libvorbis" as i6, "sqlite" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "minidlna",
@@ -131,7 +139,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "minidlna.rb"), formula)

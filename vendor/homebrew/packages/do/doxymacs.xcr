@@ -60,9 +60,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "doxygen" as i0, "emacs" as i1
+if platform.os == "darwin" {
+    import "doxygen" as i0, "emacs" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "doxygen" as i0, "emacs" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "doxymacs",
@@ -73,7 +81,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "doxymacs.rb"), formula)

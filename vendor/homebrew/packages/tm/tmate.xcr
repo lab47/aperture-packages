@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libevent" as i4, "libssh" as i5, "msgpack" as i6, "ncurses" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libevent" as i4, "libssh" as i5, "msgpack" as i6, "ncurses" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "libevent" as i4, "libssh" as i5, "msgpack" as i6, "ncurses" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "tmate",
@@ -56,7 +64,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tmate.rb"), formula)

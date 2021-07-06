@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "qt@5" as i1, "sphinx-doc" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "qt@5" as i1, "sphinx-doc" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "qt@5" as i1, "sphinx-doc" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "extra-cmake-modules",
@@ -60,7 +68,7 @@ pkg(
     "license": "BSD-2-Clause and BSD-3-Clause and MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "extra-cmake-modules.rb"), formula)

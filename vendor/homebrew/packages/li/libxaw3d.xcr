@@ -54,9 +54,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "util-macros" as i1, "libx11" as i2, "libxext" as i3, "libxmu" as i4, "libxpm" as i5, "libxt" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "util-macros" as i1, "libx11" as i2, "libxext" as i3, "libxmu" as i4, "libxpm" as i5, "libxt" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "util-macros" as i1, "libx11" as i2, "libxext" as i3, "libxmu" as i4, "libxpm" as i5, "libxt" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libxaw3d",
@@ -67,7 +75,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxaw3d.rb"), formula)

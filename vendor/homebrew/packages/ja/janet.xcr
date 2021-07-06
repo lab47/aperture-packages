@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "meson" as i0, "ninja" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "janet",
@@ -46,7 +54,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "janet.rb"), formula)

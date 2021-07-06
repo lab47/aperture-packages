@@ -7,7 +7,7 @@ class PhpCsFixerAT2 < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5f80ed35e0644fa2eafc81ab81b4320187f3257c0819fd43e70e6f7cc2003b3d"
+    sha256 cellar: :any_skip_relocation, all: "5f80ed35e0644fa2eafc81ab81b4320187f3257c0819fd43e70e6f7cc2003b3d"
   end
 
   keg_only :versioned_formula
@@ -32,9 +32,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "php" as i0
+if platform.os == "darwin" {
+    import "php" as i0
+    deps = [hi, i0]
+} else {
+    import "php" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "php-cs-fixer@2",
@@ -45,7 +53,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "php-cs-fixer@2.rb"), formula)

@@ -25,9 +25,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "imagemagick" as i0
+if platform.os == "darwin" {
+    import "imagemagick" as i0
+    deps = [hi, i0]
+} else {
+    import "imagemagick" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "negfix8",
@@ -38,7 +46,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "negfix8.rb"), formula)

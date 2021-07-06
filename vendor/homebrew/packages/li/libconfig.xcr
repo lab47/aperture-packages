@@ -48,9 +48,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "flex" as i3, "texinfo" as i4
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "flex" as i3, "texinfo" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "flex" as i3, "texinfo" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "libconfig",
@@ -61,7 +69,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libconfig.rb"), formula)

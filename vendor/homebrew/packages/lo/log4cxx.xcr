@@ -65,9 +65,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "apr-util" as i1
+if platform.os == "darwin" {
+    import "cmake" as i0, "apr-util" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cmake" as i0, "apr-util" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "log4cxx",
@@ -78,7 +86,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "log4cxx.rb"), formula)

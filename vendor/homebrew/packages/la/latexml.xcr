@@ -222,9 +222,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libxml2" as i0, "libxslt" as i1, "perl" as i2, "pkg-config" as i3
+if platform.os == "darwin" {
+    import "libxml2" as i0, "libxslt" as i1, "perl" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "libxml2" as i0, "libxslt" as i1, "perl" as i2, "pkg-config" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "latexml",
@@ -235,7 +243,7 @@ pkg(
     "license": "Public Domain",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "latexml.rb"), formula)

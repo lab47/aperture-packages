@@ -134,9 +134,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "abseil" as i0, "bzip2" as i1, "c-ares" as i2, "cmake" as i3, "curl" as i4, "expat" as i5, "gdbm" as i6, "gpatch" as i7, "grpc" as i8, "jsoncpp" as i9, "libffi" as i10, "mpdecimal" as i11, "ncurses" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "protobuf" as i15, "python@3.9" as i16, "re2" as i17, "readline" as i18, "six" as i19, "sqlite" as i20, "tinyxml2" as i21, "unzip" as i22, "xz" as i23, "zip" as i24, "zlib" as i25
+if platform.os == "darwin" {
+    import "abseil" as i0, "bzip2" as i1, "c-ares" as i2, "cmake" as i3, "curl" as i4, "expat" as i5, "gdbm" as i6, "grpc" as i7, "jsoncpp" as i8, "libffi" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "protobuf" as i14, "python@3.9" as i15, "re2" as i16, "readline" as i17, "six" as i18, "sqlite" as i19, "tinyxml2" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+} else {
+    import "abseil" as i0, "bzip2" as i1, "c-ares" as i2, "cmake" as i3, "curl" as i4, "expat" as i5, "gdbm" as i6, "grpc" as i7, "jsoncpp" as i8, "libffi" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "protobuf" as i14, "python@3.9" as i15, "re2" as i16, "readline" as i17, "six" as i18, "sqlite" as i19, "tinyxml2" as i20, "unzip" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+}
 
 pkg(
   name: "mavsdk",
@@ -147,7 +155,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mavsdk.rb"), formula)

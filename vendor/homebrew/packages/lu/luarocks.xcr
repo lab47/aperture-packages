@@ -91,9 +91,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lua" as i0, "unzip" as i1
+if platform.os == "darwin" {
+    import "lua" as i0, "unzip" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "lua" as i0, "unzip" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "luarocks",
@@ -104,7 +112,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "luarocks.rb"), formula)

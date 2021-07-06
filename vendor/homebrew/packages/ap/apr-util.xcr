@@ -57,9 +57,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "apr" as i0, "openssl@1.1" as i1, "expat" as i2, "sqlite" as i3, "mawk" as i4, "unixodbc" as i5
+if platform.os == "darwin" {
+    import "apr" as i0, "openssl@1.1" as i1, "expat" as i2, "sqlite" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "apr" as i0, "openssl@1.1" as i1, "expat" as i2, "sqlite" as i3, "mawk" as i4, "unixodbc" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "apr-util",
@@ -70,7 +78,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apr-util.rb"), formula)

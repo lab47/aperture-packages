@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "protobuf" as i0, "swift-protobuf" as i1
+if platform.os == "darwin" {
+    import "protobuf" as i0, "swift-protobuf" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "protobuf" as i0, "swift-protobuf" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "grpc-swift",
@@ -58,7 +66,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "grpc-swift.rb"), formula)

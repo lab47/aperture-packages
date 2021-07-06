@@ -294,9 +294,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "awscli" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gpatch" as i4, "jq" as i5, "juju" as i6, "juju-wait" as i7, "libffi" as i8, "libyaml" as i9, "mpdecimal" as i10, "ncurses" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "pwgen" as i14, "python@3.9" as i15, "readline" as i16, "redis" as i17, "sqlite" as i18, "unzip" as i19, "xz" as i20, "zip" as i21, "zlib" as i22
+if platform.os == "darwin" {
+    import "awscli" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "jq" as i4, "juju" as i5, "juju-wait" as i6, "libffi" as i7, "libyaml" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "pwgen" as i13, "python@3.9" as i14, "readline" as i15, "redis" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+} else {
+    import "awscli" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "jq" as i4, "juju" as i5, "juju-wait" as i6, "libffi" as i7, "libyaml" as i8, "mpdecimal" as i9, "ncurses" as i10, "openssl@1.1" as i11, "pkg-config" as i12, "pwgen" as i13, "python@3.9" as i14, "readline" as i15, "redis" as i16, "sqlite" as i17, "unzip" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+}
 
 pkg(
   name: "conjure-up",
@@ -307,7 +315,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "conjure-up.rb"), formula)

@@ -32,9 +32,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
+if platform.os == "darwin" {
+    import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "jpeg" as i0, "libpng" as i1, "libtiff" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "libpano",
@@ -45,7 +53,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libpano.rb"), formula)

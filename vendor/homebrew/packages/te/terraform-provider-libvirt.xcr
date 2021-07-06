@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "pkg-config" as i1, "libvirt" as i2, "terraform" as i3
+if platform.os == "darwin" {
+    import "go" as i0, "pkg-config" as i1, "libvirt" as i2, "terraform" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "go" as i0, "pkg-config" as i1, "libvirt" as i2, "terraform" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "terraform-provider-libvirt",
@@ -43,7 +51,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "terraform-provider-libvirt.rb"), formula)

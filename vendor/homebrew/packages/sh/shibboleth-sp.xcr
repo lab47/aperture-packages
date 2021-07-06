@@ -91,9 +91,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "apr" as i0, "apr-util" as i1, "pkg-config" as i2, "boost" as i3, "httpd" as i4, "log4shib" as i5, "opensaml" as i6, "openssl@1.1" as i7, "unixodbc" as i8, "xerces-c" as i9, "xml-security-c" as i10, "xml-tooling-c" as i11
+if platform.os == "darwin" {
+    import "apr" as i0, "apr-util" as i1, "pkg-config" as i2, "boost" as i3, "httpd" as i4, "log4shib" as i5, "opensaml" as i6, "openssl@1.1" as i7, "unixodbc" as i8, "xerces-c" as i9, "xml-security-c" as i10, "xml-tooling-c" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "apr" as i0, "apr-util" as i1, "pkg-config" as i2, "boost" as i3, "httpd" as i4, "log4shib" as i5, "opensaml" as i6, "openssl@1.1" as i7, "unixodbc" as i8, "xerces-c" as i9, "xml-security-c" as i10, "xml-tooling-c" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "shibboleth-sp",
@@ -104,7 +112,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "shibboleth-sp.rb"), formula)

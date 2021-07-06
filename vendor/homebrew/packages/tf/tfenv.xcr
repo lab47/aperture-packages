@@ -31,9 +31,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "unzip" as i0
+if platform.os == "darwin" {
+    import "unzip" as i0
+    deps = [hi, i0]
+} else {
+    import "unzip" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "tfenv",
@@ -44,7 +52,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tfenv.rb"), formula)

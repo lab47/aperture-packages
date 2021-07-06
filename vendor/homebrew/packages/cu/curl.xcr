@@ -92,9 +92,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "brotli" as i1, "libidn2" as i2, "libssh2" as i3, "nghttp2" as i4, "openldap" as i5, "openssl@1.1" as i6, "rtmpdump" as i7, "zstd" as i8, "krb5" as i9, "zlib" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "brotli" as i1, "libidn2" as i2, "libssh2" as i3, "nghttp2" as i4, "openldap" as i5, "openssl@1.1" as i6, "rtmpdump" as i7, "zstd" as i8, "krb5" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "pkg-config" as i0, "brotli" as i1, "libidn2" as i2, "libssh2" as i3, "nghttp2" as i4, "openldap" as i5, "openssl@1.1" as i6, "rtmpdump" as i7, "zstd" as i8, "krb5" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "curl",
@@ -105,7 +113,7 @@ pkg(
     "license": "curl",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "curl.rb"), formula)

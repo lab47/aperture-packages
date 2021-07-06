@@ -120,9 +120,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bdw-gc" as i0, "gmp" as i1, "libevent" as i2, "libyaml" as i3, "llvm@11" as i4, "openssl@1.1" as i5, "pcre" as i6, "pkg-config" as i7
+if platform.os == "darwin" {
+    import "bdw-gc" as i0, "gmp" as i1, "libevent" as i2, "libyaml" as i3, "llvm@11" as i4, "openssl@1.1" as i5, "pcre" as i6, "pkg-config" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "bdw-gc" as i0, "gmp" as i1, "libevent" as i2, "libyaml" as i3, "llvm@11" as i4, "openssl@1.1" as i5, "pcre" as i6, "pkg-config" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "crystal",
@@ -133,7 +141,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "crystal.rb"), formula)

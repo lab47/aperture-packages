@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "libgsf" as i2, "librevenge" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "glib" as i1, "libgsf" as i2, "librevenge" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "glib" as i1, "libgsf" as i2, "librevenge" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "libwpd",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libwpd.rb"), formula)

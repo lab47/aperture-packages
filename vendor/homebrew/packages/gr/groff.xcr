@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "texinfo" as i1, "texinfo" as i2, "ghostscript" as i3, "netpbm" as i4, "psutils" as i5, "uchardet" as i6, "bison" as i7, "perl" as i8, "glib" as i9
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "texinfo" as i1, "texinfo" as i2, "ghostscript" as i3, "netpbm" as i4, "psutils" as i5, "uchardet" as i6, "bison" as i7, "perl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "texinfo" as i1, "texinfo" as i2, "ghostscript" as i3, "netpbm" as i4, "psutils" as i5, "uchardet" as i6, "bison" as i7, "perl" as i8, "glib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "groff",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "groff.rb"), formula)

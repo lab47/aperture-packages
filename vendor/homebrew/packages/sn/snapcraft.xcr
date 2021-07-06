@@ -307,9 +307,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gpatch" as i3, "libffi" as i4, "libsodium" as i5, "libyaml" as i6, "lxc" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "rust" as i14, "snap" as i15, "sqlite" as i16, "unzip" as i17, "xdelta" as i18, "xz" as i19, "zip" as i20, "zlib" as i21
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libsodium" as i4, "libyaml" as i5, "lxc" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "rust" as i13, "snap" as i14, "sqlite" as i15, "unzip" as i16, "xdelta" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+} else {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libsodium" as i4, "libyaml" as i5, "lxc" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python@3.9" as i11, "readline" as i12, "rust" as i13, "snap" as i14, "sqlite" as i15, "unzip" as i16, "xdelta" as i17, "xz" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "snapcraft",
@@ -320,7 +328,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snapcraft.rb"), formula)

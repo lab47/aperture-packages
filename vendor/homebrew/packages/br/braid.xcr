@@ -86,9 +86,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ruby" as i0
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "ruby" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "braid",
@@ -99,7 +106,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "braid.rb"), formula)

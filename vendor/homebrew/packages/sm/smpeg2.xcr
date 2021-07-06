@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "subversion" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, "pkg-config" as i4, "sdl2" as i5
+if platform.os == "darwin" {
+    import "subversion" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, "pkg-config" as i4, "sdl2" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "subversion" as i0, "autoconf" as i1, "automake" as i2, "libtool" as i3, "pkg-config" as i4, "sdl2" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "smpeg2",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "smpeg2.rb"), formula)

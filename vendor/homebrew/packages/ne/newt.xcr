@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0, "popt" as i1, "s-lang" as i2
+if platform.os == "darwin" {
+    import "gettext" as i0, "popt" as i1, "s-lang" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "gettext" as i0, "popt" as i1, "s-lang" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "newt",
@@ -79,7 +87,7 @@ pkg(
     "license": "LGPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "newt.rb"), formula)

@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ant" as i0, "openjdk@8" as i1
+if platform.os == "darwin" {
+    import "ant" as i0, "openjdk@8" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "ant" as i0, "openjdk@8" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "hexgui",
@@ -43,7 +51,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hexgui.rb"), formula)

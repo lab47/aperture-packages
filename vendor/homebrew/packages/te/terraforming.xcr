@@ -131,9 +131,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ruby" as i0
+if platform.os == "darwin" {
+    import "ruby" as i0
+    deps = [hi, i0]
+} else {
+    import "ruby" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "terraforming",
@@ -144,7 +152,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "terraforming.rb"), formula)

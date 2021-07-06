@@ -115,9 +115,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "docbook-xsl" as i1, "sphinx-doc" as i2, "libxml2" as i3, "libxslt" as i4
+if platform.os == "darwin" {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "sphinx-doc" as i2, "libxml2" as i3, "libxslt" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "sphinx-doc" as i2, "libxml2" as i3, "libxslt" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "offlineimap",
@@ -128,7 +136,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "offlineimap.rb"), formula)

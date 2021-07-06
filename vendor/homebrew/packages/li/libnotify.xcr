@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gobject-introspection" as i1, "gtk-doc" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "gtk-doc" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "gtk-doc" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libnotify",
@@ -90,7 +98,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libnotify.rb"), formula)

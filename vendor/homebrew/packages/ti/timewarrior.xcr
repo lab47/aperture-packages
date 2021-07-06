@@ -34,9 +34,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "cmake" as i1
+if platform.os == "darwin" {
+    import "asciidoctor" as i0, "cmake" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "asciidoctor" as i0, "cmake" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "timewarrior",
@@ -47,7 +55,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "timewarrior.rb"), formula)

@@ -117,9 +117,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "fontconfig" as i3, "freetype" as i4, "frei0r" as i5, "lame" as i6, "libass" as i7, "libvo-aacenc" as i8, "libvorbis" as i9, "libvpx" as i10, "opencore-amr" as i11, "opus" as i12, "rtmpdump" as i13, "sdl" as i14, "snappy" as i15, "speex" as i16, "theora" as i17, "x264" as i18, "x265" as i19, "xvid" as i20
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "fontconfig" as i3, "freetype" as i4, "frei0r" as i5, "lame" as i6, "libass" as i7, "libvo-aacenc" as i8, "libvorbis" as i9, "libvpx" as i10, "opencore-amr" as i11, "opus" as i12, "rtmpdump" as i13, "sdl" as i14, "snappy" as i15, "speex" as i16, "theora" as i17, "x264" as i18, "x265" as i19, "xvid" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+} else {
+    import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "fontconfig" as i3, "freetype" as i4, "frei0r" as i5, "lame" as i6, "libass" as i7, "libvo-aacenc" as i8, "libvorbis" as i9, "libvpx" as i10, "opencore-amr" as i11, "opus" as i12, "rtmpdump" as i13, "sdl" as i14, "snappy" as i15, "speex" as i16, "theora" as i17, "x264" as i18, "x265" as i19, "xvid" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "ffmpeg@2.8",
@@ -130,7 +138,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ffmpeg@2.8.rb"), formula)

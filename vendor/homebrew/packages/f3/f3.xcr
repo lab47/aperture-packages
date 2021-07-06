@@ -31,9 +31,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "argp-standalone" as i0
+if platform.os == "darwin" {
+    import "argp-standalone" as i0
+    deps = [hi, i0]
+} else {
+    import "argp-standalone" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "f3",
@@ -44,7 +52,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "f3.rb"), formula)

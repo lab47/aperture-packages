@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "pkg-config" as i1, "libusb" as i2, "libpcap" as i3, "libnetfilter-queue" as i4
+if platform.os == "darwin" {
+    import "go" as i0, "pkg-config" as i1, "libusb" as i2, "libpcap" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "go" as i0, "pkg-config" as i1, "libusb" as i2, "libpcap" as i3, "libnetfilter-queue" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "bettercap",
@@ -56,7 +64,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bettercap.rb"), formula)

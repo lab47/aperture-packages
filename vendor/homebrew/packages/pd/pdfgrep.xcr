@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libgcrypt" as i1, "pcre" as i2, "poppler" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "libgcrypt" as i1, "pcre" as i2, "poppler" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "libgcrypt" as i1, "pcre" as i2, "poppler" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "pdfgrep",
@@ -57,7 +65,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdfgrep.rb"), formula)

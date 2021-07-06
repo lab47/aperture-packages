@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "check" as i0, "cmake" as i1, "gengetopt" as i2, "help2man" as i3, "libtool" as i4, "pkg-config" as i5, "check" as i6, "openssl@1.1" as i7, "pcsc-lite" as i8
+if platform.os == "darwin" {
+    import "check" as i0, "cmake" as i1, "gengetopt" as i2, "help2man" as i3, "libtool" as i4, "pkg-config" as i5, "check" as i6, "openssl@1.1" as i7, "pcsc-lite" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "check" as i0, "cmake" as i1, "gengetopt" as i2, "help2man" as i3, "libtool" as i4, "pkg-config" as i5, "check" as i6, "openssl@1.1" as i7, "pcsc-lite" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "yubico-piv-tool",
@@ -56,7 +64,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "yubico-piv-tool.rb"), formula)

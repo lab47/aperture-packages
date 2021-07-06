@@ -93,9 +93,17 @@ index f77e89cb6..066e12878 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "hidapi" as i3, "libsodium" as i4, "openssl@1.1" as i5, "protobuf" as i6, "readline" as i7, "unbound" as i8, "zeromq" as i9
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "hidapi" as i3, "libsodium" as i4, "openssl@1.1" as i5, "protobuf" as i6, "readline" as i7, "unbound" as i8, "zeromq" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "hidapi" as i3, "libsodium" as i4, "openssl@1.1" as i5, "protobuf" as i6, "readline" as i7, "unbound" as i8, "zeromq" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "wownero",
@@ -106,7 +114,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wownero.rb"), formula)

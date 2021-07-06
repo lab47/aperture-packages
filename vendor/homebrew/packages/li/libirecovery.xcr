@@ -44,9 +44,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libusb" as i1, "readline" as i2
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "pkg-config" as i0, "libusb" as i1, "readline" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "libirecovery",
@@ -57,7 +64,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libirecovery.rb"), formula)

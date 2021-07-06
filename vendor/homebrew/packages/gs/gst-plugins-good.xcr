@@ -60,9 +60,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "flac" as i4, "gettext" as i5, "gst-plugins-base" as i6, "gtk+3" as i7, "jpeg" as i8, "lame" as i9, "libpng" as i10, "libshout" as i11, "libsoup" as i12, "libvpx" as i13, "orc" as i14, "speex" as i15, "taglib" as i16
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "flac" as i4, "gettext" as i5, "gst-plugins-base" as i6, "gtk+3" as i7, "jpeg" as i8, "lame" as i9, "libpng" as i10, "libshout" as i11, "libsoup" as i12, "libvpx" as i13, "orc" as i14, "speex" as i15, "taglib" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "cairo" as i3, "flac" as i4, "gettext" as i5, "gst-plugins-base" as i6, "gtk+3" as i7, "jpeg" as i8, "lame" as i9, "libpng" as i10, "libshout" as i11, "libsoup" as i12, "libvpx" as i13, "orc" as i14, "speex" as i15, "taglib" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+}
 
 pkg(
   name: "gst-plugins-good",
@@ -73,7 +81,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-plugins-good.rb"), formula)

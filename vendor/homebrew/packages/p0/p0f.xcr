@@ -61,9 +61,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libpcap" as i0
+if platform.os == "darwin" {
+    import "libpcap" as i0
+    deps = [hi, i0]
+} else {
+    import "libpcap" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "p0f",
@@ -74,7 +82,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "p0f.rb"), formula)

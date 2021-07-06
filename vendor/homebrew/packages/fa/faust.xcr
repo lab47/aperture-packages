@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "libmicrohttpd" as i2, "libsndfile" as i3, "llvm" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "libmicrohttpd" as i2, "libsndfile" as i3, "llvm" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "libmicrohttpd" as i2, "libsndfile" as i3, "llvm" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "faust",
@@ -49,7 +57,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "faust.rb"), formula)

@@ -138,9 +138,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bazaar" as i0, "go" as i1, "pkg-config" as i2, "protobuf" as i3, "rust" as i4
+if platform.os == "darwin" {
+    import "bazaar" as i0, "go" as i1, "pkg-config" as i2, "protobuf" as i3, "rust" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "bazaar" as i0, "go" as i1, "pkg-config" as i2, "protobuf" as i3, "rust" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "influxdb",
@@ -151,7 +159,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "influxdb.rb"), formula)

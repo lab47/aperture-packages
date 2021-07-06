@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pcre2" as i0
+if platform.os == "darwin" {
+    import "pcre2" as i0
+    deps = [hi, i0]
+} else {
+    import "pcre2" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "re-flex",
@@ -53,7 +61,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "re-flex.rb"), formula)

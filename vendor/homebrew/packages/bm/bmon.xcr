@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "confuse" as i1, "ncurses" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "confuse" as i1, "ncurses" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "confuse" as i1, "ncurses" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "bmon",
@@ -58,7 +66,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bmon.rb"), formula)

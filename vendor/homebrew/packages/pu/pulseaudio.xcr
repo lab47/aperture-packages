@@ -146,9 +146,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "json-c" as i1, "libsndfile" as i2, "libsoxr" as i3, "libtool" as i4, "openssl@1.1" as i5, "speexdsp" as i6, "perl" as i7, "expat" as i8, "m4" as i9
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "json-c" as i1, "libsndfile" as i2, "libsoxr" as i3, "libtool" as i4, "openssl@1.1" as i5, "speexdsp" as i6, "perl" as i7, "expat" as i8, "m4" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "pkg-config" as i0, "json-c" as i1, "libsndfile" as i2, "libsoxr" as i3, "libtool" as i4, "openssl@1.1" as i5, "speexdsp" as i6, "perl" as i7, "expat" as i8, "m4" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "pulseaudio",
@@ -159,7 +167,7 @@ pkg(
     "license": "GPL-2.0-or-later and LGPL-2.1-or-later and BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pulseaudio.rb"), formula)

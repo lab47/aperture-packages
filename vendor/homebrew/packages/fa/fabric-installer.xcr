@@ -7,7 +7,7 @@ class FabricInstaller < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3ffbf01240ef8aabe05e88566a73684f3c419b61a238ddf4e981c8ade42a3e3f"
+    sha256 cellar: :any_skip_relocation, all: "4c309d182810665ba504617c038a5af04bc3c6aba5b04034753227bda46ff78b"
   end
 
   depends_on "openjdk"
@@ -25,9 +25,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "fabric-installer",
@@ -38,7 +46,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fabric-installer.rb"), formula)

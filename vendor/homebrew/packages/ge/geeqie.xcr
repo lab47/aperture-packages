@@ -54,9 +54,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "intltool" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "atk" as i5, "cairo" as i6, "exiv2" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gtk+3" as i11, "imagemagick" as i12, "jpeg" as i13, "libtiff" as i14, "libx11" as i15, "little-cms2" as i16, "pango" as i17
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "intltool" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "atk" as i5, "cairo" as i6, "exiv2" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gtk+3" as i11, "imagemagick" as i12, "jpeg" as i13, "libtiff" as i14, "libx11" as i15, "little-cms2" as i16, "pango" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "autoconf" as i0, "automake" as i1, "intltool" as i2, "pkg-config" as i3, "adwaita-icon-theme" as i4, "atk" as i5, "cairo" as i6, "exiv2" as i7, "gdk-pixbuf" as i8, "gettext" as i9, "glib" as i10, "gtk+3" as i11, "imagemagick" as i12, "jpeg" as i13, "libtiff" as i14, "libx11" as i15, "little-cms2" as i16, "pango" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "geeqie",
@@ -67,7 +75,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "geeqie.rb"), formula)

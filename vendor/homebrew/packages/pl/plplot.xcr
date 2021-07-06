@@ -86,9 +86,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "cairo" as i2, "freetype" as i3, "gcc" as i4, "pango" as i5
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "cairo" as i2, "freetype" as i3, "gcc" as i4, "pango" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "cairo" as i2, "freetype" as i3, "gcc" as i4, "pango" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "plplot",
@@ -99,7 +107,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "plplot.rb"), formula)

@@ -31,9 +31,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "chruby" as i0, "fish" as i1
+if platform.os == "darwin" {
+    import "chruby" as i0, "fish" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "chruby" as i0, "fish" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "chruby-fish",
@@ -44,7 +52,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "chruby-fish.rb"), formula)

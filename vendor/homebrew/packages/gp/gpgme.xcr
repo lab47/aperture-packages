@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "swig" as i1, "gnupg" as i2, "libassuan" as i3, "libgpg-error" as i4
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "swig" as i1, "gnupg" as i2, "libassuan" as i3, "libgpg-error" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "python@3.9" as i0, "swig" as i1, "gnupg" as i2, "libassuan" as i3, "libgpg-error" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "gpgme",
@@ -60,7 +68,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpgme.rb"), formula)

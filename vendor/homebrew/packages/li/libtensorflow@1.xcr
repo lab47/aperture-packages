@@ -16,8 +16,6 @@ class LibtensorflowAT1 < Formula
 
   keg_only :versioned_formula
 
-  deprecate! date: "2021-01-06", because: :versioned_formula
-
   depends_on "bazel" => :build
   depends_on "python@3.9" => :build
 
@@ -84,9 +82,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bazel" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gpatch" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "unzip" as i13, "xz" as i14, "zip" as i15, "zlib" as i16
+if platform.os == "darwin" {
+    import "bazel" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+} else {
+    import "bazel" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "openssl@1.1" as i7, "pkg-config" as i8, "python@3.9" as i9, "readline" as i10, "sqlite" as i11, "unzip" as i12, "xz" as i13, "zip" as i14, "zlib" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+}
 
 pkg(
   name: "libtensorflow@1",
@@ -97,7 +103,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libtensorflow@1.rb"), formula)

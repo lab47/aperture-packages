@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "dune" as i0, "ocamlbuild" as i1, "ocaml" as i2
+if platform.os == "darwin" {
+    import "dune" as i0, "ocamlbuild" as i1, "ocaml" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "dune" as i0, "ocamlbuild" as i1, "ocaml" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "menhir",
@@ -62,7 +70,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "menhir.rb"), formula)

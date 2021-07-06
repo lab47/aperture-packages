@@ -63,9 +63,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "libx11" as i3, "libxft" as i4, "libxmu" as i5, "libxrender" as i6, "libxt" as i7, "perl" as i8
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "libx11" as i3, "libxft" as i4, "libxmu" as i5, "libxrender" as i6, "libxt" as i7, "perl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "fontconfig" as i1, "freetype" as i2, "libx11" as i3, "libxft" as i4, "libxmu" as i5, "libxrender" as i6, "libxt" as i7, "perl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "rxvt-unicode",
@@ -76,7 +84,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rxvt-unicode.rb"), formula)

@@ -63,9 +63,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "intltool" as i4, "itstool" as i5, "pkg-config" as i6, "vala" as i7, "adwaita-icon-theme" as i8, "gnome-themes-standard" as i9, "gspell" as i10, "libgee" as i11, "tepl" as i12
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "intltool" as i4, "itstool" as i5, "pkg-config" as i6, "vala" as i7, "adwaita-icon-theme" as i8, "gnome-themes-standard" as i9, "gspell" as i10, "libgee" as i11, "tepl" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "intltool" as i4, "itstool" as i5, "pkg-config" as i6, "vala" as i7, "adwaita-icon-theme" as i8, "gnome-themes-standard" as i9, "gspell" as i10, "libgee" as i11, "tepl" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "gnome-latex",
@@ -76,7 +84,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnome-latex.rb"), formula)

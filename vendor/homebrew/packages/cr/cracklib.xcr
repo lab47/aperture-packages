@@ -54,9 +54,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0
+if platform.os == "darwin" {
+    import "gettext" as i0
+    deps = [hi, i0]
+} else {
+    import "gettext" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "cracklib",
@@ -67,7 +75,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cracklib.rb"), formula)

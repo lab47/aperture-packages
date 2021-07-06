@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gnutls" as i1, "linux-headers" as i2, "readline" as i3, "util-linux" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "gnutls" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cmake" as i0, "gnutls" as i1, "linux-headers" as i2, "readline" as i3, "util-linux" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "task",
@@ -59,7 +67,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "task.rb"), formula)

@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "smake" as i0
+if platform.os == "darwin" {
+    import "smake" as i0
+    deps = [hi, i0]
+} else {
+    import "smake" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "cdrtools",
@@ -75,7 +83,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cdrtools.rb"), formula)

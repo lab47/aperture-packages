@@ -72,9 +72,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gettext" as i1, "openssl@1.1" as i2, "readline" as i3
+if platform.os == "darwin" {
+    import "cmake" as i0, "gettext" as i1, "openssl@1.1" as i2, "readline" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cmake" as i0, "gettext" as i1, "openssl@1.1" as i2, "readline" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "bareos-client",
@@ -85,7 +93,7 @@ pkg(
     "license": "AGPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bareos-client.rb"), formula)

@@ -23,9 +23,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "php" as i0
+if platform.os == "darwin" {
+    import "php" as i0
+    deps = [hi, i0]
+} else {
+    import "php" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "phpbrew",
@@ -36,7 +44,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "phpbrew.rb"), formula)

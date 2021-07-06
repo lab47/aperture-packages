@@ -75,9 +75,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0
+if platform.os == "darwin" {
+    import "cmake" as i0
+    deps = [hi, i0]
+} else {
+    import "cmake" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "muparser",
@@ -88,7 +96,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "muparser.rb"), formula)

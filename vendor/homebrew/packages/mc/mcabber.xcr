@@ -68,9 +68,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "gpgme" as i2, "libgcrypt" as i3, "libidn" as i4, "libotr" as i5, "loudmouth" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "glib" as i1, "gpgme" as i2, "libgcrypt" as i3, "libidn" as i4, "libotr" as i5, "loudmouth" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "glib" as i1, "gpgme" as i2, "libgcrypt" as i3, "libidn" as i4, "libotr" as i5, "loudmouth" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "mcabber",
@@ -81,7 +89,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mcabber.rb"), formula)

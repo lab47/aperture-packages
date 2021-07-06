@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8, "zlib" as i9
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8, "zlib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "docbook-xsl" as i0, "gettext" as i1, "gpgme" as i2, "libidn" as i3, "lmdb" as i4, "lua" as i5, "notmuch" as i6, "openssl@1.1" as i7, "tokyo-cabinet" as i8, "zlib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "neomutt",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neomutt.rb"), formula)

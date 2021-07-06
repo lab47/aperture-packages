@@ -59,9 +59,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cln" as i1, "python@3.9" as i2, "readline" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cln" as i1, "python@3.9" as i2, "readline" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "cln" as i1, "python@3.9" as i2, "readline" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "ginac",
@@ -72,7 +80,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ginac.rb"), formula)

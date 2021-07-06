@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnupg" as i0, "libyaml" as i1, "python@3.8" as i2
+if platform.os == "darwin" {
+    import "gnupg" as i0, "libyaml" as i1, "python@3.8" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "gnupg" as i0, "libyaml" as i1, "python@3.8" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "passpie",
@@ -75,7 +83,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "passpie.rb"), formula)

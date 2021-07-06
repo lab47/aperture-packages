@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnupg" as i0, "go" as i1, "repo" as i2, "python@3.9" as i3
+if platform.os == "darwin" {
+    import "gnupg" as i0, "go" as i1, "repo" as i2, "python@3.9" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "gnupg" as i0, "go" as i1, "repo" as i2, "python@3.9" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "sync_gateway",
@@ -79,7 +87,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sync_gateway.rb"), formula)

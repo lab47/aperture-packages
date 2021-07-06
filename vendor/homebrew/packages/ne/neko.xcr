@@ -135,9 +135,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "bdw-gc" as i3, "mbedtls" as i4, "openssl@1.1" as i5, "pcre" as i6, "sqlite" as i7, "zlib" as i8, "apr" as i9, "apr-util" as i10, "httpd" as i11, "gtk+" as i12
+if platform.os == "darwin" {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "bdw-gc" as i3, "mbedtls" as i4, "openssl@1.1" as i5, "pcre" as i6, "sqlite" as i7, "zlib" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "bdw-gc" as i3, "mbedtls" as i4, "openssl@1.1" as i5, "pcre" as i6, "sqlite" as i7, "zlib" as i8, "apr" as i9, "apr-util" as i10, "httpd" as i11, "gtk+" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "neko",
@@ -148,7 +156,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "neko.rb"), formula)

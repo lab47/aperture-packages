@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnu-shogi" as i0, "libx11" as i1, "libxaw" as i2, "libxext" as i3, "libxmu" as i4, "libxt" as i5
+if platform.os == "darwin" {
+    import "gnu-shogi" as i0, "libx11" as i1, "libxaw" as i2, "libxext" as i3, "libxmu" as i4, "libxt" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "gnu-shogi" as i0, "libx11" as i1, "libxaw" as i2, "libxext" as i3, "libxmu" as i4, "libxt" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "xshogi",
@@ -46,7 +54,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xshogi.rb"), formula)

@@ -78,9 +78,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gcc" as i0, "openblas" as i1
+if platform.os == "darwin" {
+    import "gcc" as i0, "openblas" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "gcc" as i0, "openblas" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "numpy@1.16",
@@ -91,7 +99,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "numpy@1.16.rb"), formula)

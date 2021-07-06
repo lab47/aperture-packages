@@ -66,9 +66,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "libiconv" as i5, "zlib" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "libiconv" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "libiconv" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "minizip-ng",
@@ -79,7 +87,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "minizip-ng.rb"), formula)

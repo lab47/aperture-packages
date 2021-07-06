@@ -37,9 +37,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libssh" as i0
+if platform.os == "darwin" {
+    import "libssh" as i0
+    deps = [hi, i0]
+} else {
+    import "libssh" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "sshtrix",
@@ -50,7 +58,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sshtrix.rb"), formula)

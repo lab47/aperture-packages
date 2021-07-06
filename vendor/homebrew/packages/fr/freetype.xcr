@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libpng" as i0, "bzip2" as i1, "zlib" as i2
+if platform.os == "darwin" {
+    import "libpng" as i0, "bzip2" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "libpng" as i0, "bzip2" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "freetype",
@@ -58,7 +66,7 @@ pkg(
     "license": "FTL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freetype.rb"), formula)

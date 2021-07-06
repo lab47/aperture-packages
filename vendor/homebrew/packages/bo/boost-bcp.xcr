@@ -34,9 +34,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost-build" as i0
+if platform.os == "darwin" {
+    import "boost-build" as i0
+    deps = [hi, i0]
+} else {
+    import "boost-build" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "boost-bcp",
@@ -47,7 +55,7 @@ pkg(
     "license": "BSL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "boost-bcp.rb"), formula)

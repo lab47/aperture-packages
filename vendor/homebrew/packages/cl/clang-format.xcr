@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1, "subversion" as i2, "libxml2" as i3, "ncurses" as i4, "zlib" as i5
+if platform.os == "darwin" {
+    import "cmake" as i0, "ninja" as i1, "subversion" as i2, "libxml2" as i3, "ncurses" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "ninja" as i1, "subversion" as i2, "libxml2" as i3, "ncurses" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "clang-format",
@@ -90,7 +98,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clang-format.rb"), formula)

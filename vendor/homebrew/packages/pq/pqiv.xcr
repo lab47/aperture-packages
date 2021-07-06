@@ -39,9 +39,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gtk+3" as i1, "imagemagick" as i2, "libarchive" as i3, "libspectre" as i4, "poppler" as i5, "webp" as i6, "libtiff" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gtk+3" as i1, "imagemagick" as i2, "libarchive" as i3, "libspectre" as i4, "poppler" as i5, "webp" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "gtk+3" as i1, "imagemagick" as i2, "libarchive" as i3, "libspectre" as i4, "poppler" as i5, "webp" as i6, "libtiff" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "pqiv",
@@ -52,7 +60,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pqiv.rb"), formula)

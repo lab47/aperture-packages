@@ -58,9 +58,17 @@ index 8bd825f..c70b651 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "byacc" as i0, "cmake" as i1, "gengetopt" as i2, "pkg-config" as i3, "gmp" as i4, "json-c" as i5, "libdnet" as i6
+if platform.os == "darwin" {
+    import "byacc" as i0, "cmake" as i1, "gengetopt" as i2, "pkg-config" as i3, "gmp" as i4, "json-c" as i5, "libdnet" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "byacc" as i0, "cmake" as i1, "gengetopt" as i2, "pkg-config" as i3, "gmp" as i4, "json-c" as i5, "libdnet" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "zmap",
@@ -71,7 +79,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zmap.rb"), formula)

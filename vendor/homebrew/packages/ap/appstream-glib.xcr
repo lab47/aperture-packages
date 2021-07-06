@@ -94,9 +94,17 @@ index 5f726b0..7d29ac8 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6, "glib" as i7, "json-glib" as i8, "libarchive" as i9, "libsoup" as i10, "util-linux" as i11
+if platform.os == "darwin" {
+    import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6, "glib" as i7, "json-glib" as i8, "libarchive" as i9, "libsoup" as i10, "util-linux" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "gdk-pixbuf" as i6, "glib" as i7, "json-glib" as i8, "libarchive" as i9, "libsoup" as i10, "util-linux" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "appstream-glib",
@@ -107,7 +115,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "appstream-glib.rb"), formula)

@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "lz4" as i1, "lzo" as i2, "squashfs" as i3, "xz" as i4, "zstd" as i5, "libfuse" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "lz4" as i1, "lzo" as i2, "squashfs" as i3, "xz" as i4, "zstd" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "pkg-config" as i0, "lz4" as i1, "lzo" as i2, "squashfs" as i3, "xz" as i4, "zstd" as i5, "libfuse" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "squashfuse",
@@ -59,7 +67,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "squashfuse.rb"), formula)

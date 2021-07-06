@@ -70,9 +70,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "duktape" as i2, "freetype" as i3, "icu4c" as i4, "libpng" as i5, "libzip" as i6, "nlohmann-json" as i7, "openssl@1.1" as i8, "sdl2" as i9, "sdl2_ttf" as i10, "speexdsp" as i11
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "duktape" as i2, "freetype" as i3, "icu4c" as i4, "libpng" as i5, "libzip" as i6, "nlohmann-json" as i7, "openssl@1.1" as i8, "sdl2" as i9, "sdl2_ttf" as i10, "speexdsp" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "duktape" as i2, "freetype" as i3, "icu4c" as i4, "libpng" as i5, "libzip" as i6, "nlohmann-json" as i7, "openssl@1.1" as i8, "sdl2" as i9, "sdl2_ttf" as i10, "speexdsp" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "openrct2",
@@ -83,7 +91,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openrct2.rb"), formula)

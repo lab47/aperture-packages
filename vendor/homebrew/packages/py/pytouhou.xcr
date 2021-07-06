@@ -128,9 +128,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "mercurial" as i0, "pkg-config" as i1, "glfw" as i2, "gtk+3" as i3, "libepoxy" as i4, "py3cairo" as i5, "pygobject3" as i6, "python@3.9" as i7, "sdl2" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+if platform.os == "darwin" {
+    import "mercurial" as i0, "pkg-config" as i1, "glfw" as i2, "gtk+3" as i3, "libepoxy" as i4, "py3cairo" as i5, "pygobject3" as i6, "python@3.9" as i7, "sdl2" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "mercurial" as i0, "pkg-config" as i1, "glfw" as i2, "gtk+3" as i3, "libepoxy" as i4, "py3cairo" as i5, "pygobject3" as i6, "python@3.9" as i7, "sdl2" as i8, "sdl2_image" as i9, "sdl2_mixer" as i10, "sdl2_ttf" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "pytouhou",
@@ -141,7 +149,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pytouhou.rb"), formula)

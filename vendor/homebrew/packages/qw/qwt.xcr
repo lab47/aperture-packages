@@ -112,9 +112,17 @@ index c269e9d..c2e07ae 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "qt@5" as i0
+if platform.os == "darwin" {
+    import "qt@5" as i0
+    deps = [hi, i0]
+} else {
+    import "qt@5" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "qwt",
@@ -125,7 +133,7 @@ pkg(
     "license": "LGPL-2.1-only with Qwt-exception-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qwt.rb"), formula)

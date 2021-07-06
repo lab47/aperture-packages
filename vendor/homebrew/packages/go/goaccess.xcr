@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libmaxminddb" as i3, "tokyo-cabinet" as i4
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libmaxminddb" as i3, "tokyo-cabinet" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gettext" as i2, "libmaxminddb" as i3, "tokyo-cabinet" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "goaccess",
@@ -74,7 +82,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "goaccess.rb"), formula)

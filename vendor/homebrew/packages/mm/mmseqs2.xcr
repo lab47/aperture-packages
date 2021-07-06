@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cmake" as i1, "libomp" as i2, "wget" as i3, "bzip2" as i4, "zlib" as i5, "gawk" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "cmake" as i1, "libomp" as i2, "wget" as i3, "bzip2" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "cmake" as i1, "libomp" as i2, "wget" as i3, "bzip2" as i4, "zlib" as i5, "gawk" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "mmseqs2",
@@ -90,7 +98,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mmseqs2.rb"), formula)

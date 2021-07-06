@@ -120,9 +120,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "shared-mime-info" as i8
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "jpeg" as i5, "libpng" as i6, "libtiff" as i7, "shared-mime-info" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "gdk-pixbuf",
@@ -133,7 +141,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdk-pixbuf.rb"), formula)

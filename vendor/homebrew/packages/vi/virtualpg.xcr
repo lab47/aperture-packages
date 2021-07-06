@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libspatialite" as i0, "postgis" as i1
+if platform.os == "darwin" {
+    import "libspatialite" as i0, "postgis" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "libspatialite" as i0, "postgis" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "virtualpg",
@@ -58,7 +66,7 @@ pkg(
     "license": "MPL-1.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "virtualpg.rb"), formula)

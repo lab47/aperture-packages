@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "erlang@22" as i3, "libtool" as i4, "pkg-config" as i5, "icu4c" as i6, "openssl@1.1" as i7, "spidermonkey" as i8
+if platform.os == "darwin" {
+    import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "erlang@22" as i3, "libtool" as i4, "pkg-config" as i5, "icu4c" as i6, "openssl@1.1" as i7, "spidermonkey" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "autoconf" as i0, "autoconf-archive" as i1, "automake" as i2, "erlang@22" as i3, "libtool" as i4, "pkg-config" as i5, "icu4c" as i6, "openssl@1.1" as i7, "spidermonkey" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "couchdb",
@@ -109,7 +117,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "couchdb.rb"), formula)

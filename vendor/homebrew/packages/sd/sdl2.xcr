@@ -86,9 +86,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "pkg-config" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "sdl2",
@@ -99,7 +106,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sdl2.rb"), formula)

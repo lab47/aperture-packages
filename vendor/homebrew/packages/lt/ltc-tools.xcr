@@ -8,12 +8,11 @@ class LtcTools < Formula
   head "https://github.com/x42/ltc-tools.git"
 
   bottle do
-    sha256 cellar: :any, arm64_big_sur: "2131abaab3877ab6a2425fe8b635612c5d7235026d6098a3eea78d266038378a"
-    sha256 cellar: :any, big_sur:       "b31fe1140d71357035fd130e73c286d8892cda1103fccd96971205bd860cd9a7"
-    sha256 cellar: :any, catalina:      "bcd064f64a21f101f6599646306ba65c40ce7ec44fd7b6e2d8f29b4fefeebcc9"
-    sha256 cellar: :any, mojave:        "ae65212fa593ee7015eb7bfa63b4e7e7691e56a7db0fc1a82a311aef184aae55"
-    sha256 cellar: :any, high_sierra:   "15da8efd84adb9d9eb9c7b4450c75e326679b20bed258c8e7011fc6eb2cc9b20"
-    sha256 cellar: :any, sierra:        "51df0ba95565d43955bbdf0cfbc216696b4002f8cc95c80d8f6b387eece034d1"
+    sha256 cellar: :any, big_sur:     "b31fe1140d71357035fd130e73c286d8892cda1103fccd96971205bd860cd9a7"
+    sha256 cellar: :any, catalina:    "bcd064f64a21f101f6599646306ba65c40ce7ec44fd7b6e2d8f29b4fefeebcc9"
+    sha256 cellar: :any, mojave:      "ae65212fa593ee7015eb7bfa63b4e7e7691e56a7db0fc1a82a311aef184aae55"
+    sha256 cellar: :any, high_sierra: "15da8efd84adb9d9eb9c7b4450c75e326679b20bed258c8e7011fc6eb2cc9b20"
+    sha256 cellar: :any, sierra:      "51df0ba95565d43955bbdf0cfbc216696b4002f8cc95c80d8f6b387eece034d1"
   end
 
   depends_on "help2man" => :build
@@ -34,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "help2man" as i0, "pkg-config" as i1, "jack" as i2, "libltc" as i3, "libsndfile" as i4
+if platform.os == "darwin" {
+    import "help2man" as i0, "pkg-config" as i1, "jack" as i2, "libltc" as i3, "libsndfile" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "help2man" as i0, "pkg-config" as i1, "jack" as i2, "libltc" as i3, "libsndfile" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "ltc-tools",
@@ -47,7 +54,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ltc-tools.rb"), formula)

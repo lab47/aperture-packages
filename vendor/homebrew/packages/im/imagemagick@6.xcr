@@ -83,9 +83,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "ghostscript" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "openjpeg" as i8, "webp" as i9, "xz" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "freetype" as i1, "ghostscript" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "openjpeg" as i8, "webp" as i9, "xz" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "pkg-config" as i0, "freetype" as i1, "ghostscript" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "openjpeg" as i8, "webp" as i9, "xz" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "imagemagick@6",
@@ -96,7 +104,7 @@ pkg(
     "license": "ImageMagick",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "imagemagick@6.rb"), formula)

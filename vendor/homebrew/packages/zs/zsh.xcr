@@ -83,9 +83,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ncurses" as i0, "pcre" as i1, "texinfo" as i2
+if platform.os == "darwin" {
+    import "ncurses" as i0, "pcre" as i1, "texinfo" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "ncurses" as i0, "pcre" as i1, "texinfo" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "zsh",
@@ -96,7 +104,7 @@ pkg(
     "license": "MIT-Modern-Variant",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zsh.rb"), formula)

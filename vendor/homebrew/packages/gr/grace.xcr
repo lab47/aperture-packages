@@ -57,9 +57,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "fftw" as i0, "jpeg" as i1, "libice" as i2, "libpng" as i3, "libsm" as i4, "libx11" as i5, "libxext" as i6, "libxmu" as i7, "libxp" as i8, "libxpm" as i9, "libxt" as i10, "openmotif" as i11, "pdflib-lite" as i12
+if platform.os == "darwin" {
+    import "fftw" as i0, "jpeg" as i1, "libice" as i2, "libpng" as i3, "libsm" as i4, "libx11" as i5, "libxext" as i6, "libxmu" as i7, "libxp" as i8, "libxpm" as i9, "libxt" as i10, "openmotif" as i11, "pdflib-lite" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "fftw" as i0, "jpeg" as i1, "libice" as i2, "libpng" as i3, "libsm" as i4, "libx11" as i5, "libxext" as i6, "libxmu" as i7, "libxp" as i8, "libxpm" as i9, "libxt" as i10, "openmotif" as i11, "pdflib-lite" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "grace",
@@ -70,7 +78,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "grace.rb"), formula)

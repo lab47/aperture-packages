@@ -93,9 +93,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "double-conversion" as i3, "fmt" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "lz4" as i8, "openssl@1.1" as i9, "snappy" as i10, "xz" as i11, "zstd" as i12, "gcc" as i13
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "double-conversion" as i3, "fmt" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "lz4" as i8, "openssl@1.1" as i9, "snappy" as i10, "xz" as i11, "zstd" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "boost" as i2, "double-conversion" as i3, "fmt" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "lz4" as i8, "openssl@1.1" as i9, "snappy" as i10, "xz" as i11, "zstd" as i12, "gcc" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "folly",
@@ -106,7 +114,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "folly.rb"), formula)

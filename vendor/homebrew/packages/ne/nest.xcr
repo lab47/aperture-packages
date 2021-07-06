@@ -98,9 +98,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "cython" as i1, "gsl" as i2, "libomp" as i3, "libtool" as i4, "numpy" as i5, "python@3.9" as i6, "readline" as i7, "scipy" as i8
+if platform.os == "darwin" {
+    import "cmake" as i0, "cython" as i1, "gsl" as i2, "libomp" as i3, "libtool" as i4, "numpy" as i5, "python@3.9" as i6, "readline" as i7, "scipy" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "cython" as i1, "gsl" as i2, "libomp" as i3, "libtool" as i4, "numpy" as i5, "python@3.9" as i6, "readline" as i7, "scipy" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "nest",
@@ -111,7 +119,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nest.rb"), formula)

@@ -247,9 +247,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "pkg-config" as i4, "yasm" as i5, "ffmpeg" as i6, "jpeg" as i7, "ldns" as i8, "libpq" as i9, "libsndfile" as i10, "libtiff" as i11, "lua" as i12, "openssl@1.1" as i13, "opus" as i14, "pcre" as i15, "sofia-sip" as i16, "speex" as i17, "speexdsp" as i18, "sqlite" as i19, "util-linux" as i20, "libedit" as i21, "zlib" as i22
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "pkg-config" as i4, "yasm" as i5, "ffmpeg" as i6, "jpeg" as i7, "ldns" as i8, "libpq" as i9, "libsndfile" as i10, "libtiff" as i11, "lua" as i12, "openssl@1.1" as i13, "opus" as i14, "pcre" as i15, "sofia-sip" as i16, "speex" as i17, "speexdsp" as i18, "sqlite" as i19, "util-linux" as i20, "libedit" as i21, "zlib" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+} else {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "libtool" as i3, "pkg-config" as i4, "yasm" as i5, "ffmpeg" as i6, "jpeg" as i7, "ldns" as i8, "libpq" as i9, "libsndfile" as i10, "libtiff" as i11, "lua" as i12, "openssl@1.1" as i13, "opus" as i14, "pcre" as i15, "sofia-sip" as i16, "speex" as i17, "speexdsp" as i18, "sqlite" as i19, "util-linux" as i20, "libedit" as i21, "zlib" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+}
 
 pkg(
   name: "freeswitch",
@@ -260,7 +268,7 @@ pkg(
     "license": "MPL-1.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "freeswitch.rb"), formula)

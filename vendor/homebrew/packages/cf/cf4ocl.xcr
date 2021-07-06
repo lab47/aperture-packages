@@ -32,9 +32,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "glib" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "glib" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "glib" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "cf4ocl",
@@ -45,7 +53,7 @@ pkg(
     "license": "LGPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cf4ocl.rb"), formula)

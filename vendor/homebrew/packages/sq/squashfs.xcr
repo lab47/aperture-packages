@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "lz4" as i0, "lzo" as i1, "xz" as i2, "zstd" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "squashfs",
@@ -109,7 +117,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "squashfs.rb"), formula)

@@ -83,9 +83,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook-xsl" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gettext" as i5, "glib" as i6, "gssdp" as i7, "libsoup" as i8, "python@3.9" as i9
+if platform.os == "darwin" {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gettext" as i5, "glib" as i6, "gssdp" as i7, "libsoup" as i8, "python@3.9" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "docbook-xsl" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gettext" as i5, "glib" as i6, "gssdp" as i7, "libsoup" as i8, "python@3.9" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "gupnp",
@@ -96,7 +104,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gupnp.rb"), formula)

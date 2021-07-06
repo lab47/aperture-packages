@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0, "gtk+3" as i1, "intltool" as i2, "pkg-config" as i3, "librsvg" as i4
+if platform.os == "darwin" {
+    import "gettext" as i0, "gtk+3" as i1, "intltool" as i2, "pkg-config" as i3, "librsvg" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "gettext" as i0, "gtk+3" as i1, "intltool" as i2, "pkg-config" as i3, "librsvg" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "adwaita-icon-theme",
@@ -49,7 +57,7 @@ pkg(
     "license": "LGPL-3.0-or-later or CC-BY-SA-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "adwaita-icon-theme.rb"), formula)

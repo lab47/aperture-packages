@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0
+if platform.os == "darwin" {
+    import "gettext" as i0
+    deps = [hi, i0]
+} else {
+    import "gettext" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "calcurse",
@@ -60,7 +68,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "calcurse.rb"), formula)

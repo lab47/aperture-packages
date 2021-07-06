@@ -109,9 +109,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "xmlto" as i1, "c-ares" as i2, "libev" as i3, "libsodium" as i4, "mbedtls" as i5, "pcre" as i6
+if platform.os == "darwin" {
+    import "asciidoc" as i0, "xmlto" as i1, "c-ares" as i2, "libev" as i3, "libsodium" as i4, "mbedtls" as i5, "pcre" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "asciidoc" as i0, "xmlto" as i1, "c-ares" as i2, "libev" as i3, "libsodium" as i4, "mbedtls" as i5, "pcre" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "shadowsocks-libev",
@@ -122,7 +130,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "shadowsocks-libev.rb"), formula)

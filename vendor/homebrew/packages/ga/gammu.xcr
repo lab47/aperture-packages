@@ -35,9 +35,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "glib" as i1, "openssl@1.1" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "glib" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "glib" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "gammu",
@@ -48,7 +56,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gammu.rb"), formula)

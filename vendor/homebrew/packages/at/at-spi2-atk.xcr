@@ -93,9 +93,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "python@3.9" as i3, "at-spi2-core" as i4, "atk" as i5, "libxml2" as i6
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "python@3.9" as i3, "at-spi2-core" as i4, "atk" as i5, "libxml2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "python@3.9" as i3, "at-spi2-core" as i4, "atk" as i5, "libxml2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "at-spi2-atk",
@@ -106,7 +114,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "at-spi2-atk.rb"), formula)

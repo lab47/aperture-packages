@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "concurrencykit" as i0, "jlog" as i1, "openssl@1.1" as i2
+if platform.os == "darwin" {
+    import "concurrencykit" as i0, "jlog" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "concurrencykit" as i0, "jlog" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "fq",
@@ -53,7 +61,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fq.rb"), formula)

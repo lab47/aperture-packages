@@ -149,9 +149,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "atk" as i6, "gdk-pixbuf" as i7, "glib" as i8, "gsettings-desktop-schemas" as i9, "hicolor-icon-theme" as i10, "libepoxy" as i11, "pango" as i12, "libxslt" as i13, "cmake" as i14, "at-spi2-atk" as i15, "cairo" as i16, "iso-codes" as i17, "libxkbcommon" as i18, "xorgproto" as i19, "wayland-protocols" as i20
+if platform.os == "darwin" {
+    import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "atk" as i6, "gdk-pixbuf" as i7, "glib" as i8, "gsettings-desktop-schemas" as i9, "hicolor-icon-theme" as i10, "libepoxy" as i11, "pango" as i12, "libxslt" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "docbook" as i0, "docbook-xsl" as i1, "gobject-introspection" as i2, "meson" as i3, "ninja" as i4, "pkg-config" as i5, "atk" as i6, "gdk-pixbuf" as i7, "glib" as i8, "gsettings-desktop-schemas" as i9, "hicolor-icon-theme" as i10, "libepoxy" as i11, "pango" as i12, "libxslt" as i13, "cmake" as i14, "at-spi2-atk" as i15, "cairo" as i16, "iso-codes" as i17, "libxkbcommon" as i18, "xorgproto" as i19, "wayland-protocols" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "gtk+3",
@@ -162,7 +170,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gtk+3.rb"), formula)

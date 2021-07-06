@@ -74,9 +74,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "doxygen" as i1, "rapidjson" as i2, "freeimage" as i3, "freetype" as i4, "tbb@2020" as i5, "tcl-tk" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "doxygen" as i1, "rapidjson" as i2, "freeimage" as i3, "freetype" as i4, "tbb@2020" as i5, "tcl-tk" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "doxygen" as i1, "rapidjson" as i2, "freeimage" as i3, "freetype" as i4, "tbb@2020" as i5, "tcl-tk" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "opencascade",
@@ -87,7 +95,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opencascade.rb"), formula)

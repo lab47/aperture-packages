@@ -69,7 +69,15 @@ diff -bur barcode-original/pcl.c barcode-new/pcl.c
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "gnu-barcode",
@@ -80,7 +88,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnu-barcode.rb"), formula)

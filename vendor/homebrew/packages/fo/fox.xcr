@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "fontconfig" as i0, "freetype" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "libx11" as i5, "libxcursor" as i6, "libxext" as i7, "libxfixes" as i8, "libxft" as i9, "libxi" as i10, "libxrandr" as i11, "libxrender" as i12, "mesa" as i13, "mesa-glu" as i14
+if platform.os == "darwin" {
+    import "fontconfig" as i0, "freetype" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "libx11" as i5, "libxcursor" as i6, "libxext" as i7, "libxfixes" as i8, "libxft" as i9, "libxi" as i10, "libxrandr" as i11, "libxrender" as i12, "mesa" as i13, "mesa-glu" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "fontconfig" as i0, "freetype" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "libx11" as i5, "libxcursor" as i6, "libxext" as i7, "libxfixes" as i8, "libxft" as i9, "libxi" as i10, "libxrandr" as i11, "libxrender" as i12, "mesa" as i13, "mesa-glu" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "fox",
@@ -71,7 +79,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fox.rb"), formula)

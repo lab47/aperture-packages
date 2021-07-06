@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ocaml" as i0
+if platform.os == "darwin" {
+    import "ocaml" as i0
+    deps = [hi, i0]
+} else {
+    import "ocaml" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "unison",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "unison.rb"), formula)

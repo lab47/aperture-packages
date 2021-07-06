@@ -86,9 +86,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gcc" as i1, "c-blosc" as i2, "libfabric" as i3, "libpng" as i4, "mpi4py" as i5, "numpy" as i6, "open-mpi" as i7, "python@3.9" as i8, "zeromq" as i9, "bzip2" as i10
+if platform.os == "darwin" {
+    import "cmake" as i0, "gcc" as i1, "c-blosc" as i2, "libfabric" as i3, "libpng" as i4, "mpi4py" as i5, "numpy" as i6, "open-mpi" as i7, "python@3.9" as i8, "zeromq" as i9, "bzip2" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "cmake" as i0, "gcc" as i1, "c-blosc" as i2, "libfabric" as i3, "libpng" as i4, "mpi4py" as i5, "numpy" as i6, "open-mpi" as i7, "python@3.9" as i8, "zeromq" as i9, "bzip2" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "adios2",
@@ -99,7 +107,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "adios2.rb"), formula)

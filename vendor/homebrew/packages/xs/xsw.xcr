@@ -35,9 +35,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "sdl" as i0, "sdl_gfx" as i1, "sdl_image" as i2, "sdl_ttf" as i3
+if platform.os == "darwin" {
+    import "sdl" as i0, "sdl_gfx" as i1, "sdl_image" as i2, "sdl_ttf" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "sdl" as i0, "sdl_gfx" as i1, "sdl_image" as i2, "sdl_ttf" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "xsw",
@@ -48,7 +56,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xsw.rb"), formula)

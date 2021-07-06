@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "expat" as i2, "libpqxx" as i3, "pgrouting" as i4, "postgis" as i5, "postgresql" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "expat" as i2, "libpqxx" as i3, "pgrouting" as i4, "postgis" as i5, "postgresql" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "boost" as i1, "expat" as i2, "libpqxx" as i3, "pgrouting" as i4, "postgis" as i5, "postgresql" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "osm2pgrouting",
@@ -49,7 +57,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "osm2pgrouting.rb"), formula)

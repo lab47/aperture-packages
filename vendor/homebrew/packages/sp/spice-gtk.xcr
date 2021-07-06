@@ -106,9 +106,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "autogen" as i1, "automake" as i2, "gobject-introspection" as i3, "intltool" as i4, "libtool" as i5, "pkg-config" as i6, "vala" as i7, "atk" as i8, "cairo" as i9, "gdk-pixbuf" as i10, "gettext" as i11, "glib" as i12, "gst-libav" as i13, "gst-plugins-bad" as i14, "gst-plugins-base" as i15, "gst-plugins-good" as i16, "gst-plugins-ugly" as i17, "gstreamer" as i18, "gtk+3" as i19, "jpeg" as i20, "json-glib" as i21, "libusb" as i22, "lz4" as i23, "openssl@1.1" as i24, "opus" as i25, "pango" as i26, "pixman" as i27, "spice-protocol" as i28, "usbredir" as i29
+if platform.os == "darwin" {
+    import "autoconf" as i0, "autogen" as i1, "automake" as i2, "gobject-introspection" as i3, "intltool" as i4, "libtool" as i5, "pkg-config" as i6, "vala" as i7, "atk" as i8, "cairo" as i9, "gdk-pixbuf" as i10, "gettext" as i11, "glib" as i12, "gst-libav" as i13, "gst-plugins-bad" as i14, "gst-plugins-base" as i15, "gst-plugins-good" as i16, "gst-plugins-ugly" as i17, "gstreamer" as i18, "gtk+3" as i19, "jpeg" as i20, "json-glib" as i21, "libusb" as i22, "lz4" as i23, "openssl@1.1" as i24, "opus" as i25, "pango" as i26, "pixman" as i27, "spice-protocol" as i28, "usbredir" as i29
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29]
+} else {
+    import "autoconf" as i0, "autogen" as i1, "automake" as i2, "gobject-introspection" as i3, "intltool" as i4, "libtool" as i5, "pkg-config" as i6, "vala" as i7, "atk" as i8, "cairo" as i9, "gdk-pixbuf" as i10, "gettext" as i11, "glib" as i12, "gst-libav" as i13, "gst-plugins-bad" as i14, "gst-plugins-base" as i15, "gst-plugins-good" as i16, "gst-plugins-ugly" as i17, "gstreamer" as i18, "gtk+3" as i19, "jpeg" as i20, "json-glib" as i21, "libusb" as i22, "lz4" as i23, "openssl@1.1" as i24, "opus" as i25, "pango" as i26, "pixman" as i27, "spice-protocol" as i28, "usbredir" as i29
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29]
+}
 
 pkg(
   name: "spice-gtk",
@@ -119,7 +127,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "spice-gtk.rb"), formula)

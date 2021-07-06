@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "scons" as i1, "ffmpeg" as i2, "libkate" as i3, "libogg" as i4, "libvorbis" as i5, "theora" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "scons" as i1, "ffmpeg" as i2, "libkate" as i3, "libogg" as i4, "libvorbis" as i5, "theora" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "scons" as i1, "ffmpeg" as i2, "libkate" as i3, "libogg" as i4, "libvorbis" as i5, "theora" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "ffmpeg2theora",
@@ -60,7 +68,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ffmpeg2theora.rb"), formula)

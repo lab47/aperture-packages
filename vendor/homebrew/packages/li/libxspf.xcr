@@ -44,9 +44,17 @@ index 411f892..b66a25c 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cpptest" as i1, "uriparser" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cpptest" as i1, "uriparser" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "cpptest" as i1, "uriparser" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "libxspf",
@@ -57,7 +65,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxspf.rb"), formula)

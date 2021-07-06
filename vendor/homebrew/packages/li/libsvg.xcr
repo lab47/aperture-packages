@@ -154,9 +154,17 @@ index a9f871e..c84d417 100755
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "jpeg" as i4, "libpng" as i5, "libxml2" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "jpeg" as i4, "libpng" as i5, "libxml2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "jpeg" as i4, "libpng" as i5, "libxml2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libsvg",
@@ -167,7 +175,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libsvg.rb"), formula)

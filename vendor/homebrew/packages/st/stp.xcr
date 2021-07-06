@@ -84,9 +84,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bison" as i0, "cmake" as i1, "flex" as i2, "boost" as i3, "cryptominisat" as i4, "minisat" as i5, "python@3.9" as i6, "perl" as i7
+if platform.os == "darwin" {
+    import "bison" as i0, "cmake" as i1, "flex" as i2, "boost" as i3, "cryptominisat" as i4, "minisat" as i5, "python@3.9" as i6, "perl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "bison" as i0, "cmake" as i1, "flex" as i2, "boost" as i3, "cryptominisat" as i4, "minisat" as i5, "python@3.9" as i6, "perl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "stp",
@@ -97,7 +105,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "stp.rb"), formula)

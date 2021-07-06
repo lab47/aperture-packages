@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "gettext" as i2, "glew" as i3, "glib" as i4, "libmpeg2" as i5, "libpng" as i6, "sdl2" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "freetype" as i1, "gettext" as i2, "glew" as i3, "glib" as i4, "libmpeg2" as i5, "libpng" as i6, "sdl2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "freetype" as i1, "gettext" as i2, "glew" as i3, "glib" as i4, "libmpeg2" as i5, "libpng" as i6, "sdl2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "fs-uae",
@@ -71,7 +79,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fs-uae.rb"), formula)

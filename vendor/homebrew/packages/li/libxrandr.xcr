@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "libxrender" as i3, "xorgproto" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "libxrender" as i3, "xorgproto" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "libx11" as i1, "libxext" as i2, "libxrender" as i3, "xorgproto" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "libxrandr",
@@ -65,7 +73,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libxrandr.rb"), formula)

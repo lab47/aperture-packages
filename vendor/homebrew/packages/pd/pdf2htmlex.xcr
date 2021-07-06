@@ -114,9 +114,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "cmake" as i2, "pkg-config" as i3, "cairo" as i4, "freetype" as i5, "gettext" as i6, "giflib" as i7, "glib" as i8, "gnu-getopt" as i9, "jpeg" as i10, "libpng" as i11, "libtiff" as i12, "libtool" as i13, "openjpeg" as i14, "pango" as i15, "ttfautohint" as i16
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "pkg-config" as i3, "cairo" as i4, "freetype" as i5, "gettext" as i6, "giflib" as i7, "glib" as i8, "gnu-getopt" as i9, "jpeg" as i10, "libpng" as i11, "libtiff" as i12, "libtool" as i13, "openjpeg" as i14, "pango" as i15, "ttfautohint" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+} else {
+    import "autoconf" as i0, "automake" as i1, "cmake" as i2, "pkg-config" as i3, "cairo" as i4, "freetype" as i5, "gettext" as i6, "giflib" as i7, "glib" as i8, "gnu-getopt" as i9, "jpeg" as i10, "libpng" as i11, "libtiff" as i12, "libtool" as i13, "openjpeg" as i14, "pango" as i15, "ttfautohint" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+}
 
 pkg(
   name: "pdf2htmlex",
@@ -127,7 +135,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdf2htmlex.rb"), formula)

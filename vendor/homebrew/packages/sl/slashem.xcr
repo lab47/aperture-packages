@@ -69,9 +69,17 @@ index c3bdf26..8d00b11 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0
+if platform.os == "darwin" {
+    import "pkg-config" as i0
+    deps = [hi, i0]
+} else {
+    import "pkg-config" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "slashem",
@@ -82,7 +90,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "slashem.rb"), formula)

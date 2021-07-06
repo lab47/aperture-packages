@@ -142,9 +142,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "sphinx-doc" as i1, "icu4c" as i2, "libev" as i3, "libevent" as i4, "libgcrypt" as i5, "lz4" as i6, "mysql-client" as i7, "openssl@1.1" as i8, "protobuf" as i9, "zstd" as i10, "curl" as i11, "libedit" as i12, "perl" as i13, "zlib" as i14
+if platform.os == "darwin" {
+    import "cmake" as i0, "sphinx-doc" as i1, "icu4c" as i2, "libev" as i3, "libevent" as i4, "libgcrypt" as i5, "lz4" as i6, "mysql-client" as i7, "openssl@1.1" as i8, "protobuf" as i9, "zstd" as i10, "curl" as i11, "libedit" as i12, "perl" as i13, "zlib" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "cmake" as i0, "sphinx-doc" as i1, "icu4c" as i2, "libev" as i3, "libevent" as i4, "libgcrypt" as i5, "lz4" as i6, "mysql-client" as i7, "openssl@1.1" as i8, "protobuf" as i9, "zstd" as i10, "curl" as i11, "libedit" as i12, "perl" as i13, "zlib" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "percona-xtrabackup",
@@ -155,7 +163,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "percona-xtrabackup.rb"), formula)

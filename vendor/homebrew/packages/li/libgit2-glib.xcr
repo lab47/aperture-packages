@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "gettext" as i5, "glib" as i6, "libgit2" as i7
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "gettext" as i5, "glib" as i6, "libgit2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "gettext" as i5, "glib" as i6, "libgit2" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "libgit2-glib",
@@ -64,7 +72,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libgit2-glib.rb"), formula)

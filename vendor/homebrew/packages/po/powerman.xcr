@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "curl" as i0
+if platform.os == "darwin" {
+    import "curl" as i0
+    deps = [hi, i0]
+} else {
+    import "curl" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "powerman",
@@ -58,7 +66,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "powerman.rb"), formula)

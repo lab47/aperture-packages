@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "doxygen" as i2, "pkg-config" as i3, "fontconfig" as i4, "freeimage" as i5, "freetype" as i6, "glfw" as i7, "glm" as i8, "libx11" as i9
+if platform.os == "darwin" {
+    import "boost" as i0, "cmake" as i1, "doxygen" as i2, "pkg-config" as i3, "fontconfig" as i4, "freeimage" as i5, "freetype" as i6, "glfw" as i7, "glm" as i8, "libx11" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "boost" as i0, "cmake" as i1, "doxygen" as i2, "pkg-config" as i3, "fontconfig" as i4, "freeimage" as i5, "freetype" as i6, "glfw" as i7, "glm" as i8, "libx11" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "forge",
@@ -69,7 +77,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "forge.rb"), formula)

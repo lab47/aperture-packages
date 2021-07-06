@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "c-ares" as i1, "jsoncpp" as i2, "luajit" as i3, "tbb" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "c-ares" as i1, "jsoncpp" as i2, "luajit" as i3, "tbb" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "c-ares" as i1, "jsoncpp" as i2, "luajit" as i3, "tbb" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "sysdig",
@@ -75,7 +83,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sysdig.rb"), formula)

@@ -104,9 +104,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bison" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gcab" as i5, "gettext" as i6, "glib" as i7, "libgsf" as i8, "vala" as i9
+if platform.os == "darwin" {
+    import "bison" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gcab" as i5, "gettext" as i6, "glib" as i7, "libgsf" as i8, "vala" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "bison" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "gcab" as i5, "gettext" as i6, "glib" as i7, "libgsf" as i8, "vala" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "msitools",
@@ -117,7 +125,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "msitools.rb"), formula)

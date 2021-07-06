@@ -146,9 +146,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "help2man" as i0, "sphinx-doc" as i1, "python@3.9" as i2
+if platform.os == "darwin" {
+    import "help2man" as i0, "sphinx-doc" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "help2man" as i0, "sphinx-doc" as i1, "python@3.9" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "fail2ban",
@@ -159,7 +167,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fail2ban.rb"), formula)

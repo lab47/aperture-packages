@@ -790,9 +790,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0, "python@3.8" as i1, "libffi" as i2, "pkg-config" as i3
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0, "python@3.8" as i1, "libffi" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "openssl@1.1" as i0, "python@3.8" as i1, "libffi" as i2, "pkg-config" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "azure-cli",
@@ -803,7 +811,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "azure-cli.rb"), formula)

@@ -122,9 +122,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cweb" as i1, "fftw" as i2, "gcc" as i3, "gsl" as i4, "hdf5" as i5, "libmatio" as i6, "metis" as i7, "octave" as i8, "openblas" as i9, "suite-sparse" as i10
+if platform.os == "darwin" {
+    import "boost" as i0, "cweb" as i1, "fftw" as i2, "gcc" as i3, "gsl" as i4, "hdf5" as i5, "libmatio" as i6, "metis" as i7, "octave" as i8, "openblas" as i9, "suite-sparse" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "boost" as i0, "cweb" as i1, "fftw" as i2, "gcc" as i3, "gsl" as i4, "hdf5" as i5, "libmatio" as i6, "metis" as i7, "octave" as i8, "openblas" as i9, "suite-sparse" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "dynare",
@@ -135,7 +143,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dynare.rb"), formula)

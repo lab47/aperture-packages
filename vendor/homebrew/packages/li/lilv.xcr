@@ -33,9 +33,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "lv2" as i1, "serd" as i2, "sord" as i3, "sratom" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "lv2" as i1, "serd" as i2, "sord" as i3, "sratom" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "lv2" as i1, "serd" as i2, "sord" as i3, "sratom" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "lilv",
@@ -46,7 +54,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lilv.rb"), formula)

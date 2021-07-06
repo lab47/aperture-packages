@@ -86,9 +86,17 @@ index a5f2856..560f8d6 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gmp" as i0
+if platform.os == "darwin" {
+    import "gmp" as i0
+    deps = [hi, i0]
+} else {
+    import "gmp" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ppl",
@@ -99,7 +107,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ppl.rb"), formula)

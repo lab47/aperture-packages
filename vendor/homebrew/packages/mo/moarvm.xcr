@@ -59,9 +59,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libatomic_ops" as i0, "libffi" as i1, "libtommath" as i2, "libuv" as i3
+if platform.os == "darwin" {
+    import "libatomic_ops" as i0, "libffi" as i1, "libtommath" as i2, "libuv" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "libatomic_ops" as i0, "libffi" as i1, "libtommath" as i2, "libuv" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "moarvm",
@@ -72,7 +80,7 @@ pkg(
     "license": "Artistic-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "moarvm.rb"), formula)

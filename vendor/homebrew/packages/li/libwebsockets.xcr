@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "libevent" as i1, "libuv" as i2, "openssl@1.1" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "libevent" as i1, "libuv" as i2, "openssl@1.1" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "libevent" as i1, "libuv" as i2, "openssl@1.1" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "libwebsockets",
@@ -77,7 +85,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libwebsockets.rb"), formula)

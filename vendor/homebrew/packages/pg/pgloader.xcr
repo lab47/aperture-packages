@@ -51,9 +51,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "buildapp" as i0, "freetds" as i1, "openssl@1.1" as i2, "postgresql" as i3, "sbcl" as i4
+if platform.os == "darwin" {
+    import "buildapp" as i0, "freetds" as i1, "openssl@1.1" as i2, "postgresql" as i3, "sbcl" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "buildapp" as i0, "freetds" as i1, "openssl@1.1" as i2, "postgresql" as i3, "sbcl" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "pgloader",
@@ -64,7 +72,7 @@ pkg(
     "license": "PostgreSQL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pgloader.rb"), formula)

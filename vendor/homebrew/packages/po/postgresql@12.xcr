@@ -222,9 +222,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "icu4c" as i1, "krb5" as i2, "openssl@1.1" as i3, "readline" as i4, "krb5" as i5, "libxml2" as i6, "libxslt" as i7, "openldap" as i8, "perl" as i9, "linux-pam" as i10, "util-linux" as i11
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "icu4c" as i1, "krb5" as i2, "openssl@1.1" as i3, "readline" as i4, "krb5" as i5, "libxml2" as i6, "libxslt" as i7, "openldap" as i8, "perl" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "pkg-config" as i0, "icu4c" as i1, "krb5" as i2, "openssl@1.1" as i3, "readline" as i4, "krb5" as i5, "libxml2" as i6, "libxslt" as i7, "openldap" as i8, "perl" as i9, "linux-pam" as i10, "util-linux" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "postgresql@12",
@@ -235,7 +243,7 @@ pkg(
     "license": "PostgreSQL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "postgresql@12.rb"), formula)

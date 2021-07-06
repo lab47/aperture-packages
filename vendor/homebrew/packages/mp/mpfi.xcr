@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gmp" as i0, "mpfr" as i1
+if platform.os == "darwin" {
+    import "gmp" as i0, "mpfr" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "gmp" as i0, "mpfr" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "mpfi",
@@ -68,7 +76,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mpfi.rb"), formula)

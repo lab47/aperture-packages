@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "help2man" as i1, "pkg-config" as i2, "boost" as i3, "htmlcxx" as i4, "jsoncpp" as i5, "liboauth" as i6, "rhash" as i7, "tinyxml2" as i8
+if platform.os == "darwin" {
+    import "cmake" as i0, "help2man" as i1, "pkg-config" as i2, "boost" as i3, "htmlcxx" as i4, "jsoncpp" as i5, "liboauth" as i6, "rhash" as i7, "tinyxml2" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "help2man" as i1, "pkg-config" as i2, "boost" as i3, "htmlcxx" as i4, "jsoncpp" as i5, "liboauth" as i6, "rhash" as i7, "tinyxml2" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "lgogdownloader",
@@ -64,7 +72,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lgogdownloader.rb"), formula)

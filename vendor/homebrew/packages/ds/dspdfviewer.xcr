@@ -93,9 +93,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "boost" as i3, "cairo" as i4, "fontconfig" as i5, "freetype" as i6, "gettext" as i7, "glib" as i8, "jpeg" as i9, "libpng" as i10, "libtiff" as i11, "openjpeg" as i12, "qt@5" as i13
+if platform.os == "darwin" {
+    import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "boost" as i3, "cairo" as i4, "fontconfig" as i5, "freetype" as i6, "gettext" as i7, "glib" as i8, "jpeg" as i9, "libpng" as i10, "libtiff" as i11, "openjpeg" as i12, "qt@5" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "cmake" as i0, "gobject-introspection" as i1, "pkg-config" as i2, "boost" as i3, "cairo" as i4, "fontconfig" as i5, "freetype" as i6, "gettext" as i7, "glib" as i8, "jpeg" as i9, "libpng" as i10, "libtiff" as i11, "openjpeg" as i12, "qt@5" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "dspdfviewer",
@@ -106,7 +114,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dspdfviewer.rb"), formula)

@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "fontconfig" as i0, "freetype" as i1, "libice" as i2, "libx11" as i3, "libxaw" as i4, "libxext" as i5, "libxft" as i6, "libxinerama" as i7, "libxmu" as i8, "libxpm" as i9, "libxt" as i10
+if platform.os == "darwin" {
+    import "fontconfig" as i0, "freetype" as i1, "libice" as i2, "libx11" as i3, "libxaw" as i4, "libxext" as i5, "libxft" as i6, "libxinerama" as i7, "libxmu" as i8, "libxpm" as i9, "libxt" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "fontconfig" as i0, "freetype" as i1, "libice" as i2, "libx11" as i3, "libxaw" as i4, "libxext" as i5, "libxft" as i6, "libxinerama" as i7, "libxmu" as i8, "libxpm" as i9, "libxt" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "xterm",
@@ -63,7 +71,7 @@ pkg(
     "license": "X11",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xterm.rb"), formula)

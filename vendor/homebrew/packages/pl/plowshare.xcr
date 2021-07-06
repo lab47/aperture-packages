@@ -29,9 +29,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bash" as i0, "coreutils" as i1, "feh" as i2, "gnu-sed" as i3, "libcaca" as i4, "recode" as i5, "spidermonkey" as i6
+if platform.os == "darwin" {
+    import "bash" as i0, "coreutils" as i1, "feh" as i2, "gnu-sed" as i3, "libcaca" as i4, "recode" as i5, "spidermonkey" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "bash" as i0, "coreutils" as i1, "feh" as i2, "gnu-sed" as i3, "libcaca" as i4, "recode" as i5, "spidermonkey" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "plowshare",
@@ -42,7 +50,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "plowshare.rb"), formula)

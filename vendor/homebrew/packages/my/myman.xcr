@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "gnu-sed" as i1, "groff" as i2, "ncurses" as i3
+if platform.os == "darwin" {
+    import "coreutils" as i0, "gnu-sed" as i1, "groff" as i2, "ncurses" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "coreutils" as i0, "gnu-sed" as i1, "groff" as i2, "ncurses" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "myman",
@@ -56,7 +64,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "myman.rb"), formula)

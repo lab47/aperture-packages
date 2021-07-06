@@ -70,9 +70,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "assimp" as i2, "boost" as i3, "bullet" as i4, "eigen" as i5, "fcl" as i6, "flann" as i7, "ipopt" as i8, "libccd" as i9, "nlopt" as i10, "ode" as i11, "open-scene-graph" as i12, "tinyxml2" as i13, "urdfdom" as i14
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "assimp" as i2, "boost" as i3, "bullet" as i4, "eigen" as i5, "fcl" as i6, "flann" as i7, "ipopt" as i8, "libccd" as i9, "nlopt" as i10, "ode" as i11, "open-scene-graph" as i12, "tinyxml2" as i13, "urdfdom" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "assimp" as i2, "boost" as i3, "bullet" as i4, "eigen" as i5, "fcl" as i6, "flann" as i7, "ipopt" as i8, "libccd" as i9, "nlopt" as i10, "ode" as i11, "open-scene-graph" as i12, "tinyxml2" as i13, "urdfdom" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "dartsim",
@@ -83,7 +91,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dartsim.rb"), formula)

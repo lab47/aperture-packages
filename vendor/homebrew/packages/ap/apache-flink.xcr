@@ -10,7 +10,7 @@ class ApacheFlink < Formula
   head "https://github.com/apache/flink.git"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5219cb50faf28259acd845fca5a146cdad78ba4a51ee19f1eb29eb1b55012c9d"
+    sha256 cellar: :any_skip_relocation, all: "a52f82db10ddd60b183ed75873a4b18eab16cc9c7327debbc3b7eb57585943ba"
   end
 
   depends_on "openjdk@11"
@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk@11" as i0
+if platform.os == "darwin" {
+    import "openjdk@11" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk@11" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "apache-flink",
@@ -59,7 +67,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "apache-flink.rb"), formula)

@@ -95,9 +95,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "emacs" as i2, "libgpg-error" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "glib" as i7, "gmime" as i8, "xapian" as i9, "texinfo" as i10
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "emacs" as i2, "libgpg-error" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "glib" as i7, "gmime" as i8, "xapian" as i9, "texinfo" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "autoconf" as i0, "automake" as i1, "emacs" as i2, "libgpg-error" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "glib" as i7, "gmime" as i8, "xapian" as i9, "texinfo" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "mu",
@@ -108,7 +116,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mu.rb"), formula)

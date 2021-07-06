@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ocaml" as i0, "opam" as i1, "m4" as i2, "rsync" as i3, "unzip" as i4
+if platform.os == "darwin" {
+    import "ocaml" as i0, "opam" as i1, "m4" as i2, "rsync" as i3, "unzip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "ocaml" as i0, "opam" as i1, "m4" as i2, "rsync" as i3, "unzip" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "flow",
@@ -56,7 +64,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flow.rb"), formula)

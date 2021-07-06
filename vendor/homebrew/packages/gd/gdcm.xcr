@@ -94,9 +94,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "swig" as i3, "openjpeg" as i4, "openssl@1.1" as i5, "python@3.9" as i6, "vtk@8.2" as i7, "expat" as i8, "zlib" as i9
+if platform.os == "darwin" {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "swig" as i3, "openjpeg" as i4, "openssl@1.1" as i5, "python@3.9" as i6, "vtk@8.2" as i7, "expat" as i8, "zlib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "cmake" as i0, "ninja" as i1, "pkg-config" as i2, "swig" as i3, "openjpeg" as i4, "openssl@1.1" as i5, "python@3.9" as i6, "vtk@8.2" as i7, "expat" as i8, "zlib" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "gdcm",
@@ -107,7 +115,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdcm.rb"), formula)

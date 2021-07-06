@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "giflib" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "openjpeg" as i5, "webp" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "giflib" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "openjpeg" as i5, "webp" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "giflib" as i1, "jpeg" as i2, "libpng" as i3, "libtiff" as i4, "openjpeg" as i5, "webp" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "leptonica",
@@ -71,7 +79,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "leptonica.rb"), formula)

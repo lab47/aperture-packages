@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "berkeley-db" as i1, "libprelude" as i2, "libtirpc" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "berkeley-db" as i1, "libprelude" as i2, "libtirpc" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "berkeley-db" as i1, "libprelude" as i2, "libtirpc" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "linux-pam",
@@ -60,7 +68,7 @@ pkg(
     "license": "BSD-3-Clause or GPL-1.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "linux-pam.rb"), formula)

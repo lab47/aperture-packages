@@ -50,9 +50,17 @@ index 2a4e34f..cdf11a1 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0
+if platform.os == "darwin" {
+    import "cmake" as i0
+    deps = [hi, i0]
+} else {
+    import "cmake" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "teapot",
@@ -63,7 +71,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "teapot.rb"), formula)

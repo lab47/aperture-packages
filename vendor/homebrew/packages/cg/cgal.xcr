@@ -89,9 +89,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "qt@5" as i1, "boost" as i2, "eigen" as i3, "gmp" as i4, "mpfr" as i5, "openssl@1.1" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "qt@5" as i1, "boost" as i2, "eigen" as i3, "gmp" as i4, "mpfr" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "qt@5" as i1, "boost" as i2, "eigen" as i3, "gmp" as i4, "mpfr" as i5, "openssl@1.1" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "cgal",
@@ -102,7 +110,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cgal.rb"), formula)

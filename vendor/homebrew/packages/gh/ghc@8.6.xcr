@@ -154,9 +154,17 @@ diff -pur a/rts/Linker.c b/rts/Linker.c
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "sphinx-doc" as i1
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "sphinx-doc" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "python@3.9" as i0, "sphinx-doc" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "ghc@8.6",
@@ -167,7 +175,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ghc@8.6.rb"), formula)

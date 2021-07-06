@@ -28,9 +28,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gnu-prolog" as i0
+if platform.os == "darwin" {
+    import "gnu-prolog" as i0
+    deps = [hi, i0]
+} else {
+    import "gnu-prolog" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "logtalk",
@@ -41,7 +49,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "logtalk.rb"), formula)

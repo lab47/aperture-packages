@@ -42,9 +42,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "raptor" as i1, "rasqal" as i2, "sqlite" as i3, "unixodbc" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "raptor" as i1, "rasqal" as i2, "sqlite" as i3, "unixodbc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "raptor" as i1, "rasqal" as i2, "sqlite" as i3, "unixodbc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "redland",
@@ -55,7 +63,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "redland.rb"), formula)

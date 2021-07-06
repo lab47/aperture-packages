@@ -84,9 +84,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "python@3.7" as i3
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "python@3.7" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "python@3.7" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "protobuf@3.7",
@@ -97,7 +105,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "protobuf@3.7.rb"), formula)

@@ -97,9 +97,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faad2" as i4, "ffmpeg" as i5, "flac" as i6, "fluid-synth" as i7, "glib" as i8, "lame" as i9, "libbs2b" as i10, "libcue" as i11, "libmodplug" as i12, "libnotify" as i13, "libopenmpt" as i14, "libsamplerate" as i15, "libsoxr" as i16, "libvorbis" as i17, "mpg123" as i18, "neon" as i19, "qt@5" as i20, "sdl2" as i21, "wavpack" as i22
+if platform.os == "darwin" {
+    import "gettext" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faad2" as i4, "ffmpeg" as i5, "flac" as i6, "fluid-synth" as i7, "glib" as i8, "lame" as i9, "libbs2b" as i10, "libcue" as i11, "libmodplug" as i12, "libnotify" as i13, "libopenmpt" as i14, "libsamplerate" as i15, "libsoxr" as i16, "libvorbis" as i17, "mpg123" as i18, "neon" as i19, "qt@5" as i20, "sdl2" as i21, "wavpack" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+} else {
+    import "gettext" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "faad2" as i4, "ffmpeg" as i5, "flac" as i6, "fluid-synth" as i7, "glib" as i8, "lame" as i9, "libbs2b" as i10, "libcue" as i11, "libmodplug" as i12, "libnotify" as i13, "libopenmpt" as i14, "libsamplerate" as i15, "libsoxr" as i16, "libvorbis" as i17, "mpg123" as i18, "neon" as i19, "qt@5" as i20, "sdl2" as i21, "wavpack" as i22
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22]
+}
 
 pkg(
   name: "audacious",
@@ -110,7 +118,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "audacious.rb"), formula)

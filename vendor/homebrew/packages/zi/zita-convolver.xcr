@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "fftw" as i0
+if platform.os == "darwin" {
+    import "fftw" as i0
+    deps = [hi, i0]
+} else {
+    import "fftw" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "zita-convolver",
@@ -60,7 +68,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zita-convolver.rb"), formula)

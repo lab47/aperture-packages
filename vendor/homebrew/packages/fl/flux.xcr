@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "rust" as i1, "llvm" as i2, "pkg-config" as i3, "ragel" as i4
+if platform.os == "darwin" {
+    import "go" as i0, "rust" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "go" as i0, "rust" as i1, "llvm" as i2, "pkg-config" as i3, "ragel" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "flux",
@@ -57,7 +65,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flux.rb"), formula)

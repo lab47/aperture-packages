@@ -57,9 +57,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bdw-gc" as i0
+if platform.os == "darwin" {
+    import "bdw-gc" as i0
+    deps = [hi, i0]
+} else {
+    import "bdw-gc" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "kite",
@@ -70,7 +78,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kite.rb"), formula)

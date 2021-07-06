@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "ghc@8.6" as i1, "haskell-stack" as i2, "boost" as i3, "rapidjson" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "ghc@8.6" as i1, "haskell-stack" as i2, "boost" as i3, "rapidjson" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "ghc@8.6" as i1, "haskell-stack" as i2, "boost" as i3, "rapidjson" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "bond",
@@ -56,7 +64,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bond.rb"), formula)

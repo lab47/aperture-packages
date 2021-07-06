@@ -120,9 +120,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libtool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gnutls" as i5, "jpeg" as i6, "libpng" as i7, "libslirp" as i8, "libssh" as i9, "libusb" as i10, "lzo" as i11, "ncurses" as i12, "nettle" as i13, "pixman" as i14, "snappy" as i15, "vde" as i16
+if platform.os == "darwin" {
+    import "libtool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gnutls" as i5, "jpeg" as i6, "libpng" as i7, "libslirp" as i8, "libssh" as i9, "libusb" as i10, "lzo" as i11, "ncurses" as i12, "nettle" as i13, "pixman" as i14, "snappy" as i15, "vde" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+} else {
+    import "libtool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gnutls" as i5, "jpeg" as i6, "libpng" as i7, "libslirp" as i8, "libssh" as i9, "libusb" as i10, "lzo" as i11, "ncurses" as i12, "nettle" as i13, "pixman" as i14, "snappy" as i15, "vde" as i16
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16]
+}
 
 pkg(
   name: "qemu",
@@ -133,7 +141,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "qemu.rb"), formula)

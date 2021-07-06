@@ -35,9 +35,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "id3lib" as i0
+if platform.os == "darwin" {
+    import "id3lib" as i0
+    deps = [hi, i0]
+} else {
+    import "id3lib" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "id3v2",
@@ -48,7 +56,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "id3v2.rb"), formula)

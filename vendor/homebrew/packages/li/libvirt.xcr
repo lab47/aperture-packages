@@ -107,9 +107,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "docutils" as i0, "meson" as i1, "ninja" as i2, "perl" as i3, "pkg-config" as i4, "python@3.9" as i5, "gettext" as i6, "glib" as i7, "gnu-sed" as i8, "gnutls" as i9, "grep" as i10, "libgcrypt" as i11, "libiscsi" as i12, "libssh2" as i13, "yajl" as i14, "curl" as i15, "libxslt" as i16, "rpcgen" as i17, "libtirpc" as i18
+if platform.os == "darwin" {
+    import "docutils" as i0, "meson" as i1, "ninja" as i2, "perl" as i3, "pkg-config" as i4, "python@3.9" as i5, "gettext" as i6, "glib" as i7, "gnu-sed" as i8, "gnutls" as i9, "grep" as i10, "libgcrypt" as i11, "libiscsi" as i12, "libssh2" as i13, "yajl" as i14, "curl" as i15, "libxslt" as i16, "rpcgen" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "docutils" as i0, "meson" as i1, "ninja" as i2, "perl" as i3, "pkg-config" as i4, "python@3.9" as i5, "gettext" as i6, "glib" as i7, "gnu-sed" as i8, "gnutls" as i9, "grep" as i10, "libgcrypt" as i11, "libiscsi" as i12, "libssh2" as i13, "yajl" as i14, "curl" as i15, "libxslt" as i16, "rpcgen" as i17, "libtirpc" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+}
 
 pkg(
   name: "libvirt",
@@ -120,7 +128,7 @@ pkg(
     "license": "LGPL-2.1-or-later and GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libvirt.rb"), formula)

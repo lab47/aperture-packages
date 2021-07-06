@@ -154,9 +154,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "fltk" as i4, "fluid-synth" as i5, "gettext" as i6, "hdf5" as i7, "jack" as i8, "liblo" as i9, "libsamplerate" as i10, "libsndfile" as i11, "numpy" as i12, "openjdk" as i13, "portaudio" as i14, "portmidi" as i15, "stk" as i16, "wiiuse" as i17, "bison" as i18, "flex" as i19, "curl" as i20, "zlib" as i21
+if platform.os == "darwin" {
+    import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "fltk" as i4, "fluid-synth" as i5, "gettext" as i6, "hdf5" as i7, "jack" as i8, "liblo" as i9, "libsamplerate" as i10, "libsndfile" as i11, "numpy" as i12, "openjdk" as i13, "portaudio" as i14, "portmidi" as i15, "stk" as i16, "wiiuse" as i17, "bison" as i18, "flex" as i19, "curl" as i20, "zlib" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+} else {
+    import "asio" as i0, "cmake" as i1, "eigen" as i2, "swig" as i3, "fltk" as i4, "fluid-synth" as i5, "gettext" as i6, "hdf5" as i7, "jack" as i8, "liblo" as i9, "libsamplerate" as i10, "libsndfile" as i11, "numpy" as i12, "openjdk" as i13, "portaudio" as i14, "portmidi" as i15, "stk" as i16, "wiiuse" as i17, "bison" as i18, "flex" as i19, "curl" as i20, "zlib" as i21
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21]
+}
 
 pkg(
   name: "csound",
@@ -167,7 +175,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "csound.rb"), formula)

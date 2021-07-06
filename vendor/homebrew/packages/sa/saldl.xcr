@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "curl" as i3, "libevent" as i4
+if platform.os == "darwin" {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "curl" as i3, "libevent" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "asciidoc" as i0, "docbook-xsl" as i1, "pkg-config" as i2, "curl" as i3, "libevent" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "saldl",
@@ -57,7 +65,7 @@ pkg(
     "license": "AGPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "saldl.rb"), formula)

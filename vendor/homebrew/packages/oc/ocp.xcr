@@ -79,9 +79,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-turbo" as i4, "libpng" as i5, "libvorbis" as i6, "mad" as i7, "sdl2" as i8, "ncurses" as i9, "zlib" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-turbo" as i4, "libpng" as i5, "libvorbis" as i6, "mad" as i7, "sdl2" as i8, "ncurses" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "pkg-config" as i0, "xa" as i1, "flac" as i2, "freetype" as i3, "jpeg-turbo" as i4, "libpng" as i5, "libvorbis" as i6, "mad" as i7, "sdl2" as i8, "ncurses" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "ocp",
@@ -92,7 +100,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ocp.rb"), formula)

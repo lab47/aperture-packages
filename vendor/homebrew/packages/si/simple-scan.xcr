@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "gtk+3" as i6, "libgusb" as i7, "libhandy" as i8, "sane-backends" as i9, "webp" as i10
+if platform.os == "darwin" {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "gtk+3" as i6, "libgusb" as i7, "libhandy" as i8, "sane-backends" as i9, "webp" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "itstool" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "vala" as i4, "glib" as i5, "gtk+3" as i6, "libgusb" as i7, "libhandy" as i8, "sane-backends" as i9, "webp" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "simple-scan",
@@ -59,7 +67,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "simple-scan.rb"), formula)

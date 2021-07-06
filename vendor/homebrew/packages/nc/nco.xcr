@@ -53,9 +53,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "antlr@2" as i0, "gsl" as i1, "netcdf" as i2, "texinfo" as i3, "udunits" as i4
+if platform.os == "darwin" {
+    import "antlr@2" as i0, "gsl" as i1, "netcdf" as i2, "texinfo" as i3, "udunits" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "antlr@2" as i0, "gsl" as i1, "netcdf" as i2, "texinfo" as i3, "udunits" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "nco",
@@ -66,7 +74,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "nco.rb"), formula)

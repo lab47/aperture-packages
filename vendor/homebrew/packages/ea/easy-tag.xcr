@@ -72,9 +72,17 @@ index 9dbde5f..4ffe52e 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "python@3.9" as i3, "adwaita-icon-theme" as i4, "flac" as i5, "gtk+3" as i6, "hicolor-icon-theme" as i7, "id3lib" as i8, "libid3tag" as i9, "libogg" as i10, "libvorbis" as i11, "speex" as i12, "taglib" as i13, "wavpack" as i14
+if platform.os == "darwin" {
+    import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "python@3.9" as i3, "adwaita-icon-theme" as i4, "flac" as i5, "gtk+3" as i6, "hicolor-icon-theme" as i7, "id3lib" as i8, "libid3tag" as i9, "libogg" as i10, "libvorbis" as i11, "speex" as i12, "taglib" as i13, "wavpack" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "python@3.9" as i3, "adwaita-icon-theme" as i4, "flac" as i5, "gtk+3" as i6, "hicolor-icon-theme" as i7, "id3lib" as i8, "libid3tag" as i9, "libogg" as i10, "libvorbis" as i11, "speex" as i12, "taglib" as i13, "wavpack" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "easy-tag",
@@ -85,7 +93,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "easy-tag.rb"), formula)

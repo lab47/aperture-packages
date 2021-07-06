@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libarchive" as i0, "sdl" as i1
+if platform.os == "darwin" {
+    import "libarchive" as i0, "sdl" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "libarchive" as i0, "sdl" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "dgen",
@@ -64,7 +72,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dgen.rb"), formula)

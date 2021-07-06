@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "desktop-file-utils" as i1, "intltool" as i2, "itstool" as i3, "pkg-config" as i4, "python@3.9" as i5, "gtk+3" as i6
+if platform.os == "darwin" {
+    import "coreutils" as i0, "desktop-file-utils" as i1, "intltool" as i2, "itstool" as i3, "pkg-config" as i4, "python@3.9" as i5, "gtk+3" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "coreutils" as i0, "desktop-file-utils" as i1, "intltool" as i2, "itstool" as i3, "pkg-config" as i4, "python@3.9" as i5, "gtk+3" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "gucharmap",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gucharmap.rb"), formula)

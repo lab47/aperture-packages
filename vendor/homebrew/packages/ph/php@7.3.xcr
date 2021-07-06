@@ -518,9 +518,17 @@ index 168c465f8d..6c087d152f 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "httpd" as i0, "pkg-config" as i1, "xz" as i2, "apr" as i3, "apr-util" as i4, "argon2" as i5, "aspell" as i6, "autoconf" as i7, "curl" as i8, "freetds" as i9, "freetype" as i10, "gettext" as i11, "glib" as i12, "gmp" as i13, "icu4c" as i14, "jpeg" as i15, "libpng" as i16, "libpq" as i17, "libsodium" as i18, "libzip" as i19, "openldap" as i20, "openssl@1.1" as i21, "sqlite" as i22, "tidy-html5" as i23, "unixodbc" as i24, "webp" as i25, "bzip2" as i26, "libedit" as i27, "libxml2" as i28, "libxslt" as i29, "zlib" as i30
+if platform.os == "darwin" {
+    import "httpd" as i0, "pkg-config" as i1, "xz" as i2, "apr" as i3, "apr-util" as i4, "argon2" as i5, "aspell" as i6, "autoconf" as i7, "curl" as i8, "freetds" as i9, "freetype" as i10, "gettext" as i11, "glib" as i12, "gmp" as i13, "icu4c" as i14, "jpeg" as i15, "libpng" as i16, "libpq" as i17, "libsodium" as i18, "libzip" as i19, "openldap" as i20, "openssl@1.1" as i21, "sqlite" as i22, "tidy-html5" as i23, "unixodbc" as i24, "webp" as i25, "bzip2" as i26, "libedit" as i27, "libxml2" as i28, "libxslt" as i29, "zlib" as i30
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30]
+} else {
+    import "httpd" as i0, "pkg-config" as i1, "xz" as i2, "apr" as i3, "apr-util" as i4, "argon2" as i5, "aspell" as i6, "autoconf" as i7, "curl" as i8, "freetds" as i9, "freetype" as i10, "gettext" as i11, "glib" as i12, "gmp" as i13, "icu4c" as i14, "jpeg" as i15, "libpng" as i16, "libpq" as i17, "libsodium" as i18, "libzip" as i19, "openldap" as i20, "openssl@1.1" as i21, "sqlite" as i22, "tidy-html5" as i23, "unixodbc" as i24, "webp" as i25, "bzip2" as i26, "libedit" as i27, "libxml2" as i28, "libxslt" as i29, "zlib" as i30
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30]
+}
 
 pkg(
   name: "php@7.3",
@@ -531,7 +539,7 @@ pkg(
     "license": "PHP-3.01",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "php@7.3.rb"), formula)

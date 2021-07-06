@@ -71,9 +71,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "hdf5" as i0, "hwloc" as i1, "metis" as i2, "netcdf" as i3, "open-mpi" as i4, "scalapack" as i5, "suite-sparse" as i6
+if platform.os == "darwin" {
+    import "hdf5" as i0, "hwloc" as i1, "metis" as i2, "netcdf" as i3, "open-mpi" as i4, "scalapack" as i5, "suite-sparse" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "hdf5" as i0, "hwloc" as i1, "metis" as i2, "netcdf" as i3, "open-mpi" as i4, "scalapack" as i5, "suite-sparse" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "petsc",
@@ -84,7 +92,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "petsc.rb"), formula)

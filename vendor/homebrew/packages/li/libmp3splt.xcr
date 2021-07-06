@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "flac" as i1, "gettext" as i2, "libid3tag" as i3, "libogg" as i4, "libtool" as i5, "libvorbis" as i6, "mad" as i7, "pcre" as i8
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "flac" as i1, "gettext" as i2, "libid3tag" as i3, "libogg" as i4, "libtool" as i5, "libvorbis" as i6, "mad" as i7, "pcre" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "flac" as i1, "gettext" as i2, "libid3tag" as i3, "libogg" as i4, "libtool" as i5, "libvorbis" as i6, "mad" as i7, "pcre" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "libmp3splt",
@@ -57,7 +65,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libmp3splt.rb"), formula)

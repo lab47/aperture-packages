@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libid3tag" as i3, "libsndfile" as i4, "libvorbis" as i5, "mad" as i6, "ncurses" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libid3tag" as i3, "libsndfile" as i4, "libvorbis" as i5, "mad" as i6, "ncurses" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "gettext" as i1, "glib" as i2, "libid3tag" as i3, "libsndfile" as i4, "libvorbis" as i5, "mad" as i6, "ncurses" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "herrie",
@@ -53,7 +61,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "herrie.rb"), formula)

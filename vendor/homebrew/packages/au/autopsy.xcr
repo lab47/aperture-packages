@@ -88,9 +88,17 @@ index 3b3bbdc..a0d2632 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "sleuthkit" as i0
+if platform.os == "darwin" {
+    import "sleuthkit" as i0
+    deps = [hi, i0]
+} else {
+    import "sleuthkit" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "autopsy",
@@ -101,7 +109,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "autopsy.rb"), formula)

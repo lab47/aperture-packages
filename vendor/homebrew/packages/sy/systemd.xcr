@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "coreutils" as i0, "docbook-xsl" as i1, "gettext" as i2, "gperf" as i3, "intltool" as i4, "libgpg-error" as i5, "libtool" as i6, "libxslt" as i7, "m4" as i8, "meson" as i9, "ninja" as i10, "pkg-config" as i11, "expat" as i12, "libcap" as i13, "lz4" as i14, "openssl@1.1" as i15, "util-linux" as i16, "xz" as i17
+if platform.os == "darwin" {
+    import "coreutils" as i0, "docbook-xsl" as i1, "gettext" as i2, "gperf" as i3, "intltool" as i4, "libgpg-error" as i5, "libtool" as i6, "libxslt" as i7, "m4" as i8, "meson" as i9, "ninja" as i10, "pkg-config" as i11, "expat" as i12, "libcap" as i13, "lz4" as i14, "openssl@1.1" as i15, "util-linux" as i16, "xz" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "coreutils" as i0, "docbook-xsl" as i1, "gettext" as i2, "gperf" as i3, "intltool" as i4, "libgpg-error" as i5, "libtool" as i6, "libxslt" as i7, "m4" as i8, "meson" as i9, "ninja" as i10, "pkg-config" as i11, "expat" as i12, "libcap" as i13, "lz4" as i14, "openssl@1.1" as i15, "util-linux" as i16, "xz" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "systemd",
@@ -74,7 +82,7 @@ pkg(
     "license": "GPL-2.0-or-later and LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "systemd.rb"), formula)

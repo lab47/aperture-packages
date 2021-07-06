@@ -85,9 +85,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "swig@3" as i2, "cairo" as i3, "fcgi" as i4, "freetype" as i5, "gd" as i6, "gdal" as i7, "geos" as i8, "giflib" as i9, "libpng" as i10, "postgresql" as i11, "proj@7" as i12, "protobuf-c" as i13, "python@3.9" as i14, "curl" as i15
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "swig@3" as i2, "cairo" as i3, "fcgi" as i4, "freetype" as i5, "gd" as i6, "gdal" as i7, "geos" as i8, "giflib" as i9, "libpng" as i10, "postgresql" as i11, "proj@7" as i12, "protobuf-c" as i13, "python@3.9" as i14, "curl" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "swig@3" as i2, "cairo" as i3, "fcgi" as i4, "freetype" as i5, "gd" as i6, "gdal" as i7, "geos" as i8, "giflib" as i9, "libpng" as i10, "postgresql" as i11, "proj@7" as i12, "protobuf-c" as i13, "python@3.9" as i14, "curl" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+}
 
 pkg(
   name: "mapserver",
@@ -98,7 +106,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mapserver.rb"), formula)

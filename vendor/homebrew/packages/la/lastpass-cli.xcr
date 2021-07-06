@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoc" as i0, "cmake" as i1, "docbook-xsl" as i2, "pkg-config" as i3, "curl" as i4, "openssl@1.1" as i5, "pinentry" as i6, "curl" as i7, "libxslt" as i8
+if platform.os == "darwin" {
+    import "asciidoc" as i0, "cmake" as i1, "docbook-xsl" as i2, "pkg-config" as i3, "curl" as i4, "openssl@1.1" as i5, "pinentry" as i6, "curl" as i7, "libxslt" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "asciidoc" as i0, "cmake" as i1, "docbook-xsl" as i2, "pkg-config" as i3, "curl" as i4, "openssl@1.1" as i5, "pinentry" as i6, "curl" as i7, "libxslt" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "lastpass-cli",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "lastpass-cli.rb"), formula)

@@ -162,9 +162,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "curl" as i1, "gcc" as i2, "gmp" as i3, "libgit2" as i4, "libssh2" as i5, "llvm" as i6, "mbedtls" as i7, "mpfr" as i8, "nghttp2" as i9, "openblas" as i10, "openlibm" as i11, "p7zip" as i12, "pcre2" as i13, "suite-sparse" as i14, "utf8proc" as i15, "perl" as i16, "zlib" as i17, "patchelf" as i18, "libunwind" as i19
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "curl" as i1, "gcc" as i2, "gmp" as i3, "libgit2" as i4, "libssh2" as i5, "llvm" as i6, "mbedtls" as i7, "mpfr" as i8, "nghttp2" as i9, "openblas" as i10, "openlibm" as i11, "p7zip" as i12, "pcre2" as i13, "suite-sparse" as i14, "utf8proc" as i15, "perl" as i16, "zlib" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "python@3.9" as i0, "curl" as i1, "gcc" as i2, "gmp" as i3, "libgit2" as i4, "libssh2" as i5, "llvm" as i6, "mbedtls" as i7, "mpfr" as i8, "nghttp2" as i9, "openblas" as i10, "openlibm" as i11, "p7zip" as i12, "pcre2" as i13, "suite-sparse" as i14, "utf8proc" as i15, "perl" as i16, "zlib" as i17, "patchelf" as i18, "libunwind" as i19
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19]
+}
 
 pkg(
   name: "julia",
@@ -175,7 +183,7 @@ pkg(
     "license": "MIT and BSD-3-Clause and Apache-2.0 and BSL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "julia.rb"), formula)

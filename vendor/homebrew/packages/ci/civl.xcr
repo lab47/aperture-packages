@@ -42,9 +42,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0, "z3" as i1
+if platform.os == "darwin" {
+    import "openjdk" as i0, "z3" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "openjdk" as i0, "z3" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "civl",
@@ -55,7 +63,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "civl.rb"), formula)

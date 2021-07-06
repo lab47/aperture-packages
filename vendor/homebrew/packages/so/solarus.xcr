@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "glm" as i1, "libmodplug" as i2, "libogg" as i3, "libvorbis" as i4, "luajit" as i5, "physfs" as i6, "sdl2" as i7, "sdl2_image" as i8, "sdl2_ttf" as i9
+if platform.os == "darwin" {
+    import "cmake" as i0, "glm" as i1, "libmodplug" as i2, "libogg" as i3, "libvorbis" as i4, "luajit" as i5, "physfs" as i6, "sdl2" as i7, "sdl2_image" as i8, "sdl2_ttf" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "cmake" as i0, "glm" as i1, "libmodplug" as i2, "libogg" as i3, "libvorbis" as i4, "luajit" as i5, "physfs" as i6, "sdl2" as i7, "sdl2_image" as i8, "sdl2_ttf" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "solarus",
@@ -57,7 +65,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "solarus.rb"), formula)

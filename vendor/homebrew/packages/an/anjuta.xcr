@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "autogen" as i4, "gdl" as i5, "gnome-themes-standard" as i6, "gnutls" as i7, "gtksourceview3" as i8, "hicolor-icon-theme" as i9, "libgda" as i10, "libxml2" as i11, "python@3.9" as i12, "shared-mime-info" as i13, "vala" as i14, "vte3" as i15
+if platform.os == "darwin" {
+    import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "autogen" as i4, "gdl" as i5, "gnome-themes-standard" as i6, "gnutls" as i7, "gtksourceview3" as i8, "hicolor-icon-theme" as i9, "libgda" as i10, "libxml2" as i11, "python@3.9" as i12, "shared-mime-info" as i13, "vala" as i14, "vte3" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+} else {
+    import "intltool" as i0, "itstool" as i1, "pkg-config" as i2, "adwaita-icon-theme" as i3, "autogen" as i4, "gdl" as i5, "gnome-themes-standard" as i6, "gnutls" as i7, "gtksourceview3" as i8, "hicolor-icon-theme" as i9, "libgda" as i10, "libxml2" as i11, "python@3.9" as i12, "shared-mime-info" as i13, "vala" as i14, "vte3" as i15
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15]
+}
 
 pkg(
   name: "anjuta",
@@ -74,7 +82,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "anjuta.rb"), formula)

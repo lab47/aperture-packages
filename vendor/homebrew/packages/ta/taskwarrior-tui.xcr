@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pandoc" as i0, "rust" as i1, "task" as i2
+if platform.os == "darwin" {
+    import "pandoc" as i0, "rust" as i1, "task" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pandoc" as i0, "rust" as i1, "task" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "taskwarrior-tui",
@@ -62,7 +70,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "taskwarrior-tui.rb"), formula)

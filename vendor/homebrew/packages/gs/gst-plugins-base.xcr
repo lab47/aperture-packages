@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gettext" as i4, "graphene" as i5, "gstreamer" as i6, "libogg" as i7, "libvorbis" as i8, "opus" as i9, "orc" as i10, "pango" as i11, "theora" as i12
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gettext" as i4, "graphene" as i5, "gstreamer" as i6, "libogg" as i7, "libvorbis" as i8, "opus" as i9, "orc" as i10, "pango" as i11, "theora" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "gobject-introspection" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "gettext" as i4, "graphene" as i5, "gstreamer" as i6, "libogg" as i7, "libvorbis" as i8, "opus" as i9, "orc" as i10, "pango" as i11, "theora" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "gst-plugins-base",
@@ -75,7 +83,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-plugins-base.rb"), formula)

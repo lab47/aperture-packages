@@ -34,9 +34,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "vala" as i1, "gst-plugins-good" as i2, "gtk+3" as i3, "libgee" as i4, "librsvg" as i5, "poppler" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "vala" as i1, "gst-plugins-good" as i2, "gtk+3" as i3, "libgee" as i4, "librsvg" as i5, "poppler" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "vala" as i1, "gst-plugins-good" as i2, "gtk+3" as i3, "libgee" as i4, "librsvg" as i5, "poppler" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "pdfpc",
@@ -47,7 +55,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdfpc.rb"), formula)

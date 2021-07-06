@@ -158,9 +158,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "faac" as i3, "fdk-aac" as i4, "freetype" as i5, "lame" as i6, "libvorbis" as i7, "libvpx" as i8, "opus" as i9, "sdl" as i10, "theora" as i11, "x264" as i12, "xvid" as i13
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "faac" as i3, "fdk-aac" as i4, "freetype" as i5, "lame" as i6, "libvorbis" as i7, "libvpx" as i8, "opus" as i9, "sdl" as i10, "theora" as i11, "x264" as i12, "xvid" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "pkg-config" as i0, "texi2html" as i1, "yasm" as i2, "faac" as i3, "fdk-aac" as i4, "freetype" as i5, "lame" as i6, "libvorbis" as i7, "libvpx" as i8, "opus" as i9, "sdl" as i10, "theora" as i11, "x264" as i12, "xvid" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "libav",
@@ -171,7 +179,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libav.rb"), formula)

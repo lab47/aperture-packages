@@ -178,9 +178,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cfitsio" as i1, "epsilon" as i2, "expat" as i3, "freexl" as i4, "geos" as i5, "giflib" as i6, "hdf5" as i7, "jpeg" as i8, "json-c" as i9, "libdap" as i10, "libgeotiff" as i11, "libpng" as i12, "libpq" as i13, "libspatialite" as i14, "libtiff" as i15, "libxml2" as i16, "netcdf" as i17, "numpy" as i18, "openjpeg" as i19, "pcre" as i20, "poppler" as i21, "proj@7" as i22, "python@3.9" as i23, "sqlite" as i24, "unixodbc" as i25, "webp" as i26, "xerces-c" as i27, "xz" as i28, "zstd" as i29, "curl" as i30, "bash-completion" as i31
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cfitsio" as i1, "epsilon" as i2, "expat" as i3, "freexl" as i4, "geos" as i5, "giflib" as i6, "hdf5" as i7, "jpeg" as i8, "json-c" as i9, "libdap" as i10, "libgeotiff" as i11, "libpng" as i12, "libpq" as i13, "libspatialite" as i14, "libtiff" as i15, "libxml2" as i16, "netcdf" as i17, "numpy" as i18, "openjpeg" as i19, "pcre" as i20, "poppler" as i21, "proj@7" as i22, "python@3.9" as i23, "sqlite" as i24, "unixodbc" as i25, "webp" as i26, "xerces-c" as i27, "xz" as i28, "zstd" as i29, "curl" as i30
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30]
+} else {
+    import "pkg-config" as i0, "cfitsio" as i1, "epsilon" as i2, "expat" as i3, "freexl" as i4, "geos" as i5, "giflib" as i6, "hdf5" as i7, "jpeg" as i8, "json-c" as i9, "libdap" as i10, "libgeotiff" as i11, "libpng" as i12, "libpq" as i13, "libspatialite" as i14, "libtiff" as i15, "libxml2" as i16, "netcdf" as i17, "numpy" as i18, "openjpeg" as i19, "pcre" as i20, "poppler" as i21, "proj@7" as i22, "python@3.9" as i23, "sqlite" as i24, "unixodbc" as i25, "webp" as i26, "xerces-c" as i27, "xz" as i28, "zstd" as i29, "curl" as i30, "bash-completion" as i31
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31]
+}
 
 pkg(
   name: "gdal",
@@ -191,7 +199,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gdal.rb"), formula)

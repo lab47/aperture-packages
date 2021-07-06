@@ -29,9 +29,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0
+if platform.os == "darwin" {
+    import "python@3.9" as i0
+    deps = [hi, i0]
+} else {
+    import "python@3.9" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ydiff",
@@ -42,7 +50,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ydiff.rb"), formula)

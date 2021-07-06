@@ -69,9 +69,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "flac" as i1, "libmikmod" as i2, "libogg" as i3, "libvorbis" as i4, "sdl" as i5
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "flac" as i1, "libmikmod" as i2, "libogg" as i3, "libvorbis" as i4, "sdl" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "pkg-config" as i0, "flac" as i1, "libmikmod" as i2, "libogg" as i3, "libvorbis" as i4, "sdl" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "sdl_mixer",
@@ -82,7 +90,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sdl_mixer.rb"), formula)

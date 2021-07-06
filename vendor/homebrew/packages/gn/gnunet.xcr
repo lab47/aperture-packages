@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "libextractor" as i4, "libgcrypt" as i5, "libidn2" as i6, "libmicrohttpd" as i7, "libmpc" as i8, "libsodium" as i9, "libunistring" as i10, "unbound" as i11, "curl" as i12, "sqlite" as i13
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "libextractor" as i4, "libgcrypt" as i5, "libidn2" as i6, "libmicrohttpd" as i7, "libmpc" as i8, "libsodium" as i9, "libunistring" as i10, "unbound" as i11, "curl" as i12, "sqlite" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "pkg-config" as i0, "gettext" as i1, "gnutls" as i2, "jansson" as i3, "libextractor" as i4, "libgcrypt" as i5, "libidn2" as i6, "libmicrohttpd" as i7, "libmpc" as i8, "libsodium" as i9, "libunistring" as i10, "unbound" as i11, "curl" as i12, "sqlite" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "gnunet",
@@ -54,7 +62,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnunet.rb"), formula)

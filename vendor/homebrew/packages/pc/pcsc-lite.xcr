@@ -48,9 +48,16 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libusb" as i1
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    import "pkg-config" as i0, "libusb" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "pcsc-lite",
@@ -61,7 +68,7 @@ pkg(
     "license": "BSD-3-Clause and GPL-3.0-or-later and ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pcsc-lite.rb"), formula)

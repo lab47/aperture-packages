@@ -42,9 +42,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "minizip" as i2, "qt@5" as i3, "sdl2" as i4
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "minizip" as i2, "qt@5" as i3, "sdl2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "minizip" as i2, "qt@5" as i3, "sdl2" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "fceux",
@@ -55,7 +63,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fceux.rb"), formula)

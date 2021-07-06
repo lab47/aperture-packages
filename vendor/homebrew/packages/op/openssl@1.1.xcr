@@ -198,7 +198,15 @@ class OpensslAT11 < Formula
 end
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "openssl@1.1",
@@ -209,7 +217,7 @@ pkg(
     "license": "OpenSSL",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openssl@1.1.rb"), formula)

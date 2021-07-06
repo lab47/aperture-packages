@@ -52,9 +52,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "foma" as i0, "pkg-config" as i1, "python@3.9" as i2, "hfstospell" as i3
+if platform.os == "darwin" {
+    import "foma" as i0, "pkg-config" as i1, "python@3.9" as i2, "hfstospell" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "foma" as i0, "pkg-config" as i1, "python@3.9" as i2, "hfstospell" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "libvoikko",
@@ -65,7 +73,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libvoikko.rb"), formula)

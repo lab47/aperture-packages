@@ -50,9 +50,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "flac" as i0, "libao" as i1, "libogg" as i2, "libvorbis" as i3, "speex" as i4
+if platform.os == "darwin" {
+    import "flac" as i0, "libao" as i1, "libogg" as i2, "libvorbis" as i3, "speex" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "flac" as i0, "libao" as i1, "libogg" as i2, "libvorbis" as i3, "speex" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "timidity",
@@ -63,7 +71,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "timidity.rb"), formula)

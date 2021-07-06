@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "pkg-config" as i1, "ghc" as i2, "gmp" as i3, "sdl2_ttf" as i4
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "pkg-config" as i1, "ghc" as i2, "gmp" as i3, "sdl2_ttf" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "cabal-install" as i0, "pkg-config" as i1, "ghc" as i2, "gmp" as i3, "sdl2_ttf" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "allureofthestars",
@@ -51,7 +59,7 @@ pkg(
     "license": "AGPL-3.0-or-later and GPL-2.0-or-later and OFL-1.1 and MIT and Cannot Represent",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "allureofthestars.rb"), formula)

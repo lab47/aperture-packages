@@ -24,9 +24,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "tidy-html5" as i0, "curl" as i1, "libressl" as i2, "libxml2" as i3
+if platform.os == "darwin" {
+    import "tidy-html5" as i0, "curl" as i1, "libressl" as i2, "libxml2" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "tidy-html5" as i0, "curl" as i1, "libressl" as i2, "libxml2" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "overdrive",
@@ -37,7 +45,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "overdrive.rb"), formula)

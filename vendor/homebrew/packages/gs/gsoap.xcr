@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "openssl@1.1" as i1, "bison" as i2, "flex" as i3, "zlib" as i4
+if platform.os == "darwin" {
+    import "autoconf" as i0, "openssl@1.1" as i1, "bison" as i2, "flex" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "autoconf" as i0, "openssl@1.1" as i1, "bison" as i2, "flex" as i3, "zlib" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "gsoap",
@@ -53,7 +61,7 @@ pkg(
     "license": "GPL-2.0-or-later or gSOAP-1.3b",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gsoap.rb"), formula)

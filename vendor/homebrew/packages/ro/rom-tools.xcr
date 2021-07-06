@@ -82,9 +82,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "python@3.9" as i1, "flac" as i2, "sdl2" as i3, "utf8proc" as i4, "expat" as i5, "zlib" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "python@3.9" as i1, "flac" as i2, "sdl2" as i3, "utf8proc" as i4, "expat" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "python@3.9" as i1, "flac" as i2, "sdl2" as i3, "utf8proc" as i4, "expat" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "rom-tools",
@@ -95,7 +103,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rom-tools.rb"), formula)

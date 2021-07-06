@@ -67,9 +67,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gmp" as i0, "libtiff" as i1, "nettle" as i2, "pcre" as i3, "jpeg" as i4
+if platform.os == "darwin" {
+    import "gmp" as i0, "libtiff" as i1, "nettle" as i2, "pcre" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "gmp" as i0, "libtiff" as i1, "nettle" as i2, "pcre" as i3, "jpeg" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "pike",
@@ -80,7 +88,7 @@ pkg(
     "license": "GPL-2.0-only or LGPL-2.1-only or MPL-1.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pike.rb"), formula)

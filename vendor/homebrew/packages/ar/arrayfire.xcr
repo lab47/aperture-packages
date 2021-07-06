@@ -37,9 +37,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "doxygen" as i2, "fftw" as i3, "freeimage" as i4, "openblas" as i5
+if platform.os == "darwin" {
+    import "boost" as i0, "cmake" as i1, "doxygen" as i2, "fftw" as i3, "freeimage" as i4, "openblas" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "boost" as i0, "cmake" as i1, "doxygen" as i2, "fftw" as i3, "freeimage" as i4, "openblas" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "arrayfire",
@@ -50,7 +58,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arrayfire.rb"), formula)

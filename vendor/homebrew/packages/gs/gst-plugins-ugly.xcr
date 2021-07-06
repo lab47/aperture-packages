@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "flac" as i3, "gettext" as i4, "gst-plugins-base" as i5, "jpeg" as i6, "libmms" as i7, "libshout" as i8, "libvorbis" as i9, "pango" as i10, "theora" as i11, "x264" as i12
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "flac" as i3, "gettext" as i4, "gst-plugins-base" as i5, "jpeg" as i6, "libmms" as i7, "libshout" as i8, "libvorbis" as i9, "pango" as i10, "theora" as i11, "x264" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "flac" as i3, "gettext" as i4, "gst-plugins-base" as i5, "jpeg" as i6, "libmms" as i7, "libshout" as i8, "libvorbis" as i9, "pango" as i10, "theora" as i11, "x264" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "gst-plugins-ugly",
@@ -71,7 +79,7 @@ pkg(
     "license": "LGPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gst-plugins-ugly.rb"), formula)

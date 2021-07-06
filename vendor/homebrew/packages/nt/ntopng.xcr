@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gnutls" as i2, "json-glib" as i3, "libtool" as i4, "lua" as i5, "pkg-config" as i6, "zeromq" as i7, "geoip" as i8, "json-c" as i9, "libmaxminddb" as i10, "mysql-client" as i11, "redis" as i12, "rrdtool" as i13
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gnutls" as i2, "json-glib" as i3, "libtool" as i4, "lua" as i5, "pkg-config" as i6, "zeromq" as i7, "geoip" as i8, "json-c" as i9, "libmaxminddb" as i10, "mysql-client" as i11, "redis" as i12, "rrdtool" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gnutls" as i2, "json-glib" as i3, "libtool" as i4, "lua" as i5, "pkg-config" as i6, "zeromq" as i7, "geoip" as i8, "json-c" as i9, "libmaxminddb" as i10, "mysql-client" as i11, "redis" as i12, "rrdtool" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "ntopng",
@@ -89,7 +97,7 @@ pkg(
     "license": "GPL-3.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ntopng.rb"), formula)

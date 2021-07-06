@@ -88,9 +88,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "xmlto" as i1, "expat" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "xmlto" as i1, "expat" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "xmlto" as i1, "expat" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "dbus",
@@ -101,7 +109,7 @@ pkg(
     "license": "AFL-2.1 or GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dbus.rb"), formula)

@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "gtk+3" as i4, "gtksourceview4" as i5, "gupnp" as i6, "gupnp-av" as i7, "libsoup" as i8
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "gtk+3" as i4, "gtksourceview4" as i5, "gupnp" as i6, "gupnp-av" as i7, "libsoup" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "meson" as i0, "ninja" as i1, "pkg-config" as i2, "gettext" as i3, "gtk+3" as i4, "gtksourceview4" as i5, "gupnp" as i6, "gupnp-av" as i7, "libsoup" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "gupnp-tools",
@@ -54,7 +62,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gupnp-tools.rb"), formula)

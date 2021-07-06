@@ -60,9 +60,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "luarocks" as i0, "pkg-config" as i1, "libtermkey" as i2, "lua" as i3
+if platform.os == "darwin" {
+    import "luarocks" as i0, "pkg-config" as i1, "libtermkey" as i2, "lua" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "luarocks" as i0, "pkg-config" as i1, "libtermkey" as i2, "lua" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "vis",
@@ -73,7 +81,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vis.rb"), formula)

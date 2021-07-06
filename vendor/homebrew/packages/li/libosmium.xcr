@@ -70,9 +70,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "expat" as i2
+if platform.os == "darwin" {
+    import "boost" as i0, "cmake" as i1, "expat" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "boost" as i0, "cmake" as i1, "expat" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "libosmium",
@@ -83,7 +91,7 @@ pkg(
     "license": "BSL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libosmium.rb"), formula)

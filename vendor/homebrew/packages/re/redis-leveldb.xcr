@@ -37,9 +37,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gmp" as i0, "leveldb" as i1, "libev" as i2, "snappy" as i3
+if platform.os == "darwin" {
+    import "gmp" as i0, "leveldb" as i1, "libev" as i2, "snappy" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "gmp" as i0, "leveldb" as i1, "libev" as i2, "snappy" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "redis-leveldb",
@@ -50,7 +58,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "redis-leveldb.rb"), formula)

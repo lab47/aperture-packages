@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fmt" as i3, "folly" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "libsodium" as i8, "lz4" as i9, "openssl@1.1" as i10, "snappy" as i11, "zstd" as i12
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fmt" as i3, "folly" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "libsodium" as i8, "lz4" as i9, "openssl@1.1" as i10, "snappy" as i11, "zstd" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "cmake" as i0, "boost" as i1, "double-conversion" as i2, "fmt" as i3, "folly" as i4, "gflags" as i5, "glog" as i6, "libevent" as i7, "libsodium" as i8, "lz4" as i9, "openssl@1.1" as i10, "snappy" as i11, "zstd" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "fizz",
@@ -75,7 +83,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fizz.rb"), formula)

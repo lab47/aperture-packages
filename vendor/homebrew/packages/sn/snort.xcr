@@ -82,9 +82,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "daq" as i1, "libdnet" as i2, "libpcap" as i3, "luajit" as i4, "nghttp2" as i5, "openssl@1.1" as i6, "pcre" as i7, "bison" as i8, "flex" as i9, "xz" as i10
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "daq" as i1, "libdnet" as i2, "libpcap" as i3, "luajit" as i4, "nghttp2" as i5, "openssl@1.1" as i6, "pcre" as i7, "bison" as i8, "flex" as i9, "xz" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "pkg-config" as i0, "daq" as i1, "libdnet" as i2, "libpcap" as i3, "luajit" as i4, "nghttp2" as i5, "openssl@1.1" as i6, "pcre" as i7, "bison" as i8, "flex" as i9, "xz" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "snort",
@@ -95,7 +103,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snort.rb"), formula)

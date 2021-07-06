@@ -97,9 +97,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0, "cmake" as i1, "glm" as i2, "freetype" as i3, "glew" as i4, "innoextract" as i5, "sdl" as i6
+if platform.os == "darwin" {
+    import "boost" as i0, "cmake" as i1, "glm" as i2, "freetype" as i3, "glew" as i4, "innoextract" as i5, "sdl" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "boost" as i0, "cmake" as i1, "glm" as i2, "freetype" as i3, "glew" as i4, "innoextract" as i5, "sdl" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "arx-libertatis",
@@ -110,7 +118,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "arx-libertatis.rb"), formula)

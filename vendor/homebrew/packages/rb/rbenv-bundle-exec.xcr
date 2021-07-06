@@ -25,9 +25,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "rbenv" as i0
+if platform.os == "darwin" {
+    import "rbenv" as i0
+    deps = [hi, i0]
+} else {
+    import "rbenv" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "rbenv-bundle-exec",
@@ -38,7 +46,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rbenv-bundle-exec.rb"), formula)

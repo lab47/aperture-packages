@@ -64,9 +64,17 @@ index ed1b437..8aa8331 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pbc" as i0
+if platform.os == "darwin" {
+    import "pbc" as i0
+    deps = [hi, i0]
+} else {
+    import "pbc" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "pbc-sig",
@@ -77,7 +85,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pbc-sig.rb"), formula)

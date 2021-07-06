@@ -46,9 +46,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "sdl2" as i1, "sdl2_image" as i2, "sdl2_mixer" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "sdl2" as i1, "sdl2_image" as i2, "sdl2_mixer" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "sdl2" as i1, "sdl2_image" as i2, "sdl2_mixer" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "sdlpop",
@@ -59,7 +67,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sdlpop.rb"), formula)

@@ -48,9 +48,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cc65" as i0, "pkg-config" as i1, "libusb-compat" as i2
+if platform.os == "darwin" {
+    import "cc65" as i0, "pkg-config" as i1, "libusb-compat" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cc65" as i0, "pkg-config" as i1, "libusb-compat" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "opencbm",
@@ -61,7 +69,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "opencbm.rb"), formula)

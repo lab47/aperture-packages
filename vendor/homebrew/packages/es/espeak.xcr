@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "portaudio" as i0
+if platform.os == "darwin" {
+    import "portaudio" as i0
+    deps = [hi, i0]
+} else {
+    import "portaudio" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "espeak",
@@ -68,7 +76,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "espeak.rb"), formula)

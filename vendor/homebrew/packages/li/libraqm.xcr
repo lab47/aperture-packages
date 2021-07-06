@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pkg-config" as i4, "freetype" as i5, "fribidi" as i6, "harfbuzz" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pkg-config" as i4, "freetype" as i5, "fribidi" as i6, "harfbuzz" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gtk-doc" as i2, "libtool" as i3, "pkg-config" as i4, "freetype" as i5, "fribidi" as i6, "harfbuzz" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "libraqm",
@@ -68,7 +76,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libraqm.rb"), formula)

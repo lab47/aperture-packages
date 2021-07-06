@@ -307,9 +307,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4, "zlib" as i5, "binutils" as i6
+if platform.os == "darwin" {
+    import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4, "zlib" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "gmp" as i0, "isl" as i1, "libmpc" as i2, "mpfr" as i3, "zstd" as i4, "zlib" as i5, "binutils" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "gcc",
@@ -320,7 +328,7 @@ pkg(
     "license": "GPL-3.0-or-later with GCC-exception-3.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gcc.rb"), formula)

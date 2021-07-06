@@ -64,9 +64,17 @@ diff -ur owamp-3.4/owamp/endpoint.c owamp-3.4.fixed/owamp/endpoint.c
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "i2util" as i0
+if platform.os == "darwin" {
+    import "i2util" as i0
+    deps = [hi, i0]
+} else {
+    import "i2util" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "owamp",
@@ -77,7 +85,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "owamp.rb"), formula)

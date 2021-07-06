@@ -49,9 +49,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "libidl" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "glib" as i1, "libidl" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "glib" as i1, "libidl" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "orbit",
@@ -62,7 +70,7 @@ pkg(
     "license": "GPL-2.0-or-later and LGPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "orbit.rb"), formula)

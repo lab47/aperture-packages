@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openssl@1.1" as i0
+if platform.os == "darwin" {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+} else {
+    import "openssl@1.1" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "iperf3",
@@ -58,7 +66,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "iperf3.rb"), formula)

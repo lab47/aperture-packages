@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "mysql@5.7" as i1, "pcre" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "mysql@5.7" as i1, "pcre" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "cmake" as i0, "mysql@5.7" as i1, "pcre" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "falcon",
@@ -64,7 +72,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "falcon.rb"), formula)

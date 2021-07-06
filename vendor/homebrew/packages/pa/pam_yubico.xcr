@@ -40,9 +40,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "libyubikey" as i1, "ykclient" as i2, "ykpers" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "libyubikey" as i1, "ykclient" as i2, "ykpers" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "libyubikey" as i1, "ykclient" as i2, "ykpers" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "pam_yubico",
@@ -53,7 +61,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pam_yubico.rb"), formula)

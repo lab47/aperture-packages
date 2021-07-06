@@ -74,9 +74,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "doxygen" as i1, "flac" as i2, "freetype" as i3, "jpeg" as i4, "libogg" as i5, "libvorbis" as i6, "libx11" as i7, "libxrandr" as i8, "mesa" as i9, "mesa-glu" as i10, "openal-soft" as i11, "systemd" as i12
+if platform.os == "darwin" {
+    import "cmake" as i0, "doxygen" as i1, "flac" as i2, "freetype" as i3, "jpeg" as i4, "libogg" as i5, "libvorbis" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "doxygen" as i1, "flac" as i2, "freetype" as i3, "jpeg" as i4, "libogg" as i5, "libvorbis" as i6, "libx11" as i7, "libxrandr" as i8, "mesa" as i9, "mesa-glu" as i10, "openal-soft" as i11, "systemd" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "sfml",
@@ -87,7 +95,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sfml.rb"), formula)

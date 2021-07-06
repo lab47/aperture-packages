@@ -42,9 +42,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gawk" as i0, "ocaml" as i1, "exact-image" as i2, "ghostscript" as i3, "imagemagick" as i4, "poppler" as i5, "tesseract" as i6, "unpaper" as i7
+if platform.os == "darwin" {
+    import "gawk" as i0, "ocaml" as i1, "exact-image" as i2, "ghostscript" as i3, "imagemagick" as i4, "poppler" as i5, "tesseract" as i6, "unpaper" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "gawk" as i0, "ocaml" as i1, "exact-image" as i2, "ghostscript" as i3, "imagemagick" as i4, "poppler" as i5, "tesseract" as i6, "unpaper" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "pdfsandwich",
@@ -55,7 +63,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdfsandwich.rb"), formula)

@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ncurses" as i0
+if platform.os == "darwin" {
+    import "ncurses" as i0
+    deps = [hi, i0]
+} else {
+    import "ncurses" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "ncdu",
@@ -51,7 +59,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncdu.rb"), formula)

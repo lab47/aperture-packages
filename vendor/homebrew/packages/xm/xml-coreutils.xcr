@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "s-lang" as i0
+if platform.os == "darwin" {
+    import "s-lang" as i0
+    deps = [hi, i0]
+} else {
+    import "s-lang" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "xml-coreutils",
@@ -54,7 +62,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "xml-coreutils.rb"), formula)

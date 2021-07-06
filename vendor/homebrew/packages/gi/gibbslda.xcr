@@ -45,7 +45,15 @@ index e2f538b..1df5fb3 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "gibbslda",
@@ -56,7 +64,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gibbslda.rb"), formula)

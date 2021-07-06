@@ -111,9 +111,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "pkg-config" as i1, "atk" as i2, "cairo" as i3, "cogl" as i4, "gdk-pixbuf" as i5, "glib" as i6, "json-glib" as i7, "pango" as i8
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "pkg-config" as i1, "atk" as i2, "cairo" as i3, "cogl" as i4, "gdk-pixbuf" as i5, "glib" as i6, "json-glib" as i7, "pango" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "gobject-introspection" as i0, "pkg-config" as i1, "atk" as i2, "cairo" as i3, "cogl" as i4, "gdk-pixbuf" as i5, "glib" as i6, "json-glib" as i7, "pango" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "clutter",
@@ -124,7 +132,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "clutter.rb"), formula)

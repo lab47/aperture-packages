@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gettext" as i3, "glib" as i4, "goocanvas" as i5, "gtk+3" as i6, "hamlib" as i7, "curl" as i8
+if platform.os == "darwin" {
+    import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gettext" as i3, "glib" as i4, "goocanvas" as i5, "gtk+3" as i6, "hamlib" as i7, "curl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gettext" as i3, "glib" as i4, "goocanvas" as i5, "gtk+3" as i6, "hamlib" as i7, "curl" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "gpredict",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpredict.rb"), formula)

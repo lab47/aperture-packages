@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "gtk-doc" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "glib" as i6, "gst-plugins-bad" as i7, "gst-plugins-base" as i8, "gst-plugins-good" as i9, "gstreamer" as i10, "gtk+3" as i11, "intltool" as i12, "libnotify" as i13, "libusb" as i14
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "gtk-doc" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "glib" as i6, "gst-plugins-bad" as i7, "gst-plugins-base" as i8, "gst-plugins-good" as i9, "gstreamer" as i10, "gtk+3" as i11, "intltool" as i12, "libnotify" as i13, "libusb" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "gobject-introspection" as i0, "gtk-doc" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "adwaita-icon-theme" as i5, "glib" as i6, "gst-plugins-bad" as i7, "gst-plugins-base" as i8, "gst-plugins-good" as i9, "gstreamer" as i10, "gtk+3" as i11, "intltool" as i12, "libnotify" as i13, "libusb" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "aravis",
@@ -64,7 +72,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aravis.rb"), formula)

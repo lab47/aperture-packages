@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libao" as i0
+if platform.os == "darwin" {
+    import "libao" as i0
+    deps = [hi, i0]
+} else {
+    import "libao" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "aldo",
@@ -58,7 +66,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "aldo.rb"), formula)

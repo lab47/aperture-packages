@@ -40,7 +40,15 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
+
+if platform.os == "darwin" {
+    deps = [hi]
+} else {
+    deps = [hi]
+}
 
 pkg(
   name: "cproto",
@@ -51,7 +59,7 @@ pkg(
     "license": "Public Domain and MIT and (GPL-3.0-or-later with Autoconf-exception-3.0)",
     "source": "homebrew",
   },
-  dependencies: [hi],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cproto.rb"), formula)

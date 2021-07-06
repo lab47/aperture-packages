@@ -81,9 +81,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cfitsio" as i1, "fftw" as i2, "fontconfig" as i3, "gettext" as i4, "giflib" as i5, "glib" as i6, "imagemagick" as i7, "libexif" as i8, "libgsf" as i9, "libheif" as i10, "libimagequant" as i11, "libmatio" as i12, "libpng" as i13, "librsvg" as i14, "libspng" as i15, "libtiff" as i16, "little-cms2" as i17, "mozjpeg" as i18, "openexr" as i19, "openslide" as i20, "orc" as i21, "pango" as i22, "poppler" as i23, "webp" as i24, "zlib" as i25, "gobject-introspection" as i26
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cfitsio" as i1, "fftw" as i2, "fontconfig" as i3, "gettext" as i4, "giflib" as i5, "glib" as i6, "imagemagick" as i7, "libexif" as i8, "libgsf" as i9, "libheif" as i10, "libimagequant" as i11, "libmatio" as i12, "libpng" as i13, "librsvg" as i14, "libspng" as i15, "libtiff" as i16, "little-cms2" as i17, "mozjpeg" as i18, "openexr" as i19, "openslide" as i20, "orc" as i21, "pango" as i22, "poppler" as i23, "webp" as i24, "zlib" as i25
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25]
+} else {
+    import "pkg-config" as i0, "cfitsio" as i1, "fftw" as i2, "fontconfig" as i3, "gettext" as i4, "giflib" as i5, "glib" as i6, "imagemagick" as i7, "libexif" as i8, "libgsf" as i9, "libheif" as i10, "libimagequant" as i11, "libmatio" as i12, "libpng" as i13, "librsvg" as i14, "libspng" as i15, "libtiff" as i16, "little-cms2" as i17, "mozjpeg" as i18, "openexr" as i19, "openslide" as i20, "orc" as i21, "pango" as i22, "poppler" as i23, "webp" as i24, "zlib" as i25, "gobject-introspection" as i26
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26]
+}
 
 pkg(
   name: "vips",
@@ -94,7 +102,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "vips.rb"), formula)

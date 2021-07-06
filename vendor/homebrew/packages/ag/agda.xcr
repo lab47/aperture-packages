@@ -161,9 +161,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cabal-install" as i0, "emacs" as i1, "ghc" as i2, "zlib" as i3
+if platform.os == "darwin" {
+    import "cabal-install" as i0, "emacs" as i1, "ghc" as i2, "zlib" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cabal-install" as i0, "emacs" as i1, "ghc" as i2, "zlib" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "agda",
@@ -174,7 +182,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "agda.rb"), formula)

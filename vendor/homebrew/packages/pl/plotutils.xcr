@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libpng" as i0, "libxaw" as i1
+if platform.os == "darwin" {
+    import "libpng" as i0
+    deps = [hi, i0]
+} else {
+    import "libpng" as i0, "libxaw" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "plotutils",
@@ -64,7 +72,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "plotutils.rb"), formula)

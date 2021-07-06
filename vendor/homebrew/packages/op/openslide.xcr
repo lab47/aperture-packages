@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cairo" as i1, "gdk-pixbuf" as i2, "glib" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "libxml2" as i7, "openjpeg" as i8
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cairo" as i1, "gdk-pixbuf" as i2, "glib" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "libxml2" as i7, "openjpeg" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "pkg-config" as i0, "cairo" as i1, "gdk-pixbuf" as i2, "glib" as i3, "jpeg" as i4, "libpng" as i5, "libtiff" as i6, "libxml2" as i7, "openjpeg" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "openslide",
@@ -60,7 +68,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openslide.rb"), formula)

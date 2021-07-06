@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "expat" as i5, "zlib" as i6
+if platform.os == "darwin" {
+    import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "expat" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "libb2" as i0, "lz4" as i1, "xz" as i2, "zstd" as i3, "bzip2" as i4, "expat" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libarchive",
@@ -77,7 +85,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libarchive.rb"), formula)

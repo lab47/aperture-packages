@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "c-ares" as i1, "glib" as i2, "gnutls" as i3, "libgcrypt" as i4, "libmaxminddb" as i5, "libsmi" as i6, "libssh" as i7, "lua" as i8, "nghttp2" as i9, "bison" as i10, "flex" as i11
+if platform.os == "darwin" {
+    import "cmake" as i0, "c-ares" as i1, "glib" as i2, "gnutls" as i3, "libgcrypt" as i4, "libmaxminddb" as i5, "libsmi" as i6, "libssh" as i7, "lua" as i8, "nghttp2" as i9, "bison" as i10, "flex" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "cmake" as i0, "c-ares" as i1, "glib" as i2, "gnutls" as i3, "libgcrypt" as i4, "libmaxminddb" as i5, "libsmi" as i6, "libssh" as i7, "lua" as i8, "nghttp2" as i9, "bison" as i10, "flex" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "wireshark",
@@ -109,7 +117,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "wireshark.rb"), formula)

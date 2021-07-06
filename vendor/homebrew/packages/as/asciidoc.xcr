@@ -78,9 +78,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "docbook-xsl" as i1, "docbook" as i2, "python@3.9" as i3, "source-highlight" as i4, "libxml2" as i5, "libxslt" as i6, "xmlto" as i7
+if platform.os == "darwin" {
+    import "autoconf" as i0, "docbook-xsl" as i1, "docbook" as i2, "python@3.9" as i3, "source-highlight" as i4, "libxml2" as i5, "libxslt" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "docbook-xsl" as i1, "docbook" as i2, "python@3.9" as i3, "source-highlight" as i4, "libxml2" as i5, "libxslt" as i6, "xmlto" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "asciidoc",
@@ -91,7 +99,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "asciidoc.rb"), formula)

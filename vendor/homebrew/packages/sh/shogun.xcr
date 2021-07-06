@@ -116,9 +116,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "eigen" as i3, "glpk" as i4, "hdf5" as i5, "json-c" as i6, "lzo" as i7, "nlopt" as i8, "openblas" as i9, "protobuf" as i10, "snappy" as i11, "xz" as i12
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "eigen" as i3, "glpk" as i4, "hdf5" as i5, "json-c" as i6, "lzo" as i7, "nlopt" as i8, "openblas" as i9, "protobuf" as i10, "snappy" as i11, "xz" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "arpack" as i2, "eigen" as i3, "glpk" as i4, "hdf5" as i5, "json-c" as i6, "lzo" as i7, "nlopt" as i8, "openblas" as i9, "protobuf" as i10, "snappy" as i11, "xz" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "shogun",
@@ -129,7 +137,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "shogun.rb"), formula)

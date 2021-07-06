@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "sdl" as i4, "webp" as i5
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "sdl" as i4, "webp" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "pkg-config" as i0, "jpeg" as i1, "libpng" as i2, "libtiff" as i3, "sdl" as i4, "webp" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "sdl_image",
@@ -69,7 +77,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sdl_image.rb"), formula)

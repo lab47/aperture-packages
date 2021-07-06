@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "asciidoctor" as i0, "pkg-config" as i1, "rust" as i2, "gettext" as i3, "json-c" as i4, "libstfl" as i5, "curl" as i6, "libxml2" as i7, "libxslt" as i8
+if platform.os == "darwin" {
+    import "asciidoctor" as i0, "pkg-config" as i1, "rust" as i2, "gettext" as i3, "json-c" as i4, "libstfl" as i5, "curl" as i6, "libxml2" as i7, "libxslt" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "asciidoctor" as i0, "pkg-config" as i1, "rust" as i2, "gettext" as i3, "json-c" as i4, "libstfl" as i5, "curl" as i6, "libxml2" as i7, "libxslt" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "newsboat",
@@ -57,7 +65,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "newsboat.rb"), formula)

@@ -91,9 +91,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "doxygen" as i0, "emacs" as i1, "libgpg-error" as i2, "pkg-config" as i3, "sphinx-doc" as i4, "glib" as i5, "gmime" as i6, "python@3.9" as i7, "talloc" as i8, "xapian" as i9, "zlib" as i10
+if platform.os == "darwin" {
+    import "doxygen" as i0, "emacs" as i1, "libgpg-error" as i2, "pkg-config" as i3, "sphinx-doc" as i4, "glib" as i5, "gmime" as i6, "python@3.9" as i7, "talloc" as i8, "xapian" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "doxygen" as i0, "emacs" as i1, "libgpg-error" as i2, "pkg-config" as i3, "sphinx-doc" as i4, "glib" as i5, "gmime" as i6, "python@3.9" as i7, "talloc" as i8, "xapian" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "notmuch",
@@ -104,7 +112,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "notmuch.rb"), formula)

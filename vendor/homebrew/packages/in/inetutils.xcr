@@ -92,9 +92,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libidn" as i0
+if platform.os == "darwin" {
+    import "libidn" as i0
+    deps = [hi, i0]
+} else {
+    import "libidn" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "inetutils",
@@ -105,7 +113,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "inetutils.rb"), formula)

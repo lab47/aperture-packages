@@ -90,9 +90,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "aspcud" as i0, "ocaml" as i1, "opam" as i2, "libev" as i3
+if platform.os == "darwin" {
+    import "aspcud" as i0, "ocaml" as i1, "opam" as i2, "libev" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "aspcud" as i0, "ocaml" as i1, "opam" as i2, "libev" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "hyperkit",
@@ -103,7 +111,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "hyperkit.rb"), formula)

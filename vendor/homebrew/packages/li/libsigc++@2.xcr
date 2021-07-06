@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "meson" as i0, "ninja" as i1
+if platform.os == "darwin" {
+    import "meson" as i0, "ninja" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "meson" as i0, "ninja" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "libsigc++@2",
@@ -60,7 +68,7 @@ pkg(
     "license": "LGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libsigc++@2.rb"), formula)

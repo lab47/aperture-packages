@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "cmark-gfm" as i2, "llvm" as i3
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "cmark-gfm" as i2, "llvm" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "cmake" as i0, "boost" as i1, "cmark-gfm" as i2, "llvm" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "standardese",
@@ -89,7 +97,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "standardese.rb"), formula)

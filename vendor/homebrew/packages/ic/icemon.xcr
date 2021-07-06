@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "icecream" as i3, "lzo" as i4, "qt@5" as i5
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "icecream" as i3, "lzo" as i4, "qt@5" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "sphinx-doc" as i2, "icecream" as i3, "lzo" as i4, "qt@5" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "icemon",
@@ -58,7 +66,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "icemon.rb"), formula)

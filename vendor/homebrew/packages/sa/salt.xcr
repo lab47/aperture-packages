@@ -280,9 +280,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gmp" as i3, "gpatch" as i4, "libffi" as i5, "libgit2" as i6, "libyaml" as i7, "mpdecimal" as i8, "ncurses" as i9, "openssl@1.1" as i10, "pcre" as i11, "pkg-config" as i12, "python@3.9" as i13, "readline" as i14, "sqlite" as i15, "swig" as i16, "unzip" as i17, "xz" as i18, "zeromq" as i19, "zip" as i20, "zlib" as i21
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "libffi" as i3, "libgit2" as i4, "libyaml" as i5, "mpdecimal" as i6, "ncurses" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python@3.9" as i10, "readline" as i11, "sqlite" as i12, "swig" as i13, "unzip" as i14, "xz" as i15, "zeromq" as i16, "zip" as i17, "zlib" as i18
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18]
+} else {
+    import "bzip2" as i0, "expat" as i1, "gdbm" as i2, "gmp" as i3, "libffi" as i4, "libgit2" as i5, "libyaml" as i6, "mpdecimal" as i7, "ncurses" as i8, "openssl@1.1" as i9, "pcre" as i10, "pkg-config" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "swig" as i15, "unzip" as i16, "xz" as i17, "zeromq" as i18, "zip" as i19, "zlib" as i20
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20]
+}
 
 pkg(
   name: "salt",
@@ -293,7 +301,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "salt.rb"), formula)

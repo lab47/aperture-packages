@@ -55,9 +55,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "gd" as i3, "gettext" as i4, "glib" as i5, "gtk+" as i6, "gtkglext" as i7
+if platform.os == "darwin" {
+    import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "gd" as i3, "gettext" as i4, "glib" as i5, "gtk+" as i6, "gtkglext" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "intltool" as i0, "pkg-config" as i1, "dbus" as i2, "gd" as i3, "gettext" as i4, "glib" as i5, "gtk+" as i6, "gtkglext" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "pcb",
@@ -68,7 +76,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pcb.rb"), formula)

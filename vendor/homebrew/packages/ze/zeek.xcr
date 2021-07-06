@@ -69,9 +69,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bison" as i0, "cmake" as i1, "swig" as i2, "caf" as i3, "geoip" as i4, "libmaxminddb" as i5, "openssl@1.1" as i6, "python@3.9" as i7, "flex" as i8, "libpcap" as i9, "zlib" as i10
+if platform.os == "darwin" {
+    import "bison" as i0, "cmake" as i1, "swig" as i2, "caf" as i3, "geoip" as i4, "libmaxminddb" as i5, "openssl@1.1" as i6, "python@3.9" as i7, "flex" as i8, "libpcap" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "bison" as i0, "cmake" as i1, "swig" as i2, "caf" as i3, "geoip" as i4, "libmaxminddb" as i5, "openssl@1.1" as i6, "python@3.9" as i7, "flex" as i8, "libpcap" as i9, "zlib" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "zeek",
@@ -82,7 +90,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "zeek.rb"), formula)

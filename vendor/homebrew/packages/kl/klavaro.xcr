@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gtk+3" as i3
+if platform.os == "darwin" {
+    import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gtk+3" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "intltool" as i0, "pkg-config" as i1, "adwaita-icon-theme" as i2, "gtk+3" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "klavaro",
@@ -51,7 +59,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "klavaro.rb"), formula)

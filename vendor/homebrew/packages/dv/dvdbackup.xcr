@@ -123,9 +123,17 @@ index 5888ce5..b076a76 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libdvdread" as i0
+if platform.os == "darwin" {
+    import "libdvdread" as i0
+    deps = [hi, i0]
+} else {
+    import "libdvdread" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "dvdbackup",
@@ -136,7 +144,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dvdbackup.rb"), formula)

@@ -97,9 +97,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "boost" as i1, "cairo" as i2, "freetype" as i3, "gdal" as i4, "harfbuzz" as i5, "icu4c" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "postgresql" as i10, "proj@7" as i11, "webp" as i12
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "boost" as i1, "cairo" as i2, "freetype" as i3, "gdal" as i4, "harfbuzz" as i5, "icu4c" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "postgresql" as i10, "proj@7" as i11, "webp" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "pkg-config" as i0, "boost" as i1, "cairo" as i2, "freetype" as i3, "gdal" as i4, "harfbuzz" as i5, "icu4c" as i6, "jpeg" as i7, "libpng" as i8, "libtiff" as i9, "postgresql" as i10, "proj@7" as i11, "webp" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "mapnik",
@@ -110,7 +118,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mapnik.rb"), formula)

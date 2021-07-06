@@ -31,9 +31,6 @@ class BashCompletionAT2 < Formula
 
   depends_on "bash"
 
-  conflicts_with "bash-completion",
-    because: "each are different versions of the same formula"
-
   def install
     inreplace "bash_completion" do |s|
       s.gsub! "readlink -f", "readlink"
@@ -61,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bash" as i0
+if platform.os == "darwin" {
+    import "bash" as i0
+    deps = [hi, i0]
+} else {
+    import "bash" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "bash-completion@2",
@@ -74,7 +79,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bash-completion@2.rb"), formula)

@@ -54,9 +54,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "gcc" as i2
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cmake" as i0, "boost" as i1, "gcc" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "solidity",
@@ -67,7 +75,7 @@ pkg(
     "license": "GPL-3.0-or-later and MIT and BSD-3-Clause and Apache-2.0 and CC0-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "solidity.rb"), formula)

@@ -38,9 +38,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "popt" as i0
+if platform.os == "darwin" {
+    import "popt" as i0
+    deps = [hi, i0]
+} else {
+    import "popt" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "epsilon",
@@ -51,7 +59,7 @@ pkg(
     "license": "GPL-3.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "epsilon.rb"), formula)

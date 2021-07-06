@@ -39,9 +39,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "boost" as i0
+if platform.os == "darwin" {
+    import "boost" as i0
+    deps = [hi, i0]
+} else {
+    import "boost" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "source-highlight",
@@ -52,7 +60,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "source-highlight.rb"), formula)

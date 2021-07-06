@@ -83,9 +83,17 @@ index 5a1f296..aeb501c 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "automake" as i0, "mhash" as i1, "zlib" as i2
+if platform.os == "darwin" {
+    import "automake" as i0, "mhash" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "automake" as i0, "mhash" as i1, "zlib" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "mcrypt",
@@ -96,7 +104,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mcrypt.rb"), formula)

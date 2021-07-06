@@ -60,9 +60,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freetype" as i1, "jasper" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "webp" as i8, "bzip2" as i9, "libxml2" as i10, "zlib" as i11
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "freetype" as i1, "jasper" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "webp" as i8, "bzip2" as i9, "libxml2" as i10, "zlib" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+} else {
+    import "pkg-config" as i0, "freetype" as i1, "jasper" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "libtool" as i6, "little-cms2" as i7, "webp" as i8, "bzip2" as i9, "libxml2" as i10, "zlib" as i11
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11]
+}
 
 pkg(
   name: "graphicsmagick",
@@ -73,7 +81,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "graphicsmagick.rb"), formula)

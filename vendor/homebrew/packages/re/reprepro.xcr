@@ -51,9 +51,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "berkeley-db@4" as i0, "gpgme" as i1, "libarchive" as i2, "xz" as i3, "gcc" as i4
+if platform.os == "darwin" {
+    import "berkeley-db@4" as i0, "gpgme" as i1, "libarchive" as i2, "xz" as i3, "gcc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "berkeley-db@4" as i0, "gpgme" as i1, "libarchive" as i2, "xz" as i3, "gcc" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "reprepro",
@@ -64,7 +72,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "reprepro.rb"), formula)

@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "rust" as i1, "portaudio" as i2, "alsa-lib" as i3, "pkg-config" as i4
+if platform.os == "darwin" {
+    import "python@3.9" as i0, "rust" as i1, "portaudio" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "python@3.9" as i0, "rust" as i1, "portaudio" as i2, "alsa-lib" as i3, "pkg-config" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "ncspot",
@@ -54,7 +62,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ncspot.rb"), formula)

@@ -432,9 +432,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "gpatch" as i4, "jpeg" as i5, "libffi" as i6, "libtiff" as i7, "libxml2" as i8, "libxslt" as i9, "mpdecimal" as i10, "ncurses" as i11, "numpy" as i12, "openssl@1.1" as i13, "pkg-config" as i14, "python@3.9" as i15, "readline" as i16, "rust" as i17, "s3cmd" as i18, "sqlite" as i19, "tcl-tk" as i20, "unzip" as i21, "webp" as i22, "xz" as i23, "zip" as i24, "zlib" as i25
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libtiff" as i6, "libxml2" as i7, "libxslt" as i8, "mpdecimal" as i9, "ncurses" as i10, "numpy" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "rust" as i16, "s3cmd" as i17, "sqlite" as i18, "tcl-tk" as i19, "unzip" as i20, "webp" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+} else {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "jpeg" as i4, "libffi" as i5, "libtiff" as i6, "libxml2" as i7, "libxslt" as i8, "mpdecimal" as i9, "ncurses" as i10, "numpy" as i11, "openssl@1.1" as i12, "pkg-config" as i13, "python@3.9" as i14, "readline" as i15, "rust" as i16, "s3cmd" as i17, "sqlite" as i18, "tcl-tk" as i19, "unzip" as i20, "webp" as i21, "xz" as i22, "zip" as i23, "zlib" as i24
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24]
+}
 
 pkg(
   name: "fdroidserver",
@@ -445,7 +453,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "fdroidserver.rb"), formula)

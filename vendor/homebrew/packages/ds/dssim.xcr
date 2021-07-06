@@ -28,9 +28,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "nasm" as i0, "rust" as i1
+if platform.os == "darwin" {
+    import "nasm" as i0, "rust" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "nasm" as i0, "rust" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "dssim",
@@ -41,7 +49,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dssim.rb"), formula)

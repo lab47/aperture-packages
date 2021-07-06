@@ -41,9 +41,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "gtk+3" as i2, "luajit-openresty" as i3, "sdl2" as i4, "sdl2_image" as i5, "sdl2_mixer" as i6, "sdl2_ttf" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "gtk+3" as i2, "luajit-openresty" as i3, "sdl2" as i4, "sdl2_image" as i5, "sdl2_mixer" as i6, "sdl2_ttf" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "gtk+3" as i2, "luajit-openresty" as i3, "sdl2" as i4, "sdl2_image" as i5, "sdl2_mixer" as i6, "sdl2_ttf" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "instead",
@@ -54,7 +62,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "instead.rb"), formula)

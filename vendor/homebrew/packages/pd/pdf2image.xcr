@@ -44,9 +44,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libx11" as i0, "freetype" as i1, "ghostscript" as i2
+if platform.os == "darwin" {
+    import "libx11" as i0, "freetype" as i1, "ghostscript" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "libx11" as i0, "freetype" as i1, "ghostscript" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "pdf2image",
@@ -57,7 +65,7 @@ pkg(
     "license": "FSFUL",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdf2image.rb"), formula)

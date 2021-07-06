@@ -134,9 +134,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "unzip" as i0, "xz" as i1
+if platform.os == "darwin" {
+    import "unzip" as i0, "xz" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "unzip" as i0, "xz" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "dmd",
@@ -147,7 +155,7 @@ pkg(
     "license": "BSL-1.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dmd.rb"), formula)

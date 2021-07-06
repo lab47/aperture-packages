@@ -39,9 +39,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "desktop-file-utils" as i1, "gpgme" as i2, "gtk+" as i3
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "desktop-file-utils" as i1, "gpgme" as i2, "gtk+" as i3
+    deps = [hi, i0, i1, i2, i3]
+} else {
+    import "pkg-config" as i0, "desktop-file-utils" as i1, "gpgme" as i2, "gtk+" as i3
+    deps = [hi, i0, i1, i2, i3]
+}
 
 pkg(
   name: "gpa",
@@ -52,7 +60,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gpa.rb"), formula)

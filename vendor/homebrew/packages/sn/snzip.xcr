@@ -35,9 +35,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "snappy" as i0
+if platform.os == "darwin" {
+    import "snappy" as i0
+    deps = [hi, i0]
+} else {
+    import "snappy" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "snzip",
@@ -48,7 +56,7 @@ pkg(
     "license": "BSD-2-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "snzip.rb"), formula)

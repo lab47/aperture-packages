@@ -117,9 +117,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "gtk+" as i7, "gtk+3" as i8
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "gtk+" as i7, "gtk+3" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gobject-introspection" as i2, "gtk-doc" as i3, "libtool" as i4, "pkg-config" as i5, "gettext" as i6, "gtk+" as i7, "gtk+3" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "gtk-mac-integration",
@@ -130,7 +138,7 @@ pkg(
     "license": "LGPL-2.1-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gtk-mac-integration.rb"), formula)

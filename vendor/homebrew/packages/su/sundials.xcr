@@ -64,9 +64,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "gcc" as i1, "open-mpi" as i2, "openblas" as i3, "suite-sparse" as i4, "libpcap" as i5, "m4" as i6
+if platform.os == "darwin" {
+    import "cmake" as i0, "gcc" as i1, "open-mpi" as i2, "openblas" as i3, "suite-sparse" as i4, "libpcap" as i5, "m4" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "cmake" as i0, "gcc" as i1, "open-mpi" as i2, "openblas" as i3, "suite-sparse" as i4, "libpcap" as i5, "m4" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "sundials",
@@ -77,7 +85,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sundials.rb"), formula)

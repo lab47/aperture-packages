@@ -70,9 +70,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "maven" as i3, "apr-util" as i4, "openjdk@8" as i5, "subversion" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "maven" as i3, "apr-util" as i4, "openjdk@8" as i5, "subversion" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "maven" as i3, "apr-util" as i4, "openjdk@8" as i5, "subversion" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "mesos",
@@ -83,7 +91,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mesos.rb"), formula)

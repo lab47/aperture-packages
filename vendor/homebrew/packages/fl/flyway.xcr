@@ -12,7 +12,7 @@ class Flyway < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "14411fe642af5ae38b5f3e247b82ca7a7a0e6b8ce41f5eff1661cbf675bc77d9"
+    sha256 cellar: :any_skip_relocation, all: "14411fe642af5ae38b5f3e247b82ca7a7a0e6b8ce41f5eff1661cbf675bc77d9"
   end
 
   depends_on "openjdk"
@@ -30,9 +30,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "openjdk" as i0
+if platform.os == "darwin" {
+    import "openjdk" as i0
+    deps = [hi, i0]
+} else {
+    import "openjdk" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "flyway",
@@ -43,7 +51,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "flyway.rb"), formula)

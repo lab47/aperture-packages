@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "automake" as i0, "bazelisk" as i1, "cmake" as i2, "coreutils" as i3, "go" as i4, "libtool" as i5, "ninja" as i6
+if platform.os == "darwin" {
+    import "automake" as i0, "bazelisk" as i1, "cmake" as i2, "coreutils" as i3, "go" as i4, "libtool" as i5, "ninja" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "automake" as i0, "bazelisk" as i1, "cmake" as i2, "coreutils" as i3, "go" as i4, "libtool" as i5, "ninja" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "envoy",
@@ -69,7 +77,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "envoy.rb"), formula)

@@ -29,9 +29,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "flex" as i0
+if platform.os == "darwin" {
+    import "flex" as i0
+    deps = [hi, i0]
+} else {
+    import "flex" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "shakespeare",
@@ -42,7 +50,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "shakespeare.rb"), formula)

@@ -47,9 +47,17 @@ __END__
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "zlib" as i0
+if platform.os == "darwin" {
+    import "zlib" as i0
+    deps = [hi, i0]
+} else {
+    import "zlib" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "kyoto-cabinet",
@@ -60,7 +68,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "kyoto-cabinet.rb"), formula)

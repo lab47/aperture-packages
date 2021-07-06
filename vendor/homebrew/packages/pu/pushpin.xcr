@@ -96,9 +96,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "rust" as i1, "condure" as i2, "mongrel2" as i3, "python@3.9" as i4, "qt@5" as i5, "zeromq" as i6, "zurl" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "rust" as i1, "condure" as i2, "mongrel2" as i3, "python@3.9" as i4, "qt@5" as i5, "zeromq" as i6, "zurl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "rust" as i1, "condure" as i2, "mongrel2" as i3, "python@3.9" as i4, "qt@5" as i5, "zeromq" as i6, "zurl" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "pushpin",
@@ -109,7 +117,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pushpin.rb"), formula)

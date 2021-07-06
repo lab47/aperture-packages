@@ -61,9 +61,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "python@3.9" as i1, "imagemagick" as i2
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "python@3.9" as i1, "imagemagick" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "pkg-config" as i0, "python@3.9" as i1, "imagemagick" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "blockhash",
@@ -74,7 +82,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "blockhash.rb"), formula)

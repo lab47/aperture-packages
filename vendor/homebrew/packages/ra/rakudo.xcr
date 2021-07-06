@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "nqp" as i0
+if platform.os == "darwin" {
+    import "nqp" as i0
+    deps = [hi, i0]
+} else {
+    import "nqp" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "rakudo",
@@ -49,7 +57,7 @@ pkg(
     "license": "Artistic-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rakudo.rb"), formula)

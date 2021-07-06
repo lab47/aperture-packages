@@ -119,9 +119,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "atkmm@2.28" as i0, "autoconf" as i1, "automake" as i2, "cairomm@1.14" as i3, "glibmm@2.66" as i4, "gtkmm" as i5, "librsvg" as i6, "libsigc++@2" as i7, "libtool" as i8, "pangomm@2.46" as i9, "pkg-config" as i10, "boost" as i11, "gerbv" as i12
+if platform.os == "darwin" {
+    import "atkmm@2.28" as i0, "autoconf" as i1, "automake" as i2, "cairomm@1.14" as i3, "glibmm@2.66" as i4, "gtkmm" as i5, "librsvg" as i6, "libsigc++@2" as i7, "libtool" as i8, "pangomm@2.46" as i9, "pkg-config" as i10, "boost" as i11, "gerbv" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "atkmm@2.28" as i0, "autoconf" as i1, "automake" as i2, "cairomm@1.14" as i3, "glibmm@2.66" as i4, "gtkmm" as i5, "librsvg" as i6, "libsigc++@2" as i7, "libtool" as i8, "pangomm@2.46" as i9, "pkg-config" as i10, "boost" as i11, "gerbv" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "pcb2gcode",
@@ -132,7 +140,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pcb2gcode.rb"), formula)

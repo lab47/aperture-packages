@@ -82,9 +82,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "swig" as i1, "airspy" as i2, "boost" as i3, "gnuradio" as i4, "hackrf" as i5, "librtlsdr" as i6, "uhd" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "swig" as i1, "airspy" as i2, "boost" as i3, "gnuradio" as i4, "hackrf" as i5, "librtlsdr" as i6, "uhd" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "swig" as i1, "airspy" as i2, "boost" as i3, "gnuradio" as i4, "hackrf" as i5, "librtlsdr" as i6, "uhd" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "gr-osmosdr",
@@ -95,7 +103,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gr-osmosdr.rb"), formula)

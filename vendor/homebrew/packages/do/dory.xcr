@@ -36,9 +36,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "ruby@2.7" as i0
+if platform.os == "darwin" {
+    import "ruby@2.7" as i0
+    deps = [hi, i0]
+} else {
+    import "ruby@2.7" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "dory",
@@ -49,7 +57,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "dory.rb"), formula)

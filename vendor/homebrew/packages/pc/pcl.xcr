@@ -129,9 +129,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "vtk@8.2" as i0, "cmake" as i1, "pkg-config" as i2, "boost" as i3, "cminpack" as i4, "eigen" as i5, "flann" as i6, "glew" as i7, "libomp" as i8, "libpcap" as i9, "libusb" as i10, "qhull" as i11, "qt@5" as i12
+if platform.os == "darwin" {
+    import "vtk@8.2" as i0, "cmake" as i1, "pkg-config" as i2, "boost" as i3, "cminpack" as i4, "eigen" as i5, "flann" as i6, "glew" as i7, "libomp" as i8, "libpcap" as i9, "libusb" as i10, "qhull" as i11, "qt@5" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+} else {
+    import "vtk@8.2" as i0, "cmake" as i1, "pkg-config" as i2, "boost" as i3, "cminpack" as i4, "eigen" as i5, "flann" as i6, "glew" as i7, "libomp" as i8, "libpcap" as i9, "libusb" as i10, "qhull" as i11, "qt@5" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
+}
 
 pkg(
   name: "pcl",
@@ -142,7 +150,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pcl.rb"), formula)

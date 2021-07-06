@@ -63,9 +63,17 @@ index c096c71..583a0ba 100644
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libmagic" as i0
+if platform.os == "darwin" {
+    import "libmagic" as i0
+    deps = [hi, i0]
+} else {
+    import "libmagic" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "file-formula",
@@ -76,7 +84,7 @@ pkg(
     "license": "Cannot Represent",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "file-formula.rb"), formula)

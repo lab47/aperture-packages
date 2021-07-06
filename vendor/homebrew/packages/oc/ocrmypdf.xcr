@@ -170,9 +170,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gcc" as i3, "gdbm" as i4, "ghostscript" as i5, "gpatch" as i6, "jbig2enc" as i7, "jpeg" as i8, "leptonica" as i9, "libffi" as i10, "libpng" as i11, "libxml2" as i12, "libxslt" as i13, "mpdecimal" as i14, "ncurses" as i15, "openssl@1.1" as i16, "pkg-config" as i17, "pngquant" as i18, "pybind11" as i19, "python@3.9" as i20, "qpdf" as i21, "readline" as i22, "rust" as i23, "sqlite" as i24, "tcl-tk" as i25, "tesseract" as i26, "unpaper" as i27, "unzip" as i28, "xz" as i29, "zip" as i30, "zlib" as i31
+if platform.os == "darwin" {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gdbm" as i3, "ghostscript" as i4, "jbig2enc" as i5, "jpeg" as i6, "leptonica" as i7, "libffi" as i8, "libpng" as i9, "libxml2" as i10, "libxslt" as i11, "mpdecimal" as i12, "ncurses" as i13, "openssl@1.1" as i14, "pkg-config" as i15, "pngquant" as i16, "pybind11" as i17, "python@3.9" as i18, "qpdf" as i19, "readline" as i20, "rust" as i21, "sqlite" as i22, "tcl-tk" as i23, "tesseract" as i24, "unpaper" as i25, "unzip" as i26, "xz" as i27, "zip" as i28, "zlib" as i29
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29]
+} else {
+    import "bzip2" as i0, "expat" as i1, "freetype" as i2, "gcc" as i3, "gdbm" as i4, "ghostscript" as i5, "jbig2enc" as i6, "jpeg" as i7, "leptonica" as i8, "libffi" as i9, "libpng" as i10, "libxml2" as i11, "libxslt" as i12, "mpdecimal" as i13, "ncurses" as i14, "openssl@1.1" as i15, "pkg-config" as i16, "pngquant" as i17, "pybind11" as i18, "python@3.9" as i19, "qpdf" as i20, "readline" as i21, "rust" as i22, "sqlite" as i23, "tcl-tk" as i24, "tesseract" as i25, "unpaper" as i26, "unzip" as i27, "xz" as i28, "zip" as i29, "zlib" as i30
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30]
+}
 
 pkg(
   name: "ocrmypdf",
@@ -183,7 +191,7 @@ pkg(
     "license": "MPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ocrmypdf.rb"), formula)

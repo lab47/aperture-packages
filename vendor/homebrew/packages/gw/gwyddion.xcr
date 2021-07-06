@@ -132,9 +132,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "fftw" as i1, "gtk+" as i2, "gtkglext" as i3, "gtksourceview" as i4, "libxml2" as i5, "minizip" as i6, "gtk-mac-integration" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "fftw" as i1, "gtk+" as i2, "gtkglext" as i3, "gtksourceview" as i4, "libxml2" as i5, "minizip" as i6, "gtk-mac-integration" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "fftw" as i1, "gtk+" as i2, "gtkglext" as i3, "gtksourceview" as i4, "libxml2" as i5, "minizip" as i6, "gtk-mac-integration" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "gwyddion",
@@ -145,7 +153,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gwyddion.rb"), formula)

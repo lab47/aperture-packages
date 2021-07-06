@@ -69,9 +69,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "python@3.9" as i0, "cmake" as i1
+if platform.os == "darwin" {
+    import "python@3.9" as i0
+    deps = [hi, i0]
+} else {
+    import "python@3.9" as i0, "cmake" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "bento4",
@@ -82,7 +90,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bento4.rb"), formula)

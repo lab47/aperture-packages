@@ -103,9 +103,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gettext" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "vala" as i5, "gtk+3" as i6
+if platform.os == "darwin" {
+    import "gettext" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "vala" as i5, "gtk+3" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "gettext" as i0, "gobject-introspection" as i1, "meson" as i2, "ninja" as i3, "pkg-config" as i4, "vala" as i5, "gtk+3" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "libhandy",
@@ -116,7 +124,7 @@ pkg(
     "license": "LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libhandy.rb"), formula)

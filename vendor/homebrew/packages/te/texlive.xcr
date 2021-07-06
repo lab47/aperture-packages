@@ -95,9 +95,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "wget" as i0, "fontconfig" as i1, "libice" as i2, "libsm" as i3, "libx11" as i4, "libxaw" as i5, "libxext" as i6, "libxmu" as i7, "libxpm" as i8, "libxt" as i9, "perl" as i10
+if platform.os == "darwin" {
+    import "wget" as i0, "fontconfig" as i1, "libice" as i2, "libsm" as i3, "libx11" as i4, "libxaw" as i5, "libxext" as i6, "libxmu" as i7, "libxpm" as i8, "libxt" as i9, "perl" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "wget" as i0, "fontconfig" as i1, "libice" as i2, "libsm" as i3, "libx11" as i4, "libxaw" as i5, "libxext" as i6, "libxmu" as i7, "libxpm" as i8, "libxt" as i9, "perl" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "texlive",
@@ -108,7 +116,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "texlive.rb"), formula)

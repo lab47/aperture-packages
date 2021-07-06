@@ -43,9 +43,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cairo" as i1, "glib" as i2, "gnutls" as i3, "gtk+" as i4, "libetpan" as i5, "nettle" as i6
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cairo" as i1, "glib" as i2, "gnutls" as i3, "gtk+" as i4, "libetpan" as i5, "nettle" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "pkg-config" as i0, "cairo" as i1, "glib" as i2, "gnutls" as i3, "gtk+" as i4, "libetpan" as i5, "nettle" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "claws-mail",
@@ -56,7 +64,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "claws-mail.rb"), formula)

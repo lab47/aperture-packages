@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "gawk" as i2, "pkg-config" as i3, "gdbm" as i4, "gnutls" as i5, "libffi" as i6, "libsigsegv" as i7, "libtool" as i8, "readline" as i9
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "gawk" as i2, "pkg-config" as i3, "gdbm" as i4, "gnutls" as i5, "libffi" as i6, "libsigsegv" as i7, "libtool" as i8, "readline" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "autoconf" as i0, "automake" as i1, "gawk" as i2, "pkg-config" as i3, "gdbm" as i4, "gnutls" as i5, "libffi" as i6, "libsigsegv" as i7, "libtool" as i8, "readline" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "gnu-smalltalk",
@@ -69,7 +77,7 @@ pkg(
     "license": "GPL-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "gnu-smalltalk.rb"), formula)

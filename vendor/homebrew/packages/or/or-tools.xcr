@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "abseil" as i2, "cbc" as i3, "cgl" as i4, "clp" as i5, "coinutils" as i6, "osi" as i7, "protobuf" as i8
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "abseil" as i2, "cbc" as i3, "cgl" as i4, "clp" as i5, "coinutils" as i6, "osi" as i7, "protobuf" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "abseil" as i2, "cbc" as i3, "cgl" as i4, "clp" as i5, "coinutils" as i6, "osi" as i7, "protobuf" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "or-tools",
@@ -75,7 +83,7 @@ pkg(
     "license": "Apache-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "or-tools.rb"), formula)

@@ -42,9 +42,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "boost" as i1, "freealut" as i2, "freetype" as i3, "glew" as i4, "jpeg" as i5, "libogg" as i6, "libpng" as i7, "libvorbis" as i8
+if platform.os == "darwin" {
+    import "cmake" as i0, "boost" as i1, "freealut" as i2, "freetype" as i3, "glew" as i4, "jpeg" as i5, "libogg" as i6, "libpng" as i7, "libvorbis" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+} else {
+    import "cmake" as i0, "boost" as i1, "freealut" as i2, "freetype" as i3, "glew" as i4, "jpeg" as i5, "libogg" as i6, "libpng" as i7, "libvorbis" as i8
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8]
+}
 
 pkg(
   name: "openclonk",
@@ -55,7 +63,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openclonk.rb"), formula)

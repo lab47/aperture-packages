@@ -58,9 +58,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "node" as i0
+if platform.os == "darwin" {
+    import "node" as i0
+    deps = [hi, i0]
+} else {
+    import "node" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "webtorrent-cli",
@@ -71,7 +79,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "webtorrent-cli.rb"), formula)

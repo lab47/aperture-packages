@@ -68,9 +68,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "bison" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gobject-introspection" as i5
+if platform.os == "darwin" {
+    import "bison" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gobject-introspection" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "bison" as i0, "meson" as i1, "ninja" as i2, "pkg-config" as i3, "glib" as i4, "gobject-introspection" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "template-glib",
@@ -81,7 +89,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "template-glib.rb"), formula)

@@ -53,9 +53,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "sdl2" as i0
+if platform.os == "darwin" {
+    import "sdl2" as i0
+    deps = [hi, i0]
+} else {
+    import "sdl2" as i0
+    deps = [hi, i0]
+}
 
 pkg(
   name: "sdl2_gfx",
@@ -66,7 +74,7 @@ pkg(
     "license": "Zlib",
     "source": "homebrew",
   },
-  dependencies: [hi, i0],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "sdl2_gfx.rb"), formula)

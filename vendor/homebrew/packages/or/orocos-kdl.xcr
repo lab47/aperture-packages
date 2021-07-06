@@ -45,9 +45,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "eigen" as i1
+if platform.os == "darwin" {
+    import "cmake" as i0, "eigen" as i1
+    deps = [hi, i0, i1]
+} else {
+    import "cmake" as i0, "eigen" as i1
+    deps = [hi, i0, i1]
+}
 
 pkg(
   name: "orocos-kdl",
@@ -58,7 +66,7 @@ pkg(
     "license": "LGPL-2.1",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "orocos-kdl.rb"), formula)

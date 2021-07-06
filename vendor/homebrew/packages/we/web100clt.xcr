@@ -47,9 +47,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "i2util" as i0, "jansson" as i1, "openssl@1.1" as i2
+if platform.os == "darwin" {
+    import "i2util" as i0, "jansson" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "i2util" as i0, "jansson" as i1, "openssl@1.1" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "web100clt",
@@ -60,7 +68,7 @@ pkg(
     "license": "",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "web100clt.rb"), formula)

@@ -87,9 +87,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "glm" as i0, "pkg-config" as i1, "python@3.9" as i2, "rapidjson" as i3, "sphinx-doc" as i4, "flac" as i5, "jpeg" as i6, "portaudio" as i7, "portmidi" as i8, "pugixml" as i9, "sdl2" as i10, "sqlite" as i11, "utf8proc" as i12, "expat" as i13, "zlib" as i14
+if platform.os == "darwin" {
+    import "glm" as i0, "pkg-config" as i1, "python@3.9" as i2, "rapidjson" as i3, "sphinx-doc" as i4, "flac" as i5, "jpeg" as i6, "portaudio" as i7, "portmidi" as i8, "pugixml" as i9, "sdl2" as i10, "sqlite" as i11, "utf8proc" as i12, "expat" as i13, "zlib" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+} else {
+    import "glm" as i0, "pkg-config" as i1, "python@3.9" as i2, "rapidjson" as i3, "sphinx-doc" as i4, "flac" as i5, "jpeg" as i6, "portaudio" as i7, "portmidi" as i8, "pugixml" as i9, "sdl2" as i10, "sqlite" as i11, "utf8proc" as i12, "expat" as i13, "zlib" as i14
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14]
+}
 
 pkg(
   name: "mame",
@@ -100,7 +108,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "mame.rb"), formula)

@@ -158,9 +158,17 @@ index 5c42f21..9e40bac 100755
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libtool" as i0, "python@3.9" as i1, "gettext" as i2
+if platform.os == "darwin" {
+    import "libtool" as i0, "python@3.9" as i1, "gettext" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "libtool" as i0, "python@3.9" as i1, "gettext" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "recode",
@@ -171,7 +179,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "recode.rb"), formula)

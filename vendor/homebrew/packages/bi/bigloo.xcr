@@ -80,9 +80,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "bdw-gc" as i4, "gmp" as i5, "libunistring" as i6, "libuv" as i7, "openjdk" as i8, "openssl@1.1" as i9, "pcre" as i10
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "bdw-gc" as i4, "gmp" as i5, "libunistring" as i6, "libuv" as i7, "openjdk" as i8, "openssl@1.1" as i9, "pcre" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "pkg-config" as i3, "bdw-gc" as i4, "gmp" as i5, "libunistring" as i6, "libuv" as i7, "openjdk" as i8, "openssl@1.1" as i9, "pcre" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "bigloo",
@@ -93,7 +101,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "bigloo.rb"), formula)

@@ -111,9 +111,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "emscripten" as i0, "node" as i1, "rust" as i2
+if platform.os == "darwin" {
+    import "emscripten" as i0, "node" as i1, "rust" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "emscripten" as i0, "node" as i1, "rust" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "tree-sitter",
@@ -124,7 +132,7 @@ pkg(
     "license": "MIT",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "tree-sitter.rb"), formula)

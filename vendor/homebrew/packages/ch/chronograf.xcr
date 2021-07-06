@@ -83,9 +83,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3, "influxdb" as i4, "kapacitor" as i5
+if platform.os == "darwin" {
+    import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3, "influxdb" as i4, "kapacitor" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "go" as i0, "go-bindata" as i1, "node@14" as i2, "yarn" as i3, "influxdb" as i4, "kapacitor" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+}
 
 pkg(
   name: "chronograf",
@@ -96,7 +104,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "chronograf.rb"), formula)

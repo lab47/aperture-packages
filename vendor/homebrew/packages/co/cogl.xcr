@@ -77,9 +77,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "gobject-introspection" as i0, "pkg-config" as i1, "cairo" as i2, "gdk-pixbuf" as i3, "glib" as i4, "pango" as i5, "libxcomposite" as i6, "mesa" as i7
+if platform.os == "darwin" {
+    import "gobject-introspection" as i0, "pkg-config" as i1, "cairo" as i2, "gdk-pixbuf" as i3, "glib" as i4, "pango" as i5
+    deps = [hi, i0, i1, i2, i3, i4, i5]
+} else {
+    import "gobject-introspection" as i0, "pkg-config" as i1, "cairo" as i2, "gdk-pixbuf" as i3, "glib" as i4, "pango" as i5, "libxcomposite" as i6, "mesa" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "cogl",
@@ -90,7 +98,7 @@ pkg(
     "license": "MIT and SGI-B-2.0 and BSD-3-Clause and Public Domain",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "cogl.rb"), formula)

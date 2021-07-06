@@ -98,9 +98,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "swig" as i1, "boost" as i2, "boost-python3" as i3, "eigen" as i4, "freetype" as i5, "numpy" as i6, "postgresql" as i7, "py3cairo" as i8, "python@3.9" as i9
+if platform.os == "darwin" {
+    import "cmake" as i0, "swig" as i1, "boost" as i2, "boost-python3" as i3, "eigen" as i4, "freetype" as i5, "numpy" as i6, "postgresql" as i7, "py3cairo" as i8, "python@3.9" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "cmake" as i0, "swig" as i1, "boost" as i2, "boost-python3" as i3, "eigen" as i4, "freetype" as i5, "numpy" as i6, "postgresql" as i7, "py3cairo" as i8, "python@3.9" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "rdkit",
@@ -111,7 +119,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rdkit.rb"), formula)

@@ -56,9 +56,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "cmake" as i0, "pkg-config" as i1, "gdal" as i2, "hdf5" as i3, "laszip" as i4, "numpy" as i5, "pcl" as i6, "postgresql" as i7
+if platform.os == "darwin" {
+    import "cmake" as i0, "pkg-config" as i1, "gdal" as i2, "hdf5" as i3, "laszip" as i4, "numpy" as i5, "pcl" as i6, "postgresql" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "cmake" as i0, "pkg-config" as i1, "gdal" as i2, "hdf5" as i3, "laszip" as i4, "numpy" as i5, "pcl" as i6, "postgresql" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "pdal",
@@ -69,7 +77,7 @@ pkg(
     "license": "BSD-3-Clause",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "pdal.rb"), formula)

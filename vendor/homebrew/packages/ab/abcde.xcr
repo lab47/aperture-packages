@@ -68,9 +68,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "cdrtools" as i1, "eye-d3" as i2, "flac" as i3, "glyr" as i4, "lame" as i5, "libdiscid" as i6, "mkcue" as i7, "perl" as i8, "vorbis-tools" as i9
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "cdrtools" as i1, "eye-d3" as i2, "flac" as i3, "glyr" as i4, "lame" as i5, "libdiscid" as i6, "mkcue" as i7, "perl" as i8, "vorbis-tools" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "pkg-config" as i0, "cdrtools" as i1, "eye-d3" as i2, "flac" as i3, "glyr" as i4, "lame" as i5, "libdiscid" as i6, "mkcue" as i7, "perl" as i8, "vorbis-tools" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "abcde",
@@ -81,7 +89,7 @@ pkg(
     "license": "GPL-2.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "abcde.rb"), formula)

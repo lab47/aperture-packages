@@ -5,8 +5,8 @@ class Openjdk < Formula
   if Hardware::CPU.arm?
     # Temporarily use a openjdk 17 preview on Apple Silicon
     # (because it is better than nothing)
-    url "https://github.com/openjdk/jdk/archive/refs/tags/jdk-17+24.tar.gz"
-    sha256 "9d1ea3fc63ce860e55a9be77f670b18fa7b7e5c9773dca3c70042403e1ee285c"
+    url "https://github.com/openjdk/jdk/archive/refs/tags/jdk-17+27.tar.gz"
+    sha256 "fa5ca43bed3f1bc5bb5efb8258bf44f78b89b230051ba42b638db0b2b3262370"
     version "16.0.1"
   else
     url "https://github.com/openjdk/jdk16u/archive/refs/tags/jdk-16.0.1-ga.tar.gz"
@@ -82,11 +82,10 @@ class Openjdk < Formula
       --with-debug-level=release
       --with-jvm-variants=server
       --with-native-debug-symbols=none
-      --with-vendor-bug-url=#{tap.issues_url}
-      --with-vendor-name=#{tap.user}
-      --with-vendor-url=#{tap.issues_url}
-      --with-vendor-version-string=#{tap.user}
-      --with-vendor-vm-bug-url=#{tap.issues_url}
+      --with-vendor-name=aperture
+      --with-vendor-url=https://github.com/lab47/aperture-packages
+      --with-vendor-version-string=aperture
+      --with-vendor-vm-bug-url=https://github.com/lab47/aperture-packages
       --with-version-build=#{revision}
       --without-version-opt
       --without-version-pre
@@ -193,9 +192,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "pkg-config" as i1, "alsa-lib" as i2, "cups" as i3, "fontconfig" as i4, "gcc" as i5, "libx11" as i6, "libxext" as i7, "libxrandr" as i8, "libxrender" as i9, "libxt" as i10, "libxtst" as i11, "unzip" as i12, "zip" as i13
+if platform.os == "darwin" {
+    import "autoconf" as i0
+    deps = [hi, i0]
+} else {
+    import "autoconf" as i0, "pkg-config" as i1, "alsa-lib" as i2, "cups" as i3, "fontconfig" as i4, "gcc" as i5, "libx11" as i6, "libxext" as i7, "libxrandr" as i8, "libxrender" as i9, "libxt" as i10, "libxtst" as i11, "unzip" as i12, "zip" as i13
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+}
 
 pkg(
   name: "openjdk",
@@ -206,7 +213,7 @@ pkg(
     "license": "GPL-2.0-only with Classpath-exception-2.0",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "openjdk.rb"), formula)

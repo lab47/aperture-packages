@@ -110,9 +110,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "aria2" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "gpatch" as i4, "libffi" as i5, "mpdecimal" as i6, "ncurses" as i7, "node" as i8, "openssl@1.1" as i9, "pkg-config" as i10, "python-tabulate" as i11, "python@3.9" as i12, "readline" as i13, "sqlite" as i14, "unzip" as i15, "xz" as i16, "zip" as i17, "zlib" as i18
+if platform.os == "darwin" {
+    import "aria2" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "node" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python-tabulate" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+} else {
+    import "aria2" as i0, "bzip2" as i1, "expat" as i2, "gdbm" as i3, "libffi" as i4, "mpdecimal" as i5, "ncurses" as i6, "node" as i7, "openssl@1.1" as i8, "pkg-config" as i9, "python-tabulate" as i10, "python@3.9" as i11, "readline" as i12, "sqlite" as i13, "unzip" as i14, "xz" as i15, "zip" as i16, "zlib" as i17
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17]
+}
 
 pkg(
   name: "anime-downloader",
@@ -123,7 +131,7 @@ pkg(
     "license": "Unlicense",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "anime-downloader.rb"), formula)

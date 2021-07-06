@@ -89,9 +89,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxau" as i3, "libxaw" as i4, "libxext" as i5, "libxp" as i6, "libxpm" as i7, "libxt" as i8, "openmotif" as i9
+if platform.os == "darwin" {
+    import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxau" as i3, "libxaw" as i4, "libxext" as i5, "libxp" as i6, "libxpm" as i7, "libxt" as i8, "openmotif" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+} else {
+    import "libice" as i0, "libsm" as i1, "libx11" as i2, "libxau" as i3, "libxaw" as i4, "libxext" as i5, "libxp" as i6, "libxpm" as i7, "libxt" as i8, "openmotif" as i9
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9]
+}
 
 pkg(
   name: "ddd",
@@ -102,7 +110,7 @@ pkg(
     "license": "GPL-3.0-only and GFDL-1.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "ddd.rb"), formula)

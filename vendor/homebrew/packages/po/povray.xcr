@@ -72,9 +72,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "autoconf" as i0, "automake" as i1, "boost" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "openexr@2" as i6
+if platform.os == "darwin" {
+    import "autoconf" as i0, "automake" as i1, "boost" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "openexr@2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+} else {
+    import "autoconf" as i0, "automake" as i1, "boost" as i2, "jpeg" as i3, "libpng" as i4, "libtiff" as i5, "openexr@2" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
+}
 
 pkg(
   name: "povray",
@@ -85,7 +93,7 @@ pkg(
     "license": "AGPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "povray.rb"), formula)

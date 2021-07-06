@@ -133,9 +133,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "berkeley-db" as i0, "gettext" as i1, "libarchive" as i2, "libmagic" as i3, "libomp" as i4, "lua" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "popt" as i8, "xz" as i9, "zstd" as i10
+if platform.os == "darwin" {
+    import "berkeley-db" as i0, "gettext" as i1, "libarchive" as i2, "libmagic" as i3, "libomp" as i4, "lua" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "popt" as i8, "xz" as i9, "zstd" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+} else {
+    import "berkeley-db" as i0, "gettext" as i1, "libarchive" as i2, "libmagic" as i3, "libomp" as i4, "lua" as i5, "openssl@1.1" as i6, "pkg-config" as i7, "popt" as i8, "xz" as i9, "zstd" as i10
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10]
+}
 
 pkg(
   name: "rpm",
@@ -146,7 +154,7 @@ pkg(
     "license": "GPL-2.0-only",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "rpm.rb"), formula)

@@ -76,9 +76,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "freexl" as i1, "geos" as i2, "librttopo" as i3, "libxml2" as i4, "minizip" as i5, "proj@7" as i6, "sqlite" as i7
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "freexl" as i1, "geos" as i2, "librttopo" as i3, "libxml2" as i4, "minizip" as i5, "proj@7" as i6, "sqlite" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+} else {
+    import "pkg-config" as i0, "freexl" as i1, "geos" as i2, "librttopo" as i3, "libxml2" as i4, "minizip" as i5, "proj@7" as i6, "sqlite" as i7
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7]
+}
 
 pkg(
   name: "libspatialite",
@@ -89,7 +97,7 @@ pkg(
     "license": "MPL-1.1 or GPL-2.0-or-later or LGPL-2.1-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4, i5, i6, i7],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "libspatialite.rb"), formula)

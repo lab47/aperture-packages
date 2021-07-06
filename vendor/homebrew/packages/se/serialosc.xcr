@@ -32,9 +32,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "confuse" as i0, "liblo" as i1, "libmonome" as i2
+if platform.os == "darwin" {
+    import "confuse" as i0, "liblo" as i1, "libmonome" as i2
+    deps = [hi, i0, i1, i2]
+} else {
+    import "confuse" as i0, "liblo" as i1, "libmonome" as i2
+    deps = [hi, i0, i1, i2]
+}
 
 pkg(
   name: "serialosc",
@@ -45,7 +53,7 @@ pkg(
     "license": "ISC",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "serialosc.rb"), formula)

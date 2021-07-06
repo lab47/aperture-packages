@@ -62,9 +62,17 @@ end
 
 """
 
+deps = []
+
 import "homebrew-install" as hi
 
-import "pkg-config" as i0, "glib" as i1, "libssh2" as i2, "openssl@1.1" as i3, "s-lang" as i4
+if platform.os == "darwin" {
+    import "pkg-config" as i0, "glib" as i1, "libssh2" as i2, "openssl@1.1" as i3, "s-lang" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+} else {
+    import "pkg-config" as i0, "glib" as i1, "libssh2" as i2, "openssl@1.1" as i3, "s-lang" as i4
+    deps = [hi, i0, i1, i2, i3, i4]
+}
 
 pkg(
   name: "midnight-commander",
@@ -75,7 +83,7 @@ pkg(
     "license": "GPL-3.0-or-later",
     "source": "homebrew",
   },
-  dependencies: [hi, i0, i1, i2, i3, i4],
+  dependencies: deps,
 
   def install(ctx) {
     ctx.write_file(join(ctx.build, "midnight-commander.rb"), formula)
