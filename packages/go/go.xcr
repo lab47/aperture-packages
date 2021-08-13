@@ -6,7 +6,7 @@ sha256 = "b298d29de9236ca47a023e382313bcc2d2eed31dfa706b60a04103ce83a71a25"
 bootstrap = None
 
 if platform.os == "darwin" {
-  if platform.arch == "arm" {
+  if platform.arch == "arm64" {
     bootstrap = fetch.archive(
       url: "https://storage.googleapis.com/golang/go1.16.darwin-arm64.tar.gz",
       sum: ("sha256", "4dac57c00168d30bbd02d95131d5de9ca88e04f2c5a29a404576f30ae9b54810"),
