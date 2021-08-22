@@ -71,11 +71,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "openssl@1.1" as i0
-    deps = [hi, i0]
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
 } else {
-    import "openssl@1.1" as i0
-    deps = [hi, i0]
+    import "autoconf" as i0, "automake" as i1, "libtool" as i2, "openssl@1.1" as i3
+    deps = [hi, i0, i1, i2, i3]
 }
 
 pkg(
@@ -93,6 +93,8 @@ pkg(
     ctx.write_file(join(ctx.build, "net-snmp.rb"), formula)
     ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./net-snmp.rb")
   }
+
+  explicit_dependencies: [hi]
 
   def post_install(ctx) {
     ctx.write_file(join(ctx.build, "net-snmp.rb"), formula)

@@ -11,6 +11,8 @@ class Libtiff < Formula
     url "https://download.osgeo.org/libtiff/"
     regex(/href=.*?tiff[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
+  
+  patch :DATA
 
   bottle do
     sha256 cellar: :any,                 arm64_big_sur: "bd25355f2efb850a0e70c9ae208f0cd16caa0bfcaba8931d9ea9d374c5cf050a"
@@ -56,6 +58,61 @@ class Libtiff < Formula
     assert_match(/ImageWidth.*10/, shell_output("#{bin}/tiffdump test.tif"))
   end
 end
+
+__END__
+diff -urN a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2021-03-07 03:32:24.000000000 -0800
++++ b/Makefile.am	2021-08-20 23:23:19.000000000 -0700
+@@ -34,7 +34,7 @@
+ 	README.md \
+ 	RELEASE-DATE \
+ 	TODO \
+-	VERSION
++	VERSION.txt
+ 
+ EXTRA_DIST = \
+ 	cmake \
+@@ -61,7 +61,7 @@
+ 
+ release:
+ 	(rm -f $(top_srcdir)/RELEASE-DATE && echo $(LIBTIFF_RELEASE_DATE) > $(top_srcdir)/RELEASE-DATE)
+-	(rm -f $(top_srcdir)/VERSION && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION)
++	(rm -f $(top_srcdir)/VERSION.txt && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION.txt)
+ 	(rm -f $(top_srcdir)/libtiff/tiffvers.h && sed 's,LIBTIFF_VERSION,$(LIBTIFF_VERSION),;s,LIBTIFF_RELEASE_DATE,$(LIBTIFF_RELEASE_DATE),' $(top_srcdir)/libtiff/tiffvers.h.in > $(top_srcdir)/libtiff/tiffvers.h)
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+diff -urN a/Makefile.in b/Makefile.in
+--- a/Makefile.in	2021-04-16 03:56:02.000000000 -0700
++++ b/Makefile.in	2021-08-20 23:22:58.000000000 -0700
+@@ -424,7 +424,7 @@
+ 	README.md \
+ 	RELEASE-DATE \
+ 	TODO \
+-	VERSION
++	VERSION.txt
+ 
+ EXTRA_DIST = \
+ 	cmake \
+@@ -992,7 +992,7 @@
+ 
+ release:
+ 	(rm -f $(top_srcdir)/RELEASE-DATE && echo $(LIBTIFF_RELEASE_DATE) > $(top_srcdir)/RELEASE-DATE)
+-	(rm -f $(top_srcdir)/VERSION && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION)
++	(rm -f $(top_srcdir)/VERSION.txt && echo $(LIBTIFF_VERSION) > $(top_srcdir)/VERSION.txt)
+ 	(rm -f $(top_srcdir)/libtiff/tiffvers.h && sed 's,LIBTIFF_VERSION,$(LIBTIFF_VERSION),;s,LIBTIFF_RELEASE_DATE,$(LIBTIFF_RELEASE_DATE),' $(top_srcdir)/libtiff/tiffvers.h.in > $(top_srcdir)/libtiff/tiffvers.h)
+ coverity:
+ 	$(MAKE) clean
+diff -urN a/VERSION b/VERSION
+--- a/VERSION	2021-04-16 03:54:59.000000000 -0700
++++ b/VERSION	1969-12-31 16:00:00.000000000 -0800
+@@ -1 +0,0 @@
+-4.3.0
+diff -urN a/VERSION.txt b/VERSION.txt
+--- a/VERSION.txt	1969-12-31 16:00:00.000000000 -0800
++++ b/VERSION.txt	2021-04-16 03:54:59.000000000 -0700
+@@ -0,0 +1 @@
++4.3.0
+
 
 """
 

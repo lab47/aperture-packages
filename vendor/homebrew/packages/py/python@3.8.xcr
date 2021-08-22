@@ -31,7 +31,6 @@ class PythonAT38 < Formula
   depends_on "openssl@1.1"
   depends_on "readline"
   depends_on "sqlite"
-  depends_on "tcl-tk"
   depends_on "xz"
 
   uses_from_macos "bzip2"
@@ -138,9 +137,6 @@ class PythonAT38 < Formula
     end
     # Avoid linking to libgcc https://mail.python.org/pipermail/python-dev/2012-February/116205.html
     args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
-
-    args << "--with-tcltk-includes=-I#{Formula["tcl-tk"].opt_include}"
-    args << "--with-tcltk-libs=-L#{Formula["tcl-tk"].opt_lib} -ltcl8.6 -ltk8.6"
 
     # We want our readline! This is just to outsmart the detection code,
     # superenv makes cc always find includes/libs!
@@ -299,9 +295,9 @@ class PythonAT38 < Formula
 
     # Help distutils find brewed stuff when building extensions
     include_dirs = [HOMEBREW_PREFIX/"include", Formula["openssl@1.1"].opt_include,
-                    Formula["sqlite"].opt_include], Formula["tcl-tk"].opt_include
+                    Formula["sqlite"].opt_include]
     library_dirs = [HOMEBREW_PREFIX/"lib", Formula["openssl@1.1"].opt_lib,
-                    Formula["sqlite"].opt_lib], Formula["tcl-tk"].opt_lib
+                    Formula["sqlite"].opt_lib]
 
     cfg = lib_cellar/"distutils/distutils.cfg"
 
@@ -402,11 +398,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "tcl-tk" as i6, "xz" as i7, "bzip2" as i8, "libffi" as i9, "ncurses" as i10, "unzip" as i11, "xz" as i12, "zlib" as i13
-    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "xz" as i6, "bzip2" as i7, "libffi" as i8, "ncurses" as i9, "unzip" as i10, "xz" as i11, "zlib" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
 } else {
-    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "tcl-tk" as i6, "xz" as i7, "bzip2" as i8, "libffi" as i9, "ncurses" as i10, "unzip" as i11, "xz" as i12, "zlib" as i13
-    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13]
+    import "pkg-config" as i0, "gdbm" as i1, "mpdecimal" as i2, "openssl@1.1" as i3, "readline" as i4, "sqlite" as i5, "xz" as i6, "bzip2" as i7, "libffi" as i8, "ncurses" as i9, "unzip" as i10, "xz" as i11, "zlib" as i12
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12]
 }
 
 pkg(
@@ -424,6 +420,8 @@ pkg(
     ctx.write_file(join(ctx.build, "python@3.8.rb"), formula)
     ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./python@3.8.rb")
   }
+
+  explicit_dependencies: [hi]
 
   def post_install(ctx) {
     ctx.write_file(join(ctx.build, "python@3.8.rb"), formula)

@@ -117,6 +117,8 @@ pkg(
     ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./nethack.rb")
   }
 
+  explicit_dependencies: [hi]
+
   def post_install(ctx) {
     ctx.write_file(join(ctx.build, "nethack.rb"), formula)
     ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./nethack.rb")

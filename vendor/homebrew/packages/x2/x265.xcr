@@ -83,11 +83,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "cmake" as i0, "nasm" as i1
-    deps = [hi, i0, i1]
+    import "cmake" as i0
+    deps = [hi, i0]
 } else {
-    import "cmake" as i0, "nasm" as i1
-    deps = [hi, i0, i1]
+    import "cmake" as i0
+    deps = [hi, i0]
 }
 
 pkg(

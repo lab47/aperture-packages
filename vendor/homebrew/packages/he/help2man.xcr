@@ -62,11 +62,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "gettext" as i0, "perl" as i1
-    deps = [hi, i0, i1]
+    import "perl" as i0
+    deps = [hi, i0]
 } else {
-    import "gettext" as i0, "perl" as i1
-    deps = [hi, i0, i1]
+    import "perl" as i0
+    deps = [hi, i0]
 }
 
 pkg(

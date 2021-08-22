@@ -24,7 +24,7 @@ class Nghttp2 < Formula
 
   depends_on "pkg-config" => :build
   depends_on "c-ares"
-  # depends_on "jemalloc"
+  depends_on "jemalloc"
   depends_on "libev"
   depends_on "openssl@1.1"
 
@@ -74,8 +74,8 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "pkg-config" as i0, "c-ares" as i1, "libev" as i3, "openssl@1.1" as i4, "libxml2" as i5, "zlib" as i6
-    deps = [hi, i0, i1, i3, i4, i5, i6]
+    import "pkg-config" as i0, "c-ares" as i1, "jemalloc" as i2, "libev" as i3, "openssl@1.1" as i4, "libxml2" as i5, "zlib" as i6
+    deps = [hi, i0, i1, i2, i3, i4, i5, i6]
 } else {
     import "pkg-config" as i0, "c-ares" as i1, "jemalloc" as i2, "libev" as i3, "openssl@1.1" as i4, "libxml2" as i5, "zlib" as i6
     deps = [hi, i0, i1, i2, i3, i4, i5, i6]

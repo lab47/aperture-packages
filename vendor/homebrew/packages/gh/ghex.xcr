@@ -102,6 +102,8 @@ pkg(
     ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./ghex.rb")
   }
 
+  explicit_dependencies: [hi]
+
   def post_install(ctx) {
     ctx.write_file(join(ctx.build, "ghex.rb"), formula)
     ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./ghex.rb")

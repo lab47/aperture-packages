@@ -78,6 +78,8 @@ pkg(
     ctx.system("homebrew-install", ctx.prefix, ctx.state_dir, "./osinfo-db-tools.rb")
   }
 
+  explicit_dependencies: [hi]
+
   def post_install(ctx) {
     ctx.write_file(join(ctx.build, "osinfo-db-tools.rb"), formula)
     ctx.system("homebrew-install", "--post", ctx.prefix, ctx.state_dir, "./osinfo-db-tools.rb")

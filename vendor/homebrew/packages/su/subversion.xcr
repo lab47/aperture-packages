@@ -94,7 +94,7 @@ class Subversion < Formula
       end
 
       args = %W[
-        PREFIX=#{serf_prefix} GSSAPI=#{krb5} CC=#{ENV.cc}
+        PREFIX=#{serf_prefix} CC=#{ENV.cc}
         CFLAGS=#{ENV.cflags} LINKFLAGS=#{ENV.ldflags}
         OPENSSL=#{Formula["openssl@1.1"].opt_prefix}
         APR=#{Formula["apr"].opt_prefix}

@@ -88,11 +88,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "cabal-install" as i0, "ghc" as i1, "ghc@8.6" as i2, "ghc@8.8" as i3
-    deps = [hi, i0, i1, i2, i3]
+    import "cabal-install" as i0, "ghc" as i1
+    deps = [hi, i0, i1]
 } else {
-    import "cabal-install" as i0, "ghc" as i1, "ghc@8.6" as i2, "ghc@8.8" as i3
-    deps = [hi, i0, i1, i2, i3]
+    import "cabal-install" as i0, "ghc" as i1
+    deps = [hi, i0, i1]
 }
 
 pkg(

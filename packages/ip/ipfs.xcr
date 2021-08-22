@@ -1,0 +1,10 @@
+import go
+
+go.build_module(
+  path: "github.com/ipfs/go-ipfs/cmd/ipfs",
+  version: "v0.9.1",
+  name: "ipfs",
+  buildFlags: [
+    "-ldflags", "-X github.com/ipfs/go-ipfs.CurrentCommit=dc2715af68b93611a116b83fca90714e7c5cb50b",
+  ]
+)

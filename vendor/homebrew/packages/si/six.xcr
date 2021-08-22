@@ -43,11 +43,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "python@3.7" as i0, "python@3.8" as i1, "python@3.9" as i2
-    deps = [hi, i0, i1, i2]
+    import "python@3.8" as i0, "python@3.9" as i1
+    deps = [hi, i0, i1]
 } else {
-    import "python@3.7" as i0, "python@3.8" as i1, "python@3.9" as i2
-    deps = [hi, i0, i1, i2]
+    import "python@3.8" as i0, "python@3.9" as i1
+    deps = [hi, i0, i1]
 }
 
 pkg(

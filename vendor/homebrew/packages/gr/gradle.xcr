@@ -56,10 +56,10 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "openjdk" as i0
+    import "openjdk@11" as i0
     deps = [hi, i0]
 } else {
-    import "openjdk" as i0
+    import "openjdk@11" as i0
     deps = [hi, i0]
 }
 

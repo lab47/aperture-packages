@@ -45,11 +45,11 @@ deps = []
 import "homebrew-install" as hi
 
 if platform.os == "darwin" {
-    import "pkg-config" as i0, "libffi" as i1, "ruby" as i2
-    deps = [hi, i0, i1, i2]
+    import "pkg-config" as i0, "ruby" as i1, "libffi" as i2, "ruby" as i3
+    deps = [hi, i0, i1, i2, i3]
 } else {
-    import "pkg-config" as i0, "libffi" as i1, "ruby" as i2
-    deps = [hi, i0, i1, i2]
+    import "pkg-config" as i0, "ruby" as i1, "libffi" as i2, "ruby" as i3
+    deps = [hi, i0, i1, i2, i3]
 }
 
 pkg(
